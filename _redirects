@@ -20,7 +20,7 @@
 /en/works/resentment      /en/works/resentment/index.html     200
 /en/works/the-wolf        /en/works/the-wolf/index.html       200
 
-# Алиасы для EN (защита от 404):
+# 301 редиректы для защиты от 404 в английской версии:
 /en/works/osnovanie       /en/works/foundation/index.html     301
 /en/works/pered-licom     /en/works/face-to-face/index.html   301
 /en/works/ispoved         /en/works/confession/index.html     301
@@ -31,4 +31,3 @@
 /en/curators              /en/curators/index.html             200
 /en/events                /en/events/index.html               200
 /en/privacy               /en/privacy/index.html              200
-/*                        /404.html                           404
