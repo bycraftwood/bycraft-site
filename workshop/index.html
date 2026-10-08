@@ -7,7 +7,11 @@
   <meta name="description" content="Процесс скульптурной выборки, варки и обжига берёзового сувеля в мастерской Валентина Атроша под Минском.">
   <link rel="canonical" href="https://bycraft.by/workshop/">
 
-  <!-- Open Graph / Facebook / Telegram / WhatsApp -->
+  <link rel="alternate" hreflang="ru" href="https://bycraft.by/workshop/">
+  <link rel="alternate" hreflang="en" href="https://bycraft.by/en/workshop/">
+  <link rel="alternate" hreflang="x-default" href="https://bycraft.by/workshop/">
+
+  <!-- Open Graph / Telegram / WhatsApp / Social Media -->
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="BYCRAFT">
   <meta property="og:title" content="Мастерская · BYCRAFT">
@@ -23,8 +27,30 @@
   <meta name="twitter:title" content="Мастерская · BYCRAFT">
   <meta name="twitter:description" content="Процесс скульптурной выборки, варки и обжига берёзового сувеля в мастерской Валентина Атроша под Минском.">
   <meta name="twitter:image" content="https://bycraft.by/images/workshop/workshop-valentin-01.jpg">
+
+  <!-- JSON-LD Structured Data -->
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Главная",
+      "item": "https://bycraft.by/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Работы",
+      "item": "https://bycraft.by/works/"
+    }
+  ]
+}
+  </script>
   <link rel="icon" href="../images/favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="../css/style.css?v=20">
+  <link rel="stylesheet" href="../css/style.css?v=21">
 </head>
 <body>
         <header class="site-header">
@@ -116,6 +142,12 @@
   </footer>    </div>
 
   <script src="../js/main.js"></script>    </div>
+  </div>
+      <button class="cookie-btn-accept" id="cookieAccept" type="button">Понятно</button>
+  </div>
+  <div class="cookie-banner" id="cookieBanner" role="dialog" aria-live="polite" aria-label="Уведомление об использовании файлов cookie">
+    <div>Сайт использует файлы cookie. Подробнее — в <a href="..//privacy/" style="text-decoration: underline; color: inherit;">Политике</a>.</div>
+    <button class="cookie-btn-accept" id="cookieAccept" type="button">Понятно</button>
   </div>
 </body>
 </html>

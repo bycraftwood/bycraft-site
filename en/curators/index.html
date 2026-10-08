@@ -7,7 +7,11 @@
   <meta name="description" content="Curatorial portfolio, artist statement, CV, exhibition awards and geography of works.">
   <link rel="canonical" href="https://bycraft.by/en/curators/">
 
-  <!-- Open Graph / Facebook / Telegram / WhatsApp -->
+  <link rel="alternate" hreflang="ru" href="https://bycraft.by/curators/">
+  <link rel="alternate" hreflang="en" href="https://bycraft.by/en/curators/">
+  <link rel="alternate" hreflang="x-default" href="https://bycraft.by/curators/">
+
+  <!-- Open Graph / Telegram / WhatsApp / Social Media -->
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="BYCRAFT">
   <meta property="og:title" content="For Curators · Valentin Atrosh · BYCRAFT">
@@ -23,8 +27,49 @@
   <meta name="twitter:title" content="For Curators · Valentin Atrosh · BYCRAFT">
   <meta name="twitter:description" content="Curatorial portfolio, artist statement, CV, exhibition awards and geography of works.">
   <meta name="twitter:image" content="https://bycraft.by/images/hero/hero-valentin.jpg">
+
+  <!-- JSON-LD Structured Data -->
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://bycraft.by/en/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Works",
+      "item": "https://bycraft.by/en/works/"
+    }
+  ]
+}
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Valentin Atrosh",
+  "jobTitle": "Sculptor / Contemporary Object Artist",
+  "url": "https://bycraft.by/en/",
+  "sameAs": [
+    "https://www.instagram.com/bycraft.by/",
+    "https://t.me/bycraft"
+  ],
+  "knowsAbout": [
+    "Contemporary Craft",
+    "Collectible Design",
+    "Birch Burl Sculpture",
+    "Fire Charring"
+  ]
+}
+  </script>
   <link rel="icon" href="../../images/favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="../../css/style.css?v=20">
+  <link rel="stylesheet" href="../../css/style.css?v=21">
 </head>
 <body>
     <header class="site-header">
@@ -49,7 +94,7 @@
     <div class="container">
       <div class="curator-hero-grid">
         <div class="curator-photo">
-          <img src="../../images/hero/hero-valentin.jpg" alt="Valentin Atrosh" style="width: 100%; aspect-ratio: 4/5; object-fit: cover;" loading="lazy" decoding="async">
+          <img src="../../images/hero/hero-valentin.jpg" alt="Valentin Atrosh" style="width: 100%; aspect-ratio: 4/5; object-fit: cover;" loading="lazy" decoding="async" width="1600" height="900">
         </div>
         <div class="curator-text">
           <h1 style="font-size: 19px; font-weight: 500; color: var(--color-primary); margin-bottom: 6px;">
@@ -106,7 +151,7 @@
         </div>
         <div>
           <a href="../../en/works/the-wolf/">
-            <img src="../../images/works/work-exhibit-05.jpg" alt="The Wolf" loading="lazy" decoding="async">
+            <img src="../../images/works/work-exhibit-05.jpg" alt="The Wolf" loading="lazy" decoding="async" width="1000" height="1000">
             <p class="caption">The Wolf, 2026</p>
           </a>
         </div>
@@ -356,7 +401,7 @@
       <h2 class="section-title" style="margin-bottom: 24px;">Diplomas and Certificates</h2>
       <div class="curator-diplomas-three-grid">
         <div>
-          <img src="../../images/curators/diploma-01.jpg" alt="UNITED BY ART Award" loading="lazy" decoding="async">
+          <img src="../../images/curators/diploma-01.jpg" alt="UNITED BY ART Award" loading="lazy" decoding="async" width="800" height="1066">
           <div class="caption" style="margin-top: 10px; line-height: 1.6;">
             <strong>“UNITED BY ART” International Exhibition-Competition of Contemporary Art</strong><br>
             3rd Prize, 2026<br>
@@ -364,7 +409,7 @@
           </div>
         </div>
         <div>
-          <img src="../../images/curators/diploma-02.jpg" alt="Russian Art Prize Diploma" loading="lazy" decoding="async">
+          <img src="../../images/curators/diploma-02.jpg" alt="Russian Art Prize Diploma" loading="lazy" decoding="async" width="800" height="1066">
           <div class="caption" style="margin-top: 10px; line-height: 1.6;">
             <strong>Russian Art Prize</strong><br>
             Participant Diploma, 2026<br>
@@ -372,7 +417,7 @@
           </div>
         </div>
         <div>
-          <img src="../../images/curators/diploma-03.jpg" alt="Polotno Competition Diploma" loading="lazy" decoding="async">
+          <img src="../../images/curators/diploma-03.jpg" alt="Polotno Competition Diploma" loading="lazy" decoding="async" width="800" height="1066">
           <div class="caption" style="margin-top: 10px; line-height: 1.6;">
             <strong>All-Russian Competition “Polotno”</strong><br>
             Semi-finalist, 2025<br>
@@ -403,6 +448,12 @@
     <img src="" alt="Enlarged" class="lightbox-img" id="lightboxImg" loading="lazy" decoding="async">
   </div>
   <script src="../../js/main.js"></script>    </div>
+  </div>
+      <button class="cookie-btn-accept" id="cookieAccept" type="button">Accept</button>
+  </div>
+  <div class="cookie-banner" id="cookieBanner" role="dialog" aria-live="polite" aria-label="Cookie usage notification">
+    <div>This site uses cookies. Learn more in our <a href="..//en/privacy/" style="text-decoration: underline; color: inherit;">Policy</a>.</div>
+    <button class="cookie-btn-accept" id="cookieAccept" type="button">Accept</button>
   </div>
 </body>
 </html>

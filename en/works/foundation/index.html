@@ -7,7 +7,11 @@
   <meta name="description" content="Sculptural artwork “Foundation” (2025) by Valentin Atrosh. Solid birch burl, fire charring, natural finish. SOLD.">
   <link rel="canonical" href="https://bycraft.by/en/works/foundation/">
 
-  <!-- Open Graph / Facebook / Telegram / WhatsApp -->
+  <link rel="alternate" hreflang="ru" href="https://bycraft.by/works/osnovanie/">
+  <link rel="alternate" hreflang="en" href="https://bycraft.by/en/works/foundation/">
+  <link rel="alternate" hreflang="x-default" href="https://bycraft.by/works/osnovanie/">
+
+  <!-- Open Graph / Telegram / WhatsApp / Social Media -->
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="BYCRAFT">
   <meta property="og:title" content="“Foundation” Sculpture · BYCRAFT">
@@ -23,8 +27,55 @@
   <meta name="twitter:title" content="“Foundation” Sculpture · BYCRAFT">
   <meta name="twitter:description" content="Sculptural artwork “Foundation” (2025) by Valentin Atrosh. Solid birch burl, fire charring, natural finish. SOLD.">
   <meta name="twitter:image" content="https://bycraft.by/images/works/work-exhibit-01.jpg">
+
+  <!-- JSON-LD Structured Data -->
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://bycraft.by/en/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Works",
+      "item": "https://bycraft.by/en/works/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Foundation",
+      "item": "https://bycraft.by/en/works/foundation/"
+    }
+  ]
+}
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "VisualArtwork",
+  "name": "Foundation",
+  "creator": {
+    "@type": "Person",
+    "name": "Valentin Atrosh"
+  },
+  "artMedium": "Birch burl, fire charring, natural finish",
+  "artform": "Sculpture",
+  "dateCreated": "2025",
+  "height": "72 cm",
+  "width": "34 cm",
+  "depth": "29 cm",
+  "image": "https://bycraft.by/images/works/work-exhibit-01.jpg",
+  "url": "https://bycraft.by/en/works/foundation/"
+}
+  </script>
   <link rel="icon" href="../../../images/favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="../../../css/style.css?v=20">
+  <link rel="stylesheet" href="../../../css/style.css?v=21">
 </head>
 <body>
     <header class="site-header">
@@ -54,7 +105,7 @@
 
     <section class="container work-detail-grid">
       <div class="work-detail-photos-grid">
-        <img src="../../../images/works/work-exhibit-01.jpg" alt="FOUNDATION" class="zoomable-photo" title="Click to enlarge" loading="lazy" decoding="async">
+        <img src="../../../images/works/work-exhibit-01.jpg" alt="FOUNDATION" class="zoomable-photo" title="Click to enlarge" loading="lazy" decoding="async" width="1200" height="900">
         <img src="../../../images/works/work-exhibit-01-detail.jpg" alt="FOUNDATION (detail)" class="zoomable-photo" title="Click to enlarge" loading="lazy" decoding="async">
       </div>
 
@@ -106,6 +157,12 @@
     <img src="" alt="Enlarged" class="lightbox-img" id="lightboxImg" loading="lazy" decoding="async">
   </div>
   <script src="../../../js/main.js"></script>    </div>
+  </div>
+      <button class="cookie-btn-accept" id="cookieAccept" type="button">Accept</button>
+  </div>
+  <div class="cookie-banner" id="cookieBanner" role="dialog" aria-live="polite" aria-label="Cookie usage notification">
+    <div>This site uses cookies. Learn more in our <a href="../..//en/privacy/" style="text-decoration: underline; color: inherit;">Policy</a>.</div>
+    <button class="cookie-btn-accept" id="cookieAccept" type="button">Accept</button>
   </div>
 </body>
 </html>

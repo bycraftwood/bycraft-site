@@ -7,7 +7,11 @@
   <meta name="description" content="Авторский проект художника Валентина Атроша. Contemporary craft, collectible design и скульптурные арт-объекты из сувеля берёзы.">
   <link rel="canonical" href="https://bycraft.by/">
 
-  <!-- Open Graph / Facebook / Telegram / WhatsApp -->
+  <link rel="alternate" hreflang="ru" href="https://bycraft.by/">
+  <link rel="alternate" hreflang="en" href="https://bycraft.by/en/">
+  <link rel="alternate" hreflang="x-default" href="https://bycraft.by/">
+
+  <!-- Open Graph / Telegram / WhatsApp / Social Media -->
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="BYCRAFT">
   <meta property="og:title" content="BYCRAFT · Валентин Атрош · Скульптурные арт-объекты">
@@ -23,8 +27,29 @@
   <meta name="twitter:title" content="BYCRAFT · Валентин Атрош · Скульптурные арт-объекты">
   <meta name="twitter:description" content="Авторский проект художника Валентина Атроша. Contemporary craft, collectible design и скульптурные арт-объекты из сувеля берёзы.">
   <meta name="twitter:image" content="https://bycraft.by/images/hero/hero-valentin.jpg">
+
+  <!-- JSON-LD Structured Data -->
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Валентин Атрош",
+  "jobTitle": "Скульптор / Художник арт-объектов",
+  "url": "https://bycraft.by/",
+  "sameAs": [
+    "https://www.instagram.com/bycraft.by/",
+    "https://t.me/bycraft"
+  ],
+  "knowsAbout": [
+    "Contemporary Craft",
+    "Collectible Design",
+    "Birch Burl Sculpture",
+    "Fire Charring"
+  ]
+}
+  </script>
   <link rel="icon" href="./images/favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="./css/style.css?v=20">
+  <link rel="stylesheet" href="./css/style.css?v=21">
 </head>
 <body>
     <header class="site-header">
@@ -47,7 +72,7 @@
   </header>
   <main>
     <section class="container hero-block">
-      <img src="images/hero/hero-valentin.jpg" alt="Валентин Атрош" class="hero-image" loading="lazy" decoding="async">
+      <img src="images/hero/hero-valentin.jpg" alt="Валентин Атрош" class="hero-image" loading="lazy" decoding="async" width="1600" height="900">
     </section>
 
     <section class="container hero-statement">
@@ -135,6 +160,12 @@
     <img src="" alt="Enlarged" class="lightbox-img" id="lightboxImg" loading="lazy" decoding="async">
   </div>
   <script src="./js/main.js"></script>    </div>
+  </div>
+      <button class="cookie-btn-accept" id="cookieAccept" type="button">Понятно</button>
+  </div>
+  <div class="cookie-banner" id="cookieBanner" role="dialog" aria-live="polite" aria-label="Уведомление об использовании файлов cookie">
+    <div>Сайт использует файлы cookie. Подробнее — в <a href="./privacy/" style="text-decoration: underline; color: inherit;">Политике</a>.</div>
+    <button class="cookie-btn-accept" id="cookieAccept" type="button">Понятно</button>
   </div>
 </body>
 </html>

@@ -7,7 +7,11 @@
   <meta name="description" content="Collectible design and sculptural art objects in birch burl by artist Valentin Atrosh, Minsk, Belarus.">
   <link rel="canonical" href="https://bycraft.by/en/">
 
-  <!-- Open Graph / Facebook / Telegram / WhatsApp -->
+  <link rel="alternate" hreflang="ru" href="https://bycraft.by/">
+  <link rel="alternate" hreflang="en" href="https://bycraft.by/en/">
+  <link rel="alternate" hreflang="x-default" href="https://bycraft.by/">
+
+  <!-- Open Graph / Telegram / WhatsApp / Social Media -->
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="BYCRAFT">
   <meta property="og:title" content="BYCRAFT · Valentin Atrosh · Sculptural Art Objects">
@@ -23,8 +27,29 @@
   <meta name="twitter:title" content="BYCRAFT · Valentin Atrosh · Sculptural Art Objects">
   <meta name="twitter:description" content="Collectible design and sculptural art objects in birch burl by artist Valentin Atrosh, Minsk, Belarus.">
   <meta name="twitter:image" content="https://bycraft.by/images/hero/hero-valentin.jpg">
+
+  <!-- JSON-LD Structured Data -->
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Valentin Atrosh",
+  "jobTitle": "Sculptor / Contemporary Object Artist",
+  "url": "https://bycraft.by/en/",
+  "sameAs": [
+    "https://www.instagram.com/bycraft.by/",
+    "https://t.me/bycraft"
+  ],
+  "knowsAbout": [
+    "Contemporary Craft",
+    "Collectible Design",
+    "Birch Burl Sculpture",
+    "Fire Charring"
+  ]
+}
+  </script>
   <link rel="icon" href="../images/favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="../css/style.css?v=20">
+  <link rel="stylesheet" href="../css/style.css?v=21">
 </head>
 <body>
     <header class="site-header">
@@ -47,7 +72,7 @@
   </header>
   <main>
     <section class="container hero-block">
-      <img src="../images/hero/hero-valentin.jpg" alt="Valentin Atrosh" class="hero-image" loading="lazy" decoding="async">
+      <img src="../images/hero/hero-valentin.jpg" alt="Valentin Atrosh" class="hero-image" loading="lazy" decoding="async" width="1600" height="900">
     </section>
 
     <section class="container hero-statement">
@@ -129,6 +154,12 @@
   </footer>    </div>
 
   <script src="../js/main.js"></script>    </div>
+  </div>
+      <button class="cookie-btn-accept" id="cookieAccept" type="button">Accept</button>
+  </div>
+  <div class="cookie-banner" id="cookieBanner" role="dialog" aria-live="polite" aria-label="Cookie usage notification">
+    <div>This site uses cookies. Learn more in our <a href="./en/privacy/" style="text-decoration: underline; color: inherit;">Policy</a>.</div>
+    <button class="cookie-btn-accept" id="cookieAccept" type="button">Accept</button>
   </div>
 </body>
 </html>

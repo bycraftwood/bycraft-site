@@ -7,7 +7,11 @@
   <meta name="description" content="Gallery sculptures and competition artworks by Valentin Atrosh: Foundation, Face to Face, Confession, Resentment, The Wolf.">
   <link rel="canonical" href="https://bycraft.by/en/works/exhibitions/">
 
-  <!-- Open Graph / Facebook / Telegram / WhatsApp -->
+  <link rel="alternate" hreflang="ru" href="https://bycraft.by/works/exhibitions/">
+  <link rel="alternate" hreflang="en" href="https://bycraft.by/en/works/exhibitions/">
+  <link rel="alternate" hreflang="x-default" href="https://bycraft.by/works/exhibitions/">
+
+  <!-- Open Graph / Telegram / WhatsApp / Social Media -->
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="BYCRAFT">
   <meta property="og:title" content="Exhibition Works · BYCRAFT">
@@ -23,8 +27,30 @@
   <meta name="twitter:title" content="Exhibition Works · BYCRAFT">
   <meta name="twitter:description" content="Gallery sculptures and competition artworks by Valentin Atrosh: Foundation, Face to Face, Confession, Resentment, The Wolf.">
   <meta name="twitter:image" content="https://bycraft.by/images/works/work-exhibit-01.jpg">
+
+  <!-- JSON-LD Structured Data -->
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://bycraft.by/en/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Works",
+      "item": "https://bycraft.by/en/works/"
+    }
+  ]
+}
+  </script>
   <link rel="icon" href="../../../images/favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="../../../css/style.css?v=20">
+  <link rel="stylesheet" href="../../../css/style.css?v=21">
 </head>
 <body>
   <header class="site-header">
@@ -60,7 +86,7 @@
       <div class="exhibits-asym-grid">
         <div class="work-card col-7">
           <a href="../foundation/">
-            <div class="work-img-wrap" style="aspect-ratio: 4/3;"><img src="../../../images/works/work-exhibit-01.jpg" alt="Foundation" loading="lazy" decoding="async"></div>
+            <div class="work-img-wrap" style="aspect-ratio: 4/3;"><img src="../../../images/works/work-exhibit-01.jpg" alt="Foundation" loading="lazy" decoding="async" width="1200" height="900"></div>
             <div class="work-info">
               <div class="work-title"><strong>Foundation</strong><br><span style="color: var(--color-muted); font-size: 14px;">Minsk, 2025</span></div>
               <div class="work-status">SOLD</div>
@@ -70,7 +96,7 @@
 
         <div class="work-card col-5">
           <a href="../resentment/">
-            <div class="work-img-wrap" style="aspect-ratio: 4/5;"><img src="../../../images/works/work-exhibit-04.jpg" alt="Resentment" loading="lazy" decoding="async"></div>
+            <div class="work-img-wrap" style="aspect-ratio: 4/5;"><img src="../../../images/works/work-exhibit-04.jpg" alt="Resentment" loading="lazy" decoding="async" width="1000" height="1000"></div>
             <div class="work-info">
               <div class="work-title"><strong>Resentment</strong><br><span style="color: var(--color-muted); font-size: 14px;">Minsk, 2026</span></div>
               <div class="work-status">AVAILABLE UPON REQUEST</div>
@@ -80,7 +106,7 @@
 
         <div class="work-card col-4">
           <a href="../the-wolf/">
-            <div class="work-img-wrap" style="aspect-ratio: 1/1;"><img src="../../../images/works/work-exhibit-05.jpg" alt="The Wolf" loading="lazy" decoding="async"></div>
+            <div class="work-img-wrap" style="aspect-ratio: 1/1;"><img src="../../../images/works/work-exhibit-05.jpg" alt="The Wolf" loading="lazy" decoding="async" width="1000" height="1000"></div>
             <div class="work-info">
               <div class="work-title"><strong>The Wolf</strong><br><span style="color: var(--color-muted); font-size: 14px;">Minsk, 2026</span></div>
               <div class="work-status">AVAILABLE UPON REQUEST</div>
@@ -90,7 +116,7 @@
 
         <div class="work-card col-4">
           <a href="../face-to-face/">
-            <div class="work-img-wrap" style="aspect-ratio: 1/1;"><img src="../../../images/works/work-exhibit-02.jpg" alt="Face to Face" loading="lazy" decoding="async"></div>
+            <div class="work-img-wrap" style="aspect-ratio: 1/1;"><img src="../../../images/works/work-exhibit-02.jpg" alt="Face to Face" loading="lazy" decoding="async" width="1000" height="1250"></div>
             <div class="work-info">
               <div class="work-title"><strong>Face to Face</strong><br><span style="color: var(--color-muted); font-size: 14px;">Minsk, 2026</span></div>
               <div class="work-status">ON SALE FROM 01.01.2027</div>
@@ -100,7 +126,7 @@
 
         <div class="work-card col-4">
           <a href="../confession/">
-            <div class="work-img-wrap" style="aspect-ratio: 1/1;"><img src="../../../images/works/work-exhibit-03.jpg" alt="Confession" loading="lazy" decoding="async"></div>
+            <div class="work-img-wrap" style="aspect-ratio: 1/1;"><img src="../../../images/works/work-exhibit-03.jpg" alt="Confession" loading="lazy" decoding="async" width="1000" height="1000"></div>
             <div class="work-info">
               <div class="work-title"><strong>Confession</strong><br><span style="color: var(--color-muted); font-size: 14px;">Minsk, 2026</span></div>
               <div class="work-status">AVAILABLE UPON REQUEST</div>
@@ -131,6 +157,12 @@
     <img src="" alt="Enlarged" class="lightbox-img" id="lightboxImg" loading="lazy" decoding="async">
   </div>
   <script src="../../../js/main.js"></script>    </div>
+  </div>
+      <button class="cookie-btn-accept" id="cookieAccept" type="button">Accept</button>
+  </div>
+  <div class="cookie-banner" id="cookieBanner" role="dialog" aria-live="polite" aria-label="Cookie usage notification">
+    <div>This site uses cookies. Learn more in our <a href="../..//en/privacy/" style="text-decoration: underline; color: inherit;">Policy</a>.</div>
+    <button class="cookie-btn-accept" id="cookieAccept" type="button">Accept</button>
   </div>
 </body>
 </html>

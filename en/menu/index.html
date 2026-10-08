@@ -6,6 +6,12 @@
   <title>Contacts & Inquiries · BYCRAFT</title>
   <meta name="description" content="Direct contacts of sculptor Valentin Atrosh, bespoke commissions, and worldwide delivery terms.">
   <link rel="canonical" href="https://bycraft.by/en/menu/">
+
+  <link rel="alternate" hreflang="ru" href="https://bycraft.by/menu/">
+  <link rel="alternate" hreflang="en" href="https://bycraft.by/en/menu/">
+  <link rel="alternate" hreflang="x-default" href="https://bycraft.by/menu/">
+
+  <!-- Open Graph / Telegram / WhatsApp / Social Media -->
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="BYCRAFT">
   <meta property="og:title" content="Contacts & Inquiries · BYCRAFT">
@@ -15,12 +21,36 @@
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta property="og:locale" content="en_US">
+
+  <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Contacts & Inquiries · BYCRAFT">
   <meta name="twitter:description" content="Direct contacts of sculptor Valentin Atrosh, bespoke commissions, and worldwide delivery terms.">
   <meta name="twitter:image" content="https://bycraft.by/images/hero/hero-valentin.jpg">
+
+  <!-- JSON-LD Structured Data -->
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://bycraft.by/en/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Works",
+      "item": "https://bycraft.by/en/works/"
+    }
+  ]
+}
+  </script>
   <link rel="icon" href="../../images/favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="../../css/style.css?v=20">
+  <link rel="stylesheet" href="../../css/style.css?v=21">
 </head>
 <body>
   <header class="site-header">
@@ -122,5 +152,11 @@
 
   </div>
   <script src="../../js/main.js"></script>
+      <button class="cookie-btn-accept" id="cookieAccept" type="button">Accept</button>
+  </div>
+  <div class="cookie-banner" id="cookieBanner" role="dialog" aria-live="polite" aria-label="Cookie usage notification">
+    <div>This site uses cookies. Learn more in our <a href="..//en/privacy/" style="text-decoration: underline; color: inherit;">Policy</a>.</div>
+    <button class="cookie-btn-accept" id="cookieAccept" type="button">Accept</button>
+  </div>
 </body>
 </html>
