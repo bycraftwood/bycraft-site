@@ -1700,3 +1700,18 @@ picture img {
     grid-template-columns: 1fr !important;
   }
 }
+
+
+/* Сетка блока «Как купить» */
+.how-to-buy-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+  margin-bottom: 36px;
+}
+@media (max-width: 900px) {
+  .how-to-buy-grid {
+    grid-template-columns: 1fr !important;
+    gap: 24px !important;
+  }
+}
