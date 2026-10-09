@@ -1578,10 +1578,10 @@ picture img {
 }
 
 
-/* Новый 1-й блок Главной: текст слева, фото Валентина справа */
+/* 1-й блок Главной: вертикальное фото 3:4 и трехуровневая типографика */
 .hero-split-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1.15fr 0.85fr;
   gap: 48px;
   align-items: center;
   margin-top: 40px;
@@ -1593,36 +1593,67 @@ picture img {
   flex-direction: column;
 }
 
-.hero-split-text h1 {
-  font-size: 18px;
+/* 1. Дополнительный надзаголовок */
+.hero-eyebrow {
+  font-size: 13px;
   font-weight: 500;
-  letter-spacing: 0.08em;
-  margin-bottom: 12px;
-  color: var(--color-primary);
+  letter-spacing: 0.12em;
   text-transform: uppercase;
+  color: var(--color-muted);
+  margin-bottom: 12px;
 }
 
-.hero-split-text .hero-sub {
-  font-size: 15px;
+/* 2. Жирный главный заголовок */
+.hero-main-title {
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 1.35;
+  color: var(--color-primary);
+  margin-bottom: 10px;
+}
+
+/* 3. Самый маленький из трех */
+.hero-material-info {
+  font-size: 12.5px;
   color: var(--color-secondary);
-  margin-bottom: 4px;
-  line-height: 1.5;
+  letter-spacing: 0.02em;
+  margin-bottom: 24px;
 }
 
+/* Фото: в ширину меньше, чем в длину (вертикальный портрет 3:4) */
 .hero-split-photo {
   overflow: hidden;
   background-color: #F4F4F4;
+  max-width: 420px;
+  width: 100%;
+  margin-left: auto;
 }
 
 .hero-split-photo img {
   width: 100%;
-  aspect-ratio: 4 / 3;
+  aspect-ratio: 3 / 4;
   object-fit: cover;
   display: block;
 }
 
 .home-workshop-section {
   margin-bottom: 80px;
+}
+
+@media (max-width: 768px) {
+  .hero-split-grid {
+    grid-template-columns: 1fr !important;
+    gap: 32px !important;
+    margin-top: 24px !important;
+    margin-bottom: 48px !important;
+  }
+  .hero-main-title {
+    font-size: 20px !important;
+  }
+  .hero-split-photo {
+    max-width: 100%;
+    margin-left: 0;
+  }
 }
 
 @media (max-width: 768px) {
