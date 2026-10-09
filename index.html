@@ -71,38 +71,41 @@
     </div>
   </header>
   <main>
-    <section class="container hero-block">
-      <picture><source srcset="images/hero/hero-valentin.webp" type="image/webp"><img src="images/hero/hero-valentin.jpg" alt="Валентин Атрош" class="hero-image" loading="lazy" decoding="async" width="1600" height="900"></picture>
-    </section>
-
-    <section class="container hero-statement">
-      <h1>СКУЛЬПТУРНЫЕ АРТ-ОБЪЕКТЫ</h1>
-      <p>Создано природой. Завершено человеком</p>
-      <p>Материал: сувель берёзы / обжиг огнём</p>
-    </section>
-
-    <!-- Кликабельные РАБОТЫ и МАСТЕРСКАЯ -->
-    <section class="container home-sections">
-      <div class="grid-2-col">
+    <!-- 1 БЛОК: Слева текст, справа фото Валентина -->
+    <section class="container hero-split-grid">
+      <div class="hero-split-text">
+        <h1>СКУЛЬПТУРНЫЕ АРТ-ОБЪЕКТЫ</h1>
+        <p class="hero-sub">Создано природой. Завершено человеком</p>
+        <p class="hero-sub" style="margin-bottom: 24px;">Материал: сувель берёзы / обжиг огнём</p>
+        
+        <p class="lead-text" style="margin-bottom: 24px;">
+          Каждая работа существует в единственном экземпляре и не может быть повторена
+        </p>
         <div>
-          <h2 class="section-title"><a href="works/" style="color: inherit; text-decoration: underline; text-underline-offset: 6px;">Работы</a></h2>
-          <p class="lead-text" style="margin-bottom: 20px;">
-            BYCRAFT представлен в 24 странах на четырёх континентах<br>Каждая работа уникальна. Как и тот, кто её выбирает
-          </p>
-          <a href="works/" class="btn-arrow">Смотреть работы →</a>
+          <a href="works/" class="btn-arrow" style="font-size: 16px;">Смотреть работы →</a>
         </div>
-        <div>
-          <h2 class="section-title"><a href="workshop/" style="color: inherit; text-decoration: underline; text-underline-offset: 6px;">Мастерская</a></h2>
-          <p class="lead-text" style="margin-bottom: 20px;">
-            Сувель — нарост на берёзе, который нельзя просчитать или выстроить по линейке. Его форма и рисунок волокон формируются годами. Задача мастера — увидеть в этой бесформенной массе то, чего в ней ещё не видно
-          </p>
-          <a href="workshop/" class="btn-arrow">Увидеть процесс →</a>
-        </div>
+      </div>
+
+      <div class="hero-split-photo">
+        <picture>
+          <source srcset="images/hero/hero-valentin.webp" type="image/webp">
+          <img src="images/hero/hero-valentin.jpg" alt="Валентин Атрош" class="hero-image" width="1600" height="900">
+        </picture>
       </div>
     </section>
 
-    
+    <!-- 2 БЛОК: МАСТЕРСКАЯ (без изменений) -->
+    <section class="container home-workshop-section">
+      <div style="max-width: 720px;">
+        <h2 class="section-title"><a href="workshop/" style="color: inherit; text-decoration: underline; text-underline-offset: 6px;">Мастерская</a></h2>
+        <p class="lead-text" style="margin-bottom: 20px;">
+          Сувель — нарост на берёзе, который нельзя просчитать или выстроить по линейке. Его форма и рисунок волокон формируются годами. Задача мастера — увидеть в этой бесформенной массе то, чего в ней ещё не видно.
+        </p>
+        <a href="workshop/" class="btn-arrow">Увидеть процесс →</a>
+      </div>
+    </section>
 
+    <!-- 3 БЛОК: ДЛЯ КУРАТОРОВ (без изменений) -->
     <section class="container home-curators-box">
       <div class="home-curators-grid">
         <div>
@@ -115,7 +118,7 @@
       </div>
     </section>
 
-    <!-- Кликабельный заголовок АКТУАЛЬНЫЕ СОБЫТИЯ -->
+    <!-- 4 БЛОК: АКТУАЛЬНЫЕ СОБЫТИЯ (без изменений) -->
     <section class="container home-events-preview">
       <h2 class="section-title"><a href="events/" style="color: inherit; text-decoration: underline; text-underline-offset: 6px;">Актуальные события</a></h2>
       <div class="grid-2-col" style="margin-bottom: 30px;">
@@ -126,7 +129,7 @@
         </div>
         <div>
           <p class="event-date">Август 2026</p>
-          <h3 class="event-name" style="margin-bottom: 8px;">Международная выставка-конкурс современного искусства «UNITED BY ART»</h3>
+          <h3 class="event-name" style="margin-bottom: 8px;">Международная выставка-конкурс «UNITED BY ART»</h3>
           <p class="lead-text">3-е место в номинации «Человек и его мир», раздел: скульптура</p>
         </div>
       </div>
@@ -134,8 +137,14 @@
         <a href="events/" class="btn-arrow">Смотреть все события →</a>
       </div>
       <div class="events-two-photos">
-        <picture><source srcset="images/events/home-events-feature-01.webp" type="image/webp"><img src="images/events/home-events-feature-01.jpg" alt="События BYCRAFT" width="800" height="500" loading="lazy" decoding="async"></picture>
-        <picture><source srcset="images/events/home-events-feature-02.webp" type="image/webp"><img src="images/events/home-events-feature-02.jpg" alt="События BYCRAFT" width="800" height="500" loading="lazy" decoding="async"></picture>
+        <picture>
+          <source srcset="images/events/home-events-feature-01.webp" type="image/webp">
+          <img src="images/events/home-events-feature-01.jpg" alt="События BYCRAFT" width="800" height="500" loading="lazy" decoding="async">
+        </picture>
+        <picture>
+          <source srcset="images/events/home-events-feature-02.webp" type="image/webp">
+          <img src="images/events/home-events-feature-02.jpg" alt="События BYCRAFT" width="800" height="500" loading="lazy" decoding="async">
+        </picture>
       </div>
     </section>
   </main>

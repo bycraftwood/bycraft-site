@@ -1576,3 +1576,60 @@ picture img {
   object-fit: cover;
   display: block;
 }
+
+
+/* Новый 1-й блок Главной: текст слева, фото Валентина справа */
+.hero-split-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  align-items: center;
+  margin-top: 40px;
+  margin-bottom: 80px;
+}
+
+.hero-split-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.hero-split-text h1 {
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  margin-bottom: 12px;
+  color: var(--color-primary);
+  text-transform: uppercase;
+}
+
+.hero-split-text .hero-sub {
+  font-size: 15px;
+  color: var(--color-secondary);
+  margin-bottom: 4px;
+  line-height: 1.5;
+}
+
+.hero-split-photo {
+  overflow: hidden;
+  background-color: #F4F4F4;
+}
+
+.hero-split-photo img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  display: block;
+}
+
+.home-workshop-section {
+  margin-bottom: 80px;
+}
+
+@media (max-width: 768px) {
+  .hero-split-grid {
+    grid-template-columns: 1fr !important;
+    gap: 32px !important;
+    margin-top: 24px !important;
+    margin-bottom: 48px !important;
+  }
+}
