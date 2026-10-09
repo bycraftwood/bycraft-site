@@ -1715,3 +1715,54 @@ picture img {
     gap: 24px !important;
   }
 }
+
+
+/* Фирменные цвета кнопок соцсетей */
+.btn-social-tg {
+  background-color: #229ED9 !important;
+  color: #FFFFFF !important;
+  border: none !important;
+}
+.btn-social-tg:hover {
+  background-color: #1c87ba !important;
+}
+
+.btn-social-ig {
+  background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%) !important;
+  color: #FFFFFF !important;
+  border: none !important;
+}
+.btn-social-ig:hover {
+  opacity: 0.9 !important;
+}
+
+/* Сетка «Другие выставочные работы» */
+.other-works-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+.other-works-grid .work-card {
+  display: flex;
+  flex-direction: column;
+}
+.other-works-grid .work-img-wrap {
+  aspect-ratio: 3 / 4;
+  overflow: hidden;
+  background-color: #F4F4F4;
+}
+.other-works-grid img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+.other-works-grid .work-card:hover img {
+  transform: scale(1.03);
+}
+@media (max-width: 768px) {
+  .other-works-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 16px !important;
+  }
+}
