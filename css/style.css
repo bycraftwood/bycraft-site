@@ -1664,3 +1664,39 @@ picture img {
     margin-bottom: 48px !important;
   }
 }
+
+
+/* Сетка из 6 одинаковых фото 3:4 */
+.works-six-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 36px 24px;
+}
+.works-six-grid .work-card {
+  display: flex;
+  flex-direction: column;
+}
+.works-six-grid .work-img-wrap {
+  aspect-ratio: 3 / 4;
+  overflow: hidden;
+  background-color: #F4F4F4;
+}
+.works-six-grid .work-img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+.works-six-grid .work-card:hover .work-img-wrap img {
+  transform: scale(1.02);
+}
+@media (max-width: 900px) {
+  .works-six-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+}
+@media (max-width: 600px) {
+  .works-six-grid {
+    grid-template-columns: 1fr !important;
+  }
+}
