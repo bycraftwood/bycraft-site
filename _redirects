@@ -1,4 +1,8 @@
-/uyutnaya_kuhnya/tpost/53b41ez7y1-charoni-mlin-vistavka-yarmarka-avtorskih    /events/    301
+# 301 редирект для старой статьи с Тильды (все варианты URL):
+/uyutnaya_kuhnya/*                                                               /events/ 301
+/uyutnaya_kuhnya/tpost/53b41ez7y1-charoni-mlin-vistavka-yarmarka-avtorskih       /events/ 301
+/uyutnaya_kuhnya/tpost/53b41ez7y1-charoni-mlin-vistavka-yarmarka-avtorskih/      /events/ 301
+
 /menu                     /menu/index.html                    200
 /works                    /works/index.html                   200
 /works/exhibitions        /works/exhibitions/index.html       200
@@ -21,7 +25,7 @@
 /en/works/resentment      /en/works/resentment/index.html     200
 /en/works/the-wolf        /en/works/the-wolf/index.html       200
 
-# 301 редиректы для защиты от 404 в английской версии:
+# 301 алиасы транслита:
 /en/works/osnovanie       /en/works/foundation/index.html     301
 /en/works/pered-licom     /en/works/face-to-face/index.html   301
 /en/works/ispoved         /en/works/confession/index.html     301
