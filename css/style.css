@@ -956,7 +956,6 @@ img, video {
 
 .footer-col-2 {
   color: #E9ECEF;
-  padding-top: 32px;
 }
 
 .footer-col-2 a, .footer-col-1 a {
@@ -1096,8 +1095,8 @@ img, video {
     margin-bottom: 4px !important;
   }
   .footer-col-2 {
-    padding-top: 0 !important;
-  }
+  color: #E9ECEF;
+}
 
   /* Меню */
   .mobile-toggle {
@@ -1777,4 +1776,30 @@ picture img {
     grid-template-columns: repeat(2, 1fr) !important;
     gap: 16px !important;
   }
+}
+
+
+/* Стили для контактного блока в правой колонке подвала */
+.footer-contact-title {
+  font-weight: 600;
+  font-size: 12.5px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #FFFFFF;
+  margin-bottom: 4px;
+}
+.footer-contact-group {
+  margin-bottom: 14px;
+  font-size: 13.5px;
+  line-height: 1.6;
+}
+.footer-social-row {
+  display: flex;
+  gap: 10px;
+  margin-top: 14px;
+}
+.footer-social-row a {
+  padding: 6px 16px;
+  font-size: 13px;
+  border-radius: 2px;
 }
