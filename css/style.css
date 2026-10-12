@@ -1,3 +1,73 @@
+/* 1-й блок Главной: 5 колонок текст, 7 колонок альбомное фото, плотный отступ 20px */
+.hero-split-grid {
+  display: grid;
+  grid-template-columns: 5fr 7fr;
+  gap: 20px;
+  align-items: center;
+  margin-top: 24px;
+  margin-bottom: 60px;
+}
+
+.hero-split-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.hero-eyebrow {
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-muted);
+  margin-bottom: 10px;
+}
+
+.hero-main-title {
+  font-size: 26px;
+  font-weight: 600;
+  line-height: 1.25;
+  color: var(--color-primary);
+  margin-bottom: 12px;
+}
+
+.hero-material-info {
+  font-size: 13px;
+  color: var(--color-secondary);
+  letter-spacing: 0.02em;
+  margin-bottom: 20px;
+}
+
+.hero-split-photo {
+  overflow: hidden;
+  background-color: #F4F4F4;
+  width: 100%;
+}
+
+.hero-split-photo img,
+.hero-split-photo picture {
+  width: 100%;
+  aspect-ratio: 1200 / 630 !important;
+  object-fit: cover;
+  display: block;
+}
+
+@media (max-width: 900px) {
+  .hero-split-grid {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 20px !important;
+    margin-top: 20px !important;
+    margin-bottom: 44px !important;
+  }
+  .hero-split-text,
+  .hero-split-photo {
+    width: 100% !important;
+  }
+  .hero-main-title {
+    font-size: 22px !important;
+  }
+}
+
 /* ================= ЛОКАЛЬНЫЕ ШРИФТЫ MONTSERRAT ================= */
 /* cyrillic-ext */
 @font-face {
@@ -1577,64 +1647,6 @@ picture img {
   display: block;
 }
 
-
-/* 1-й блок Главной: вертикальное фото 3:4 и трехуровневая типографика */
-.hero-split-grid {
-  display: grid;
-  grid-template-columns: 1.15fr 0.85fr;
-  gap: 48px;
-  align-items: center;
-  margin-top: 40px;
-  margin-bottom: 80px;
-}
-
-.hero-split-text {
-  display: flex;
-  flex-direction: column;
-}
-
-/* 1. Дополнительный надзаголовок */
-.hero-eyebrow {
-  font-size: 13px;
-  font-weight: 500;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: var(--color-muted);
-  margin-bottom: 12px;
-}
-
-/* 2. Жирный главный заголовок */
-.hero-main-title {
-  font-size: 24px;
-  font-weight: 600;
-  line-height: 1.35;
-  color: var(--color-primary);
-  margin-bottom: 10px;
-}
-
-/* 3. Самый маленький из трех */
-.hero-material-info {
-  font-size: 12.5px;
-  color: var(--color-secondary);
-  letter-spacing: 0.02em;
-  margin-bottom: 24px;
-}
-
-/* Фото: в ширину меньше, чем в длину (вертикальный портрет 3:4) */
-.hero-split-photo {
-  overflow: hidden;
-  background-color: #F4F4F4;
-  max-width: 420px;
-  width: 100%;
-  margin-left: auto;
-}
-
-.hero-split-photo img {
-  width: 100%;
-  aspect-ratio: 3 / 4;
-  object-fit: cover;
-  display: block;
-}
 
 .home-workshop-section {
   margin-bottom: 80px;
