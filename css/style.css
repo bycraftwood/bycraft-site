@@ -46,7 +46,7 @@
 .hero-split-photo img,
 .hero-split-photo picture {
   width: 100%;
-  aspect-ratio: 1200 / 630 !important;
+  aspect-ratio: 5 / 4 !important;
   object-fit: cover;
   display: block;
 }
