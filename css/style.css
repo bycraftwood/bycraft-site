@@ -1827,3 +1827,51 @@ picture img {
   opacity: 0.85 !important;
   transform: translateY(-1px);
 }
+/* Колонка 1: Компактный юридический блок (~11px), заканчивающийся на уровне телефона Елены */
+.footer-col-1 {
+  font-size: 11px !important;
+  line-height: 1.55 !important;
+  color: #ADB5BD !important;
+}
+
+.footer-col-1 p {
+  margin-bottom: 5px !important;
+  font-size: 11px !important;
+  line-height: 1.55 !important;
+}
+
+.footer-col-1 p:first-child {
+  font-size: 12px !important;
+  font-weight: 600 !important;
+  color: #FFFFFF !important;
+  margin-bottom: 8px !important;
+}
+
+.footer-col-1 a {
+  color: #ADB5BD !important;
+  text-decoration: underline !important;
+}
+
+.footer-col-1 a:hover {
+  color: #FFFFFF !important;
+}
+
+/* Кнопки соцсетей в цвет подвала с тонким белым контуром */
+.btn-footer-outline {
+  display: inline-block;
+  padding: 6px 16px;
+  background-color: transparent !important;
+  color: #FFFFFF !important;
+  border: 1px solid rgba(255, 255, 255, 0.75) !important;
+  font-size: 13px;
+  font-weight: 500;
+  border-radius: 2px;
+  transition: all 0.2s ease;
+  text-decoration: none !important;
+}
+
+.btn-footer-outline:hover {
+  background-color: #FFFFFF !important;
+  color: #222629 !important;
+  border-color: #FFFFFF !important;
+}
