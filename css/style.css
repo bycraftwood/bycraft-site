@@ -1827,28 +1827,28 @@ picture img {
   opacity: 0.85 !important;
   transform: translateY(-1px);
 }
-/* Колонка 1 футера: размер строго 12px */
+/* Колонка 1 футера: размер строго 11px */
 .footer-col-1 {
-  font-size: 12px !important;
-  line-height: 1.6 !important;
+  font-size: 11px !important;
+  line-height: 1.55 !important;
   color: #ADB5BD !important;
 }
 
 .footer-col-1 p {
-  margin-bottom: 6px !important;
-  font-size: 12px !important;
-  line-height: 1.6 !important;
+  margin-bottom: 5px !important;
+  font-size: 11px !important;
+  line-height: 1.55 !important;
 }
 
 .footer-col-1 p:first-child {
-  font-size: 13px !important;
+  font-size: 12px !important;
   font-weight: 600 !important;
   color: #FFFFFF !important;
-  margin-bottom: 8px !important;
+  margin-bottom: 7px !important;
 }
 
 .footer-col-1 a {
-  font-size: 12px !important;
+  font-size: 11px !important;
   color: #ADB5BD !important;
   text-decoration: underline !important;
 }
