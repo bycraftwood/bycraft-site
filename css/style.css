@@ -1950,3 +1950,10 @@ picture img {
     display: inline-block !important;
   }
 }
+.lightbox-img:not([src]),
+.lightbox-img[src=""] {
+  display: none !important;
+}
+.meta-label {
+  margin-right: 8px;
+}
