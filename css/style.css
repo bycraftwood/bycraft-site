@@ -1827,27 +1827,28 @@ picture img {
   opacity: 0.85 !important;
   transform: translateY(-1px);
 }
-/* Колонка 1: Компактный юридический блок (~11px), заканчивающийся на уровне телефона Елены */
+/* Колонка 1 футера: размер строго 12px */
 .footer-col-1 {
-  font-size: 11px !important;
-  line-height: 1.55 !important;
+  font-size: 12px !important;
+  line-height: 1.6 !important;
   color: #ADB5BD !important;
 }
 
 .footer-col-1 p {
-  margin-bottom: 5px !important;
-  font-size: 11px !important;
-  line-height: 1.55 !important;
+  margin-bottom: 6px !important;
+  font-size: 12px !important;
+  line-height: 1.6 !important;
 }
 
 .footer-col-1 p:first-child {
-  font-size: 12px !important;
+  font-size: 13px !important;
   font-weight: 600 !important;
   color: #FFFFFF !important;
   margin-bottom: 8px !important;
 }
 
 .footer-col-1 a {
+  font-size: 12px !important;
   color: #ADB5BD !important;
   text-decoration: underline !important;
 }
