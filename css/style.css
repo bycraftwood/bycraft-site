@@ -946,8 +946,9 @@ img, video {
 
 .footer-inner-grid {
   display: grid;
-  grid-template-columns: 1.4fr 1fr;
+  grid-template-columns: 1.5fr 1.1fr 1fr;
   gap: 40px;
+  align-items: start;
 }
 
 .footer-col-1 {
@@ -1802,4 +1803,27 @@ picture img {
   padding: 6px 16px;
   font-size: 13px;
   border-radius: 2px;
+}
+
+/* Стили для 3 колонок подвала и белых кнопок с черным текстом */
+.footer-col-3 {
+  color: #E9ECEF;
+}
+
+.btn-footer-white {
+  display: inline-block;
+  padding: 7px 16px;
+  background-color: #FFFFFF !important;
+  color: #222629 !important;
+  font-size: 13px;
+  font-weight: 500;
+  border-radius: 2px;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+  text-decoration: none !important;
+  border: none !important;
+}
+
+.btn-footer-white:hover {
+  opacity: 0.85 !important;
+  transform: translateY(-1px);
 }
