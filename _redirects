@@ -18,6 +18,7 @@
 /works/ispoved            /works/ispoved/index.html           200
 /works/obida              /works/obida/index.html             200
 /works/volk               /works/volk/index.html              200
+/works/work-252          /works/work-252/index.html          200
 /workshop                 /workshop/index.html                200
 /curators                 /curators/index.html                200
 /events                   /events/index.html                  200
@@ -31,6 +32,7 @@
 /en/works/confession      /en/works/confession/index.html     200
 /en/works/resentment      /en/works/resentment/index.html     200
 /en/works/the-wolf        /en/works/the-wolf/index.html       200
+/en/works/work-252       /en/works/work-252/index.html       200
 
 # 301 алиасы транслита:
 /en/works/osnovanie       /en/works/foundation/index.html     301
