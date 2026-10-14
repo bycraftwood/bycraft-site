@@ -2005,7 +2005,7 @@ picture img {
   width: 100%;
 }
 .exhibits-unified-grid .work-img-wrap {
-  aspect-ratio: 4 / 3 !important;
+  aspect-ratio: 1600 / 1200 !important;
   overflow: hidden;
   background-color: #F4F4F4;
 }
