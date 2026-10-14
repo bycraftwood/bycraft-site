@@ -133,13 +133,13 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://bycraft.by/menu/</loc>
+    <loc>https://bycraft.by/contacts/</loc>
     <lastmod>2026-10-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://bycraft.by/en/menu/</loc>
+    <loc>https://bycraft.by/en/contacts/</loc>
     <lastmod>2026-10-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>

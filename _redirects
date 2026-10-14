@@ -1,9 +1,16 @@
-# 301 редирект для старой статьи с Тильды (все варианты URL):
+# 301 редирект для напечатанных QR-кодов (работают вечно):
+/menu                     /contacts/                          301
+/menu/                    /contacts/                          301
+/en/menu                  /en/contacts/                       301
+/en/menu/                 /en/contacts/                       301
+
+# 301 редирект для старой статьи с Тильды:
 /uyutnaya_kuhnya/*                                                               /events/ 301
 /uyutnaya_kuhnya/tpost/53b41ez7y1-charoni-mlin-vistavka-yarmarka-avtorskih       /events/ 301
 /uyutnaya_kuhnya/tpost/53b41ez7y1-charoni-mlin-vistavka-yarmarka-avtorskih/      /events/ 301
 
-/menu                     /menu/index.html                    200
+# Основные маршруты:
+/contacts                 /contacts/index.html                200
 /works                    /works/index.html                   200
 /works/exhibitions        /works/exhibitions/index.html       200
 /works/osnovanie          /works/osnovanie/index.html         200
@@ -16,7 +23,7 @@
 /events                   /events/index.html                  200
 /privacy                  /privacy/index.html                 200
 /en                       /en/index.html                      200
-/en/menu                  /en/menu/index.html                 200
+/en/contacts              /en/contacts/index.html             200
 /en/works                 /en/works/index.html                200
 /en/works/exhibitions     /en/works/exhibitions/index.html    200
 /en/works/foundation      /en/works/foundation/index.html     200
