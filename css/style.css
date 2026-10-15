@@ -1751,57 +1751,7 @@ picture img {
   opacity: 0.9 !important;
 }
 
-/* Строгая фиксация одинакового размера 4:3 для блока «Другие выставочные работы» */
-.other-works-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 24px;
-  align-items: start;
-}
-.other-works-grid .work-card {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-}
-.other-works-grid a {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  color: inherit;
-  text-decoration: none;
-}
-.other-works-grid .work-img-wrap {
-  width: 100%;
-  aspect-ratio: 4 / 3 !important;
-  overflow: hidden;
-  background-color: #F4F4F4;
-  position: relative;
-}
-.other-works-grid picture,
-.other-works-grid .work-img-wrap picture {
-  display: block !important;
-  width: 100% !important;
-  height: 100% !important;
-}
-.other-works-grid img,
-.other-works-grid .work-img-wrap img {
-  width: 100% !important;
-  height: 100% !important;
-  aspect-ratio: 4 / 3 !important;
-  object-fit: cover !important;
-  display: block !important;
-}
-@media (max-width: 900px) {
-  .other-works-grid {
-    grid-template-columns: repeat(2, 1fr) !important;
-    gap: 20px 16px !important;
-  }
-}
-@media (max-width: 600px) {
-  .other-works-grid {
-    grid-template-columns: 1fr !important;
-  }
-}
+
 @media (max-width: 768px) {
   .other-works-grid {
     grid-template-columns: repeat(2, 1fr) !important;
@@ -2053,6 +2003,57 @@ picture img {
 }
 @media (max-width: 600px) {
   .exhibits-unified-grid {
+    grid-template-columns: 1fr !important;
+  }
+}
+/* ЖЕЛЕЗНАЯ ФИКСАЦИЯ 4:3 ДЛЯ БЛОКА ДРУГИХ ВЫСТАВОЧНЫХ РАБОТ */
+.other-works-grid {
+  display: grid !important;
+  grid-template-columns: repeat(4, 1fr) !important;
+  gap: 24px !important;
+  align-items: start !important;
+}
+.other-works-grid .work-card {
+  display: flex !important;
+  flex-direction: column !important;
+  width: 100% !important;
+}
+.other-works-grid a {
+  display: flex !important;
+  flex-direction: column !important;
+  width: 100% !important;
+  color: inherit !important;
+  text-decoration: none !important;
+}
+.other-works-grid .work-img-wrap {
+  width: 100% !important;
+  aspect-ratio: 4 / 3 !important;
+  overflow: hidden !important;
+  background-color: #F4F4F4 !important;
+  position: relative !important;
+}
+.other-works-grid picture,
+.other-works-grid .work-img-wrap picture {
+  display: block !important;
+  width: 100% !important;
+  height: 100% !important;
+}
+.other-works-grid img,
+.other-works-grid .work-img-wrap img {
+  width: 100% !important;
+  height: 100% !important;
+  aspect-ratio: 4 / 3 !important;
+  object-fit: cover !important;
+  display: block !important;
+}
+@media (max-width: 900px) {
+  .other-works-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 20px 16px !important;
+  }
+}
+@media (max-width: 600px) {
+  .other-works-grid {
     grid-template-columns: 1fr !important;
   }
 }
