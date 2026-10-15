@@ -1518,20 +1518,27 @@ img, video {
   line-height: 1.7;
 }
 
-/* 5 работ у кураторов на десктопе */
+/* 5 работ у кураторов: единый формат 4:3 */
 .curator-works-5-grid {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   gap: 20px;
 }
+.curator-works-5-grid picture,
 .curator-works-5-grid img {
   width: 100%;
-  aspect-ratio: 3 / 4;
+  aspect-ratio: 4 / 3 !important;
   object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
+}
+.curator-works-5-grid a:hover img {
+  transform: scale(1.02);
 }
 @media (max-width: 900px) {
   .curator-works-5-grid {
     grid-template-columns: repeat(2, 1fr) !important;
+    gap: 18px 16px !important;
   }
 }
 @media (max-width: 600px) {
