@@ -2006,46 +2006,54 @@ picture img {
     grid-template-columns: 1fr !important;
   }
 }
-/* ЖЕЛЕЗНАЯ ФИКСАЦИЯ 4:3 ДЛЯ БЛОКА ДРУГИХ ВЫСТАВОЧНЫХ РАБОТ */
+
+/* ИДЕАЛЬНОЕ ВЫРАВНИВАНИЕ БЛОКА «ДРУГИЕ ВЫСТАВОЧНЫЕ РАБОТЫ» */
 .other-works-grid {
   display: grid !important;
   grid-template-columns: repeat(4, 1fr) !important;
   gap: 24px !important;
-  align-items: start !important;
+  align-items: stretch !important;
 }
 .other-works-grid .work-card {
   display: flex !important;
   flex-direction: column !important;
   width: 100% !important;
+  height: 100% !important;
 }
 .other-works-grid a {
   display: flex !important;
   flex-direction: column !important;
   width: 100% !important;
+  height: 100% !important;
   color: inherit !important;
   text-decoration: none !important;
 }
 .other-works-grid .work-img-wrap {
   width: 100% !important;
   aspect-ratio: 4 / 3 !important;
+  height: auto !important;
   overflow: hidden !important;
   background-color: #F4F4F4 !important;
-  position: relative !important;
+  flex-shrink: 0 !important;
 }
-.other-works-grid picture,
-.other-works-grid .work-img-wrap picture {
-  display: block !important;
-  width: 100% !important;
-  height: 100% !important;
-}
-.other-works-grid img,
+.other-works-grid .work-img-wrap picture,
 .other-works-grid .work-img-wrap img {
   width: 100% !important;
   height: 100% !important;
   aspect-ratio: 4 / 3 !important;
   object-fit: cover !important;
+  object-position: center !important;
   display: block !important;
 }
+.other-works-grid .work-info {
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: flex-start !important;
+  gap: 4px !important;
+  margin-top: 10px !important;
+  min-height: 72px !important; /* Гарантирует одинаковую высоту подписи у всех карточек */
+}
+
 @media (max-width: 900px) {
   .other-works-grid {
     grid-template-columns: repeat(2, 1fr) !important;
