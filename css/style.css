@@ -2014,7 +2014,51 @@ picture img {
   }
 }
 
-/* ИДЕАЛЬНОЕ ВЫРАВНИВАНИЕ БЛОКА «ДРУГИЕ ВЫСТАВОЧНЫЕ РАБОТЫ» */
+
+
+/* Блок РАБОТЫ у кураторов: 2 ряда (3 в первом, 2 во втором), формат 4:3 */
+.curator-works-grid-2rows {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 36px 24px;
+}
+.curator-works-grid-2rows .work-card {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.curator-works-grid-2rows .work-img-wrap {
+  width: 100% !important;
+  aspect-ratio: 4 / 3 !important;
+  overflow: hidden !important;
+  background-color: #F4F4F4 !important;
+}
+.curator-works-grid-2rows picture,
+.curator-works-grid-2rows img {
+  width: 100% !important;
+  height: 100% !important;
+  aspect-ratio: 4 / 3 !important;
+  object-fit: cover !important;
+  display: block !important;
+  transition: transform 0.4s ease;
+}
+.curator-works-grid-2rows a:hover img {
+  transform: scale(1.02);
+}
+
+@media (max-width: 900px) {
+  .curator-works-grid-2rows {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 24px 18px !important;
+  }
+}
+@media (max-width: 600px) {
+  .curator-works-grid-2rows {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+/* Фиксация блока других работ в карточках: все строго 4:3 */
 .other-works-grid {
   display: grid !important;
   grid-template-columns: repeat(4, 1fr) !important;
@@ -2025,25 +2069,24 @@ picture img {
   display: flex !important;
   flex-direction: column !important;
   width: 100% !important;
-  height: 100% !important;
 }
 .other-works-grid a {
   display: flex !important;
   flex-direction: column !important;
   width: 100% !important;
-  height: 100% !important;
   color: inherit !important;
   text-decoration: none !important;
 }
 .other-works-grid .work-img-wrap {
   width: 100% !important;
   aspect-ratio: 4 / 3 !important;
-  height: auto !important;
   overflow: hidden !important;
   background-color: #F4F4F4 !important;
   flex-shrink: 0 !important;
 }
+.other-works-grid picture,
 .other-works-grid .work-img-wrap picture,
+.other-works-grid img,
 .other-works-grid .work-img-wrap img {
   width: 100% !important;
   height: 100% !important;
@@ -2058,7 +2101,7 @@ picture img {
   justify-content: flex-start !important;
   gap: 4px !important;
   margin-top: 10px !important;
-  min-height: 72px !important; /* Гарантирует одинаковую высоту подписи у всех карточек */
+  min-height: 72px !important;
 }
 
 @media (max-width: 900px) {
