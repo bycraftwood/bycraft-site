@@ -53,9 +53,34 @@
   <link rel="stylesheet" href="../css/style.css?v=700">
 
 
-<!-- BYCRAFT Styles: Modal & Uniform Gallery -->
+
+
+<!-- BYCRAFT 4:3 Photos & Modal Styles -->
 <style id="bc-unified-styles">
-/* 1. Модальное окно обратной связи BYCRAFT */
+/* 1. Возвращение строгого формата 4:3 для фото на карточке работы и в галереях */
+img {
+  max-width: 100%;
+}
+.work-detail img,
+.work-gallery img,
+.artwork-image img,
+.artwork-photo img,
+.other-works img,
+.works-grid img,
+.card img,
+[class*="other-work"] img,
+[class*="work-card"] img,
+[class*="related"] img,
+[class*="detail"] img {
+  aspect-ratio: 4 / 3 !important;
+  width: 100% !important;
+  height: auto !important;
+  object-fit: cover !important;
+  object-position: center !important;
+  display: block !important;
+}
+
+/* 2. Модальная форма обратной связи BYCRAFT */
 #bycraft-modal {
   display: none;
   position: fixed !important;
@@ -78,8 +103,8 @@
   width: 100% !important;
   height: 100% !important;
   background: rgba(34, 38, 41, 0.78) !important;
-  backdrop-filter: blur(6px) !important;
-  -webkit-backdrop-filter: blur(6px) !important;
+  backdrop-filter: blur(5px) !important;
+  -webkit-backdrop-filter: blur(5px) !important;
 }
 .bc-modal__container {
   position: relative !important;
@@ -89,15 +114,15 @@
   max-width: 460px !important;
   max-height: 90vh !important;
   overflow-y: auto !important;
-  padding: 36px 30px 30px !important;
-  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4) !important;
+  padding: 34px 28px 28px !important;
+  box-shadow: 0 14px 45px rgba(0, 0, 0, 0.4) !important;
   z-index: 2147483647 !important;
   box-sizing: border-box !important;
 }
 .bc-modal__close {
   position: absolute !important;
-  top: 14px !important;
-  right: 18px !important;
+  top: 12px !important;
+  right: 16px !important;
   background: transparent !important;
   border: none !important;
   font-size: 28px !important;
@@ -107,12 +132,12 @@
   padding: 4px 8px !important;
 }
 .bc-modal__close:hover { opacity: 0.6 !important; }
-.bc-modal__header { margin-bottom: 20px !important; text-align: left !important; }
+.bc-modal__header { margin-bottom: 18px !important; text-align: left !important; }
 .bc-modal__title {
   font-size: 19px !important;
   font-weight: 500 !important;
   color: #222629 !important;
-  margin: 0 0 6px 0 !important;
+  margin: 0 0 5px 0 !important;
   letter-spacing: 0.02em !important;
 }
 .bc-modal__subtitle {
@@ -146,7 +171,7 @@
   outline: none !important;
 }
 .bc-textarea { resize: vertical !important; }
-.bc-form-consent { margin: 14px 0 18px 0 !important; text-align: left !important; }
+.bc-form-consent { margin: 12px 0 16px 0 !important; text-align: left !important; }
 .bc-consent-label {
   display: flex !important;
   align-items: flex-start !important;
@@ -180,7 +205,7 @@
   color: #222629 !important;
 }
 .bc-modal-alt {
-  margin-top: 14px !important;
+  margin-top: 12px !important;
   text-align: center !important;
   font-size: 12px !important;
   color: #474B4F !important;
@@ -198,31 +223,133 @@
 .bc-modal__success h4 { font-size: 18px !important; color: #222629 !important; margin: 0 0 8px !important; }
 .bc-modal__success p { font-size: 13px !important; color: #474B4F !important; margin: 0 0 20px !important; }
 
-/* 2. Единый размер и формат 4:3 для фото в блоке «Другие выставочные работы» */
-.bc-uniform-photo-wrap {
-  width: 100% !important;
-  height: 250px !important;
-  aspect-ratio: 4 / 3 !important;
-  overflow: hidden !important;
-  display: block !important;
-  margin-bottom: 12px !important;
-  background: #F5F5F5 !important;
-}
-.bc-uniform-photo {
-  width: 100% !important;
-  height: 100% !important;
-  aspect-ratio: 4 / 3 !important;
-  object-fit: cover !important;
-  object-position: center !important;
-  display: block !important;
-}
-
 @media (max-width: 480px) {
-  .bc-modal__container { padding: 26px 18px 22px !important; }
-  .bc-uniform-photo-wrap { height: 190px !important; }
+  .bc-modal__container { padding: 26px 18px 20px !important; }
 }
 </style>
-<!-- BYCRAFT Styles End -->
+
+<script id="bc-unified-scripts">
+(function() {
+  window.openBycraftModal = function(e) {
+    if (e) {
+      if (e.preventDefault) e.preventDefault();
+      if (e.stopPropagation) e.stopPropagation();
+    }
+
+    var modal = document.getElementById('bycraft-modal');
+    if (!modal) {
+      modal = document.createElement('div');
+      modal.id = 'bycraft-modal';
+      modal.className = 'bc-modal';
+      document.body.appendChild(modal);
+    }
+
+    var h1 = document.querySelector('h1');
+    var workName = h1 ? h1.textContent.trim() : (document.title.split('—')[0].split('-')[0].trim() || 'Арт-объект');
+
+    modal.innerHTML = '<div class="bc-modal__overlay" onclick="window.closeBycraftModal()"></div>' +
+      '<div class="bc-modal__container">' +
+        '<button type="button" class="bc-modal__close" onclick="window.closeBycraftModal()" aria-label="Закрыть">&times;</button>' +
+        '<div class="bc-modal__header">' +
+          '<h3 class="bc-modal__title">Запрос информации о работе</h3>' +
+          '<p class="bc-modal__subtitle">Работа: «' + workName + '»</p>' +
+        '</div>' +
+        '<form id="bc-inquiry-form" class="bc-modal__form" onsubmit="window.handleBycraftSubmit(event)">' +
+          '<div class="bc-form-group">' +
+            '<label for="bc-name" class="bc-label">Ваше имя *</label>' +
+            '<input type="text" id="bc-name" name="name" class="bc-input" required placeholder="Иван">' +
+          '</div>' +
+          '<div class="bc-form-group">' +
+            '<label for="bc-contact" class="bc-label">Контакт / телефон / мессенджер *</label>' +
+            '<input type="text" id="bc-contact" name="contact" class="bc-input" required placeholder="+375 / +7 / @username / email">' +
+          '</div>' +
+          '<div class="bc-form-group">' +
+            '<label for="bc-comment" class="bc-label">Комментарий</label>' +
+            '<textarea id="bc-comment" name="comment" class="bc-textarea" rows="3" placeholder="Ваш вопрос или пожелания..."></textarea>' +
+          '</div>' +
+          '<div class="bc-form-consent">' +
+            '<label class="bc-consent-label">' +
+              '<input type="checkbox" id="bc-consent" required checked>' +
+              '<span>Я даю согласие на обработку персональных данных в соответствии с <a href="/privacy/" target="_blank">Политикой конфиденциальности</a></span>' +
+            '</label>' +
+          '</div>' +
+          '<button type="submit" class="bc-submit-btn">Отправить запрос</button>' +
+          '<div class="bc-modal-alt">' +
+            '<span>или свяжитесь напрямую:</span>' +
+            '<a href="https://t.me/bycraft" target="_blank" rel="noopener" class="bc-tg-link">Telegram: @bycraft</a>' +
+          '</div>' +
+        '</form>' +
+        '<div id="bc-modal-success" class="bc-modal__success" style="display: none;">' +
+          '<div class="bc-success-icon">✓</div>' +
+          '<h4>Запрос сформирован</h4>' +
+          '<p>Валентин свяжется с вами в ближайшее время по указанному контакту.</p>' +
+          '<button type="button" class="bc-submit-btn" onclick="window.closeBycraftModal()">Закрыть</button>' +
+        '</div>' +
+      '</div>';
+
+    modal.classList.add('is-active');
+    modal.style.cssText = 'display: flex !important; position: fixed !important; top: 0 !important; left: 0 !important; width: 100vw !important; height: 100vh !important; z-index: 2147483647 !important; align-items: center !important; justify-content: center !important;';
+    document.body.style.overflow = 'hidden';
+    return false;
+  };
+
+  window.closeBycraftModal = function() {
+    var modal = document.getElementById('bycraft-modal');
+    if (!modal) return;
+    modal.classList.remove('is-active');
+    modal.style.cssText = 'display: none !important;';
+    document.body.style.overflow = '';
+  };
+
+  window.handleBycraftSubmit = function(e) {
+    e.preventDefault();
+    var name = (document.getElementById('bc-name') || {}).value || '';
+    var contact = (document.getElementById('bc-contact') || {}).value || '';
+    var comment = (document.getElementById('bc-comment') || {}).value || '';
+    var h1 = document.querySelector('h1');
+    var workName = h1 ? h1.textContent.trim() : (document.title.split('—')[0].split('-')[0].trim() || 'Арт-объект');
+
+    var subject = 'Запрос по работе: ' + workName;
+    var body = 'Здравствуйте, Валентин!\n\n' +
+               'Запрос по арт-объекту: ' + workName + '\n' +
+               'Имя: ' + name + '\n' +
+               'Контакт: ' + contact + '\n' +
+               (comment ? ('Комментарий: ' + comment + '\n') : '') +
+               '\nОтправлено с сайта bycraft.by';
+
+    var mailtoUrl = 'mailto:info@bycraft.by?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
+    window.open(mailtoUrl, '_blank');
+
+    var form = document.getElementById('bc-inquiry-form');
+    var successBox = document.getElementById('bc-modal-success');
+    if (form) form.style.display = 'none';
+    if (successBox) successBox.style.display = 'block';
+  };
+
+  // Перехват всех кликов по кнопкам запроса на уровне страницы
+  document.addEventListener('click', function(e) {
+    var btn = e.target.closest('a, button');
+    if (!btn) return;
+    var txt = (btn.textContent || '').toLowerCase();
+    var href = btn.getAttribute('href') || '';
+    if (txt.includes('запросить информацию') || 
+        txt.includes('заказать работу') || 
+        txt.includes('inquire about') || 
+        href.includes('mailto:') ||
+        btn.classList.contains('js-inquiry-btn')) {
+      e.preventDefault();
+      e.stopPropagation();
+      window.openBycraftModal(e);
+      return false;
+    }
+  }, true);
+
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') window.closeBycraftModal();
+  });
+})();
+</script>
+<!-- BYCRAFT Styles and Scripts End -->
 
 </head>
 <body>
@@ -260,21 +387,21 @@
       <div class="events-flow-grid">
         <!-- 1 -->
         <div class="flow-card" data-modal="true" data-title="9-я выставка «Трын*Трава. Современный русский стиль»" data-date="8–25 октября 2026<br>Москва, Музей‑усадьба Муравьевых‑Апостолов<br><a href='https://tryntrava.com/' target='_blank' rel='noopener noreferrer' style='text-decoration: underline; color: inherit;'>Сайт выставки: https://tryntrava.com/</a>" data-desc="9-я выставка «Трын*Трава. Современный русский стиль» пройдет с 8 по 25 октября в Музее‑усадьбе Муравьевых‑Апостолов. Экспозиция объединит предметы интерьера, живопись, скульптуру, текстиль, керамику и декоративные изделия.&#10;&#10;В этом году в выставке участвуют более 80 авторов — как признанные художники, дизайнеры и мастера традиционных производств, так и начинающие креаторы. В том числе дети и молодые люди в возрасте от 9 до 21 года. Их работы можно будет не только увидеть, но и купить.&#10;&#10;Кураторы и организаторы выставки — Элина Туктамишева, Ирина Батькова и Светлана Попова">
-          <div class="flow-card-img"><picture><source srcset="../images/events/event-01.webp" type="image/webp"><div class="bc-uniform-photo-wrap"><img src="../images/events/event-01.jpg" alt="Трын*Трава" loading="lazy" class="bc-uniform-photo"></div></picture></div>
+          <div class="flow-card-img"><picture><source srcset="../images/events/event-01.webp" type="image/webp"><img src="../images/events/event-01.jpg" alt="Трын*Трава" loading="lazy"></picture></div>
           <p class="event-date">Октябрь 2026</p>
           <h3 class="event-name">«Трын*Трава», Москва</h3>
         </div>
 
         <!-- 2 -->
         <div class="flow-card" data-modal="true" data-title="Выставка изделий ручной работы «Чароўны Млын»" data-date="25–27 сентября 2026<br>Минск, пр. Победителей, 14<br><a href='https://mill.by/' target='_blank' rel='noopener noreferrer' style='text-decoration: underline; color: inherit;'>Сайт выставки: https://mill.by/</a>" data-desc="Это особая атмосфера душевности и разнообразие направлений творчества. Свою историю выставка начала в 2010 году и на протяжении 15 лет собирает талантливых мастеров и дизайнеров со всей Беларуси!&#10;&#10;Выставка «Чароўны Млын» проводится несколько раз в год:&#10;* Осенний Млын в канун Дня матери радует богатством коллекций авторских украшений, одежды, керамики и предметов интерьера.&#10;* Зимний Млын проходит накануне любимых праздников – Нового года и Рождества, создавая неповторимую атмосферу волшебства и тепла. Для многих минчан и гостей столицы стало доброй традицией выбирать здесь новогодние подарки ручной работы.&#10;* Весенний Млын, приуроченный к 8 марта, вдохновляет свежими дизайнерскими идеями и предлагает оригинальные, самобытные подарки для самых дорогих людей.&#10;&#10;Приходите за подарками для себя и своих близких!">
-          <div class="flow-card-img"><picture><source srcset="../images/events/event-02.webp" type="image/webp"><div class="bc-uniform-photo-wrap"><img src="../images/events/event-02.jpg" alt="Чароўны Млын" loading="lazy" class="bc-uniform-photo"></div></picture></div>
+          <div class="flow-card-img"><picture><source srcset="../images/events/event-02.webp" type="image/webp"><img src="../images/events/event-02.jpg" alt="Чароўны Млын" loading="lazy"></picture></div>
           <p class="event-date">Сентябрь 2026</p>
           <h3 class="event-name">«Чароўны Млын», Минск</h3>
         </div>
 
         <!-- 3 -->
         <div class="flow-card" data-modal="true" data-title="Фестиваль-маркет «Ceramania»" data-date="19–20 сентября 2026<br>Москва, ЦСИ Винзавод, Зеленый Ангар<br><a href='https://ceramania.ru/' target='_blank' rel='noopener noreferrer' style='text-decoration: underline; color: inherit;'>Сайт выставки: https://ceramania.ru/</a>" data-desc="Главная тема фестиваля «Черно-белое». Отсутствие цвета позволит сосредоточиться на форме, фактуре и характере материалов.&#10;&#10;19 и 20 сентября 2026 года в Центре современного искусства Винзавод пройдет фестиваль-маркет «Ceramania». Более 130 участников представят посуду, предметы интерьера, украшения и подарки из керамики, стекла, дерева и металла.&#10;&#10;Мастер-классы для взрослых и детей: ручная лепка, работа на гончарном круге, мозаика, создание витражей в стиле Тиффани и изготовление игрушек. Участники смогут попробовать разные техники и поработать с материалами под руководством профессиональных мастеров.&#10;&#10;Вход на фестиваль свободный.">
-          <div class="flow-card-img"><picture><source srcset="../images/events/event-03.webp" type="image/webp"><div class="bc-uniform-photo-wrap"><img src="../images/events/event-03.jpg" alt="Ceramania" loading="lazy" class="bc-uniform-photo"></div></picture></div>
+          <div class="flow-card-img"><picture><source srcset="../images/events/event-03.webp" type="image/webp"><img src="../images/events/event-03.jpg" alt="Ceramania" loading="lazy"></picture></div>
           <p class="event-date">Сентябрь 2026</p>
           <h3 class="event-name">«Ceramania», Москва</h3>
         </div>
@@ -287,7 +414,7 @@
       <div class="significant-events-grid">
         <!-- 1: UNITED BY ART -->
         <div class="sig-event-card" data-modal="true" data-title="Международная выставка-конкурс современного искусства «UNITED BY ART»" data-date="Август 2026 · Россия — Мексика" data-desc="Международная выставка-конкурс современного искусства «UNITED BY ART» в Москве объединила художников из разных стран (включая Россию, Мексику и др.).&#10;&#10;Работа «Исповедь» заняла 3 место в номинации «Человек и его мир», раздел: скульптура.">
-          <div class="sig-event-img"><picture><source srcset="../images/events/sig-event-02.webp" type="image/webp"><div class="bc-uniform-photo-wrap"><img src="../images/events/sig-event-02.jpg" alt="Международная выставка-конкурс современного искусства «UNITED BY ART»" loading="lazy" class="bc-uniform-photo"></div></picture></div>
+          <div class="sig-event-img"><picture><source srcset="../images/events/sig-event-02.webp" type="image/webp"><img src="../images/events/sig-event-02.jpg" alt="Международная выставка-конкурс современного искусства «UNITED BY ART»" loading="lazy"></picture></div>
           <p class="event-date">Август 2026</p>
           <h3 class="event-name" style="margin-bottom: 4px;">Международная выставка-конкурс современного искусства «UNITED BY ART»</h3>
           <p class="lead-text">Россия — Мексика</p>
@@ -295,7 +422,7 @@
 
         <!-- 2: 27-й Международный фестиваль культуры и искусств -->
         <div class="sig-event-card" data-modal="true" data-title="27-й Международный фестиваль культуры и искусств" data-date="Июль 2026 · Турция, Стамбул" data-desc="27-й Международный фестиваль культуры и искусств в Стамбуле (2026) в 12-й раз подряд был признан международными организациями (CIOFF при ЮНЕСКО и FIDAF) лучшим фестивалем культуры и искусств в мире.&#10;&#10;Масштабное международное культурное событие, объединившее представителей 62 стран мира и 650 деятелей культуры и искусства. Фестиваль вновь стал пространством, где через музыку, танец и национальное искусство народы разных стран знакомятся друг с другом и представляют миру богатство своей культуры.&#10;&#10;Мы стали частью истории.&#10;Гордимся и вдохновляемся.">
-          <div class="sig-event-img"><picture><source srcset="../images/events/sig-event-01.webp" type="image/webp"><div class="bc-uniform-photo-wrap"><img src="../images/events/sig-event-01.jpg" alt="27-й Международный фестиваль культуры и искусств" loading="lazy" class="bc-uniform-photo"></div></picture></div>
+          <div class="sig-event-img"><picture><source srcset="../images/events/sig-event-01.webp" type="image/webp"><img src="../images/events/sig-event-01.jpg" alt="27-й Международный фестиваль культуры и искусств" loading="lazy"></picture></div>
           <p class="event-date">Июль 2026</p>
           <h3 class="event-name" style="margin-bottom: 4px;">27-й Международный фестиваль культуры и искусств</h3>
           <p class="lead-text">Турция, Стамбул</p>
@@ -303,7 +430,7 @@
 
         <!-- 3: OFF MUSEUM -->
         <div class="sig-event-card" data-modal="true" data-title="OFF MUSEUM ART FAIR: искусство идет домой" data-date="30–31 мая 2026 · Минск, Арт Фабрика" data-desc="30 и 31 мая на Свердлова, 2 открывается OFF MUSEUM ART FAIR — ярмарка современного искусства, где между вами и работой нет ни куратора с указкой, ни таблички «руками не трогать», ни ощущения, что вы пришли не туда. Только художник и его работы.&#10;&#10;Формат, который давно существует в Москве, Берлине, Варшаве добрался до Минска в правильном исполнении. OFF MUSEUM не пытается сделать искусство «попсовым» — кураторский отбор здесь серьёзный. Но они убрали всё то, что обычно отпугивает: дистанцию, непонятность, ощущение, что покупать неловко. Авторы сами стоят рядом со своими работами. Можно спросить всё что угодно. Можно уйти с холстом и новыми знаниями про искусство и художественный процесс.&#10;Два дня, лекции, дискуссии, кураторские прогулки — и живой разговор о том, зачем искусство вообще нужно в городе, дома, в офисе.&#10;&#10;Два дня в галерее Арт-Фабрика работы более 35 художников представят свои произведения, которые можно будет не только увидеть, но и приобрести, а так же пообщаться лично с каждым автором.">
-          <div class="sig-event-img"><picture><source srcset="../images/events/sig-event-03.webp" type="image/webp"><div class="bc-uniform-photo-wrap"><img src="../images/events/sig-event-03.jpg" alt="OFF MUSEUM" loading="lazy" class="bc-uniform-photo"></div></picture></div>
+          <div class="sig-event-img"><picture><source srcset="../images/events/sig-event-03.webp" type="image/webp"><img src="../images/events/sig-event-03.jpg" alt="OFF MUSEUM" loading="lazy"></picture></div>
           <p class="event-date">Май 2026</p>
           <h3 class="event-name" style="margin-bottom: 4px;">OFF MUSEUM</h3>
           <p class="lead-text">Минск, Арт Фабрика</p>
@@ -311,7 +438,7 @@
 
         <!-- 4: Московская неделя интерьера и дизайна -->
         <div class="sig-event-card" data-modal="true" data-title="VI Московская неделя интерьера и дизайна" data-date="22–25 мая 2025 · Москва, ЦВЗ «Манеж»" data-desc="VI Московская неделя интерьера и дизайна — это крупнейшее городское событие для всех, кто работает с пространством или просто любит красивый, осмысленный интерьер. Ежегодно в ЦВЗ «Манеж» собираются сотни брендов, дизайнеров, производителей, чтобы показать, как развивается интерьерная культура в России и за её пределами.&#10;&#10;Центральной темой выставки станет «Природа дизайна».&#10;С 22 по 25 мая 2025 года ЦВЗ «Манеж» превратится в интерьерный мегаполис — с жилыми зонами, летними верандами, зелёными декорациями, сотнями брендов.">
-          <div class="sig-event-img"><picture><source srcset="../images/events/sig-event-04.webp" type="image/webp"><div class="bc-uniform-photo-wrap"><img src="../images/events/sig-event-04.jpg" alt="Московская неделя интерьера и дизайна" loading="lazy" class="bc-uniform-photo"></div></picture></div>
+          <div class="sig-event-img"><picture><source srcset="../images/events/sig-event-04.webp" type="image/webp"><img src="../images/events/sig-event-04.jpg" alt="Московская неделя интерьера и дизайна" loading="lazy"></picture></div>
           <p class="event-date">Май 2025</p>
           <h3 class="event-name" style="margin-bottom: 4px;">Московская неделя интерьера и дизайна</h3>
           <p class="lead-text">Москва, ЦВЗ «Манеж»</p>
@@ -319,7 +446,7 @@
       </div>
 
       <div>
-        <picture><source srcset="../images/events/home-events-feature.webp" type="image/webp"><div class="bc-uniform-photo-wrap"><img src="../images/events/home-events-feature.jpg" alt="Выставки и события BYCRAFT" loading="lazy" class="bc-uniform-photo"></div></picture>
+        <picture><source srcset="../images/events/home-events-feature.webp" type="image/webp"><img src="../images/events/home-events-feature.jpg" alt="Выставки и события BYCRAFT" loading="lazy"></picture>
       </div>
     </section>
 
@@ -368,144 +495,7 @@
   <script src="..//js/main.js"></script>
 
 
-<!-- BYCRAFT Modal & Scripts Start -->
-<div id="bycraft-modal" class="bc-modal" aria-hidden="true" role="dialog">
-  <div class="bc-modal__overlay" onclick="closeBycraftModal()"></div>
-  <div class="bc-modal__container">
-    <button type="button" class="bc-modal__close" onclick="closeBycraftModal()" aria-label="Закрыть">&times;</button>
-    <div class="bc-modal__header">
-      <h3 class="bc-modal__title">Запрос информации о работе</h3>
-      <p class="bc-modal__subtitle" id="bc-modal-work-title"></p>
-    </div>
-    <form id="bc-inquiry-form" class="bc-modal__form" onsubmit="handleBycraftSubmit(event)">
-      <div class="bc-form-group">
-        <label for="bc-name" class="bc-label">Ваше имя *</label>
-        <input type="text" id="bc-name" name="name" class="bc-input" required placeholder="Иван">
-      </div>
-      <div class="bc-form-group">
-        <label for="bc-contact" class="bc-label">Контакт / телефон / мессенджер *</label>
-        <input type="text" id="bc-contact" name="contact" class="bc-input" required placeholder="+375 / +7 / @username / email">
-      </div>
-      <div class="bc-form-group">
-        <label for="bc-comment" class="bc-label">Комментарий</label>
-        <textarea id="bc-comment" name="comment" class="bc-textarea" rows="3" placeholder="Ваш вопрос или пожелания..."></textarea>
-      </div>
-      <div class="bc-form-consent">
-        <label class="bc-consent-label">
-          <input type="checkbox" id="bc-consent" required checked>
-          <span>Я даю согласие на обработку персональных данных в соответствии с <a href="/privacy/" target="_blank">Политикой конфиденциальности</a></span>
-        </label>
-      </div>
-      <button type="submit" class="bc-submit-btn">Отправить запрос</button>
-      <div class="bc-modal-alt">
-        <span>или свяжитесь напрямую:</span>
-        <a href="https://t.me/bycraft" target="_blank" rel="noopener" class="bc-tg-link">Telegram: @bycraft</a>
-      </div>
-    </form>
-    <div id="bc-modal-success" class="bc-modal__success" style="display: none;">
-      <div class="bc-success-icon">✓</div>
-      <h4>Запрос сформирован</h4>
-      <p>Валентин свяжется с вами в ближайшее время по указанному контакту.</p>
-      <button type="button" class="bc-submit-btn" onclick="closeBycraftModal()">Закрыть</button>
-    </div>
-  </div>
-</div>
 
-<script id="bc-core-scripts">
-function getBycraftArtworkTitle() {
-  var h1 = document.querySelector('h1');
-  if (h1 && h1.textContent.trim()) {
-    return h1.textContent.trim();
-  }
-  var title = document.title.split('—')[0].split('-')[0].split('·')[0].trim();
-  return title || 'Арт-объект BYCRAFT';
-}
-
-window.openBycraftModal = function(e) {
-  if (e) {
-    if (e.preventDefault) e.preventDefault();
-    if (e.stopPropagation) e.stopPropagation();
-  }
-  var modal = document.getElementById('bycraft-modal');
-  if (!modal) return false;
-
-  var titleEl = document.getElementById('bc-modal-work-title');
-  if (titleEl) {
-    titleEl.textContent = 'Работа: «' + getBycraftArtworkTitle() + '»';
-  }
-
-  var form = document.getElementById('bc-inquiry-form');
-  var successBox = document.getElementById('bc-modal-success');
-  if (form) form.style.display = 'block';
-  if (successBox) successBox.style.display = 'none';
-
-  modal.classList.add('is-active');
-  modal.style.setProperty('display', 'flex', 'important');
-  document.body.style.overflow = 'hidden';
-  return false;
-};
-
-window.closeBycraftModal = function() {
-  var modal = document.getElementById('bycraft-modal');
-  if (!modal) return;
-  modal.classList.remove('is-active');
-  modal.style.setProperty('display', 'none', 'important');
-  document.body.style.overflow = '';
-};
-
-window.handleBycraftSubmit = function(e) {
-  e.preventDefault();
-  var name = document.getElementById('bc-name').value.trim();
-  var contact = document.getElementById('bc-contact').value.trim();
-  var comment = document.getElementById('bc-comment').value.trim();
-  var artwork = getBycraftArtworkTitle();
-
-  var subject = 'Запрос по работе: ' + artwork;
-  var body = 'Здравствуйте, Валентин!
-
-' +
-             'Запрос по арт-объекту: ' + artwork + '
-' +
-             'Имя: ' + name + '
-' +
-             'Контакт: ' + contact + '
-' +
-             (comment ? ('Комментарий: ' + comment + '
-') : '') +
-             '
-Отправлено с сайта bycraft.by';
-
-  var mailtoUrl = 'mailto:info@bycraft.by?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
-  window.open(mailtoUrl, '_blank');
-
-  var form = document.getElementById('bc-inquiry-form');
-  var successBox = document.getElementById('bc-modal-success');
-  if (form) form.style.display = 'none';
-  if (successBox) successBox.style.display = 'block';
-};
-
-// Глобальный перехват кликов по любым кнопкам запроса (Capture Phase)
-document.addEventListener('click', function(e) {
-  var el = e.target.closest('a, button');
-  if (!el) return;
-  var txt = (el.textContent || '').toLowerCase();
-  var href = el.getAttribute('href') || '';
-  if (txt.includes('запросить информацию') || 
-      txt.includes('заказать работу') || 
-      txt.includes('inquire about') ||
-      href.includes('mailto:')) {
-    e.preventDefault();
-    e.stopPropagation();
-    window.openBycraftModal(e);
-    return false;
-  }
-}, true);
-
-document.addEventListener('keydown', function(e) {
-  if (e.key === 'Escape') window.closeBycraftModal();
-});
-</script>
-<!-- BYCRAFT Modal & Scripts End -->
 
 </body>
 </html>
