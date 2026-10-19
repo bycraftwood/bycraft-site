@@ -236,7 +236,7 @@ img {
           '<button type="submit" class="bc-submit-btn">Отправить запрос</button>' +
           '<div class="bc-modal-alt">' +
             '<span>или свяжитесь напрямую:</span>' +
-            '<a href="https://t.me/bycraft_by" target="_blank" rel="noopener" class="bc-tg-link">Telegram: @bycraft</a>' +
+            '<a href="https://t.me/bycraft_by" target="_blank" rel="noopener" class="bc-tg-link">Telegram: @bycraft_by</a>' +
           '</div>' +
         '</form>' +
         '<div id="bc-modal-success" class="bc-modal__success" style="display: none;">' +
@@ -917,6 +917,38 @@ Sent from bycraft.by' : '
       aspect-ratio: auto !important;
       object-fit: contain !important;
       max-height: 90vh !important;
+      height: auto !important;
+    }
+  </style>
+  <style id="bycraft-force-4-3">
+    /* Принудительный формат 4:3 для карточек выставочных работ */
+    main .work-card img,
+    main .exhibition-card img,
+    main .card img,
+    main .works-grid img,
+    main .exhibitions-grid img,
+    main article img,
+    .exhibition-card img,
+    .work-card img {
+      width: 100% !important;
+      aspect-ratio: 4 / 3 !important;
+      height: auto !important;
+      min-height: 260px !important;
+      object-fit: cover !important;
+      object-position: center !important;
+      display: block !important;
+    }
+    .card-media, .work-card-media, .image-wrapper, .card-image {
+      width: 100% !important;
+      aspect-ratio: 4 / 3 !important;
+      overflow: hidden !important;
+    }
+    /* Для увеличенного модального окна — оригинальные пропорции */
+    .modal img, .lightbox img, #modal-img, .enlarged-modal img, [class*="modal"] img {
+      aspect-ratio: auto !important;
+      object-fit: contain !important;
+      max-height: 90vh !important;
+      min-height: 0 !important;
       height: auto !important;
     }
   </style>

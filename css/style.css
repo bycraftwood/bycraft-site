@@ -2183,3 +2183,18 @@ picture img {
     object-fit: contain !important;
     max-height: 90vh !important;
 }
+
+
+/* ==========================================================================
+   EXHIBITION CARDS 4:3 RATIO
+   ========================================================================== */
+.exhibition-card img,
+.work-card img,
+.exhibitions-grid img,
+.works-grid img {
+    width: 100% !important;
+    aspect-ratio: 4 / 3 !important;
+    object-fit: cover !important;
+    object-position: center !important;
+    display: block !important;
+}
