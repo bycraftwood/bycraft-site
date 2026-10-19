@@ -223,7 +223,7 @@ img {
 
     modal.innerHTML = '<div class="bc-modal__overlay" onclick="window.closeBycraftModal()"></div>' +
       '<div class="bc-modal__container">' +
-        '<a href="mailto:info@bycraft.by">&times;</button>' +
+        '<button type="button" class="bc-modal__close" onclick="window.closeBycraftModal()" aria-label="Закрыть">&times;</button>' +
         '<div class="bc-modal__header">' +
           '<h3 class="bc-modal__title">Запрос информации о работе</h3>' +
           '<p class="bc-modal__subtitle">Работа: «' + workName + '»</p>' +
@@ -244,10 +244,10 @@ img {
           '<div class="bc-form-consent">' +
             '<label class="bc-consent-label">' +
               '<input type="checkbox" id="bc-consent" required checked>' +
-              '<span>Я даю согласие на обработку персональных данных в соответствии с <a href="mailto:info@bycraft.by" target="_blank">Политикой конфиденциальности</a></span>' +
+              '<span>Я даю согласие на обработку персональных данных в соответствии с <a href="/privacy/" target="_blank">Политикой конфиденциальности</a></span>' +
             '</label>' +
           '</div>' +
-          '<button type="submit" class="bc-submit-btn">Отправить запрос</a>' +
+          '<button type="submit" class="bc-submit-btn">Отправить запрос</button>' +
           '<div class="bc-modal-alt">' +
             '<span>или свяжитесь напрямую:</span>' +
             '<a href="https://t.me/bycraft_by" target="_blank" rel="noopener" class="bc-tg-link">Telegram: @bycraft_by</a>' +
@@ -257,7 +257,7 @@ img {
           '<div class="bc-success-icon">✓</div>' +
           '<h4>Запрос сформирован</h4>' +
           '<p>Валентин свяжется с вами в ближайшее время по указанному контакту.</p>' +
-          '<a href="mailto:info@bycraft.by">Закрыть</button>' +
+          '<button type="button" class="bc-submit-btn" onclick="window.closeBycraftModal()">Закрыть</button>' +
         '</div>' +
       '</div>';
 
@@ -291,7 +291,7 @@ img {
                (comment ? ('Комментарий: ' + comment + '\n') : '') +
                '\nОтправлено с сайта bycraft.by';
 
-    var mailtoUrl = 'mailto:<a href="mailto:info@bycraft.by"><a href="mailto:info@bycraft.by">info@bycraft.by</a></a>?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
+    var mailtoUrl = 'mailto:<a href="mailto:info@bycraft.by">info@bycraft.by</a>?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
     window.open(mailtoUrl, '_blank');
 
     var form = document.getElementById('bc-inquiry-form');
@@ -785,7 +785,7 @@ footer a[href^="mailto:"],
     var commentPlaceholder = isEn ? 'Your questions or notes...' : 'Ваш вопрос или пожелания...';
     var privacyLink = isEn ? '/en/privacy/' : '/privacy/';
     var consentText = isEn ? 
-      ('I agree to the processing of personal data in accordance with the <a href="mailto:info@bycraft.by" + privacyLink + '" target="_blank">Privacy Policy</a>') :
+      ('I agree to the processing of personal data in accordance with the <a href="' + privacyLink + '" target="_blank">Privacy Policy</a>') :
       ('Я даю согласие на обработку персональных данных в соответствии с <a href="' + privacyLink + '" target="_blank">Политикой конфиденциальности</a>');
     var submitBtnText = isEn ? 'Send Inquiry' : 'Отправить запрос';
     var altText = isEn ? 'or contact directly:' : 'или свяжитесь напрямую:';
@@ -795,7 +795,7 @@ footer a[href^="mailto:"],
 
     modal.innerHTML = '<div class="bc-modal__overlay" onclick="window.closeBycraftModal()"></div>' +
       '<div class="bc-modal__container">' +
-        '<button type="button" class="bc-modal__close" onclick="window.closeBycraftModal()" aria-label="Close">&times;</a>' +
+        '<button type="button" class="bc-modal__close" onclick="window.closeBycraftModal()" aria-label="Close">&times;</button>' +
         '<div class="bc-modal__header">' +
           '<h3 class="bc-modal__title">' + title + '</h3>' +
           '<p class="bc-modal__subtitle">' + subtitle + '</p>' +
@@ -937,7 +937,7 @@ Sent from bycraft.by' : '
           Настоящая Политика определяет порядок обработки и защиты персональных данных физических лиц, пользующихся сайтом <strong>bycraft.by</strong> (а также его демонстрационными версиями), и разработана в соответствии с Законом Республики Беларусь от 7 мая 2021 г. № 99-З «О защите персональных данных».
         </p>
         <p style="margin-bottom: 16px;">
-          Оператором персональных данных является: <strong>Ремесленник Атрош Валентин Владимирович</strong> (УНП: КА0278799, г. Минск, Республика Беларусь). Электронная почта <a href="mailto:info@bycraft.by"><a href="mailto:info@bycraft.by">info@bycraft.by</a></a> для обращений: .
+          Оператором персональных данных является: <strong>Ремесленник Атрош Валентин Владимирович</strong> (УНП: КА0278799, г. Минск, Республика Беларусь). Электронная почта <a href="mailto:info@bycraft.by">info@bycraft.by</a> для обращений: .
         </p>
 
         <h2 style="font-size: 18px; font-weight: 600; color: var(--color-primary); margin-top: 32px; margin-bottom: 12px;">2. Цели обработки персональных данных</h2>
@@ -1001,7 +1001,7 @@ Sent from bycraft.by' : '
         <div class="footer-col-1">
           <p style="margin-bottom: 6px; font-weight: 600; font-size: 12px; color: #FFFFFF;">© 2026 BYCRAFT</p>
           <p style="margin-bottom: 8px;">Сайт не является интернет-магазином, представляет каталог примеров работ. Фотографии, тексты и видеоматериалы принадлежат владельцу. Ремесленник Атрош Валентин Владимирович / УНП: КА0278799</p>
-          <p><a href="mailto:info@bycraft.by" style="text-decoration: none; color: #ADB5BD;">Политика конфиденциальности и обработки персональных данных</a></p>
+          <p><a href="https://bycraft.by/privacy/" style="text-decoration: none; color: #ADB5BD;">Политика конфиденциальности и обработки персональных данных</a></p>
         </div>
         <div class="footer-col-2">
           <div class="footer-contact-group">
@@ -1015,7 +1015,7 @@ Sent from bycraft.by' : '
         </div>
         <div class="footer-col-3">
           <div class="footer-contact-group">
-            <div class="footer-contact-title">ЭЛЕКТРОННАЯ ПОЧТА: <a href="mailto:info@bycraft.by"><a href="mailto:info@bycraft.by">info@bycraft.by</a></a></div>
+            <div class="footer-contact-title">ЭЛЕКТРОННАЯ ПОЧТА: <a href="mailto:info@bycraft.by">info@bycraft.by</a></div>
             <div></div>
           </div>
           <div class="footer-social-row" style="margin-top: 14px;">
