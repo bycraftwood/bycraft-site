@@ -992,6 +992,51 @@ Sent from bycraft.by' : '
       height: auto !important;
     }
   </style>
+  <style id="bycraft-exhibitions-4-3-strict">
+    /* Единый формат 4:3 и одинаковый размер для всех фото выставочных работ */
+    main .work-card,
+    main .exhibition-card,
+    main .card,
+    main article {
+      display: flex !important;
+      flex-direction: column !important;
+    }
+    main .card-media,
+    main .work-card-media,
+    main .card-image,
+    main .work-image,
+    main .image-wrapper,
+    main .work-card a:first-child,
+    main .card a:first-child {
+      width: 100% !important;
+      aspect-ratio: 4 / 3 !important;
+      overflow: hidden !important;
+      position: relative !important;
+      display: block !important;
+    }
+    main img:not(.logo):not(.icon),
+    .works-grid img,
+    .exhibitions-grid img,
+    .work-card img,
+    .card img,
+    article img {
+      width: 100% !important;
+      height: 100% !important;
+      aspect-ratio: 4 / 3 !important;
+      object-fit: cover !important;
+      object-position: center !important;
+      display: block !important;
+    }
+    /* Для увеличенного модального окна сохраняем оригинальные пропорции */
+    .modal img, .lightbox img, #modal-img, .enlarged-modal img, .enlarged img {
+      aspect-ratio: auto !important;
+      width: auto !important;
+      height: auto !important;
+      max-width: 90vw !important;
+      max-height: 85vh !important;
+      object-fit: contain !important;
+    }
+  </style>
 </head>
 <body>
     <header class="site-header">
@@ -1112,7 +1157,7 @@ Sent from bycraft.by' : '
         </div>
         <div class="footer-col-3">
           <div class="footer-contact-group">
-            <div class="footer-contact-title">ЭЛЕКТРОННАЯ ПОЧТА: <a href="mailto:info@bycraft.by" onclick="window.location.href='mailto:info@bycraft.by'; event.stopPropagation();">info@bycraft.by</a></div>
+            <div class="footer-contact-title">ЭЛЕКТРОННАЯ ПОЧТА: <a href="mailto:info@bycraft.by" style="color: inherit; text-decoration: underline; cursor: pointer;" onclick="event.stopPropagation(); event.stopImmediatePropagation(); window.location.href='mailto:info@bycraft.by'; return true;">info@bycraft.by</a></div>
             <div></div>
           </div>
           <div class="footer-social-row" style="margin-top: 14px;">
@@ -1131,5 +1176,25 @@ Sent from bycraft.by' : '
 
 
 
+<script id="bycraft-email-guard">
+(function(){
+  function protectEmail() {
+    var links = document.querySelectorAll('a[href^="mailto:info@bycraft.by"]');
+    links.forEach(function(a){
+      a.onclick = function(e){
+        e.stopPropagation();
+        if (e.stopImmediatePropagation) e.stopImmediatePropagation();
+        window.location.href = 'mailto:info@bycraft.by';
+        return true;
+      };
+    });
+  }
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', protectEmail);
+  } else {
+    protectEmail();
+  }
+})();
+</script>
 </body>
 </html>

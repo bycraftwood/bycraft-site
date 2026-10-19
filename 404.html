@@ -931,7 +931,7 @@ Sent from bycraft.by' : '
         </div>
         <div class="footer-col-3">
           <div class="footer-contact-group">
-            <div class="footer-contact-title">ЭЛЕКТРОННАЯ ПОЧТА: <a href="mailto:info@bycraft.by" onclick="window.location.href='mailto:info@bycraft.by'; event.stopPropagation();">info@bycraft.by</a></div>
+            <div class="footer-contact-title">ЭЛЕКТРОННАЯ ПОЧТА: <a href="mailto:info@bycraft.by" style="color: inherit; text-decoration: underline; cursor: pointer;" onclick="event.stopPropagation(); event.stopImmediatePropagation(); window.location.href='mailto:info@bycraft.by'; return true;">info@bycraft.by</a></div>
             <div></div>
           </div>
           <div class="footer-social-row" style="margin-top: 14px;">
@@ -947,5 +947,25 @@ Sent from bycraft.by' : '
 
 
 
+<script id="bycraft-email-guard">
+(function(){
+  function protectEmail() {
+    var links = document.querySelectorAll('a[href^="mailto:info@bycraft.by"]');
+    links.forEach(function(a){
+      a.onclick = function(e){
+        e.stopPropagation();
+        if (e.stopImmediatePropagation) e.stopImmediatePropagation();
+        window.location.href = 'mailto:info@bycraft.by';
+        return true;
+      };
+    });
+  }
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', protectEmail);
+  } else {
+    protectEmail();
+  }
+})();
+</script>
 </body>
 </html>

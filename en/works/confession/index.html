@@ -1100,5 +1100,25 @@ Sent from bycraft.by' : '
 
 
 
+<script id="bycraft-email-guard">
+(function(){
+  function protectEmail() {
+    var links = document.querySelectorAll('a[href^="mailto:info@bycraft.by"]');
+    links.forEach(function(a){
+      a.onclick = function(e){
+        e.stopPropagation();
+        if (e.stopImmediatePropagation) e.stopImmediatePropagation();
+        window.location.href = 'mailto:info@bycraft.by';
+        return true;
+      };
+    });
+  }
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', protectEmail);
+  } else {
+    protectEmail();
+  }
+})();
+</script>
 </body>
 </html>
