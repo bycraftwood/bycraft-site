@@ -51,6 +51,240 @@
   </script>
   <link rel="icon" href="../images/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="../css/style.css?v=700">
+<!-- BYCRAFT Modal & Uniform Gallery Styles -->
+<style id="bc-core-styles">
+.bc-modal {
+  display: none !important;
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100vw !important;
+  height: 100vh !important;
+  z-index: 99999999 !important;
+  font-family: 'Montserrat', sans-serif !important;
+}
+.bc-modal.is-active {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+.bc-modal__overlay {
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  background: rgba(34, 38, 41, 0.75) !important;
+  backdrop-filter: blur(5px) !important;
+  -webkit-backdrop-filter: blur(5px) !important;
+}
+.bc-modal__container {
+  position: relative !important;
+  background: #FFFFFF !important;
+  border: 1px solid #222629 !important;
+  width: 92% !important;
+  max-width: 460px !important;
+  max-height: 90vh !important;
+  overflow-y: auto !important;
+  padding: 36px 30px 30px !important;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.35) !important;
+  z-index: 100000000 !important;
+  box-sizing: border-box !important;
+}
+.bc-modal__close {
+  position: absolute !important;
+  top: 14px !important;
+  right: 18px !important;
+  background: transparent !important;
+  border: none !important;
+  font-size: 28px !important;
+  line-height: 1 !important;
+  color: #222629 !important;
+  cursor: pointer !important;
+  padding: 4px 8px !important;
+}
+.bc-modal__close:hover { opacity: 0.6 !important; }
+.bc-modal__header { margin-bottom: 20px !important; text-align: left !important; }
+.bc-modal__title {
+  font-size: 19px !important;
+  font-weight: 500 !important;
+  color: #222629 !important;
+  margin: 0 0 6px 0 !important;
+  letter-spacing: 0.02em !important;
+}
+.bc-modal__subtitle {
+  font-size: 13px !important;
+  color: #474B4F !important;
+  margin: 0 !important;
+  letter-spacing: 0.03em !important;
+}
+.bc-form-group { margin-bottom: 14px !important; text-align: left !important; }
+.bc-label {
+  display: block !important;
+  font-size: 11px !important;
+  color: #474B4F !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.05em !important;
+  margin-bottom: 5px !important;
+}
+.bc-input, .bc-textarea {
+  width: 100% !important;
+  padding: 10px 12px !important;
+  font-family: inherit !important;
+  font-size: 14px !important;
+  color: #222629 !important;
+  background: #FFFFFF !important;
+  border: 1px solid #CCCCCC !important;
+  border-radius: 0 !important;
+  box-sizing: border-box !important;
+}
+.bc-input:focus, .bc-textarea:focus {
+  border-color: #222629 !important;
+  outline: none !important;
+}
+.bc-textarea { resize: vertical !important; }
+.bc-form-consent { margin: 14px 0 18px 0 !important; text-align: left !important; }
+.bc-consent-label {
+  display: flex !important;
+  align-items: flex-start !important;
+  gap: 8px !important;
+  font-size: 11px !important;
+  line-height: 1.4 !important;
+  color: #474B4F !important;
+  cursor: pointer !important;
+}
+.bc-consent-label input { margin-top: 2px !important; accent-color: #222629 !important; }
+.bc-consent-label a { color: #222629 !important; text-decoration: underline !important; }
+.bc-submit-btn {
+  display: block !important;
+  width: 100% !important;
+  padding: 13px 20px !important;
+  font-family: inherit !important;
+  font-size: 13px !important;
+  font-weight: 500 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.06em !important;
+  color: #FFFFFF !important;
+  background: #222629 !important;
+  border: 1px solid #222629 !important;
+  cursor: pointer !important;
+  transition: all 0.25s ease !important;
+  box-sizing: border-box !important;
+  text-align: center !important;
+}
+.bc-submit-btn:hover {
+  background: #FFFFFF !important;
+  color: #222629 !important;
+}
+.bc-modal-alt {
+  margin-top: 14px !important;
+  text-align: center !important;
+  font-size: 12px !important;
+  color: #474B4F !important;
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 4px !important;
+}
+.bc-tg-link {
+  color: #222629 !important;
+  font-weight: 500 !important;
+  text-decoration: underline !important;
+}
+.bc-modal__success { text-align: center !important; padding: 20px 0 10px !important; }
+.bc-success-icon { font-size: 36px !important; color: #222629 !important; margin-bottom: 10px !important; }
+.bc-modal__success h4 { font-size: 18px !important; color: #222629 !important; margin: 0 0 8px !important; }
+.bc-modal__success p { font-size: 13px !important; color: #474B4F !important; margin: 0 0 20px !important; }
+
+/* Единый формат и размер для всех фото в блоке «Другие выставочные работы» */
+.bc-uniform-photo-wrap {
+  width: 100% !important;
+  height: 260px !important;
+  aspect-ratio: 4 / 3 !important;
+  overflow: hidden !important;
+  display: block !important;
+  margin-bottom: 12px !important;
+}
+.bc-uniform-photo {
+  width: 100% !important;
+  height: 100% !important;
+  aspect-ratio: 4 / 3 !important;
+  object-fit: cover !important;
+  object-position: center !important;
+  display: block !important;
+}
+
+@media (max-width: 480px) {
+  .bc-modal__container { padding: 26px 18px 22px !important; }
+  .bc-uniform-photo-wrap { height: 200px !important; }
+}
+</style>
+
+<script>
+window.openBycraftModal = function(e) {
+  if (e) {
+    if (e.preventDefault) e.preventDefault();
+    if (e.stopPropagation) e.stopPropagation();
+  }
+  var modal = document.getElementById('bycraft-modal');
+  if (!modal) return false;
+
+  var titleEl = document.getElementById('bc-modal-work-title');
+  var h1 = document.querySelector('h1');
+  var artworkName = h1 ? h1.textContent.trim() : (document.title.split('—')[0].split('-')[0].trim());
+  if (titleEl) {
+    titleEl.textContent = 'Работа: «' + artworkName + '»';
+  }
+
+  var form = document.getElementById('bc-inquiry-form');
+  var successBox = document.getElementById('bc-modal-success');
+  if (form) form.style.display = 'block';
+  if (successBox) successBox.style.display = 'none';
+
+  modal.classList.add('is-active');
+  modal.style.setProperty('display', 'flex', 'important');
+  document.body.style.overflow = 'hidden';
+  return false;
+};
+
+window.closeBycraftModal = function() {
+  var modal = document.getElementById('bycraft-modal');
+  if (!modal) return;
+  modal.classList.remove('is-active');
+  modal.style.setProperty('display', 'none', 'important');
+  document.body.style.overflow = '';
+};
+
+window.handleBycraftSubmit = function(e) {
+  e.preventDefault();
+  var name = document.getElementById('bc-name').value.trim();
+  var contact = document.getElementById('bc-contact').value.trim();
+  var comment = document.getElementById('bc-comment').value.trim();
+  var h1 = document.querySelector('h1');
+  var artworkName = h1 ? h1.textContent.trim() : (document.title.split('—')[0].split('-')[0].trim());
+
+  var subject = 'Запрос по работе: ' + artworkName;
+  var body = 'Здравствуйте, Валентин!\n\n' +
+             'Запрос по арт-объекту: ' + artworkName + '\n' +
+             'Имя: ' + name + '\n' +
+             'Контакт: ' + contact + '\n' +
+             (comment ? ('Комментарий: ' + comment + '\n') : '') +
+             '\nОтправлено с сайта bycraft.by';
+
+  var mailtoUrl = 'mailto:info@bycraft.by?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
+  window.open(mailtoUrl, '_blank');
+
+  var form = document.getElementById('bc-inquiry-form');
+  var successBox = document.getElementById('bc-modal-success');
+  if (form) form.style.display = 'none';
+  if (successBox) successBox.style.display = 'block';
+};
+
+document.addEventListener('keydown', function(e) {
+  if (e.key === 'Escape') window.closeBycraftModal();
+});
+</script>
+<!-- BYCRAFT Modal & Uniform Gallery Styles End -->
+
 </head>
 <body>
     <header class="site-header">
@@ -153,5 +387,49 @@
     <img src="" alt="" class="lightbox-img" id="lightboxImg">
   </div>
   <script src="..//js/main.js"></script>
+<!-- BYCRAFT Modal HTML Start -->
+<div id="bycraft-modal" class="bc-modal" aria-hidden="true" role="dialog">
+  <div class="bc-modal__overlay" onclick="closeBycraftModal()"></div>
+  <div class="bc-modal__container">
+    <button type="button" class="bc-modal__close" onclick="closeBycraftModal()" aria-label="Закрыть">&times;</button>
+    <div class="bc-modal__header">
+      <h3 class="bc-modal__title">Запрос информации о работе</h3>
+      <p class="bc-modal__subtitle" id="bc-modal-work-title"></p>
+    </div>
+    <form id="bc-inquiry-form" class="bc-modal__form" onsubmit="handleBycraftSubmit(event)">
+      <div class="bc-form-group">
+        <label for="bc-name" class="bc-label">Ваше имя *</label>
+        <input type="text" id="bc-name" name="name" class="bc-input" required placeholder="Иван">
+      </div>
+      <div class="bc-form-group">
+        <label for="bc-contact" class="bc-label">Контакт / телефон / мессенджер *</label>
+        <input type="text" id="bc-contact" name="contact" class="bc-input" required placeholder="+375 / +7 / @username / email">
+      </div>
+      <div class="bc-form-group">
+        <label for="bc-comment" class="bc-label">Комментарий</label>
+        <textarea id="bc-comment" name="comment" class="bc-textarea" rows="3" placeholder="Ваш вопрос или пожелания..."></textarea>
+      </div>
+      <div class="bc-form-consent">
+        <label class="bc-consent-label">
+          <input type="checkbox" id="bc-consent" required checked>
+          <span>Я даю согласие на обработку персональных данных в соответствии с <a href="/privacy/" target="_blank">Политикой конфиденциальности</a></span>
+        </label>
+      </div>
+      <button type="submit" class="bc-submit-btn">Отправить запрос</button>
+      <div class="bc-modal-alt">
+        <span>или свяжитесь напрямую:</span>
+        <a href="https://t.me/bycraft" target="_blank" rel="noopener" class="bc-tg-link">Telegram: @bycraft</a>
+      </div>
+    </form>
+    <div id="bc-modal-success" class="bc-modal__success" style="display: none;">
+      <div class="bc-success-icon">✓</div>
+      <h4>Запрос успешно сформирован</h4>
+      <p>Валентин свяжется с вами в ближайшее время по указанному контакту.</p>
+      <button type="button" class="bc-submit-btn" onclick="closeBycraftModal()">Закрыть</button>
+    </div>
+  </div>
+</div>
+<!-- BYCRAFT Modal HTML End -->
+
 </body>
 </html>
