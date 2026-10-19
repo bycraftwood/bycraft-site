@@ -51,19 +51,22 @@
   </script>
   <link rel="icon" href="../../images/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="../../css/style.css?v=700">
-<!-- BYCRAFT Modal & Uniform Gallery Styles -->
-<style id="bc-core-styles">
-.bc-modal {
-  display: none !important;
+
+
+<!-- BYCRAFT Styles: Modal & Uniform Gallery -->
+<style id="bc-unified-styles">
+/* 1. Модальное окно обратной связи BYCRAFT */
+#bycraft-modal {
+  display: none;
   position: fixed !important;
   top: 0 !important;
   left: 0 !important;
   width: 100vw !important;
   height: 100vh !important;
-  z-index: 99999999 !important;
+  z-index: 2147483647 !important;
   font-family: 'Montserrat', sans-serif !important;
 }
-.bc-modal.is-active {
+#bycraft-modal.is-active {
   display: flex !important;
   align-items: center !important;
   justify-content: center !important;
@@ -74,9 +77,9 @@
   left: 0 !important;
   width: 100% !important;
   height: 100% !important;
-  background: rgba(34, 38, 41, 0.75) !important;
-  backdrop-filter: blur(5px) !important;
-  -webkit-backdrop-filter: blur(5px) !important;
+  background: rgba(34, 38, 41, 0.78) !important;
+  backdrop-filter: blur(6px) !important;
+  -webkit-backdrop-filter: blur(6px) !important;
 }
 .bc-modal__container {
   position: relative !important;
@@ -87,8 +90,8 @@
   max-height: 90vh !important;
   overflow-y: auto !important;
   padding: 36px 30px 30px !important;
-  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.35) !important;
-  z-index: 100000000 !important;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4) !important;
+  z-index: 2147483647 !important;
   box-sizing: border-box !important;
 }
 .bc-modal__close {
@@ -195,14 +198,15 @@
 .bc-modal__success h4 { font-size: 18px !important; color: #222629 !important; margin: 0 0 8px !important; }
 .bc-modal__success p { font-size: 13px !important; color: #474B4F !important; margin: 0 0 20px !important; }
 
-/* Единый формат и размер для всех фото в блоке «Другие выставочные работы» */
+/* 2. Единый размер и формат 4:3 для фото в блоке «Другие выставочные работы» */
 .bc-uniform-photo-wrap {
   width: 100% !important;
-  height: 260px !important;
+  height: 250px !important;
   aspect-ratio: 4 / 3 !important;
   overflow: hidden !important;
   display: block !important;
   margin-bottom: 12px !important;
+  background: #F5F5F5 !important;
 }
 .bc-uniform-photo {
   width: 100% !important;
@@ -215,75 +219,10 @@
 
 @media (max-width: 480px) {
   .bc-modal__container { padding: 26px 18px 22px !important; }
-  .bc-uniform-photo-wrap { height: 200px !important; }
+  .bc-uniform-photo-wrap { height: 190px !important; }
 }
 </style>
-
-<script>
-window.openBycraftModal = function(e) {
-  if (e) {
-    if (e.preventDefault) e.preventDefault();
-    if (e.stopPropagation) e.stopPropagation();
-  }
-  var modal = document.getElementById('bycraft-modal');
-  if (!modal) return false;
-
-  var titleEl = document.getElementById('bc-modal-work-title');
-  var h1 = document.querySelector('h1');
-  var artworkName = h1 ? h1.textContent.trim() : (document.title.split('—')[0].split('-')[0].trim());
-  if (titleEl) {
-    titleEl.textContent = 'Работа: «' + artworkName + '»';
-  }
-
-  var form = document.getElementById('bc-inquiry-form');
-  var successBox = document.getElementById('bc-modal-success');
-  if (form) form.style.display = 'block';
-  if (successBox) successBox.style.display = 'none';
-
-  modal.classList.add('is-active');
-  modal.style.setProperty('display', 'flex', 'important');
-  document.body.style.overflow = 'hidden';
-  return false;
-};
-
-window.closeBycraftModal = function() {
-  var modal = document.getElementById('bycraft-modal');
-  if (!modal) return;
-  modal.classList.remove('is-active');
-  modal.style.setProperty('display', 'none', 'important');
-  document.body.style.overflow = '';
-};
-
-window.handleBycraftSubmit = function(e) {
-  e.preventDefault();
-  var name = document.getElementById('bc-name').value.trim();
-  var contact = document.getElementById('bc-contact').value.trim();
-  var comment = document.getElementById('bc-comment').value.trim();
-  var h1 = document.querySelector('h1');
-  var artworkName = h1 ? h1.textContent.trim() : (document.title.split('—')[0].split('-')[0].trim());
-
-  var subject = 'Запрос по работе: ' + artworkName;
-  var body = 'Здравствуйте, Валентин!\n\n' +
-             'Запрос по арт-объекту: ' + artworkName + '\n' +
-             'Имя: ' + name + '\n' +
-             'Контакт: ' + contact + '\n' +
-             (comment ? ('Комментарий: ' + comment + '\n') : '') +
-             '\nОтправлено с сайта bycraft.by';
-
-  var mailtoUrl = 'mailto:info@bycraft.by?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
-  window.open(mailtoUrl, '_blank');
-
-  var form = document.getElementById('bc-inquiry-form');
-  var successBox = document.getElementById('bc-modal-success');
-  if (form) form.style.display = 'none';
-  if (successBox) successBox.style.display = 'block';
-};
-
-document.addEventListener('keydown', function(e) {
-  if (e.key === 'Escape') window.closeBycraftModal();
-});
-</script>
-<!-- BYCRAFT Modal & Uniform Gallery Styles End -->
+<!-- BYCRAFT Styles End -->
 
 </head>
 <body>
@@ -321,7 +260,7 @@ document.addEventListener('keydown', function(e) {
         <!-- 1. Перед лицом -->
         <div class="work-card">
           <a href="../pered-licom/">
-            <div class="work-img-wrap"><img src="../../images/works/work-exhibit-02.jpg" alt="Перед лицом" loading="lazy" decoding="async"></div>
+            <div class="work-img-wrap"><div class="bc-uniform-photo-wrap"><img src="../../images/works/work-exhibit-02.jpg" alt="Перед лицом" loading="lazy" class="bc-uniform-photo"></div></div>
             <div class="work-info" style="display: flex; flex-direction: column; align-items: flex-start; gap: 4px; margin-top: 12px;">
               <div class="work-title"><strong>Перед лицом</strong></div>
               <div class="work-status" style="font-size: 13px; font-weight: 500; color: var(--color-primary); letter-spacing: 0.04em;">В ПРОДАЖЕ с 2027 года (следите за анонсами)</div>
@@ -333,7 +272,7 @@ document.addEventListener('keydown', function(e) {
         <!-- 2. Волк -->
         <div class="work-card">
           <a href="../volk/">
-            <div class="work-img-wrap"><img src="../../images/works/work-exhibit-05.jpg" alt="Волк" loading="lazy" decoding="async"></div>
+            <div class="work-img-wrap"><div class="bc-uniform-photo-wrap"><img src="../../images/works/work-exhibit-05.jpg" alt="Волк" loading="lazy" class="bc-uniform-photo"></div></div>
             <div class="work-info" style="display: flex; flex-direction: column; align-items: flex-start; gap: 4px; margin-top: 12px;">
               <div class="work-title"><strong>Волк</strong></div>
               <div class="work-status" style="font-size: 13px; font-weight: 500; color: var(--color-primary); letter-spacing: 0.04em;">ПРОДАНА</div>
@@ -348,7 +287,7 @@ document.addEventListener('keydown', function(e) {
             <div class="work-img-wrap">
               <picture>
                 <source srcset="../../images/works/work-exhibit-03.webp" type="image/webp">
-                <img src="../../images/works/work-exhibit-03.jpg" alt="Исповедь" loading="lazy" decoding="async">
+                <div class="bc-uniform-photo-wrap"><img src="../../images/works/work-exhibit-03.jpg" alt="Исповедь" loading="lazy" class="bc-uniform-photo"></div>
               </picture>
             </div>
             <div class="work-info" style="display: flex; flex-direction: column; align-items: flex-start; gap: 4px; margin-top: 12px;">
@@ -362,7 +301,7 @@ document.addEventListener('keydown', function(e) {
         <!-- 4. Обида -->
         <div class="work-card">
           <a href="../obida/">
-            <div class="work-img-wrap"><img src="../../images/works/work-exhibit-04.jpg" alt="Обида" loading="lazy" decoding="async"></div>
+            <div class="work-img-wrap"><div class="bc-uniform-photo-wrap"><img src="../../images/works/work-exhibit-04.jpg" alt="Обида" loading="lazy" class="bc-uniform-photo"></div></div>
             <div class="work-info" style="display: flex; flex-direction: column; align-items: flex-start; gap: 4px; margin-top: 12px;">
               <div class="work-title"><strong>Обида</strong></div>
               <div class="work-status" style="font-size: 13px; font-weight: 500; color: var(--color-primary); letter-spacing: 0.04em;">ДОСТУПНА ПО ЗАПРОСУ</div>
@@ -374,7 +313,7 @@ document.addEventListener('keydown', function(e) {
         <!-- 5. Основание -->
         <div class="work-card">
           <a href="../osnovanie/">
-            <div class="work-img-wrap"><img src="../../images/works/work-exhibit-01.jpg" alt="Основание" loading="lazy" decoding="async"></div>
+            <div class="work-img-wrap"><div class="bc-uniform-photo-wrap"><img src="../../images/works/work-exhibit-01.jpg" alt="Основание" loading="lazy" class="bc-uniform-photo"></div></div>
             <div class="work-info" style="display: flex; flex-direction: column; align-items: flex-start; gap: 4px; margin-top: 12px;">
               <div class="work-title"><strong>Основание</strong></div>
               <div class="work-status" style="font-size: 13px; font-weight: 500; color: var(--color-primary); letter-spacing: 0.04em;">ПРОДАНА</div>
@@ -420,7 +359,9 @@ document.addEventListener('keydown', function(e) {
 
 
 
-<!-- BYCRAFT Modal HTML Start -->
+
+
+<!-- BYCRAFT Modal & Scripts Start -->
 <div id="bycraft-modal" class="bc-modal" aria-hidden="true" role="dialog">
   <div class="bc-modal__overlay" onclick="closeBycraftModal()"></div>
   <div class="bc-modal__container">
@@ -456,13 +397,108 @@ document.addEventListener('keydown', function(e) {
     </form>
     <div id="bc-modal-success" class="bc-modal__success" style="display: none;">
       <div class="bc-success-icon">✓</div>
-      <h4>Запрос успешно сформирован</h4>
+      <h4>Запрос сформирован</h4>
       <p>Валентин свяжется с вами в ближайшее время по указанному контакту.</p>
       <button type="button" class="bc-submit-btn" onclick="closeBycraftModal()">Закрыть</button>
     </div>
   </div>
 </div>
-<!-- BYCRAFT Modal HTML End -->
+
+<script id="bc-core-scripts">
+function getBycraftArtworkTitle() {
+  var h1 = document.querySelector('h1');
+  if (h1 && h1.textContent.trim()) {
+    return h1.textContent.trim();
+  }
+  var title = document.title.split('—')[0].split('-')[0].split('·')[0].trim();
+  return title || 'Арт-объект BYCRAFT';
+}
+
+window.openBycraftModal = function(e) {
+  if (e) {
+    if (e.preventDefault) e.preventDefault();
+    if (e.stopPropagation) e.stopPropagation();
+  }
+  var modal = document.getElementById('bycraft-modal');
+  if (!modal) return false;
+
+  var titleEl = document.getElementById('bc-modal-work-title');
+  if (titleEl) {
+    titleEl.textContent = 'Работа: «' + getBycraftArtworkTitle() + '»';
+  }
+
+  var form = document.getElementById('bc-inquiry-form');
+  var successBox = document.getElementById('bc-modal-success');
+  if (form) form.style.display = 'block';
+  if (successBox) successBox.style.display = 'none';
+
+  modal.classList.add('is-active');
+  modal.style.setProperty('display', 'flex', 'important');
+  document.body.style.overflow = 'hidden';
+  return false;
+};
+
+window.closeBycraftModal = function() {
+  var modal = document.getElementById('bycraft-modal');
+  if (!modal) return;
+  modal.classList.remove('is-active');
+  modal.style.setProperty('display', 'none', 'important');
+  document.body.style.overflow = '';
+};
+
+window.handleBycraftSubmit = function(e) {
+  e.preventDefault();
+  var name = document.getElementById('bc-name').value.trim();
+  var contact = document.getElementById('bc-contact').value.trim();
+  var comment = document.getElementById('bc-comment').value.trim();
+  var artwork = getBycraftArtworkTitle();
+
+  var subject = 'Запрос по работе: ' + artwork;
+  var body = 'Здравствуйте, Валентин!
+
+' +
+             'Запрос по арт-объекту: ' + artwork + '
+' +
+             'Имя: ' + name + '
+' +
+             'Контакт: ' + contact + '
+' +
+             (comment ? ('Комментарий: ' + comment + '
+') : '') +
+             '
+Отправлено с сайта bycraft.by';
+
+  var mailtoUrl = 'mailto:info@bycraft.by?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
+  window.open(mailtoUrl, '_blank');
+
+  var form = document.getElementById('bc-inquiry-form');
+  var successBox = document.getElementById('bc-modal-success');
+  if (form) form.style.display = 'none';
+  if (successBox) successBox.style.display = 'block';
+};
+
+// Глобальный перехват кликов по любым кнопкам запроса (Capture Phase)
+document.addEventListener('click', function(e) {
+  var el = e.target.closest('a, button');
+  if (!el) return;
+  var txt = (el.textContent || '').toLowerCase();
+  var href = el.getAttribute('href') || '';
+  if (txt.includes('запросить информацию') || 
+      txt.includes('заказать работу') || 
+      txt.includes('inquire about') ||
+      href.includes('mailto:')) {
+    e.preventDefault();
+    e.stopPropagation();
+    window.openBycraftModal(e);
+    return false;
+  }
+}, true);
+
+document.addEventListener('keydown', function(e) {
+  if (e.key === 'Escape') window.closeBycraftModal();
+});
+</script>
+<!-- BYCRAFT Modal & Scripts End -->
 
 </body>
 </html>
