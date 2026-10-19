@@ -1020,6 +1020,22 @@ Sent from bycraft.by' : '
       object-fit: contain !important;
     }
   </style>
+  <style id="bycraft-modal-visibility-patch">
+    .modal, .lightbox, #imageModal {
+      background-color: rgba(18, 20, 22, 0.95) !important;
+    }
+    .modal img, .lightbox img, #modal-img, #img01 {
+      display: block !important;
+      visibility: visible !important;
+      opacity: 1 !important;
+      max-width: 90vw !important;
+      max-height: 85vh !important;
+      width: auto !important;
+      height: auto !important;
+      object-fit: contain !important;
+      margin: auto !important;
+    }
+  </style>
 </head>
 <body>
   <header class="site-header">
@@ -1149,6 +1165,85 @@ Sent from bycraft.by' : '
     document.addEventListener('DOMContentLoaded', protectEmail);
   } else {
     protectEmail();
+  }
+})();
+</script>
+<script id="bycraft-lightbox-fix">
+(function() {
+  function initLightboxFix() {
+    var modal = document.querySelector('.modal, .lightbox, #imageModal, #modal');
+    var modalImg = document.querySelector('.modal img, .lightbox img, #modal-img, #img01');
+
+    // Находим все карточки и ссылки на работы
+    var cards = document.querySelectorAll('.work-card, .exhibition-card, .card, a[class*="card"]');
+
+    cards.forEach(function(card) {
+      var href = card.getAttribute('href') || (card.querySelector('a') ? card.querySelector('a').getAttribute('href') : null);
+
+      // Если ссылка ведет на страницу отдельной работы (не картинка и не #) — даем перейти без открытия модалки
+      if (href && (href.indexOf('/works/') !== -1 || href.indexOf('.html') !== -1) && !href.match(/\.(jpg|jpeg|png|webp|avif)$/i)) {
+        card.onclick = function(e) {
+          // Разрешаем штатный переход по ссылке
+          return true;
+        };
+        return;
+      }
+
+      // Для карточек каталога (где должно увеличиваться фото):
+      card.onclick = function(e) {
+        var img = card.querySelector('img');
+        if (!img && !href) return;
+
+        var fullSrc = '';
+        if (img) {
+          fullSrc = img.currentSrc || img.src || img.getAttribute('src');
+        } else if (href && href.match(/\.(jpg|jpeg|png|webp|avif)$/i)) {
+          fullSrc = href;
+        }
+
+        if (fullSrc && modal && modalImg) {
+          e.preventDefault();
+          e.stopPropagation();
+
+          // Гарантируем абсолютный путь к фото
+          if (fullSrc.indexOf('http') === -1 && fullSrc.indexOf('/') !== 0) {
+            fullSrc = '/' + fullSrc;
+          }
+
+          modalImg.src = fullSrc;
+          modalImg.style.display = 'block';
+          modalImg.style.visibility = 'visible';
+          modalImg.style.opacity = '1';
+          modal.style.display = 'flex';
+          modal.style.justifyContent = 'center';
+          modal.style.alignItems = 'center';
+        }
+      };
+    });
+
+    // Закрытие модального окна по клику на крестик или на фон
+    if (modal) {
+      modal.onclick = function(e) {
+        if (e.target !== modalImg) {
+          modal.style.display = 'none';
+          if (modalImg) modalImg.src = '';
+        }
+      };
+      var closeBtns = modal.querySelectorAll('.close, .lightbox-close, [class*="close"]');
+      closeBtns.forEach(function(btn) {
+        btn.onclick = function(e) {
+          e.stopPropagation();
+          modal.style.display = 'none';
+          if (modalImg) modalImg.src = '';
+        };
+      });
+    }
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initLightboxFix);
+  } else {
+    initLightboxFix();
   }
 })();
 </script>

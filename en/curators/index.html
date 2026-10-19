@@ -68,7 +68,7 @@
   ]
 }
   </script>
-  <link rel="icon" href="../../images/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/images/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="../../css/style.css?v=700">
 
 
@@ -949,6 +949,22 @@ Sent from bycraft.by' : '
 </script>
 <!-- BYCRAFT Unified Core End -->
 
+  <style id="bycraft-modal-visibility-patch">
+    .modal, .lightbox, #imageModal {
+      background-color: rgba(18, 20, 22, 0.95) !important;
+    }
+    .modal img, .lightbox img, #modal-img, #img01 {
+      display: block !important;
+      visibility: visible !important;
+      opacity: 1 !important;
+      max-width: 90vw !important;
+      max-height: 85vh !important;
+      width: auto !important;
+      height: auto !important;
+      object-fit: contain !important;
+      margin: auto !important;
+    }
+  </style>
 </head>
 <body>
     <header class="site-header">
@@ -975,7 +991,7 @@ Sent from bycraft.by' : '
         <div class="curator-photo">
           <picture>
             <source srcset="../../images/curators/curator-portrait.webp" type="image/webp">
-            <img src="../../images/curators/curator-portrait.jpg" alt="Valentin Atrosh">
+            <img src="/images/curators/curator-portrait.jpg" alt="Valentin Atrosh">
           </picture>
         </div>
         <div class="curator-text">
@@ -1013,7 +1029,7 @@ Sent from bycraft.by' : '
             <div class="work-img-wrap">
               <picture>
                 <source srcset="../../../images/works/work-exhibit-02.webp" type="image/webp">
-                <img src="../../../images/works/work-exhibit-02.jpg" alt="Face to Face" loading="lazy">
+                <img src="/images/works/work-exhibit-02.jpg" alt="Face to Face" loading="lazy">
               </picture>
             </div>
             <p class="caption">Face to Face, 2026</p>
@@ -1026,7 +1042,7 @@ Sent from bycraft.by' : '
             <div class="work-img-wrap">
               <picture>
                 <source srcset="../../../images/works/work-exhibit-05.webp" type="image/webp">
-                <img src="../../../images/works/work-exhibit-05.jpg" alt="The Wolf" loading="lazy">
+                <img src="/images/works/work-exhibit-05.jpg" alt="The Wolf" loading="lazy">
               </picture>
             </div>
             <p class="caption">The Wolf, 2026</p>
@@ -1039,7 +1055,7 @@ Sent from bycraft.by' : '
             <div class="work-img-wrap">
               <picture>
                 <source srcset="../../../images/works/work-exhibit-03.webp" type="image/webp">
-                <img src="../../../images/works/work-exhibit-03.jpg" alt="Confession" loading="lazy">
+                <img src="/images/works/work-exhibit-03.jpg" alt="Confession" loading="lazy">
               </picture>
             </div>
             <p class="caption">Confession, 2026</p>
@@ -1052,7 +1068,7 @@ Sent from bycraft.by' : '
             <div class="work-img-wrap">
               <picture>
                 <source srcset="../../../images/works/work-exhibit-04.webp" type="image/webp">
-                <img src="../../../images/works/work-exhibit-04.jpg" alt="Resentment" loading="lazy">
+                <img src="/images/works/work-exhibit-04.jpg" alt="Resentment" loading="lazy">
               </picture>
             </div>
             <p class="caption">Resentment, 2026</p>
@@ -1065,7 +1081,7 @@ Sent from bycraft.by' : '
             <div class="work-img-wrap">
               <picture>
                 <source srcset="../../../images/works/work-exhibit-01.webp" type="image/webp">
-                <img src="../../../images/works/work-exhibit-01.jpg" alt="Foundation" loading="lazy">
+                <img src="/images/works/work-exhibit-01.jpg" alt="Foundation" loading="lazy">
               </picture>
             </div>
             <p class="caption">Foundation, 2025</p>
@@ -1323,7 +1339,7 @@ Sent from bycraft.by' : '
       <h2 class="section-title" style="margin-bottom: 24px;">Diplomas and Certificates</h2>
       <div class="curator-diplomas-three-grid">
         <div>
-          <picture><source srcset="../../images/curators/diploma-01.webp" type="image/webp"><img src="../../images/curators/diploma-01.jpg" alt="UNITED BY ART Award" loading="lazy"></picture>
+          <picture><source srcset="../../images/curators/diploma-01.webp" type="image/webp"><img src="/images/curators/diploma-01.jpg" alt="UNITED BY ART Award" loading="lazy"></picture>
           <div class="caption" style="margin-top: 10px; line-height: 1.6;">
             <strong>“UNITED BY ART” International Exhibition-Competition of Contemporary Art</strong><br>
             3rd Prize, 2026<br>
@@ -1331,7 +1347,7 @@ Sent from bycraft.by' : '
           </div>
         </div>
         <div>
-          <picture><source srcset="../../images/curators/diploma-02.webp" type="image/webp"><img src="../../images/curators/diploma-02.jpg" alt="Russian Art Prize Diploma" loading="lazy"></picture>
+          <picture><source srcset="../../images/curators/diploma-02.webp" type="image/webp"><img src="/images/curators/diploma-02.jpg" alt="Russian Art Prize Diploma" loading="lazy"></picture>
           <div class="caption" style="margin-top: 10px; line-height: 1.6;">
             <strong>Russian Art Prize</strong><br>
             Participant Diploma, 2026<br>
@@ -1339,7 +1355,7 @@ Sent from bycraft.by' : '
           </div>
         </div>
         <div>
-          <picture><source srcset="../../images/curators/diploma-03.webp" type="image/webp"><img src="../../images/curators/diploma-03.jpg" alt="Polotno Competition Diploma" loading="lazy"></picture>
+          <picture><source srcset="../../images/curators/diploma-03.webp" type="image/webp"><img src="/images/curators/diploma-03.jpg" alt="Polotno Competition Diploma" loading="lazy"></picture>
           <div class="caption" style="margin-top: 10px; line-height: 1.6;">
             <strong>All-Russian Competition “Polotno”</strong><br>
             Semi-finalist, 2025<br>
@@ -1409,6 +1425,85 @@ Sent from bycraft.by' : '
     document.addEventListener('DOMContentLoaded', protectEmail);
   } else {
     protectEmail();
+  }
+})();
+</script>
+<script id="bycraft-lightbox-fix">
+(function() {
+  function initLightboxFix() {
+    var modal = document.querySelector('.modal, .lightbox, #imageModal, #modal');
+    var modalImg = document.querySelector('.modal img, .lightbox img, #modal-img, #img01');
+
+    // Находим все карточки и ссылки на работы
+    var cards = document.querySelectorAll('.work-card, .exhibition-card, .card, a[class*="card"]');
+
+    cards.forEach(function(card) {
+      var href = card.getAttribute('href') || (card.querySelector('a') ? card.querySelector('a').getAttribute('href') : null);
+
+      // Если ссылка ведет на страницу отдельной работы (не картинка и не #) — даем перейти без открытия модалки
+      if (href && (href.indexOf('/works/') !== -1 || href.indexOf('.html') !== -1) && !href.match(/\.(jpg|jpeg|png|webp|avif)$/i)) {
+        card.onclick = function(e) {
+          // Разрешаем штатный переход по ссылке
+          return true;
+        };
+        return;
+      }
+
+      // Для карточек каталога (где должно увеличиваться фото):
+      card.onclick = function(e) {
+        var img = card.querySelector('img');
+        if (!img && !href) return;
+
+        var fullSrc = '';
+        if (img) {
+          fullSrc = img.currentSrc || img.src || img.getAttribute('src');
+        } else if (href && href.match(/\.(jpg|jpeg|png|webp|avif)$/i)) {
+          fullSrc = href;
+        }
+
+        if (fullSrc && modal && modalImg) {
+          e.preventDefault();
+          e.stopPropagation();
+
+          // Гарантируем абсолютный путь к фото
+          if (fullSrc.indexOf('http') === -1 && fullSrc.indexOf('/') !== 0) {
+            fullSrc = '/' + fullSrc;
+          }
+
+          modalImg.src = fullSrc;
+          modalImg.style.display = 'block';
+          modalImg.style.visibility = 'visible';
+          modalImg.style.opacity = '1';
+          modal.style.display = 'flex';
+          modal.style.justifyContent = 'center';
+          modal.style.alignItems = 'center';
+        }
+      };
+    });
+
+    // Закрытие модального окна по клику на крестик или на фон
+    if (modal) {
+      modal.onclick = function(e) {
+        if (e.target !== modalImg) {
+          modal.style.display = 'none';
+          if (modalImg) modalImg.src = '';
+        }
+      };
+      var closeBtns = modal.querySelectorAll('.close, .lightbox-close, [class*="close"]');
+      closeBtns.forEach(function(btn) {
+        btn.onclick = function(e) {
+          e.stopPropagation();
+          modal.style.display = 'none';
+          if (modalImg) modalImg.src = '';
+        };
+      });
+    }
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initLightboxFix);
+  } else {
+    initLightboxFix();
   }
 })();
 </script>
