@@ -342,7 +342,7 @@ img {
                (comment ? ('Комментарий: ' + comment + '\n') : '') +
                '\nОтправлено с сайта bycraft.by';
 
-    var mailtoUrl = 'mailto:<a href="mailto:info@bycraft.by">info@bycraft.by</a>?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
+    var mailtoUrl = 'mailto:info@bycraft.by?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
     window.open(mailtoUrl, '_blank');
 
     var form = document.getElementById('bc-inquiry-form');
@@ -1139,7 +1139,7 @@ Sent from bycraft.by' : '
         </div>
         <div class="footer-col-3">
           <div class="footer-contact-group">
-            <div class="footer-contact-title">ЭЛЕКТРОННАЯ ПОЧТА: <a href="mailto:info@bycraft.by">info@bycraft.by</a></div>
+            <div class="footer-contact-title">ЭЛЕКТРОННАЯ ПОЧТА: <a href="mailto:info@bycraft.by" onclick="event.stopPropagation();">info@bycraft.by</a></div>
             <div></div>
           </div>
         </div>
