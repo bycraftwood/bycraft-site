@@ -930,104 +930,63 @@ Sent from bycraft.by' : '
 </script>
 <!-- BYCRAFT Unified Core End -->
 
-  <style id="bycraft-exhibitions-4-3">
-    /* Строгий формат 4:3 для всех карточек работ */
-    main img:not(.logo):not(.icon),
-    .exhibition-card img,
-    .work-card img,
-    .works-grid img,
-    .exhibitions-grid img,
-    .card img,
-    article img {
-      width: 100% !important;
-      aspect-ratio: 4 / 3 !important;
-      height: 100% !important;
-      max-height: 480px !important;
-      object-fit: cover !important;
-      object-position: center !important;
-      display: block !important;
+  
+  
+  
+  <style id="bycraft-exhibitions-4-3-perfect">
+    /* 1. Сетка: карточки строго одинаковой ширины на всех строках */
+    .works-grid,
+    .exhibitions-grid,
+    main .grid,
+    [class*="grid"] {
+      display: grid !important;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)) !important;
+      gap: 32px !important;
+      align-items: start !important;
     }
-    .card-media, .image-wrap, .card-image, .work-card-media {
-      aspect-ratio: 4 / 3 !important;
-      overflow: hidden !important;
+
+    /* 2. Карточки: подписи и текст полностью открыты */
+    .work-card,
+    .exhibition-card,
+    .card,
+    article,
+    [class*="card"] {
+      display: flex !important;
+      flex-direction: column !important;
       width: 100% !important;
-    }
-    /* В модальном окне при увеличении пропорции не обрезаются */
-    .modal img, .lightbox img, #modal-img, .enlarged-modal img {
-      aspect-ratio: auto !important;
-      object-fit: contain !important;
-      max-height: 90vh !important;
+      overflow: visible !important;
       height: auto !important;
     }
-  </style>
-  <style id="bycraft-force-4-3">
-    /* Принудительный формат 4:3 для карточек выставочных работ */
+
+    /* 3. Гарантированная видимость подписей, названий и статусов */
+    .work-card h3, .work-card p, .card h3, .card p,
+    .work-card-info, .card-info, .card-caption, .caption,
+    [class*="info"], [class*="caption"], [class*="meta"], [class*="desc"] {
+      display: block !important;
+      visibility: visible !important;
+      opacity: 1 !important;
+      overflow: visible !important;
+      height: auto !important;
+      margin-top: 14px !important;
+    }
+
+    /* 4. Фотографии: строго один размер и идеальный формат 4:3 */
     main .work-card img,
     main .exhibition-card img,
     main .card img,
-    main .works-grid img,
-    main .exhibitions-grid img,
     main article img,
-    .exhibition-card img,
-    .work-card img {
-      width: 100% !important;
-      aspect-ratio: 4 / 3 !important;
-      height: auto !important;
-      min-height: 260px !important;
-      object-fit: cover !important;
-      object-position: center !important;
-      display: block !important;
-    }
-    .card-media, .work-card-media, .image-wrapper, .card-image {
-      width: 100% !important;
-      aspect-ratio: 4 / 3 !important;
-      overflow: hidden !important;
-    }
-    /* Для увеличенного модального окна — оригинальные пропорции */
-    .modal img, .lightbox img, #modal-img, .enlarged-modal img, [class*="modal"] img {
-      aspect-ratio: auto !important;
-      object-fit: contain !important;
-      max-height: 90vh !important;
-      min-height: 0 !important;
-      height: auto !important;
-    }
-  </style>
-  <style id="bycraft-exhibitions-4-3-strict">
-    /* Единый формат 4:3 и одинаковый размер для всех фото выставочных работ */
-    main .work-card,
-    main .exhibition-card,
-    main .card,
-    main article {
-      display: flex !important;
-      flex-direction: column !important;
-    }
-    main .card-media,
-    main .work-card-media,
-    main .card-image,
-    main .work-image,
-    main .image-wrapper,
-    main .work-card a:first-child,
-    main .card a:first-child {
-      width: 100% !important;
-      aspect-ratio: 4 / 3 !important;
-      overflow: hidden !important;
-      position: relative !important;
-      display: block !important;
-    }
-    main img:not(.logo):not(.icon),
     .works-grid img,
-    .exhibitions-grid img,
-    .work-card img,
-    .card img,
-    article img {
+    .exhibitions-grid img {
       width: 100% !important;
-      height: 100% !important;
       aspect-ratio: 4 / 3 !important;
+      height: auto !important;
+      max-height: none !important;
       object-fit: cover !important;
       object-position: center !important;
       display: block !important;
     }
-    /* Для увеличенного модального окна сохраняем оригинальные пропорции */
+
+    /* 5. В лайтбоксе (при клике на фото) оригинальные пропорции не обрезаются */
     .modal img, .lightbox img, #modal-img, .enlarged-modal img, .enlarged img {
       aspect-ratio: auto !important;
       width: auto !important;
