@@ -1699,7 +1699,7 @@ picture img {
   flex-direction: column;
 }
 .works-six-grid .work-img-wrap {
-  aspect-ratio: 1 / 1;
+  aspect-ratio: 4 / 3;
   overflow: hidden;
   background-color: #F4F4F4;
 }
@@ -2218,3 +2218,20 @@ picture img {
   display: block !important;
 }
 
+
+
+/* === FIX: works-six-grid 4:3 === */
+.works-six-grid .work-img-wrap {
+  aspect-ratio: 4 / 3 !important;
+  overflow: hidden !important;
+  width: 100% !important;
+}
+.works-six-grid .work-img-wrap img,
+.works-six-grid .work-img-wrap picture,
+.works-six-grid .work-img-wrap picture img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  object-position: center !important;
+  display: block !important;
+}
