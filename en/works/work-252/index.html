@@ -322,7 +322,9 @@ img {
 
 
 
-<!-- BYCRAFT 12-Col Header, 4:3 Exhibitions & Strict Mobile Responsive Start -->
+
+
+<!-- BYCRAFT Unified Core: Header, 4:3 Gallery, Modal & Mobile Responsive Start -->
 <style id="bc-unified-styles">
 /* 1. БАЗОВАЯ ЗАЩИТА: НИКАКОГО ГОРИЗОНТАЛЬНОГО СКРОЛЛА */
 html, body {
@@ -337,15 +339,18 @@ html, body {
   box-sizing: border-box !important;
 }
 
-/* 2. ШАПКА И КОНТЕНТ В 12-КОЛОНОЧНОЙ СЕТКЕ (MAX 1280px) */
+/* 2. ШАПКА: ЛОГОТИП СЛЕВА, МЕНЮ СПРАВА В 12-КОЛОНОЧНОЙ СЕТКЕ (MAX 1280px) */
 header,
 .site-header,
 .header,
 .header__inner,
 .header-inner,
 .header-container,
-.nav-container,
-nav.main-nav {
+.nav-container {
+  display: flex !important;
+  flex-direction: row !important;
+  justify-content: space-between !important;
+  align-items: center !important;
   max-width: 1280px !important;
   margin-left: auto !important;
   margin-right: auto !important;
@@ -356,16 +361,48 @@ nav.main-nav {
 }
 
 header > div,
-header > nav,
 .site-header > div,
-.site-header > nav {
+.header > div {
+  display: flex !important;
+  flex-direction: row !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+  width: 100% !important;
   max-width: 1280px !important;
   margin-left: auto !important;
   margin-right: auto !important;
-  box-sizing: border-box !important;
-  width: 100% !important;
 }
 
+/* Логотип прижат к левому краю */
+.logo,
+.site-logo,
+.header-logo,
+.brand,
+a[href="/"],
+a[href="/en/"],
+a[href="https://bycraft.by/"],
+a[href="https://bycraft.by/en/"] {
+  display: inline-flex !important;
+  align-items: center !important;
+  margin-right: auto !important;
+  text-decoration: none !important;
+}
+
+/* Меню навигации прижато к правому краю */
+header nav,
+.site-header nav,
+.header nav,
+.nav,
+.main-nav,
+.header-nav {
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: center !important;
+  margin-left: auto !important;
+  gap: 24px !important;
+}
+
+/* Контейнер контента в сетке 1280px */
 main, .main-content, [role="main"] {
   max-width: 1280px !important;
   margin-left: auto !important;
@@ -376,7 +413,7 @@ main, .main-content, [role="main"] {
   width: 100% !important;
 }
 
-/* Двухколоночная композиция карточки работы: Слева фото (7 колонок), Справа инфо (5 колонок) */
+/* Двухколоночная композиция страницы работы: Слева фото (7 колонок), Справа инфо (5 колонок) */
 .artwork-container,
 .work-detail,
 .work-single,
@@ -411,7 +448,7 @@ section:has(.work-meta) {
   top: 90px !important;
 }
 
-/* 3. СТРАНИЦА /EXHIBITIONS/ И БЛОКИ ВЫСТАВОЧНЫХ РАБОТ:
+/* 3. СТРАНИЦА /EXHIBITIONS/, /EN/EXHIBITIONS/ И БЛОКИ РАБОТ:
    СТРОГО 4:3, ЕДИНЫЙ РАЗМЕР, БЕЗ ПОДЛОЖЕК, РАМОК И ФОНОВ */
 .exhibitions-grid,
 .exhibition-works,
@@ -436,7 +473,8 @@ section:has(.work-meta) {
 .work-images img,
 .artwork-images img,
 [class*="exhibition"] img,
-[class*="work-card"] img {
+[class*="work-card"] img,
+[class*="other-works"] img {
   aspect-ratio: 4 / 3 !important;
   width: 100% !important;
   height: auto !important;
@@ -463,9 +501,32 @@ section:has(.work-meta) {
   padding: 0 !important;
 }
 
+/* Ссылка email в футере */
+footer a[href^="mailto:"],
+.site-footer a[href^="mailto:"],
+.footer a[href^="mailto:"] {
+  color: inherit !important;
+  text-decoration: underline !important;
+}
+
 /* 4. СТРОГАЯ МОБИЛЬНАЯ АДАПТИВНОСТЬ (< 768px) */
 @media (max-width: 768px) {
-  /* Переход всех 2-колоночных блоков в один столбик */
+  /* Шапка на смартфонах: логотип слева, меню справа */
+  header,
+  .site-header,
+  .header,
+  .header__inner,
+  .header-inner,
+  .header-container,
+  .nav-container {
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+  }
+
+  /* Переход 2-колоночных блоков в 1 столбик */
   .artwork-container,
   .work-detail,
   .work-single,
@@ -508,15 +569,12 @@ section:has(.work-meta) {
     gap: 24px !important;
   }
 
-  /* Безопасные мобильные отступы без вылетов */
-  main, .main-content, [role="main"],
-  header, .site-header, .header,
-  .header-container, .nav-container {
+  main, .main-content, [role="main"] {
     padding-left: 20px !important;
     padding-right: 20px !important;
   }
 
-  /* ТЕКСТ ПОДВАЛА (ФУТЕРА) УМЕНЬШАЕТСЯ РОВНО В 2 РАЗА */
+  /* Текст подвала уменьшается ровно в 2 раза на смартфонах */
   footer,
   .site-footer,
   .footer,
@@ -685,6 +743,10 @@ section:has(.work-meta) {
 .bc-success-icon { font-size: 36px !important; color: #222629 !important; margin-bottom: 10px !important; }
 .bc-modal__success h4 { font-size: 18px !important; color: #222629 !important; margin: 0 0 8px !important; }
 .bc-modal__success p { font-size: 13px !important; color: #474B4F !important; margin: 0 0 20px !important; }
+
+@media (max-width: 480px) {
+  .bc-modal__container { padding: 26px 18px 20px !important; }
+}
 </style>
 
 <script id="bc-unified-scripts">
@@ -695,6 +757,8 @@ section:has(.work-meta) {
       if (e.stopPropagation) e.stopPropagation();
     }
 
+    var isEn = window.location.pathname.indexOf('/en/') !== -1 || document.documentElement.lang === 'en';
+
     var modal = document.getElementById('bycraft-modal');
     if (!modal) {
       modal = document.createElement('div');
@@ -704,45 +768,63 @@ section:has(.work-meta) {
     }
 
     var h1 = document.querySelector('h1');
-    var workName = h1 ? h1.textContent.trim() : (document.title.split('—')[0].split('-')[0].trim() || 'Арт-объект');
+    var workName = h1 ? h1.textContent.trim() : (document.title.split('—')[0].split('-')[0].trim() || (isEn ? 'Artwork' : 'Арт-объект'));
+
+    var title = isEn ? 'Artwork Inquiry' : 'Запрос информации о работе';
+    var subtitle = isEn ? ('Work: «' + workName + '»') : ('Работа: «' + workName + '»');
+    var nameLabel = isEn ? 'Your Name *' : 'Ваше имя *';
+    var namePlaceholder = isEn ? 'John' : 'Иван';
+    var contactLabel = isEn ? 'Contact / Phone / Messenger *' : 'Контакт / телефон / мессенджер *';
+    var contactPlaceholder = isEn ? '+1 / +44 / @username / email' : '+375 / +7 / @username / email';
+    var commentLabel = isEn ? 'Comment' : 'Комментарий';
+    var commentPlaceholder = isEn ? 'Your questions or notes...' : 'Ваш вопрос или пожелания...';
+    var privacyLink = isEn ? '/en/privacy/' : '/privacy/';
+    var consentText = isEn ? 
+      ('I agree to the processing of personal data in accordance with the <a href="' + privacyLink + '" target="_blank">Privacy Policy</a>') :
+      ('Я даю согласие на обработку персональных данных в соответствии с <a href="' + privacyLink + '" target="_blank">Политикой конфиденциальности</a>');
+    var submitBtnText = isEn ? 'Send Inquiry' : 'Отправить запрос';
+    var altText = isEn ? 'or contact directly:' : 'или свяжитесь напрямую:';
+    var successTitle = isEn ? 'Inquiry Sent' : 'Запрос сформирован';
+    var successDesc = isEn ? 'Valentin will contact you shortly via the provided contact.' : 'Валентин свяжется с вами в ближайшее время по указанному контакту.';
+    var closeBtnText = isEn ? 'Close' : 'Закрыть';
 
     modal.innerHTML = '<div class="bc-modal__overlay" onclick="window.closeBycraftModal()"></div>' +
       '<div class="bc-modal__container">' +
-        '<button type="button" class="bc-modal__close" onclick="window.closeBycraftModal()" aria-label="Закрыть">&times;</button>' +
+        '<button type="button" class="bc-modal__close" onclick="window.closeBycraftModal()" aria-label="Close">&times;</button>' +
         '<div class="bc-modal__header">' +
-          '<h3 class="bc-modal__title">Запрос информации о работе</h3>' +
-          '<p class="bc-modal__subtitle">Работа: «' + workName + '»</p>' +
+          '<h3 class="bc-modal__title">' + title + '</h3>' +
+          '<p class="bc-modal__subtitle">' + subtitle + '</p>' +
         '</div>' +
         '<form id="bc-inquiry-form" class="bc-modal__form" onsubmit="window.handleBycraftSubmit(event)">' +
           '<div class="bc-form-group">' +
-            '<label for="bc-name" class="bc-label">Ваше имя *</label>' +
-            '<input type="text" id="bc-name" name="name" class="bc-input" required placeholder="Иван">' +
+            '<label for="bc-name" class="bc-label">' + nameLabel + '</label>' +
+            '<input type="text" id="bc-name" name="name" class="bc-input" required placeholder="' + namePlaceholder + '">' +
           '</div>' +
           '<div class="bc-form-group">' +
-            '<label for="bc-contact" class="bc-label">Контакт / телефон / мессенджер *</label>' +
-            '<input type="text" id="bc-contact" name="contact" class="bc-input" required placeholder="+375 / +7 / @username / email">' +
+            '<label for="bc-contact" class="bc-label">' + contactLabel + '</label>' +
+            '<input type="text" id="bc-contact" name="contact" class="bc-input" required placeholder="' + contactPlaceholder + '">' +
           '</div>' +
           '<div class="bc-form-group">' +
-            '<label for="bc-comment" class="bc-label">Комментарий</label>' +
-            '<textarea id="bc-comment" name="comment" class="bc-textarea" rows="3" placeholder="Ваш вопрос или пожелания..."></textarea>' +
+            '<label for="bc-comment" class="bc-label">' + commentLabel + '</label>' +
+            '<textarea id="bc-comment" name="comment" class="bc-textarea" rows="3" placeholder="' + commentPlaceholder + '"></textarea>' +
           '</div>' +
           '<div class="bc-form-consent">' +
             '<label class="bc-consent-label">' +
               '<input type="checkbox" id="bc-consent" required checked>' +
-              '<span>Я даю согласие на обработку персональных данных в соответствии с <a href="/privacy/" target="_blank">Политикой конфиденциальности</a></span>' +
+              '<span>' + consentText + '</span>' +
             '</label>' +
           '</div>' +
-          '<button type="submit" class="bc-submit-btn">Отправить запрос</button>' +
+          '<button type="submit" class="bc-submit-btn">' + submitBtnText + '</button>' +
           '<div class="bc-modal-alt">' +
-            '<span>или свяжитесь напрямую:</span>' +
-            '<a href="https://t.me/bycraft" target="_blank" rel="noopener" class="bc-tg-link">Telegram: @bycraft</a>' +
+            '<span>' + altText + '</span>' +
+            '<a href="https://t.me/bycraft_by" target="_blank" rel="noopener" class="bc-tg-link">Telegram: @bycraft_by</a>' +
           '</div>' +
         '</form>' +
         '<div id="bc-modal-success" class="bc-modal__success" style="display: none;">' +
           '<div class="bc-success-icon">✓</div>' +
-          '<h4>Запрос сформирован</h4>' +
-          '<p>Валентин свяжется с вами в ближайшее время по указанному контакту.</p>' +
-          '<button type="button" class="bc-submit-btn" onclick="window.closeBycraftModal()">Закрыть</button>' +
+          '<h4>' + successTitle + '</h4>' +
+          '<p>' + successDesc + '</p>' +
+          '<button type="button" class="bc-submit-btn" onclick="window.closeBycraftModal()">' + closeBtnText + '</button>' +
         '</div>' +
       '</div>';
 
@@ -762,19 +844,29 @@ section:has(.work-meta) {
 
   window.handleBycraftSubmit = function(e) {
     e.preventDefault();
+    var isEn = window.location.pathname.indexOf('/en/') !== -1 || document.documentElement.lang === 'en';
     var name = (document.getElementById('bc-name') || {}).value || '';
     var contact = (document.getElementById('bc-contact') || {}).value || '';
     var comment = (document.getElementById('bc-comment') || {}).value || '';
     var h1 = document.querySelector('h1');
-    var workName = h1 ? h1.textContent.trim() : (document.title.split('—')[0].split('-')[0].trim() || 'Арт-объект');
+    var workName = h1 ? h1.textContent.trim() : (document.title.split('—')[0].split('-')[0].trim() || (isEn ? 'Artwork' : 'Арт-объект'));
 
-    var subject = 'Запрос по работе: ' + workName;
-    var body = 'Здравствуйте, Валентин!\n\n' +
-               'Запрос по арт-объекту: ' + workName + '\n' +
-               'Имя: ' + name + '\n' +
-               'Контакт: ' + contact + '\n' +
-               (comment ? ('Комментарий: ' + comment + '\n') : '') +
-               '\nОтправлено с сайта bycraft.by';
+    var subject = (isEn ? 'Inquiry: ' : 'Запрос по работе: ') + workName;
+    var body = (isEn ? 'Hello Valentin!
+
+Inquiry about artwork: ' : 'Здравствуйте, Валентин!
+
+Запрос по арт-объекту: ') + workName + '
+' +
+               (isEn ? 'Name: ' : 'Имя: ') + name + '
+' +
+               (isEn ? 'Contact: ' : 'Контакт: ') + contact + '
+' +
+               (comment ? ((isEn ? 'Comment: ' : 'Комментарий: ') + comment + '
+') : '') +
+               (isEn ? '
+Sent from bycraft.by' : '
+Отправлено с сайта bycraft.by');
 
     var mailtoUrl = 'mailto:info@bycraft.by?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
     window.open(mailtoUrl, '_blank');
@@ -793,7 +885,7 @@ section:has(.work-meta) {
     if (txt.includes('запросить информацию') || 
         txt.includes('заказать работу') || 
         txt.includes('inquire about') || 
-        href.includes('mailto:')) {
+        href.includes('mailto:') && (txt.includes('запрос') || txt.includes('inquire') || btn.classList.contains('btn'))) {
       e.preventDefault();
       e.stopPropagation();
       window.openBycraftModal(e);
@@ -806,7 +898,7 @@ section:has(.work-meta) {
   });
 })();
 </script>
-<!-- BYCRAFT 12-Col Header, 4:3 Exhibitions & Strict Mobile Responsive End -->
+<!-- BYCRAFT Unified Core End -->
 
 </head>
 <body>
@@ -901,7 +993,7 @@ section:has(.work-meta) {
         </div>
         <div class="footer-col-3">
           <div class="footer-contact-group">
-            <div class="footer-contact-title">EMAIL:</div>
+            <div class="footer-contact-title">EMAIL: <a href="mailto:info@bycraft.by">info@bycraft.by</a></div>
             <div></div>
           </div>
         </div>
