@@ -890,36 +890,7 @@ Sent from bycraft.by' : '
 </script>
 <!-- BYCRAFT Unified Core End -->
 
-  <style id="bycraft-exhibitions-4-3">
-    /* Строгий формат 4:3 для всех карточек работ */
-    main img:not(.logo):not(.icon),
-    .exhibition-card img,
-    .work-card img,
-    .works-grid img,
-    .exhibitions-grid img,
-    .card img,
-    article img {
-      width: 100% !important;
-      aspect-ratio: 4 / 3 !important;
-      height: 100% !important;
-      max-height: 480px !important;
-      object-fit: cover !important;
-      object-position: center !important;
-      display: block !important;
-    }
-    .card-media, .image-wrap, .card-image, .work-card-media {
-      aspect-ratio: 4 / 3 !important;
-      overflow: hidden !important;
-      width: 100% !important;
-    }
-    /* В модальном окне при увеличении пропорции не обрезаются */
-    .modal img, .lightbox img, #modal-img, .enlarged-modal img {
-      aspect-ratio: auto !important;
-      object-fit: contain !important;
-      max-height: 90vh !important;
-      height: auto !important;
-    }
-  </style>
+  
   <style id="bycraft-force-4-3">
     /* Принудительный формат 4:3 для карточек выставочных работ */
     main .work-card img,
@@ -950,6 +921,95 @@ Sent from bycraft.by' : '
       max-height: 90vh !important;
       min-height: 0 !important;
       height: auto !important;
+    }
+  </style>
+  <style id="bycraft-exhibitions-4-3-perfect">
+    /* 1. Сетка: карточки строго одинаковой фиксированной ширины */
+    .works-grid,
+    .exhibitions-grid,
+    main .grid,
+    [class*="grid"] {
+      display: grid !important;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)) !important;
+      gap: 32px !important;
+      align-items: start !important;
+    }
+
+    /* 2. Карточки */
+    .work-card,
+    .exhibition-card,
+    .card,
+    article,
+    [class*="card"] {
+      display: flex !important;
+      flex-direction: column !important;
+      width: 100% !important;
+      overflow: visible !important;
+      height: auto !important;
+    }
+
+    /* 3. Фотографии: строго один размер и идеальный формат 4:3, без отступа снизу */
+    main .work-card img,
+    main .exhibition-card img,
+    main .card img,
+    main article img,
+    .works-grid img,
+    .exhibitions-grid img {
+      width: 100% !important;
+      aspect-ratio: 4 / 3 !important;
+      height: auto !important;
+      max-height: none !important;
+      object-fit: cover !important;
+      object-position: center !important;
+      display: block !important;
+      margin-bottom: 0 !important;
+      padding-bottom: 0 !important;
+    }
+
+    /* 4. Компактный отступ подписи прямо под фото (ровно 8px) */
+    .work-card-info,
+    .card-info,
+    .card-caption,
+    .caption,
+    [class*="info"],
+    [class*="caption"] {
+      display: block !important;
+      visibility: visible !important;
+      opacity: 1 !important;
+      overflow: visible !important;
+      height: auto !important;
+      margin-top: 8px !important;
+      padding-top: 0 !important;
+    }
+
+    /* Заголовок работы */
+    .work-card h3, .card h3, h3, [class*="title"] {
+      display: block !important;
+      visibility: visible !important;
+      opacity: 1 !important;
+      margin-top: 0 !important;
+      margin-bottom: 4px !important;
+      line-height: 1.25 !important;
+    }
+
+    /* Текст статуса и года */
+    .work-card p, .card p, p, [class*="status"], [class*="meta"] {
+      display: block !important;
+      visibility: visible !important;
+      opacity: 1 !important;
+      margin-top: 0 !important;
+      margin-bottom: 2px !important;
+      line-height: 1.35 !important;
+    }
+
+    /* 5. В лайтбоксе (при клике для увеличения) пропорции не обрезаются */
+    .modal img, .lightbox img, #modal-img, .enlarged-modal img, .enlarged img {
+      aspect-ratio: auto !important;
+      width: auto !important;
+      height: auto !important;
+      max-width: 90vw !important;
+      max-height: 85vh !important;
+      object-fit: contain !important;
     }
   </style>
 </head>

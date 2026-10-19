@@ -933,8 +933,9 @@ Sent from bycraft.by' : '
   
   
   
+  
   <style id="bycraft-exhibitions-4-3-perfect">
-    /* 1. Сетка: карточки строго одинаковой ширины на всех строках */
+    /* 1. Сетка: карточки строго одинаковой фиксированной ширины */
     .works-grid,
     .exhibitions-grid,
     main .grid,
@@ -945,7 +946,7 @@ Sent from bycraft.by' : '
       align-items: start !important;
     }
 
-    /* 2. Карточки: подписи и текст полностью открыты */
+    /* 2. Карточки */
     .work-card,
     .exhibition-card,
     .card,
@@ -958,19 +959,7 @@ Sent from bycraft.by' : '
       height: auto !important;
     }
 
-    /* 3. Гарантированная видимость подписей, названий и статусов */
-    .work-card h3, .work-card p, .card h3, .card p,
-    .work-card-info, .card-info, .card-caption, .caption,
-    [class*="info"], [class*="caption"], [class*="meta"], [class*="desc"] {
-      display: block !important;
-      visibility: visible !important;
-      opacity: 1 !important;
-      overflow: visible !important;
-      height: auto !important;
-      margin-top: 14px !important;
-    }
-
-    /* 4. Фотографии: строго один размер и идеальный формат 4:3 */
+    /* 3. Фотографии: строго один размер и идеальный формат 4:3, без отступа снизу */
     main .work-card img,
     main .exhibition-card img,
     main .card img,
@@ -984,9 +973,47 @@ Sent from bycraft.by' : '
       object-fit: cover !important;
       object-position: center !important;
       display: block !important;
+      margin-bottom: 0 !important;
+      padding-bottom: 0 !important;
     }
 
-    /* 5. В лайтбоксе (при клике на фото) оригинальные пропорции не обрезаются */
+    /* 4. Компактный отступ подписи прямо под фото (ровно 8px) */
+    .work-card-info,
+    .card-info,
+    .card-caption,
+    .caption,
+    [class*="info"],
+    [class*="caption"] {
+      display: block !important;
+      visibility: visible !important;
+      opacity: 1 !important;
+      overflow: visible !important;
+      height: auto !important;
+      margin-top: 8px !important;
+      padding-top: 0 !important;
+    }
+
+    /* Заголовок работы */
+    .work-card h3, .card h3, h3, [class*="title"] {
+      display: block !important;
+      visibility: visible !important;
+      opacity: 1 !important;
+      margin-top: 0 !important;
+      margin-bottom: 4px !important;
+      line-height: 1.25 !important;
+    }
+
+    /* Текст статуса и года */
+    .work-card p, .card p, p, [class*="status"], [class*="meta"] {
+      display: block !important;
+      visibility: visible !important;
+      opacity: 1 !important;
+      margin-top: 0 !important;
+      margin-bottom: 2px !important;
+      line-height: 1.35 !important;
+    }
+
+    /* 5. В лайтбоксе (при клике для увеличения) пропорции не обрезаются */
     .modal img, .lightbox img, #modal-img, .enlarged-modal img, .enlarged img {
       aspect-ratio: auto !important;
       width: auto !important;
