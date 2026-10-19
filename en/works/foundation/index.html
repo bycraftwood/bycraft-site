@@ -3,19 +3,19 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>“Foundation” Sculpture · BYCRAFT</title>
-  <meta name="description" content="Sculptural artwork “Foundation” (2025) by Valentin Atrosh. Solid birch burl, fire charring, natural finish. SOLD.">
+  <title>Sculpture «Foundation» — BYCRAFT · Валентин Атрош</title>
+  <meta name="description" content="Скульптурный арт-объект «Foundation» (2025) Валентина Атроша. Массив берёзового сувеля, обжиг огнём, без покрытия. SOLD.">
   <link rel="canonical" href="https://bycraft.by/en/works/foundation/">
 
-  <link rel="alternate" hreflang="ru" href="https://bycraft.by/works/osnovanie/">
   <link rel="alternate" hreflang="en" href="https://bycraft.by/en/works/foundation/">
-  <link rel="alternate" hreflang="x-default" href="https://bycraft.by/works/osnovanie/">
+  <link rel="alternate" hreflang="en" href="https://bycraft.by/en/works/foundation/">
+  <link rel="alternate" hreflang="x-default" href="https://bycraft.by/en/works/foundation/">
 
   <!-- Open Graph -->
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="BYCRAFT">
-  <meta property="og:title" content="“Foundation” Sculpture · BYCRAFT">
-  <meta property="og:description" content="Sculptural artwork “Foundation” (2025) by Valentin Atrosh. Solid birch burl, fire charring, natural finish. SOLD.">
+  <meta property="og:title" content="Sculpture «Foundation» — BYCRAFT · Валентин Атрош">
+  <meta property="og:description" content="Скульптурный арт-объект «Foundation» (2025) Валентина Атроша. Массив берёзового сувеля, обжиг огнём, без покрытия. SOLD.">
   <meta property="og:url" content="https://bycraft.by/en/works/foundation/">
   <meta property="og:image" content="https://bycraft.by/images/works/work-exhibit-01.jpg">
   <meta property="og:image:width" content="1200">
@@ -24,8 +24,8 @@
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="“Foundation” Sculpture · BYCRAFT">
-  <meta name="twitter:description" content="Sculptural artwork “Foundation” (2025) by Valentin Atrosh. Solid birch burl, fire charring, natural finish. SOLD.">
+  <meta name="twitter:title" content="Sculpture «Foundation» — BYCRAFT · Валентин Атрош">
+  <meta name="twitter:description" content="Скульптурный арт-объект «Foundation» (2025) Валентина Атроша. Массив берёзового сувеля, обжиг огнём, без покрытия. SOLD.">
   <meta name="twitter:image" content="https://bycraft.by/images/works/work-exhibit-01.jpg">
 
   <!-- JSON-LD Structured Data -->
@@ -37,14 +37,14 @@
     {
       "@type": "ListItem",
       "position": 1,
-      "name": "Home",
-      "item": "https://bycraft.by/en/"
+      "name": "Главная",
+      "item": "https://bycraft.by/"
     },
     {
       "@type": "ListItem",
       "position": 2,
-      "name": "Works",
-      "item": "https://bycraft.by/en/works/"
+      "name": "Работы",
+      "item": "https://bycraft.by/works/"
     },
     {
       "@type": "ListItem",
@@ -62,9 +62,9 @@
   "name": "Foundation",
   "creator": {
     "@type": "Person",
-    "name": "Valentin Atrosh"
+    "name": "Валентин Атрош"
   },
-  "artMedium": "Birch burl, fire charring, natural finish",
+  "artMedium": "Сувель берёзы, обжиг огнём, без покрытия",
   "artform": "Sculpture",
   "dateCreated": "2025",
   "height": "72 cm",
@@ -74,7 +74,7 @@
   "url": "https://bycraft.by/en/works/foundation/"
 }
   </script>
-  <link rel="icon" href="/images/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="../../../images/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="../../../css/style.css?v=700">
 
 
@@ -295,7 +295,7 @@ img {
           '<div class="bc-form-consent">' +
             '<label class="bc-consent-label">' +
               '<input type="checkbox" id="bc-consent" required checked>' +
-              '<span>Я даю согласие на обработку персональных данных в соответствии с <a href="/privacy/" target="_blank">Политикой конфиденциальности</a></span>' +
+              '<span>Я даю согласие на обработку персональных данных в соответствии с <a href="/en/privacy/" target="_blank">Политикой конфиденциальности</a></span>' +
             '</label>' +
           '</div>' +
           '<button type="submit" class="bc-submit-btn">Отправить запрос</button>' +
@@ -987,6 +987,95 @@ Sent from bycraft.by' : '
       height: auto !important;
     }
   </style>
+  <style id="bycraft-exhibitions-4-3-perfect">
+    /* 1. Сетка: карточки строго одинаковой фиксированной ширины */
+    .works-grid,
+    .exhibitions-grid,
+    main .grid,
+    [class*="grid"] {
+      display: grid !important;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)) !important;
+      gap: 32px !important;
+      align-items: start !important;
+    }
+
+    /* 2. Карточки */
+    .work-card,
+    .exhibition-card,
+    .card,
+    article,
+    [class*="card"] {
+      display: flex !important;
+      flex-direction: column !important;
+      width: 100% !important;
+      overflow: visible !important;
+      height: auto !important;
+    }
+
+    /* 3. Фотографии: строго один размер и идеальный формат 4:3, без отступа снизу */
+    main .work-card img,
+    main .exhibition-card img,
+    main .card img,
+    main article img,
+    .works-grid img,
+    .exhibitions-grid img {
+      width: 100% !important;
+      aspect-ratio: 4 / 3 !important;
+      height: auto !important;
+      max-height: none !important;
+      object-fit: cover !important;
+      object-position: center !important;
+      display: block !important;
+      margin-bottom: 0 !important;
+      padding-bottom: 0 !important;
+    }
+
+    /* 4. Компактный отступ подписи прямо под фото (ровно 8px) */
+    .work-card-info,
+    .card-info,
+    .card-caption,
+    .caption,
+    [class*="info"],
+    [class*="caption"] {
+      display: block !important;
+      visibility: visible !important;
+      opacity: 1 !important;
+      overflow: visible !important;
+      height: auto !important;
+      margin-top: 8px !important;
+      padding-top: 0 !important;
+    }
+
+    /* Заголовок работы */
+    .work-card h3, .card h3, h3, [class*="title"] {
+      display: block !important;
+      visibility: visible !important;
+      opacity: 1 !important;
+      margin-top: 0 !important;
+      margin-bottom: 4px !important;
+      line-height: 1.25 !important;
+    }
+
+    /* Текст статуса и года */
+    .work-card p, .card p, p, [class*="status"], [class*="meta"] {
+      display: block !important;
+      visibility: visible !important;
+      opacity: 1 !important;
+      margin-top: 0 !important;
+      margin-bottom: 2px !important;
+      line-height: 1.35 !important;
+    }
+
+    /* 5. В лайтбоксе (при клике для увеличения) пропорции не обрезаются */
+    .modal img, .lightbox img, #modal-img, .enlarged-modal img, .enlarged img {
+      aspect-ratio: auto !important;
+      width: auto !important;
+      height: auto !important;
+      max-width: 90vw !important;
+      max-height: 85vh !important;
+      object-fit: contain !important;
+    }
+  </style>
   <style id="bycraft-modal-visibility-patch">
     .modal, .lightbox, #imageModal {
       background-color: rgba(18, 20, 22, 0.95) !important;
@@ -1006,8 +1095,8 @@ Sent from bycraft.by' : '
 </head>
 <body>
     <header class="site-header">
-    <div class="container header-inner">
-      <a href="javascript:void(0);" onclick="openBycraftModal(event); return false;" class="brand-logo" role="button"> onclick="openBycraftModal(event); return false;">BYCRAFT</a>
+    <div>
+      <a href="javascript:void(0);" onclick="openBycraftModal(event); return false;" class="brand-logo" role="button"> onclick="openBycraftModal(event); return false;">BYCRAFT</a></a>
         <p class="lead-text" style="font-size: 14.5px; color: var(--color-secondary); margin-top: 14px; margin-bottom: 0;"></p>
         </div>
         
@@ -1019,25 +1108,25 @@ Sent from bycraft.by' : '
       <h2 class="section-title" style="margin-bottom: 24px;">Exhibition Works</h2>
       <div class="other-works-grid">
         <div class="work-card">
-          <a href="../face-to-face/" style="display:flex; flex-direction:column; width:100%; color:inherit; text-decoration:none;">
+          <a href="../pered-licom/" style="display:flex; flex-direction:column; width:100%; color:inherit; text-decoration:none;">
             <div class="work-img-wrap" style="width:100%; aspect-ratio:4/3!important; overflow:hidden; background-color:#F4F4F4; flex-shrink:0;">
               <picture style="display:block; width:100%; height:100%;">
                 <source srcset="../../../images/works/work-exhibit-02.webp" type="image/webp">
-                <img src="/images/works/work-exhibit-02.jpg" alt="Face to Face" loading="lazy">
+                <img src="../../../images/works/work-exhibit-02.jpg" alt="Face to Face" loading="lazy">
               </picture>
             </div>
             <div class="work-info" style="display:flex; flex-direction:column; justify-content:flex-start; gap:4px; margin-top:10px; min-height:72px;">
               <div class="work-title"><strong>Face to Face</strong><br><span style="color:var(--color-muted); font-size:13px;">Minsk, 2026</span></div>
-              <div class="work-status" style="font-size:12px;">ON SALE FROM 2027 (stay tuned for announcements)</div>
+              <div class="work-status" style="font-size:12px;">В ПРОДАЖЕ с 2027 года</div>
             </div>
           </a>
         </div>
         <div class="work-card">
-          <a href="../the-wolf/" style="display:flex; flex-direction:column; width:100%; color:inherit; text-decoration:none;">
+          <a href="../volk/" style="display:flex; flex-direction:column; width:100%; color:inherit; text-decoration:none;">
             <div class="work-img-wrap" style="width:100%; aspect-ratio:4/3!important; overflow:hidden; background-color:#F4F4F4; flex-shrink:0;">
               <picture style="display:block; width:100%; height:100%;">
                 <source srcset="../../../images/works/work-exhibit-05.webp" type="image/webp">
-                <img src="/images/works/work-exhibit-05.jpg" alt="The Wolf" loading="lazy">
+                <img src="../../../images/works/work-exhibit-05.jpg" alt="The Wolf" loading="lazy">
               </picture>
             </div>
             <div class="work-info" style="display:flex; flex-direction:column; justify-content:flex-start; gap:4px; margin-top:10px; min-height:72px;">
@@ -1047,11 +1136,11 @@ Sent from bycraft.by' : '
           </a>
         </div>
         <div class="work-card">
-          <a href="../confession/" style="display:flex; flex-direction:column; width:100%; color:inherit; text-decoration:none;">
+          <a href="../ispoved/" style="display:flex; flex-direction:column; width:100%; color:inherit; text-decoration:none;">
             <div class="work-img-wrap" style="width:100%; aspect-ratio:4/3!important; overflow:hidden; background-color:#F4F4F4; flex-shrink:0;">
               <picture style="display:block; width:100%; height:100%;">
                 <source srcset="../../../images/works/work-exhibit-03.webp" type="image/webp">
-                <img src="/images/works/work-exhibit-03.jpg" alt="Confession" loading="lazy">
+                <img src="../../../images/works/work-exhibit-03.jpg" alt="Confession" loading="lazy">
               </picture>
             </div>
             <div class="work-info" style="display:flex; flex-direction:column; justify-content:flex-start; gap:4px; margin-top:10px; min-height:72px;">
@@ -1061,11 +1150,11 @@ Sent from bycraft.by' : '
           </a>
         </div>
         <div class="work-card">
-          <a href="../resentment/" style="display:flex; flex-direction:column; width:100%; color:inherit; text-decoration:none;">
+          <a href="../obida/" style="display:flex; flex-direction:column; width:100%; color:inherit; text-decoration:none;">
             <div class="work-img-wrap" style="width:100%; aspect-ratio:4/3!important; overflow:hidden; background-color:#F4F4F4; flex-shrink:0;">
               <picture style="display:block; width:100%; height:100%;">
                 <source srcset="../../../images/works/work-exhibit-04.webp" type="image/webp">
-                <img src="/images/works/work-exhibit-04.jpg" alt="Resentment" loading="lazy">
+                <img src="../../../images/works/work-exhibit-04.jpg" alt="Resentment" loading="lazy">
               </picture>
             </div>
             <div class="work-info" style="display:flex; flex-direction:column; justify-content:flex-start; gap:4px; margin-top:10px; min-height:72px;">
@@ -1082,22 +1171,22 @@ Sent from bycraft.by' : '
       <div class="footer-inner-grid">
         <div class="footer-col-1">
           <p style="margin-bottom: 6px; font-weight: 600; font-size: 12px; color: #FFFFFF;">© 2026 BYCRAFT</p>
-          <p style="margin-bottom: 8px;">This website is not an online store; it serves as a catalog of handcrafted sculptural works. All photographs, texts, and video materials are the exclusive property of the artist. Valentin Atrosh, Artist & Sculptor / UNP: KA0278799</p>
-          <p><a href="https://bycraft.by/en/privacy/" style="text-decoration: none; color: #ADB5BD;">Privacy Policy and Personal Data Processing</a></p>
+          <p style="margin-bottom: 8px;">Сайт не является интернет-магазином, представляет каталог примеров работ. Фотографии, тексты и видеоматериалы принадлежат владельцу. Ремесленник Атрош Валентин Владимирович / УНП: КА0278799</p>
+          <p><a href="https://bycraft.by/privacy/" style="text-decoration: none; color: #ADB5BD;">Политика конфиденциальности и обработки персональных данных</a></p>
         </div>
         <div class="footer-col-2">
           <div class="footer-contact-group">
-            <div class="footer-contact-title">VALENTIN</div>
-            <div>Belarus: <a href="tel:+375295507250" style="color: #FFFFFF;">+375 (29) 550-72-50</a></div>
-            <div>Russia: <a href="tel:+79525311270" style="color: #FFFFFF;">+7 (952) 531-12-70</a></div>
+            <div class="footer-contact-title">ВАЛЕНТИН</div>
+            <div>Беларусь: <a href="tel:+375295507250" style="color: #FFFFFF;">+375 (29) 550-72-50</a></div>
+            <div>Россия: <a href="tel:+79525311270" style="color: #FFFFFF;">+7 (952) 531-12-70</a></div>
           </div>
           <div class="footer-contact-group" style="margin-top: 14px;">
-            <div><span class="footer-contact-title" style="margin-bottom: 0;">ELENA:</span> <a href="tel:+375296815576" style="color: #FFFFFF;">+375 (29) 681-55-76</a></div>
+            <div><span class="footer-contact-title" style="margin-bottom: 0;">ЕЛЕНА:</span> <a href="tel:+375296815576" style="color: #FFFFFF;">+375 (29) 681-55-76</a></div>
           </div>
         </div>
         <div class="footer-col-3">
           <div class="footer-contact-group">
-            <div class="footer-contact-title">EMAIL: <a href="mailto:info@bycraft.by" style="color: inherit; text-decoration: underline;">info@bycraft.by</a></div>
+            <div class="footer-contact-title">ЭЛЕКТРОННАЯ ПОЧТА: <a href="mailto:info@bycraft.by" style="color: inherit; text-decoration: underline;">info@bycraft.by</a></div>
             <div></div>
           </div>
         </div>
