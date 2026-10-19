@@ -309,7 +309,7 @@ img {
     if (txt.includes('запросить информацию') || 
         txt.includes('заказать работу') || 
         txt.includes('inquire about') || 
-        href.includes('mailto:') ||
+        
         btn.classList.contains('js-inquiry-btn')) {
       e.preventDefault();
       e.stopPropagation();
@@ -889,7 +889,7 @@ Sent from bycraft.by' : '
     if (txt.includes('запросить информацию') || 
         txt.includes('заказать работу') || 
         txt.includes('inquire about') || 
-        href.includes('mailto:') && (txt.includes('запрос') || txt.includes('inquire') || btn.classList.contains('btn'))) {
+        false && (txt.includes('запрос') || txt.includes('inquire') || btn.classList.contains('btn'))) {
       e.preventDefault();
       e.stopPropagation();
       window.openBycraftModal(e);
@@ -937,7 +937,7 @@ Sent from bycraft.by' : '
           Настоящая Политика определяет порядок обработки и защиты персональных данных физических лиц, пользующихся сайтом <strong>bycraft.by</strong> (а также его демонстрационными версиями), и разработана в соответствии с Законом Республики Беларусь от 7 мая 2021 г. № 99-З «О защите персональных данных».
         </p>
         <p style="margin-bottom: 16px;">
-          Оператором персональных данных является: <strong>Ремесленник Атрош Валентин Владимирович</strong> (УНП: КА0278799, г. Минск, Республика Беларусь). Электронная почта <a href="mailto:info@bycraft.by">info@bycraft.by</a> для обращений: .
+          Оператором персональных данных является: <strong>Ремесленник Атрош Валентин Владимирович</strong> (УНП: КА0278799, г. Минск, Республика Беларусь). Электронная почта <a href="mailto:info@bycraft.by" style="color: inherit; text-decoration: underline;">info@bycraft.by</a> для обращений: .
         </p>
 
         <h2 style="font-size: 18px; font-weight: 600; color: var(--color-primary); margin-top: 32px; margin-bottom: 12px;">2. Цели обработки персональных данных</h2>
@@ -1015,7 +1015,7 @@ Sent from bycraft.by' : '
         </div>
         <div class="footer-col-3">
           <div class="footer-contact-group">
-            <div class="footer-contact-title">ЭЛЕКТРОННАЯ ПОЧТА: <a href="mailto:info@bycraft.by" style="color: inherit; text-decoration: underline; cursor: pointer;" onclick="event.stopPropagation(); event.stopImmediatePropagation(); window.location.href='mailto:info@bycraft.by'; return true;">info@bycraft.by</a></div>
+            <div class="footer-contact-title">ЭЛЕКТРОННАЯ ПОЧТА: <a href="mailto:info@bycraft.by" style="color: inherit; text-decoration: underline;">info@bycraft.by</a></div>
             <div></div>
           </div>
           <div class="footer-social-row" style="margin-top: 14px;">
@@ -1031,25 +1031,6 @@ Sent from bycraft.by' : '
 
 
 
-<script id="bycraft-email-guard">
-(function(){
-  function protectEmail() {
-    var links = document.querySelectorAll('a[href^="mailto:info@bycraft.by"]');
-    links.forEach(function(a){
-      a.onclick = function(e){
-        e.stopPropagation();
-        if (e.stopImmediatePropagation) e.stopImmediatePropagation();
-        window.location.href = 'mailto:info@bycraft.by';
-        return true;
-      };
-    });
-  }
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', protectEmail);
-  } else {
-    protectEmail();
-  }
-})();
-</script>
+
 </body>
 </html>

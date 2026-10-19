@@ -335,7 +335,7 @@ img {
     if (txt.includes('запросить информацию') || 
         txt.includes('заказать работу') || 
         txt.includes('inquire about') || 
-        href.includes('mailto:') ||
+        
         btn.classList.contains('js-inquiry-btn')) {
       e.preventDefault();
       e.stopPropagation();
@@ -915,7 +915,7 @@ Sent from bycraft.by' : '
     if (txt.includes('запросить информацию') || 
         txt.includes('заказать работу') || 
         txt.includes('inquire about') || 
-        href.includes('mailto:') && (txt.includes('запрос') || txt.includes('inquire') || btn.classList.contains('btn'))) {
+        false && (txt.includes('запрос') || txt.includes('inquire') || btn.classList.contains('btn'))) {
       e.preventDefault();
       e.stopPropagation();
       window.openBycraftModal(e);
@@ -1034,26 +1034,7 @@ Sent from bycraft.by' : '
 
 
 
-<script id="bycraft-email-guard">
-(function(){
-  function protectEmail() {
-    var links = document.querySelectorAll('a[href^="mailto:info@bycraft.by"]');
-    links.forEach(function(a){
-      a.onclick = function(e){
-        e.stopPropagation();
-        if (e.stopImmediatePropagation) e.stopImmediatePropagation();
-        window.location.href = 'mailto:info@bycraft.by';
-        return true;
-      };
-    });
-  }
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', protectEmail);
-  } else {
-    protectEmail();
-  }
-})();
-</script>
+
 <script id="bycraft-lightbox-fix">
 (function() {
   function initLightboxFix() {
