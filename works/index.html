@@ -75,7 +75,7 @@
     <div class="container" style="margin-top: 40px; margin-bottom: 10px;">
       <h1 class="section-title" style="margin-bottom: 0;">Скульптурные арт-объекты из сувеля берёзы</h1>
     </div>
-<section class="container" style="margin-top: 48px; margin-bottom: 50px;">
+<section class="container" style="margin-top: 48px; margin-bottom: 50px;" class="bc-uniform-section">
       <div class="grid-2-col">
         <!-- 1 Колонка -->
         <div>
@@ -261,7 +261,7 @@
   </div>
   <script src="..//js/main.js"></script>
 
-<!-- BYCRAFT Inquiry Modal & Uniform Styles Start -->
+<!-- BYCRAFT Unified Modal and Gallery Styles Start -->
 <div id="bycraft-modal" class="bc-modal" aria-hidden="true" role="dialog">
   <div class="bc-modal__overlay" onclick="closeBycraftModal()"></div>
   <div class="bc-modal__container">
@@ -304,222 +304,199 @@
   </div>
 </div>
 
-<style id="bc-custom-styles">
-/* 1. Стили модального окна BYCRAFT */
+<style id="bc-global-fix-styles">
+/* 1. СТИЛИ МОДАЛЬНОЙ ФОРМЫ */
 .bc-modal {
   display: none;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 99999;
-  font-family: 'Montserrat', sans-serif;
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100vw !important;
+  height: 100vh !important;
+  z-index: 9999999 !important;
+  font-family: 'Montserrat', sans-serif !important;
 }
 .bc-modal.is-active {
   display: flex !important;
-  align-items: center;
-  justify-content: center;
+  align-items: center !important;
+  justify-content: center !important;
 }
 .bc-modal__overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(34, 38, 41, 0.7);
-  backdrop-filter: blur(4px);
-  -webkit-backdrop-filter: blur(4px);
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  background: rgba(34, 38, 41, 0.72) !important;
+  backdrop-filter: blur(4px) !important;
+  -webkit-backdrop-filter: blur(4px) !important;
 }
 .bc-modal__container {
-  position: relative;
-  background: #FFFFFF;
-  border: 1px solid #222629;
-  width: 90%;
-  max-width: 460px;
-  max-height: 90vh;
-  overflow-y: auto;
-  padding: 36px 30px 30px;
-  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.25);
-  z-index: 100000;
-  box-sizing: border-box;
+  position: relative !important;
+  background: #FFFFFF !important;
+  border: 1px solid #222629 !important;
+  width: 92% !important;
+  max-width: 460px !important;
+  max-height: 90vh !important;
+  overflow-y: auto !important;
+  padding: 36px 30px 30px !important;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3) !important;
+  z-index: 10000000 !important;
+  box-sizing: border-box !important;
 }
 .bc-modal__close {
-  position: absolute;
-  top: 14px;
-  right: 18px;
-  background: transparent;
-  border: none;
-  font-size: 28px;
-  line-height: 1;
-  color: #222629;
-  cursor: pointer;
-  padding: 4px 8px;
-  transition: opacity 0.2s;
+  position: absolute !important;
+  top: 14px !important;
+  right: 18px !important;
+  background: transparent !important;
+  border: none !important;
+  font-size: 28px !important;
+  line-height: 1 !important;
+  color: #222629 !important;
+  cursor: pointer !important;
+  padding: 4px 8px !important;
 }
-.bc-modal__close:hover {
-  opacity: 0.6;
-}
-.bc-modal__header {
-  margin-bottom: 20px;
-}
+.bc-modal__close:hover { opacity: 0.6 !important; }
+.bc-modal__header { margin-bottom: 20px !important; text-align: left !important; }
 .bc-modal__title {
-  font-size: 19px;
-  font-weight: 500;
-  color: #222629;
-  margin: 0 0 6px 0;
-  letter-spacing: 0.02em;
+  font-size: 19px !important;
+  font-weight: 500 !important;
+  color: #222629 !important;
+  margin: 0 0 6px 0 !important;
+  letter-spacing: 0.02em !important;
 }
 .bc-modal__subtitle {
-  font-size: 13px;
-  color: #474B4F;
-  margin: 0;
-  letter-spacing: 0.03em;
+  font-size: 13px !important;
+  color: #474B4F !important;
+  margin: 0 !important;
+  letter-spacing: 0.03em !important;
 }
-.bc-form-group {
-  margin-bottom: 14px;
-}
+.bc-form-group { margin-bottom: 14px !important; text-align: left !important; }
 .bc-label {
-  display: block;
-  font-size: 11px;
-  color: #474B4F;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  margin-bottom: 5px;
+  display: block !important;
+  font-size: 11px !important;
+  color: #474B4F !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.05em !important;
+  margin-bottom: 5px !important;
 }
 .bc-input, .bc-textarea {
-  width: 100%;
-  padding: 10px 12px;
-  font-family: inherit;
-  font-size: 14px;
-  color: #222629;
-  background: #FFFFFF;
-  border: 1px solid #CCCCCC;
-  border-radius: 0;
-  box-sizing: border-box;
-  transition: border-color 0.2s;
+  width: 100% !important;
+  padding: 10px 12px !important;
+  font-family: inherit !important;
+  font-size: 14px !important;
+  color: #222629 !important;
+  background: #FFFFFF !important;
+  border: 1px solid #CCCCCC !important;
+  border-radius: 0 !important;
+  box-sizing: border-box !important;
 }
 .bc-input:focus, .bc-textarea:focus {
-  border-color: #222629;
-  outline: none;
+  border-color: #222629 !important;
+  outline: none !important;
 }
-.bc-textarea {
-  resize: vertical;
-}
-.bc-form-consent {
-  margin: 14px 0 18px 0;
-}
+.bc-textarea { resize: vertical !important; }
+.bc-form-consent { margin: 14px 0 18px 0 !important; text-align: left !important; }
 .bc-consent-label {
-  display: flex;
-  align-items: flex-start;
-  gap: 8px;
-  font-size: 11px;
-  line-height: 1.4;
-  color: #474B4F;
-  cursor: pointer;
+  display: flex !important;
+  align-items: flex-start !important;
+  gap: 8px !important;
+  font-size: 11px !important;
+  line-height: 1.4 !important;
+  color: #474B4F !important;
+  cursor: pointer !important;
 }
-.bc-consent-label input {
-  margin-top: 2px;
-  accent-color: #222629;
-}
-.bc-consent-label a {
-  color: #222629;
-  text-decoration: underline;
-}
+.bc-consent-label input { margin-top: 2px !important; accent-color: #222629 !important; }
+.bc-consent-label a { color: #222629 !important; text-decoration: underline !important; }
 .bc-submit-btn {
-  display: block;
-  width: 100%;
-  padding: 13px 20px;
-  font-family: inherit;
-  font-size: 13px;
-  font-weight: 500;
-  text-transform: uppercase;
-  letter-spacing: 0.06em;
-  color: #FFFFFF;
-  background: #222629;
-  border: 1px solid #222629;
-  cursor: pointer;
-  transition: all 0.25s ease;
-  box-sizing: border-box;
-  text-align: center;
+  display: block !important;
+  width: 100% !important;
+  padding: 13px 20px !important;
+  font-family: inherit !important;
+  font-size: 13px !important;
+  font-weight: 500 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.06em !important;
+  color: #FFFFFF !important;
+  background: #222629 !important;
+  border: 1px solid #222629 !important;
+  cursor: pointer !important;
+  transition: all 0.25s ease !important;
+  box-sizing: border-box !important;
+  text-align: center !important;
 }
 .bc-submit-btn:hover {
-  background: #FFFFFF;
-  color: #222629;
+  background: #FFFFFF !important;
+  color: #222629 !important;
 }
 .bc-modal-alt {
-  margin-top: 14px;
-  text-align: center;
-  font-size: 12px;
-  color: #474B4F;
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
+  margin-top: 14px !important;
+  text-align: center !important;
+  font-size: 12px !important;
+  color: #474B4F !important;
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 4px !important;
 }
 .bc-tg-link {
-  color: #222629;
-  font-weight: 500;
-  text-decoration: underline;
+  color: #222629 !important;
+  font-weight: 500 !important;
+  text-decoration: underline !important;
 }
-.bc-modal__success {
-  text-align: center;
-  padding: 20px 0 10px;
-}
-.bc-success-icon {
-  font-size: 36px;
-  color: #222629;
-  margin-bottom: 10px;
-}
-.bc-modal__success h4 {
-  font-size: 18px;
-  color: #222629;
-  margin: 0 0 8px;
-  font-weight: 500;
-}
-.bc-modal__success p {
-  font-size: 13px;
-  color: #474B4F;
-  margin: 0 0 20px;
-  line-height: 1.5;
-}
+.bc-modal__success { text-align: center !important; padding: 20px 0 10px !important; }
+.bc-success-icon { font-size: 36px !important; color: #222629 !important; margin-bottom: 10px !important; }
+.bc-modal__success h4 { font-size: 18px !important; color: #222629 !important; margin: 0 0 8px !important; }
+.bc-modal__success p { font-size: 13px !important; color: #474B4F !important; margin: 0 0 20px !important; }
 
-/* 2. Единый формат и размер для всех фото в блоке «Другие выставочные работы» */
-.other-works img,
-.other-works-grid img,
-.other-works-card img,
-.related-works img,
-[class*="other-work"] img,
-.bc-uniform-gallery img {
+/* 2. ЕДИНЫЙ РАЗМЕР И ФОРМАТ (4:3) ФОТОГРАФИЙ В БЛОКЕ «ДРУГИЕ ВЫСТАВОЧНЫЕ РАБОТЫ» */
+.bc-uniform-section,
+.other-works,
+[class*="other-work"] {
   width: 100% !important;
-  height: 240px !important;
+}
+.bc-uniform-section img,
+.bc-uniform-img,
+.other-works img,
+[class*="other-work"] img {
+  width: 100% !important;
+  height: 250px !important;
   aspect-ratio: 4 / 3 !important;
   object-fit: cover !important;
   object-position: center !important;
   display: block !important;
 }
+.bc-uniform-section a,
 .other-works a,
-.other-works-card,
 [class*="other-work"] a {
   display: flex !important;
   flex-direction: column !important;
 }
+.bc-uniform-section [class*="image"],
+.other-works [class*="image"],
+[class*="other-work"] [class*="image"],
+.bc-uniform-section [class*="thumb"],
+.other-works [class*="thumb"] {
+  height: 250px !important;
+  aspect-ratio: 4 / 3 !important;
+  overflow: hidden !important;
+  width: 100% !important;
+}
 
 @media (max-width: 480px) {
-  .bc-modal__container {
-    padding: 28px 18px 24px;
-  }
+  .bc-modal__container { padding: 26px 18px 22px !important; }
+  .bc-uniform-section img,
+  .bc-uniform-img,
   .other-works img,
-  .other-works-grid img,
-  .other-works-card img,
-  .related-works img,
   [class*="other-work"] img,
-  .bc-uniform-gallery img {
+  .bc-uniform-section [class*="image"],
+  .other-works [class*="image"],
+  [class*="other-work"] [class*="image"] {
     height: 200px !important;
   }
 }
 </style>
 
-<script id="bc-custom-scripts">
+<script id="bc-global-fix-scripts">
 function getBycraftArtworkTitle() {
   var h1 = document.querySelector('h1');
   if (h1 && h1.textContent.trim()) {
@@ -531,8 +508,9 @@ function getBycraftArtworkTitle() {
 
 function openBycraftModal(e) {
   if (e && e.preventDefault) e.preventDefault();
+  if (e && e.stopPropagation) e.stopPropagation();
   var modal = document.getElementById('bycraft-modal');
-  if (!modal) return;
+  if (!modal) return false;
   var workTitleEl = document.getElementById('bc-modal-work-title');
   var form = document.getElementById('bc-inquiry-form');
   var successBox = document.getElementById('bc-modal-success');
@@ -547,6 +525,7 @@ function openBycraftModal(e) {
   modal.classList.add('is-active');
   modal.setAttribute('aria-hidden', 'false');
   document.body.style.overflow = 'hidden';
+  return false;
 }
 
 function closeBycraftModal() {
@@ -588,13 +567,45 @@ function handleBycraftSubmit(e) {
   if (successBox) successBox.style.display = 'block';
 }
 
-document.addEventListener('keydown', function(e) {
-  if (e.key === 'Escape') {
-    closeBycraftModal();
+// Глобальный перехват клика по кнопкам запроса на уровне capture phase
+document.addEventListener('click', function(e) {
+  var btn = e.target.closest('a, button');
+  if (!btn) return;
+  var txt = (btn.textContent || '').toLowerCase();
+  if (txt.includes('запросить информацию') || 
+      txt.includes('заказать работу') || 
+      txt.includes('inquire about')) {
+    e.preventDefault();
+    e.stopPropagation();
+    openBycraftModal(e);
   }
+}, true);
+
+document.addEventListener('keydown', function(e) {
+  if (e.key === 'Escape') closeBycraftModal();
+});
+
+// Дополнительное приведение всех картинок в блоке «Другие выставочные работы» в рантайме
+document.addEventListener('DOMContentLoaded', function() {
+  var headings = document.querySelectorAll('h1, h2, h3, h4, .section-title, p');
+  headings.forEach(function(h) {
+    if (h.textContent.includes('Другие выставочные работы') || h.textContent.includes('Other works')) {
+      var section = h.closest('section') || h.parentElement;
+      if (section) {
+        section.classList.add('bc-uniform-section');
+        var imgs = section.querySelectorAll('img');
+        imgs.forEach(function(im) {
+          im.classList.add('bc-uniform-img');
+          im.style.height = '250px';
+          im.style.aspectRatio = '4 / 3';
+          im.style.objectFit = 'cover';
+        });
+      }
+    }
+  });
 });
 </script>
-<!-- BYCRAFT Inquiry Modal & Uniform Styles End -->
+<!-- BYCRAFT Unified Modal and Gallery Styles End -->
 
 </body>
 </html>
