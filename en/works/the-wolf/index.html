@@ -307,7 +307,7 @@ img {
         '<div id="bc-modal-success" class="bc-modal__success" style="display: none;">' +
           '<div class="bc-success-icon">✓</div>' +
           '<h4>Запрос сформирован</h4>' +
-          '<p>Валентин свяжется с вами в ближайшее время по указанному контакту.</p>' +
+          '<p>Valentin will contact you shortly via the provided contact.</p>' +
           '<button type="button" class="bc-submit-btn" onclick="window.closeBycraftModal()">Закрыть</button>' +
         '</div>' +
       '</div>';
@@ -334,13 +334,13 @@ img {
     var h1 = document.querySelector('h1');
     var workName = h1 ? h1.textContent.trim() : (document.title.split('—')[0].split('-')[0].trim() || 'Арт-объект');
 
-    var subject = 'Запрос по работе: ' + workName;
-    var body = 'Здравствуйте, Валентин!\n\n' +
-               'Запрос по арт-объекту: ' + workName + '\n' +
-               'Имя: ' + name + '\n' +
-               'Контакт: ' + contact + '\n' +
-               (comment ? ('Комментарий: ' + comment + '\n') : '') +
-               '\nОтправлено с сайта bycraft.by';
+    var subject = 'Inquiry about the work: ' + workName;
+    var body = 'Hello, Valentin!\n\n' +
+               'Inquiry about the artwork: ' + workName + '\n' +
+               'Name: ' + name + '\n' +
+               'Contact: ' + contact + '\n' +
+               (comment ? ('Comment: ' + comment + '\n') : '') +
+               '\nSent from bycraft.by';
 
     var mailtoUrl = 'mailto:info@bycraft.by?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
     window.open(mailtoUrl, '_blank');
@@ -841,7 +841,7 @@ footer a[href^="mailto:"],
     var submitBtnText = isEn ? 'Send Inquiry' : 'Отправить запрос';
     var altText = isEn ? 'or contact directly:' : 'или свяжитесь напрямую:';
     var successTitle = isEn ? 'Inquiry Sent' : 'Запрос сформирован';
-    var successDesc = isEn ? 'Valentin will contact you shortly via the provided contact.' : 'Валентин свяжется с вами в ближайшее время по указанному контакту.';
+    var successDesc = isEn ? 'Valentin will contact you shortly via the provided contact.' : 'Valentin will contact you shortly via the provided contact.';
     var closeBtnText = isEn ? 'Close' : 'Закрыть';
 
     modal.innerHTML = '<div class="bc-modal__overlay" onclick="window.closeBycraftModal()"></div>' +
@@ -907,22 +907,22 @@ footer a[href^="mailto:"],
     var h1 = document.querySelector('h1');
     var workName = h1 ? h1.textContent.trim() : (document.title.split('—')[0].split('-')[0].trim() || (isEn ? 'Artwork' : 'Арт-объект'));
 
-    var subject = (isEn ? 'Inquiry: ' : 'Запрос по работе: ') + workName;
+    var subject = (isEn ? 'Inquiry: ' : 'Inquiry about the work: ') + workName;
     var body = (isEn ? 'Hello Valentin!
 
-Inquiry about artwork: ' : 'Здравствуйте, Валентин!
+Inquiry about artwork: ' : 'Hello, Valentin!
 
-Запрос по арт-объекту: ') + workName + '
+Inquiry about the artwork: ') + workName + '
 ' +
-               (isEn ? 'Name: ' : 'Имя: ') + name + '
+               (isEn ? 'Name: ' : 'Name: ') + name + '
 ' +
-               (isEn ? 'Contact: ' : 'Контакт: ') + contact + '
+               (isEn ? 'Contact: ' : 'Contact: ') + contact + '
 ' +
-               (comment ? ((isEn ? 'Comment: ' : 'Комментарий: ') + comment + '
+               (comment ? ((isEn ? 'Comment: ' : 'Comment: ') + comment + '
 ') : '') +
                (isEn ? '
 Sent from bycraft.by' : '
-Отправлено с сайта bycraft.by');
+Sent from bycraft.by');
 
     window.open(mailtoUrl, '_blank');
 
@@ -1114,7 +1114,7 @@ Sent from bycraft.by' : '
   </header>
   <main>
     <div class="container" style="margin-top: 36px; margin-bottom: 24px;">
-      <a href="../exhibitions/" class="btn-arrow" style="font-size: 14px; margin-bottom: 14px; border-bottom: none;">← Назад к выставочным работам</a>
+      <a href="../exhibitions/" class="btn-arrow" style="font-size: 14px; margin-bottom: 14px; border-bottom: none;">← Back to exhibition works</a>
       <h1 class="section-title" style="font-size: 26px; text-transform: uppercase; margin-bottom: 8px;">THE WOLF</h1>
       
     </div>
@@ -1219,7 +1219,7 @@ Sent from bycraft.by' : '
       <div class="footer-inner-grid">
         <div class="footer-col-1">
           <p style="margin-bottom: 6px; font-weight: 600; font-size: 12px; color: #FFFFFF;">© 2026 BYCRAFT</p>
-          <p style="margin-bottom: 8px;">Сайт не является интернет-магазином, представляет каталог примеров работ. Фотографии, тексты и видеоматериалы принадлежат владельцу. Ремесленник Атрош Валентин Владимирович / УНП: КА0278799</p>
+          <p style="margin-bottom: 8px;">This website is not an online store; it presents a catalogue of example works. Photographs, texts and video materials belong to the owner. Craftsman Valentin Vladimirovich Atrosh / UNP: KA0278799</p>
           <p><a href="https://bycraft.by/privacy/" style="text-decoration: none; color: #ADB5BD;">Privacy Policy и обработки персональных данных</a></p>
         </div>
         <div class="footer-col-2">

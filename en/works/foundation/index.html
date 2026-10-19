@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sculpture «Foundation» — BYCRAFT · Valentin Atrosh</title>
-  <meta name="description" content="Скульптурный арт-объект «Foundation» (2025) Валентина Атроша. Массив берёзового сувеля, обжиг огнём, без покрытия. SOLD.">
+  <meta name="description" content="Настенная скульптура «Foundation» (2025) из берёзового сувеля с объективами камер. В продаже с 01.01.2027.">
   <link rel="canonical" href="https://bycraft.by/en/works/foundation/">
 
   <link rel="alternate" hreflang="en" href="https://bycraft.by/en/works/foundation/">
@@ -15,7 +15,7 @@
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="BYCRAFT">
   <meta property="og:title" content="Sculpture «Foundation» — BYCRAFT · Valentin Atrosh">
-  <meta property="og:description" content="Скульптурный арт-объект «Foundation» (2025) Валентина Атроша. Массив берёзового сувеля, обжиг огнём, без покрытия. SOLD.">
+  <meta property="og:description" content="Настенная скульптура «Foundation» (2025) из берёзового сувеля с объективами камер. В продаже с 01.01.2027.">
   <meta property="og:url" content="https://bycraft.by/en/works/foundation/">
   <meta property="og:image" content="https://bycraft.by/images/works/work-exhibit-01.jpg">
   <meta property="og:image:width" content="1200">
@@ -25,7 +25,7 @@
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Sculpture «Foundation» — BYCRAFT · Valentin Atrosh">
-  <meta name="twitter:description" content="Скульптурный арт-объект «Foundation» (2025) Валентина Атроша. Массив берёзового сувеля, обжиг огнём, без покрытия. SOLD.">
+  <meta name="twitter:description" content="Настенная скульптура «Foundation» (2025) из берёзового сувеля с объективами камер. В продаже с 01.01.2027.">
   <meta name="twitter:image" content="https://bycraft.by/images/works/work-exhibit-01.jpg">
 
   <!-- JSON-LD Structured Data -->
@@ -64,12 +64,12 @@
     "@type": "Person",
     "name": "Valentin Atrosh"
   },
-  "artMedium": "Сувель берёзы, обжиг огнём, без покрытия",
+  "artMedium": "Сувель берёзы, обжиг огнём",
   "artform": "Sculpture",
   "dateCreated": "2025",
-  "height": "72 cm",
-  "width": "34 cm",
-  "depth": "29 cm",
+  "height": "22 cm",
+  "width": "90 cm",
+  "depth": "81 cm",
   "image": "https://bycraft.by/images/works/work-exhibit-01.jpg",
   "url": "https://bycraft.by/en/works/foundation/"
 }
@@ -307,7 +307,7 @@ img {
         '<div id="bc-modal-success" class="bc-modal__success" style="display: none;">' +
           '<div class="bc-success-icon">✓</div>' +
           '<h4>Запрос сформирован</h4>' +
-          '<p>Валентин свяжется с вами в ближайшее время по указанному контакту.</p>' +
+          '<p>Valentin will contact you shortly via the provided contact.</p>' +
           '<button type="button" class="bc-submit-btn" onclick="window.closeBycraftModal()">Закрыть</button>' +
         '</div>' +
       '</div>';
@@ -334,13 +334,13 @@ img {
     var h1 = document.querySelector('h1');
     var workName = h1 ? h1.textContent.trim() : (document.title.split('—')[0].split('-')[0].trim() || 'Арт-объект');
 
-    var subject = 'Запрос по работе: ' + workName;
-    var body = 'Здравствуйте, Валентин!\n\n' +
-               'Запрос по арт-объекту: ' + workName + '\n' +
-               'Имя: ' + name + '\n' +
-               'Контакт: ' + contact + '\n' +
-               (comment ? ('Комментарий: ' + comment + '\n') : '') +
-               '\nОтправлено с сайта bycraft.by';
+    var subject = 'Inquiry about the work: ' + workName;
+    var body = 'Hello, Valentin!\n\n' +
+               'Inquiry about the artwork: ' + workName + '\n' +
+               'Name: ' + name + '\n' +
+               'Contact: ' + contact + '\n' +
+               (comment ? ('Comment: ' + comment + '\n') : '') +
+               '\nSent from bycraft.by';
 
     var mailtoUrl = 'mailto:info@bycraft.by?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
     window.open(mailtoUrl, '_blank');
@@ -841,7 +841,7 @@ footer a[href^="mailto:"],
     var submitBtnText = isEn ? 'Send Inquiry' : 'Отправить запрос';
     var altText = isEn ? 'or contact directly:' : 'или свяжитесь напрямую:';
     var successTitle = isEn ? 'Inquiry Sent' : 'Запрос сформирован';
-    var successDesc = isEn ? 'Valentin will contact you shortly via the provided contact.' : 'Валентин свяжется с вами в ближайшее время по указанному контакту.';
+    var successDesc = isEn ? 'Valentin will contact you shortly via the provided contact.' : 'Valentin will contact you shortly via the provided contact.';
     var closeBtnText = isEn ? 'Close' : 'Закрыть';
 
     modal.innerHTML = '<div class="bc-modal__overlay" onclick="window.closeBycraftModal()"></div>' +
@@ -907,22 +907,22 @@ footer a[href^="mailto:"],
     var h1 = document.querySelector('h1');
     var workName = h1 ? h1.textContent.trim() : (document.title.split('—')[0].split('-')[0].trim() || (isEn ? 'Artwork' : 'Арт-объект'));
 
-    var subject = (isEn ? 'Inquiry: ' : 'Запрос по работе: ') + workName;
+    var subject = (isEn ? 'Inquiry: ' : 'Inquiry about the work: ') + workName;
     var body = (isEn ? 'Hello Valentin!
 
-Inquiry about artwork: ' : 'Здравствуйте, Валентин!
+Inquiry about artwork: ' : 'Hello, Valentin!
 
-Запрос по арт-объекту: ') + workName + '
+Inquiry about the artwork: ') + workName + '
 ' +
-               (isEn ? 'Name: ' : 'Имя: ') + name + '
+               (isEn ? 'Name: ' : 'Name: ') + name + '
 ' +
-               (isEn ? 'Contact: ' : 'Контакт: ') + contact + '
+               (isEn ? 'Contact: ' : 'Contact: ') + contact + '
 ' +
-               (comment ? ((isEn ? 'Comment: ' : 'Комментарий: ') + comment + '
+               (comment ? ((isEn ? 'Comment: ' : 'Comment: ') + comment + '
 ') : '') +
                (isEn ? '
 Sent from bycraft.by' : '
-Отправлено с сайта bycraft.by');
+Sent from bycraft.by');
 
     window.open(mailtoUrl, '_blank');
 
@@ -1094,12 +1094,63 @@ Sent from bycraft.by' : '
   </style>
 </head>
 <body>
-    <header class="site-header">
+  <header class="site-header">
     <div>
-      <a href="javascript:void(0);" onclick="openBycraftModal(event); return false;" class="brand-logo" role="button"> onclick="openBycraftModal(event); return false;">BYCRAFT</a></a>
+      <a href="../../../" class="brand-logo">BYCRAFT</a>
+      <button class="mobile-toggle" aria-label="Открыть меню">Menu</button>
+      <nav class="main-nav">
+        <a href="../../" class="nav-link active">Works</a>
+        <a href="../../../workshop/" class="nav-link ">Studio</a>
+        <a href="../../../events/" class="nav-link ">Events</a>
+        <a href="../../../curators/" class="nav-link ">For Curators</a>
+        <a href="../../../contacts/" class="nav-link-btn">Contacts</a>
+        <div class="lang-switch">
+          <a href="/works/osnovanie/">RU</a>
+          <span class="lang-sep">/</span>
+          <a href="/en/works/foundation/" class="active">EN</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <div class="container" style="margin-top: 36px; margin-bottom: 24px;">
+      <a href="../exhibitions/" class="btn-arrow" style="font-size: 14px; margin-bottom: 14px; border-bottom: none;">← Back to exhibition works</a>
+      <h1 class="section-title" style="font-size: 26px; text-transform: uppercase; margin-bottom: 8px;">FOUNDATION</h1>
+      <p class="caption" style="font-size: 15px; font-style: italic; color: var(--color-primary); margin-bottom: 20px;">Настенная скульптура / 2 элемента</p>
+    </div>
+
+    <section>
+      <div class="work-detail-photos-grid">
+        <picture><source srcset="../../../images/works/work-exhibit-01.webp" type="image/webp"><img src="../../../images/works/work-exhibit-01.jpg" alt="«Лицом к лицу» — скульптура Валентина Атроша из сувеля берёзы с двумя объективами" loading="lazy"></picture>
+        <picture><source srcset="../../../images/works/work-exhibit-01-detail.webp" type="image/webp"><img src="../../../images/works/work-exhibit-01-detail.jpg" alt="FOUNDATION (деталь)" loading="lazy"></picture>
+      </div>
+
+      <div class="work-detail-info">
+        <div class="meta-row"><span class="meta-label">материал: </span><span class="meta-val">сувель берёзы, обжиг огнём</span></div>
+        <div class="meta-row"><span class="meta-label">размеры: </span><span class="meta-val">В26 х Ш36 х Г22 см<br>В55 х Ш42 х Г19 см</span></div>
+        <div class="meta-row"><span class="meta-label">вес:</span> <span class="meta-val">общий вес работы — 5,66 кг</span></div>
+        <div class="meta-row"><span class="meta-label">год создания: </span><span class="meta-val">2025</span></div>
+        <div class="meta-row"><span class="meta-label">статус: </span><span class="meta-val" style="font-weight: 500;">SOLD</span></div>
+
+        <div style="margin: 28px 0;">
+          <p class="lead-text" style="margin-bottom: 16px; font-weight: 500; color: var(--color-primary);">«Foundation» — два времени в одном лице</p>
+          <p class="lead-text" style="margin-bottom: 16px;">Я из поколения, которое за одну жизнь прошло путь от игры с палкой во дворе до гуманоидных роботов и искусственного интеллекта. В этой работе встречаются два взгляда.</p>
+          <p class="lead-text" style="margin-bottom: 16px;">Один обращен к аналоговому прошлому: объектив от плёночного фотоаппарата отсылает к детству без смартфонов и экранов, когда главным пространством игры была улица, а время измерялось дворовым футболом. Другой — к цифровому настоящему: объектив цифровой камеры, из мира, в котором гаджеты стали частью повседневности, а искусственный интеллект стремительно меняет саму реальность.</p>
+          <p class="lead-text" style="margin-bottom: 20px;">Оба объектива встроены в естественные формы березового сувеля и визуально почти неразличимы. За этим сходством — два разных опыта, два взгляда.</p>
+          <p class="lead-text" style="font-weight: 600; color: var(--color-primary); margin-bottom: 16px;">Одно поколение, один человек, одно лицо</p>
+        </div>
+
+        
+
+        <div style="margin-top: 32px; margin-bottom: 24px;">
+          <a href="javascript:void(0);" onclick="window.openBycraftModal(event); return false;" class="btn-telegram" role="button">Inquire about this work о&nbsp;работе&nbsp;→</a>
         <p class="lead-text" style="font-size: 14.5px; color: var(--color-secondary); margin-top: 14px; margin-bottom: 0;"></p>
         </div>
-        
+        <div class="work-detail-video-wrap" style="margin-top: 24px;">
+          <video webkit-playsinline playsinline autoplay muted loop controls poster="../../../images/works/work-exhibit-01.jpg">
+            <source src="../../../images/works/work-exhibit-01-video.mp4" type="video/mp4">
+          </video>
+        </div>
       </div>
     </section>
 
@@ -1108,29 +1159,15 @@ Sent from bycraft.by' : '
       <h2 class="section-title" style="margin-bottom: 24px;">Exhibition Works</h2>
       <div class="other-works-grid">
         <div class="work-card">
-          <a href="../pered-licom/" style="display:flex; flex-direction:column; width:100%; color:inherit; text-decoration:none;">
-            <div class="work-img-wrap" style="width:100%; aspect-ratio:4/3!important; overflow:hidden; background-color:#F4F4F4; flex-shrink:0;">
-              <picture style="display:block; width:100%; height:100%;">
-                <source srcset="../../../images/works/work-exhibit-02.webp" type="image/webp">
-                <img src="../../../images/works/work-exhibit-02.jpg" alt="Перед лицом" loading="lazy">
-              </picture>
-            </div>
-            <div class="work-info" style="display:flex; flex-direction:column; justify-content:flex-start; gap:4px; margin-top:10px; min-height:72px;">
-              <div class="work-title"><strong>Перед лицом</strong><br><span style="color:var(--color-muted); font-size:13px;">Minsk, 2026</span></div>
-              <div class="work-status" style="font-size:12px;">В ПРОДАЖЕ с 2027 года</div>
-            </div>
-          </a>
-        </div>
-        <div class="work-card">
           <a href="../volk/" style="display:flex; flex-direction:column; width:100%; color:inherit; text-decoration:none;">
             <div class="work-img-wrap" style="width:100%; aspect-ratio:4/3!important; overflow:hidden; background-color:#F4F4F4; flex-shrink:0;">
               <picture style="display:block; width:100%; height:100%;">
                 <source srcset="../../../images/works/work-exhibit-05.webp" type="image/webp">
-                <img src="../../../images/works/work-exhibit-05.jpg" alt="Волк" loading="lazy">
+                <img src="../../../images/works/work-exhibit-05.jpg" alt="The Wolf" loading="lazy">
               </picture>
             </div>
             <div class="work-info" style="display:flex; flex-direction:column; justify-content:flex-start; gap:4px; margin-top:10px; min-height:72px;">
-              <div class="work-title"><strong>Волк</strong><br><span style="color:var(--color-muted); font-size:13px;">Minsk, 2026</span></div>
+              <div class="work-title"><strong>The Wolf</strong><br><span style="color:var(--color-muted); font-size:13px;">Minsk, 2025</span></div>
               <div class="work-status" style="font-size:12px;">SOLD</div>
             </div>
           </a>
@@ -1140,11 +1177,11 @@ Sent from bycraft.by' : '
             <div class="work-img-wrap" style="width:100%; aspect-ratio:4/3!important; overflow:hidden; background-color:#F4F4F4; flex-shrink:0;">
               <picture style="display:block; width:100%; height:100%;">
                 <source srcset="../../../images/works/work-exhibit-03.webp" type="image/webp">
-                <img src="../../../images/works/work-exhibit-03.jpg" alt="Исповедь" loading="lazy">
+                <img src="../../../images/works/work-exhibit-03.jpg" alt="Confession" loading="lazy">
               </picture>
             </div>
             <div class="work-info" style="display:flex; flex-direction:column; justify-content:flex-start; gap:4px; margin-top:10px; min-height:72px;">
-              <div class="work-title"><strong>Исповедь</strong><br><span style="color:var(--color-muted); font-size:13px;">Minsk, 2026</span></div>
+              <div class="work-title"><strong>Confession</strong><br><span style="color:var(--color-muted); font-size:13px;">Minsk, 2025</span></div>
               <div class="work-status" style="font-size:12px;">AVAILABLE UPON REQUEST</div>
             </div>
           </a>
@@ -1154,12 +1191,26 @@ Sent from bycraft.by' : '
             <div class="work-img-wrap" style="width:100%; aspect-ratio:4/3!important; overflow:hidden; background-color:#F4F4F4; flex-shrink:0;">
               <picture style="display:block; width:100%; height:100%;">
                 <source srcset="../../../images/works/work-exhibit-04.webp" type="image/webp">
-                <img src="../../../images/works/work-exhibit-04.jpg" alt="Обида" loading="lazy">
+                <img src="../../../images/works/work-exhibit-04.jpg" alt="Resentment" loading="lazy">
               </picture>
             </div>
             <div class="work-info" style="display:flex; flex-direction:column; justify-content:flex-start; gap:4px; margin-top:10px; min-height:72px;">
-              <div class="work-title"><strong>Обида</strong><br><span style="color:var(--color-muted); font-size:13px;">Minsk, 2026</span></div>
+              <div class="work-title"><strong>Resentment</strong><br><span style="color:var(--color-muted); font-size:13px;">Minsk, 2025</span></div>
               <div class="work-status" style="font-size:12px;">AVAILABLE UPON REQUEST</div>
+            </div>
+          </a>
+        </div>
+        <div class="work-card">
+          <a href="../osnovanie/" style="display:flex; flex-direction:column; width:100%; color:inherit; text-decoration:none;">
+            <div class="work-img-wrap" style="width:100%; aspect-ratio:4/3!important; overflow:hidden; background-color:#F4F4F4; flex-shrink:0;">
+              <picture style="display:block; width:100%; height:100%;">
+                <source srcset="../../../images/works/work-exhibit-01.webp" type="image/webp">
+                <img src="../../../images/works/work-exhibit-01.jpg" alt="Foundation" loading="lazy">
+              </picture>
+            </div>
+            <div class="work-info" style="display:flex; flex-direction:column; justify-content:flex-start; gap:4px; margin-top:10px; min-height:72px;">
+              <div class="work-title"><strong>Foundation</strong><br><span style="color:var(--color-muted); font-size:13px;">Minsk, 2025</span></div>
+              <div class="work-status" style="font-size:12px;">SOLD</div>
             </div>
           </a>
         </div>
@@ -1170,8 +1221,8 @@ Sent from bycraft.by' : '
     <div class="container">
       <div class="footer-inner-grid">
         <div class="footer-col-1">
-          <p style="margin-bottom: 6px; font-weight: 600; font-size: 12px; color: #FFFFFF;">© 2026 BYCRAFT</p>
-          <p style="margin-bottom: 8px;">Сайт не является интернет-магазином, представляет каталог примеров работ. Фотографии, тексты и видеоматериалы принадлежат владельцу. Ремесленник Атрош Валентин Владимирович / УНП: КА0278799</p>
+          <p style="margin-bottom: 6px; font-weight: 600; font-size: 12px; color: #FFFFFF;">© 2025 BYCRAFT</p>
+          <p style="margin-bottom: 8px;">This website is not an online store, it presents a catalogue of example works. Photographs, texts and video materials belong to the owner. Craftsman Valentin Vladimirovich Atrosh / УНП: КА0278799</p>
           <p><a href="https://bycraft.by/privacy/" style="text-decoration: none; color: #ADB5BD;">Privacy Policy и обработки персональных данных</a></p>
         </div>
         <div class="footer-col-2">
