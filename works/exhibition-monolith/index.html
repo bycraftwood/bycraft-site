@@ -277,7 +277,7 @@ img {
                (comment ? ('Комментарий: ' + comment + '\n') : '') +
                '\nОтправлено с сайта bycraft.by';
 
-    var mailtoUrl = 'mailto:<a href="mailto:info@bycraft.by"><a href="mailto:info@bycraft.by" style="color: inherit; text-decoration: underline; cursor: pointer;">info@bycraft.by</a></a>?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
+    var mailtoUrl = 'mailto:<a href="mailto:info@bycraft.by">info@bycraft.by</a>?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
     window.open(mailtoUrl, '_blank');
 
     var form = document.getElementById('bc-inquiry-form');
@@ -1024,12 +1024,26 @@ Sent from bycraft.by' : '
   </section>
   </main>
             <footer class="site-footer">
-    
-        
-            
+    <div class="container">
+      <div class="footer-inner-grid">
+        <div class="footer-col-1">
+          <p style="margin-bottom: 6px; font-weight: 600; font-size: 12px; color: #FFFFFF;">© 2026 BYCRAFT</p>
+          <p style="margin-bottom: 8px;">Сайт не является интернет-магазином, представляет каталог примеров работ. Фотографии, тексты и видеоматериалы принадлежат владельцу. Ремесленник Атрош Валентин Владимирович / УНП: КА0278799</p>
+          <p><a href="https://bycraft.by/privacy/" style="text-decoration: none; color: #ADB5BD;">Политика конфиденциальности и обработки персональных данных</a></p>
+        </div>
+        <div class="footer-col-2">
+          <div class="footer-contact-group">
+            <div class="footer-contact-title">ВАЛЕНТИН</div>
+            <div>Беларусь: <a href="tel:+375295507250" style="color: #FFFFFF;">+375 (29) 550-72-50</a></div>
+            <div>Россия: <a href="tel:+79525311270" style="color: #FFFFFF;">+7 (952) 531-12-70</a></div>
+          </div>
+          <div class="footer-contact-group" style="margin-top: 14px;">
+            <div><span class="footer-contact-title" style="margin-bottom: 0;">ЕЛЕНА:</span> <a href="tel:+375296815576" style="color: #FFFFFF;">+375 (29) 681-55-76</a></div>
           </div>
         </div>
-        
+        <div class="footer-col-3">
+          <div class="footer-contact-group">
+            <div class="footer-contact-title">ЭЛЕКТРОННАЯ ПОЧТА: <a href="mailto:info@bycraft.by">info@bycraft.by</a>: <a href="mailto:info@bycraft.by">info@bycraft.by</a></div>
             <div></div>
           </div>
           <div class="footer-social-row" style="margin-top: 14px;">
@@ -1038,9 +1052,6 @@ Sent from bycraft.by' : '
           </div>
         </div>
       </div>
-    </div>
-    <div class="footer-contacts">
-      <p>ВАЛЕНТИН. Беларусь: <a href="tel:+375295507250" style="color: inherit; text-decoration: none;">+375 (29) 550-72-50</a>. Россия: <a href="tel:+79525311270" style="color: inherit; text-decoration: none;">+7 (952) 531-12-70</a>. ЕЛЕНА: <a href="tel:+375296815576" style="color: inherit; text-decoration: none;">+375 (29) 681-55-76</a>. ЭЛЕКТРОННАЯ ПОЧТА: <a href="mailto:info@bycraft.by" class="footer-email-link" style="color: inherit; text-decoration: underline; cursor: pointer; font-weight: 500;"><a href="mailto:info@bycraft.by" style="color: inherit; text-decoration: underline; cursor: pointer;">info@bycraft.by</a></a> · <a href="https://instagram.com/bycraftwood" target="_blank" rel="noopener" style="color: inherit; text-decoration: none;">Instagram</a> <a href="https://t.me/bycraft" target="_blank" rel="noopener" style="color: inherit; text-decoration: none;">Telegram</a>.</p>
     </div>
   </footer>
   <script src="../..//js/main.js"></script>
