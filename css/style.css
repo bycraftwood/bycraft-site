@@ -2115,3 +2115,37 @@ picture img {
     grid-template-columns: 1fr !important;
   }
 }
+
+/* ==========================================================================
+   EXHIBITIONS & EXHIBITION WORKS — FORMAT 4:3
+   ========================================================================== */
+.exhibition-card img,
+.exhibitions-grid img,
+.exhibitions-grid .card-media img,
+.works-grid .work-card img,
+.work-card img,
+.gallery-grid img,
+.card-image img {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+}
+
+.exhibition-card .card-media,
+.work-card .card-media,
+.card-image-wrap {
+    aspect-ratio: 4 / 3;
+    overflow: hidden;
+}
+
+/* Модальное окно просмотра / лайтбокс сохраняет полные пропорции объекта */
+.modal img,
+.lightbox img,
+#modal-img,
+.enlarged-modal img {
+    aspect-ratio: auto !important;
+    object-fit: contain !important;
+    max-height: 90vh !important;
+}
