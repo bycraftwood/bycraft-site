@@ -122,12 +122,14 @@
 
         <div class="meta-row" style="flex-direction: column; gap: 6px;">
           <span class="meta-label" style="width: auto;">Выставки:</span>
-          <span class="meta-val" style="font-size: 14px; line-height: 1.6;">9-я выставка «Трын*Трава. Современный русский стиль»<br>Москва / Музей-усадьба Муравьёвых-Апостолов, 2026.<br>2026 — работа была представлена в рамках участия в XXVII Международном фестивале культуры и искусств, Стамбул, Турция</span>
+          <span class="meta-val" style="font-size: 14px; line-height: 1.6;">9-я выставка «Трын*Трава. Современный русский стиль»<br>
+Москва / Музей-усадьба Муравьёвых-Апостолов, 2026<br><br>
+Работа была представлена в рамках участия в XXVII Международном фестивале культуры и искусств, Стамбул, Турция, 2026</span>
         </div>
 
         <div style="margin-top: 32px; margin-bottom: 24px;">
           <a href="mailto:info@bycraft.by?subject=%D0%97%D0%B0%D0%BF%D1%80%D0%BE%D1%81%20%D0%B8%D0%BD%D1%84%D0%BE%D1%80%D0%BC%D0%B0%D1%86%D0%B8%D0%B8%3A%20%D0%B0%D1%80%D1%82-%D0%BE%D0%B1%D1%8A%D0%B5%D0%BA%D1%82%20%C2%AB%D0%9E%D0%91%D0%98%D0%94%D0%90%C2%BB&body=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%2C%20%D0%92%D0%B0%D0%BB%D0%B5%D0%BD%D1%82%D0%B8%D0%BD%21%0A%0A%D0%9C%D0%B5%D0%BD%D1%8F%20%D0%B8%D0%BD%D1%82%D0%B5%D1%80%D0%B5%D1%81%D1%83%D0%B5%D1%82%20%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%B0%20%C2%AB%D0%9E%D0%91%D0%98%D0%94%D0%90%C2%BB.%20%D0%9F%D1%80%D0%BE%D1%88%D1%83%20%D0%BF%D1%80%D0%B5%D0%B4%D0%BE%D1%81%D1%82%D0%B0%D0%B2%D0%B8%D1%82%D1%8C%20%D0%B4%D0%BE%D0%BF%D0%BE%D0%BB%D0%BD%D0%B8%D1%82%D0%B5%D0%BB%D1%8C%D0%BD%D1%83%D1%8E%20%D0%B8%D0%BD%D1%84%D0%BE%D1%80%D0%BC%D0%B0%D1%86%D0%B8%D1%8E%20%D0%B8%20%D1%83%D1%81%D0%BB%D0%BE%D0%B2%D0%B8%D1%8F%20%D0%BF%D1%80%D0%B8%D0%BE%D0%B1%D1%80%D0%B5%D1%82%D0%B5%D0%BD%D0%B8%D1%8F.%0A%0A%D0%A1%20%D1%83%D0%B2%D0%B0%D0%B6%D0%B5%D0%BD%D0%B8%D0%B5%D0%BC%2C" class="btn-telegram" style="display: inline-block;">Запросить информацию о&nbsp;работе&nbsp;→</a>
-        <p class="lead-text" style="font-size: 14.5px; color: var(--color-secondary); margin-top: 14px; margin-bottom: 0;"><a href="mailto:info@bycraft.by" style="color: var(--color-primary); text-decoration: underline;">info@bycraft.by</a></p>
+        <p class="lead-text" style="font-size: 14.5px; color: var(--color-secondary); margin-top: 14px; margin-bottom: 0;"></p>
         </div>
         
       </div>
@@ -217,7 +219,7 @@
         <div class="footer-col-3">
           <div class="footer-contact-group">
             <div class="footer-contact-title">ЭЛЕКТРОННАЯ ПОЧТА:</div>
-            <div><a href="mailto:info@bycraft.by" style="color: #FFFFFF; text-decoration: underline;">info@bycraft.by</a></div>
+            <div></div>
           </div>
         </div>
       </div>
@@ -466,8 +468,18 @@ document.addEventListener('DOMContentLoaded', function() {
   var form = document.getElementById('bc-inquiry-form');
   var successBox = document.getElementById('bc-modal-success');
   var workTitleEl = document.getElementById('bc-modal-work-title');
+  var currentArtworkTitle = '';
 
-  function getArtworkTitle() {
+  function detectTitle(clickedEl) {
+    if (clickedEl) {
+      var card = clickedEl.closest('.work-card, .catalog-item, .artwork-card, article');
+      if (card) {
+        var cardTitle = card.querySelector('h2, h3, .work-card__title, .artwork-title');
+        if (cardTitle && cardTitle.textContent.trim()) {
+          return cardTitle.textContent.trim();
+        }
+      }
+    }
     var h1 = document.querySelector('h1');
     if (h1 && h1.textContent.trim()) {
       return h1.textContent.trim();
@@ -476,9 +488,10 @@ document.addEventListener('DOMContentLoaded', function() {
     return title || 'Арт-объект BYCRAFT';
   }
 
-  function openModal() {
+  function openModal(clickedEl) {
+    currentArtworkTitle = detectTitle(clickedEl);
     if (workTitleEl) {
-      workTitleEl.textContent = 'Работа: «' + getArtworkTitle() + '»';
+      workTitleEl.textContent = 'Работа: «' + currentArtworkTitle + '»';
     }
     if (form) form.style.display = 'block';
     if (successBox) successBox.style.display = 'none';
@@ -511,7 +524,7 @@ document.addEventListener('DOMContentLoaded', function() {
         el.classList.contains('js-inquiry-btn')) {
       el.addEventListener('click', function(e) {
         e.preventDefault();
-        openModal();
+        openModal(el);
       });
     }
   });
@@ -522,7 +535,7 @@ document.addEventListener('DOMContentLoaded', function() {
       var name = document.getElementById('bc-name').value.trim();
       var contact = document.getElementById('bc-contact').value.trim();
       var comment = document.getElementById('bc-comment').value.trim();
-      var artwork = getArtworkTitle();
+      var artwork = currentArtworkTitle || detectTitle();
 
       var subject = 'Запрос по арт-объекту: ' + artwork;
       var body = 'Здравствуйте, Валентин!
@@ -532,14 +545,14 @@ document.addEventListener('DOMContentLoaded', function() {
 ' +
                  'Имя: ' + name + '
 ' +
-                 'Контакт (телефон/мессенджер): ' + contact + '
+                 'Контакт: ' + contact + '
 ' +
                  (comment ? ('Комментарий: ' + comment + '
 ') : '') +
                  '
-Отправлено с официального сайта bycraft.by';
+Отправлено с сайта bycraft.by';
 
-      var mailtoUrl = 'mailto:bycraftwood@mail.ru?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
+      var mailtoUrl = 'mailto:info@bycraft.by?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
       window.location.href = mailtoUrl;
 
       form.style.display = 'none';

@@ -130,7 +130,7 @@
 
         <div style="margin-top: 32px; margin-bottom: 24px;">
           <a href="mailto:info@bycraft.by?subject=Artwork%20Inquiry%3A%20%E2%80%9CCONFESSION%E2%80%9D&body=Dear%20Valentin%2C%0A%0AI%20am%20inquiring%20about%20the%20sculptural%20work%20%E2%80%9CCONFESSION%E2%80%9D.%20Please%20provide%20further%20information%20and%20acquisition%20details.%0A%0ABest%20regards%2C" class="btn-telegram" style="display: inline-block;">Inquire about artwork&nbsp;→</a>
-        <p class="lead-text" style="font-size: 14.5px; color: var(--color-secondary); margin-top: 14px; margin-bottom: 0;"><a href="mailto:info@bycraft.by" style="color: var(--color-primary); text-decoration: underline;">info@bycraft.by</a></p>
+        <p class="lead-text" style="font-size: 14.5px; color: var(--color-secondary); margin-top: 14px; margin-bottom: 0;"></p>
         </div>
         
       </div>
@@ -220,7 +220,7 @@
         <div class="footer-col-3">
           <div class="footer-contact-group">
             <div class="footer-contact-title">EMAIL:</div>
-            <div><a href="mailto:info@bycraft.by" style="color: #FFFFFF; text-decoration: underline;">info@bycraft.by</a></div>
+            <div></div>
           </div>
         </div>
       </div>
@@ -469,8 +469,18 @@ document.addEventListener('DOMContentLoaded', function() {
   var form = document.getElementById('bc-inquiry-form');
   var successBox = document.getElementById('bc-modal-success');
   var workTitleEl = document.getElementById('bc-modal-work-title');
+  var currentArtworkTitle = '';
 
-  function getArtworkTitle() {
+  function detectTitle(clickedEl) {
+    if (clickedEl) {
+      var card = clickedEl.closest('.work-card, .catalog-item, .artwork-card, article');
+      if (card) {
+        var cardTitle = card.querySelector('h2, h3, .work-card__title, .artwork-title');
+        if (cardTitle && cardTitle.textContent.trim()) {
+          return cardTitle.textContent.trim();
+        }
+      }
+    }
     var h1 = document.querySelector('h1');
     if (h1 && h1.textContent.trim()) {
       return h1.textContent.trim();
@@ -479,9 +489,10 @@ document.addEventListener('DOMContentLoaded', function() {
     return title || 'Арт-объект BYCRAFT';
   }
 
-  function openModal() {
+  function openModal(clickedEl) {
+    currentArtworkTitle = detectTitle(clickedEl);
     if (workTitleEl) {
-      workTitleEl.textContent = 'Работа: «' + getArtworkTitle() + '»';
+      workTitleEl.textContent = 'Работа: «' + currentArtworkTitle + '»';
     }
     if (form) form.style.display = 'block';
     if (successBox) successBox.style.display = 'none';
@@ -514,7 +525,7 @@ document.addEventListener('DOMContentLoaded', function() {
         el.classList.contains('js-inquiry-btn')) {
       el.addEventListener('click', function(e) {
         e.preventDefault();
-        openModal();
+        openModal(el);
       });
     }
   });
@@ -525,7 +536,7 @@ document.addEventListener('DOMContentLoaded', function() {
       var name = document.getElementById('bc-name').value.trim();
       var contact = document.getElementById('bc-contact').value.trim();
       var comment = document.getElementById('bc-comment').value.trim();
-      var artwork = getArtworkTitle();
+      var artwork = currentArtworkTitle || detectTitle();
 
       var subject = 'Запрос по арт-объекту: ' + artwork;
       var body = 'Здравствуйте, Валентин!
@@ -535,14 +546,14 @@ document.addEventListener('DOMContentLoaded', function() {
 ' +
                  'Имя: ' + name + '
 ' +
-                 'Контакт (телефон/мессенджер): ' + contact + '
+                 'Контакт: ' + contact + '
 ' +
                  (comment ? ('Комментарий: ' + comment + '
 ') : '') +
                  '
-Отправлено с официального сайта bycraft.by';
+Отправлено с сайта bycraft.by';
 
-      var mailtoUrl = 'mailto:bycraftwood@mail.ru?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
+      var mailtoUrl = 'mailto:info@bycraft.by?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
       window.location.href = mailtoUrl;
 
       form.style.display = 'none';
