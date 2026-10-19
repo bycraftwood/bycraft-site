@@ -2198,3 +2198,10 @@ picture img {
     object-position: center !important;
     display: block !important;
 }
+
+
+/* Footer Links Interactive Guarantee */
+footer a, .site-footer a, .footer-email-link {
+    pointer-events: auto !important;
+    cursor: pointer !important;
+}
