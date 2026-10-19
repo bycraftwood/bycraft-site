@@ -2198,3 +2198,23 @@ picture img {
     object-position: center !important;
     display: block !important;
 }
+
+
+/* === FIX: фото на странице /works/ строго 4:3 === */
+.works-six-grid .work-img-wrap,
+.works-six-grid .work-card .work-img-wrap {
+  aspect-ratio: 4 / 3 !important;
+  overflow: hidden !important;
+  width: 100% !important;
+}
+.works-six-grid .work-img-wrap img,
+.works-six-grid .work-img-wrap picture,
+.works-six-grid .work-img-wrap picture img {
+  width: 100% !important;
+  height: 100% !important;
+  aspect-ratio: 4 / 3 !important;
+  object-fit: cover !important;
+  object-position: center !important;
+  display: block !important;
+}
+
