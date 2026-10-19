@@ -2149,3 +2149,37 @@ picture img {
     object-fit: contain !important;
     max-height: 90vh !important;
 }
+
+
+/* ==========================================================================
+   EXHIBITIONS 4:3 ASPECT RATIO
+   ========================================================================== */
+.exhibition-card img,
+.exhibitions-grid img,
+.works-grid img,
+.work-card img,
+.gallery-grid img,
+.card-media img,
+.card-image img {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+}
+
+.exhibition-card .card-media,
+.work-card .card-media,
+.card-media,
+.card-image-wrap {
+    aspect-ratio: 4 / 3;
+    overflow: hidden;
+}
+
+.modal img,
+.lightbox img,
+#modal-img {
+    aspect-ratio: auto !important;
+    object-fit: contain !important;
+    max-height: 90vh !important;
+}

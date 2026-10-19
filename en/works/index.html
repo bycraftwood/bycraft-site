@@ -276,7 +276,7 @@ img {
           '<button type="submit" class="bc-submit-btn">Отправить запрос</button>' +
           '<div class="bc-modal-alt">' +
             '<span>или свяжитесь напрямую:</span>' +
-            '<a href="https://t.me/bycraft" target="_blank" rel="noopener" class="bc-tg-link">Telegram: @bycraft</a>' +
+            '<a href="https://t.me/bycraft_by" target="_blank" rel="noopener" class="bc-tg-link">Telegram: @bycraft</a>' +
           '</div>' +
         '</form>' +
         '<div id="bc-modal-success" class="bc-modal__success" style="display: none;">' +
@@ -899,7 +899,6 @@ Inquiry about artwork: ' : 'Здравствуйте, Валентин!
 Sent from bycraft.by' : '
 Отправлено с сайта bycraft.by');
 
-    var mailtoUrl = 'mailto:info@bycraft.by?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
     window.open(mailtoUrl, '_blank');
 
     var form = document.getElementById('bc-inquiry-form');
@@ -931,6 +930,36 @@ Sent from bycraft.by' : '
 </script>
 <!-- BYCRAFT Unified Core End -->
 
+  <style id="bycraft-exhibitions-4-3">
+    /* Строгий формат 4:3 для всех карточек работ */
+    main img:not(.logo):not(.icon),
+    .exhibition-card img,
+    .work-card img,
+    .works-grid img,
+    .exhibitions-grid img,
+    .card img,
+    article img {
+      width: 100% !important;
+      aspect-ratio: 4 / 3 !important;
+      height: 100% !important;
+      max-height: 480px !important;
+      object-fit: cover !important;
+      object-position: center !important;
+      display: block !important;
+    }
+    .card-media, .image-wrap, .card-image, .work-card-media {
+      aspect-ratio: 4 / 3 !important;
+      overflow: hidden !important;
+      width: 100% !important;
+    }
+    /* В модальном окне при увеличении пропорции не обрезаются */
+    .modal img, .lightbox img, #modal-img, .enlarged-modal img {
+      aspect-ratio: auto !important;
+      object-fit: contain !important;
+      max-height: 90vh !important;
+      height: auto !important;
+    }
+  </style>
 </head>
 <body>
   <header class="site-header">
