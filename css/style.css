@@ -2744,3 +2744,102 @@ main .container h2.section-title {
 .lightbox-overlay:not(.active) .lightbox-img {
   display: none !important;
 }
+
+/* === A11Y FOOTER + META + LANG + MODALS === */
+
+/* 4. Lightbox / cookie — вне индексации и скринридеров, пока скрыты */
+.lightbox-overlay[hidden],
+.lightbox-overlay:not(.active) {
+  display: none !important;
+  visibility: hidden !important;
+  pointer-events: none !important;
+}
+.lightbox-overlay .lightbox-close {
+  font-size: 0 !important; /* скрыть глиф × из текстового потока */
+}
+.lightbox-overlay .lightbox-close::before {
+  content: "×";
+  font-size: 28px;
+  line-height: 1;
+}
+.lightbox-img[hidden],
+.lightbox-img:not([src]),
+.lightbox-img[src=""] {
+  display: none !important;
+}
+
+/* 5. Спецификации: пробел после двоеточия, без точки в конце */
+.meta-row {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  gap: 0 6px !important;
+  align-items: baseline !important;
+}
+.meta-label {
+  margin-right: 0 !important;
+  white-space: nowrap !important;
+}
+.meta-label::after {
+  content: none !important;
+}
+.meta-val {
+  margin-left: 0.25em !important;
+}
+.meta-val::after {
+  content: none !important;
+}
+
+/* 6. Контраст футера */
+.site-footer,
+.site-footer p,
+.site-footer div,
+.site-footer span,
+.site-footer a,
+.footer-col-1,
+.footer-col-1 p,
+.footer-col-1 a,
+.footer-contact-title,
+.footer-contact-group {
+  color: #EEEEEE !important;
+}
+.site-footer a[style*="#ADB5BD"],
+.footer-col-1 a {
+  color: #B0B0B0 !important;
+}
+.site-footer .footer-col-1 p:not(:first-child),
+.site-footer p[style*="color"] {
+  color: #BDBDBD !important;
+}
+
+/* Cookie — читаемый контраст */
+.cookie-banner {
+  color: #222629 !important;
+  background: #FFFFFF !important;
+  z-index: 100001 !important;
+}
+
+/* 7. RU/EN touch targets в мобильном меню */
+@media screen and (max-width: 900px) {
+  .lang-switch {
+    display: flex !important;
+    gap: 8px !important;
+    padding: 16px 0 8px !important;
+    margin-top: 8px !important;
+    border-top: 1px solid #f0f0f0 !important;
+  }
+  .lang-switch a {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    min-width: 44px !important;
+    min-height: 44px !important;
+    padding: 8px 12px !important;
+    box-sizing: border-box !important;
+  }
+  .main-nav.open .nav-link,
+  .main-nav.open .nav-link-btn {
+    min-height: 44px !important;
+    display: flex !important;
+    align-items: center !important;
+  }
+}

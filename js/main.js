@@ -7,6 +7,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const isEn = window.location.pathname.indexOf('/en/') !== -1;
     const banner = document.createElement('div');
     banner.className = 'cookie-banner';
+    banner.setAttribute('role', 'dialog');
+    banner.setAttribute('aria-label', isEn ? 'Cookie notice' : 'Уведомление о cookie');
     banner.id = 'cookieBanner';
 
     const policyUrl = isEn ? '/en/privacy/' : '/privacy/';
@@ -101,24 +103,36 @@ document.addEventListener('DOMContentLoaded', () => {
       img.addEventListener('click', () => {
         lightboxImg.src = img.src;
         lightbox.classList.add('active');
+        lightbox.removeAttribute('hidden');
+        lightbox.setAttribute('aria-hidden', 'false');
+        if (lightboxImg) { lightboxImg.removeAttribute('hidden'); }
       });
     });
 
     if (lightboxClose) {
       lightboxClose.addEventListener('click', () => {
         lightbox.classList.remove('active');
+        lightbox.setAttribute('aria-hidden', 'true');
+        lightbox.setAttribute('hidden', '');
+        if (lightboxImg) { lightboxImg.removeAttribute('src'); lightboxImg.setAttribute('hidden', ''); }
       });
     }
 
     lightbox.addEventListener('click', (e) => {
       if (e.target !== lightboxImg) {
         lightbox.classList.remove('active');
+        lightbox.setAttribute('aria-hidden', 'true');
+        lightbox.setAttribute('hidden', '');
+        if (lightboxImg) { lightboxImg.removeAttribute('src'); lightboxImg.setAttribute('hidden', ''); }
       }
     });
 
     document.addEventListener('keydown', (e) => {
       if (e.key === 'Escape' && lightbox.classList.contains('active')) {
         lightbox.classList.remove('active');
+        lightbox.setAttribute('aria-hidden', 'true');
+        lightbox.setAttribute('hidden', '');
+        if (lightboxImg) { lightboxImg.removeAttribute('src'); lightboxImg.setAttribute('hidden', ''); }
       }
     });
   }
