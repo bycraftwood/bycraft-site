@@ -2515,3 +2515,24 @@ main section.container > h2.section-title,
 main .container h2.section-title {
   font-size: 26px !important;
 }
+
+/* === OTHER WORKS TITLES 26px === */
+.other-works-grid .work-title,
+.other-works-grid .work-title strong,
+.other-works-grid .work-info .work-title,
+.other-works-grid .work-info strong {
+  font-size: 26px !important;
+  line-height: 1.25 !important;
+  font-weight: 600 !important;
+}
+
+/* подпись под названием (город, год) оставляем меньше */
+.other-works-grid .work-title span,
+.other-works-grid .work-info span {
+  font-size: 13px !important;
+  font-weight: 400 !important;
+}
+
+.other-works-grid .work-status {
+  font-size: 12px !important;
+}
