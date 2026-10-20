@@ -2506,3 +2506,12 @@ main > section.container {
   }
 }
 
+
+/* === WORK CARD TITLES 26px === */
+main .container > h1.section-title {
+  font-size: 26px !important;
+}
+main section.container > h2.section-title,
+main .container h2.section-title {
+  font-size: 26px !important;
+}
