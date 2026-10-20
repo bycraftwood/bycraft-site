@@ -1054,50 +1054,66 @@ Sent from bycraft.by' : '
   </style>
   
   
-  <style id="bycraft-6-col-layout">
+  
+  <style id="bycraft-strict-6-and-6">
     /* ==========================================================
-       КАРТОЧКА РАБОТЫ: ФОТО НА 6 КОЛОНОК, РЯДОМ ТЕКСТ НА 6 КОЛОНОК
+       BYCRAFT — СТРУКТУРА КАРТОЧКИ: СТРОГО 6 НА 6 КОЛОНОК
        ========================================================== */
 
-    /* 1. НАЗВАНИЕ: 12 колонок, по левому краю */
+    /* 1. НАЗВАНИЕ: на всю ширину 12 колонок, по левому краю */
     main h1,
     .artwork-title,
-    .work-title {
+    .work-title,
+    .work-detail-title {
       width: 100% !important;
       max-width: 100% !important;
       text-align: left !important;
       margin-left: 0 !important;
+      margin-right: 0 !important;
       margin-top: 20px !important;
       margin-bottom: 8px !important;
+      padding-left: 0 !important;
+      font-size: clamp(1.8rem, 3.8vw, 2.6rem) !important;
+      line-height: 1.2 !important;
+      color: #222629 !important;
       display: block !important;
+      clear: both !important;
     }
 
-    /* 2. ЦИТАТА: 12 колонок, по левому краю */
+    /* 2. ЦИТАТА: на всю ширину 12 колонок под названием, по левому краю */
     .artwork-quote,
     .work-quote,
     .quote,
-    main h1 + p {
+    main h1 + p,
+    main > p.quote,
+    blockquote {
       width: 100% !important;
       max-width: 860px !important;
       text-align: left !important;
       margin-left: 0 !important;
       margin-top: 0 !important;
       margin-bottom: 32px !important;
-      font-style: italic !important;
+      padding-left: 0 !important;
+      font-size: clamp(1.05rem, 1.8vw, 1.22rem) !important;
+      line-height: 1.55 !important;
       color: #474B4F !important;
+      font-style: italic !important;
       display: block !important;
+      clear: both !important;
     }
 
-    /* 3. БЛОК 3: ФОТО 6 КОЛОНОК (СЛЕВА) + ТЕКСТ 6 КОЛОНОК (СПРАВА) */
+    /* 3. ДЕСКТОП (от 769px): СТРОГО ФОТО НА 6 КОЛОНОК + ТЕКСТ НА 6 КОЛОНОК */
     @media (min-width: 769px) {
-      /* Контейнер двух колонок */
-      .artwork-two-cols,
-      .work-two-cols,
-      .work-columns,
-      .work-hero,
       .work-detail,
+      .work-hero,
+      .work-layout,
+      .work-two-columns,
+      .work-columns,
+      .work-main,
       main .work-top,
-      main .hero-grid {
+      main .hero-grid,
+      main > .container > div:has(.work-media),
+      main > div:has(.bycraft-col-photo-6) {
         display: flex !important;
         flex-direction: row !important;
         flex-wrap: nowrap !important;
@@ -1106,16 +1122,16 @@ Sent from bycraft.by' : '
         align-items: flex-start !important;
         margin-top: 24px !important;
         margin-bottom: 48px !important;
+        box-sizing: border-box !important;
+        clear: both !important;
       }
 
-      /* ФОТО: СТРОГО 6 КОЛОНОК (50% ширины сетки) СЛЕВА */
-      .artwork-photo-col,
-      .work-photo-col,
+      /* ФОТО: СТРОГО 6 КОЛОНОК (50% ширины) СЛЕВА */
+      .bycraft-col-photo-6,
       .work-media,
       .work-image,
-      .artwork-two-cols > div:first-child,
-      .work-hero > div:first-child,
-      .work-detail > div:first-child {
+      .work-photo,
+      .artwork-photo-col {
         flex: 0 0 calc(50% - 24px) !important;
         width: calc(50% - 24px) !important;
         max-width: calc(50% - 24px) !important;
@@ -1123,13 +1139,11 @@ Sent from bycraft.by' : '
         box-sizing: border-box !important;
       }
 
-      .artwork-photo-col img,
-      .work-photo-col img,
+      .bycraft-col-photo-6 img,
       .work-media img,
       .work-image img,
-      .artwork-two-cols > div:first-child img,
-      .work-hero > div:first-child img,
-      .work-detail > div:first-child img {
+      .work-photo img,
+      .artwork-photo-col img {
         width: 100% !important;
         height: auto !important;
         max-height: 75vh !important;
@@ -1138,15 +1152,13 @@ Sent from bycraft.by' : '
         margin: 0 !important;
       }
 
-      /* ТЕКСТ ПАРАМЕТРОВ: СТРОГО 6 КОЛОНОК (50% ширины сетки) СПРАВА РЯДОМ */
-      .artwork-text-col,
-      .work-text-col,
-      .work-specs,
+      /* ТЕКСТ ПАРАМЕТРОВ: СТРОГО 6 КОЛОНОК (50% ширины) СПРАВА */
+      .bycraft-col-text-6,
       .work-info,
+      .work-specs,
       .work-details,
-      .artwork-two-cols > div:nth-child(2),
-      .work-hero > div:nth-child(2),
-      .work-detail > div:nth-child(2) {
+      .work-content,
+      .artwork-text-col {
         flex: 0 0 calc(50% - 24px) !important;
         width: calc(50% - 24px) !important;
         max-width: calc(50% - 24px) !important;
@@ -1158,62 +1170,74 @@ Sent from bycraft.by' : '
         box-sizing: border-box !important;
       }
 
-      .artwork-text-col p,
-      .work-text-col p,
+      .bycraft-col-text-6 p,
+      .work-info p,
       .work-specs p,
-      .work-info p {
+      .work-details p {
         text-align: left !important;
         margin-left: 0 !important;
         line-height: 1.5 !important;
       }
     }
 
-    /* На смартфонах (до 768px): 12 колонок на всю ширину экрана */
+    /* МОБИЛЬНЫЕ (до 768px): 12 колонок (на всю ширину экрана) */
     @media (max-width: 768px) {
-      .artwork-two-cols,
-      .work-two-cols,
-      .work-columns,
+      .work-detail,
       .work-hero,
-      .work-detail {
+      .work-layout,
+      .work-two-columns,
+      .work-columns {
         display: flex !important;
         flex-direction: column !important;
         gap: 20px !important;
         width: 100% !important;
       }
 
-      .artwork-photo-col,
-      .work-photo-col,
-      .artwork-text-col,
-      .work-text-col,
+      .bycraft-col-photo-6,
+      .bycraft-col-text-6,
       .work-media,
-      .work-specs,
-      .work-info {
+      .work-image,
+      .work-info,
+      .work-specs {
         width: 100% !important;
         max-width: 100% !important;
         flex: 0 0 100% !important;
       }
     }
 
-    /* 4. ОПИСАНИЕ РАБОТЫ: под блоком */
+    /* 4. ОПИСАНИЕ РАБОТЫ: под двухколоночным блоком */
     .work-description,
     .artwork-description,
-    .work-statement {
+    .work-statement,
+    .work-story {
       width: 100% !important;
       max-width: 780px !important;
       margin-top: 40px !important;
       margin-bottom: 56px !important;
       text-align: left !important;
       display: block !important;
+      clear: both !important;
     }
 
-    /* 5. ДРУГИЕ ВЫСТАВОЧНЫЕ РАБОТЫ */
+    .work-description p,
+    .artwork-description p {
+      font-size: 1.05rem !important;
+      line-height: 1.65 !important;
+      color: #222629 !important;
+      margin-bottom: 18px !important;
+      text-align: left !important;
+    }
+
+    /* 5. БЛОК ДРУГИЕ ВЫСТАВОЧНЫЕ РАБОТЫ: внизу */
     .other-works,
-    .related-works {
+    .related-works,
+    .other-exhibitions {
       width: 100% !important;
       margin-top: 64px !important;
       margin-bottom: 48px !important;
       border-top: 1px solid #E5E7EB !important;
       padding-top: 40px !important;
+      clear: both !important;
     }
   </style>
 </head>
