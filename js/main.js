@@ -1,8 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-  );
-  }
-
-  // 2. ЕДИНСТВЕННЫЙ COOKIE-БАННЕР (создается через JS строго в 1 экземпляре)
+// 2. ЕДИНСТВЕННЫЙ COOKIE-БАННЕР (создается через JS строго в 1 экземпляре)
   const isDismissed = localStorage.getItem('bycraft_cookie_closed') === 'true' ||
                       document.cookie.indexOf('bycraft_cookie_closed=true') !== -1;
 
@@ -127,20 +124,19 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 });
 
-/* === MOBILE NAV HARD FIX v2 === */
+/* === MOBILE NAV HARD FIX v3 === */
 (function () {
   function initMobileNav() {
     var toggleBtn = document.querySelector(".mobile-toggle");
     var mainNav = document.querySelector(".main-nav");
     if (!toggleBtn || !mainNav) return;
 
+    function isEn() {
+      return window.location.pathname.indexOf("/en/") !== -1;
+    }
     function setLabel(open) {
-      var isEn = window.location.pathname.indexOf("/en/") !== -1;
-      if (open) {
-        toggleBtn.textContent = "✕";
-      } else {
-        toggleBtn.textContent = isEn ? "Menu" : "Меню";
-      }
+      toggleBtn.textContent = open ? "✕" : (isEn() ? "Menu" : "Меню");
+      toggleBtn.setAttribute("aria-expanded", open ? "true" : "false");
     }
 
     function toggleNav(e) {
@@ -149,26 +145,15 @@ document.addEventListener('DOMContentLoaded', () => {
         e.stopPropagation();
       }
       var open = !mainNav.classList.contains("open");
-      if (open) {
-        mainNav.classList.add("open");
-      } else {
-        mainNav.classList.remove("open");
-      }
+      mainNav.classList.toggle("open", open);
       setLabel(open);
     }
 
-    // Убираем старые обработчики клонированием
-    var newBtn = toggleBtn.cloneNode(true);
-    toggleBtn.parentNode.replaceChild(newBtn, toggleBtn);
-    toggleBtn = newBtn;
+    toggleBtn.addEventListener("click", toggleNav);
+    toggleBtn.setAttribute("aria-expanded", "false");
+    toggleBtn.setAttribute("aria-controls", "main-nav");
+    mainNav.id = mainNav.id || "main-nav";
 
-    toggleBtn.addEventListener("click", toggleNav, true);
-    toggleBtn.addEventListener("touchend", function (e) {
-      e.preventDefault();
-      toggleNav(e);
-    }, { passive: false });
-
-    // Закрытие по клику на ссылку
     mainNav.querySelectorAll("a").forEach(function (link) {
       link.addEventListener("click", function () {
         mainNav.classList.remove("open");
@@ -176,7 +161,6 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     });
 
-    // Закрытие по клику вне меню
     document.addEventListener("click", function (e) {
       if (!mainNav.classList.contains("open")) return;
       if (mainNav.contains(e.target) || toggleBtn.contains(e.target)) return;
