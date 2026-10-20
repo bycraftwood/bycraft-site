@@ -1092,6 +1092,113 @@ Sent from bycraft.by' : '
       }
     }
   </style>
+
+<style id="bycraft-mobile-nav-inline">
+@media screen and (max-width: 900px) {
+  .site-header {
+    position: sticky !important;
+    top: 0 !important;
+    z-index: 100000 !important;
+    background: #ffffff !important;
+    width: 100% !important;
+    max-width: 100vw !important;
+    padding: 12px 0 !important;
+    border-bottom: 1px solid #e5e5e5 !important;
+  }
+  .site-header .container,
+  .site-header .header-inner,
+  .site-header > div {
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: nowrap !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+    margin: 0 !important;
+    box-sizing: border-box !important;
+  }
+  .brand-logo {
+    font-size: 18px !important;
+    flex: 0 0 auto !important;
+  }
+  .mobile-toggle {
+    display: inline-flex !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    margin-left: auto !important;
+    flex: 0 0 auto !important;
+    padding: 8px 14px !important;
+    border: 1px solid #222 !important;
+    background: #fff !important;
+    color: #222 !important;
+    font-size: 13px !important;
+    font-weight: 500 !important;
+    text-transform: uppercase !important;
+    cursor: pointer !important;
+    z-index: 100001 !important;
+  }
+  /* Скрыть десктоп-меню */
+  .main-nav {
+    display: none !important;
+    visibility: hidden !important;
+    height: 0 !important;
+    overflow: hidden !important;
+  }
+  /* Открытое меню — аккуратный список */
+  .main-nav.open {
+    display: flex !important;
+    visibility: visible !important;
+    height: auto !important;
+    overflow: visible !important;
+    flex-direction: column !important;
+    align-items: stretch !important;
+    position: absolute !important;
+    top: 100% !important;
+    left: 0 !important;
+    right: 0 !important;
+    width: 100% !important;
+    max-width: 100vw !important;
+    background: #ffffff !important;
+    padding: 8px 16px 20px !important;
+    margin: 0 !important;
+    gap: 0 !important;
+    box-shadow: 0 10px 24px rgba(0,0,0,0.1) !important;
+    border-bottom: 1px solid #e5e5e5 !important;
+    z-index: 100000 !important;
+    box-sizing: border-box !important;
+  }
+  .main-nav.open .nav-link,
+  .main-nav.open .nav-link-btn,
+  .main-nav.open a {
+    display: block !important;
+    width: 100% !important;
+    padding: 14px 0 !important;
+    font-size: 16px !important;
+    border-bottom: 1px solid #f0f0f0 !important;
+    text-align: left !important;
+    white-space: normal !important;
+  }
+  .main-nav.open .lang-switch {
+    display: flex !important;
+    padding-top: 12px !important;
+    gap: 8px !important;
+  }
+}
+@media screen and (min-width: 901px) {
+  .mobile-toggle { display: none !important; }
+  .main-nav {
+    display: flex !important;
+    visibility: visible !important;
+    height: auto !important;
+    overflow: visible !important;
+    position: static !important;
+  }
+}
+</style>
+
 </head>
 <body>
     <header class="site-header">
@@ -1392,5 +1499,39 @@ Sent from bycraft.by' : '
   }
 })();
 </script>
+
+<script id="bycraft-mobile-nav-inline">
+(function(){
+  function init(){
+    var btn = document.querySelector('.mobile-toggle');
+    var nav = document.querySelector('.main-nav');
+    if(!btn || !nav) return;
+    var isEn = location.pathname.indexOf('/en/') !== -1;
+    function label(open){ btn.textContent = open ? '✕' : (isEn ? 'Menu' : 'Меню'); }
+    btn.onclick = function(e){
+      e.preventDefault();
+      e.stopPropagation();
+      var open = !nav.classList.contains('open');
+      nav.classList.toggle('open', open);
+      label(open);
+    };
+    nav.querySelectorAll('a').forEach(function(a){
+      a.addEventListener('click', function(){
+        nav.classList.remove('open');
+        label(false);
+      });
+    });
+    document.addEventListener('click', function(e){
+      if(!nav.classList.contains('open')) return;
+      if(nav.contains(e.target) || btn.contains(e.target)) return;
+      nav.classList.remove('open');
+      label(false);
+    });
+  }
+  if(document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init);
+  else init();
+})();
+</script>
+
 </body>
 </html>
