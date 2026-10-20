@@ -2525,14 +2525,11 @@ main .container h2.section-title {
   line-height: 1.25 !important;
   font-weight: 600 !important;
 }
-
-/* подпись под названием (город, год) оставляем меньше */
 .other-works-grid .work-title span,
 .other-works-grid .work-info span {
   font-size: 13px !important;
   font-weight: 400 !important;
 }
-
 .other-works-grid .work-status {
   font-size: 12px !important;
 }
