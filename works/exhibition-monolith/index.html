@@ -1053,100 +1053,83 @@ Sent from bycraft.by' : '
     }
   </style>
   
-  <style id="bycraft-artwork-page-structure">
+  
+  <style id="bycraft-6-col-layout">
     /* ==========================================================
-       BYCRAFT — СТРУКТУРА КАРТОЧКИ РАБОТЫ (1-Название, 2-Цитата, 3-Фото+Текст, 4-Описание, 5-Другие)
+       КАРТОЧКА РАБОТЫ: ФОТО НА 6 КОЛОНОК, РЯДОМ ТЕКСТ НА 6 КОЛОНОК
        ========================================================== */
 
-    /* 1. НАЗВАНИЕ: по левому краю, полная ширина сетки 12 */
+    /* 1. НАЗВАНИЕ: 12 колонок, по левому краю */
     main h1,
     .artwork-title,
-    .work-title,
-    .work-detail-title {
+    .work-title {
       width: 100% !important;
       max-width: 100% !important;
-      grid-column: 1 / -1 !important;
       text-align: left !important;
       margin-left: 0 !important;
-      margin-right: 0 !important;
       margin-top: 20px !important;
       margin-bottom: 8px !important;
-      padding-left: 0 !important;
-      font-size: clamp(1.8rem, 3.8vw, 2.6rem) !important;
-      line-height: 1.2 !important;
-      letter-spacing: -0.01em !important;
-      color: #222629 !important;
       display: block !important;
     }
 
-    /* 2. ЦИТАТА: по левому краю под названием на всю ширину */
+    /* 2. ЦИТАТА: 12 колонок, по левому краю */
     .artwork-quote,
     .work-quote,
     .quote,
-    main h1 + p,
-    main > p.quote,
-    blockquote {
+    main h1 + p {
       width: 100% !important;
       max-width: 860px !important;
-      grid-column: 1 / -1 !important;
       text-align: left !important;
       margin-left: 0 !important;
       margin-top: 0 !important;
-      margin-bottom: 28px !important;
-      padding-left: 0 !important;
-      font-size: clamp(1.05rem, 1.8vw, 1.22rem) !important;
-      line-height: 1.55 !important;
-      color: #474B4F !important;
+      margin-bottom: 32px !important;
       font-style: italic !important;
+      color: #474B4F !important;
       display: block !important;
     }
 
-    /* 3. БЛОК ИЗ ДВУХ СТОЛБЦОВ: СЛЕВА ФОТО, СПРАВА ТЕКСТ (ПК от 769px) */
+    /* 3. БЛОК 3: ФОТО 6 КОЛОНОК (СЛЕВА) + ТЕКСТ 6 КОЛОНОК (СПРАВА) */
     @media (min-width: 769px) {
-      .work-hero-two-cols,
-      .work-two-columns,
-      .work-hero,
-      .work-detail-hero,
-      .work-detail-columns,
+      /* Контейнер двух колонок */
+      .artwork-two-cols,
+      .work-two-cols,
       .work-columns,
-      .work-main,
+      .work-hero,
       .work-detail,
-      .artwork-hero,
-      .sculpture-hero,
       main .work-top,
       main .hero-grid {
-        display: grid !important;
-        grid-template-columns: 1.05fr 0.95fr !important;
-        gap: 48px !important;
-        align-items: start !important;
+        display: flex !important;
+        flex-direction: row !important;
+        flex-wrap: nowrap !important;
         width: 100% !important;
+        gap: 48px !important;
+        align-items: flex-start !important;
         margin-top: 24px !important;
         margin-bottom: 48px !important;
       }
 
-      /* СЛЕВА — ФОТО */
-      .work-hero-photo,
+      /* ФОТО: СТРОГО 6 КОЛОНОК (50% ширины сетки) СЛЕВА */
+      .artwork-photo-col,
       .work-photo-col,
-      .work-hero-media,
-      .work-image,
       .work-media,
+      .work-image,
+      .artwork-two-cols > div:first-child,
       .work-hero > div:first-child,
-      .work-detail > div:first-child,
-      .work-two-columns > div:first-child {
-        grid-column: 1 !important;
-        width: 100% !important;
-        max-width: 100% !important;
+      .work-detail > div:first-child {
+        flex: 0 0 calc(50% - 24px) !important;
+        width: calc(50% - 24px) !important;
+        max-width: calc(50% - 24px) !important;
         display: block !important;
+        box-sizing: border-box !important;
       }
 
-      .work-hero-photo img,
+      .artwork-photo-col img,
       .work-photo-col img,
-      .work-hero-media img,
-      .work-image img,
       .work-media img,
+      .work-image img,
+      .artwork-two-cols > div:first-child img,
       .work-hero > div:first-child img,
-      .work-detail > div:first-child img,
-      .work-two-columns > div:first-child img {
+      .work-detail > div:first-child img {
         width: 100% !important;
         height: auto !important;
         max-height: 75vh !important;
@@ -1155,70 +1138,66 @@ Sent from bycraft.by' : '
         margin: 0 !important;
       }
 
-      /* СПРАВА — ТЕКСТ (параметры, материал, размеры, вес, год, статус, кнопка связи) */
-      .work-hero-text,
+      /* ТЕКСТ ПАРАМЕТРОВ: СТРОГО 6 КОЛОНОК (50% ширины сетки) СПРАВА РЯДОМ */
+      .artwork-text-col,
       .work-text-col,
-      .work-hero-content,
+      .work-specs,
       .work-info,
       .work-details,
-      .work-specs,
+      .artwork-two-cols > div:nth-child(2),
       .work-hero > div:nth-child(2),
-      .work-detail > div:nth-child(2),
-      .work-two-columns > div:nth-child(2) {
-        grid-column: 2 !important;
-        width: 100% !important;
+      .work-detail > div:nth-child(2) {
+        flex: 0 0 calc(50% - 24px) !important;
+        width: calc(50% - 24px) !important;
+        max-width: calc(50% - 24px) !important;
         display: flex !important;
         flex-direction: column !important;
         align-items: flex-start !important;
         justify-content: flex-start !important;
         text-align: left !important;
+        box-sizing: border-box !important;
       }
 
-      .work-hero-text p,
+      .artwork-text-col p,
       .work-text-col p,
       .work-specs p,
       .work-info p {
         text-align: left !important;
         margin-left: 0 !important;
-        line-height: 1.45 !important;
+        line-height: 1.5 !important;
       }
     }
 
-    /* МОБИЛЬНЫЕ (до 768px): вертикальный стек (сверху фото, снизу текст) */
+    /* На смартфонах (до 768px): 12 колонок на всю ширину экрана */
     @media (max-width: 768px) {
-      .work-hero-two-cols,
-      .work-two-columns,
-      .work-hero,
-      .work-detail-hero,
+      .artwork-two-cols,
+      .work-two-cols,
       .work-columns,
+      .work-hero,
       .work-detail {
         display: flex !important;
         flex-direction: column !important;
-        gap: 24px !important;
-        width: 100% !important;
-        margin-top: 16px !important;
-        margin-bottom: 32px !important;
-      }
-
-      .work-hero > div:first-child,
-      .work-detail > div:first-child,
-      .work-two-columns > div:first-child {
+        gap: 20px !important;
         width: 100% !important;
       }
 
-      .work-hero > div:nth-child(2),
-      .work-detail > div:nth-child(2),
-      .work-two-columns > div:nth-child(2) {
+      .artwork-photo-col,
+      .work-photo-col,
+      .artwork-text-col,
+      .work-text-col,
+      .work-media,
+      .work-specs,
+      .work-info {
         width: 100% !important;
+        max-width: 100% !important;
+        flex: 0 0 100% !important;
       }
     }
 
-    /* 4. ОПИСАНИЕ РАБОТЫ: под двухколоночным блоком */
+    /* 4. ОПИСАНИЕ РАБОТЫ: под блоком */
     .work-description,
     .artwork-description,
-    .work-statement,
-    .work-story,
-    .work-detail-body {
+    .work-statement {
       width: 100% !important;
       max-width: 780px !important;
       margin-top: 40px !important;
@@ -1227,31 +1206,14 @@ Sent from bycraft.by' : '
       display: block !important;
     }
 
-    .work-description p,
-    .artwork-description p {
-      font-size: 1.05rem !important;
-      line-height: 1.65 !important;
-      color: #222629 !important;
-      margin-bottom: 18px !important;
-      text-align: left !important;
-    }
-
-    /* 5. БЛОК ДРУГИЕ ВЫСТАВОЧНЫЕ РАБОТЫ: внизу страницы */
+    /* 5. ДРУГИЕ ВЫСТАВОЧНЫЕ РАБОТЫ */
     .other-works,
-    .related-works,
-    .other-exhibitions {
+    .related-works {
       width: 100% !important;
       margin-top: 64px !important;
       margin-bottom: 48px !important;
       border-top: 1px solid #E5E7EB !important;
       padding-top: 40px !important;
-    }
-
-    .other-works h2,
-    .related-works h2,
-    .other-works h3 {
-      text-align: left !important;
-      margin-bottom: 28px !important;
     }
   </style>
 </head>
