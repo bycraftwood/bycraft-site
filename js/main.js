@@ -1,12 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-  // 1. Мобильное меню
-  const toggleBtn = document.querySelector('.mobile-toggle');
-  const mainNav = document.querySelector('.main-nav');
-  if (toggleBtn && mainNav) {
-    toggleBtn.addEventListener('click', () => {
-      mainNav.classList.toggle('open');
-      toggleBtn.textContent = mainNav.classList.contains('open') ? '✕' : 'Меню';
-    });
+  );
   }
 
   // 2. ЕДИНСТВЕННЫЙ COOKIE-БАННЕР (создается через JS строго в 1 экземпляре)
@@ -133,3 +126,69 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 });
+
+/* === MOBILE NAV HARD FIX v2 === */
+(function () {
+  function initMobileNav() {
+    var toggleBtn = document.querySelector(".mobile-toggle");
+    var mainNav = document.querySelector(".main-nav");
+    if (!toggleBtn || !mainNav) return;
+
+    function setLabel(open) {
+      var isEn = window.location.pathname.indexOf("/en/") !== -1;
+      if (open) {
+        toggleBtn.textContent = "✕";
+      } else {
+        toggleBtn.textContent = isEn ? "Menu" : "Меню";
+      }
+    }
+
+    function toggleNav(e) {
+      if (e) {
+        e.preventDefault();
+        e.stopPropagation();
+      }
+      var open = !mainNav.classList.contains("open");
+      if (open) {
+        mainNav.classList.add("open");
+      } else {
+        mainNav.classList.remove("open");
+      }
+      setLabel(open);
+    }
+
+    // Убираем старые обработчики клонированием
+    var newBtn = toggleBtn.cloneNode(true);
+    toggleBtn.parentNode.replaceChild(newBtn, toggleBtn);
+    toggleBtn = newBtn;
+
+    toggleBtn.addEventListener("click", toggleNav, true);
+    toggleBtn.addEventListener("touchend", function (e) {
+      e.preventDefault();
+      toggleNav(e);
+    }, { passive: false });
+
+    // Закрытие по клику на ссылку
+    mainNav.querySelectorAll("a").forEach(function (link) {
+      link.addEventListener("click", function () {
+        mainNav.classList.remove("open");
+        setLabel(false);
+      });
+    });
+
+    // Закрытие по клику вне меню
+    document.addEventListener("click", function (e) {
+      if (!mainNav.classList.contains("open")) return;
+      if (mainNav.contains(e.target) || toggleBtn.contains(e.target)) return;
+      mainNav.classList.remove("open");
+      setLabel(false);
+    });
+  }
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", initMobileNav);
+  } else {
+    initMobileNav();
+  }
+})();
+
