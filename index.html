@@ -929,6 +929,164 @@ Sent from bycraft.by' : '
 </script>
 <!-- BYCRAFT Unified Core End -->
 
+  <style id="bycraft-mobile-core">
+    /* ==========================================================
+       BYCRAFT — МОБИЛЬНАЯ АДАПТАЦИЯ И ПРЕДОТВРАЩЕНИЕ ВЫВАЛИВАНИЯ
+       ========================================================== */
+
+    /* 1. Блокировка горизонтального сдвига страницы на телефонах */
+    html, body {
+      max-width: 100vw !important;
+      overflow-x: hidden !important;
+      -webkit-text-size-adjust: 100%;
+      margin: 0 !important;
+      padding: 0 !important;
+    }
+
+    *, *::before, *::after {
+      box-sizing: border-box !important;
+    }
+
+    /* 2. СТИЛИ ДЛЯ СМАРТФОНОВ (до 768px) */
+    @media (max-width: 768px) {
+      /* Контейнеры контента */
+      main, .container, .section, .content {
+        width: 100% !important;
+        max-width: 100% !important;
+        padding-left: 16px !important;
+        padding-right: 16px !important;
+        box-sizing: border-box !important;
+      }
+
+      /* Сетка работ: строго 1 колонка на смартфонах */
+      .works-grid,
+      .exhibitions-grid,
+      .gallery-grid,
+      main .grid {
+        display: flex !important;
+        flex-direction: column !important;
+        width: 100% !important;
+        gap: 32px !important;
+        margin: 0 !important;
+        padding: 0 !important;
+      }
+
+      /* Карточки работ на смартфонах */
+      .work-card,
+      .exhibition-card,
+      .card {
+        width: 100% !important;
+        max-width: 100% !important;
+        display: flex !important;
+        flex-direction: column !important;
+        margin: 0 !important;
+        overflow: visible !important;
+      }
+
+      /* Фотографии работ: идеальный формат 4:3 на всю ширину карточки */
+      .works-grid img,
+      .exhibitions-grid img,
+      .work-card img,
+      .exhibition-card img,
+      .card-media img,
+      .card img {
+        width: 100% !important;
+        aspect-ratio: 4 / 3 !important;
+        height: auto !important;
+        max-height: none !important;
+        object-fit: cover !important;
+        object-position: center !important;
+        display: block !important;
+        margin: 0 !important;
+        padding: 0 !important;
+      }
+
+      /* Подписи под фото: аккуратный отступ 8px */
+      .work-card-info,
+      .card-info,
+      .card-caption,
+      .exhibition-card-info {
+        display: block !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+        margin-top: 8px !important;
+        padding: 0 !important;
+      }
+
+      .work-card h3, .exhibition-card h3, .card h3 {
+        font-size: 1.15rem !important;
+        margin-top: 0 !important;
+        margin-bottom: 4px !important;
+        line-height: 1.25 !important;
+      }
+
+      .work-card p, .exhibition-card p, .card p {
+        font-size: 0.92rem !important;
+        margin-top: 0 !important;
+        margin-bottom: 2px !important;
+        line-height: 1.35 !important;
+      }
+
+      /* Подвал на смартфонах: колонки перестраиваются вертикально в 1 столбец */
+      footer,
+      .site-footer,
+      .footer-container,
+      .footer-row,
+      .footer-grid,
+      .footer-columns {
+        display: flex !important;
+        flex-direction: column !important;
+        width: 100% !important;
+        gap: 20px !important;
+        padding: 32px 16px !important;
+        box-sizing: border-box !important;
+      }
+
+      footer .footer-col,
+      footer .footer-column,
+      .footer-contacts,
+      .footer-legal {
+        width: 100% !important;
+        max-width: 100% !important;
+        margin: 0 !important;
+      }
+
+      footer p, .footer-contact-title, .footer-contacts p {
+        font-size: 0.9rem !important;
+        line-height: 1.5 !important;
+        word-break: break-word !important;
+      }
+    }
+
+    /* 3. ДЕСКТОПНЫЕ СТИЛИ (от 769px) */
+    @media (min-width: 769px) {
+      .works-grid,
+      .exhibitions-grid {
+        display: grid !important;
+        grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)) !important;
+        gap: 36px !important;
+        align-items: start !important;
+      }
+
+      .works-grid img,
+      .exhibitions-grid img,
+      .work-card img,
+      .exhibition-card img {
+        width: 100% !important;
+        aspect-ratio: 4 / 3 !important;
+        height: auto !important;
+        object-fit: cover !important;
+        object-position: center !important;
+        display: block !important;
+        margin-bottom: 0 !important;
+      }
+
+      .work-card-info,
+      .card-info {
+        margin-top: 8px !important;
+      }
+    }
+  </style>
 </head>
 <body>
     <header class="site-header">
