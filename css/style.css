@@ -2254,3 +2254,147 @@ picture img {
   display: block !important;
 }
 
+
+/* === STRICT MOBILE LAYOUT <768px === */
+html, body {
+  overflow-x: hidden !important;
+  max-width: 100vw !important;
+  width: 100% !important;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box !important;
+}
+
+img, video, iframe, embed, object {
+  max-width: 100% !important;
+  height: auto !important;
+}
+
+@media (max-width: 767.98px) {
+  html, body {
+    overflow-x: hidden !important;
+    max-width: 100vw !important;
+  }
+
+  .container,
+  main,
+  .main-content,
+  [role="main"] {
+    max-width: 100% !important;
+    width: 100% !important;
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+    box-sizing: border-box !important;
+  }
+
+  /* Все двухколоночные и многоколоночные сетки → 1 столбик */
+  .grid-2-col,
+  .grid-12,
+  .hero-split-grid,
+  .home-curators-grid,
+  .events-two-photos,
+  .contacts-grid,
+  .curator-hero-grid,
+  .curator-works-grid,
+  .curator-row-grid,
+  .workshop-split-section,
+  .significant-events-grid,
+  .footer-inner-grid,
+  .works-five-mosaic,
+  .events-flow-grid,
+  .works-editorial-gallery,
+  .works-six-grid,
+  .other-works-grid,
+  .how-to-buy-grid,
+  .exhibits-unified-grid,
+  .exhibitions-grid,
+  .works-grid,
+  .artwork-container,
+  .work-detail,
+  .work-single,
+  .product-detail,
+  .work-detail-photos-grid,
+  [style*="grid-template-columns:1fr 1fr"],
+  [style*="grid-template-columns: 1fr 1fr"],
+  [style*="grid-template-columns:1fr 1fr;"],
+  [style*="display:grid"][style*="1fr 1fr"] {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 24px !important;
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  /* Правое выравнивание на мобиле сбрасываем влево */
+  [style*="text-align: right"],
+  [style*="text-align:right"] {
+    text-align: left !important;
+  }
+
+  /* Шапка */
+  header,
+  .site-header,
+  .header-inner,
+  .header-container {
+    flex-wrap: wrap !important;
+    max-width: 100% !important;
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+  }
+
+  /* Подвал: текст в 2 раза меньше */
+  .site-footer,
+  footer.site-footer {
+    font-size: 7px !important;
+    line-height: 1.5 !important;
+    padding: 28px 0 !important;
+  }
+
+  .site-footer p,
+  .site-footer div,
+  .site-footer a,
+  .site-footer span,
+  .footer-col-1,
+  .footer-col-2,
+  .footer-col-3,
+  .footer-contact-group,
+  .footer-contact-title,
+  .footer-inner-grid {
+    font-size: 7px !important;
+    line-height: 1.5 !important;
+  }
+
+  .site-footer .footer-contact-title {
+    font-size: 7px !important;
+    letter-spacing: 0.04em !important;
+  }
+
+  .btn-footer-outline {
+    font-size: 7px !important;
+    padding: 6px 10px !important;
+  }
+
+  .footer-social-row {
+    gap: 8px !important;
+    flex-wrap: wrap !important;
+  }
+
+  /* Карточки работ на всю ширину */
+  .work-card,
+  .works-six-grid .work-card,
+  .other-works-grid .work-card {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  /* Убираем возможные вылеты */
+  section,
+  .container > *,
+  main > * {
+    max-width: 100% !important;
+  }
+}
+
