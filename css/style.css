@@ -297,7 +297,7 @@
 /* ================= КОНЕЦ ШРИФТОВ ================= */
 
 :root {
-  --color-bg: #F3F0EB;
+  --color-bg: #FFFFFF;
   --color-primary: #1A1A1A;
   --color-secondary: #7A756D;
   --color-muted: #7A756D;
@@ -2912,11 +2912,11 @@ main .container h2.section-title {
 
 /* === GALLERY DESIGN SYSTEM v1 === */
 html, body {
-  background-color: #F3F0EB !important;
+  background-color: #FFFFFF !important;
   color: #1A1A1A !important;
 }
 .site-header {
-  background: #F3F0EB !important;
+  background: #FFFFFF !important;
   border-bottom-color: #E5E0D8 !important;
 }
 .brand-logo, .nav-link, .section-title, .lead-text, h1, h2, h3 {
@@ -2997,4 +2997,117 @@ h1.hero-title {
 }
 .btn-telegram:hover, .nav-link-btn:hover {
   opacity: 0.7 !important;
+}
+
+/* === HOME + EXHIBITS + FOOTER TWEAKS === */
+html, body {
+  background-color: #FFFFFF !important;
+  color: #1A1A1A;
+}
+.site-header {
+  background: #FFFFFF !important;
+}
+
+/* Главная */
+.hero-eyebrow {
+  font-size: 14px !important;
+  font-weight: 400 !important;
+  letter-spacing: 0.08em !important;
+  text-transform: uppercase !important;
+  margin-bottom: 12px !important;
+}
+.hero-main-title {
+  font-size: 26px !important;
+  font-weight: 700 !important;
+  line-height: 1.25 !important;
+  letter-spacing: 0 !important;
+  text-transform: none !important;
+}
+.hero-split-text .lead-text {
+  font-size: 14px !important;
+  line-height: 1.5 !important;
+}
+.hero-split-text .btn-telegram {
+  font-size: 14px !important;
+}
+
+/* Секции главной: Мастерская, Для кураторов, Актуальные события */
+.home-workshop-section .section-title,
+.home-curators-box .section-title,
+.home-events-preview .section-title {
+  font-size: 26px !important;
+  font-weight: 400 !important;
+  letter-spacing: 0 !important;
+  text-transform: none !important;
+  color: #1A1A1A !important;
+}
+.home-workshop-section .section-title a,
+.home-events-preview .section-title a {
+  text-decoration: none !important;
+  color: inherit !important;
+}
+
+/* Ссылки-кнопки без рамки, жирные */
+.home-workshop-section .btn-arrow,
+.home-events-preview .btn-arrow {
+  font-weight: 700 !important;
+  font-size: 14px !important;
+  border: none !important;
+  background: none !important;
+  padding: 0 !important;
+  text-decoration: none !important;
+  color: #1A1A1A !important;
+  display: inline !important;
+}
+.home-workshop-section .btn-arrow:hover,
+.home-events-preview .btn-arrow:hover {
+  opacity: 0.65 !important;
+}
+
+/* Этикетка выставочных работ */
+.exhibits-unified-grid .work-info,
+.exhibits-unified-grid .museum-label {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: flex-start !important;
+  gap: 2px !important;
+  margin-top: 10px !important;
+}
+.exhibits-unified-grid .work-title,
+.exhibits-unified-grid .ml-title {
+  font-size: 14px !important;
+  font-weight: 500 !important;
+  color: #1A1A1A !important;
+}
+.exhibits-unified-grid .work-title strong {
+  font-weight: 500 !important;
+}
+.exhibits-unified-grid .ml-meta,
+.exhibits-unified-grid .work-material {
+  font-size: 13px !important;
+  color: #7A756D !important;
+  font-weight: 400 !important;
+}
+.exhibits-unified-grid .work-status,
+.exhibits-unified-grid .ml-status {
+  font-size: 13px !important;
+  font-weight: 400 !important;
+  color: #7A756D !important;
+  letter-spacing: 0.02em !important;
+  text-transform: none !important;
+  background: none !important;
+  border: none !important;
+  padding: 0 !important;
+}
+
+/* Футер: без подчёркивания */
+.site-footer a,
+.site-footer a[href*="privacy"],
+.site-footer a[href^="mailto:"] {
+  text-decoration: none !important;
+  border-bottom: none !important;
+}
+.site-footer a:hover {
+  opacity: 0.75 !important;
+  text-decoration: none !important;
 }
