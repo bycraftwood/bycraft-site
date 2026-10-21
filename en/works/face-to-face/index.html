@@ -75,7 +75,7 @@
 }
   </script>
   <link rel="icon" href="../../../images/favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="../../../css/style.css?v=890">
+  <link rel="stylesheet" href="../../../css/style.css?v=900">
 
 
 
@@ -605,8 +605,9 @@ section:has(.work-meta) {
 footer a[href^="mailto:"],
 .site-footer a[href^="mailto:"],
 .footer a[href^="mailto:"] {
+  text-decoration: none !important;
+  border-bottom: none !important;
   color: inherit !important;
-  text-decoration: underline !important;
 }
 
 /* 4. СТРОГАЯ МОБИЛЬНАЯ АДАПТИВНОСТЬ (< 768px) */
@@ -1453,7 +1454,7 @@ footer a[href^="mailto:"],
         </div>
         <div class="footer-col-3">
           <div class="footer-contact-group">
-            <div class="footer-contact-title">EMAIL: <a href="mailto:info@bycraft.by" style="text-decoration:none;color:inherit;">info@bycraft.by</a></div>
+            <div class="footer-contact-title">EMAIL: <a href="mailto:info@bycraft.by" style="text-decoration:none !important; border-bottom:none !important; color:inherit;">info@bycraft.by</a></div>
             <div></div>
           </div>
           <div class="footer-social-row" style="margin-top: 14px;">

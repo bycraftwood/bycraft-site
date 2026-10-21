@@ -1836,8 +1836,8 @@ picture img {
 
 .footer-col-1 a {
   font-size: 11px !important;
-  color: #ADB5BD !important;
-  text-decoration: underline !important;
+  color: #FFFFFF !important;
+  text-decoration: none !important;
 }
 
 .footer-col-1 a:hover {
@@ -3372,4 +3372,54 @@ a.btn-footer-outline {
   .nav-item-dropdown.is-open > .nav-dropdown {
     display: block;
   }
+}
+
+/* === FINAL FOOTER EMAIL + EXHIBITS 4:5 === */
+.site-footer a[href^="mailto:"],
+.site-footer a[href*="mailto:"],
+footer a[href^="mailto:"],
+.footer a[href^="mailto:"],
+.footer-contact-title a[href^="mailto:"],
+.footer-col-1 a[href^="mailto:"],
+.footer-col-3 a[href^="mailto:"] {
+  text-decoration: none !important;
+  border-bottom: none !important;
+  box-shadow: none !important;
+  background-image: none !important;
+}
+
+/* Выставочные: единый кадр 4:5 */
+.exhibits-unified-grid .work-img-wrap {
+  aspect-ratio: 4 / 5 !important;
+  overflow: hidden !important;
+  background-color: #F4F4F4 !important;
+}
+.exhibits-unified-grid .work-img-wrap img,
+.exhibits-unified-grid .work-img-wrap picture,
+.exhibits-unified-grid .work-img-wrap picture img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  object-position: center !important;
+  display: block !important;
+  aspect-ratio: auto !important;
+}
+
+/* Ссылки-стрелки без рамки */
+.btn-arrow,
+a.btn-arrow {
+  border: none !important;
+  border-bottom: none !important;
+  background: none !important;
+  box-shadow: none !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
+/* Заголовки works/exhibitions без принудительного uppercase из section-title */
+.works-title-row .section-title {
+  text-transform: none !important;
+  letter-spacing: 0.02em !important;
+  font-size: 14px !important;
+  font-weight: 500 !important;
 }

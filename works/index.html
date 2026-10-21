@@ -50,7 +50,7 @@
 }
   </script>
   <link rel="icon" href="../images/favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="../css/style.css?v=890">
+  <link rel="stylesheet" href="../css/style.css?v=900">
 
 
 
@@ -151,7 +151,7 @@ img {
   display: block !important;
   font-size: 11px !important;
   color: #474B4F !important;
-  text-transform: uppercase !important;
+  text-transform: none !important;
   letter-spacing: 0.05em !important;
   margin-bottom: 5px !important;
 }
@@ -190,7 +190,7 @@ img {
   font-family: inherit !important;
   font-size: 13px !important;
   font-weight: 500 !important;
-  text-transform: uppercase !important;
+  text-transform: none !important;
   letter-spacing: 0.06em !important;
   color: #FFFFFF !important;
   background: #222629 !important;
@@ -580,8 +580,9 @@ section:has(.work-meta) {
 footer a[href^="mailto:"],
 .site-footer a[href^="mailto:"],
 .footer a[href^="mailto:"] {
+  text-decoration: none !important;
+  border-bottom: none !important;
   color: inherit !important;
-  text-decoration: underline !important;
 }
 
 /* 4. СТРОГАЯ МОБИЛЬНАЯ АДАПТИВНОСТЬ (< 768px) */
@@ -747,7 +748,7 @@ footer a[href^="mailto:"],
   display: block !important;
   font-size: 11px !important;
   color: #474B4F !important;
-  text-transform: uppercase !important;
+  text-transform: none !important;
   letter-spacing: 0.05em !important;
   margin-bottom: 5px !important;
 }
@@ -786,7 +787,7 @@ footer a[href^="mailto:"],
   font-family: inherit !important;
   font-size: 13px !important;
   font-weight: 500 !important;
-  text-transform: uppercase !important;
+  text-transform: none !important;
   letter-spacing: 0.06em !important;
   color: #FFFFFF !important;
   background: #222629 !important;
@@ -1205,7 +1206,7 @@ footer a[href^="mailto:"],
     background: #fff !important;
     color: #222 !important;
     font-size: 13px !important;
-    text-transform: uppercase !important;
+    text-transform: none !important;
   }
   .main-nav {
     display: none !important;
@@ -1278,7 +1279,7 @@ footer a[href^="mailto:"],
   <main>
     
     <div class="container works-title-row">
-      <h1 class="section-title" style="font-size:14px; letter-spacing:0.06em; text-transform:uppercase; font-weight:500;">Скульптурные арт-объекты из сувеля берёзы</h1>
+      <h1 class="section-title" style="font-size:14px; font-weight:500; letter-spacing:0.02em; text-transform:none;">Скульптурные арт-объекты из сувеля берёзы</h1>
       <label class="visually-hidden" for="works-filter-select" style="position:absolute;left:-9999px;">Фильтр</label>
       <select id="works-filter-select" class="works-filter-select" aria-label="Фильтр работ">
         <option value="all">Все работы</option>
@@ -1401,7 +1402,7 @@ footer a[href^="mailto:"],
     <!-- Блок «Как купить» -->
     <section class="container" style="margin-bottom: 90px;">
       <div style="background: #F8F9FA; border: 1px solid var(--color-border); padding: 48px 36px;">
-        <h2 class="section-title" style="margin-bottom: 4px; font-size: 20px;">Как купить</h2>
+        <h2 class="section-title" style="margin-bottom: 4px; font-size: 20px; text-transform: none; letter-spacing: 0.02em;" style="margin-bottom: 4px; font-size: 20px;">Как купить</h2>
         <p class="caption" style="font-size: 15px; color: var(--color-muted); margin-bottom: 0;">три шага — от выбора до доставки</p>
         <div style="height: 28px;"></div>
         <div style="height: 28px;"></div>
@@ -1576,7 +1577,7 @@ footer a[href^="mailto:"],
         </div>
         <div class="footer-col-3">
           <div class="footer-contact-group">
-            <div class="footer-contact-title">ЭЛЕКТРОННАЯ ПОЧТА: <a href="mailto:info@bycraft.by" style="text-decoration:none;color:inherit;">info@bycraft.by</a></div>
+            <div class="footer-contact-title">ЭЛЕКТРОННАЯ ПОЧТА: <a href="mailto:info@bycraft.by" style="text-decoration:none !important; border-bottom:none !important; color:inherit;">info@bycraft.by</a></div>
             <div></div>
           </div>
           <div class="footer-social-row" style="margin-top: 14px;">
