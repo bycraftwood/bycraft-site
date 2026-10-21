@@ -297,11 +297,11 @@
 /* ================= КОНЕЦ ШРИФТОВ ================= */
 
 :root {
-  --color-bg: #FFFFFF;
-  --color-primary: #222629;
-  --color-secondary: #474B4F;
-  --color-muted: #868E96;
-  --color-border: #E9ECEF;
+  --color-bg: #F3F0EB;
+  --color-primary: #1A1A1A;
+  --color-secondary: #7A756D;
+  --color-muted: #7A756D;
+  --color-border: #E5E0D8;
   --font-base: 'Montserrat', -apple-system, BlinkMacSystemFont, sans-serif;
   --container-max: 1240px;
 }
@@ -2842,4 +2842,159 @@ main .container h2.section-title {
     display: flex !important;
     align-items: center !important;
   }
+}
+
+/* === SPEC PLAQUE (museum) === */
+.spec-plaque {
+  display: block;
+  width: 100%;
+  margin: 0 0 28px 0;
+  padding: 0;
+  border: none;
+}
+.spec-plaque .spec-row {
+  display: grid;
+  grid-template-columns: minmax(88px, 110px) 1fr;
+  gap: 8px 20px;
+  align-items: baseline;
+  padding: 12px 0;
+  margin: 0;
+  border-bottom: 1px solid rgba(34, 38, 41, 0.08);
+}
+.spec-plaque .spec-row:first-child {
+  border-top: 1px solid rgba(34, 38, 41, 0.08);
+}
+.spec-plaque dt {
+  margin: 0;
+  padding: 0;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #868E96;
+  line-height: 1.4;
+}
+.spec-plaque dd {
+  margin: 0;
+  padding: 0;
+  font-size: 15px;
+  font-weight: 400;
+  color: #222629;
+  line-height: 1.5;
+}
+.spec-status-dot {
+  display: inline-block;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #222629;
+  margin-right: 8px;
+  vertical-align: middle;
+  opacity: 0.7;
+}
+/* тёмный футер не затрагиваем; на светлом фоне страницы работ — тёмные линии */
+@media (max-width: 600px) {
+  .spec-plaque .spec-row {
+    grid-template-columns: 1fr;
+    gap: 4px;
+    padding: 10px 0;
+  }
+}
+
+/* Скрыть старые meta-row если остались */
+.work-detail-info .meta-row {
+  display: none !important;
+}
+.work-detail-info .spec-plaque + .meta-row,
+.work-detail-info .spec-plaque ~ .meta-row {
+  display: none !important;
+}
+
+/* === GALLERY DESIGN SYSTEM v1 === */
+html, body {
+  background-color: #F3F0EB !important;
+  color: #1A1A1A !important;
+}
+.site-header {
+  background: #F3F0EB !important;
+  border-bottom-color: #E5E0D8 !important;
+}
+.brand-logo, .nav-link, .section-title, .lead-text, h1, h2, h3 {
+  color: #1A1A1A !important;
+}
+
+/* Типографика: 4–5 ступеней */
+:root {
+  --fs-xs: 12px;
+  --fs-sm: 14px;
+  --fs-base: 16px;
+  --fs-md: 18px;
+  --fs-lg: 22px;
+}
+.section-title {
+  font-size: var(--fs-sm) !important;
+  font-weight: 500 !important;
+  letter-spacing: 0.08em !important;
+  text-transform: uppercase !important;
+  color: #7A756D !important;
+}
+/* H1 главной — тише */
+.hero-main-title,
+main .hero h1,
+.home-hero h1,
+h1.hero-title {
+  font-size: clamp(22px, 4vw, 32px) !important;
+  font-weight: 400 !important;
+  letter-spacing: 0.01em !important;
+  line-height: 1.25 !important;
+  text-transform: none !important;
+}
+
+/* Статусы — не капс в UI-смысле, не жирные, не плашки */
+.work-status,
+.spec-plaque dd,
+.spec-status-dot + * {
+  font-weight: 400 !important;
+  text-transform: none !important;
+}
+.work-status {
+  font-size: var(--fs-xs) !important;
+  letter-spacing: 0.08em !important;
+  color: #7A756D !important;
+  background: none !important;
+  border: none !important;
+  padding: 0 !important;
+}
+
+/* Музейная этикетка под изображениями */
+.museum-label {
+  margin-top: 10px;
+  margin-bottom: 4px;
+  font-size: 13px;
+  line-height: 1.45;
+  color: #1A1A1A;
+}
+.museum-label .ml-title {
+  font-weight: 500;
+}
+.museum-label .ml-meta {
+  color: #7A756D;
+  font-size: 12px;
+  margin-top: 2px;
+}
+.museum-label .ml-status {
+  color: #7A756D;
+  font-size: 12px;
+  letter-spacing: 0.06em;
+  margin-top: 2px;
+}
+
+/* Кнопки без яркого акцента */
+.btn-telegram, .nav-link-btn, .btn-arrow {
+  background: transparent !important;
+  color: #1A1A1A !important;
+  border: 1px solid #1A1A1A !important;
+}
+.btn-telegram:hover, .nav-link-btn:hover {
+  opacity: 0.7 !important;
 }

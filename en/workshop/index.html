@@ -50,7 +50,7 @@
 }
   </script>
   <link rel="icon" href="/images/favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="../../css/style.css?v=830">
+  <link rel="stylesheet" href="../../css/style.css?v=850">
 
 
 
@@ -1344,7 +1344,7 @@ footer a[href^="mailto:"],
       text-align: left !important;
     }
 
-    /* 5. БЛОК ДРУГИЕ ВЫСТАВОЧНЫЕ РАБОТЫ: внизу */
+    /* 5. БЛОК ДРУГИЕ Выставочные работы: внизу */
     .other-works,
     .related-works,
     .other-exhibitions {
@@ -1511,6 +1511,178 @@ footer a[href^="mailto:"],
         <a href="../../en/works/" class="btn-arrow" style="font-size: 18px;">View works →</a>
       </div>
     </section>
+  
+    <section class="container collections-map-box">
+    <div class="map-header-flex">
+      <div>
+        <h2 class="section-title" style="margin-bottom: 6px;">GEOGRAPHY OF WORKS</h2>
+        <p class="lead-text" style="font-size: 15px;"></p>
+      </div>
+      <div class="map-badge">
+        4 Continents · 24 Countries
+      </div>
+    </div>
+
+    <div class="map-svg-wrap">
+      <svg viewBox="0 0 1000 500" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <radialGradient id="hubGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#222629" stop-opacity="1" />
+      <stop offset="100%" stop-color="#222629" stop-opacity="0" />
+    </radialGradient>
+  </defs>
+
+  <!-- Тонкая архитектурная координатная сетка -->
+  <g stroke="#F1F3F5" stroke-width="1" stroke-dasharray="3,3">
+    <!-- Параллели -->
+    <line x1="40" y1="125" x2="960" y2="125" />
+    <line x1="40" y1="250" x2="960" y2="250" stroke="#E9ECEF" stroke-dasharray="none" />
+    <line x1="40" y1="375" x2="960" y2="375" />
+    <!-- Меридианы -->
+    <line x1="200" y1="50" x2="200" y2="450" />
+    <line x1="380" y1="50" x2="380" y2="450" />
+    <line x1="530" y1="50" x2="530" y2="450" stroke="#E9ECEF" stroke-dasharray="none" />
+    <line x1="720" y1="50" x2="720" y2="450" />
+    <line x1="880" y1="50" x2="880" y2="450" />
+  </g>
+
+  <!-- Эстетичные контуры континентов -->
+  <g fill="#F4F5F7" stroke="#DDE1E6" stroke-width="1.2" stroke-linejoin="round">
+    <!-- Северная Америка -->
+    <path d="M 85,95 Q 130,60 210,65 Q 280,68 310,105 Q 325,120 295,145 Q 290,165 240,185 Q 210,195 195,255 Q 185,275 170,265 Q 165,230 145,215 Q 120,205 105,160 Z" />
+    <!-- Гренландия -->
+    <path d="M 330,45 Q 375,40 370,75 Q 345,95 325,80 Z" />
+    <!-- Южная Америка -->
+    <path d="M 215,280 Q 265,275 295,310 Q 325,360 280,445 Q 260,455 245,430 Q 230,355 210,320 Z" />
+    <!-- Европа -->
+    <path d="M 445,90 Q 480,75 540,80 Q 560,95 565,130 Q 545,160 500,165 Q 465,160 450,135 Z" />
+    <path d="M 425,100 Q 440,95 440,120 Q 425,130 420,115 Z" />
+    <path d="M 485,55 Q 515,50 510,80 Q 490,85 480,70 Z" />
+    <!-- Африка -->
+    <path d="M 450,180 Q 535,175 565,230 Q 575,290 535,375 Q 495,395 480,365 Q 445,285 435,235 Z" />
+    <!-- Азия -->
+    <path d="M 555,80 Q 660,65 830,75 Q 890,95 865,165 Q 835,190 775,225 Q 735,245 710,230 Q 675,215 635,210 Q 580,180 560,135 Z" />
+    <!-- Индостан и ЮВА -->
+    <path d="M 685,215 Q 720,220 710,270 Q 690,285 675,250 Z" />
+    <path d="M 770,225 Q 805,230 790,280 Q 765,280 755,245 Z" />
+    <!-- Япония -->
+    <path d="M 855,140 Q 875,135 870,175 Q 850,185 845,160 Z" />
+    <!-- Австралия -->
+    <path d="M 765,320 Q 865,315 875,370 Q 855,420 790,415 Q 755,385 750,350 Z" />
+    <!-- Новая Зеландия -->
+    <path d="M 895,405 Q 915,400 905,435 Q 890,440 885,420 Z" />
+  </g>
+
+  <!-- Пульсирующие ореолы ключевых коллекционных центров -->
+  <g fill="none" stroke="#222629" stroke-width="1.2">
+    <!-- Нью-Йорк / Восточное побережье США -->
+    <circle cx="235" cy="142" r="4" class="pulse-ring" />
+    <!-- Лондон / Великобритания -->
+    <circle cx="452" cy="116" r="4" class="pulse-ring" />
+    <!-- Париж / Франция -->
+    <circle cx="468" cy="132" r="4" class="pulse-ring" />
+    <!-- Берлин / Германия -->
+    <circle cx="496" cy="120" r="4" class="pulse-ring" />
+    <!-- Минск (Центр студии) -->
+    <circle cx="538" cy="114" r="5" class="pulse-ring" stroke-width="1.6" />
+    <!-- Москва / Россия -->
+    <circle cx="566" cy="108" r="4" class="pulse-ring" />
+        <!-- Шанхай / Китай -->
+    <circle cx="815" cy="185" r="4" class="pulse-ring" />
+    <!-- Токио / Япония -->
+    <circle cx="862" cy="155" r="4" class="pulse-ring" />
+    <!-- Сингапур -->
+    <circle cx="772" cy="275" r="4" class="pulse-ring" />
+    <!-- Сидней / Австралия -->
+    <circle cx="855" cy="385" r="4" class="pulse-ring" />
+  </g>
+
+      <!-- Китай: Пекин, Шанхай, Гуанчжоу -->
+    <circle cx="785" cy="145" r="3.5" /><circle cx="815" cy="185" r="4" /><circle cx="775" cy="225" r="3.5" />
+    <!-- Точки всех 25 стран присутствия BYCRAFT -->
+  <g fill="#222629">
+    <!-- США: Нью-Йорк, Чикаго, Лос-Анджелес -->
+    <circle cx="235" cy="142" r="4" /><circle cx="205" cy="135" r="3.5" /><circle cx="150" cy="155" r="3.5" />
+    <!-- Канада: Торонто, Ванкувер -->
+    <circle cx="220" cy="120" r="3.5" /><circle cx="145" cy="115" r="3" />
+    <!-- Великобритания и Ирландия -->
+    <circle cx="452" cy="116" r="3.5" /><circle cx="438" cy="114" r="3" />
+    <!-- Европа: Германия, Франция, Италия, Испания, Австрия, Бельгия, Дания, Швеция, Португалия, Латвия -->
+    <circle cx="496" cy="120" r="3.5" />
+    <circle cx="468" cy="132" r="3.5" />
+    <circle cx="498" cy="148" r="3.5" />
+    <circle cx="448" cy="155" r="3.5" />
+    <circle cx="506" cy="132" r="3" />
+    <circle cx="474" cy="122" r="3" />
+    <circle cx="492" cy="98" r="3" />
+    <circle cx="512" cy="85" r="3" />
+    <circle cx="432" cy="158" r="3" />
+    <circle cx="530" cy="102" r="3" />
+    <!-- Минск (BYCRAFT студия - акцентная метка) -->
+    <circle cx="538" cy="114" r="5" />
+    <circle cx="538" cy="114" r="2" fill="#FFFFFF" />
+    <!-- Россия -->
+    <circle cx="566" cy="108" r="4" /><circle cx="615" cy="115" r="3.5" />
+    <!-- Турция и Израиль -->
+    <circle cx="546" cy="154" r="3.5" /><circle cx="562" cy="172" r="3" />
+    <!-- Япония, Сингапур, Малайзия -->
+    <circle cx="862" cy="155" r="3.5" /><circle cx="772" cy="275" r="3.5" /><circle cx="765" cy="262" r="3" />
+    <!-- Австралия и Новая Зеландия -->
+    <circle cx="855" cy="385" r="4" /><circle cx="795" cy="375" r="3.5" /><circle cx="902" cy="418" r="3.5" />
+  </g>
+</svg>
+    </div>
+
+    <div class="map-continents-grid">
+      <div class="continent-group">
+        <h4>North America</h4>
+        <ul>
+          <li>United States</li>
+          <li>Canada</li>
+        </ul>
+      </div>
+
+      <div class="continent-group">
+        <h4>Europe</h4>
+        <ul>
+          <li>United Kingdom</li>
+          <li>Germany</li>
+          <li>France</li>
+          <li>Italy</li>
+          <li>Spain</li>
+          <li>Austria</li>
+          <li>Belgium</li>
+          <li>Denmark</li>
+          <li>Sweden</li>
+          <li>Ireland</li>
+          <li>Portugal</li>
+          <li>Latvia</li>
+          <li>Belarus</li>
+          <li>Russia</li>
+        </ul>
+      </div>
+
+      <div class="continent-group">
+        <h4>Asia & Middle East</h4>
+        <ul>
+          <li>China</li>
+          <li>Japan</li>
+          <li>Singapore</li>
+          <li>Malaysia</li>
+          <li>Turkey</li>
+          <li>Israel</li>
+        </ul>
+      </div>
+
+      <div class="continent-group">
+        <h4>Oceania</h4>
+        <ul>
+          <li>Australia</li>
+          <li>New Zealand</li>
+        </ul>
+      </div>
+    </div>
+  </section>
   </main>
                         <footer class="site-footer">
     <div class="container">
