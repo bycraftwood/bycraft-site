@@ -50,7 +50,7 @@
 }
   </script>
   <link rel="icon" href="../images/favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="../css/style.css?v=870">
+  <link rel="stylesheet" href="../css/style.css?v=880">
 
 
 
@@ -1263,6 +1263,7 @@ footer a[href^="mailto:"],
       <button class="mobile-toggle" aria-label="Открыть меню">Меню</button>
       <nav class="main-nav">
         <a href="../works/" class="nav-link active">Работы</a>
+        <a href="../works/exhibitions/" class="nav-link nav-sub">Выставочные работы</a>
         <a href="../workshop/" class="nav-link ">Мастерская</a>
         <a href="../events/" class="nav-link ">События</a>
         <a href="../curators/" class="nav-link ">Для кураторов</a>
@@ -1276,9 +1277,18 @@ footer a[href^="mailto:"],
     </div>
   </header>
   <main>
-    <div class="container" style="margin-top: 40px; margin-bottom: 10px;">
-      <h1 class="section-title" style="margin-bottom: 0; font-size: 26px;">Скульптурные арт-объекты из сувеля берёзы</h1>
+    
+    <div class="container works-title-row">
+      <h1 class="section-title">Скульптурные арт-объекты из сувеля берёзы</h1>
+      <label class="visually-hidden" for="works-filter-select" style="position:absolute;left:-9999px;">Фильтр</label>
+      <select id="works-filter-select" class="works-filter-select" aria-label="Фильтр работ">
+        <option value="all">Все работы</option>
+        <option value="available">Доступные</option>
+        <option value="exhibition">Выставочные</option>
+        <option value="archive">Архив</option>
+      </select>
     </div>
+
 
 <section class="container" style="margin-top: 48px; margin-bottom: 40px;">
   <div class="works-page-intro">
@@ -1287,23 +1297,7 @@ footer a[href^="mailto:"],
     </p>
   </div>
 
-  <div class="works-filter" role="group" aria-label="Фильтр работ">
-    <button type="button" class="is-active" data-filter="available">Доступные</button>
-    <button type="button" data-filter="exhibition">Выставочные</button>
-    <button type="button" data-filter="archive">Архив</button>
-  </div>
-
-  <div class="works-page-intro" style="margin-top: 8px;">
-    <p class="lead-text" style="margin-bottom: 12px; font-weight: 600;">Скульптуры в частных коллекциях</p>
-    <p class="lead-text" style="margin-bottom: 12px;">
-      Большинство представленных работ уже нашли свои дома в Минске, Москве и других городах. Они находят владельцев на маркетах и выставках быстрее, чем попадают на сайт
-    </p>
-    <p class="lead-text" style="margin-bottom: 20px;">
-      В нашем Telegram-канале мы в реальном времени публикуем работы, готовые к отправке прямо сейчас, а также анонсы маркетов, где их можно увидеть вживую
-    </p>
-    <a href="https://t.me/bycraft" target="_blank" rel="noopener noreferrer" class="btn-telegram">Следить за наличием в Telegram</a>
-  </div>
-</section>
+  </section>
 
 <!-- Заголовок галереи: такой же формат, как Выставочные работы -->
     <div class="container" style="margin-bottom: 24px;">
@@ -1348,7 +1342,7 @@ footer a[href^="mailto:"],
               </picture>
             </div>
             <div style="margin-top: 12px; font-size: 13px; line-height: 1.6;">
-              <div style="margin-top: 2px;"><strong style="color: var(--color-primary); font-weight: 600; letter-spacing: 0.05em;">В наличии</strong></div>
+              <div style="margin-top: 2px;"><strong style="color: var(--color-primary); font-weight: 500; letter-spacing: 0.05em;">Доступна, стоимость 2300 BYN</strong></div>
             </div>
           </a>
         </div>
@@ -1429,12 +1423,128 @@ footer a[href^="mailto:"],
       </div>
     </section>
 
-    <section class="container" style="margin-bottom: 90px;">
-      <p class="lead-text" style="margin-bottom: 16px;">
-        Работы, представленные на выставках или участвующие в конкурсах и open call. Их статус и доступность для покупки указаны в описании каждой работы
+    
+    <section class="container" style="margin-bottom: 40px;">
+      <p class="lead-text" style="margin-bottom: 0;">
+        Работы BYCRAFT уехали в 24 страны мира: их покупают для себя и дарят близким
       </p>
-      <a href="exhibitions/" class="btn-telegram">Посмотреть выставочные работы →</a>
     </section>
+    <section class="container collections-map-box">
+      <div class="map-header-flex">
+        <div>
+          <h2 class="section-title" style="margin-bottom: 6px;">География работ</h2>
+          <p class="lead-text" style="font-size: 15px;"></p>
+        </div>
+        <div class="map-badge">
+          4 континента · 24 страны мира
+        </div>
+      </div>
+
+      <div class="map-svg-wrap">
+        <svg viewBox="0 0 1000 500" xmlns="http://www.w3.org/2000/svg">
+          <g stroke="#F1F3F5" stroke-width="1" stroke-dasharray="3,3">
+            <line x1="40" y1="125" x2="960" y2="125" />
+            <line x1="40" y1="250" x2="960" y2="250" stroke="#E9ECEF" stroke-dasharray="none" />
+            <line x1="40" y1="375" x2="960" y2="375" />
+            <line x1="200" y1="50" x2="200" y2="450" />
+            <line x1="380" y1="50" x2="380" y2="450" />
+            <line x1="530" y1="50" x2="530" y2="450" stroke="#E9ECEF" stroke-dasharray="none" />
+            <line x1="720" y1="50" x2="720" y2="450" />
+            <line x1="880" y1="50" x2="880" y2="450" />
+          </g>
+          <g fill="#F4F5F7" stroke="#DDE1E6" stroke-width="1.2" stroke-linejoin="round">
+            <path d="M 85,95 Q 130,60 210,65 Q 280,68 310,105 Q 325,120 295,145 Q 290,165 240,185 Q 210,195 195,255 Q 185,275 170,265 Q 165,230 145,215 Q 120,205 105,160 Z" />
+            <path d="M 330,45 Q 375,40 370,75 Q 345,95 325,80 Z" />
+            <path d="M 215,280 Q 265,275 295,310 Q 325,360 280,445 Q 260,455 245,430 Q 230,355 210,320 Z" />
+            <path d="M 445,90 Q 480,75 540,80 Q 560,95 565,130 Q 545,160 500,165 Q 465,160 450,135 Z" />
+            <path d="M 425,100 Q 440,95 440,120 Q 425,130 420,115 Z" />
+            <path d="M 485,55 Q 515,50 510,80 Q 490,85 480,70 Z" />
+            <path d="M 450,180 Q 535,175 565,230 Q 575,290 535,375 Q 495,395 480,365 Q 445,285 435,235 Z" />
+            <path d="M 555,80 Q 660,65 830,75 Q 890,95 865,165 Q 835,190 775,225 Q 735,245 710,230 Q 675,215 635,210 Q 580,180 560,135 Z" />
+            <path d="M 685,215 Q 720,220 710,270 Q 690,285 675,250 Z" />
+            <path d="M 770,225 Q 805,230 790,280 Q 765,280 755,245 Z" />
+            <path d="M 855,140 Q 875,135 870,175 Q 850,185 845,160 Z" />
+            <path d="M 765,320 Q 865,315 875,370 Q 855,420 790,415 Q 755,385 750,350 Z" />
+            <path d="M 895,405 Q 915,400 905,435 Q 890,440 885,420 Z" />
+          </g>
+          <g fill="none" stroke="#222629" stroke-width="1.2">
+            <circle cx="235" cy="142" r="4" class="pulse-ring" />
+            <circle cx="452" cy="116" r="4" class="pulse-ring" />
+            <circle cx="468" cy="132" r="4" class="pulse-ring" />
+            <circle cx="496" cy="120" r="4" class="pulse-ring" />
+            <circle cx="538" cy="114" r="5" class="pulse-ring" stroke-width="1.6" />
+            <circle cx="566" cy="108" r="4" class="pulse-ring" />
+            <circle cx="862" cy="155" r="4" class="pulse-ring" />
+            <circle cx="772" cy="275" r="4" class="pulse-ring" />
+            <circle cx="855" cy="385" r="4" class="pulse-ring" />
+          </g>
+          <g fill="#222629">
+            <circle cx="235" cy="142" r="4" /><circle cx="205" cy="135" r="3.5" /><circle cx="150" cy="155" r="3.5" />
+            <circle cx="220" cy="120" r="3.5" /><circle cx="145" cy="115" r="3.5" />
+            <circle cx="452" cy="116" r="3.5" /><circle cx="438" cy="114" r="3" />
+            <circle cx="496" cy="120" r="3.5" /><circle cx="468" cy="132" r="3.5" /><circle cx="498" cy="148" r="3.5" />
+            <circle cx="448" cy="155" r="3.5" /><circle cx="506" cy="132" r="3" /><circle cx="474" cy="122" r="3" />
+            <circle cx="492" cy="98" r="3" /><circle cx="512" cy="85" r="3" /><circle cx="432" cy="158" r="3" />
+            <circle cx="530" cy="102" r="3" /><circle cx="538" cy="114" r="5" /><circle cx="538" cy="114" r="2" fill="#FFFFFF" />
+            <circle cx="566" cy="108" r="4" /><circle cx="615" cy="115" r="3.5" /><circle cx="546" cy="154" r="3.5" />
+            <circle cx="562" cy="172" r="3" /><circle cx="862" cy="155" r="3.5" /><circle cx="772" cy="275" r="3.5" />
+            <circle cx="765" cy="262" r="3" /><circle cx="855" cy="385" r="4" /><circle cx="795" cy="375" r="3.5" />
+            <circle cx="902" cy="418" r="3.5" />
+          </g>
+        </svg>
+      </div>
+
+          <div class="map-continents-grid">
+      <div class="continent-group">
+        <h4>Северная Америка</h4>
+        <ul>
+          <li>США</li>
+          <li>Канада</li>
+        </ul>
+      </div>
+
+      <div class="continent-group">
+        <h4>Европа</h4>
+        <ul>
+          <li>Великобритания</li>
+          <li>Германия</li>
+          <li>Франция</li>
+          <li>Италия</li>
+          <li>Испания</li>
+          <li>Австрия</li>
+          <li>Бельгия</li>
+          <li>Дания</li>
+          <li>Швеция</li>
+          <li>Ирландия</li>
+          <li>Португалия</li>
+          <li>Латвия</li>
+          <li>Беларусь</li>
+          <li>Россия</li>
+        </ul>
+      </div>
+
+      <div class="continent-group">
+        <h4>Азия и Ближний Восток</h4>
+        <ul>
+          <li>Япония</li>
+          <li>Китай</li>
+          <li>Сингапур</li>
+          <li>Малайзия</li>
+          <li>Турция</li>
+          <li>Израиль</li>
+        </ul>
+      </div>
+
+      <div class="continent-group">
+        <h4>Океания</h4>
+        <ul>
+          <li>Австралия</li>
+          <li>Новая Зеландия</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
   </main>
                         <footer class="site-footer">
     <div class="container">
@@ -1456,7 +1566,7 @@ footer a[href^="mailto:"],
         </div>
         <div class="footer-col-3">
           <div class="footer-contact-group">
-            <div class="footer-contact-title">ЭЛЕКТРОННАЯ ПОЧТА: <a href="mailto:info@bycraft.by" style="color: inherit; text-decoration: none;">info@bycraft.by</a></div>
+            <div class="footer-contact-title">ЭЛЕКТРОННАЯ ПОЧТА: <a href="mailto:info@bycraft.by" style="text-decoration:none; color:inherit;">info@bycraft.by</a></div>
             <div></div>
           </div>
           <div class="footer-social-row" style="margin-top: 14px;">
@@ -1599,32 +1709,22 @@ footer a[href^="mailto:"],
 </script>
 
 
+
 <script>
 (function(){
-  var bar = document.querySelector('.works-filter');
-  if(!bar) return;
-  bar.addEventListener('click', function(e){
-    var btn = e.target.closest('button[data-filter]');
-    if(!btn) return;
-    bar.querySelectorAll('button').forEach(function(b){ b.classList.remove('is-active'); });
-    btn.classList.add('is-active');
-    var f = btn.getAttribute('data-filter');
+  var sel = document.getElementById('works-filter-select');
+  if(!sel) return;
+  sel.addEventListener('change', function(){
+    var f = sel.value;
+    if(f === 'exhibition') { window.location.href = 'exhibitions/'; return; }
     document.querySelectorAll('.work-card[data-cat]').forEach(function(card){
-      if(f === 'exhibition') {
-        // выставочные — на отдельной странице; здесь скрываем галерею или показываем все
-        card.style.display = (f === 'exhibition') ? 'none' : '';
-        return;
-      }
+      if(f === 'all') { card.style.display = ''; return; }
       if(f === 'available') {
         card.style.display = card.getAttribute('data-cat') === 'available' ? '' : 'none';
       } else if(f === 'archive') {
-        card.style.display = card.getAttribute('data-cat') === 'archive' ? '' : '';
         card.style.display = card.getAttribute('data-cat') === 'archive' ? '' : 'none';
       }
     });
-    if(f === 'exhibition') {
-      window.location.href = 'exhibitions/';
-    }
   });
 })();
 </script>

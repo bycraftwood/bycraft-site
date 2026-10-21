@@ -3234,3 +3234,56 @@ a.btn-footer-outline {
   max-width: 100%;
   margin-bottom: 28px;
 }
+
+/* === TWEAKS Oct21e === */
+.hero-material-info {
+  font-size: 14px !important;
+  color: var(--color-muted) !important;
+}
+.home-workshop-section .section-title,
+.home-workshop-section .section-title a,
+.home-curators-box .section-title,
+.home-events-preview .section-title,
+.home-events-preview .section-title a {
+  font-weight: 400 !important;
+}
+.site-footer a[href^="mailto:"],
+.site-footer a[href*="mailto:info"] {
+  text-decoration: none !important;
+  border-bottom: none !important;
+}
+
+/* Фильтр-выпадающий рядом с заголовком */
+.works-title-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-top: 40px;
+  margin-bottom: 10px;
+}
+.works-title-row .section-title {
+  font-size: 14px !important;
+  margin: 0 !important;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+.works-filter-select {
+  font-family: inherit;
+  font-size: 13px;
+  padding: 8px 12px;
+  border: 1px solid #1A1A1A;
+  background: #fff;
+  color: #1A1A1A;
+  min-width: 180px;
+  cursor: pointer;
+}
+.nav-link.nav-sub {
+  font-size: 0.95em;
+  opacity: 0.9;
+}
+@media (max-width: 768px) {
+  .works-title-row { flex-direction: column; align-items: flex-start; }
+}
