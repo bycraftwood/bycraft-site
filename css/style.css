@@ -3111,3 +3111,126 @@ html, body {
   opacity: 0.75 !important;
   text-decoration: none !important;
 }
+
+/* === HOME WORKS FOOTER v2 === */
+.hero-material-info {
+  font-size: 14px !important;
+  color: #1A1A1A !important;
+}
+.hero-split-text .lead-text {
+  font-size: 14px !important;
+}
+
+/* Кнопки логотипного цвета, белый текст */
+.btn-telegram,
+.btn-telegram:visited {
+  background-color: #1A1A1A !important;
+  color: #FFFFFF !important;
+  border: 1px solid #1A1A1A !important;
+  font-size: 14px !important;
+  text-decoration: none !important;
+}
+.btn-telegram:hover {
+  opacity: 0.85 !important;
+  color: #FFFFFF !important;
+}
+
+/* Заголовки секций на главной */
+.home-workshop-section .section-title,
+.home-workshop-section .section-title a {
+  font-size: 26px !important;
+  font-weight: 700 !important;
+  text-decoration: underline !important;
+  text-underline-offset: 6px !important;
+  color: #1A1A1A !important;
+  letter-spacing: 0 !important;
+  text-transform: none !important;
+}
+.home-curators-box .section-title {
+  font-size: 26px !important;
+  font-weight: 700 !important;
+  text-decoration: none !important;
+  letter-spacing: 0 !important;
+  text-transform: none !important;
+  color: #1A1A1A !important;
+}
+.home-events-preview .section-title,
+.home-events-preview .section-title a {
+  font-size: 26px !important;
+  font-weight: 700 !important;
+  text-decoration: underline !important;
+  text-underline-offset: 6px !important;
+  color: #1A1A1A !important;
+  letter-spacing: 0 !important;
+  text-transform: none !important;
+}
+
+/* Футер: белый текст */
+.site-footer,
+.site-footer p,
+.site-footer div,
+.site-footer span,
+.site-footer a,
+.footer-col-1,
+.footer-col-1 p,
+.footer-col-1 a {
+  color: #FFFFFF !important;
+}
+.site-footer a[href*="privacy"],
+.site-footer a[href^="mailto:"] {
+  color: #FFFFFF !important;
+  text-decoration: none !important;
+}
+
+/* Instagram / Telegram — нижняя линия (border) */
+.btn-footer-outline,
+.footer-social-row a,
+a.btn-footer-outline {
+  border: 1px solid #FFFFFF !important;
+  border-bottom: 1px solid #FFFFFF !important;
+  color: #FFFFFF !important;
+  text-decoration: none !important;
+  background: transparent !important;
+  display: inline-block !important;
+  padding: 8px 16px !important;
+}
+
+/* Фильтр на /works/ */
+.works-filter {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 0 0 28px 0;
+}
+.works-filter button {
+  font-family: inherit;
+  font-size: 13px;
+  letter-spacing: 0.04em;
+  padding: 8px 14px;
+  border: 1px solid #1A1A1A;
+  background: #fff;
+  color: #1A1A1A;
+  cursor: pointer;
+}
+.works-filter button.is-active {
+  background: #1A1A1A;
+  color: #fff;
+}
+.work-order-similar {
+  display: inline-block;
+  margin-top: 8px;
+  font-size: 13px;
+  color: #1A1A1A;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: 0;
+  font-family: inherit;
+}
+.works-page-intro {
+  width: 100%;
+  max-width: 100%;
+  margin-bottom: 28px;
+}

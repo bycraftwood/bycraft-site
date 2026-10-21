@@ -50,7 +50,7 @@
 }
   </script>
   <link rel="icon" href="../images/favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="../css/style.css?v=860">
+  <link rel="stylesheet" href="../css/style.css?v=870">
 
 
 
@@ -1279,35 +1279,33 @@ footer a[href^="mailto:"],
     <div class="container" style="margin-top: 40px; margin-bottom: 10px;">
       <h1 class="section-title" style="margin-bottom: 0; font-size: 26px;">Скульптурные арт-объекты из сувеля берёзы</h1>
     </div>
-<section class="container" style="margin-top: 48px; margin-bottom: 50px;">
-      <div style="display:grid; grid-template-columns:1fr 1fr; gap:48px; width:100%; align-items:start;">
-        <!-- Левая колонка -->
-        <div>
-          <p class="lead-text" style="margin-bottom: 0;">
-            Каждая работа создаётся из уникального берёзового сувеля<br>
-            В галерее представлены авторские произведения, которые невозможно повторить
-          </p>
-          <div style="height: 20px;"></div>
-          <p class="lead-text" style="margin-bottom: 0; font-weight: 600; color: var(--color-primary);">
-            Актуальное наличие, стоимость и возможность приобретения уточняйте в Telegram-канале
-          </p>
-          <div style="height: 20px;"></div>
-          <div>
-            <a href="https://t.me/bycraft" target="_blank" rel="noopener noreferrer" class="btn-telegram">Посмотреть работы в наличии →</a>
-          </div>
-        </div>
 
-        <!-- Правая колонка -->
-        <div style="text-align: left;">
-          <p class="lead-text" style="margin-bottom: 16px;">
-            Работы, представленные на выставках или участвующие в конкурсах и open call. Их статус и доступность для покупки указаны в описании каждой работы
-          </p>
-          <a href="exhibitions/" class="btn-telegram">Посмотреть выставочные работы →</a>
-        </div>
-      </div>
-    </section>
+<section class="container" style="margin-top: 48px; margin-bottom: 40px;">
+  <div class="works-page-intro">
+    <p class="lead-text" style="margin-bottom: 16px; max-width: 100%;">
+      Каждая работа создаётся из уникального берёзового сувеля, с обжигом или без. В галерее представлены авторские произведения, которые невозможно повторить
+    </p>
+  </div>
 
-    <!-- Заголовок галереи: такой же формат, как Выставочные работы -->
+  <div class="works-filter" role="group" aria-label="Фильтр работ">
+    <button type="button" class="is-active" data-filter="available">Доступные</button>
+    <button type="button" data-filter="exhibition">Выставочные</button>
+    <button type="button" data-filter="archive">Архив</button>
+  </div>
+
+  <div class="works-page-intro" style="margin-top: 8px;">
+    <p class="lead-text" style="margin-bottom: 12px; font-weight: 600;">Скульптуры в частных коллекциях</p>
+    <p class="lead-text" style="margin-bottom: 12px;">
+      Большинство представленных работ уже нашли свои дома в Минске, Москве и других городах. Они находят владельцев на маркетах и выставках быстрее, чем попадают на сайт
+    </p>
+    <p class="lead-text" style="margin-bottom: 20px;">
+      В нашем Telegram-канале мы в реальном времени публикуем работы, готовые к отправке прямо сейчас, а также анонсы маркетов, где их можно увидеть вживую
+    </p>
+    <a href="https://t.me/bycraft" target="_blank" rel="noopener noreferrer" class="btn-telegram">Следить за наличием в Telegram</a>
+  </div>
+</section>
+
+<!-- Заголовок галереи: такой же формат, как Выставочные работы -->
     <div class="container" style="margin-bottom: 24px;">
       <h2 class="section-title">Работы, которые невозможно повторить</h2>
     </div>
@@ -1315,7 +1313,7 @@ footer a[href^="mailto:"],
     <!-- Сетка из 6 фото 3:4 с ценами и статусами -->
     <section class="container" style="margin-bottom: 80px;">
       <div class="works-six-grid">
-        <div class="work-card">
+        <div class="work-card" data-cat="archive">
           <div class="work-img-wrap">
             <picture>
               <source srcset="../images/works/work-247.webp" type="image/webp">
@@ -1323,12 +1321,12 @@ footer a[href^="mailto:"],
             </picture>
           </div>
           <div style="margin-top: 12px; font-size: 13px; line-height: 1.6;">
-            <div><span style="color: var(--color-muted);">стоимость:</span> <strong style="color: var(--color-primary); font-weight: 500;">780 BYN</strong></div>
             <div style="margin-top: 2px;"><strong style="color: var(--color-primary); font-weight: 500; letter-spacing: 0.05em;">Продана</strong></div>
+            <button type="button" class="work-order-similar" onclick="window.openBycraftModal && window.openBycraftModal(event)">Заказать похожий арт-объект</button>
           </div>
         </div>
 
-        <div class="work-card">
+        <div class="work-card" data-cat="archive">
           <div class="work-img-wrap">
             <picture>
               <source srcset="../images/works/work-248.webp" type="image/webp">
@@ -1336,12 +1334,12 @@ footer a[href^="mailto:"],
             </picture>
           </div>
           <div style="margin-top: 12px; font-size: 13px; line-height: 1.6;">
-            <div><span style="color: var(--color-muted);">стоимость:</span> <strong style="color: var(--color-primary); font-weight: 500;">1700 BYN</strong></div>
             <div style="margin-top: 2px;"><strong style="color: var(--color-primary); font-weight: 500; letter-spacing: 0.05em;">Продана</strong></div>
+            <button type="button" class="work-order-similar" onclick="window.openBycraftModal && window.openBycraftModal(event)">Заказать похожий арт-объект</button>
           </div>
         </div>
 
-        <div class="work-card">
+        <div class="work-card" data-cat="available">
           <a href="work-252/" style="display: block; color: inherit;">
             <div class="work-img-wrap">
               <picture>
@@ -1350,13 +1348,12 @@ footer a[href^="mailto:"],
               </picture>
             </div>
             <div style="margin-top: 12px; font-size: 13px; line-height: 1.6;">
-              <div><span style="color: var(--color-muted);">стоимость:</span> <strong style="color: var(--color-primary); font-weight: 500;">2300 BYN</strong></div>
               <div style="margin-top: 2px;"><strong style="color: var(--color-primary); font-weight: 600; letter-spacing: 0.05em;">В наличии</strong></div>
             </div>
           </a>
         </div>
 
-        <div class="work-card">
+        <div class="work-card" data-cat="archive">
           <div class="work-img-wrap">
             <picture>
               <source srcset="../images/works/work-253.webp" type="image/webp">
@@ -1364,12 +1361,12 @@ footer a[href^="mailto:"],
             </picture>
           </div>
           <div style="margin-top: 12px; font-size: 13px; line-height: 1.6;">
-            <div><span style="color: var(--color-muted);">стоимость:</span> <strong style="color: var(--color-primary); font-weight: 500;">430 BYN</strong></div>
             <div style="margin-top: 2px;"><strong style="color: var(--color-primary); font-weight: 500; letter-spacing: 0.05em;">Продана</strong></div>
+            <button type="button" class="work-order-similar" onclick="window.openBycraftModal && window.openBycraftModal(event)">Заказать похожий арт-объект</button>
           </div>
         </div>
 
-        <div class="work-card">
+        <div class="work-card" data-cat="archive">
           <div class="work-img-wrap">
             <picture>
               <source srcset="../images/works/work-254.webp" type="image/webp">
@@ -1377,12 +1374,12 @@ footer a[href^="mailto:"],
             </picture>
           </div>
           <div style="margin-top: 12px; font-size: 13px; line-height: 1.6;">
-            <div><span style="color: var(--color-muted);">стоимость:</span> <strong style="color: var(--color-primary); font-weight: 500;">1300 BYN</strong></div>
             <div style="margin-top: 2px;"><strong style="color: var(--color-primary); font-weight: 500; letter-spacing: 0.05em;">Продана</strong></div>
+            <button type="button" class="work-order-similar" onclick="window.openBycraftModal && window.openBycraftModal(event)">Заказать похожий арт-объект</button>
           </div>
         </div>
 
-        <div class="work-card">
+        <div class="work-card" data-cat="archive">
           <div class="work-img-wrap">
             <picture>
               <source srcset="../images/works/work-255.webp" type="image/webp">
@@ -1390,8 +1387,8 @@ footer a[href^="mailto:"],
             </picture>
           </div>
           <div style="margin-top: 12px; font-size: 13px; line-height: 1.6;">
-            <div><span style="color: var(--color-muted);">стоимость:</span> <strong style="color: var(--color-primary); font-weight: 500;">620 BYN</strong></div>
             <div style="margin-top: 2px;"><strong style="color: var(--color-primary); font-weight: 500; letter-spacing: 0.05em;">Продана</strong></div>
+            <button type="button" class="work-order-similar" onclick="window.openBycraftModal && window.openBycraftModal(event)">Заказать похожий арт-объект</button>
           </div>
         </div>
       </div>
@@ -1431,6 +1428,13 @@ footer a[href^="mailto:"],
         </div>
       </div>
     </section>
+
+    <section class="container" style="margin-bottom: 90px;">
+      <p class="lead-text" style="margin-bottom: 16px;">
+        Работы, представленные на выставках или участвующие в конкурсах и open call. Их статус и доступность для покупки указаны в описании каждой работы
+      </p>
+      <a href="exhibitions/" class="btn-telegram">Посмотреть выставочные работы →</a>
+    </section>
   </main>
                         <footer class="site-footer">
     <div class="container">
@@ -1438,7 +1442,7 @@ footer a[href^="mailto:"],
         <div class="footer-col-1">
           <p style="margin-bottom: 6px; font-weight: 600; font-size: 12px; color: #FFFFFF;">© 2026 BYCRAFT</p>
           <p style="margin-bottom: 8px;">Сайт не является интернет-магазином, представляет каталог примеров работ. Фотографии, тексты и видеоматериалы принадлежат автору. Ремесленник Атрош Валентин Владимирович / УНП: КА0278799</p>
-          <p><a href="https://bycraft.by/privacy/" style="text-decoration: none; color: #ADB5BD;">Политика конфиденциальности и обработки персональных данных</a></p>
+          <p><a href="https://bycraft.by/privacy/" style="text-decoration: none; color: #FFFFFF;">Политика конфиденциальности и обработки персональных данных</a></p>
         </div>
         <div class="footer-col-2">
           <div class="footer-contact-group">
@@ -1456,8 +1460,8 @@ footer a[href^="mailto:"],
             <div></div>
           </div>
           <div class="footer-social-row" style="margin-top: 14px;">
-            <a href="https://www.instagram.com/bycraft.by/" target="_blank" rel="noopener noreferrer" class="btn-footer-outline">Instagram</a>
-            <a href="https://t.me/bycraft" target="_blank" rel="noopener noreferrer" class="btn-footer-outline">Telegram</a>
+            <a href="https://www.instagram.com/bycraft.by/" target="_blank" rel="noopener noreferrer" class="btn-footer-outline" style="border:1px solid #FFFFFF; color:#FFFFFF; text-decoration:none;">Instagram</a>
+            <a href="https://t.me/bycraft" target="_blank" rel="noopener noreferrer" class="btn-footer-outline" style="border:1px solid #FFFFFF; color:#FFFFFF; text-decoration:none;">Telegram</a>
           </div>
         </div>
       </div>
@@ -1591,6 +1595,37 @@ footer a[href^="mailto:"],
   }
   if(document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init);
   else init();
+})();
+</script>
+
+
+<script>
+(function(){
+  var bar = document.querySelector('.works-filter');
+  if(!bar) return;
+  bar.addEventListener('click', function(e){
+    var btn = e.target.closest('button[data-filter]');
+    if(!btn) return;
+    bar.querySelectorAll('button').forEach(function(b){ b.classList.remove('is-active'); });
+    btn.classList.add('is-active');
+    var f = btn.getAttribute('data-filter');
+    document.querySelectorAll('.work-card[data-cat]').forEach(function(card){
+      if(f === 'exhibition') {
+        // выставочные — на отдельной странице; здесь скрываем галерею или показываем все
+        card.style.display = (f === 'exhibition') ? 'none' : '';
+        return;
+      }
+      if(f === 'available') {
+        card.style.display = card.getAttribute('data-cat') === 'available' ? '' : 'none';
+      } else if(f === 'archive') {
+        card.style.display = card.getAttribute('data-cat') === 'archive' ? '' : '';
+        card.style.display = card.getAttribute('data-cat') === 'archive' ? '' : 'none';
+      }
+    });
+    if(f === 'exhibition') {
+      window.location.href = 'exhibitions/';
+    }
+  });
 })();
 </script>
 
