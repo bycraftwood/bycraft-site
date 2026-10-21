@@ -3287,3 +3287,89 @@ a.btn-footer-outline {
 @media (max-width: 768px) {
   .works-title-row { flex-direction: column; align-items: flex-start; }
 }
+
+/* === TWEAKS dropdown footer geo === */
+.site-footer a[href^="mailto:"],
+.site-footer a[href*="mailto:info"] {
+  text-decoration: none !important;
+  border-bottom: none !important;
+  color: inherit !important;
+}
+
+.works-title-row .section-title {
+  font-size: 14px !important;
+  font-weight: 500 !important;
+  letter-spacing: 0.06em !important;
+  text-transform: uppercase !important;
+}
+
+/* География — на всю ширину контейнера */
+.collections-map-box {
+  width: 100% !important;
+  max-width: 100% !important;
+  grid-column: 1 / -1 !important;
+}
+.collections-map-box .map-svg-wrap,
+.collections-map-box .map-continents-grid {
+  width: 100% !important;
+  max-width: 100% !important;
+}
+
+/* Выпадающее меню под «Работы» */
+.nav-item-dropdown {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+}
+.nav-item-dropdown > .nav-link {
+  display: inline-block;
+}
+.nav-dropdown {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  min-width: 220px;
+  padding: 8px 0;
+  margin: 0;
+  background: #FFFFFF;
+  border: 1px solid #E5E0D8;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+  z-index: 100010;
+  list-style: none;
+}
+.nav-item-dropdown:hover > .nav-dropdown,
+.nav-item-dropdown:focus-within > .nav-dropdown,
+.nav-item-dropdown.is-open > .nav-dropdown {
+  display: block;
+}
+.nav-dropdown a {
+  display: block;
+  padding: 10px 16px;
+  color: #1A1A1A;
+  text-decoration: none;
+  font-size: 15px;
+  white-space: nowrap;
+}
+.nav-dropdown a:hover {
+  background: #F5F5F5;
+}
+/* Скрыть старый отдельный пункт «Выставочные работы» в ряду меню */
+.main-nav > a.nav-sub {
+  display: none !important;
+}
+@media (max-width: 900px) {
+  .main-nav > a.nav-sub {
+    display: block !important;
+  }
+  .nav-dropdown {
+    position: static;
+    border: none;
+    box-shadow: none;
+    padding: 0 0 0 12px;
+    display: none;
+  }
+  .nav-item-dropdown.is-open > .nav-dropdown {
+    display: block;
+  }
+}

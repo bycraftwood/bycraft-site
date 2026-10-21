@@ -50,7 +50,7 @@
 }
   </script>
   <link rel="icon" href="../images/favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="../css/style.css?v=880">
+  <link rel="stylesheet" href="../css/style.css?v=890">
 
 
 
@@ -1262,9 +1262,8 @@ footer a[href^="mailto:"],
       <a href="../" class="brand-logo">BYCRAFT</a>
       <button class="mobile-toggle" aria-label="Открыть меню">Меню</button>
       <nav class="main-nav">
-        <a href="../works/" class="nav-link active">Работы</a>
-        <a href="../works/exhibitions/" class="nav-link nav-sub">Выставочные работы</a>
-        <a href="../workshop/" class="nav-link ">Мастерская</a>
+        <span class="nav-item-dropdown"><a href="../works/" class="nav-link">Работы</a><span class="nav-dropdown"><a href="../works/exhibitions/">Выставочные работы</a></span></span>
+<a href="../workshop/" class="nav-link ">Мастерская</a>
         <a href="../events/" class="nav-link ">События</a>
         <a href="../curators/" class="nav-link ">Для кураторов</a>
         <a href="../contacts/" class="nav-link-btn">Контакты</a>
@@ -1279,7 +1278,7 @@ footer a[href^="mailto:"],
   <main>
     
     <div class="container works-title-row">
-      <h1 class="section-title">Скульптурные арт-объекты из сувеля берёзы</h1>
+      <h1 class="section-title" style="font-size:14px; letter-spacing:0.06em; text-transform:uppercase; font-weight:500;">Скульптурные арт-объекты из сувеля берёзы</h1>
       <label class="visually-hidden" for="works-filter-select" style="position:absolute;left:-9999px;">Фильтр</label>
       <select id="works-filter-select" class="works-filter-select" aria-label="Фильтр работ">
         <option value="all">Все работы</option>
@@ -1296,6 +1295,17 @@ footer a[href^="mailto:"],
       Каждая работа создаётся из уникального берёзового сувеля, с обжигом или без. В галерее представлены авторские произведения, которые невозможно повторить
     </p>
   </div>
+
+  <div class="works-page-intro" style="margin-top: 8px; margin-bottom: 28px;">
+    <p class="lead-text" style="margin-bottom: 12px;">
+      Большинство представленных работ уже нашли свои дома в Минске, Москве и других городах. Они находят владельцев на маркетах и выставках быстрее, чем попадают на сайт
+    </p>
+    <p class="lead-text" style="margin-bottom: 20px;">
+      В нашем Telegram-канале мы в реальном времени публикуем работы, готовые к отправке прямо сейчас, а также анонсы маркетов, где их можно увидеть вживую
+    </p>
+    <a href="https://t.me/bycraft" target="_blank" rel="noopener noreferrer" class="btn-telegram">Следить за наличием в Telegram</a>
+  </div>
+
 
   </section>
 
@@ -1342,7 +1352,7 @@ footer a[href^="mailto:"],
               </picture>
             </div>
             <div style="margin-top: 12px; font-size: 13px; line-height: 1.6;">
-              <div style="margin-top: 2px;"><strong style="color: var(--color-primary); font-weight: 500; letter-spacing: 0.05em;">Доступна, стоимость 2300 BYN</strong></div>
+              <div style="margin-top: 2px;"><div><strong style="color: var(--color-primary); font-weight: 700;">Доступна</strong></div><div style="margin-top: 2px; color: var(--color-muted); font-size: 13px;">стоимость 2300 BYN</div></div>
             </div>
           </a>
         </div>
@@ -1566,7 +1576,7 @@ footer a[href^="mailto:"],
         </div>
         <div class="footer-col-3">
           <div class="footer-contact-group">
-            <div class="footer-contact-title">ЭЛЕКТРОННАЯ ПОЧТА: <a href="mailto:info@bycraft.by" style="text-decoration:none; color:inherit;">info@bycraft.by</a></div>
+            <div class="footer-contact-title">ЭЛЕКТРОННАЯ ПОЧТА: <a href="mailto:info@bycraft.by" style="text-decoration:none;color:inherit;">info@bycraft.by</a></div>
             <div></div>
           </div>
           <div class="footer-social-row" style="margin-top: 14px;">
