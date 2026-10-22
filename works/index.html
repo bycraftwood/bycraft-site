@@ -50,7 +50,7 @@
 }
   </script>
   <link rel="icon" href="../images/favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="../css/style.css?v=910">
+  <link rel="stylesheet" href="../css/style.css?v=920">
 
 
 
@@ -1318,7 +1318,23 @@ footer a[href^="mailto:"],
     <!-- Сетка из 6 фото 3:4 с ценами и статусами -->
     <section class="container" style="margin-bottom: 80px;">
       <div class="works-six-grid">
-        <div class="work-card" data-cat="archive">
+        
+        <div class="work-card" data-cat="available">
+          <a href="work-188/" style="display: block; color: inherit;">
+            <div class="work-img-wrap">
+              <picture>
+                <source srcset="../images/works/work-188.webp" type="image/webp">
+                <img src="../images/works/work-188.jpg" alt="Скульптура из сувеля берёзы № 188" loading="lazy">
+              </picture>
+            </div>
+            <div style="margin-top: 12px; font-size: 13px; line-height: 1.6;">
+              <div><strong style="color: var(--color-primary); font-weight: 700;">Доступна</strong></div>
+              <div style="margin-top: 2px; color: var(--color-muted); font-size: 13px;">стоимость 795 BYN</div>
+              <button type="button" class="work-order-similar" onclick="event.preventDefault(); event.stopPropagation(); window.openBycraftModal && window.openBycraftModal(event)">Заказать похожий арт-объект</button>
+            </div>
+          </a>
+        </div>
+<div class="work-card" data-cat="archive">
           <div class="work-img-wrap">
             <picture>
               <source srcset="../images/works/work-247.webp" type="image/webp">
@@ -1577,7 +1593,7 @@ footer a[href^="mailto:"],
         </div>
         <div class="footer-col-3">
           <div class="footer-contact-group">
-            <div class="footer-contact-title">ЭЛЕКТРОННАЯ ПОЧТА: <a href="mailto:info@bycraft.by" style="text-decoration:none !important; border-bottom:none !important; color:inherit;">info@bycraft.by</a></div>
+            <div class="footer-contact-title" style="font-weight:400; text-transform:none;">электронная почта: <a href="mailto:info@bycraft.by" style="text-decoration:none !important; border-bottom:none !important; color:inherit;">info@bycraft.by</a></div>
             <div></div>
           </div>
           <div class="footer-social-row" style="margin-top: 14px;">
