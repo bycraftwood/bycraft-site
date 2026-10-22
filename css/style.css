@@ -3423,3 +3423,116 @@ a.btn-arrow {
   font-size: 14px !important;
   font-weight: 500 !important;
 }
+
+/* === BATCH Oct22 === */
+.page-title-14 {
+  font-size: 14px !important;
+  font-weight: 500 !important;
+  color: var(--color-primary, #1A1A1A) !important;
+  text-transform: none !important;
+  letter-spacing: 0.02em !important;
+}
+.page-title-14-bold {
+  font-size: 14px !important;
+  font-weight: 700 !important;
+  color: var(--color-primary, #1A1A1A) !important;
+  text-transform: none !important;
+  letter-spacing: 0.02em !important;
+}
+
+/* Характеристики снова видны */
+.work-detail-info .meta-row {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  gap: 0 6px !important;
+  margin-bottom: 6px !important;
+}
+.work-detail-info .meta-label {
+  color: var(--color-muted, #7A756D);
+}
+.work-detail-info .meta-val {
+  color: var(--color-primary, #1A1A1A);
+}
+
+/* Выставки 4:5, сетка 3+2 */
+.exhibits-unified-grid {
+  display: grid !important;
+  grid-template-columns: repeat(3, 1fr) !important;
+  gap: 36px 24px !important;
+}
+.exhibits-unified-grid .work-img-wrap {
+  aspect-ratio: 4 / 5 !important;
+  overflow: hidden !important;
+}
+.exhibits-unified-grid .work-img-wrap img,
+.exhibits-unified-grid .work-img-wrap picture,
+.exhibits-unified-grid .work-img-wrap picture img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  object-position: center !important;
+  display: block !important;
+}
+@media (max-width: 900px) {
+  .exhibits-unified-grid { grid-template-columns: repeat(2, 1fr) !important; }
+}
+@media (max-width: 600px) {
+  .exhibits-unified-grid { grid-template-columns: 1fr !important; }
+}
+
+/* Кураторы: фото 4:5 */
+.curator-hero-grid .curator-photo,
+.curator-hero-grid .curator-photo img,
+.curator-hero-grid .curator-photo picture,
+.curator-hero-grid .curator-photo picture img {
+  aspect-ratio: 4 / 5 !important;
+  object-fit: cover !important;
+  width: 100% !important;
+  height: auto !important;
+  display: block !important;
+}
+
+.btn-arrow, a.btn-arrow {
+  border: none !important;
+  border-bottom: none !important;
+  background: none !important;
+  box-shadow: none !important;
+}
+
+.other-works-title {
+  font-size: 14px !important;
+  font-weight: 700 !important;
+  color: var(--color-primary, #1A1A1A) !important;
+  text-transform: none !important;
+  letter-spacing: 0.02em !important;
+  margin-bottom: 24px !important;
+}
+
+.geo-intro-text {
+  margin-bottom: 24px;
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--color-primary, #1A1A1A);
+}
+
+/* Событие: отдельная страница */
+.event-detail-meta {
+  font-size: 14px;
+  color: var(--color-muted, #7A756D);
+  margin-bottom: 8px;
+}
+.event-detail-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin: 28px 0;
+}
+.event-detail-grid img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  display: block;
+}
+@media (max-width: 768px) {
+  .event-detail-grid { grid-template-columns: 1fr 1fr; }
+}
