@@ -3712,3 +3712,27 @@ a.btn-arrow {
 @media (max-width: 900px) {
   .exhibits-unified-grid { grid-template-columns: repeat(2, 1fr) !important; }
 }
+
+/* === WORKS GRID 7 CLEAN === */
+.works-six-grid {
+  display: grid !important;
+  grid-template-columns: repeat(3, 1fr) !important;
+  gap: 36px 24px !important;
+}
+.works-six-grid .work-img-wrap {
+  aspect-ratio: 3 / 4 !important;
+  overflow: hidden !important;
+}
+.works-six-grid .work-img-wrap img,
+.works-six-grid .work-img-wrap picture img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  display: block !important;
+}
+@media (max-width: 900px) {
+  .works-six-grid { grid-template-columns: repeat(2, 1fr) !important; }
+}
+@media (max-width: 600px) {
+  .works-six-grid { grid-template-columns: 1fr !important; }
+}
