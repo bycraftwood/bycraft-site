@@ -4582,3 +4582,10 @@ h1.section-title.work-page-title {
     -webkit-transform: none !important;
   }
 }
+
+/* === WORK 188 + EVENTS LEAD === */
+.events-level .lead-text,
+.container > .lead-text {
+  max-width: 100% !important;
+  width: 100% !important;
+}
