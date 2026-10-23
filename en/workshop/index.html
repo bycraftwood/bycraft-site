@@ -50,7 +50,7 @@
 }
   </script>
   <link rel="icon" href="/images/favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="../../css/style.css?v=1180">
+  <link rel="stylesheet" href="../../css/style.css?v=1190">
 
 
 
@@ -1295,63 +1295,6 @@ footer a[href^="mailto:"],
 
 
 
-
-<script id="bycraft-mobile-nav-v4">
-(function () {
-  function ready(fn) {
-    if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", fn);
-    else fn();
-  }
-  ready(function () {
-    var btn = document.querySelector(".mobile-toggle");
-    var nav = document.querySelector(".main-nav");
-    if (!btn || !nav) return;
-
-    // Стартовое состояние: закрыто
-    nav.classList.remove("open");
-    var isEn = location.pathname.indexOf("/en/") !== -1;
-    btn.textContent = isEn ? "Menu" : "Меню";
-    btn.setAttribute("aria-expanded", "false");
-
-    // Один обработчик (clone снимает старые)
-    var fresh = btn.cloneNode(true);
-    btn.parentNode.replaceChild(fresh, btn);
-    btn = fresh;
-
-    function closeMenu() {
-      nav.classList.remove("open");
-      btn.textContent = isEn ? "Menu" : "Меню";
-      btn.setAttribute("aria-expanded", "false");
-    }
-    function openMenu() {
-      nav.classList.add("open");
-      btn.textContent = "✕";
-      btn.setAttribute("aria-expanded", "true");
-    }
-
-    btn.addEventListener("click", function (e) {
-      e.preventDefault();
-      e.stopPropagation();
-      if (nav.classList.contains("open")) closeMenu();
-      else openMenu();
-    });
-
-    nav.querySelectorAll("a").forEach(function (a) {
-      a.addEventListener("click", function () { closeMenu(); });
-    });
-
-    document.addEventListener("click", function (e) {
-      if (!nav.classList.contains("open")) return;
-      if (nav.contains(e.target) || btn.contains(e.target)) return;
-      closeMenu();
-    });
-
-    document.addEventListener("keydown", function (e) {
-      if (e.key === "Escape") closeMenu();
-    });
-  });
-})();
-</script>
 
 </body>
 </html>
