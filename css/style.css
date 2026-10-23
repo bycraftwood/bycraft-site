@@ -3814,3 +3814,43 @@ h2.other-works-title, .section-title.other-works-title {
     pointer-events: auto !important;
   }
 }
+
+/* === EXHIBITS 4:3 GRID === */
+.exhibits-unified-grid {
+  display: grid !important;
+  grid-template-columns: repeat(3, 1fr) !important;
+  gap: 36px 24px !important;
+  align-items: start !important;
+}
+.exhibits-unified-grid .work-card {
+  display: flex !important;
+  flex-direction: column !important;
+  width: 100% !important;
+}
+.exhibits-unified-grid .work-img-wrap {
+  aspect-ratio: 4 / 3 !important;
+  overflow: hidden !important;
+  width: 100% !important;
+  background-color: #F4F4F4 !important;
+}
+.exhibits-unified-grid .work-img-wrap img,
+.exhibits-unified-grid .work-img-wrap picture,
+.exhibits-unified-grid .work-img-wrap picture img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  object-position: center !important;
+  display: block !important;
+  aspect-ratio: auto !important;
+}
+@media (max-width: 900px) {
+  .exhibits-unified-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 24px 18px !important;
+  }
+}
+@media (max-width: 600px) {
+  .exhibits-unified-grid {
+    grid-template-columns: 1fr !important;
+  }
+}
