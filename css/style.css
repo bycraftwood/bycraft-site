@@ -4281,3 +4281,54 @@ h2.other-works-title {
 .other-works-grid .work-material {
   display: none !important;
 }
+
+/* === EVENTS MOBILE NO ZOOM + AWARDS === */
+.work-awards-block .meta-label,
+.work-awards-block .meta-val,
+.meta-row .meta-label,
+.meta-row .meta-val {
+  color: #1A1A1A !important;
+  font-size: 16px !important;
+}
+
+/* События: фото не увеличиваются при скролле/таче */
+@media screen and (max-width: 900px) {
+  .flow-card-img,
+  .sig-event-img,
+  .significant-events-grid .sig-event-img {
+    aspect-ratio: 4 / 3 !important;
+    overflow: hidden !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    transform: none !important;
+  }
+  .flow-card-img img,
+  .sig-event-img img,
+  .flow-card:hover .flow-card-img img,
+  .sig-event-card:hover .sig-event-img img,
+  .flow-card:active .flow-card-img img {
+    width: 100% !important;
+    height: 100% !important;
+    max-width: 100% !important;
+    object-fit: cover !important;
+    transform: none !important;
+    transition: none !important;
+  }
+  .events-flow-grid,
+  .significant-events-grid,
+  .sig-events-grid,
+  .events-level,
+  main.container,
+  main .container {
+    width: 100% !important;
+    max-width: 100% !important;
+    overflow-x: hidden !important;
+    box-sizing: border-box !important;
+  }
+  .flow-card,
+  .sig-event-card {
+    max-width: 100% !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+  }
+}
