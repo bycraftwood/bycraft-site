@@ -3736,3 +3736,25 @@ a.btn-arrow {
 @media (max-width: 600px) {
   .works-six-grid { grid-template-columns: 1fr !important; }
 }
+
+/* === TITLES Oct23 === */
+.page-title-12 {
+  font-size: 12px !important;
+  font-weight: 500 !important;
+  color: var(--color-primary, #1A1A1A) !important;
+  text-transform: none !important;
+  letter-spacing: 0.02em !important;
+}
+.page-title-14 {
+  font-size: 14px !important;
+  font-weight: 500 !important;
+  color: var(--color-primary, #1A1A1A) !important;
+  text-transform: none !important;
+  letter-spacing: 0.02em !important;
+}
+.other-works-title {
+  font-size: 14px !important;
+  font-weight: 400 !important;
+  color: var(--color-primary, #1A1A1A) !important;
+  text-transform: none !important;
+}
