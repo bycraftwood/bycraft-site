@@ -4148,3 +4148,38 @@ h2.other-works-title,
     box-sizing: border-box !important;
   }
 }
+
+/* === OTHER WORKS MUSEUM CAPTIONS === */
+.other-works-grid .work-info,
+.other-works-grid .museum-label {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 2px !important;
+  margin-top: 10px !important;
+  min-height: 0 !important;
+}
+.other-works-grid .work-title {
+  color: #1A1A1A !important;
+  font-size: 14px !important;
+  font-weight: 500 !important;
+  line-height: 1.35 !important;
+}
+.other-works-grid .work-title strong {
+  font-weight: 500 !important;
+}
+.other-works-grid .work-material,
+.other-works-grid .work-status {
+  color: #7A756D !important;
+  font-size: 13px !important;
+  font-weight: 400 !important;
+  line-height: 1.35 !important;
+}
+/* Блок выставки / награды */
+.work-awards-list,
+.work-awards-list li,
+.work-detail-info .awards,
+section .work-awards,
+.work-awards p {
+  color: #1A1A1A !important;
+  font-size: 16px !important;
+}

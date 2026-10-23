@@ -75,7 +75,7 @@
 }
   </script>
   <link rel="icon" href="../../images/favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="../../css/style.css?v=1040">
+  <link rel="stylesheet" href="../../css/style.css?v=1050">
 
 
 
@@ -236,7 +236,7 @@ img {
   color: #474B4F !important;
   display: flex !important;
   flex-direction: column !important;
-  gap: 4px !important;
+  gap: 2px !important;
 }
 .bc-tg-link {
   color: #222629 !important;
@@ -277,7 +277,7 @@ img {
         '<button type="button" class="bc-modal__close" onclick="window.closeBycraftModal()" aria-label="Закрыть">&times;</button>' +
         '<div class="bc-modal__header">' +
           '<h3 class="bc-modal__title">Обсудить похожий арт-объект</h3>' +
-          '<p class="bc-modal__subtitle">Работа: «' + workName + '»</p>' +
+          (subtitle ? ('<p class="bc-modal__subtitle">' + subtitle + '</p>') : '') +
         '</div>' +
         '<form id="bc-inquiry-form" class="bc-modal__form" onsubmit="window.handleBycraftSubmit(event)">' +
           '<div class="bc-form-group">' +
@@ -833,7 +833,7 @@ footer a[href^="mailto:"],
   color: #474B4F !important;
   display: flex !important;
   flex-direction: column !important;
-  gap: 4px !important;
+  gap: 2px !important;
 }
 .bc-tg-link {
   color: #222629 !important;
@@ -872,7 +872,8 @@ footer a[href^="mailto:"],
     var workName = h1 ? h1.textContent.trim() : (document.title.split('—')[0].split('-')[0].trim() || (isEn ? 'Artwork' : 'Арт-объект'));
 
     var title = isEn ? 'Artwork Inquiry' : 'Обсудить похожий арт-объект';
-    var subtitle = isEn ? ('Work: «' + workName + '»') : ('Работа: «' + workName + '»');
+    var isWorkshop = (location.pathname.indexOf('/workshop') !== -1 || location.pathname.indexOf('/en/workshop') !== -1);
+    var subtitle = isWorkshop ? '' : (isEn ? ('Work: «' + workName + '»') : ('Работа: «' + workName + '»'));
     var nameLabel = isEn ? 'Your Name *' : 'Ваше имя *';
     var namePlaceholder = isEn ? 'John' : 'Иван';
     var contactLabel = isEn ? 'Contact / Phone / Messenger *' : 'Контакт / телефон / мессенджер *';
@@ -894,7 +895,7 @@ footer a[href^="mailto:"],
         '<button type="button" class="bc-modal__close" onclick="window.closeBycraftModal()" aria-label="Close">&times;</button>' +
         '<div class="bc-modal__header">' +
           '<h3 class="bc-modal__title">' + title + '</h3>' +
-          '<p class="bc-modal__subtitle">' + subtitle + '</p>' +
+          (subtitle ? ('<p class="bc-modal__subtitle">' + subtitle + '</p>') : '') +
         '</div>' +
         '<form id="bc-inquiry-form" class="bc-modal__form" onsubmit="window.handleBycraftSubmit(event)">' +
           '<div class="bc-form-group">' +
@@ -1419,10 +1420,7 @@ footer a[href^="mailto:"],
                 <img src="../../images/works/work-exhibit-05.jpg" alt="Волк" loading="lazy">
               </picture>
             </div>
-            <div class="work-info bycraft-col-text-6" style="display:flex; flex-direction:column; justify-content:flex-start; gap:4px; margin-top:10px; min-height:72px;">
-              <div class="work-title"><strong>Волк</strong><br><span style="color:var(--color-muted); font-size:13px;">Минск, 2025</span></div>
-              <div class="work-status" style="font-size:12px;">Продана</div>
-            </div>
+            <div class="work-info museum-label" style="display:flex;flex-direction:column;gap:2px;margin-top:10px;"><div class="work-title" style="color:#1A1A1A;font-size:14px;font-weight:500;">«Волк», 2026</div><div class="work-material" style="color:#7A756D;font-size:13px;">Сувель берёзы, обжиг огнём</div><div class="work-status" style="color:#7A756D;font-size:13px;">Продана</div></div><div class="work-material" style="color:#7A756D;font-size:13px;">Сувель берёзы, обжиг огнём</div><div class="work-status" style="color:#7A756D;font-size:13px;">Продана</div></div></div>
           </a>
         </div>
         <div class="work-card">
@@ -1433,10 +1431,7 @@ footer a[href^="mailto:"],
                 <img src="../../images/works/work-exhibit-03.jpg" alt="Исповедь" loading="lazy">
               </picture>
             </div>
-            <div class="work-info bycraft-col-text-6" style="display:flex; flex-direction:column; justify-content:flex-start; gap:4px; margin-top:10px; min-height:72px;">
-              <div class="work-title"><strong>Исповедь</strong><br><span style="color:var(--color-muted); font-size:13px;">Минск, 2025</span></div>
-              <div class="work-status" style="font-size:12px;">Доступна по запросу</div>
-            </div>
+            <div class="work-info museum-label" style="display:flex;flex-direction:column;gap:2px;margin-top:10px;"><div class="work-title" style="color:#1A1A1A;font-size:14px;font-weight:500;">«Исповедь», 2026</div><div class="work-material" style="color:#7A756D;font-size:13px;">Сувель берёзы, обжиг огнём</div><div class="work-status" style="color:#7A756D;font-size:13px;">Доступна по запросу</div></div><div class="work-material" style="color:#7A756D;font-size:13px;">Сувель берёзы, обжиг огнём</div><div class="work-status" style="color:#7A756D;font-size:13px;">Доступна по запросу</div></div></div>
           </a>
         </div>
         <div class="work-card">
@@ -1447,10 +1442,7 @@ footer a[href^="mailto:"],
                 <img src="../../images/works/work-exhibit-04.jpg" alt="Обида" loading="lazy">
               </picture>
             </div>
-            <div class="work-info bycraft-col-text-6" style="display:flex; flex-direction:column; justify-content:flex-start; gap:4px; margin-top:10px; min-height:72px;">
-              <div class="work-title"><strong>Обида</strong><br><span style="color:var(--color-muted); font-size:13px;">Минск, 2025</span></div>
-              <div class="work-status" style="font-size:12px;">Доступна по запросу</div>
-            </div>
+            <div class="work-info museum-label" style="display:flex;flex-direction:column;gap:2px;margin-top:10px;"><div class="work-title" style="color:#1A1A1A;font-size:14px;font-weight:500;">«Обида», 2026</div><div class="work-material" style="color:#7A756D;font-size:13px;">Сувель берёзы, обжиг огнём</div><div class="work-status" style="color:#7A756D;font-size:13px;">Доступна по запросу</div></div><div class="work-material" style="color:#7A756D;font-size:13px;">Сувель берёзы, обжиг огнём</div><div class="work-status" style="color:#7A756D;font-size:13px;">Доступна по запросу</div></div></div>
           </a>
         </div>
         <div class="work-card">
@@ -1461,8 +1453,7 @@ footer a[href^="mailto:"],
                 <img src="../../images/works/work-exhibit-01.jpg" alt="Основание" loading="lazy">
               </picture>
             </div>
-            <div class="work-info bycraft-col-text-6" style="display:flex; flex-direction:column; justify-content:flex-start; gap:4px; margin-top:10px; min-height:72px;">
-              <div class="work-title"><strong>Основание</strong><br><span style="color:var(--color-muted); font-size:13px;">Минск, 2025</span></div>
+            <div class="work-info museum-label" style="display:flex;flex-direction:column;gap:2px;margin-top:10px;"><div class="work-title" style="color:#1A1A1A;font-size:14px;font-weight:500;">«Основание», 2025</div><div class="work-material" style="color:#7A756D;font-size:13px;">Сувель берёзы, обжиг огнём</div><div class="work-status" style="color:#7A756D;font-size:13px;">Продана</div></div>
               <div class="work-status" style="font-size:12px;">Продана</div>
             </div>
           </a>
@@ -1505,7 +1496,7 @@ footer a[href^="mailto:"],
     <button type="button" class="lightbox-close" id="lightboxClose" aria-label="Close" tabindex="-1">&times;</button>
     <img class="lightbox-img" id="lightboxImg" alt="" role="presentation" hidden>
   </div>
-  <script src="../..//js/main.js?v=1040"></script>
+  <script src="../..//js/main.js?v=1050"></script>
 
 
 
