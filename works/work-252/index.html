@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Скульптура «№ 192» — BYCRAFT · Валентин Атрош</title>
-  <meta name="description" content="Скульптурный арт-объект № 192 Валентина Атроша. Натуральный берёзовый сувель, обжиг огнём. В наличии. Стоимость 2300 BYN.">
+  <title>Скульптура «<span style="font-size:26px;">№ 192</span>» — BYCRAFT · Валентин Атрош</title>
+  <meta name="description" content="Скульптурный арт-объект № 192 Валентина Атроша. Натуральный берёзовый сувель, обжиг огнём. Доступна. стоимость 2300 BYN / 65800 ₽.">
   <link rel="canonical" href="https://bycraft.by/works/work-252/">
 
   <link rel="alternate" hreflang="ru" href="https://bycraft.by/works/work-252/">
@@ -75,7 +75,7 @@
 }
   </script>
   <link rel="icon" href="../../images/favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="../../css/style.css?v=1140">
+  <link rel="stylesheet" href="../../css/style.css?v=1160">
 
 
 
@@ -276,7 +276,7 @@ img {
       '<div class="bc-modal__container">' +
         '<button type="button" class="bc-modal__close" onclick="window.closeBycraftModal()" aria-label="Закрыть">&times;</button>' +
         '<div class="bc-modal__header">' +
-          '<h3 class="bc-modal__title">Обсудить похожий арт-объект</h3>' +
+          '<h3 class="bc-modal__title">Приобрести работу / задать вопрос</h3>' +
           (subtitle ? ('<p class="bc-modal__subtitle">' + subtitle + '</p>') : '') +
         '</div>' +
         '<form id="bc-inquiry-form" class="bc-modal__form" onsubmit="window.handleBycraftSubmit(event)">' +
@@ -871,7 +871,7 @@ footer a[href^="mailto:"],
     var h1 = document.querySelector('h1');
     var workName = h1 ? h1.textContent.trim() : (document.title.split('—')[0].split('-')[0].trim() || (isEn ? 'Artwork' : 'Арт-объект'));
 
-    var title = isEn ? 'Artwork Inquiry' : 'Обсудить похожий арт-объект';
+    var title = isEn ? 'Artwork Inquiry' : 'Приобрести работу / задать вопрос';
     var isWorkshop = (location.pathname.indexOf('/workshop') !== -1 || location.pathname.indexOf('/en/workshop') !== -1);
     var subtitle = isWorkshop ? '' : (isEn ? ('Work: «' + workName + '»') : ('Работа: «' + workName + '»'));
     var nameLabel = isEn ? 'Your Name *' : 'Ваше имя *';
@@ -1396,7 +1396,7 @@ footer a[href^="mailto:"],
   <main>
     <div class="container" style="margin-top: 36px; margin-bottom: 24px;">
       <a href="../" class="btn-arrow" style="font-size: 14px; margin-bottom: 14px; border-bottom: none;">← Назад к работам</a>
-      <h1 class="section-title" style="font-size: 26px; text-transform: uppercase; margin-bottom: 8px;">№ 192</h1>
+      <h1 class="section-title work-page-title" style="font-size:26px;">№ 192</h1>
       <p class="caption" style="font-size: 15px; font-style: italic; color: var(--color-primary); margin-bottom: 20px;">Скульптурный арт-объект</p>
     </div>
 
@@ -1412,12 +1412,12 @@ footer a[href^="mailto:"],
         <div class="meta-row"><span class="meta-label">размеры: </span><span class="meta-val">В19 х Ш37 х Д52&nbsp;см</span></div>
         <div class="meta-row"><span class="meta-label">вес: </span> <span class="meta-val">3,2 кг</span></div>
         <div class="meta-row"><span class="meta-label">год создания: </span><span class="meta-val">2026</span></div>
-        <div class="meta-row"><span class="meta-label">статус: </span><span class="meta-val" style="font-weight: 500;">В наличии</span></div>
+        <div class="meta-row"><span class="meta-label">статус: </span><span class="meta-val" style="font-weight: 500;">Доступна</span></div>
 
         <div class="work-description" style="margin: 28px 0;">
           <p class="lead-text" style="margin-bottom: 16px; font-weight: 500; color: var(--color-primary);">Скульптурный арт-объект № 192</p>
           <p class="lead-text" style="margin-bottom: 16px;">Уникальная работа из берёзового сувеля с обжигом огнём. Существует в единственном экземпляре.</p>
-          <p class="lead-text" style="margin-bottom: 16px;"><strong>Стоимость: 2300 BYN</strong></p>
+          <p class="lead-text" style="margin-bottom: 16px;"><strong>Стоимость: 2300 BYN / 65800 ₽</strong></p>
 </div>
 
         
@@ -1429,7 +1429,28 @@ footer a[href^="mailto:"],
         </div>
     </section>
 
-                    </main>
+                    
+    <section class="container other-works-section" style="margin-bottom:80px; margin-top:60px; padding-top:40px; border-top:1px solid var(--color-border);">
+      <h2 class="section-title other-works-title">ДРУГИЕ РАБОТЫ В НАЛИЧИИ</h2>
+      <div class="other-works-grid">
+        <div class="work-card">
+          <a href="../work-188/" style="display:flex;flex-direction:column;width:100%;color:inherit;text-decoration:none;">
+            <div class="work-img-wrap">
+              <picture>
+                <source srcset="../../images/works/work-188.webp" type="image/webp">
+                <img src="../../images/works/work-188.jpg" alt="№ 188" loading="lazy">
+              </picture>
+            </div>
+            <div class="work-info museum-label">
+              <div class="work-title">№ 188</div>
+              <div class="work-status">Доступна</div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
                         <footer class="site-footer">
     <div class="container">
       <div class="footer-inner-grid">

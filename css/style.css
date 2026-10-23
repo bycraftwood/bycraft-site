@@ -4589,3 +4589,36 @@ h1.section-title.work-page-title {
   max-width: 100% !important;
   width: 100% !important;
 }
+
+/* === FIX Oct23 afternoon === */
+/* Крестик модалки событий — без рамки */
+.modal-close,
+#modalClose,
+.modal-box .modal-close,
+#eventModal .modal-close {
+  border: none !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  outline: none !important;
+  font-size: 28px !important;
+  line-height: 1 !important;
+  padding: 4px 8px !important;
+  cursor: pointer !important;
+}
+.modal-close:hover,
+#modalClose:hover {
+  opacity: 0.7 !important;
+  border: none !important;
+}
+
+/* Главная: секции uppercase muted bold 16px */
+.home-section-title-muted,
+.home-workshop-section .section-title,
+.home-curators-box .section-title,
+.home-events-preview .section-title {
+  font-size: 16px !important;
+  font-weight: 700 !important;
+  color: #7A756D !important;
+  letter-spacing: 0.08em !important;
+  text-transform: uppercase !important;
+}
