@@ -4007,3 +4007,53 @@ main .work-layout-6-6 ~ h1.section-title,
 body[data-page="work"] main .container > h1.section-title {
   font-size: 26px !important;
 }
+
+/* === OCT23 UPPER + WORK TITLES === */
+main .container > h1.section-title.page-title-16,
+main .container > h2.section-title.page-title-16,
+main .container h1.section-title.page-title-16,
+main .container h2.section-title.page-title-16,
+h1.section-title.page-title-16,
+h2.section-title.page-title-16,
+.section-title.page-title-16 {
+  font-size: 16px !important;
+  font-weight: 400 !important;
+  letter-spacing: 0.08em !important;
+  text-transform: uppercase !important;
+  color: #7A756D !important;
+  line-height: 1.5 !important;
+}
+/* Подписи на выставках / кураторах */
+.exhibits-unified-grid .work-info,
+.exhibits-unified-grid .museum-label,
+.curator-works-grid-2rows .work-info,
+.curator-works-grid-2rows .museum-label {
+  gap: 2px !important;
+}
+/* Карточка работы: название и цитата 16px */
+main .container > h1.section-title.work-page-title,
+main h1.section-title.work-page-title,
+h1.work-page-title {
+  font-size: 16px !important;
+  font-weight: 500 !important;
+  letter-spacing: 0.08em !important;
+  text-transform: uppercase !important;
+  color: #1A1A1A !important;
+  line-height: 1.4 !important;
+}
+.work-page-quote,
+p.work-page-quote,
+.work-detail-quote {
+  font-size: 16px !important;
+  font-weight: 400 !important;
+  line-height: 1.6 !important;
+  color: #1A1A1A !important;
+}
+h2.other-works-title,
+.section-title.other-works-title {
+  font-size: 16px !important;
+  font-weight: 400 !important;
+  letter-spacing: 0.06em !important;
+  text-transform: none !important;
+  color: #7A756D !important;
+}
