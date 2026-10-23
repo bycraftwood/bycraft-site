@@ -3959,3 +3959,22 @@ h2.page-title-muted {
 .curators-awards-list li {
   color: #1A1A1A !important;
 }
+
+/* === TITLES muted 12 === */
+.section-title.page-title-muted,
+h1.page-title-muted,
+h2.page-title-muted,
+.section-title.page-title-muted-upper,
+h1.page-title-muted-upper,
+h2.page-title-muted-upper {
+  font-size: 12px !important;
+  font-weight: 400 !important;
+  color: #7A756D !important;
+  letter-spacing: 0.06em !important;
+  text-transform: none !important;
+  line-height: 1.5 !important;
+}
+.section-title.page-title-muted-upper {
+  text-transform: uppercase !important;
+  letter-spacing: 0.08em !important;
+}
