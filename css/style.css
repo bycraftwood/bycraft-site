@@ -4622,3 +4622,17 @@ h1.section-title.work-page-title {
   letter-spacing: 0.08em !important;
   text-transform: uppercase !important;
 }
+
+/* === HOME TITLES 16 BOLD === */
+.home-section-title-muted,
+.home-workshop-section h2.section-title,
+.home-workshop-section h2.section-title a,
+.home-curators-box h2.section-title,
+.home-events-preview h2.section-title,
+.home-events-preview h2.section-title a {
+  font-size: 16px !important;
+  font-weight: 700 !important;
+  color: #7A756D !important;
+  letter-spacing: 0.08em !important;
+  text-transform: uppercase !important;
+}
