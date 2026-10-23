@@ -4636,3 +4636,28 @@ h1.section-title.work-page-title {
   letter-spacing: 0.08em !important;
   text-transform: uppercase !important;
 }
+
+/* === BYCRAFT CORE ALIGNMENT === */
+/* Предотвращение горизонтального скролла */
+html, body {
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+/* Карточки событий: пропорциональные компактные превью */
+.events-grid .event-card img,
+.events-list .event-card img,
+.event-card-media img,
+.event-poster img {
+  max-width: 320px;
+  height: auto;
+  object-fit: cover;
+}
+
+@media (max-width: 768px) {
+  .events-grid .event-card img,
+  .events-list .event-card img {
+    max-width: 100%;
+    width: 100%;
+  }
+}

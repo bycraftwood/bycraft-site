@@ -74,8 +74,8 @@
   "url": "https://bycraft.by/en/works/the-wolf/"
 }
   </script>
-  <link rel="icon" href="../../../images/favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="../../../css/style.css?v=1176">
+  <link rel="icon" href="/images/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../../../css/style.css?v=1180">
 
 
 
@@ -1044,315 +1044,7 @@ footer a[href^="mailto:"],
   
   
   
-  <style id="bycraft-6-cols-enforced">
-    /* ==========================================================
-       BYCRAFT — СТРУКТУРА: 12 НАЗВАНИЕ, 12 ЦИТАТА, 6 ФОТО + 6 ТЕКСТ
-       ========================================================== */
-
-    /* 1. НАЗВАНИЕ: на всю ширину 12 колонок, по левому краю */
-    main h1,
-    .artwork-title,
-    .work-title,
-    .work-detail-title {
-      width: 100% !important;
-      max-width: 100% !important;
-      text-align: left !important;
-      margin-left: 0 !important;
-      margin-right: 0 !important;
-      margin-top: 20px !important;
-      margin-bottom: 8px !important;
-      padding-left: 0 !important;
-      font-size: clamp(1.8rem, 3.8vw, 2.6rem) !important;
-      line-height: 1.2 !important;
-      color: #222629 !important;
-      display: block !important;
-      clear: both !important;
-    }
-
-    /* 2. ЦИТАТА: на всю ширину 12 колонок под названием, по левому краю */
-    .artwork-quote,
-    .work-quote,
-    .quote,
-    main h1 + p,
-    main > p.quote,
-    blockquote {
-      width: 100% !important;
-      max-width: 860px !important;
-      text-align: left !important;
-      margin-left: 0 !important;
-      margin-top: 0 !important;
-      margin-bottom: 32px !important;
-      padding-left: 0 !important;
-      font-size: clamp(1.05rem, 1.8vw, 1.22rem) !important;
-      line-height: 1.55 !important;
-      color: #474B4F !important;
-      font-style: italic !important;
-      display: block !important;
-      clear: both !important;
-    }
-
-    /* 3. НА ПК (от 769px): СТРОГО 6 КОЛОНОК ФОТО (СЛЕВА) И 6 КОЛОНОК ТЕКСТ (СПРАВА) */
-    @media (min-width: 769px) {
-      /* Родительский ряд для фото и текста */
-      .work-detail,
-      .work-hero,
-      .work-layout,
-      .work-two-columns,
-      .work-columns,
-      .work-main,
-      main .work-top,
-      main .hero-grid,
-      .row:has(.work-media),
-      .row:has(.bycraft-col-photo-6) {
-        display: flex !important;
-        flex-direction: row !important;
-        flex-wrap: nowrap !important;
-        width: 100% !important;
-        gap: 48px !important;
-        align-items: flex-start !important;
-        margin-top: 24px !important;
-        margin-bottom: 48px !important;
-        box-sizing: border-box !important;
-        clear: both !important;
-      }
-
-      /* ФОТО: РОВНО 6 КОЛОНОК (50% ШИРИНЫ) СЛЕВА */
-      .bycraft-col-photo-6,
-      .col-6.work-media,
-      .col-md-6.work-media,
-      .work-media,
-      .work-image,
-      .work-photo,
-      .artwork-photo-col {
-        flex: 0 0 calc(50% - 24px) !important;
-        width: calc(50% - 24px) !important;
-        max-width: calc(50% - 24px) !important;
-        display: block !important;
-        box-sizing: border-box !important;
-      }
-
-      .bycraft-col-photo-6 img,
-      .work-media img,
-      .work-image img,
-      .work-photo img,
-      .artwork-photo-col img {
-        width: 100% !important;
-        height: auto !important;
-        max-height: 75vh !important;
-        object-fit: contain !important;
-        display: block !important;
-        margin: 0 !important;
-      }
-
-      /* ТЕКСТ: РОВНО 6 КОЛОНОК (50% ШИРИНЫ) СПРАВА В ОДНУ ЛИНИЮ С ФОТО */
-      .bycraft-col-text-6,
-      .col-6.work-info,
-      .col-md-6.work-info,
-      .work-info,
-      .work-specs,
-      .work-details,
-      .work-content,
-      .artwork-text-col {
-        flex: 0 0 calc(50% - 24px) !important;
-        width: calc(50% - 24px) !important;
-        max-width: calc(50% - 24px) !important;
-        display: flex !important;
-        flex-direction: column !important;
-        align-items: flex-start !important;
-        justify-content: flex-start !important;
-        text-align: left !important;
-        box-sizing: border-box !important;
-      }
-
-      .bycraft-col-text-6 p,
-      .work-info p,
-      .work-specs p,
-      .work-details p {
-        text-align: left !important;
-        margin-left: 0 !important;
-        line-height: 1.5 !important;
-      }
-    }
-
-    /* МОБИЛЬНЫЕ (до 768px): 12 колонок на всю ширину экрана */
-    @media (max-width: 768px) {
-      .work-detail,
-      .work-hero,
-      .work-layout,
-      .work-two-columns,
-      .work-columns {
-        display: flex !important;
-        flex-direction: column !important;
-        gap: 20px !important;
-        width: 100% !important;
-      }
-
-      .bycraft-col-photo-6,
-      .bycraft-col-text-6,
-      .work-media,
-      .work-image,
-      .work-info,
-      .work-specs {
-        width: 100% !important;
-        max-width: 100% !important;
-        flex: 0 0 100% !important;
-      }
-    }
-
-    /* 4. Описание работы под блоком */
-    .work-description,
-    .artwork-description,
-    .work-statement,
-    .work-story {
-      width: 100% !important;
-      max-width: 780px !important;
-      margin-top: 40px !important;
-      margin-bottom: 56px !important;
-      text-align: left !important;
-      display: block !important;
-      clear: both !important;
-    }
-
-    /* 5. Other Exhibition Works внизу */
-    .other-works,
-    .related-works,
-    .other-exhibitions {
-      width: 100% !important;
-      margin-top: 64px !important;
-      margin-bottom: 48px !important;
-      border-top: 1px solid #E5E7EB !important;
-      padding-top: 40px !important;
-      clear: both !important;
-    }
-  </style>
-
-
-
-<style id="bycraft-mobile-nav-v4">
-/* Мобильное меню v4: закрыто по умолчанию, открывается только по кнопке */
-@media screen and (max-width: 900px) {
-  .site-header {
-    position: sticky !important;
-    top: 0 !important;
-    z-index: 100000 !important;
-    background: #fff !important;
-  }
-  .site-header .header-inner,
-  .site-header .container {
-    position: relative !important;
-    display: flex !important;
-    flex-direction: row !important;
-    flex-wrap: nowrap !important;
-    align-items: center !important;
-    justify-content: space-between !important;
-    width: 100% !important;
-    max-width: 100% !important;
-    box-sizing: border-box !important;
-  }
-  .brand-logo {
-    flex-shrink: 0 !important;
-  }
-  .mobile-toggle {
-    display: inline-flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-    margin-left: auto !important;
-    z-index: 100003 !important;
-    cursor: pointer !important;
-    pointer-events: auto !important;
-    padding: 8px 14px !important;
-    border: 1px solid #1A1A1A !important;
-    background: #fff !important;
-    color: #1A1A1A !important;
-    font-size: 13px !important;
-    text-transform: uppercase !important;
-    font-family: inherit !important;
-  }
-  /* ЗАКРЫТО: полностью скрыто */
-  nav.main-nav,
-  .main-nav {
-    display: none !important;
-    visibility: hidden !important;
-    height: 0 !important;
-    max-height: 0 !important;
-    overflow: hidden !important;
-    opacity: 0 !important;
-    pointer-events: none !important;
-    position: absolute !important;
-    top: 100% !important;
-    left: 0 !important;
-    right: 0 !important;
-    width: 100% !important;
-    margin: 0 !important;
-    padding: 0 !important;
-  }
-  /* ОТКРЫТО: только с классом open */
-  nav.main-nav.open,
-  .main-nav.open {
-    display: flex !important;
-    visibility: visible !important;
-    height: auto !important;
-    max-height: 80vh !important;
-    overflow-y: auto !important;
-    opacity: 1 !important;
-    pointer-events: auto !important;
-    flex-direction: column !important;
-    align-items: stretch !important;
-    gap: 0 !important;
-    background: #ffffff !important;
-    padding: 8px 16px 20px !important;
-    box-shadow: 0 12px 28px rgba(0,0,0,0.12) !important;
-    z-index: 100002 !important;
-    border-bottom: 1px solid #eee !important;
-  }
-  .main-nav.open > a,
-  .main-nav.open .nav-link,
-  .main-nav.open .nav-link-btn,
-  .main-nav.open .nav-item-dropdown,
-  .main-nav.open .nav-item-dropdown > .nav-link {
-    display: block !important;
-    width: 100% !important;
-    padding: 14px 0 !important;
-    border-bottom: 1px solid #f0f0f0 !important;
-    font-size: 16px !important;
-  }
-  .main-nav.open .nav-dropdown {
-    display: block !important;
-    position: static !important;
-    border: none !important;
-    box-shadow: none !important;
-    padding: 0 0 0 12px !important;
-  }
-  .main-nav.open .lang-switch {
-    display: flex !important;
-    gap: 12px !important;
-    padding: 14px 0 !important;
-  }
-}
-@media screen and (min-width: 901px) {
-  .mobile-toggle {
-    display: none !important;
-  }
-  nav.main-nav,
-  .main-nav {
-    display: flex !important;
-    visibility: visible !important;
-    height: auto !important;
-    max-height: none !important;
-    overflow: visible !important;
-    opacity: 1 !important;
-    pointer-events: auto !important;
-    position: static !important;
-    flex-direction: row !important;
-    width: auto !important;
-    box-shadow: none !important;
-    padding: 0 !important;
-  }
-}
-</style>
-
-
-<style id="work-photos-no-scale">
+  <style id="work-photos-no-scale">
 .work-detail-photos-grid img,
 .work-detail-photos-grid picture img {
   width: 100% !important;
@@ -1403,8 +1095,8 @@ footer a[href^="mailto:"],
     <section>
       <div class="container work-layout-6-6">
       <div class="work-detail-photos-grid">
-        <picture><source srcset="../../../images/works/work-exhibit-05.webp" type="image/webp"><img src="../../../images/works/work-exhibit-05.jpg" alt="Sculpture «The Wolf» by Valentin Atrosh in birch burl" loading="lazy"></picture>
-        <picture><source srcset="../../../images/works/work-exhibit-05-detail.webp" type="image/webp"><img src="../../../images/works/work-exhibit-05-detail.jpg" alt="THE WOLF (detail)" loading="lazy"></picture>
+        <picture><source srcset="../../../images/works/work-exhibit-05.webp" type="image/webp"><img src="/images/works/work-exhibit-05.jpg" alt="Sculpture «The Wolf» by Valentin Atrosh in birch burl" loading="lazy"></picture>
+        <picture><source srcset="../../../images/works/work-exhibit-05-detail.webp" type="image/webp"><img src="/images/works/work-exhibit-05-detail.jpg" alt="THE WOLF (detail)" loading="lazy"></picture>
       </div>
 
       <div class="work-detail-info">
@@ -1442,7 +1134,7 @@ Presented as part of the 27th International Culture & Arts Festival, Istanbul, T
             <div class="work-img-wrap" style="width:100%; aspect-ratio:4/3!important; overflow:hidden; background-color:#F4F4F4; flex-shrink:0;">
               <picture style="display:block; width:100%; height:100%;">
                 <source srcset="../../../images/works/work-exhibit-02.webp" type="image/webp">
-                <img src="../../../images/works/work-exhibit-02.jpg" alt="Face to Face" loading="lazy">
+                <img src="/images/works/work-exhibit-02.jpg" alt="Face to Face" loading="lazy">
               </picture>
             </div>
             <div class="work-info bycraft-col-text-6 work-text-col" style="display:flex; flex-direction:column; justify-content:flex-start; gap:4px; margin-top:10px; min-height:72px;">
@@ -1456,7 +1148,7 @@ Presented as part of the 27th International Culture & Arts Festival, Istanbul, T
             <div class="work-img-wrap" style="width:100%; aspect-ratio:4/3!important; overflow:hidden; background-color:#F4F4F4; flex-shrink:0;">
               <picture style="display:block; width:100%; height:100%;">
                 <source srcset="../../../images/works/work-exhibit-03.webp" type="image/webp">
-                <img src="../../../images/works/work-exhibit-03.jpg" alt="Confession" loading="lazy">
+                <img src="/images/works/work-exhibit-03.jpg" alt="Confession" loading="lazy">
               </picture>
             </div>
             <div class="work-info bycraft-col-text-6 work-text-col" style="display:flex; flex-direction:column; justify-content:flex-start; gap:4px; margin-top:10px; min-height:72px;">
@@ -1470,7 +1162,7 @@ Presented as part of the 27th International Culture & Arts Festival, Istanbul, T
             <div class="work-img-wrap" style="width:100%; aspect-ratio:4/3!important; overflow:hidden; background-color:#F4F4F4; flex-shrink:0;">
               <picture style="display:block; width:100%; height:100%;">
                 <source srcset="../../../images/works/work-exhibit-04.webp" type="image/webp">
-                <img src="../../../images/works/work-exhibit-04.jpg" alt="Resentment" loading="lazy">
+                <img src="/images/works/work-exhibit-04.jpg" alt="Resentment" loading="lazy">
               </picture>
             </div>
             <div class="work-info bycraft-col-text-6 work-text-col" style="display:flex; flex-direction:column; justify-content:flex-start; gap:4px; margin-top:10px; min-height:72px;">
@@ -1484,7 +1176,7 @@ Presented as part of the 27th International Culture & Arts Festival, Istanbul, T
             <div class="work-img-wrap" style="width:100%; aspect-ratio:4/3!important; overflow:hidden; background-color:#F4F4F4; flex-shrink:0;">
               <picture style="display:block; width:100%; height:100%;">
                 <source srcset="../../../images/works/work-exhibit-01.webp" type="image/webp">
-                <img src="../../../images/works/work-exhibit-01.jpg" alt="Foundation" loading="lazy">
+                <img src="/images/works/work-exhibit-01.jpg" alt="Foundation" loading="lazy">
               </picture>
             </div>
             <div class="work-info bycraft-col-text-6 work-text-col" style="display:flex; flex-direction:column; justify-content:flex-start; gap:4px; margin-top:10px; min-height:72px;">
@@ -1537,88 +1229,6 @@ Presented as part of the 27th International Culture & Arts Festival, Istanbul, T
 
 
 
-
-
-
-<script id="bycraft-lightbox-fix">
-(function() {
-  function initLightboxFix() {
-    var modal = document.querySelector('.modal, .lightbox, #imageModal, #modal');
-    var modalImg = document.querySelector('.modal img, .lightbox img, #modal-img, #img01');
-
-    // Находим все карточки и ссылки на работы
-    var cards = document.querySelectorAll('.work-card, .exhibition-card, .card, a[class*="card"]');
-
-    cards.forEach(function(card) {
-      var href = card.getAttribute('href') || (card.querySelector('a') ? card.querySelector('a').getAttribute('href') : null);
-
-      // Если ссылка ведет на страницу отдельной работы (не картинка и не #) — даем перейти без открытия модалки
-      if (href && (href.indexOf('/works/') !== -1 || href.indexOf('.html') !== -1) && !href.match(/\.(jpg|jpeg|png|webp|avif)$/i)) {
-        card.onclick = function(e) {
-          // Разрешаем штатный переход по ссылке
-          return true;
-        };
-        return;
-      }
-
-      // Для карточек каталога (где должно увеличиваться фото):
-      card.onclick = function(e) {
-        var img = card.querySelector('img');
-        if (!img && !href) return;
-
-        var fullSrc = '';
-        if (img) {
-          fullSrc = img.currentSrc || img.src || img.getAttribute('src');
-        } else if (href && href.match(/\.(jpg|jpeg|png|webp|avif)$/i)) {
-          fullSrc = href;
-        }
-
-        if (fullSrc && modal && modalImg) {
-          e.preventDefault();
-          e.stopPropagation();
-
-          // Гарантируем абсолютный путь к фото
-          if (fullSrc.indexOf('http') === -1 && fullSrc.indexOf('/') !== 0) {
-            fullSrc = '/' + fullSrc;
-          }
-
-          modalImg.src = fullSrc;
-          modalImg.style.display = 'block';
-          modalImg.style.visibility = 'visible';
-          modalImg.style.opacity = '1';
-          modal.style.display = 'flex';
-          modal.style.justifyContent = 'center';
-          modal.style.alignItems = 'center';
-        }
-      };
-    });
-
-    // Закрытие модального окна по клику на крестик или на фон
-    if (modal) {
-      modal.onclick = function(e) {
-        if (e.target !== modalImg) {
-          modal.style.display = 'none';
-          if (modalImg) modalImg.src = '';
-        }
-      };
-      var closeBtns = modal.querySelectorAll('.close, .lightbox-close, [class*="close"]');
-      closeBtns.forEach(function(btn) {
-        btn.onclick = function(e) {
-          e.stopPropagation();
-          modal.style.display = 'none';
-          if (modalImg) modalImg.src = '';
-        };
-      });
-    }
-  }
-
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', initLightboxFix);
-  } else {
-    initLightboxFix();
-  }
-})();
-</script>
 
 
 
