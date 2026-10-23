@@ -4418,3 +4418,92 @@ h1.section-title.work-page-title {
 @media (max-width: 768px) {
   .event-detail-grid { grid-template-columns: 1fr !important; }
 }
+
+/* === MOBILE HARD FIX v2 === */
+@media screen and (max-width: 900px) {
+
+  /* Контакты в открытом меню — как обычный пункт, с нижней линией */
+  .main-nav.open a.nav-link-btn,
+  .main-nav.open .nav-link-btn,
+  nav.main-nav.open a[href*="contacts"] {
+    display: block !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    margin: 0 !important;
+    padding: 14px 0 !important;
+    background: transparent !important;
+    background-color: transparent !important;
+    color: #1A1A1A !important;
+    border: none !important;
+    border-bottom: 1px solid #f0f0f0 !important;
+    border-radius: 0 !important;
+    text-align: left !important;
+    font-size: 16px !important;
+    font-weight: 400 !important;
+    letter-spacing: normal !important;
+    box-shadow: none !important;
+    white-space: normal !important;
+  }
+
+  /* Фото на работах и событиях — без увеличения */
+  .work-detail-photos-grid,
+  .work-layout-6-6,
+  .events-flow-grid,
+  .significant-events-grid,
+  .flow-card,
+  .sig-event-card {
+    overflow: hidden !important;
+    max-width: 100% !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  .work-detail-photos-grid img,
+  .work-detail-photos-grid picture,
+  .work-detail-photos-grid picture img,
+  .work-layout-6-6 img,
+  .work-layout-6-6 picture img,
+  .flow-card-img,
+  .sig-event-img,
+  .flow-card-img img,
+  .sig-event-img img,
+  .flow-card-img picture,
+  .flow-card-img picture img,
+  .sig-event-img picture img,
+  .events-flow-grid img,
+  .significant-events-grid img {
+    width: 100% !important;
+    max-width: 100% !important;
+    height: auto !important;
+    max-height: none !important;
+    object-fit: cover !important;
+    transform: none !important;
+    -webkit-transform: none !important;
+    scale: none !important;
+    transition: none !important;
+    -webkit-transition: none !important;
+    pointer-events: none !important;
+  }
+
+  .work-detail-photos-grid img:hover,
+  .work-detail-photos-grid img:active,
+  .work-detail-photos-grid img:focus,
+  .flow-card:hover .flow-card-img img,
+  .flow-card:active .flow-card-img img,
+  .sig-event-card:hover .sig-event-img img,
+  .sig-event-card:active .sig-event-img img,
+  a:hover img,
+  a:active img {
+    transform: none !important;
+    -webkit-transform: none !important;
+    scale: 1 !important;
+    opacity: 1 !important;
+  }
+
+  .flow-card-img,
+  .sig-event-img {
+    aspect-ratio: 4 / 3 !important;
+    overflow: hidden !important;
+  }
+}
