@@ -4183,3 +4183,78 @@ section .work-awards,
   color: #1A1A1A !important;
   font-size: 16px !important;
 }
+
+/* === OTHER WORKS GRID CLEAN === */
+.other-works-grid {
+  display: grid !important;
+  grid-template-columns: repeat(4, 1fr) !important;
+  gap: 28px 20px !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  box-sizing: border-box !important;
+}
+.other-works-grid .work-card {
+  display: block !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  min-width: 0 !important;
+  box-sizing: border-box !important;
+}
+.other-works-grid .work-card > a {
+  display: flex !important;
+  flex-direction: column !important;
+  width: 100% !important;
+  color: inherit !important;
+  text-decoration: none !important;
+}
+.other-works-grid .work-img-wrap {
+  width: 100% !important;
+  max-width: 100% !important;
+  aspect-ratio: 4 / 3 !important;
+  overflow: hidden !important;
+  background: #F4F4F4 !important;
+  box-sizing: border-box !important;
+}
+.other-works-grid .work-img-wrap img,
+.other-works-grid .work-img-wrap picture,
+.other-works-grid .work-img-wrap picture img {
+  width: 100% !important;
+  height: 100% !important;
+  max-width: 100% !important;
+  object-fit: cover !important;
+  object-position: center !important;
+  display: block !important;
+}
+.other-works-grid .work-info {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 2px !important;
+  margin-top: 10px !important;
+}
+.other-works-grid .work-title {
+  color: #1A1A1A !important;
+  font-size: 14px !important;
+  font-weight: 500 !important;
+  line-height: 1.35 !important;
+}
+.other-works-grid .work-material,
+.other-works-grid .work-status {
+  color: #7A756D !important;
+  font-size: 13px !important;
+  font-weight: 400 !important;
+  line-height: 1.35 !important;
+}
+h2.other-works-title {
+  font-size: 16px !important;
+  font-weight: 400 !important;
+  letter-spacing: 0.08em !important;
+  text-transform: uppercase !important;
+  color: #7A756D !important;
+  margin-bottom: 24px !important;
+}
+@media (max-width: 900px) {
+  .other-works-grid { grid-template-columns: repeat(2, 1fr) !important; }
+}
+@media (max-width: 600px) {
+  .other-works-grid { grid-template-columns: 1fr !important; }
+}
