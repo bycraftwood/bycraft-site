@@ -2508,13 +2508,8 @@ main > section.container {
 
 
 /* === WORK CARD TITLES 26px === */
-main .container > h1.section-title {
-  font-size: 26px !important;
-}
-main section.container > h2.section-title,
-main .container h2.section-title {
-  font-size: 26px !important;
-}
+/* was: main .container > h1.section-title { font-size: 26px } — disabled */
+/* was: h2.section-title 26px — disabled */
 
 /* === FIX: curators photo, events photos, other-works titles === */
 
@@ -3977,4 +3972,38 @@ h2.page-title-muted-upper {
 .section-title.page-title-muted-upper {
   text-transform: uppercase !important;
   letter-spacing: 0.08em !important;
+}
+
+/* === PAGE TITLES 16px FORCE === */
+/* Специфичность выше, чем main .container > h1.section-title */
+main .container > h1.section-title.page-title-16,
+main .container > h2.section-title.page-title-16,
+main section.container > h2.section-title.page-title-16,
+main .container h1.section-title.page-title-16,
+main .container h2.section-title.page-title-16,
+h1.section-title.page-title-16,
+h2.section-title.page-title-16,
+.section-title.page-title-16 {
+  font-size: 16px !important;
+  font-weight: 400 !important;
+  letter-spacing: 0.04em !important;
+  text-transform: none !important;
+  color: #7A756D !important;
+  line-height: 1.5 !important;
+}
+main .container > h2.section-title.page-title-16-upper,
+h2.section-title.page-title-16-upper,
+.section-title.page-title-16-upper {
+  font-size: 16px !important;
+  font-weight: 400 !important;
+  letter-spacing: 0.08em !important;
+  text-transform: uppercase !important;
+  color: #7A756D !important;
+  line-height: 1.5 !important;
+}
+/* Карточки работ: название работы может оставаться крупнее */
+main .work-detail h1.section-title,
+main .work-layout-6-6 ~ h1.section-title,
+body[data-page="work"] main .container > h1.section-title {
+  font-size: 26px !important;
 }
