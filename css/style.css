@@ -3758,3 +3758,38 @@ a.btn-arrow {
   color: var(--color-primary, #1A1A1A) !important;
   text-transform: none !important;
 }
+
+/* === TITLE FIX FINAL === */
+h1.page-title-12, h2.page-title-12, .section-title.page-title-12,
+h1.page-title-12.section-title, h2.page-title-12.section-title {
+  font-size: 12px !important;
+  font-weight: 500 !important;
+  letter-spacing: 0.02em !important;
+  text-transform: none !important;
+  color: var(--color-primary, #1A1A1A) !important;
+  line-height: 1.5 !important;
+}
+h1.page-title-14, h2.page-title-14, .section-title.page-title-14,
+h1.page-title-14.section-title, h2.page-title-14.section-title {
+  font-size: 14px !important;
+  font-weight: 500 !important;
+  letter-spacing: 0.02em !important;
+  text-transform: none !important;
+  color: var(--color-primary, #1A1A1A) !important;
+  line-height: 1.5 !important;
+}
+h1.page-title-14-bold, h2.page-title-14-bold,
+.section-title.page-title-14-bold {
+  font-size: 14px !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.02em !important;
+  text-transform: none !important;
+  color: var(--color-primary, #1A1A1A) !important;
+}
+h2.other-works-title, .section-title.other-works-title {
+  font-size: 14px !important;
+  font-weight: 400 !important;
+  letter-spacing: 0.02em !important;
+  text-transform: none !important;
+  color: var(--color-primary, #1A1A1A) !important;
+}
