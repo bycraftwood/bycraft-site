@@ -3922,3 +3922,40 @@ h2.other-works-title, .section-title.other-works-title {
     grid-template-columns: 1fr !important;
   }
 }
+
+/* === TITLES muted 14 === */
+.section-title.page-title-muted,
+h1.page-title-muted,
+h2.page-title-muted {
+  font-size: 14px !important;
+  font-weight: 400 !important;
+  letter-spacing: 0.06em !important;
+  text-transform: none !important;
+  color: #7A756D !important;
+  line-height: 1.5 !important;
+}
+.section-title.page-title-muted-upper {
+  font-size: 14px !important;
+  font-weight: 400 !important;
+  letter-spacing: 0.08em !important;
+  text-transform: uppercase !important;
+  color: #7A756D !important;
+  line-height: 1.5 !important;
+}
+.curator-works-grid-2rows .caption,
+.curator-works-grid-2rows .work-caption {
+  color: #1A1A1A !important;
+  font-size: 14px !important;
+  line-height: 1.45 !important;
+}
+.curator-works-grid-2rows .caption-meta,
+.curator-works-grid-2rows .work-material,
+.curator-works-grid-2rows .work-status {
+  color: #7A756D !important;
+  font-size: 13px !important;
+  font-weight: 400 !important;
+}
+.curators-awards-list,
+.curators-awards-list li {
+  color: #1A1A1A !important;
+}
