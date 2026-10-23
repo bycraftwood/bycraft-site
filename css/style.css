@@ -3793,3 +3793,24 @@ h2.other-works-title, .section-title.other-works-title {
   text-transform: none !important;
   color: var(--color-primary, #1A1A1A) !important;
 }
+
+/* === MOBILE NAV v4 === */
+@media screen and (max-width: 900px) {
+  .mobile-toggle { display: inline-flex !important; }
+  .main-nav:not(.open) {
+    display: none !important;
+    visibility: hidden !important;
+    height: 0 !important;
+    overflow: hidden !important;
+    opacity: 0 !important;
+    pointer-events: none !important;
+  }
+  .main-nav.open {
+    display: flex !important;
+    flex-direction: column !important;
+    visibility: visible !important;
+    height: auto !important;
+    opacity: 1 !important;
+    pointer-events: auto !important;
+  }
+}
