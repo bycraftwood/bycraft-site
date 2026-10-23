@@ -75,7 +75,7 @@
 }
   </script>
   <link rel="icon" href="../../images/favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="../../css/style.css?v=1030">
+  <link rel="stylesheet" href="../../css/style.css?v=1040">
 
 
 
@@ -276,7 +276,7 @@ img {
       '<div class="bc-modal__container">' +
         '<button type="button" class="bc-modal__close" onclick="window.closeBycraftModal()" aria-label="Закрыть">&times;</button>' +
         '<div class="bc-modal__header">' +
-          '<h3 class="bc-modal__title">Запрос информации о работе</h3>' +
+          '<h3 class="bc-modal__title">Обсудить похожий арт-объект</h3>' +
           '<p class="bc-modal__subtitle">Работа: «' + workName + '»</p>' +
         '</div>' +
         '<form id="bc-inquiry-form" class="bc-modal__form" onsubmit="window.handleBycraftSubmit(event)">' +
@@ -871,7 +871,7 @@ footer a[href^="mailto:"],
     var h1 = document.querySelector('h1');
     var workName = h1 ? h1.textContent.trim() : (document.title.split('—')[0].split('-')[0].trim() || (isEn ? 'Artwork' : 'Арт-объект'));
 
-    var title = isEn ? 'Artwork Inquiry' : 'Запрос информации о работе';
+    var title = isEn ? 'Artwork Inquiry' : 'Обсудить похожий арт-объект';
     var subtitle = isEn ? ('Work: «' + workName + '»') : ('Работа: «' + workName + '»');
     var nameLabel = isEn ? 'Your Name *' : 'Ваше имя *';
     var namePlaceholder = isEn ? 'John' : 'Иван';
@@ -1374,7 +1374,7 @@ footer a[href^="mailto:"],
     <div class="container" style="margin-top: 36px; margin-bottom: 24px;">
       <a href="../exhibitions/" class="btn-arrow" style="font-size: 14px; margin-bottom: 14px; border-bottom: none;">← Назад к выставочным работам</a>
       <h1 class="section-title work-page-title">ОСНОВАНИЕ</h1>
-      <p class="work-page-quote" style="font-size:16px;">Я лишь посредник, настоящим автором выступает сама материя. Её сила — в дикости и первозданности</p>
+      <p class="work-page-quote" style="font-size:16px; width:100%; max-width:100%;">Я лишь посредник, настоящим автором выступает сама материя. Её сила — в дикости и первозданности</p>
     </div>
 
     <section>
@@ -1409,7 +1409,7 @@ footer a[href^="mailto:"],
 
                     <!-- Другие выставочные работы -->
     <section class="container" style="margin-top: 60px; margin-bottom: 80px; padding-top: 40px; border-top: 1px solid var(--color-border);">
-      <h2 class="section-title other-works-title">Другие выставочные работы</h2>
+      <h2 class="section-title other-works-title">ДРУГИЕ ВЫСТАВОЧНЫЕ РАБОТЫ</h2>
       <div class="other-works-grid">
         <div class="work-card">
           <a href="../volk/" style="display:flex; flex-direction:column; width:100%; color:inherit; text-decoration:none;">
@@ -1505,7 +1505,7 @@ footer a[href^="mailto:"],
     <button type="button" class="lightbox-close" id="lightboxClose" aria-label="Close" tabindex="-1">&times;</button>
     <img class="lightbox-img" id="lightboxImg" alt="" role="presentation" hidden>
   </div>
-  <script src="../..//js/main.js?v=980"></script>
+  <script src="../..//js/main.js?v=1040"></script>
 
 
 

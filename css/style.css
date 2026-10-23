@@ -4057,3 +4057,94 @@ h2.other-works-title,
   text-transform: none !important;
   color: #7A756D !important;
 }
+
+/* === WORK CARDS FIX Oct23b === */
+/* Блок выставки / награды на карточках */
+.work-awards,
+.work-exhibitions-block,
+.work-detail-awards,
+.meta-row.awards,
+.work-info-awards,
+.work-awards-list,
+.work-awards-list li,
+.work-detail-info .awards,
+section.work-awards,
+.work-awards p,
+.work-awards li {
+  color: #1A1A1A !important;
+  font-size: 16px !important;
+  line-height: 1.6 !important;
+}
+
+/* Название работы на карточке */
+main .container > h1.section-title.work-page-title,
+main h1.section-title.work-page-title,
+h1.work-page-title,
+h1.section-title.work-page-title {
+  font-size: 16px !important;
+  font-weight: 500 !important;
+  letter-spacing: 0.08em !important;
+  text-transform: uppercase !important;
+  color: #7A756D !important;
+  line-height: 1.4 !important;
+}
+
+/* Цитата на всю ширину */
+.work-page-quote,
+p.work-page-quote {
+  font-size: 16px !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  display: block !important;
+  grid-column: 1 / -1 !important;
+}
+
+/* Другие выставочные работы */
+h2.other-works-title,
+.section-title.other-works-title {
+  font-size: 16px !important;
+  font-weight: 400 !important;
+  letter-spacing: 0.08em !important;
+  text-transform: uppercase !important;
+  color: #7A756D !important;
+}
+
+/* Подписи под фото в блоке «другие» — gap 2px */
+.other-works-grid .work-info,
+.other-works-grid .museum-label,
+.other-works-grid .caption-block,
+.works-related .work-info,
+.other-works-section .work-info {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 2px !important;
+  margin-top: 10px !important;
+}
+
+/* Мобильные события — без горизонтального вылета */
+@media screen and (max-width: 900px) {
+  body, html {
+    overflow-x: hidden !important;
+    max-width: 100vw !important;
+  }
+  .events-flow-grid,
+  .significant-events-grid,
+  .sig-events-grid,
+  .events-level,
+  main .container {
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+    overflow-x: hidden !important;
+  }
+  .flow-card,
+  .sig-event-card,
+  .flow-card-img,
+  .sig-event-img,
+  .flow-card-img img,
+  .sig-event-img img {
+    max-width: 100% !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+  }
+}

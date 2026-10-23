@@ -50,7 +50,7 @@
 }
   </script>
   <link rel="icon" href="/images/favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="../../css/style.css?v=1030">
+  <link rel="stylesheet" href="../../css/style.css?v=1040">
 
 
 
@@ -251,7 +251,7 @@ img {
       '<div class="bc-modal__container">' +
         '<button type="button" class="bc-modal__close" onclick="window.closeBycraftModal()" aria-label="Закрыть">&times;</button>' +
         '<div class="bc-modal__header">' +
-          '<h3 class="bc-modal__title">Запрос информации о работе</h3>' +
+          '<h3 class="bc-modal__title">Согласовать приезд в мастерскую</h3>' +
           '<p class="bc-modal__subtitle">Работа: «' + workName + '»</p>' +
         '</div>' +
         '<form id="bc-inquiry-form" class="bc-modal__form" onsubmit="window.handleBycraftSubmit(event)">' +
@@ -846,7 +846,7 @@ footer a[href^="mailto:"],
     var h1 = document.querySelector('h1');
     var workName = h1 ? h1.textContent.trim() : (document.title.split('—')[0].split('-')[0].trim() || (isEn ? 'Artwork' : 'Арт-объект'));
 
-    var title = isEn ? 'Artwork Inquiry' : 'Запрос информации о работе';
+    var title = isEn ? 'Artwork Inquiry' : 'Согласовать приезд в мастерскую';
     var subtitle = isEn ? ('Work: «' + workName + '»') : ('Работа: «' + workName + '»');
     var nameLabel = isEn ? 'Your Name *' : 'Ваше имя *';
     var namePlaceholder = isEn ? 'John' : 'Иван';
@@ -1758,7 +1758,7 @@ footer a[href^="mailto:"],
       </div>
     </div>
   </footer>
-  <script src="../..//js/main.js?v=980"></script>
+  <script src="../..//js/main.js?v=1040"></script>
 
 
 
