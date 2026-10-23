@@ -4258,3 +4258,26 @@ h2.other-works-title {
 @media (max-width: 600px) {
   .other-works-grid { grid-template-columns: 1fr !important; }
 }
+
+/* === OTHER WORKS CAPTION 2LINE === */
+.other-works-grid .work-info {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 2px !important;
+  margin-top: 10px !important;
+}
+.other-works-grid .work-title {
+  color: #1A1A1A !important;
+  font-size: 14px !important;
+  font-weight: 500 !important;
+  line-height: 1.35 !important;
+  white-space: nowrap !important;
+}
+.other-works-grid .work-status {
+  color: #7A756D !important;
+  font-size: 13px !important;
+  font-weight: 400 !important;
+}
+.other-works-grid .work-material {
+  display: none !important;
+}
