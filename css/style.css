@@ -1271,12 +1271,9 @@ img, video {
   width: 100%;
   aspect-ratio: 4 / 3 !important;
   object-fit: cover;
-  cursor: zoom-in;
+  cursor: default;
 }
-.work-detail-photos-grid img:hover {
-  opacity: 0.95;
-  transform: scale(1.01);
-}
+.work-detail-photos-grid img:hover { opacity: 1; transform: none; }
 
 /* Дипломы: 1, 2, 3 колонки, а Диплом 4 под Дипломом 1 */
 .curator-diplomas-layout-v2 {
@@ -1958,7 +1955,7 @@ picture img {
   width: 100%;
   aspect-ratio: 4 / 3 !important;
   object-fit: cover;
-  cursor: zoom-in;
+  cursor: default;
 }
 
 .other-works-grid .work-img-wrap {
@@ -4505,5 +4502,83 @@ h1.section-title.work-page-title {
   .sig-event-img {
     aspect-ratio: 4 / 3 !important;
     overflow: hidden !important;
+  }
+}
+
+/* === WORK PHOTOS NO SCALE === */
+.work-detail-photos-grid {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 24px !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  overflow: hidden !important;
+  box-sizing: border-box !important;
+}
+.work-detail-photos-grid img,
+.work-detail-photos-grid picture,
+.work-detail-photos-grid picture img,
+.work-layout-6-6 .work-detail-photos-grid img,
+.work-layout-6-6 .work-detail-photos-grid picture,
+.work-layout-6-6 .work-detail-photos-grid picture img {
+  width: 100% !important;
+  max-width: 100% !important;
+  height: auto !important;
+  aspect-ratio: 4 / 3 !important;
+  object-fit: cover !important;
+  object-position: center !important;
+  display: block !important;
+  transform: none !important;
+  -webkit-transform: none !important;
+  transition: none !important;
+  cursor: default !important;
+  box-sizing: border-box !important;
+}
+.work-detail-photos-grid img:hover,
+.work-detail-photos-grid img:active,
+.work-detail-photos-grid img:focus,
+.work-layout-6-6 img:hover,
+.work-layout-6-6 img:active {
+  transform: none !important;
+  -webkit-transform: none !important;
+  scale: 1 !important;
+  opacity: 1 !important;
+}
+
+@media screen and (max-width: 900px) {
+  .work-layout-6-6 {
+    display: flex !important;
+    flex-direction: column !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    gap: 24px !important;
+    overflow: hidden !important;
+    box-sizing: border-box !important;
+  }
+  .work-layout-6-6 .work-detail-photos-grid,
+  .work-layout-6-6 .work-detail-info {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    box-sizing: border-box !important;
+  }
+  main .container {
+    overflow-x: hidden !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+  }
+  /* отключить любой scale на странице работы */
+  main img {
+    max-width: 100% !important;
+    height: auto !important;
+  }
+  main img:hover,
+  main img:active,
+  main a:hover img,
+  main a:active img {
+    transform: none !important;
+    -webkit-transform: none !important;
   }
 }

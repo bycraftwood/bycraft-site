@@ -19,7 +19,7 @@
   <meta property="og:image:height" content="630">
   <meta name="twitter:card" content="summary_large_image">
   <link rel="icon" href="/images/favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="../../../css/style.css?v=1120">
+  <link rel="stylesheet" href="../../../css/style.css?v=1140">
 
 
 
@@ -1451,6 +1451,28 @@ footer a[href^="mailto:"],
     box-shadow: none !important;
     padding: 0 !important;
   }
+}
+</style>
+
+
+<style id="work-photos-no-scale">
+.work-detail-photos-grid img,
+.work-detail-photos-grid picture img {
+  width: 100% !important;
+  max-width: 100% !important;
+  height: auto !important;
+  transform: none !important;
+  transition: none !important;
+  cursor: default !important;
+}
+.work-detail-photos-grid img:hover,
+.work-detail-photos-grid img:active {
+  transform: none !important;
+  opacity: 1 !important;
+}
+@media (max-width: 900px) {
+  .work-layout-6-6 { overflow: hidden !important; max-width: 100% !important; }
+  .work-detail-photos-grid { overflow: hidden !important; max-width: 100% !important; }
 }
 </style>
 
