@@ -4940,3 +4940,37 @@ i .work-subtitle-muted,
 .work-page-quote i {
   font-style: normal !important;
 }
+
+/* === WORK LAYOUT MOSAIC COL === */
+.work-layout-6-6 .work-detail-mosaic {
+  grid-column: 1 !important;
+  grid-area: photos !important;
+  width: 100% !important;
+  margin-bottom: 0 !important;
+}
+.work-layout-6-6 .work-detail-info {
+  grid-column: 2 !important;
+  grid-area: meta !important;
+  width: 100% !important;
+}
+.work-layout-6-6 {
+  display: grid !important;
+  grid-template-columns: 1fr 1fr !important;
+  grid-template-areas:
+    "photos meta" !important;
+  gap: 48px !important;
+  align-items: start !important;
+}
+@media (max-width: 767.98px) {
+  .work-layout-6-6 {
+    grid-template-columns: 1fr !important;
+    grid-template-areas:
+      "photos"
+      "meta" !important;
+  }
+  .work-layout-6-6 .work-detail-mosaic,
+  .work-layout-6-6 .work-detail-info {
+    grid-column: 1 !important;
+    grid-area: auto !important;
+  }
+}
