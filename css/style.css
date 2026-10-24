@@ -4674,31 +4674,25 @@ h1.section-title.work-page-title {
   font-family: var(--font-mono, 'Geist Mono', ui-monospace, monospace) !important;
 }
 
-/* === HERO MOSAIC GRID === */
+/* === HERO MOSAIC 5x3 4:5 === */
 .hero-mosaic-section {
   margin-top: 24px;
   margin-bottom: 64px;
 }
 .hero-mosaic {
   display: grid !important;
-  grid-template-columns: repeat(6, 1fr) !important;
+  grid-template-columns: repeat(5, 1fr) !important;
   gap: 8px !important;
-  background: #111111 !important;
+  background: #0D0D0D !important;
   padding: 8px !important;
 }
 .hm-cell {
   position: relative !important;
   overflow: hidden !important;
-  background: #111111 !important;
-  min-height: 0 !important;
-}
-.hm-photo {
-  aspect-ratio: 1 / 1 !important;
+  background: #0D0D0D !important;
+  aspect-ratio: 4 / 5 !important;
   width: 100% !important;
-}
-.hm-photo.hm-span-2 {
-  grid-column: span 2 !important;
-  aspect-ratio: 2 / 1 !important;
+  min-height: 0 !important;
 }
 .hm-photo img {
   position: absolute !important;
@@ -4710,30 +4704,43 @@ h1.section-title.work-page-title {
   display: block !important;
   border: 0 !important;
 }
-/* parent must be positioned for absolute img */
-.hm-photo {
-  position: relative !important;
-}
 .hm-text {
   display: flex !important;
-  align-items: center !important;
-  justify-content: flex-start !important;
-  padding: 16px 14px !important;
-  background: #111111 !important;
+  flex-direction: column !important;
+  padding: 18px 14px !important;
   color: #F5F2EC !important;
   font-family: var(--font-mono, 'Geist Mono', ui-monospace, monospace) !important;
-  font-size: 11px !important;
+  font-size: clamp(9px, 1.05vw, 13px) !important;
   font-weight: 400 !important;
-  letter-spacing: 0.12em !important;
+  letter-spacing: 0.14em !important;
   line-height: 1.45 !important;
   text-transform: uppercase !important;
-  aspect-ratio: 1 / 1 !important;
+  box-sizing: border-box !important;
 }
-.hm-text-center { justify-content: center !important; text-align: center !important; }
-.hm-text-right { justify-content: flex-end !important; text-align: right !important; }
+.hm-text-bottom {
+  justify-content: flex-end !important;
+  align-items: flex-start !important;
+  text-align: left !important;
+}
+.hm-text-top {
+  justify-content: flex-start !important;
+  align-items: flex-start !important;
+  text-align: left !important;
+}
+.hm-text-center {
+  align-items: center !important;
+  text-align: center !important;
+}
+.hm-text-right {
+  align-items: flex-end !important;
+  text-align: right !important;
+}
+.hm-text span {
+  display: block !important;
+}
 
 .hero-mosaic-caption {
-  margin-top: 36px !important;
+  margin-top: 40px !important;
   text-align: center !important;
   display: flex !important;
   flex-direction: column !important;
@@ -4751,11 +4758,18 @@ h1.section-title.work-page-title {
   .hero-mosaic {
     grid-template-columns: repeat(2, 1fr) !important;
     gap: 6px !important;
+    padding: 6px !important;
   }
-  .hm-photo.hm-span-2 {
-    grid-column: span 1 !important;
-    aspect-ratio: 1 / 1 !important;
+  .hm-text {
+    font-size: 10px !important;
+    padding: 12px 10px !important;
   }
-  .hm-text { font-size: 10px !important; }
-  .hero-mosaic-tagline { font-size: 18px !important; }
+  .hero-mosaic-tagline {
+    font-size: 18px !important;
+  }
+}
+@media (max-width: 480px) {
+  .hero-mosaic {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
 }
