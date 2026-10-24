@@ -4867,3 +4867,76 @@ p.work-page-quote,
     grid-template-columns: 1fr !important;
   }
 }
+
+/* === MOBILE HERO + WORKS IMG FIX === */
+@media screen and (max-width: 900px) {
+  /* Главная: только фото, без чёрных текстовых ячеек */
+  .hero-mosaic .hm-text {
+    display: none !important;
+  }
+  .hero-mosaic {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 6px !important;
+  }
+
+  /* Страница работы / галерея: фото не расползаются */
+  .works-six-grid,
+  .works-six-grid .work-card,
+  .works-six-grid .work-img-wrap,
+  .work-detail-mosaic,
+  .work-detail-mosaic .wdm-cell,
+  .other-works-grid,
+  .other-works-grid .work-card,
+  .other-works-grid .work-img-wrap {
+    max-width: 100% !important;
+    width: 100% !important;
+    overflow: hidden !important;
+    box-sizing: border-box !important;
+    transform: none !important;
+  }
+  .works-six-grid img,
+  .work-img-wrap img,
+  .work-detail-mosaic img,
+  .other-works-grid img,
+  .wdm-cell img {
+    max-width: 100% !important;
+    width: 100% !important;
+    height: auto !important;
+    transform: none !important;
+    -webkit-transform: none !important;
+    transition: none !important;
+    object-fit: cover !important;
+  }
+  .works-six-grid img:hover,
+  .work-img-wrap img:hover,
+  .work-detail-mosaic img:hover,
+  .other-works-grid img:hover {
+    transform: none !important;
+  }
+  .work-img-wrap {
+    aspect-ratio: 4 / 5 !important;
+    position: relative !important;
+  }
+  .work-img-wrap img {
+    position: absolute !important;
+    inset: 0 !important;
+    height: 100% !important;
+  }
+}
+
+.work-subtitle-muted {
+  font-family: 'Montserrat', sans-serif !important;
+  font-size: 16px !important;
+  font-weight: 400 !important;
+  font-style: normal !important;
+  color: #7A756D !important;
+  letter-spacing: 0.06em !important;
+  text-transform: uppercase !important;
+  font-style: normal !important;
+}
+em .work-subtitle-muted,
+i .work-subtitle-muted,
+.work-page-quote em,
+.work-page-quote i {
+  font-style: normal !important;
+}
