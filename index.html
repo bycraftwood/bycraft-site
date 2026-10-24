@@ -49,7 +49,7 @@
 }
   </script>
   <link rel="icon" href="./images/favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="./css/style.css?v=1180">
+  <link rel="stylesheet" href="./css/style.css?v=1190">
 
 
 
@@ -1315,30 +1315,101 @@ footer a[href^="mailto:"],
     </div>
   </header>
   <main>
-    <!-- 1 БЛОК: Слева текст (5 частей), справа альбомное фото (7 частей, 1200х630) -->
-    <section class="container hero-split-grid">
-      <div class="hero-split-text">
-        <p class="hero-eyebrow" style="font-size:14px; letter-spacing:0.08em;">СКУЛЬПТУРНЫЕ АРТ-ОБЪЕКТЫ</p>
-        <h1 class="hero-main-title" style="font-size:26px; font-weight:700; line-height:1.25;">Создано природой<br>Завершено человеком</h1>
-        <p class="hero-material-info" style="font-size:14px; color: var(--color-muted); letter-spacing: 0.04em;">Материал: сувель берёзы / обжиг огнём</p>
-        
-        <p class="lead-text" style="margin-bottom: 24px; font-size: 14px; line-height: 1.5;">
-          Каждая работа существует в единственном экземпляре и не может быть повторена
-        </p>
-        <div>
-          <a href="works/" class="btn-telegram" style="font-size:14px;">Смотреть работы</a>
+
+    <!-- БЛОК 1: фото-сетка + подпись -->
+    <section class="container hero-mosaic-section">
+      <div class="hero-mosaic">
+        <!-- Ряд 1 -->
+        <div class="hm-cell hm-text">
+          <span>СКУЛЬПТУРНЫЕ<br>АРТ-ОБЪЕКТЫ</span>
+        </div>
+        <div class="hm-cell hm-photo">
+          <picture>
+            <source srcset="images/home/grid-01.webp" type="image/webp">
+            <img src="images/home/grid-01.jpg" alt="BYCRAFT" loading="eager">
+          </picture>
+        </div>
+        <div class="hm-cell hm-photo">
+          <picture>
+            <source srcset="images/home/grid-02.webp" type="image/webp">
+            <img src="images/home/grid-02.jpg" alt="BYCRAFT" loading="eager">
+          </picture>
+        </div>
+        <div class="hm-cell hm-text hm-text-center">
+          <span>2026</span>
+        </div>
+        <div class="hm-cell hm-photo">
+          <picture>
+            <source srcset="images/home/grid-03.webp" type="image/webp">
+            <img src="images/home/grid-03.jpg" alt="BYCRAFT" loading="eager">
+          </picture>
+        </div>
+        <div class="hm-cell hm-text hm-text-right">
+          <span>В ЕДИНСТВЕННОМ<br>ЭКЗЕМПЛЯРЕ</span>
+        </div>
+
+        <!-- Ряд 2 -->
+        <div class="hm-cell hm-photo">
+          <picture>
+            <source srcset="images/home/grid-04.webp" type="image/webp">
+            <img src="images/home/grid-04.jpg" alt="BYCRAFT" loading="lazy">
+          </picture>
+        </div>
+        <div class="hm-cell hm-photo hm-span-2">
+          <picture>
+            <source srcset="images/home/grid-05.webp" type="image/webp">
+            <img src="images/home/grid-05.jpg" alt="BYCRAFT" loading="lazy">
+          </picture>
+        </div>
+        <div class="hm-cell hm-photo">
+          <picture>
+            <source srcset="images/home/grid-06.webp" type="image/webp">
+            <img src="images/home/grid-06.jpg" alt="BYCRAFT" loading="lazy">
+          </picture>
+        </div>
+        <div class="hm-cell hm-photo">
+          <picture>
+            <source srcset="images/home/grid-07.webp" type="image/webp">
+            <img src="images/home/grid-07.jpg" alt="BYCRAFT" loading="lazy">
+          </picture>
+        </div>
+        <div class="hm-cell hm-photo">
+          <picture>
+            <source srcset="images/home/grid-08.webp" type="image/webp">
+            <img src="images/home/grid-08.jpg" alt="BYCRAFT" loading="lazy">
+          </picture>
+        </div>
+
+        <!-- Ряд 3 -->
+        <div class="hm-cell hm-text">
+          <span>2026</span>
+        </div>
+        <div class="hm-cell hm-photo hm-span-2">
+          <picture>
+            <source srcset="images/home/grid-09.webp" type="image/webp">
+            <img src="images/home/grid-09.jpg" alt="BYCRAFT" loading="lazy">
+          </picture>
+        </div>
+        <div class="hm-cell hm-text hm-text-center">
+          <span>СУВЕЛЬ БЕРЁЗЫ<br>ОБЖИГ ОГНЁМ</span>
+        </div>
+        <div class="hm-cell hm-photo hm-span-2">
+          <picture>
+            <source srcset="images/home/grid-10.webp" type="image/webp">
+            <img src="images/home/grid-10.jpg" alt="BYCRAFT" loading="lazy">
+          </picture>
+        </div>
+        <div class="hm-cell hm-text hm-text-right">
+          <span>2026</span>
         </div>
       </div>
 
-      <div class="hero-split-photo">
-        <a href="works/work-252/" style="display: block;">
-          <picture>
-          <source srcset="images/hero/hero-main.webp" type="image/webp">
-          <img src="images/hero/hero-main.jpg" alt="Скульптурный арт-объект BYCRAFT из сувеля берёзы с обжигом огнём">
-        </picture>
-        </a>
+      <div class="hero-mosaic-caption">
+        <p class="hero-mosaic-tagline">Создано природой. Завершено человеком</p>
+        <a href="works/" class="btn-telegram hero-mosaic-btn">Смотреть работы</a>
       </div>
     </section>
+
 
     <!-- 2 БЛОК: МАСТЕРСКАЯ (описание на всю ширину) -->
     <section class="container home-workshop-section">

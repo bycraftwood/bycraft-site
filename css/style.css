@@ -4673,3 +4673,105 @@ h1.section-title.work-page-title {
 .font-mono {
   font-family: var(--font-mono, 'Geist Mono', ui-monospace, monospace) !important;
 }
+
+/* === HERO MOSAIC GRID === */
+.hero-mosaic-section {
+  margin-top: 24px;
+  margin-bottom: 64px;
+}
+.hero-mosaic {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 8px;
+  background: #111111;
+  padding: 8px;
+}
+.hm-cell {
+  position: relative;
+  overflow: hidden;
+  background: #111111;
+  min-height: 140px;
+}
+.hm-photo {
+  aspect-ratio: 1 / 1;
+}
+.hm-photo.hm-span-2 {
+  grid-column: span 2;
+  aspect-ratio: 2 / 1;
+}
+.hm-photo img,
+.hm-photo picture,
+.hm-photo picture img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  display: block !important;
+}
+.hm-text {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 16px 14px;
+  background: #111111;
+  color: #F5F2EC;
+  font-family: var(--font-mono, 'Geist Mono', ui-monospace, monospace);
+  font-size: 11px;
+  font-weight: 400;
+  letter-spacing: 0.12em;
+  line-height: 1.45;
+  text-transform: uppercase;
+}
+.hm-text-center {
+  justify-content: center;
+  text-align: center;
+}
+.hm-text-right {
+  justify-content: flex-end;
+  text-align: right;
+}
+.hm-text span {
+  display: block;
+}
+
+.hero-mosaic-caption {
+  margin-top: 36px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+.hero-mosaic-tagline {
+  font-size: 22px;
+  font-weight: 600;
+  color: #1A1A1A;
+  line-height: 1.35;
+  margin: 0;
+}
+.hero-mosaic-btn {
+  display: inline-block;
+  font-size: 14px !important;
+}
+
+@media (max-width: 900px) {
+  .hero-mosaic {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 6px !important;
+    padding: 6px !important;
+  }
+  .hm-photo.hm-span-2 {
+    grid-column: span 1 !important;
+    aspect-ratio: 1 / 1 !important;
+  }
+  .hm-text {
+    font-size: 10px !important;
+    min-height: 100px !important;
+    padding: 12px 10px !important;
+  }
+  .hero-mosaic-tagline {
+    font-size: 18px !important;
+  }
+}
+@media (max-width: 480px) {
+  .hm-text { font-size: 9px !important; letter-spacing: 0.08em !important; }
+}
