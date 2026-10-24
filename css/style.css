@@ -4780,3 +4780,27 @@ h1.section-title.work-page-title {
   .hero-mosaic { grid-template-columns: repeat(2, 1fr) !important; }
   .work-detail-mosaic { gap: 8px !important; }
 }
+
+/* === HOME TAGLINE + 2026 CENTER === */
+.hm-text-center {
+  align-items: center !important;
+  text-align: center !important;
+  justify-content: flex-end !important; /* снизу */
+}
+.hero-mosaic-tagline {
+  font-family: 'Montserrat', var(--font-base, sans-serif) !important;
+  font-size: 16px !important;
+  font-weight: 500 !important;
+  color: #7A756D !important;
+  letter-spacing: 0.06em !important;
+  text-transform: uppercase !important;
+  margin: 0 !important;
+}
+.work-subtitle-muted {
+  font-family: 'Montserrat', sans-serif !important;
+  font-size: 16px !important;
+  font-weight: 400 !important;
+  color: #7A756D !important;
+  letter-spacing: 0.06em !important;
+  text-transform: uppercase !important;
+}
