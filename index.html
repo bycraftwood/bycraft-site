@@ -49,7 +49,7 @@
 }
   </script>
   <link rel="icon" href="./images/favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="./css/style.css?v=1220">
+  <link rel="stylesheet" href="./css/style.css?v=1230">
 
 
 
@@ -1357,11 +1357,11 @@ footer a[href^="mailto:"],
 
     <!-- 2 БЛОК: МАСТЕРСКАЯ (описание на всю ширину) -->
     <section class="container home-workshop-section">
-      <h2 class="section-title home-section-title-muted">МАСТЕРСКАЯ</a></h2>
+      <h2 class="section-title home-section-title-muted"><a href="workshop/" style="color: inherit; text-decoration: underline; text-underline-offset: 6px; font-weight: 400;">МАСТЕРСКАЯ</a></h2>
       <p class="lead-text" style="margin-bottom: 20px; width: 100%;">
         Сувель — нарост на берёзе, который нельзя просчитать или выстроить по линейке. Его форма и рисунок волокон формируются годами. Задача мастера — увидеть в этой бесформенной массе то, чего в ней ещё не видно
       </p>
-      <a href="workshop/" class="btn-arrow" style="font-weight:700; border:none; background:none; padding:0;">Увидеть процесс →</a>
+      <a href="workshop/" class="btn-arrow" style="font-weight: 400; border:none; background:none; padding:0;">Увидеть процесс →</a>
     </section>
 
     <!-- 3 БЛОК: ДЛЯ КУРАТОРОВ (без изменений) -->
@@ -1380,32 +1380,27 @@ footer a[href^="mailto:"],
     <!-- 4 БЛОК: АКТУАЛЬНЫЕ СОБЫТИЯ (без изменений) -->
     <section class="container home-events-preview">
       <h2 class="section-title home-section-title-muted"><a href="events/" style="color: inherit; text-decoration: underline; text-underline-offset: 6px; font-weight: 400;">АКТУАЛЬНЫЕ СОБЫТИЯ</a></h2>
-      <div class="grid-2-col" style="margin-bottom: 30px;">
-        <div>
+      <div class="home-events-grid">
+        <a class="home-event-card" href="events/#event-чароуны-млын-зима">
+          <p class="event-date">10–13 декабря 2026</p>
+          <h3 class="event-name">«Чароўны Млын», Минск</h3>
+        </a>
+        <a class="home-event-card" href="events/#event-artflection">
+          <p class="event-date">26–27 декабря 2026</p>
+          <h3 class="event-name">ARTFLECTION, Москва</h3>
+        </a>
+        <a class="home-event-card" href="events/tryn-trava/">
           <p class="event-date">Октябрь 2026</p>
-          <h3 class="event-name" style="margin-bottom: 8px;">9-я выставка «Трын*Трава. Современный русский стиль»</h3>
-          <p class="lead-text">Три работы вошли в основную экспозицию выставки</p>
-        </div>
-        <div>
-          <p class="event-date">Август 2026</p>
-          <h3 class="event-name" style="margin-bottom: 8px;">Международная выставка-конкурс современного искусства «UNITED BY ART»</h3>
-          <p class="lead-text">3-е место в номинации «Человек и его мир», раздел: скульптура</p>
-        </div>
-      </div>
-      <div style="margin-bottom: 40px;">
-        <a href="events/" class="btn-arrow" style="font-weight:700; border:none; background:none; padding:0;">Смотреть все события →</a>
-      </div>
-      <div class="events-two-photos">
-        <picture>
-          <source srcset="images/events/home-events-feature-01.webp" type="image/webp">
-          <img src="images/events/home-events-feature-01.jpg" alt="Экспозиция BYCRAFT на выставке: скульптуры из сувеля берёзы" loading="lazy">
-        </picture>
-        <picture>
-          <source srcset="images/events/home-events-feature-02.webp" type="image/webp">
-          <img src="images/events/home-events-feature-02.jpg" alt="Валентин Атрош на выставке с работами из берёзового сувеля" loading="lazy">
-        </picture>
+          <h3 class="event-name">9-я выставка «Трын*Трава. Современный русский стиль»</h3>
+          <p class="event-note">Три работы вошли в основную экспозицию выставки</p>
+        </a>
+        <a class="home-event-card" href="events/united-by-art/">
+          <p class="event-date">2026</p>
+          <h3 class="event-name">Международная выставка-конкурс современного искусства «UNITED BY ART»</h3>
+          <p class="event-note">3-е место в номинации «Человек и его мир», раздел: скульптура</p>
         </a>
       </div>
+      <p style="margin-top: 28px;"><a href="events/" class="btn-arrow" style="font-size:14px; border:none;">Смотреть все события →</a></p>
     </section>
   </main>
                         <footer class="site-footer">

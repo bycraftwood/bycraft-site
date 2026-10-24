@@ -4804,3 +4804,66 @@ h1.section-title.work-page-title {
   letter-spacing: 0.06em !important;
   text-transform: uppercase !important;
 }
+
+/* === HOME BTN + TITLES Oct24 === */
+.hero-mosaic-btn,
+a.hero-mosaic-btn.btn-telegram {
+  min-width: 240px !important;
+  padding: 14px 36px !important;
+  display: inline-block !important;
+  text-align: center !important;
+}
+.home-section-title-muted,
+.home-workshop-section h2.section-title,
+.home-workshop-section h2.section-title a,
+.home-curators-box h2.section-title,
+.home-events-preview h2.section-title,
+.home-events-preview h2.section-title a {
+  font-size: 16px !important;
+  font-weight: 400 !important;
+  color: #7A756D !important;
+  letter-spacing: 0.08em !important;
+  text-transform: uppercase !important;
+}
+.work-subtitle-muted,
+p.work-page-quote,
+.work-page-quote {
+  font-family: 'Montserrat', sans-serif !important;
+  font-size: 16px !important;
+  font-weight: 400 !important;
+  font-style: normal !important;
+  color: #7A756D !important;
+  letter-spacing: 0.06em !important;
+  text-transform: uppercase !important;
+}
+.home-events-preview .home-events-grid {
+  display: grid !important;
+  grid-template-columns: 1fr 1fr !important;
+  gap: 28px 24px !important;
+  margin-top: 24px !important;
+}
+.home-events-preview .home-event-card {
+  color: inherit !important;
+  text-decoration: none !important;
+}
+.home-events-preview .home-event-card .event-date {
+  font-size: 13px !important;
+  color: #7A756D !important;
+  margin-bottom: 6px !important;
+}
+.home-events-preview .home-event-card .event-name {
+  font-size: 15px !important;
+  font-weight: 500 !important;
+  color: #1A1A1A !important;
+  margin-bottom: 6px !important;
+}
+.home-events-preview .home-event-card .event-note {
+  font-size: 14px !important;
+  color: #7A756D !important;
+  line-height: 1.45 !important;
+}
+@media (max-width: 700px) {
+  .home-events-preview .home-events-grid {
+    grid-template-columns: 1fr !important;
+  }
+}
