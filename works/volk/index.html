@@ -4,7 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Скульптура «Волк» — BYCRAFT · Валентин Атрош</title>
-  <meta name="description" content="Скульптура «Волк» (2026) из сувеля берёзы."></span> «Волк» (2026) из сувеля берёзы. Экспозиция выставки «Трын*Трава».">
+  <meta name="description" content="Скульптура «Волк» (2026) из сувеля берёзы.">
+  
   <link rel="canonical" href="https://bycraft.by/works/volk/">
 
   <link rel="alternate" hreflang="ru" href="https://bycraft.by/works/volk/">
@@ -75,7 +76,7 @@
 }
   </script>
   <link rel="icon" href="../../images/favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="../../css/style.css?v=1250">
+  <link rel="stylesheet" href="../../css/style.css?v=1260">
 
 
 
@@ -272,43 +273,18 @@ img {
     var h1 = document.querySelector('h1');
     var workName = h1 ? h1.textContent.trim() : (document.title.split('—')[0].split('-')[0].trim() || 'Арт-объект');
 
-    modal.innerHTML = '<div class="bc-modal__overlay" onclick="window.closeBycraftModal()"></div>' +
-      '<div class="bc-modal__container">' +
-        '<button type="button" class="bc-modal__close" onclick="window.closeBycraftModal()" aria-label="Закрыть">&times;</button>' +
-        '<div class="bc-modal__header">' +
-          '<h3 class="bc-modal__title">Обсудить похожий арт-объект</h3>' +
-          (subtitle ? ('<p class="bc-modal__subtitle">' + subtitle + '</p>') : '') +
         '</div>' +
-        '<form id="bc-inquiry-form" class="bc-modal__form" onsubmit="window.handleBycraftSubmit(event)">' +
-          '<div class="bc-form-group">' +
-            '<label for="bc-name" class="bc-label">Ваше имя *</label>' +
-            '<input type="text" id="bc-name" name="name" class="bc-input" required placeholder="Иван">' +
           '</div>' +
-          '<div class="bc-form-group">' +
-            '<label for="bc-contact" class="bc-label">Контакт / телефон / мессенджер *</label>' +
-            '<input type="text" id="bc-contact" name="contact" class="bc-input" required placeholder="+375 / +7 / @username / email">' +
           '</div>' +
-          '<div class="bc-form-group">' +
-            '<label for="bc-comment" class="bc-label">Комментарий</label>' +
-            '<textarea id="bc-comment" name="comment" class="bc-textarea" rows="3" placeholder="Ваш вопрос или пожелания..."></textarea>' +
           '</div>' +
-          '<div class="bc-form-consent">' +
-            '<label class="bc-consent-label">' +
               '<input type="checkbox" id="bc-consent" required checked>' +
-              '<span>Я даю согласие на обработку персональных данных в соответствии с <a href="/privacy/" target="_blank">Политикой конфиденциальности</a></span>' +
             '</label>' +
           '</div>' +
-          '<button type="submit" class="bc-submit-btn">Отправить запрос</button>' +
-          '<div class="bc-modal-alt">' +
             '<span>или свяжитесь напрямую:</span>' +
-            '<a href="https://t.me/bycraft_by" target="_blank" rel="noopener" class="bc-tg-link">Telegram: @bycraft_by</a>' +
           '</div>' +
         '</form>' +
-        '<div id="bc-modal-success" class="bc-modal__success" style="display: none;">' +
-          '<div class="bc-success-icon">✓</div>' +
           '<h4>Запрос сформирован</h4>' +
           '<p>Валентин свяжется с вами в ближайшее время по указанному контакту.</p>' +
-          '<button type="button" class="bc-submit-btn" onclick="window.closeBycraftModal()">Закрыть</button>' +
         '</div>' +
       '</div>';
 
@@ -882,51 +858,25 @@ footer a[href^="mailto:"],
     var commentPlaceholder = isEn ? 'Your questions or notes...' : 'Ваш вопрос или пожелания...';
     var privacyLink = isEn ? '/en/privacy/' : '/privacy/';
     var consentText = isEn ? 
-      ('I agree to the processing of personal data in accordance with the <a href="' + privacyLink + '" target="_blank">Privacy Policy</a>') :
-      ('Я даю согласие на обработку персональных данных в соответствии с <a href="' + privacyLink + '" target="_blank">Политикой конфиденциальности</a>');
     var submitBtnText = isEn ? 'Send Inquiry' : 'Отправить запрос';
     var altText = isEn ? 'or contact directly:' : 'или свяжитесь напрямую:';
     var successTitle = isEn ? 'Inquiry Sent' : 'Запрос сформирован';
     var successDesc = isEn ? 'Valentin will contact you shortly via the provided contact.' : 'Валентин свяжется с вами в ближайшее время по указанному контакту.';
     var closeBtnText = isEn ? 'Close' : 'Закрыть';
 
-    modal.innerHTML = '<div class="bc-modal__overlay" onclick="window.closeBycraftModal()"></div>' +
-      '<div class="bc-modal__container">' +
-        '<button type="button" class="bc-modal__close" onclick="window.closeBycraftModal()" aria-label="Close">&times;</button>' +
-        '<div class="bc-modal__header">' +
-          '<h3 class="bc-modal__title">' + title + '</h3>' +
-          (subtitle ? ('<p class="bc-modal__subtitle">' + subtitle + '</p>') : '') +
         '</div>' +
-        '<form id="bc-inquiry-form" class="bc-modal__form" onsubmit="window.handleBycraftSubmit(event)">' +
-          '<div class="bc-form-group">' +
-            '<label for="bc-name" class="bc-label">' + nameLabel + '</label>' +
-            '<input type="text" id="bc-name" name="name" class="bc-input" required placeholder="' + namePlaceholder + '">' +
           '</div>' +
-          '<div class="bc-form-group">' +
-            '<label for="bc-contact" class="bc-label">' + contactLabel + '</label>' +
-            '<input type="text" id="bc-contact" name="contact" class="bc-input" required placeholder="' + contactPlaceholder + '">' +
           '</div>' +
-          '<div class="bc-form-group">' +
-            '<label for="bc-comment" class="bc-label">' + commentLabel + '</label>' +
-            '<textarea id="bc-comment" name="comment" class="bc-textarea" rows="3" placeholder="' + commentPlaceholder + '"></textarea>' +
           '</div>' +
-          '<div class="bc-form-consent">' +
-            '<label class="bc-consent-label">' +
               '<input type="checkbox" id="bc-consent" required checked>' +
               '<span>' + consentText + '</span>' +
             '</label>' +
           '</div>' +
-          '<button type="submit" class="bc-submit-btn">' + submitBtnText + '</button>' +
-          '<div class="bc-modal-alt">' +
             '<span>' + altText + '</span>' +
-            '<a href="https://t.me/bycraft_by" target="_blank" rel="noopener" class="bc-tg-link">Telegram: @bycraft_by</a>' +
           '</div>' +
         '</form>' +
-        '<div id="bc-modal-success" class="bc-modal__success" style="display: none;">' +
-          '<div class="bc-success-icon">✓</div>' +
           '<h4>' + successTitle + '</h4>' +
           '<p>' + successDesc + '</p>' +
-          '<button type="button" class="bc-submit-btn" onclick="window.closeBycraftModal()">' + closeBtnText + '</button>' +
         '</div>' +
       '</div>';
 
@@ -1404,6 +1354,9 @@ footer a[href^="mailto:"],
     <div class="container work-layout-6-6">
       <div class="work-detail-mosaic">
         <div class="wdm-cell wdm-text"><span>ВОЛК</span></div>
+        <div class="wdm-cell"><img src="../../images/works/work-exhibit-05.jpg" alt="ВОЛК" loading="eager"></div>
+        <div class="wdm-cell"><img src="../../images/works/work-exhibit-05-detail.jpg" alt="ВОЛК" loading="lazy"></div>
+        <div class="wdm-cell"><img src="../../images/works/work-exhibit-05-detail-1.jpg" alt="ВОЛК" loading="lazy"></div>
       <div class="work-detail-info">
         <div class="meta-row"><span class="meta-label" style="color:#7A756D;font-size:14px;">материал: </span><span class="meta-val" style="color:#7A756D;font-size:14px;">сувель берёзы, обжиг огнём</span></div>
         <div class="meta-row"><span class="meta-label" style="color:#7A756D;font-size:14px;">размеры: </span><span class="meta-val" style="color:#7A756D;font-size:14px;">В19 × Ш36 × Д45&nbsp;см</span></div>
