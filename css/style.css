@@ -4674,11 +4674,8 @@ h1.section-title.work-page-title {
   font-family: var(--font-mono, 'Geist Mono', ui-monospace, monospace) !important;
 }
 
-/* === HERO MOSAIC 5x3 4:5 === */
-.hero-mosaic-section {
-  margin-top: 24px;
-  margin-bottom: 64px;
-}
+/* === HERO MOSAIC + WORK CARD GRID === */
+.hero-mosaic-section { margin-top: 24px; margin-bottom: 64px; }
 .hero-mosaic {
   display: grid !important;
   grid-template-columns: repeat(5, 1fr) !important;
@@ -4692,7 +4689,6 @@ h1.section-title.work-page-title {
   background: #0D0D0D !important;
   aspect-ratio: 4 / 5 !important;
   width: 100% !important;
-  min-height: 0 !important;
 }
 .hm-photo img {
   position: absolute !important;
@@ -4700,9 +4696,7 @@ h1.section-title.work-page-title {
   width: 100% !important;
   height: 100% !important;
   object-fit: cover !important;
-  object-position: center !important;
   display: block !important;
-  border: 0 !important;
 }
 .hm-text {
   display: flex !important;
@@ -4711,33 +4705,15 @@ h1.section-title.work-page-title {
   color: #F5F2EC !important;
   font-family: var(--font-mono, 'Geist Mono', ui-monospace, monospace) !important;
   font-size: clamp(9px, 1.05vw, 13px) !important;
-  font-weight: 400 !important;
   letter-spacing: 0.14em !important;
   line-height: 1.45 !important;
   text-transform: uppercase !important;
   box-sizing: border-box !important;
 }
-.hm-text-bottom {
-  justify-content: flex-end !important;
-  align-items: flex-start !important;
-  text-align: left !important;
-}
-.hm-text-top {
-  justify-content: flex-start !important;
-  align-items: flex-start !important;
-  text-align: left !important;
-}
-.hm-text-center {
-  align-items: center !important;
-  text-align: center !important;
-}
-.hm-text-right {
-  align-items: flex-end !important;
-  text-align: right !important;
-}
-.hm-text span {
-  display: block !important;
-}
+.hm-text-bottom { justify-content: flex-end !important; }
+.hm-text-top { justify-content: flex-start !important; }
+.hm-text-left { align-items: flex-start !important; text-align: left !important; }
+.hm-text-right { align-items: flex-end !important; text-align: right !important; }
 
 .hero-mosaic-caption {
   margin-top: 40px !important;
@@ -4754,22 +4730,53 @@ h1.section-title.work-page-title {
   margin: 0 !important;
 }
 
-@media (max-width: 900px) {
-  .hero-mosaic {
-    grid-template-columns: repeat(2, 1fr) !important;
-    gap: 6px !important;
-    padding: 6px !important;
-  }
-  .hm-text {
-    font-size: 10px !important;
-    padding: 12px 10px !important;
-  }
-  .hero-mosaic-tagline {
-    font-size: 18px !important;
-  }
+/* Карточка работы: сетка 2×2 */
+.work-detail-mosaic {
+  display: grid !important;
+  grid-template-columns: 1fr 1fr !important;
+  gap: 12px !important;
+  width: 100% !important;
+  margin-bottom: 28px !important;
 }
-@media (max-width: 480px) {
-  .hero-mosaic {
-    grid-template-columns: repeat(2, 1fr) !important;
-  }
+.work-detail-mosaic .wdm-cell {
+  position: relative !important;
+  aspect-ratio: 4 / 5 !important;
+  overflow: hidden !important;
+  background: #0D0D0D !important;
+}
+.work-detail-mosaic .wdm-cell img {
+  position: absolute !important;
+  inset: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  display: block !important;
+}
+.work-detail-mosaic .wdm-text {
+  display: flex !important;
+  align-items: flex-end !important;
+  padding: 16px !important;
+  color: #F5F2EC !important;
+  font-family: var(--font-mono, 'Geist Mono', ui-monospace, monospace) !important;
+  font-size: 12px !important;
+  letter-spacing: 0.12em !important;
+  text-transform: uppercase !important;
+  line-height: 1.4 !important;
+}
+
+/* Характеристики — Geist Mono */
+.work-detail-info .meta-row,
+.work-detail-info .meta-label,
+.work-detail-info .meta-val,
+.work-awards-block,
+.work-awards-block .meta-label,
+.work-awards-block .meta-val {
+  font-family: var(--font-mono, 'Geist Mono', ui-monospace, monospace) !important;
+  font-size: 14px !important;
+  color: #7A756D !important;
+}
+
+@media (max-width: 900px) {
+  .hero-mosaic { grid-template-columns: repeat(2, 1fr) !important; }
+  .work-detail-mosaic { gap: 8px !important; }
 }
