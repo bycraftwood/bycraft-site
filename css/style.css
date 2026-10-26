@@ -5133,3 +5133,20 @@ i .work-subtitle-muted,
 .bc-modal-alt a { color: inherit; text-decoration: underline; }
 /* hide empty dropdown leftovers */
 .nav-dropdown { display: none !important; }
+
+/* === NAV HOW TO BUY === */
+.nav-how-to-buy.nav-link-btn {
+  margin-left: 8px;
+}
+@media (max-width: 900px) {
+  .main-nav.open .nav-how-to-buy.nav-link-btn {
+    display: block !important;
+    width: 100% !important;
+    text-align: left !important;
+    background: transparent !important;
+    color: #1A1A1A !important;
+    border-bottom: 1px solid #f0f0f0 !important;
+    padding: 14px 0 !important;
+    border-radius: 0 !important;
+  }
+}

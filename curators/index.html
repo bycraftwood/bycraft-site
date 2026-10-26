@@ -69,7 +69,7 @@
 }
   </script>
   <link rel="icon" href="../images/favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="../css/style.css?v=1290">
+  <link rel="stylesheet" href="../css/style.css?v=1300">
 
 
 
@@ -975,15 +975,12 @@ footer a[href^="mailto:"],
       <button class="mobile-toggle" aria-label="Открыть меню">Меню</button>
       <nav class="main-nav">
         <a href="../works/" class="nav-link">Работы</a>
-<a href="../workshop/" class="nav-link ">Мастерская</a>
-        <a href="../events/" class="nav-link ">События</a>
+        <a href="../workshop/" class="nav-link">Мастерская</a>
+        <a href="../events/" class="nav-link">События</a>
+        <a href="../designers/" class="nav-link">Для дизайнеров</a>
         <a href="../curators/" class="nav-link active">Для кураторов</a>
-        <a href="../contacts/" class="nav-link-btn">Контакты</a>
-        <div class="lang-switch">
-          <a href="#" class="active">RU</a>
-          <span class="lang-sep">/</span>
-          <a href="/en/curators/">EN</a>
-        </div>
+        <a href="../contacts/" class="nav-link">Контакты</a>
+        <a href="../works/#kak-kupit" class="nav-link-btn nav-how-to-buy">Как купить</a>
       </nav>
     </div>
   </header>
@@ -991,10 +988,7 @@ footer a[href^="mailto:"],
     <div class="container">
       <div class="curator-hero-grid">
         <div class="curator-photo">
-          <picture>
-            <source srcset="../images/curators/curator-portrait.webp" type="image/webp">
-            <img src="../images/curators/curator-portrait.jpg" alt="Валентин Атрош">
-          </picture>
+          <img src="../images/curators/curator-portrait.jpg" alt="Валентин Атрош">
         </div>
         <div class="curator-text">
           <h1 style="font-size: 19px; font-weight: 500; color: var(--color-primary); margin-bottom: 6px;">
@@ -1048,7 +1042,7 @@ footer a[href^="mailto:"],
         <div class="work-card">
           <a href="../works/ispoved/">
             <div class="work-img-wrap">
-              <img src="../images/curators/curator-work-03.jpg" alt="Исповедь" loading="lazy">
+              <img src="../images/curators/curator-work-03.jpg" onerror="this.onerror=null;this.src='../images/curators/curator-work-03.JPG'" alt="Исповедь" loading="lazy">
             </div>
             <div class="work-info museum-label" style="margin-top:10px;"><div class="caption" style="color:#1A1A1A; font-size:14px;">«Исповедь», 2026</div><div class="caption-meta" style="color:#7A756D; font-size:13px;">Сувель берёзы, обжиг огнём</div><div class="caption-meta" style="color:#7A756D; font-size:13px;">Доступна по запросу</div></div>
           </a>
