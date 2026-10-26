@@ -5117,3 +5117,19 @@ i .work-subtitle-muted,
   cursor: pointer;
 }
 .bc-modal__success { text-align: center; padding: 12px 0; }
+
+/* === MODAL PLACEHOLDERS === */
+.bc-field input::placeholder,
+.bc-field textarea::placeholder {
+  color: #9a9590;
+  opacity: 1;
+}
+.bc-modal-alt {
+  margin-top: 14px;
+  font-size: 12px;
+  color: #7A756D;
+  text-align: center;
+}
+.bc-modal-alt a { color: inherit; text-decoration: underline; }
+/* hide empty dropdown leftovers */
+.nav-dropdown { display: none !important; }

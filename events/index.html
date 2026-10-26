@@ -50,7 +50,7 @@
 }
   </script>
   <link rel="icon" href="../images/favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="../css/style.css?v=1280">
+  <link rel="stylesheet" href="../css/style.css?v=1290">
 
 
 
@@ -956,7 +956,7 @@ footer a[href^="mailto:"],
       <a href="../" class="brand-logo">BYCRAFT</a>
       <button class="mobile-toggle" aria-label="Открыть меню">Меню</button>
       <nav class="main-nav">
-        <span class="nav-item-dropdown"><a href="../works/" class="nav-link">Работы</a><span class="nav-dropdown"><a href="../works/exhibitions/">Выставочные работы</a></span></span>
+        <a href="../works/" class="nav-link">Работы</a>
 <a href="../workshop/" class="nav-link">Мастерская</a>
         <a href="../events/" class="nav-link active">События</a>
         <a href="../curators/" class="nav-link">Для кураторов</a>
@@ -1337,6 +1337,9 @@ footer a[href^="mailto:"],
 </script>
 
 
+
+
+
 <script id="bc-unified-scripts">
 (function () {
   function esc(s) {
@@ -1366,25 +1369,42 @@ footer a[href^="mailto:"],
       document.body.appendChild(modal);
     }
 
+    var title = isEn ? "Request information about the work" : "Запрос информации о работе";
+    var sub = esc(workName);
+
     modal.innerHTML =
       '<div class="bc-modal__overlay" onclick="window.closeBycraftModal()"></div>' +
       '<div class="bc-modal__container" role="dialog" aria-modal="true">' +
       '<button type="button" class="bc-modal__close" onclick="window.closeBycraftModal()" aria-label="Close">&times;</button>' +
       '<div class="bc-modal__header">' +
-      '<div class="bc-modal__title">' +
-      (isEn ? "Request information" : "Запрос информации о работе") +
-      "</div>" +
-      '<div class="bc-modal__subtitle">' +
-      esc(workName) +
-      "</div>" +
+      '<div class="bc-modal__title">' + title + "</div>" +
+      '<div class="bc-modal__subtitle">' + sub + "</div>" +
       "</div>" +
       '<form id="bc-inquiry-form" onsubmit="return window.handleBycraftSubmit(event)">' +
-      '<div class="bc-field"><label>Имя / Name</label>' +
-      '<input type="text" id="bc-name" name="name" required autocomplete="name"></div>' +
-      '<div class="bc-field"><label>Email или Telegram</label>' +
-      '<input type="text" id="bc-contact" name="contact" required autocomplete="email"></div>' +
-      '<div class="bc-field"><label>Комментарий</label>' +
-      '<textarea id="bc-comment" name="comment" rows="3"></textarea></div>' +
+      '<div class="bc-field">' +
+      '<label for="bc-name">' + (isEn ? "Your name" : "Ваше имя") + "</label>" +
+      '<input type="text" id="bc-name" name="name" required autocomplete="name" placeholder="' +
+      (isEn ? "How should we address you" : "Как к вам обращаться") +
+      '">' +
+      "</div>" +
+      '<div class="bc-field">' +
+      '<label for="bc-contact">' +
+      (isEn ? "Contact" : "Контакт для связи") +
+      "</label>" +
+      '<input type="text" id="bc-contact" name="contact" required placeholder="' +
+      (isEn
+        ? "Phone, email, Telegram, WhatsApp — any convenient way"
+        : "Телефон, email, Telegram, WhatsApp — любой удобный способ") +
+      '">' +
+      "</div>" +
+      '<div class="bc-field">' +
+      '<label for="bc-comment">' + (isEn ? "Message" : "Сообщение") + "</label>" +
+      '<textarea id="bc-comment" name="comment" rows="4" placeholder="' +
+      (isEn
+        ? "Tell us about your request (optional)"
+        : "Опишите запрос (необязательно)") +
+      '"></textarea>' +
+      "</div>" +
       '<div class="bc-field bc-consent-row"><label class="bc-consent-label">' +
       '<input type="checkbox" id="bc-consent" required checked> ' +
       (isEn
@@ -1392,19 +1412,20 @@ footer a[href^="mailto:"],
         : "Согласен(на) на обработку персональных данных") +
       "</label></div>" +
       '<button type="submit" class="bc-submit-btn">' +
-      (isEn ? "Send" : "Отправить") +
+      (isEn ? "Send request" : "Отправить запрос") +
       "</button>" +
+      '<p class="bc-modal-alt">' +
+      (isEn ? "or write to" : "или напишите на") +
+      ' <a href="mailto:info@bycraft.by">info@bycraft.by</a></p>' +
       "</form>" +
       '<div id="bc-modal-success" class="bc-modal__success" style="display:none">' +
       "<h4>" +
-      (isEn ? "Request sent" : "Запрос отправлен") +
+      (isEn ? "Request prepared" : "Запрос сформирован") +
       "</h4>" +
       "<p></p>" +
       '<button type="button" class="bc-submit-btn" onclick="window.closeBycraftModal()">' +
       (isEn ? "Close" : "Закрыть") +
-      "</button>" +
-      "</div>" +
-      "</div>";
+      "</button></div></div>";
 
     modal.classList.add("is-active");
     modal.style.cssText =
@@ -1424,26 +1445,17 @@ footer a[href^="mailto:"],
 
   window.handleBycraftSubmit = function (e) {
     e.preventDefault();
-    var name = (document.getElementById("bc-name") || {}).value || "";
-    var contact = (document.getElementById("bc-contact") || {}).value || "";
-    var comment = (document.getElementById("bc-comment") || {}).value || "";
+    var name = ((document.getElementById("bc-name") || {}).value || "").trim();
+    var contact = ((document.getElementById("bc-contact") || {}).value || "").trim();
+    var comment = ((document.getElementById("bc-comment") || {}).value || "").trim();
     var h1 = document.querySelector("h1");
     var workName = h1 ? h1.textContent.trim() : "BYCRAFT";
     var isEn = window.location.pathname.indexOf("/en/") !== -1;
     var subject = encodeURIComponent("BYCRAFT: " + workName);
     var body = encodeURIComponent(
-      "Работа: " +
-        workName +
-        "\nИмя: " +
-        name.trim() +
-        "\nКонтакт: " +
-        contact.trim() +
-        "\nКомментарий: " +
-        comment.trim()
+      "Работа: " + workName + "\nИмя: " + name + "\nКонтакт: " + contact + "\nСообщение: " + comment
     );
-    // Open mailto as reliable delivery without backend
     window.location.href = "mailto:info@bycraft.by?subject=" + subject + "&body=" + body;
-
     var form = document.getElementById("bc-inquiry-form");
     var successBox = document.getElementById("bc-modal-success");
     if (form) form.style.display = "none";
@@ -1452,7 +1464,7 @@ footer a[href^="mailto:"],
       var p = successBox.querySelector("p");
       if (p) {
         p.textContent = isEn
-          ? "Your email client should open with the request to info@bycraft.by."
+          ? "Your email app should open with a message to info@bycraft.by."
           : "Должен открыться почтовый клиент с письмом на info@bycraft.by.";
       }
     }
