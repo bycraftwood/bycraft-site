@@ -5250,3 +5250,49 @@ i .work-subtitle-muted,
     border-top: 1px solid #eee !important;
   }
 }
+
+/* === STOCK DESC COMPACT === */
+.work-detail-info .work-stock-desc {
+  width: 100% !important;
+  max-width: 100% !important;
+  margin-top: 28px !important;
+  padding-top: 4px !important;
+  box-sizing: border-box !important;
+}
+.work-stock-desc .stock-desc-title {
+  font-size: 15px !important;
+  font-weight: 500 !important;
+  color: #1A1A1A !important;
+  margin: 0 0 6px 0 !important;
+  line-height: 1.35 !important;
+}
+.work-stock-desc .stock-desc-lead {
+  font-size: 14px !important;
+  color: #1A1A1A !important;
+  margin: 0 0 14px 0 !important;
+  line-height: 1.45 !important;
+}
+.work-stock-desc .stock-desc-h {
+  font-size: 14px !important;
+  font-weight: 600 !important;
+  color: #1A1A1A !important;
+  margin: 0 0 4px 0 !important;
+  line-height: 1.35 !important;
+}
+.work-stock-desc .stock-desc-line {
+  font-size: 14px !important;
+  color: #1A1A1A !important;
+  margin: 0 0 2px 0 !important;
+  line-height: 1.4 !important;
+}
+.work-stock-desc .stock-desc-gap {
+  margin-bottom: 10px !important;
+}
+
+/* Другие работы в наличии — статус 16px */
+.other-works-section .work-status,
+.other-works-grid .work-status {
+  font-size: 16px !important;
+  font-weight: 400 !important;
+  color: #1A1A1A !important;
+}
