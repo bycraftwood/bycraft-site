@@ -77,7 +77,7 @@
 }
   </script>
   <link rel="icon" href="../../images/favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="../../css/style.css?v=1330">
+  <link rel="stylesheet" href="../../css/style.css?v=1340">
 
 
 
@@ -1054,7 +1054,7 @@ footer a[href^="mailto:"],
     <section>
     <div class="container work-layout-6-6">
             <div class="work-detail-mosaic">
-        <div class="wdm-cell wdm-text"><span><span style="font-size:26px; line-height:1.2;">№ 188</span></div>
+        <div class="wdm-cell wdm-text"><span style="font-size:26px;">№ 188</span></div>
         <div class="wdm-cell"><img src="../../images/works/work-188.jpg" alt="№ 188" loading="eager"></div>
         <div class="wdm-cell"><img src="../../images/works/work-188-detail.jpg" alt="№ 188" loading="lazy"></div>
         <div class="wdm-cell"><img src="../../images/works/work-188-detail-1.jpg" alt="№ 188" loading="lazy"></div>
@@ -1067,24 +1067,19 @@ footer a[href^="mailto:"],
         <div class="meta-row"><span class="meta-label">статус: </span><span class="meta-val" style="font-weight: 500;">В наличии</span></div>
         <div class="meta-row"><span class="meta-label">стоимость: </span><span class="meta-val">795 BYN / 22800 ₽</span></div>
 
-        <div class="work-description" style="margin: 28px 0;">
-          
-          <p class="lead-text" style="margin-bottom: 16px; font-weight: 500; color: var(--color-primary);">Скульптурный арт-объект № 188</p>
-          <p class="lead-text" style="margin-bottom: 16px;">Авторская работа из берёзового сувеля с обжигом, в единственном экземпляре</p>
-          <div class="lead-text" style="margin-bottom: 16px; font-size: 14px; line-height: 1.65; color: #1A1A1A;">
-            <p style="margin-bottom: 10px;"><strong>Доставка:</strong></p>
-            <p style="margin-bottom: 6px;">Минск — бесплатно курьером, до двери</p>
-            <p style="margin-bottom: 6px;">Беларусь — бесплатно, в отделение Европочты</p>
-            <p style="margin-bottom: 6px;">Российская Федерация — в отделение СДЭК = 1800 ₽</p>
-            <p style="margin-bottom: 14px;">Самовывоз — на ближайших офлайн мероприятиях в Москве и Санкт-Петербурге</p>
-            <p style="margin-bottom: 6px;"><strong>Оплата РБ:</strong> наличный и безналичный расчёт / переводом по номеру телефона</p>
-            <p style="margin-bottom: 0;"><strong>Оплата РФ:</strong> перевод на карту Сбербанк / Т-Банк / СБП по номеру телефона</p>
-          </div>
-</div>
+        <div class="work-description work-stock-desc" style="margin-top: 36px;">
+          <p class="lead-text" style="margin-bottom: 12px; font-weight: 500; color: var(--color-primary);">Скульптурный арт-объект № 188</p>
+          <p class="lead-text" style="margin-bottom: 24px;">Авторская работа из берёзового сувеля с обжигом, в единственном экземпляре</p>
+          <p class="lead-text" style="margin-bottom: 8px;"><strong>Доставка:</strong></p>
+          <p class="lead-text" style="margin-bottom: 4px;">Минск — бесплатно курьером, до двери</p>
+          <p class="lead-text" style="margin-bottom: 16px;">Беларусь — бесплатно, в отделение Европочты</p>
+          <p class="lead-text" style="margin-bottom: 4px;">Российская Федерация — в отделение СДЭК = 1800 ₽</p>
+          <p class="lead-text" style="margin-bottom: 20px;">Самовывоз — на ближайших офлайн мероприятиях в Москве и Санкт-Петербурге</p>
+          <p class="lead-text" style="margin-bottom: 6px;"><strong>Оплата РБ:</strong> наличный и безналичный расчёт / перевод по номеру телефона</p>
+          <p class="lead-text" style="margin-bottom: 0;"><strong>Оплата РФ:</strong> перевод на карту Сбербанк / Т-Банк / СБП по номеру телефона</p>
+        </div>
 
-        
-
-        <div style="margin-top: 32px; margin-bottom: 24px;">
+<div style="margin-top: 32px; margin-bottom: 24px;">
           <a href="javascript:void(0);" onclick="window.openBycraftModal(event); return false;" class="btn-telegram" role="button">Приобрести эту работу →</a>
         <p class="lead-text" style="font-size: 14.5px; color: var(--color-secondary); margin-top: 14px; margin-bottom: 0;"></p>
         </div>
@@ -1309,6 +1304,9 @@ footer a[href^="mailto:"],
 
 
 
+
+
+
 <script id="bc-unified-scripts">
 (function () {
   var WORKER_URL = "https://bycraft-form-notify.bycraftwood.workers.dev";
@@ -1336,14 +1334,9 @@ footer a[href^="mailto:"],
       }
     });
     var isStock = !!m;
-    if (/pered-licom|volk|ispoved|obida|osnovanie|exhibitions/.test(path)) {
-      isStock = false;
-    }
+    if (/pered-licom|volk|ispoved|obida|osnovanie|exhibitions/.test(path)) isStock = false;
     return {
-      path: path,
-      num: num || "",
-      title: title,
-      price: price,
+      path: path, num: num || "", title: title, price: price,
       lang: path.indexOf("/en/") === 0 ? "EN" : "RU",
       isStock: isStock,
       utm: window.location.search || "",
@@ -1352,10 +1345,7 @@ footer a[href^="mailto:"],
   }
 
   window.openBycraftModal = function (e) {
-    if (e) {
-      if (e.preventDefault) e.preventDefault();
-      if (e.stopPropagation) e.stopPropagation();
-    }
+    if (e) { if (e.preventDefault) e.preventDefault(); if (e.stopPropagation) e.stopPropagation(); }
     var meta = pageMeta();
     var modal = document.getElementById("bycraft-modal");
     if (!modal) {
@@ -1364,31 +1354,26 @@ footer a[href^="mailto:"],
       modal.className = "bc-modal";
       document.body.appendChild(modal);
     }
-
     var tgUrl = "https://t.me/bycraft_by?text=" + encodeURIComponent(
       "Здравствуйте! Интересует работа № " + (meta.num || meta.title)
     );
-
     var headTitle = meta.isStock
       ? "Приобрести работу № " + (meta.num || "")
       : "Запрос информации о работе";
     var headSub = meta.isStock
-      ? "Оставьте контакт, мы свяжемся с вами в течение одного рабочего дня"
+      ? "мы свяжемся с вами в течение одного рабочего дня"
       : esc(meta.title || "BYCRAFT");
 
     var countryBlock = meta.isStock
-      ? '<div class="bc-field">' +
-        '<label for="bc-country">Страна доставки</label>' +
+      ? '<div class="bc-field"><label for="bc-country">Страна доставки</label>' +
         '<select id="bc-country" name="country" required onchange="window.bcCountryChange()">' +
         '<option value="">Выберите страну</option>' +
         '<option value="Беларусь">Беларусь</option>' +
         '<option value="Россия">Россия</option>' +
-        '<option value="другая">другая</option>' +
-        "</select></div>" +
+        '<option value="другая">другая</option></select></div>' +
         '<div class="bc-field" id="bc-country-other-wrap" style="display:none">' +
         '<label for="bc-country-other">Укажите страну</label>' +
-        '<input type="text" id="bc-country-other" name="country_other" placeholder="Страна доставки">' +
-        "</div>"
+        '<input type="text" id="bc-country-other" name="country_other" placeholder="Страна доставки"></div>'
       : "";
 
     modal.innerHTML =
@@ -1396,11 +1381,10 @@ footer a[href^="mailto:"],
       '<div class="bc-modal__container" role="dialog" aria-modal="true">' +
       '<button type="button" class="bc-modal__close" onclick="window.closeBycraftModal()" aria-label="Close">&times;</button>' +
       '<div class="bc-modal__header">' +
-      '<div class="bc-modal__title">' + esc(headTitle) + "</div>" +
-      '<div class="bc-modal__subtitle">' + headSub + "</div></div>" +
+      '<div class="bc-modal__title">' + esc(headTitle) + '</div>' +
+      '<div class="bc-modal__subtitle">' + headSub + '</div></div>' +
       '<form id="bc-inquiry-form" onsubmit="return window.handleBycraftSubmit(event)" novalidate>' +
-      '<input type="text" name="website" id="bc-hp" tabindex="-1" autocomplete="off" ' +
-      'style="position:absolute;left:-9999px;opacity:0;height:0;width:0" aria-hidden="true">' +
+      '<input type="text" name="website" id="bc-hp" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px;opacity:0;height:0;width:0" aria-hidden="true">' +
       '<input type="hidden" name="work_number" value="' + esc(meta.num) + '">' +
       '<input type="hidden" name="page_url" value="' + esc(meta.path) + '">' +
       '<input type="hidden" name="page_title" value="' + esc(meta.title) + '">' +
@@ -1411,31 +1395,25 @@ footer a[href^="mailto:"],
       '<div class="bc-field"><label for="bc-name">Ваше имя</label>' +
       '<input type="text" id="bc-name" name="name" required autocomplete="name" placeholder="Как к вам обращаться"></div>' +
       '<div class="bc-field"><label for="bc-contact">Контакт для связи</label>' +
-      '<input type="text" id="bc-contact" name="contact" required ' +
-      'placeholder="Telegram / Телефон / любой удобный способ связи"></div>' +
+      '<input type="text" id="bc-contact" name="contact" required placeholder="Telegram / Телефон / любой удобный способ связи"></div>' +
       countryBlock +
       '<div class="bc-field"><label for="bc-comment">Комментарий</label>' +
-      '<textarea id="bc-comment" name="comment" rows="3" ' +
-      'placeholder="Вопросы, пожелания, срок, если нужно к дате"></textarea></div>' +
-      '<div class="bc-field bc-consent-row">' +
-      '<label class="bc-consent-label" style="display:flex;align-items:flex-start;gap:8px;width:100%;box-sizing:border-box;">' +
-      '<input type="checkbox" id="bc-consent" name="consent" style="margin-top:3px;flex-shrink:0;">' +
-      '<span style="flex:1;line-height:1.4;">Согласен(на) на обработку персональных данных</span></label>' +
-      '<p id="bc-consent-hint" class="bc-consent-hint">Отметьте согласие, чтобы отправить заявку</p></div>' +
+      '<textarea id="bc-comment" name="comment" rows="3" placeholder="Вопросы, пожелания, срок, если нужно к дате"></textarea></div>' +
+      '<div class="bc-field bc-consent-row" style="width:100%;margin:0 0 12px 0;">' +
+      '<label for="bc-consent" class="bc-consent-label" style="display:grid;grid-template-columns:18px 1fr;column-gap:10px;align-items:start;width:100%;margin:0;cursor:pointer;line-height:1.4;">' +
+      '<input type="checkbox" id="bc-consent" name="consent" style="width:16px;height:16px;margin:2px 0 0 0;padding:0;">' +
+      '<span>Согласен(на) на обработку персональных данных</span></label>' +
+      '<p id="bc-consent-hint" class="bc-consent-hint" style="margin:8px 0 0 28px;">Отметьте согласие, чтобы отправить заявку</p></div>' +
       '<button type="submit" class="bc-submit-btn" id="bc-submit" disabled>Отправить заявку</button>' +
-      '<p class="bc-modal-alt" style="text-align:center;margin-top:14px;line-height:1.5;">' +
-      'или напишите в Telegram<br>' +
-      '<a href="' + tgUrl + '" target="_blank" rel="noopener noreferrer">t.me/bycraft_by</a></p>' +
-      "</form>" +
+      '<p class="bc-modal-alt" style="text-align:center;margin-top:14px;line-height:1.5;">или напишите в Telegram<br>' +
+      '<a href="' + tgUrl + '" target="_blank" rel="noopener noreferrer">t.me/bycraft_by</a></p></form>' +
       '<div id="bc-modal-success" class="bc-modal__success" style="display:none">' +
-      "<h4>Спасибо!</h4>" +
-      '<p id="bc-success-text"></p>' +
+      '<h4>Спасибо!</h4><p id="bc-success-text"></p>' +
       '<button type="button" class="bc-submit-btn" style="margin-top:16px" onclick="window.closeBycraftModal()">Закрыть</button>' +
-      "</div></div>";
+      '</div></div>';
 
     modal.classList.add("is-active");
-    modal.style.cssText =
-      "display:flex!important;position:fixed!important;inset:0!important;z-index:2147483647!important;align-items:center!important;justify-content:center!important;";
+    modal.style.cssText = "display:flex!important;position:fixed!important;inset:0!important;z-index:2147483647!important;align-items:center!important;justify-content:center!important;";
     document.body.style.overflow = "hidden";
 
     var consent = document.getElementById("bc-consent");
@@ -1492,39 +1470,26 @@ footer a[href^="mailto:"],
 
     var payload = {
       _subject: "BYCRAFT заявка: работа № " + (meta.num || meta.title),
-      name: name,
-      contact: contact,
-      country: country,
-      comment: comment,
-      work_number: meta.num,
-      page_url: meta.path,
-      page_title: meta.title,
-      price: meta.price,
-      lang: meta.lang,
-      submitted_at: when,
-      utm: meta.utm,
-      referrer: meta.ref
+      name: name, contact: contact, country: country, comment: comment,
+      work_number: meta.num, page_url: meta.path, page_title: meta.title,
+      price: meta.price, lang: meta.lang, submitted_at: when,
+      utm: meta.utm, referrer: meta.ref
     };
 
     var form = document.getElementById("bc-inquiry-form");
     var successBox = document.getElementById("bc-modal-success");
     var successText = document.getElementById("bc-success-text");
     var submitBtn = document.getElementById("bc-submit");
-    if (submitBtn) {
-      submitBtn.disabled = true;
-      submitBtn.textContent = "Отправка…";
-    }
+    if (submitBtn) { submitBtn.disabled = true; submitBtn.textContent = "Отправка…"; }
 
     var done = function () {
       if (form) form.style.display = "none";
-      // hide title/subtitle of form state — only success block
       var header = document.querySelector("#bycraft-modal .bc-modal__header");
       if (header) header.style.display = "none";
       if (successBox) successBox.style.display = "block";
       if (successText) {
         successText.textContent =
-          "Заявка по работе № " +
-          (meta.num || meta.title) +
+          "Заявка по работе № " + (meta.num || meta.title) +
           " получена. Мы свяжемся с вами в течение одного рабочего дня";
       }
     };

@@ -75,7 +75,7 @@
 }
   </script>
   <link rel="icon" href="../../../images/favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="../../../css/style.css?v=1330">
+  <link rel="stylesheet" href="../../../css/style.css?v=1340">
 
 
 
@@ -1355,6 +1355,9 @@ Presented as part of the 27th International Culture & Arts Festival, Istanbul, T
 
 
 
+
+
+
 <script id="bc-unified-scripts">
 (function () {
   var WORKER_URL = "https://bycraft-form-notify.bycraftwood.workers.dev";
@@ -1382,14 +1385,9 @@ Presented as part of the 27th International Culture & Arts Festival, Istanbul, T
       }
     });
     var isStock = !!m;
-    if (/pered-licom|volk|ispoved|obida|osnovanie|exhibitions/.test(path)) {
-      isStock = false;
-    }
+    if (/pered-licom|volk|ispoved|obida|osnovanie|exhibitions/.test(path)) isStock = false;
     return {
-      path: path,
-      num: num || "",
-      title: title,
-      price: price,
+      path: path, num: num || "", title: title, price: price,
       lang: path.indexOf("/en/") === 0 ? "EN" : "RU",
       isStock: isStock,
       utm: window.location.search || "",
@@ -1398,10 +1396,7 @@ Presented as part of the 27th International Culture & Arts Festival, Istanbul, T
   }
 
   window.openBycraftModal = function (e) {
-    if (e) {
-      if (e.preventDefault) e.preventDefault();
-      if (e.stopPropagation) e.stopPropagation();
-    }
+    if (e) { if (e.preventDefault) e.preventDefault(); if (e.stopPropagation) e.stopPropagation(); }
     var meta = pageMeta();
     var modal = document.getElementById("bycraft-modal");
     if (!modal) {
@@ -1410,31 +1405,26 @@ Presented as part of the 27th International Culture & Arts Festival, Istanbul, T
       modal.className = "bc-modal";
       document.body.appendChild(modal);
     }
-
     var tgUrl = "https://t.me/bycraft_by?text=" + encodeURIComponent(
       "Здравствуйте! Интересует работа № " + (meta.num || meta.title)
     );
-
     var headTitle = meta.isStock
       ? "Приобрести работу № " + (meta.num || "")
       : "Запрос информации о работе";
     var headSub = meta.isStock
-      ? "Оставьте контакт, мы свяжемся с вами в течение одного рабочего дня"
+      ? "мы свяжемся с вами в течение одного рабочего дня"
       : esc(meta.title || "BYCRAFT");
 
     var countryBlock = meta.isStock
-      ? '<div class="bc-field">' +
-        '<label for="bc-country">Страна доставки</label>' +
+      ? '<div class="bc-field"><label for="bc-country">Страна доставки</label>' +
         '<select id="bc-country" name="country" required onchange="window.bcCountryChange()">' +
         '<option value="">Выберите страну</option>' +
         '<option value="Беларусь">Беларусь</option>' +
         '<option value="Россия">Россия</option>' +
-        '<option value="другая">другая</option>' +
-        "</select></div>" +
+        '<option value="другая">другая</option></select></div>' +
         '<div class="bc-field" id="bc-country-other-wrap" style="display:none">' +
         '<label for="bc-country-other">Укажите страну</label>' +
-        '<input type="text" id="bc-country-other" name="country_other" placeholder="Страна доставки">' +
-        "</div>"
+        '<input type="text" id="bc-country-other" name="country_other" placeholder="Страна доставки"></div>'
       : "";
 
     modal.innerHTML =
@@ -1442,11 +1432,10 @@ Presented as part of the 27th International Culture & Arts Festival, Istanbul, T
       '<div class="bc-modal__container" role="dialog" aria-modal="true">' +
       '<button type="button" class="bc-modal__close" onclick="window.closeBycraftModal()" aria-label="Close">&times;</button>' +
       '<div class="bc-modal__header">' +
-      '<div class="bc-modal__title">' + esc(headTitle) + "</div>" +
-      '<div class="bc-modal__subtitle">' + headSub + "</div></div>" +
+      '<div class="bc-modal__title">' + esc(headTitle) + '</div>' +
+      '<div class="bc-modal__subtitle">' + headSub + '</div></div>' +
       '<form id="bc-inquiry-form" onsubmit="return window.handleBycraftSubmit(event)" novalidate>' +
-      '<input type="text" name="website" id="bc-hp" tabindex="-1" autocomplete="off" ' +
-      'style="position:absolute;left:-9999px;opacity:0;height:0;width:0" aria-hidden="true">' +
+      '<input type="text" name="website" id="bc-hp" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px;opacity:0;height:0;width:0" aria-hidden="true">' +
       '<input type="hidden" name="work_number" value="' + esc(meta.num) + '">' +
       '<input type="hidden" name="page_url" value="' + esc(meta.path) + '">' +
       '<input type="hidden" name="page_title" value="' + esc(meta.title) + '">' +
@@ -1457,31 +1446,25 @@ Presented as part of the 27th International Culture & Arts Festival, Istanbul, T
       '<div class="bc-field"><label for="bc-name">Ваше имя</label>' +
       '<input type="text" id="bc-name" name="name" required autocomplete="name" placeholder="Как к вам обращаться"></div>' +
       '<div class="bc-field"><label for="bc-contact">Контакт для связи</label>' +
-      '<input type="text" id="bc-contact" name="contact" required ' +
-      'placeholder="Telegram / Телефон / любой удобный способ связи"></div>' +
+      '<input type="text" id="bc-contact" name="contact" required placeholder="Telegram / Телефон / любой удобный способ связи"></div>' +
       countryBlock +
       '<div class="bc-field"><label for="bc-comment">Комментарий</label>' +
-      '<textarea id="bc-comment" name="comment" rows="3" ' +
-      'placeholder="Вопросы, пожелания, срок, если нужно к дате"></textarea></div>' +
-      '<div class="bc-field bc-consent-row">' +
-      '<label class="bc-consent-label" style="display:flex;align-items:flex-start;gap:8px;width:100%;box-sizing:border-box;">' +
-      '<input type="checkbox" id="bc-consent" name="consent" style="margin-top:3px;flex-shrink:0;">' +
-      '<span style="flex:1;line-height:1.4;">Согласен(на) на обработку персональных данных</span></label>' +
-      '<p id="bc-consent-hint" class="bc-consent-hint">Отметьте согласие, чтобы отправить заявку</p></div>' +
+      '<textarea id="bc-comment" name="comment" rows="3" placeholder="Вопросы, пожелания, срок, если нужно к дате"></textarea></div>' +
+      '<div class="bc-field bc-consent-row" style="width:100%;margin:0 0 12px 0;">' +
+      '<label for="bc-consent" class="bc-consent-label" style="display:grid;grid-template-columns:18px 1fr;column-gap:10px;align-items:start;width:100%;margin:0;cursor:pointer;line-height:1.4;">' +
+      '<input type="checkbox" id="bc-consent" name="consent" style="width:16px;height:16px;margin:2px 0 0 0;padding:0;">' +
+      '<span>Согласен(на) на обработку персональных данных</span></label>' +
+      '<p id="bc-consent-hint" class="bc-consent-hint" style="margin:8px 0 0 28px;">Отметьте согласие, чтобы отправить заявку</p></div>' +
       '<button type="submit" class="bc-submit-btn" id="bc-submit" disabled>Отправить заявку</button>' +
-      '<p class="bc-modal-alt" style="text-align:center;margin-top:14px;line-height:1.5;">' +
-      'или напишите в Telegram<br>' +
-      '<a href="' + tgUrl + '" target="_blank" rel="noopener noreferrer">t.me/bycraft_by</a></p>' +
-      "</form>" +
+      '<p class="bc-modal-alt" style="text-align:center;margin-top:14px;line-height:1.5;">или напишите в Telegram<br>' +
+      '<a href="' + tgUrl + '" target="_blank" rel="noopener noreferrer">t.me/bycraft_by</a></p></form>' +
       '<div id="bc-modal-success" class="bc-modal__success" style="display:none">' +
-      "<h4>Спасибо!</h4>" +
-      '<p id="bc-success-text"></p>' +
+      '<h4>Спасибо!</h4><p id="bc-success-text"></p>' +
       '<button type="button" class="bc-submit-btn" style="margin-top:16px" onclick="window.closeBycraftModal()">Закрыть</button>' +
-      "</div></div>";
+      '</div></div>';
 
     modal.classList.add("is-active");
-    modal.style.cssText =
-      "display:flex!important;position:fixed!important;inset:0!important;z-index:2147483647!important;align-items:center!important;justify-content:center!important;";
+    modal.style.cssText = "display:flex!important;position:fixed!important;inset:0!important;z-index:2147483647!important;align-items:center!important;justify-content:center!important;";
     document.body.style.overflow = "hidden";
 
     var consent = document.getElementById("bc-consent");
@@ -1538,39 +1521,26 @@ Presented as part of the 27th International Culture & Arts Festival, Istanbul, T
 
     var payload = {
       _subject: "BYCRAFT заявка: работа № " + (meta.num || meta.title),
-      name: name,
-      contact: contact,
-      country: country,
-      comment: comment,
-      work_number: meta.num,
-      page_url: meta.path,
-      page_title: meta.title,
-      price: meta.price,
-      lang: meta.lang,
-      submitted_at: when,
-      utm: meta.utm,
-      referrer: meta.ref
+      name: name, contact: contact, country: country, comment: comment,
+      work_number: meta.num, page_url: meta.path, page_title: meta.title,
+      price: meta.price, lang: meta.lang, submitted_at: when,
+      utm: meta.utm, referrer: meta.ref
     };
 
     var form = document.getElementById("bc-inquiry-form");
     var successBox = document.getElementById("bc-modal-success");
     var successText = document.getElementById("bc-success-text");
     var submitBtn = document.getElementById("bc-submit");
-    if (submitBtn) {
-      submitBtn.disabled = true;
-      submitBtn.textContent = "Отправка…";
-    }
+    if (submitBtn) { submitBtn.disabled = true; submitBtn.textContent = "Отправка…"; }
 
     var done = function () {
       if (form) form.style.display = "none";
-      // hide title/subtitle of form state — only success block
       var header = document.querySelector("#bycraft-modal .bc-modal__header");
       if (header) header.style.display = "none";
       if (successBox) successBox.style.display = "block";
       if (successText) {
         successText.textContent =
-          "Заявка по работе № " +
-          (meta.num || meta.title) +
+          "Заявка по работе № " + (meta.num || meta.title) +
           " получена. Мы свяжемся с вами в течение одного рабочего дня";
       }
     };

@@ -5176,3 +5176,22 @@ i .work-subtitle-muted,
   font-size: 14px;
   background: #fff;
 }
+
+/* === STOCK DESC GAP === */
+.work-detail-info .meta-row:last-of-type {
+  margin-bottom: 8px;
+}
+.work-stock-desc {
+  margin-top: 36px !important;
+  padding-top: 8px;
+}
+.bc-consent-label {
+  display: grid !important;
+  grid-template-columns: 18px 1fr !important;
+  column-gap: 10px !important;
+  width: 100% !important;
+  align-items: start !important;
+}
+.bc-consent-label input[type="checkbox"] {
+  margin: 2px 0 0 0 !important;
+}
