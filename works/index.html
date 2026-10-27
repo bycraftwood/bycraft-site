@@ -50,7 +50,7 @@
 }
   </script>
   <link rel="icon" href="../images/favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="../css/style.css?v=1320">
+  <link rel="stylesheet" href="../css/style.css?v=1330">
 
 
 
@@ -1482,6 +1482,9 @@ footer a[href^="mailto:"],
 
 
 
+
+
+
 <script id="bc-unified-scripts">
 (function () {
   var WORKER_URL = "https://bycraft-form-notify.bycraftwood.workers.dev";
@@ -1538,16 +1541,15 @@ footer a[href^="mailto:"],
       document.body.appendChild(modal);
     }
 
-    var tgText = encodeURIComponent(
+    var tgUrl = "https://t.me/bycraft_by?text=" + encodeURIComponent(
       "Здравствуйте! Интересует работа № " + (meta.num || meta.title)
     );
-    var tgUrl = "https://t.me/bycraft_by?text=" + tgText;
 
     var headTitle = meta.isStock
       ? "Приобрести работу № " + (meta.num || "")
       : "Запрос информации о работе";
     var headSub = meta.isStock
-      ? "Оставьте контакт, мы подтвердим наличие, расскажем про доставку и ответим на вопросы в течение одного рабочего дня"
+      ? "Оставьте контакт, мы свяжемся с вами в течение одного рабочего дня"
       : esc(meta.title || "BYCRAFT");
 
     var countryBlock = meta.isStock
@@ -1591,19 +1593,19 @@ footer a[href^="mailto:"],
       '<div class="bc-field"><label for="bc-comment">Комментарий</label>' +
       '<textarea id="bc-comment" name="comment" rows="3" ' +
       'placeholder="Вопросы, пожелания, срок, если нужно к дате"></textarea></div>' +
-      '<div class="bc-field bc-consent-row"><label class="bc-consent-label">' +
-      '<input type="checkbox" id="bc-consent" name="consent">' +
-      " Согласен(на) на обработку персональных данных</label>" +
+      '<div class="bc-field bc-consent-row">' +
+      '<label class="bc-consent-label" style="display:flex;align-items:flex-start;gap:8px;width:100%;box-sizing:border-box;">' +
+      '<input type="checkbox" id="bc-consent" name="consent" style="margin-top:3px;flex-shrink:0;">' +
+      '<span style="flex:1;line-height:1.4;">Согласен(на) на обработку персональных данных</span></label>' +
       '<p id="bc-consent-hint" class="bc-consent-hint">Отметьте согласие, чтобы отправить заявку</p></div>' +
       '<button type="submit" class="bc-submit-btn" id="bc-submit" disabled>Отправить заявку</button>' +
-      '<p class="bc-modal-alt">или напишите в Telegram — ' +
+      '<p class="bc-modal-alt" style="text-align:center;margin-top:14px;line-height:1.5;">' +
+      'или напишите в Telegram<br>' +
       '<a href="' + tgUrl + '" target="_blank" rel="noopener noreferrer">t.me/bycraft_by</a></p>' +
       "</form>" +
       '<div id="bc-modal-success" class="bc-modal__success" style="display:none">' +
       "<h4>Спасибо!</h4>" +
       '<p id="bc-success-text"></p>' +
-      '<p style="margin-top:12px"><a href="' + tgUrl +
-      '" target="_blank" rel="noopener noreferrer">Написать в Telegram</a></p>' +
       '<button type="button" class="bc-submit-btn" style="margin-top:16px" onclick="window.closeBycraftModal()">Закрыть</button>' +
       "</div></div>";
 
@@ -1691,27 +1693,24 @@ footer a[href^="mailto:"],
 
     var done = function () {
       if (form) form.style.display = "none";
+      // hide title/subtitle of form state — only success block
+      var header = document.querySelector("#bycraft-modal .bc-modal__header");
+      if (header) header.style.display = "none";
       if (successBox) successBox.style.display = "block";
       if (successText) {
-        successText.innerHTML =
+        successText.textContent =
           "Заявка по работе № " +
-          esc(meta.num || meta.title) +
-          " получена. Мы свяжемся с вами в течение одного рабочего дня. Если хотите быстрее, напишите в Telegram: " +
-          '<a href="https://t.me/bycraft_by" target="_blank" rel="noopener noreferrer">https://t.me/bycraft_by</a>.';
+          (meta.num || meta.title) +
+          " получена. Мы свяжемся с вами в течение одного рабочего дня";
       }
     };
 
-    // 1) Email via FormSubmit
     var p1 = fetch("https://formsubmit.co/ajax/bycraftwood@mail.ru", {
       method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        Accept: "application/json"
-      },
+      headers: { "Content-Type": "application/json", Accept: "application/json" },
       body: JSON.stringify(payload)
     }).catch(function () { return null; });
 
-    // 2) Telegram via Cloudflare Worker
     var p2 = fetch(WORKER_URL, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
