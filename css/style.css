@@ -5296,3 +5296,50 @@ i .work-subtitle-muted,
   font-weight: 400 !important;
   color: #1A1A1A !important;
 }
+
+/* === WORK188 TYPO Oct27 === */
+/* характеристики — значения */
+.work-detail-info .meta-val {
+  color: #7A756D !important;
+}
+.work-detail-info .meta-label {
+  color: #7A756D !important;
+}
+
+/* описание */
+.work-stock-desc,
+.work-stock-desc p,
+.work-stock-desc .stock-desc-line,
+.work-stock-desc .stock-desc-lead,
+.work-stock-desc .stock-desc-h {
+  font-size: 15px !important;
+  line-height: 1.45 !important;
+}
+.work-stock-desc .stock-desc-title {
+  font-size: 15px !important;
+  font-weight: 600 !important;
+  color: #1A1A1A !important;
+  margin: 0 0 6px 0 !important;
+}
+.work-stock-desc .stock-desc-h {
+  font-weight: 600 !important;
+  color: #1A1A1A !important;
+}
+.work-stock-desc .stock-desc-lead,
+.work-stock-desc .stock-desc-line {
+  color: #1A1A1A !important;
+  font-weight: 400 !important;
+}
+
+/* другие работы в наличии */
+.other-works-section .other-works-title,
+.other-works-section h2.section-title {
+  font-size: 16px !important;
+  font-weight: 500 !important;
+}
+.other-works-section .work-status,
+.other-works-grid .work-status {
+  font-size: 15px !important;
+  font-weight: 400 !important;
+  color: #1A1A1A !important;
+}
