@@ -5150,3 +5150,29 @@ i .work-subtitle-muted,
     border-radius: 0 !important;
   }
 }
+
+/* === STOCK FORM + W188 === */
+.work-detail-mosaic .wdm-text span {
+  font-size: 26px !important;
+  line-height: 1.25 !important;
+  letter-spacing: 0.06em !important;
+}
+.bc-consent-hint {
+  display: block;
+  font-size: 12px;
+  color: #b00020;
+  margin: 6px 0 0;
+}
+.bc-submit-btn:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+.bc-field select {
+  width: 100%;
+  box-sizing: border-box;
+  border: 1px solid #ddd;
+  padding: 10px 12px;
+  font: inherit;
+  font-size: 14px;
+  background: #fff;
+}

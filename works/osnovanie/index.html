@@ -76,7 +76,7 @@
 }
   </script>
   <link rel="icon" href="../../images/favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="../../css/style.css?v=1300">
+  <link rel="stylesheet" href="../../css/style.css?v=1310">
 
 
 
@@ -1332,6 +1332,9 @@ footer a[href^="mailto:"],
 
 
 
+
+
+
 <script id="bc-unified-scripts">
 (function () {
   function esc(s) {
@@ -1342,17 +1345,44 @@ footer a[href^="mailto:"],
       .replace(/"/g, "&quot;");
   }
 
+  function pageMeta() {
+    var path = window.location.pathname || "";
+    var h1 = document.querySelector("h1");
+    var title = h1 ? h1.textContent.trim() : "";
+    var m = path.match(/work-(\d+)/);
+    var num = m ? m[1] : "";
+    var priceEl = document.querySelector('.meta-row .meta-label');
+    var price = "";
+    document.querySelectorAll(".meta-row").forEach(function (row) {
+      var lab = row.querySelector(".meta-label");
+      var val = row.querySelector(".meta-val");
+      if (lab && val && /стоимость/i.test(lab.textContent)) {
+        price = val.textContent.trim();
+      }
+    });
+    var isStock = /work-188|work-192/.test(path) || /В наличии/i.test(document.body.innerText.slice(0, 3000));
+    if (/pered-licom|volk|ispoved|obida|osnovanie|exhibitions/.test(path)) {
+      isStock = false;
+    }
+    if (m) isStock = true;
+    return {
+      path: path,
+      num: num || title.replace(/[^\d]/g, "") || "",
+      title: title,
+      price: price,
+      lang: path.indexOf("/en/") === 0 ? "EN" : "RU",
+      isStock: isStock,
+      utm: window.location.search || "",
+      ref: document.referrer || ""
+    };
+  }
+
   window.openBycraftModal = function (e) {
     if (e) {
       if (e.preventDefault) e.preventDefault();
       if (e.stopPropagation) e.stopPropagation();
     }
-    var h1 = document.querySelector("h1");
-    var workName = h1
-      ? h1.textContent.trim()
-      : (document.title.split("—")[0] || "BYCRAFT").trim();
-    var isEn = window.location.pathname.indexOf("/en/") !== -1;
-
+    var meta = pageMeta();
     var modal = document.getElementById("bycraft-modal");
     if (!modal) {
       modal = document.createElement("div");
@@ -1361,69 +1391,126 @@ footer a[href^="mailto:"],
       document.body.appendChild(modal);
     }
 
-    var title = isEn ? "Request information about the work" : "Запрос информации о работе";
-    var sub = esc(workName);
+    var tgText = encodeURIComponent(
+      "Здравствуйте! Интересует работа № " + (meta.num || meta.title)
+    );
+    var tgUrl = "https://t.me/bycraft_by?text=" + tgText;
+
+    var headTitle = meta.isStock
+      ? "Приобрести работу № " + (meta.num || "")
+      : "Запрос информации о работе";
+    var headSub = meta.isStock
+      ? "Оставьте контакт, мы подтвердим наличие, расскажем про доставку и ответим на вопросы в течение одного рабочего дня"
+      : esc(meta.title || "BYCRAFT");
+
+    var countryBlock = meta.isStock
+      ? '<div class="bc-field">' +
+        "<label for=\"bc-country\">Страна доставки</label>" +
+        '<select id="bc-country" name="country" required onchange="window.bcCountryChange()">' +
+        '<option value="">Выберите страну</option>' +
+        '<option value="Беларусь">Беларусь</option>' +
+        '<option value="Россия">Россия</option>' +
+        '<option value="другая">другая</option>' +
+        "</select></div>" +
+        '<div class="bc-field" id="bc-country-other-wrap" style="display:none">' +
+        "<label for=\"bc-country-other\">Укажите страну</label>" +
+        '<input type="text" id="bc-country-other" name="country_other" placeholder="Страна доставки">' +
+        "</div>"
+      : "";
 
     modal.innerHTML =
       '<div class="bc-modal__overlay" onclick="window.closeBycraftModal()"></div>' +
       '<div class="bc-modal__container" role="dialog" aria-modal="true">' +
       '<button type="button" class="bc-modal__close" onclick="window.closeBycraftModal()" aria-label="Close">&times;</button>' +
       '<div class="bc-modal__header">' +
-      '<div class="bc-modal__title">' + title + "</div>" +
-      '<div class="bc-modal__subtitle">' + sub + "</div>" +
+      '<div class="bc-modal__title">' +
+      esc(headTitle) +
       "</div>" +
-      '<form id="bc-inquiry-form" onsubmit="return window.handleBycraftSubmit(event)">' +
-      '<div class="bc-field">' +
-      '<label for="bc-name">' + (isEn ? "Your name" : "Ваше имя") + "</label>" +
-      '<input type="text" id="bc-name" name="name" required autocomplete="name" placeholder="' +
-      (isEn ? "How should we address you" : "Как к вам обращаться") +
+      '<div class="bc-modal__subtitle">' +
+      headSub +
+      "</div></div>" +
+      '<form id="bc-inquiry-form" onsubmit="return window.handleBycraftSubmit(event)" novalidate>' +
+      // honeypot
+      '<input type="text" name="website" id="bc-hp" tabindex="-1" autocomplete="off" ' +
+      'style="position:absolute;left:-9999px;opacity:0;height:0;width:0" aria-hidden="true">' +
+      // hidden tracking
+      '<input type="hidden" name="work_number" id="bc-work-number" value="' +
+      esc(meta.num) +
       '">' +
-      "</div>" +
-      '<div class="bc-field">' +
-      '<label for="bc-contact">' +
-      (isEn ? "Contact" : "Контакт для связи") +
-      "</label>" +
-      '<input type="text" id="bc-contact" name="contact" required placeholder="' +
-      (isEn
-        ? "Phone, email, Telegram, WhatsApp — any convenient way"
-        : "Телефон, email, Telegram, WhatsApp — любой удобный способ") +
+      '<input type="hidden" name="page_url" value="' +
+      esc(meta.path) +
       '">' +
-      "</div>" +
-      '<div class="bc-field">' +
-      '<label for="bc-comment">' + (isEn ? "Message" : "Сообщение") + "</label>" +
-      '<textarea id="bc-comment" name="comment" rows="4" placeholder="' +
-      (isEn
-        ? "Tell us about your request (optional)"
-        : "Опишите запрос (необязательно)") +
-      '"></textarea>' +
-      "</div>" +
+      '<input type="hidden" name="page_title" value="' +
+      esc(meta.title) +
+      '">' +
+      '<input type="hidden" name="price" value="' +
+      esc(meta.price) +
+      '">' +
+      '<input type="hidden" name="lang" value="' +
+      esc(meta.lang) +
+      '">' +
+      '<input type="hidden" name="submitted_at" id="bc-submitted-at" value="">' +
+      '<input type="hidden" name="utm" value="' +
+      esc(meta.utm) +
+      '">' +
+      '<input type="hidden" name="referrer" value="' +
+      esc(meta.ref) +
+      '">' +
+      '<div class="bc-field"><label for="bc-name">Ваше имя</label>' +
+      '<input type="text" id="bc-name" name="name" required autocomplete="name" placeholder="Как к вам обращаться"></div>' +
+      '<div class="bc-field"><label for="bc-contact">Контакт для связи</label>' +
+      '<input type="text" id="bc-contact" name="contact" required ' +
+      'placeholder="Telegram / Телефон / любой удобный способ связи"></div>' +
+      countryBlock +
+      '<div class="bc-field"><label for="bc-comment">Комментарий</label>' +
+      '<textarea id="bc-comment" name="comment" rows="3" ' +
+      'placeholder="Вопросы, пожелания, срок, если нужно к дате"></textarea></div>' +
       '<div class="bc-field bc-consent-row"><label class="bc-consent-label">' +
-      '<input type="checkbox" id="bc-consent" required checked> ' +
-      (isEn
-        ? "I agree to the processing of personal data"
-        : "Согласен(на) на обработку персональных данных") +
-      "</label></div>" +
-      '<button type="submit" class="bc-submit-btn">' +
-      (isEn ? "Send request" : "Отправить запрос") +
-      "</button>" +
-      '<p class="bc-modal-alt">' +
-      (isEn ? "or write to" : "или напишите на") +
-      ' <a href="mailto:info@bycraft.by">info@bycraft.by</a></p>' +
+      '<input type="checkbox" id="bc-consent" name="consent">' +
+      " Согласен(на) на обработку персональных данных</label>" +
+      '<p id="bc-consent-hint" class="bc-consent-hint">Отметьте согласие, чтобы отправить заявку</p></div>' +
+      '<button type="submit" class="bc-submit-btn" id="bc-submit" disabled>Отправить заявку</button>' +
+      '<p class="bc-modal-alt">или напишите в Telegram — ' +
+      '<a href="' +
+      tgUrl +
+      '" target="_blank" rel="noopener noreferrer">t.me/bycraft_by</a></p>' +
       "</form>" +
       '<div id="bc-modal-success" class="bc-modal__success" style="display:none">' +
-      "<h4>" +
-      (isEn ? "Request prepared" : "Запрос сформирован") +
-      "</h4>" +
-      "<p></p>" +
-      '<button type="button" class="bc-submit-btn" onclick="window.closeBycraftModal()">' +
-      (isEn ? "Close" : "Закрыть") +
-      "</button></div></div>";
+      "<h4>Спасибо!</h4>" +
+      '<p id="bc-success-text"></p>' +
+      '<p style="margin-top:12px"><a href="' +
+      tgUrl +
+      '" target="_blank" rel="noopener noreferrer">Написать в Telegram</a></p>' +
+      '<button type="button" class="bc-submit-btn" style="margin-top:16px" onclick="window.closeBycraftModal()">Закрыть</button>' +
+      "</div></div>";
 
     modal.classList.add("is-active");
     modal.style.cssText =
-      "display:flex!important;position:fixed!important;inset:0!important;width:100%!important;height:100%!important;z-index:2147483647!important;align-items:center!important;justify-content:center!important;";
+      "display:flex!important;position:fixed!important;inset:0!important;z-index:2147483647!important;align-items:center!important;justify-content:center!important;";
     document.body.style.overflow = "hidden";
+
+    var consent = document.getElementById("bc-consent");
+    var submit = document.getElementById("bc-submit");
+    var hint = document.getElementById("bc-consent-hint");
+    function syncConsent() {
+      var ok = consent && consent.checked;
+      if (submit) {
+        submit.disabled = !ok;
+        submit.style.opacity = ok ? "1" : "0.45";
+        submit.style.cursor = ok ? "pointer" : "not-allowed";
+      }
+      if (hint) hint.style.display = ok ? "none" : "block";
+    }
+    if (consent) consent.addEventListener("change", syncConsent);
+    syncConsent();
     return false;
+  };
+
+  window.bcCountryChange = function () {
+    var sel = document.getElementById("bc-country");
+    var wrap = document.getElementById("bc-country-other-wrap");
+    if (!sel || !wrap) return;
+    wrap.style.display = sel.value === "другая" ? "block" : "none";
   };
 
   window.closeBycraftModal = function () {
@@ -1432,34 +1519,86 @@ footer a[href^="mailto:"],
     modal.classList.remove("is-active");
     modal.style.cssText = "display:none!important;";
     document.body.style.overflow = "";
-    document.body.style.pointerEvents = "";
   };
 
   window.handleBycraftSubmit = function (e) {
     e.preventDefault();
+    var consent = document.getElementById("bc-consent");
+    if (!consent || !consent.checked) {
+      var hint = document.getElementById("bc-consent-hint");
+      if (hint) hint.style.display = "block";
+      return false;
+    }
+    // honeypot
+    var hp = document.getElementById("bc-hp");
+    if (hp && hp.value) return false;
+
+    var meta = pageMeta();
     var name = ((document.getElementById("bc-name") || {}).value || "").trim();
     var contact = ((document.getElementById("bc-contact") || {}).value || "").trim();
     var comment = ((document.getElementById("bc-comment") || {}).value || "").trim();
-    var h1 = document.querySelector("h1");
-    var workName = h1 ? h1.textContent.trim() : "BYCRAFT";
-    var isEn = window.location.pathname.indexOf("/en/") !== -1;
-    var subject = encodeURIComponent("BYCRAFT: " + workName);
-    var body = encodeURIComponent(
-      "Работа: " + workName + "\nИмя: " + name + "\nКонтакт: " + contact + "\nСообщение: " + comment
-    );
-    window.location.href = "mailto:info@bycraft.by?subject=" + subject + "&body=" + body;
+    var country = ((document.getElementById("bc-country") || {}).value || "").trim();
+    var countryOther = ((document.getElementById("bc-country-other") || {}).value || "").trim();
+    if (country === "другая") country = countryOther || "другая";
+    var when = new Date().toISOString();
+    var at = document.getElementById("bc-submitted-at");
+    if (at) at.value = when;
+
+    var payload = {
+      _subject: "BYCRAFT заявка: работа № " + (meta.num || meta.title),
+      name: name,
+      contact: contact,
+      country: country,
+      comment: comment,
+      work_number: meta.num,
+      page_url: meta.path,
+      page_title: meta.title,
+      price: meta.price,
+      lang: meta.lang,
+      submitted_at: when,
+      utm: meta.utm,
+      referrer: meta.ref
+    };
+
     var form = document.getElementById("bc-inquiry-form");
     var successBox = document.getElementById("bc-modal-success");
-    if (form) form.style.display = "none";
-    if (successBox) {
-      successBox.style.display = "block";
-      var p = successBox.querySelector("p");
-      if (p) {
-        p.textContent = isEn
-          ? "Your email app should open with a message to info@bycraft.by."
-          : "Должен открыться почтовый клиент с письмом на info@bycraft.by.";
-      }
+    var successText = document.getElementById("bc-success-text");
+    var submitBtn = document.getElementById("bc-submit");
+    if (submitBtn) {
+      submitBtn.disabled = true;
+      submitBtn.textContent = "Отправка…";
     }
+
+    // FormSubmit → bycraftwood@mail.ru (activate once via email confirmation)
+    fetch("https://formsubmit.co/ajax/bycraftwood@mail.ru", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "application/json"
+      },
+      body: JSON.stringify(payload)
+    })
+      .then(function (r) {
+        return r.json().catch(function () {
+          return {};
+        });
+      })
+      .catch(function () {
+        return {};
+      })
+      .then(function () {
+        if (form) form.style.display = "none";
+        if (successBox) successBox.style.display = "block";
+        if (successText) {
+          successText.innerHTML =
+            "Заявка по работе № " +
+            esc(meta.num || meta.title) +
+            " получена. Мы свяжемся с вами в течение одного рабочего дня. Если хотите быстрее, напишите в Telegram: " +
+            '<a href="https://t.me/bycraft_by" target="_blank" rel="noopener noreferrer">https://t.me/bycraft_by</a>.';
+        }
+        // popup stays open until user closes
+      });
+
     return false;
   };
 
