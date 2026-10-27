@@ -76,7 +76,7 @@
 }
   </script>
   <link rel="icon" href="../../images/favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="../../css/style.css?v=1340">
+  <link rel="stylesheet" href="../../css/style.css?v=1350">
 
 
 
@@ -1067,16 +1067,14 @@ footer a[href^="mailto:"],
         <div class="meta-row"><span class="meta-label">стоимость: </span><span class="meta-val">2300 BYN / 65800 ₽</span></div>
 
         
-        <div class="work-description work-stock-desc" style="margin-top: 36px;">
+        <div class="work-description work-stock-desc">
           <p class="lead-text" style="margin-bottom: 12px; font-weight: 500; color: var(--color-primary);">Скульптурный арт-объект № 192</p>
           <p class="lead-text" style="margin-bottom: 24px;">Авторская работа из берёзового сувеля с обжигом, в единственном экземпляре</p>
-          <p class="lead-text" style="margin-bottom: 8px;"><strong>Доставка:</strong></p>
+          <p class="lead-text" style="margin-bottom: 10px;"><strong>Доставка:</strong></p>
           <p class="lead-text" style="margin-bottom: 4px;">Минск — бесплатно курьером, до двери</p>
           <p class="lead-text" style="margin-bottom: 16px;">Беларусь — бесплатно, в отделение Европочты</p>
           <p class="lead-text" style="margin-bottom: 4px;">Российская Федерация — в отделение СДЭК = 2500 ₽</p>
-          <p class="lead-text" style="margin-bottom: 20px;">Самовывоз — на ближайших офлайн мероприятиях в Москве и Санкт-Петербурге</p>
-          <p class="lead-text" style="margin-bottom: 6px;"><strong>Оплата РБ:</strong> наличный и безналичный расчёт / перевод по номеру телефона</p>
-          <p class="lead-text" style="margin-bottom: 0;"><strong>Оплата РФ:</strong> перевод на карту Сбербанк / Т-Банк / СБП по номеру телефона</p>
+          <p class="lead-text" style="margin-bottom: 0;">Самовывоз — на ближайших оффлайн мероприятиях в Москве и Санкт-Петербурге</p>
         </div>
 
 <div style="margin-top: 32px; margin-bottom: 24px;">
@@ -1307,6 +1305,9 @@ footer a[href^="mailto:"],
 
 
 
+
+
+
 <script id="bc-unified-scripts">
 (function () {
   var WORKER_URL = "https://bycraft-form-notify.bycraftwood.workers.dev";
@@ -1329,23 +1330,79 @@ footer a[href^="mailto:"],
     document.querySelectorAll(".meta-row").forEach(function (row) {
       var lab = row.querySelector(".meta-label");
       var val = row.querySelector(".meta-val");
-      if (lab && val && /стоимость/i.test(lab.textContent)) {
-        price = val.textContent.trim();
-      }
+      if (lab && val && /стоимость/i.test(lab.textContent)) price = val.textContent.trim();
     });
-    var isStock = !!m;
-    if (/pered-licom|volk|ispoved|obida|osnovanie|exhibitions/.test(path)) isStock = false;
+
+    // mosaic black cell title as fallback
+    var mosaicTitle = document.querySelector(".wdm-text span");
+    var mosaicName = mosaicTitle ? mosaicTitle.textContent.trim() : "";
+
+    var kind = "inquiry"; // inquiry | stock | workshop | exhibit
+    var displayName = title || mosaicName || "BYCRAFT";
+    var formTitle = "Запрос информации о работе";
+    var formSub = esc(displayName);
+    var commentPh = "Вопросы, пожелания, срок, если нужно к дате";
+    var successMsg = "";
+
+    if (/\/workshop\/?$/.test(path) || path.indexOf("/workshop") !== -1) {
+      kind = "workshop";
+      formTitle = "Записаться на визит в мастерскую";
+      formSub = "";
+      commentPh = "напишите удобное время для визита";
+      successMsg = "Мы свяжемся с вами в течение одного рабочего дня для согласования даты и времени";
+      displayName = "Мастерская";
+    } else if (m) {
+      kind = "stock";
+      formTitle = "Приобрести работу № " + num;
+      formSub = "мы свяжемся с вами в течение одного рабочего дня";
+      successMsg = "Заявка по работе № " + num + " получена. Мы свяжемся с вами в течение одного рабочего дня";
+    } else if (/pered-licom/.test(path)) {
+      kind = "exhibit";
+      displayName = "ПЕРЕД ЛИЦОМ";
+      formTitle = "Запрос информации о работе";
+      formSub = "Работа «ПЕРЕД ЛИЦОМ»";
+      commentPh = "Наличие, стоимость, условия бронирования";
+      successMsg = "Заявка по работе «ПЕРЕД ЛИЦОМ» получена. Мы свяжемся с вами в течение одного рабочего дня";
+    } else if (/volk|ispoved|obida|osnovanie/.test(path)) {
+      kind = "exhibit";
+      var map = {
+        volk: "ВОЛК",
+        ispoved: "ИСПОВЕДЬ",
+        obida: "ОБИДА",
+        osnovanie: "ОСНОВАНИЕ"
+      };
+      for (var k in map) {
+        if (path.indexOf(k) !== -1) displayName = map[k];
+      }
+      formTitle = "Запрос информации о работе";
+      formSub = "Работа «" + displayName + "»";
+      commentPh = "Наличие, стоимость, условия бронирования";
+      successMsg =
+        "Заявка по работе «" + displayName + "» получена. Мы свяжемся с вами в течение одного рабочего дня";
+    }
+
     return {
-      path: path, num: num || "", title: title, price: price,
+      path: path,
+      num: num || "",
+      title: title,
+      displayName: displayName,
+      price: price,
       lang: path.indexOf("/en/") === 0 ? "EN" : "RU",
-      isStock: isStock,
+      kind: kind,
+      formTitle: formTitle,
+      formSub: formSub,
+      commentPh: commentPh,
+      successMsg: successMsg,
       utm: window.location.search || "",
       ref: document.referrer || ""
     };
   }
 
   window.openBycraftModal = function (e) {
-    if (e) { if (e.preventDefault) e.preventDefault(); if (e.stopPropagation) e.stopPropagation(); }
+    if (e) {
+      if (e.preventDefault) e.preventDefault();
+      if (e.stopPropagation) e.stopPropagation();
+    }
     var meta = pageMeta();
     var modal = document.getElementById("bycraft-modal");
     if (!modal) {
@@ -1354,26 +1411,26 @@ footer a[href^="mailto:"],
       modal.className = "bc-modal";
       document.body.appendChild(modal);
     }
-    var tgUrl = "https://t.me/bycraft_by?text=" + encodeURIComponent(
-      "Здравствуйте! Интересует работа № " + (meta.num || meta.title)
-    );
-    var headTitle = meta.isStock
-      ? "Приобрести работу № " + (meta.num || "")
-      : "Запрос информации о работе";
-    var headSub = meta.isStock
-      ? "мы свяжемся с вами в течение одного рабочего дня"
-      : esc(meta.title || "BYCRAFT");
+    var tgHint = meta.num
+      ? "Здравствуйте! Интересует работа № " + meta.num
+      : "Здравствуйте! " + (meta.displayName || "BYCRAFT");
+    var tgUrl = "https://t.me/bycraft_by?text=" + encodeURIComponent(tgHint);
 
-    var countryBlock = meta.isStock
-      ? '<div class="bc-field"><label for="bc-country">Страна доставки</label>' +
-        '<select id="bc-country" name="country" required onchange="window.bcCountryChange()">' +
-        '<option value="">Выберите страну</option>' +
-        '<option value="Беларусь">Беларусь</option>' +
-        '<option value="Россия">Россия</option>' +
-        '<option value="другая">другая</option></select></div>' +
-        '<div class="bc-field" id="bc-country-other-wrap" style="display:none">' +
-        '<label for="bc-country-other">Укажите страну</label>' +
-        '<input type="text" id="bc-country-other" name="country_other" placeholder="Страна доставки"></div>'
+    var countryBlock =
+      meta.kind === "stock"
+        ? '<div class="bc-field"><label for="bc-country">Страна доставки</label>' +
+          '<select id="bc-country" name="country" required onchange="window.bcCountryChange()">' +
+          '<option value="">Выберите страну</option>' +
+          '<option value="Беларусь">Беларусь</option>' +
+          '<option value="Россия">Россия</option>' +
+          '<option value="другая">другая</option></select></div>' +
+          '<div class="bc-field" id="bc-country-other-wrap" style="display:none">' +
+          '<label for="bc-country-other">Укажите страну</label>' +
+          '<input type="text" id="bc-country-other" name="country_other" placeholder="Страна доставки"></div>'
+        : "";
+
+    var subHtml = meta.formSub
+      ? '<div class="bc-modal__subtitle">' + meta.formSub + "</div>"
       : "";
 
     modal.innerHTML =
@@ -1381,39 +1438,62 @@ footer a[href^="mailto:"],
       '<div class="bc-modal__container" role="dialog" aria-modal="true">' +
       '<button type="button" class="bc-modal__close" onclick="window.closeBycraftModal()" aria-label="Close">&times;</button>' +
       '<div class="bc-modal__header">' +
-      '<div class="bc-modal__title">' + esc(headTitle) + '</div>' +
-      '<div class="bc-modal__subtitle">' + headSub + '</div></div>' +
+      '<div class="bc-modal__title">' +
+      esc(meta.formTitle) +
+      "</div>" +
+      subHtml +
+      "</div>" +
       '<form id="bc-inquiry-form" onsubmit="return window.handleBycraftSubmit(event)" novalidate>' +
       '<input type="text" name="website" id="bc-hp" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px;opacity:0;height:0;width:0" aria-hidden="true">' +
-      '<input type="hidden" name="work_number" value="' + esc(meta.num) + '">' +
-      '<input type="hidden" name="page_url" value="' + esc(meta.path) + '">' +
-      '<input type="hidden" name="page_title" value="' + esc(meta.title) + '">' +
-      '<input type="hidden" name="price" value="' + esc(meta.price) + '">' +
-      '<input type="hidden" name="lang" value="' + esc(meta.lang) + '">' +
-      '<input type="hidden" name="utm" value="' + esc(meta.utm) + '">' +
-      '<input type="hidden" name="referrer" value="' + esc(meta.ref) + '">' +
+      '<input type="hidden" name="work_number" value="' +
+      esc(meta.num) +
+      '">' +
+      '<input type="hidden" name="page_url" value="' +
+      esc(meta.path) +
+      '">' +
+      '<input type="hidden" name="page_title" value="' +
+      esc(meta.displayName || meta.title) +
+      '">' +
+      '<input type="hidden" name="price" value="' +
+      esc(meta.price) +
+      '">' +
+      '<input type="hidden" name="lang" value="' +
+      esc(meta.lang) +
+      '">' +
+      '<input type="hidden" name="utm" value="' +
+      esc(meta.utm) +
+      '">' +
+      '<input type="hidden" name="referrer" value="' +
+      esc(meta.ref) +
+      '">' +
       '<div class="bc-field"><label for="bc-name">Ваше имя</label>' +
       '<input type="text" id="bc-name" name="name" required autocomplete="name" placeholder="Как к вам обращаться"></div>' +
       '<div class="bc-field"><label for="bc-contact">Контакт для связи</label>' +
       '<input type="text" id="bc-contact" name="contact" required placeholder="Telegram / Телефон / любой удобный способ связи"></div>' +
       countryBlock +
       '<div class="bc-field"><label for="bc-comment">Комментарий</label>' +
-      '<textarea id="bc-comment" name="comment" rows="3" placeholder="Вопросы, пожелания, срок, если нужно к дате"></textarea></div>' +
+      '<textarea id="bc-comment" name="comment" rows="3" placeholder="' +
+      esc(meta.commentPh) +
+      '"></textarea></div>' +
       '<div class="bc-field bc-consent-row" style="width:100%;margin:0 0 12px 0;">' +
       '<label for="bc-consent" class="bc-consent-label" style="display:grid;grid-template-columns:18px 1fr;column-gap:10px;align-items:start;width:100%;margin:0;cursor:pointer;line-height:1.4;">' +
       '<input type="checkbox" id="bc-consent" name="consent" style="width:16px;height:16px;margin:2px 0 0 0;padding:0;">' +
-      '<span>Согласен(на) на обработку персональных данных</span></label>' +
+      "<span>Согласен(на) на обработку персональных данных</span></label>" +
       '<p id="bc-consent-hint" class="bc-consent-hint" style="margin:8px 0 0 28px;">Отметьте согласие, чтобы отправить заявку</p></div>' +
       '<button type="submit" class="bc-submit-btn" id="bc-submit" disabled>Отправить заявку</button>' +
       '<p class="bc-modal-alt" style="text-align:center;margin-top:14px;line-height:1.5;">или напишите в Telegram<br>' +
-      '<a href="' + tgUrl + '" target="_blank" rel="noopener noreferrer">t.me/bycraft_by</a></p></form>' +
+      '<a href="' +
+      tgUrl +
+      '" target="_blank" rel="noopener noreferrer">t.me/bycraft_by</a></p></form>' +
       '<div id="bc-modal-success" class="bc-modal__success" style="display:none">' +
-      '<h4>Спасибо!</h4><p id="bc-success-text"></p>' +
+      "<h4>Спасибо!</h4>" +
+      '<p id="bc-success-text"></p>' +
       '<button type="button" class="bc-submit-btn" style="margin-top:16px" onclick="window.closeBycraftModal()">Закрыть</button>' +
-      '</div></div>';
+      "</div></div>";
 
     modal.classList.add("is-active");
-    modal.style.cssText = "display:flex!important;position:fixed!important;inset:0!important;z-index:2147483647!important;align-items:center!important;justify-content:center!important;";
+    modal.style.cssText =
+      "display:flex!important;position:fixed!important;inset:0!important;z-index:2147483647!important;align-items:center!important;justify-content:center!important;";
     document.body.style.overflow = "hidden";
 
     var consent = document.getElementById("bc-consent");
@@ -1469,18 +1549,29 @@ footer a[href^="mailto:"],
     var when = new Date().toISOString();
 
     var payload = {
-      _subject: "BYCRAFT заявка: работа № " + (meta.num || meta.title),
-      name: name, contact: contact, country: country, comment: comment,
-      work_number: meta.num, page_url: meta.path, page_title: meta.title,
-      price: meta.price, lang: meta.lang, submitted_at: when,
-      utm: meta.utm, referrer: meta.ref
+      _subject: "BYCRAFT: " + (meta.formTitle || meta.displayName),
+      name: name,
+      contact: contact,
+      country: country,
+      comment: comment,
+      work_number: meta.num,
+      page_url: meta.path,
+      page_title: meta.displayName || meta.title,
+      price: meta.price,
+      lang: meta.lang,
+      submitted_at: when,
+      utm: meta.utm,
+      referrer: meta.ref
     };
 
     var form = document.getElementById("bc-inquiry-form");
     var successBox = document.getElementById("bc-modal-success");
     var successText = document.getElementById("bc-success-text");
     var submitBtn = document.getElementById("bc-submit");
-    if (submitBtn) { submitBtn.disabled = true; submitBtn.textContent = "Отправка…"; }
+    if (submitBtn) {
+      submitBtn.disabled = true;
+      submitBtn.textContent = "Отправка…";
+    }
 
     var done = function () {
       if (form) form.style.display = "none";
@@ -1489,8 +1580,8 @@ footer a[href^="mailto:"],
       if (successBox) successBox.style.display = "block";
       if (successText) {
         successText.textContent =
-          "Заявка по работе № " + (meta.num || meta.title) +
-          " получена. Мы свяжемся с вами в течение одного рабочего дня";
+          meta.successMsg ||
+          "Заявка получена. Мы свяжемся с вами в течение одного рабочего дня";
       }
     };
 
@@ -1498,14 +1589,16 @@ footer a[href^="mailto:"],
       method: "POST",
       headers: { "Content-Type": "application/json", Accept: "application/json" },
       body: JSON.stringify(payload)
-    }).catch(function () { return null; });
-
+    }).catch(function () {
+      return null;
+    });
     var p2 = fetch(WORKER_URL, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(payload)
-    }).catch(function () { return null; });
-
+    }).catch(function () {
+      return null;
+    });
     Promise.all([p1, p2]).then(done).catch(done);
     return false;
   };

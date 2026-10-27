@@ -5195,3 +5195,15 @@ i .work-subtitle-muted,
 .bc-consent-label input[type="checkbox"] {
   margin: 2px 0 0 0 !important;
 }
+
+/* === STOCK DESC FULL COL === */
+.work-layout-6-6 .work-detail-info .work-stock-desc,
+.work-detail-info .work-stock-desc {
+  width: 100% !important;
+  max-width: 100% !important;
+  margin-top: 40px !important;
+  display: block !important;
+}
+.work-layout-6-6 .work-detail-info .meta-row {
+  margin-bottom: 6px;
+}
