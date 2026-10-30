@@ -5653,3 +5653,50 @@ a:hover {
   border-color: var(--color-dark) !important;
   color: #F7F3EC !important;
 }
+
+/* === BLOCKS EDE3D3 + TAGLINE + COOKIE POS === */
+.geo-block,
+.geography-block,
+.geography-section,
+.curators-preview,
+.home-curators-block,
+.block-soft,
+.section-soft,
+.info-card,
+.feature-block,
+[class*="geo"] {
+  background-color: #EDE3D3;
+}
+/* soft section backgrounds common */
+.home-section-soft,
+.section-beige {
+  background-color: #EDE3D3 !important;
+}
+
+.hero-mosaic-tagline {
+  display: block !important;
+  text-align: center !important;
+  white-space: pre-line !important;
+  line-height: 1.45 !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+.cookie-banner,
+.cookie-banner--v2,
+#cookieBanner {
+  left: auto !important;
+  right: 16px !important;
+  bottom: 16px !important;
+  margin: 0 !important;
+  max-width: 400px !important;
+}
+
+.work-status.is-available,
+.work-status {
+  color: #B6452C !important;
+}
+.works-grid .work-status,
+.work-card .work-status {
+  color: #B6452C !important;
+}
