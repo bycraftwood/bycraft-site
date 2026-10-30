@@ -5833,3 +5833,39 @@ section.geography,
 .work-card .work-status {
   color: #B6452C !important;
 }
+
+/* === FORCE TAGLINE GAP STATUS 1440 === */
+.hero-mosaic-tagline {
+  display: block !important;
+  text-align: center !important;
+  font-size: 16px !important;
+  font-weight: 500 !important;
+  color: #6B5D52 !important;
+  line-height: 1.45 !important;
+  margin: 0 auto 32px auto !important;
+  padding: 0 !important;
+  border: none !important;
+  letter-spacing: 0.04em !important;
+}
+.hero-mosaic-caption {
+  text-align: center !important;
+  margin-top: 28px !important;
+}
+.hero-mosaic-caption .btn-telegram,
+.hero-mosaic-btn {
+  margin-top: 0 !important;
+}
+
+/* Как купить: малый отступ после заголовка */
+.page-title-16 {
+  margin-bottom: 12px !important;
+}
+
+.work-status.is-available,
+.work-status,
+span.work-status.is-available,
+div.work-status.is-available {
+  color: #B6452C !important;
+  font-weight: 700 !important;
+  font-size: 14px !important;
+}
