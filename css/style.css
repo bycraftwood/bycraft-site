@@ -5700,3 +5700,136 @@ a:hover {
 .work-card .work-status {
   color: #B6452C !important;
 }
+
+/* === LAYOUT FIXES 2026-10-30b === */
+
+/* мягкие блоки */
+.how-to-buy,
+.how-to-buy-section,
+#kak-kupit,
+.geography-section,
+.geography-block,
+.geo-block,
+.geo-section,
+.section-beige,
+.curators-request-block,
+.artist-statement-block,
+.curators-cta,
+.curators .request-block,
+[class*="geography"],
+[class*="how-to-buy"] {
+  background-color: #EDE3D3 !important;
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+/* убрать голубую обводку у блока кураторов на главной */
+.home-curators a,
+.home-curators .card,
+.home-curators-block,
+.curators-preview,
+.home-section-curators,
+.home-curators-block *,
+a.card-link:focus,
+a.card-link:focus-visible {
+  outline: none !important;
+  box-shadow: none !important;
+  border-color: transparent !important;
+}
+
+/* слоган + отступ до кнопки */
+.hero-mosaic-tagline {
+  display: block !important;
+  text-align: center !important;
+  white-space: pre-line !important;
+  line-height: 1.45 !important;
+  margin: 0 auto 28px !important;
+}
+.hero-mosaic-btn,
+.hero-mosaic-section .btn-telegram {
+  display: inline-block !important;
+  margin-top: 0 !important;
+}
+.hero-mosaic-cta {
+  text-align: center !important;
+  margin-top: 8px !important;
+}
+
+/* cookie меньше, справа внизу (desktop + mobile) */
+.cookie-banner,
+.cookie-banner--v2,
+#cookieBanner {
+  left: auto !important;
+  right: 12px !important;
+  bottom: 12px !important;
+  max-width: 260px !important;
+  width: calc(100vw - 24px) !important;
+  padding: 12px 12px 10px !important;
+  margin: 0 !important;
+  font-size: 12px !important;
+  box-sizing: border-box !important;
+}
+.cookie-banner__text strong {
+  font-size: 13px !important;
+  margin-bottom: 4px !important;
+}
+.cookie-banner__text p {
+  font-size: 11px !important;
+  line-height: 1.4 !important;
+  margin: 0 0 8px !important;
+}
+.cookie-banner__actions {
+  gap: 6px !important;
+}
+.cookie-banner .cookie-btn {
+  font-size: 11px !important;
+  padding: 7px 10px !important;
+}
+@media (max-width: 600px) {
+  .cookie-banner,
+  .cookie-banner--v2,
+  #cookieBanner {
+    right: 10px !important;
+    bottom: 10px !important;
+    max-width: 240px !important;
+    left: auto !important;
+  }
+}
+
+/* как купить — меньше зазор заголовок → текст */
+.how-to-buy .section-title,
+#kak-kupit .section-title,
+.how-to-buy-section .section-title {
+  margin-bottom: 10px !important;
+}
+.how-to-buy .lead-text,
+#kak-kupit .lead-text,
+.how-to-buy-section p {
+  margin-top: 0 !important;
+}
+
+/* география — ширина контейнера 12 кол */
+.geography-section,
+.geography-block,
+.geo-block,
+section.geography,
+#geography {
+  max-width: var(--container-max, 1240px) !important;
+  width: 100% !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  box-sizing: border-box !important;
+}
+.geography-section > .container,
+.geography-block > .container {
+  max-width: 100% !important;
+}
+
+/* статус в наличии */
+.work-status,
+.work-status.is-available,
+.works-grid .work-status,
+.work-card .work-status {
+  color: #B6452C !important;
+}
