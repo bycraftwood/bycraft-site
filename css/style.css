@@ -5994,3 +5994,31 @@ section.geography-section {
 main {
   padding-bottom: 24px !important;
 }
+
+/* === CURATORS BOX + GEO INTRO 1460 === */
+.home-curators-box,
+.home-curators-grid,
+.curators-request-block {
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+}
+.home-curators-box:focus,
+.home-curators-box:focus-within,
+.artist-request-panel:focus {
+  outline: none !important;
+  box-shadow: none !important;
+}
+.geo-intro-text {
+  background: transparent !important;
+  padding: 0 !important;
+  margin: 0 0 16px !important;
+  display: block !important;
+  width: 100% !important;
+}
+.flow-card-img img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  display: block !important;
+}
