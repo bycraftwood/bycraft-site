@@ -328,10 +328,10 @@
 /* ================= КОНЕЦ ШРИФТОВ ================= */
 
 :root {
-  --color-bg: #FFFFFF;
-  --color-primary: #1A1A1A;
-  --color-secondary: #7A756D;
-  --color-muted: #7A756D;
+  --color-bg: #F7F3EC;
+  --color-primary: #2A211C;
+  --color-secondary: #6B5D52;
+  --color-muted: #6B5D52;
   --color-border: #E5E0D8;
   --font-mono: 'Geist Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
   --font-base: 'Montserrat', -apple-system, BlinkMacSystemFont, sans-serif;
@@ -5536,4 +5536,120 @@ i .work-subtitle-muted,
   flex-wrap: wrap;
   gap: 10px;
   margin-top: 18px;
+}
+
+/* === BYCRAFT PALETTE 2026-10 === */
+:root {
+  --color-bg: #F7F3EC !important;
+  --color-primary: #2A211C !important;
+  --color-secondary: #6B5D52 !important;
+  --color-muted: #6B5D52 !important;
+  --color-border: #E5DFD4 !important;
+  --color-dark: #241C18 !important;
+  --color-footer: #301B28 !important;
+  --color-accent: #B6452C !important;
+}
+
+html, body {
+  background-color: var(--color-bg) !important;
+  color: var(--color-primary) !important;
+}
+
+/* тёмные кнопки */
+.btn-telegram,
+.btn-primary,
+a.btn-telegram,
+button.btn-telegram,
+.bc-submit-btn {
+  background-color: var(--color-dark) !important;
+  color: #F7F3EC !important;
+  border-color: var(--color-dark) !important;
+}
+.btn-telegram:hover,
+.bc-submit-btn:hover {
+  background-color: #1a1411 !important;
+  opacity: 1 !important;
+}
+
+/* чёрная мозаика (текст-ячейки) */
+.wdm-cell.wdm-text,
+.hm-cell.hm-text,
+.hero-mosaic .hm-text,
+.work-detail-mosaic .wdm-text {
+  background-color: var(--color-dark) !important;
+  color: #F7F3EC !important;
+}
+
+/* подвал */
+.site-footer {
+  background-color: var(--color-footer) !important;
+  color: #EDE6DC !important;
+}
+.site-footer a {
+  color: #F7F3EC !important;
+}
+
+/* заголовки разделов, приглушённый текст, даты, цены */
+.section-title,
+.meta-label,
+.meta-val,
+.caption,
+.lead-text,
+.event-date,
+.work-status,
+.museum-label,
+.hero-mosaic-tagline,
+.hero-eyebrow {
+  color: var(--color-muted);
+}
+
+/* основной текст — primary */
+p, li, .work-stock-desc, .stock-desc-line, .stock-desc-lead, .stock-desc-title {
+  color: var(--color-primary);
+}
+
+/* --- АКЦЕНТ точечно (2–3 места) --- */
+/* 1) статус «В наличии» */
+.work-status,
+.meta-val[style*="font-weight"],
+.work-detail-info .meta-row .meta-val {
+  /* default muted; accent only exact "В наличии" via class below */
+}
+.work-status.is-available,
+.meta-val.is-available,
+.status-available {
+  color: var(--color-accent) !important;
+  font-weight: 500 !important;
+}
+
+/* 2) активный пункт меню */
+.nav-link.active {
+  color: var(--color-accent) !important;
+}
+.nav-link.active::after {
+  background-color: var(--color-accent) !important;
+}
+
+/* 3) ссылки при наведении */
+a:hover {
+  color: var(--color-accent);
+}
+.nav-link:hover,
+.btn-arrow:hover,
+.lang-switch a:hover {
+  color: var(--color-accent) !important;
+  opacity: 1 !important;
+}
+
+/* шапка на фоне страницы */
+.site-header {
+  background-color: var(--color-bg) !important;
+  border-bottom-color: var(--color-border) !important;
+}
+
+/* cookie buttons primary follow dark */
+.cookie-btn--primary {
+  background: var(--color-dark) !important;
+  border-color: var(--color-dark) !important;
+  color: #F7F3EC !important;
 }
