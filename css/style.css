@@ -6234,3 +6234,28 @@ main {
 :root {
   --font-serif: 'Cormorant Garamond', Georgia, 'Times New Roman', serif;
 }
+
+/* === CORMORANT ON HOME TAGLINE + SECTION TITLES === */
+.hero-mosaic-tagline,
+h1.hero-mosaic-tagline {
+  font-family: 'Cormorant Garamond', Georgia, serif !important;
+  font-weight: 500 !important;
+  letter-spacing: 0.06em !important;
+}
+
+.section-title,
+h2.section-title,
+.home-section-title-muted,
+.page-title-16,
+.page-title-16-upper,
+.other-works-title {
+  font-family: 'Cormorant Garamond', Georgia, serif !important;
+  font-weight: 500 !important;
+  letter-spacing: 0.04em !important;
+}
+
+.section-title a,
+.home-section-title-muted a {
+  font-family: inherit !important;
+  font-weight: inherit !important;
+}
