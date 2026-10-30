@@ -1,37 +1,164 @@
-document.addEventListener('DOMContentLoaded', () => {
-// 2. ЕДИНСТВЕННЫЙ COOKIE-БАННЕР (создается через JS строго в 1 экземпляре)
-  const isDismissed = localStorage.getItem('bycraft_cookie_closed') === 'true' ||
-                      document.cookie.indexOf('bycraft_cookie_closed=true') !== -1;
 
-  if (!isDismissed) {
-    const isEn = window.location.pathname.indexOf('/en/') !== -1;
-    const banner = document.createElement('div');
-    banner.className = 'cookie-banner';
-    banner.setAttribute('role', 'dialog');
-    banner.setAttribute('aria-label', isEn ? 'Cookie notice' : 'Уведомление о cookie');
-    banner.id = 'cookieBanner';
+// === BYCRAFT COOKIE CONSENT ===
+(function () {
+  var KEY = "bycraft_cookie_prefs";
+  function getPrefs() {
+    try {
+      var raw = localStorage.getItem(KEY);
+      if (raw) return JSON.parse(raw);
+    } catch (e) {}
+    return null;
+  }
+  function savePrefs(prefs) {
+    try {
+      localStorage.setItem(KEY, JSON.stringify(prefs));
+      localStorage.setItem("bycraft_cookie_closed", "true");
+    } catch (e) {}
+    document.cookie = "bycraft_cookie_closed=true; max-age=31536000; path=/";
+  }
+  function applyPrefs(prefs) {
+    // Analytics / marketing load hooks (extend when scripts are connected)
+    window.__bycraftCookie = prefs;
+    if (prefs && prefs.analytics) {
+      document.dispatchEvent(new CustomEvent("bycraft:cookie-analytics"));
+    }
+    if (prefs && prefs.marketing) {
+      document.dispatchEvent(new CustomEvent("bycraft:cookie-marketing"));
+    }
+  }
 
-    const policyUrl = isEn ? '/en/privacy/' : '/privacy/';
-    const textMsg = isEn
-      ? 'This site uses cookies. Learn more in our <a href="' + policyUrl + '" style="text-decoration: underline; color: inherit;">Policy</a>.'
-      : 'Сайт использует файлы cookie. Подробнее — в <a href="' + policyUrl + '" style="text-decoration: underline; color: inherit;">Политике</a>.';
-    const btnLabel = isEn ? 'Accept' : 'Понятно';
+  function removeEl(id) {
+    var el = document.getElementById(id);
+    if (el) el.remove();
+  }
 
-    banner.innerHTML = '<div>' + textMsg + '</div><button class="cookie-btn-accept" id="cookieAccept" type="button">' + btnLabel + '</button>';
-    document.body.appendChild(banner);
+  function openSettings() {
+    removeEl("cookieSettings");
+    var panel = document.createElement("div");
+    panel.id = "cookieSettings";
+    panel.className = "cookie-settings";
+    panel.setAttribute("role", "dialog");
+    panel.setAttribute("aria-label", "Настройки файлов cookie");
+    panel.innerHTML =
+      '<div class="cookie-settings__overlay" data-close="1"></div>' +
+      '<div class="cookie-settings__box">' +
+      '<button type="button" class="cookie-settings__x" data-close="1" aria-label="Закрыть">&times;</button>' +
+      "<h2>Настройки файлов cookie</h2>" +
+      "<p>Мы используем файлы cookie, чтобы помочь пользователям эффективно ориентироваться и выполнять определенные функции. Подробную информацию обо всех файлах cookie, соответствующих каждой категории согласия, можно найти ниже.</p>" +
+      '<p class="cookie-settings__policy">Подробнее читайте в <a href="/privacy/">политике обработки персональных данных</a>.</p>' +
+      '<div class="cookie-cat">' +
+      '<div class="cookie-cat__row"><span class="cookie-cat__name">Обязательные (технические) файлы</span>' +
+      '<span class="cookie-cat__badge">Всегда разрешено</span></div></div>' +
+      '<div class="cookie-cat">' +
+      '<div class="cookie-cat__row"><span class="cookie-cat__name">Аналитические файлы</span>' +
+      '<label class="cookie-switch"><input type="checkbox" id="ck-analytics"><span class="cookie-switch__ui"></span></label></div>' +
+      '<div class="cookie-cat__status" id="st-analytics">Запрещено</div></div>' +
+      '<div class="cookie-cat">' +
+      '<div class="cookie-cat__row"><span class="cookie-cat__name">Маркетинговые файлы</span>' +
+      '<label class="cookie-switch"><input type="checkbox" id="ck-marketing"><span class="cookie-switch__ui"></span></label></div>' +
+      '<div class="cookie-cat__status" id="st-marketing">Запрещено</div></div>' +
+      '<div class="cookie-settings__actions">' +
+      '<button type="button" class="cookie-btn cookie-btn--ghost" id="ck-save-reject">Только обязательные</button>' +
+      '<button type="button" class="cookie-btn cookie-btn--primary" id="ck-save-accept">Сохранить</button>' +
+      "</div></div>";
+    document.body.appendChild(panel);
 
-    const btn = banner.querySelector('#cookieAccept');
-    if (btn) {
-      btn.addEventListener('click', (e) => {
-        e.preventDefault();
-        banner.remove(); // Полное удаление баннера из DOM
-        try { localStorage.setItem('bycraft_cookie_closed', 'true'); } catch(err) {}
-        document.cookie = 'bycraft_cookie_closed=true; max-age=31536000; path=/';
+    function syncStatus() {
+      var a = document.getElementById("ck-analytics");
+      var m = document.getElementById("ck-marketing");
+      var sa = document.getElementById("st-analytics");
+      var sm = document.getElementById("st-marketing");
+      if (sa) sa.textContent = a && a.checked ? "Разрешено" : "Запрещено";
+      if (sm) sm.textContent = m && m.checked ? "Разрешено" : "Запрещено";
+    }
+    var a = document.getElementById("ck-analytics");
+    var m = document.getElementById("ck-marketing");
+    if (a) a.addEventListener("change", syncStatus);
+    if (m) m.addEventListener("change", syncStatus);
+    syncStatus();
+
+    panel.querySelectorAll("[data-close]").forEach(function (el) {
+      el.addEventListener("click", function () {
+        removeEl("cookieSettings");
+      });
+    });
+    var saveReject = document.getElementById("ck-save-reject");
+    var saveAccept = document.getElementById("ck-save-accept");
+    if (saveReject) {
+      saveReject.addEventListener("click", function () {
+        var prefs = { necessary: true, analytics: false, marketing: false };
+        savePrefs(prefs);
+        applyPrefs(prefs);
+        removeEl("cookieSettings");
+        removeEl("cookieBanner");
+      });
+    }
+    if (saveAccept) {
+      saveAccept.addEventListener("click", function () {
+        var prefs = {
+          necessary: true,
+          analytics: !!(document.getElementById("ck-analytics") || {}).checked,
+          marketing: !!(document.getElementById("ck-marketing") || {}).checked
+        };
+        savePrefs(prefs);
+        applyPrefs(prefs);
+        removeEl("cookieSettings");
+        removeEl("cookieBanner");
       });
     }
   }
 
-  // 3. Автозапуск видео
+  function showBanner() {
+    if (document.getElementById("cookieBanner")) return;
+    var banner = document.createElement("div");
+    banner.id = "cookieBanner";
+    banner.className = "cookie-banner cookie-banner--v2";
+    banner.setAttribute("role", "dialog");
+    banner.setAttribute("aria-label", "Уведомление о cookie");
+    banner.innerHTML =
+      '<div class="cookie-banner__text">' +
+      "<strong>Мы используем файлы cookie</strong>" +
+      "<p>Они помогают улучшать пользовательский опыт. Продолжая, вы соглашаетесь на их использование.</p>" +
+      "</div>" +
+      '<div class="cookie-banner__actions">' +
+      '<button type="button" class="cookie-btn cookie-btn--primary" id="cookieAcceptAll">Принять все</button>' +
+      '<button type="button" class="cookie-btn cookie-btn--ghost" id="cookieConfigure">Настроить</button>' +
+      "</div>";
+    document.body.appendChild(banner);
+
+    var accept = document.getElementById("cookieAcceptAll");
+    var conf = document.getElementById("cookieConfigure");
+    if (accept) {
+      accept.addEventListener("click", function () {
+        var prefs = { necessary: true, analytics: true, marketing: true };
+        savePrefs(prefs);
+        applyPrefs(prefs);
+        removeEl("cookieBanner");
+      });
+    }
+    if (conf) {
+      conf.addEventListener("click", function () {
+        openSettings();
+      });
+    }
+  }
+
+  document.addEventListener("DOMContentLoaded", function () {
+    var prefs = getPrefs();
+    if (prefs) {
+      applyPrefs(prefs);
+      return;
+    }
+    // legacy dismiss without prefs → show banner again once with new UI
+    showBanner();
+  });
+
+  // footer link helper
+  window.bycraftOpenCookieSettings = openSettings;
+})();
+
+document.addEventListener('DOMContentLoaded', () => {
+// 3. Автозапуск видео
   const allVideos = document.querySelectorAll('video');
   allVideos.forEach(v => {
     v.setAttribute('playsinline', '');
