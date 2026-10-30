@@ -6023,3 +6023,144 @@ main {
   object-fit: cover !important;
   display: block !important;
 }
+
+/* === GEOGRAPHY REDESIGN 1470 === */
+.geography-section {
+  background: #EDE3D3 !important;
+  padding: 40px 28px 44px !important;
+  margin-bottom: 72px !important;
+  box-sizing: border-box !important;
+}
+.geography-section .map-header-flex {
+  display: flex !important;
+  align-items: flex-start !important;
+  justify-content: space-between !important;
+  gap: 16px !important;
+  margin-bottom: 24px !important;
+  width: 100% !important;
+}
+.geography-section .map-badge {
+  font-size: 13px !important;
+  color: #6B5D52 !important;
+  white-space: nowrap !important;
+  border: 1px solid rgba(42, 33, 28, 0.18) !important;
+  padding: 6px 12px !important;
+  background: transparent !important;
+}
+
+/* layout: карта сверху, страны сеткой снизу */
+.geography-section .map-svg-wrap {
+  width: 100% !important;
+  background: #F7F3EC !important;
+  border: 1px solid rgba(42, 33, 28, 0.12) !important;
+  padding: 12px !important;
+  margin-bottom: 0 !important;
+  box-sizing: border-box !important;
+}
+.geography-section .map-svg-wrap svg {
+  width: 100% !important;
+  height: auto !important;
+  display: block !important;
+  max-height: 420px !important;
+}
+
+/* континенты — сетка 4 колонки с тонкими линиями */
+.geography-section .map-continents-grid {
+  display: grid !important;
+  grid-template-columns: repeat(4, 1fr) !important;
+  gap: 0 !important;
+  width: 100% !important;
+  margin: 0 !important;
+  border: 1px solid rgba(42, 33, 28, 0.14) !important;
+  border-top: none !important;
+  background: #F7F3EC !important;
+  box-sizing: border-box !important;
+}
+.geography-section .continent-group {
+  padding: 18px 16px 20px !important;
+  margin: 0 !important;
+  border-right: 1px solid rgba(42, 33, 28, 0.14) !important;
+  text-align: left !important;
+  box-sizing: border-box !important;
+}
+.geography-section .continent-group:last-child {
+  border-right: none !important;
+}
+.geography-section .continent-group h4 {
+  font-family: 'Manrope', sans-serif !important;
+  font-size: 13px !important;
+  font-weight: 600 !important;
+  letter-spacing: 0.04em !important;
+  text-transform: uppercase !important;
+  color: #2A211C !important;
+  margin: 0 0 12px 0 !important;
+  text-align: left !important;
+}
+.geography-section .continent-group ul {
+  list-style: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  text-align: left !important;
+}
+.geography-section .continent-group li {
+  font-size: 14px !important;
+  line-height: 1.55 !important;
+  color: #2A211C !important;
+  margin: 0 0 4px 0 !important;
+  padding: 0 !important;
+  text-align: left !important;
+}
+
+@media (max-width: 900px) {
+  .geography-section .map-continents-grid {
+    grid-template-columns: 1fr 1fr !important;
+  }
+  .geography-section .continent-group:nth-child(2n) {
+    border-right: none !important;
+  }
+  .geography-section .continent-group:nth-child(-n+2) {
+    border-bottom: 1px solid rgba(42, 33, 28, 0.14) !important;
+  }
+}
+@media (max-width: 560px) {
+  .geography-section .map-continents-grid {
+    grid-template-columns: 1fr !important;
+  }
+  .geography-section .continent-group {
+    border-right: none !important;
+    border-bottom: 1px solid rgba(42, 33, 28, 0.14) !important;
+  }
+  .geography-section .continent-group:last-child {
+    border-bottom: none !important;
+  }
+  .geography-section {
+    padding: 28px 16px 32px !important;
+  }
+}
+
+/* заливка континентов на карте */
+.geography-section .map-svg-wrap svg path {
+  fill: #C4B5A5 !important;
+  stroke: #8A7B6C !important;
+  stroke-width: 1 !important;
+}
+.geography-section .map-svg-wrap svg .pulse-ring {
+  fill: none !important;
+  stroke: #B6452C !important;
+}
+.geography-section .map-svg-wrap svg circle:not(.pulse-ring) {
+  fill: #241C18 !important;
+}
+
+/* OFF MUSEUM / sig events images */
+.sig-event-img {
+  overflow: hidden !important;
+  background: #EDE3D3 !important;
+  aspect-ratio: 4 / 3 !important;
+}
+.sig-event-img img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  display: block !important;
+}
