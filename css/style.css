@@ -7985,3 +7985,139 @@ h2.home-block-title a,
   border: none !important;
   border-bottom: none !important;
 }
+
+/* === v1780 === */
+
+/* 1 mobile menu — no white sheet */
+@media (max-width: 900px) {
+  .site-header {
+    background: #F7F3EC !important;
+  }
+  .main-nav,
+  .main-nav.open,
+  nav.main-nav,
+  .site-header nav.main-nav,
+  .header-inner .main-nav {
+    background: #F7F3EC !important;
+    background-color: #F7F3EC !important;
+    box-shadow: 0 8px 20px rgba(42, 33, 28, 0.08) !important;
+  }
+  .mobile-toggle {
+    background: transparent !important;
+    background-color: transparent !important;
+    border: 1px solid #2A211C !important;
+    color: #2A211C !important;
+  }
+}
+
+/* 2 equal contact buttons */
+.contacts-cta-row {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  gap: 12px !important;
+}
+.contacts-cta-row .btn-telegram,
+.contacts-cta-row .btn-tg-solid,
+.contacts-cta-row .btn-instagram-outline,
+.page-contacts .btn-telegram,
+.page-contacts .btn-instagram-outline {
+  min-width: 200px !important;
+  width: 200px !important;
+  justify-content: center !important;
+  text-align: center !important;
+  padding: 10px 24px !important;
+  min-height: 44px !important;
+  box-sizing: border-box !important;
+  display: inline-flex !important;
+  align-items: center !important;
+}
+.page-contacts .btn-instagram-outline {
+  border: 1px solid #E5DFD4 !important;
+  color: #2A211C !important;
+  background: transparent !important;
+}
+
+/* 3 contacts footer — no light plaque */
+body.page-contacts .site-footer,
+.page-contacts .site-footer,
+body.page-contacts footer.site-footer {
+  background: #241C18 !important;
+  color: #F7F3EC !important;
+}
+body.page-contacts .site-footer .container,
+body.page-contacts .site-footer .footer-inner-grid,
+body.page-contacts .site-footer .footer-col-1,
+body.page-contacts .site-footer .footer-col-2,
+body.page-contacts .site-footer .footer-col-3 {
+  background: transparent !important;
+  background-color: transparent !important;
+  box-shadow: none !important;
+  border: none !important;
+}
+body.page-contacts .site-footer p,
+body.page-contacts .site-footer a,
+body.page-contacts .site-footer div {
+  background: transparent !important;
+}
+
+/* cookie equal buttons + type */
+.cookie-banner,
+.cookie-banner--v2,
+#cookieBanner {
+  background: #F7F3EC !important;
+  border: 1px solid #E5DFD4 !important;
+}
+.cookie-banner__text strong,
+.cookie-banner h3 {
+  color: #2A211C !important;
+  font-size: 12px !important;
+  font-weight: 600 !important;
+}
+.cookie-banner__text p {
+  color: #6B5D52 !important;
+  font-size: 11px !important;
+}
+.cookie-banner__actions {
+  display: flex !important;
+  gap: 8px !important;
+  flex-wrap: wrap !important;
+}
+.cookie-btn,
+.cookie-btn--primary,
+.cookie-btn--ghost,
+#cookieAcceptAll,
+#cookieConfigure {
+  flex: 1 1 0 !important;
+  min-width: 120px !important;
+  width: auto !important;
+  text-align: center !important;
+  justify-content: center !important;
+  font-size: 13px !important;
+  padding: 8px 14px !important;
+  box-sizing: border-box !important;
+}
+#cookieAcceptAll,
+.cookie-btn--primary {
+  background: #241C18 !important;
+  color: #F7F3EC !important;
+  border: none !important;
+}
+#cookieConfigure,
+.cookie-btn--ghost {
+  background: transparent !important;
+  border: 1px solid #E5DFD4 !important;
+  color: #2A211C !important;
+}
+
+.exhibitions-intro-block .page-h1 {
+  margin-top: 12px !important;
+  margin-bottom: 12px !important;
+}
+.exhibitions-back {
+  display: inline-block !important;
+  margin: 0 0 8px 0 !important;
+  text-decoration: none !important;
+  border: none !important;
+  color: #2A211C !important;
+  font-size: 14px !important;
+}
