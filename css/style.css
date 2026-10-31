@@ -6642,3 +6642,151 @@ body.page-contacts main,
   background: #241C18 !important;
   color: #F7F3EC !important;
 }
+
+/* === TYPO FIXES 2026-10-31b === */
+
+/* mobile header */
+@media (max-width: 900px) {
+  .site-header {
+    background: #F7F3EC !important;
+  }
+  .mobile-toggle {
+    color: #2A211C !important;
+    border: 1px solid #2A211C !important;
+    background: transparent !important;
+    font-family: 'Manrope', sans-serif !important;
+  }
+}
+
+/* page H1 44/32 */
+h1.page-h1,
+h1.section-title.page-h1,
+.exhibitions-page h1,
+.works-page-title {
+  font-family: 'Cormorant Garamond', Georgia, serif !important;
+  font-weight: 500 !important;
+  font-size: 44px !important;
+  line-height: 1.15 !important;
+  color: #2A211C !important;
+  text-transform: none !important;
+  letter-spacing: 0.01em !important;
+  background-image: none !important;
+  border: none !important;
+  display: block !important;
+  padding-bottom: 0 !important;
+}
+@media (max-width: 768px) {
+  h1.page-h1,
+  h1.section-title.page-h1,
+  .works-page-title {
+    font-size: 32px !important;
+  }
+}
+
+/* section titles 32/26 + accent underline */
+h2.section-title,
+.section-title.section-h2,
+.home-section-title-muted,
+.page-title-16,
+.page-title-16-upper {
+  font-family: 'Cormorant Garamond', Georgia, serif !important;
+  font-weight: 500 !important;
+  font-size: 32px !important;
+  line-height: 1.2 !important;
+  color: #2A211C !important;
+  text-transform: none !important;
+  letter-spacing: 0.01em !important;
+  display: inline-block !important;
+  padding-bottom: 8px !important;
+  margin-bottom: 18px !important;
+  background-image: linear-gradient(#B6452C, #B6452C) !important;
+  background-position: left bottom !important;
+  background-repeat: no-repeat !important;
+  background-size: 100% 1.5px !important;
+  border: none !important;
+}
+@media (max-width: 768px) {
+  h2.section-title,
+  .home-section-title-muted,
+  .page-title-16,
+  .page-title-16-upper {
+    font-size: 26px !important;
+  }
+}
+
+/* home tagline no dash, italic second line */
+.hero-mosaic-tagline {
+  font-family: 'Cormorant Garamond', Georgia, serif !important;
+  font-weight: 500 !important;
+  font-size: 52px !important;
+  color: #2A211C !important;
+  text-transform: none !important;
+}
+.hero-mosaic-tagline em {
+  font-style: italic !important;
+}
+@media (max-width: 768px) {
+  .hero-mosaic-tagline { font-size: 34px !important; }
+}
+
+/* works filter 2x wider */
+.works-filter,
+select.works-filter,
+.works-toolbar select {
+  min-width: 280px !important;
+  width: auto !important;
+  max-width: 100% !important;
+  background: #F7F3EC !important;
+  border: 1px solid #2A211C !important;
+  color: #2A211C !important;
+  padding: 10px 36px 10px 14px !important;
+  font-size: 14px !important;
+}
+
+/* workshop process split */
+.workshop-h1-line1 {
+  display: block;
+}
+.workshop-h1-line2 {
+  display: block;
+  font-weight: 500;
+}
+
+/* curators quote */
+.artist-quote {
+  font-family: 'Cormorant Garamond', Georgia, serif !important;
+  font-style: italic !important;
+  font-weight: 500 !important;
+  font-size: 26px !important;
+  line-height: 1.35 !important;
+  color: #2A211C !important;
+  border-left: 2px solid #B6452C !important;
+  padding-left: 18px !important;
+  margin: 20px 0 !important;
+}
+@media (max-width: 768px) {
+  .artist-quote { font-size: 20px !important; }
+}
+
+/* curators h1 slightly smaller per latest request 32/26 */
+.curators-page-h1 {
+  font-family: 'Cormorant Garamond', Georgia, serif !important;
+  font-weight: 500 !important;
+  font-size: 32px !important;
+  color: #2A211C !important;
+  text-transform: none !important;
+}
+@media (max-width: 768px) {
+  .curators-page-h1 { font-size: 26px !important; }
+}
+
+/* arrow links like home */
+.btn-arrow, a.btn-arrow {
+  font-family: 'Manrope', sans-serif !important;
+  font-weight: 600 !important;
+  font-size: 15px !important;
+  color: #2A211C !important;
+  border-bottom: none !important;
+  text-decoration: none !important;
+}
+.btn-arrow .arrow { color: #B6452C !important; }
