@@ -7369,3 +7369,154 @@ h2.home-block-title,
     font-size: 26px !important;
   }
 }
+
+/* === FIXES v1730 === */
+
+/* home block titles + accent underline */
+h2.home-block-title,
+.home-block-title,
+.home-block-title a {
+  font-family: 'Cormorant Garamond', Georgia, serif !important;
+  font-weight: 500 !important;
+  font-size: 32px !important;
+  color: #2A211C !important;
+  text-transform: none !important;
+  text-decoration: none !important;
+  display: inline-block !important;
+  padding-bottom: 8px !important;
+  margin-bottom: 18px !important;
+  background-image: linear-gradient(#B6452C, #B6452C) !important;
+  background-position: left bottom !important;
+  background-repeat: no-repeat !important;
+  background-size: 100% 1.5px !important;
+  border: none !important;
+}
+@media (max-width: 768px) {
+  h2.home-block-title, .home-block-title, .home-block-title a {
+    font-size: 26px !important;
+  }
+}
+
+/* works: order similar link */
+a.order-similar,
+.order-similar,
+.work-card a.btn-arrow,
+.works-grid .btn-arrow {
+  font-family: 'Manrope', sans-serif !important;
+  font-size: 14px !important;
+  font-weight: 500 !important;
+  color: #2A211C !important;
+  text-decoration: none !important;
+  border-bottom: 1px solid #2A211C !important;
+  letter-spacing: 0.02em !important;
+}
+a.order-similar:hover,
+.order-similar:hover {
+  color: #B6452C !important;
+  border-bottom-color: #B6452C !important;
+}
+
+/* works prices */
+.work-price,
+.works-grid .work-price,
+.price-line {
+  font-family: 'Manrope', sans-serif !important;
+  font-size: 14px !important;
+  font-weight: 600 !important;
+  color: #2A211C !important;
+}
+
+/* geography */
+.geography-section {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+.geography-section .geo-inner {
+  max-width: var(--container-max, 1240px) !important;
+  margin: 0 auto !important;
+  padding-left: 24px !important;
+  padding-right: 24px !important;
+  box-sizing: border-box !important;
+}
+.geo-title {
+  font-family: 'Cormorant Garamond', Georgia, serif !important;
+  font-weight: 500 !important;
+  font-size: 40px !important;
+  color: #2A211C !important;
+  text-align: left !important;
+  margin-left: 0 !important;
+  padding-left: 0 !important;
+}
+.geo-intro {
+  font-family: 'Manrope', sans-serif !important;
+  font-size: 17px !important;
+  color: #6B5D52 !important;
+  max-width: none !important;
+  width: 100% !important;
+  text-align: left !important;
+  margin-left: 0 !important;
+}
+.continent-group h4 {
+  font-family: 'Geist Mono', ui-monospace, monospace !important;
+  font-size: 12px !important;
+  font-weight: 400 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.08em !important;
+  color: #6B5D52 !important;
+  border-bottom: 1px solid rgba(42,33,28,0.18) !important;
+  padding-bottom: 8px !important;
+  margin-bottom: 16px !important;
+}
+.geo-minsk-label {
+  display: none !important;
+}
+
+/* workshop */
+.workshop-process-title,
+span.workshop-process-title {
+  font-family: 'Cormorant Garamond', Georgia, serif !important;
+  font-weight: 500 !important;
+  font-size: 28px !important;
+  color: #2A211C !important;
+  display: block !important;
+}
+a.btn-arrow.workshop-works-link,
+.workshop-works-link {
+  font-family: 'Manrope', sans-serif !important;
+  font-size: 15px !important;
+  font-weight: 500 !important;
+  color: #2A211C !important;
+  border-bottom: 1px solid #2A211C !important;
+  text-decoration: none !important;
+}
+a.btn-arrow.workshop-works-link:hover {
+  color: #B6452C !important;
+  border-bottom-color: #B6452C !important;
+}
+
+/* contacts buttons */
+.btn-tg-solid,
+.contacts-dark .btn-telegram {
+  background: #241C18 !important;
+  color: #F7F3EC !important;
+  border: 1px solid #241C18 !important;
+  border-radius: 0 !important;
+  font-family: 'Manrope', sans-serif !important;
+  font-weight: 500 !important;
+  font-size: 15px !important;
+  letter-spacing: 0.04em !important;
+}
+.btn-instagram-outline {
+  background: transparent !important;
+  border: 1px solid #2A211C !important;
+  color: #2A211C !important;
+  border-radius: 0 !important;
+  font-family: 'Manrope', sans-serif !important;
+  font-weight: 500 !important;
+  font-size: 15px !important;
+  letter-spacing: 0.04em !important;
+}
+.contacts-dark .btn-instagram-outline {
+  border-color: #F7F3EC !important;
+  color: #F7F3EC !important;
+}
