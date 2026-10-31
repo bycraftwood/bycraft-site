@@ -7290,3 +7290,53 @@ a.btn-arrow.exhibitions-back {
   text-decoration: none !important;
   background-image: none !important;
 }
+
+/* === HOME + EVENTS FIX v1711 === */
+main .container h2.section-title.home-section-title-muted,
+h2.section-title.home-section-title-muted,
+.home-section-title-muted,
+.home-section-title-muted a,
+h2.home-section-title-muted.section-h2 {
+  font-family: 'Cormorant Garamond', Georgia, serif !important;
+  font-weight: 500 !important;
+  font-size: 32px !important;
+  color: #2A211C !important;
+  text-transform: none !important;
+  letter-spacing: 0.01em !important;
+  text-decoration: none !important;
+}
+@media (max-width: 768px) {
+  main .container h2.section-title.home-section-title-muted,
+  h2.section-title.home-section-title-muted,
+  .home-section-title-muted,
+  .home-section-title-muted a {
+    font-size: 26px !important;
+  }
+}
+
+a.btn-arrow,
+.btn-arrow {
+  font-family: 'Manrope', sans-serif !important;
+  font-weight: 500 !important;
+  font-size: 15px !important;
+  color: #2A211C !important;
+  text-decoration: none !important;
+  border-bottom: 1px solid #2A211C !important;
+  letter-spacing: 0.04em !important;
+}
+a.btn-arrow:hover,
+.btn-arrow:hover {
+  color: #B6452C !important;
+  border-bottom-color: #B6452C !important;
+}
+a.btn-arrow .arrow,
+.btn-arrow .arrow {
+  color: #B6452C !important;
+}
+
+.sig-event-img img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  display: block !important;
+}
