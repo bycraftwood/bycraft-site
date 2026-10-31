@@ -7520,3 +7520,157 @@ a.btn-arrow.workshop-works-link:hover {
   border-color: #F7F3EC !important;
   color: #F7F3EC !important;
 }
+
+/* === FIXES v1740 === */
+
+/* single underline only on home titles */
+h2.home-block-title,
+.home-block-title {
+  font-family: 'Cormorant Garamond', Georgia, serif !important;
+  font-weight: 500 !important;
+  font-size: 32px !important;
+  color: #2A211C !important;
+  text-transform: none !important;
+  text-decoration: none !important;
+  border: none !important;
+  border-bottom: none !important;
+  box-shadow: none !important;
+  display: inline-block !important;
+  padding-bottom: 8px !important;
+  margin-bottom: 18px !important;
+  background-image: linear-gradient(#B6452C, #B6452C) !important;
+  background-position: left bottom !important;
+  background-repeat: no-repeat !important;
+  background-size: 100% 1.5px !important;
+}
+h2.home-block-title a,
+.home-block-title a {
+  font: inherit !important;
+  color: inherit !important;
+  text-decoration: none !important;
+  border: none !important;
+  border-bottom: none !important;
+  background: none !important;
+  background-image: none !important;
+  box-shadow: none !important;
+  padding-bottom: 0 !important;
+  display: inline !important;
+}
+@media (max-width: 768px) {
+  h2.home-block-title, .home-block-title { font-size: 26px !important; }
+}
+
+/* how to buy nav button */
+.nav-how-to-buy,
+.nav-link-btn,
+a.nav-how-to-buy {
+  background: #EDE3D3 !important;
+  border: none !important;
+  border-radius: 4px !important;
+  color: #2A211C !important;
+  font-weight: 500 !important;
+  font-family: 'Manrope', sans-serif !important;
+  font-size: 14px !important;
+  letter-spacing: 0.04em !important;
+  padding: 8px 14px !important;
+}
+.nav-how-to-buy:hover,
+a.nav-how-to-buy:hover {
+  background: #E0D5C3 !important;
+  color: #2A211C !important;
+  opacity: 1 !important;
+}
+
+/* geography: no white panels */
+.geography-section,
+.geography-section .geo-inner {
+  background: #EDE3D3 !important;
+}
+.geography-section .map-svg-wrap,
+.geography-section .map-continents-grid,
+.geography-section .continent-group {
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+.geography-section .map-svg-wrap {
+  padding: 0 !important;
+  border: none !important;
+}
+.geo-head {
+  display: flex !important;
+  align-items: flex-start !important;
+  justify-content: space-between !important;
+  gap: 24px !important;
+  flex-wrap: wrap !important;
+  margin-bottom: 24px !important;
+}
+.geo-intro { display: none !important; }
+.geo-stats {
+  display: flex !important;
+  gap: 32px !important;
+  margin: 0 !important;
+}
+.geo-title {
+  margin: 0 !important;
+}
+
+/* contacts page light bg + dark cards */
+body.page-contacts,
+.page-contacts main,
+.contacts-page {
+  background: #F7F3EC !important;
+}
+.contacts-dark {
+  background: transparent !important;
+  color: #2A211C !important;
+  padding: 0 !important;
+}
+.contacts-page-title {
+  color: #2A211C !important;
+}
+.contact-card {
+  background: #241C18 !important;
+  color: #F7F3EC !important;
+  padding: 28px 32px !important;
+  margin-bottom: 20px !important;
+  border-radius: 0 !important;
+}
+.contact-card h2,
+.contact-card h3,
+.contact-card p,
+.contact-card a {
+  color: #F7F3EC !important;
+}
+.contact-card .btn-instagram-outline {
+  border-color: #F7F3EC !important;
+  color: #F7F3EC !important;
+}
+.contact-card .btn-telegram {
+  background: #F7F3EC !important;
+  color: #241C18 !important;
+  border-color: #F7F3EC !important;
+}
+
+/* curators list markers */
+.curators-list,
+.awards-list,
+.cv-list {
+  list-style: none !important;
+  padding-left: 0 !important;
+}
+.curators-list li,
+.awards-list li,
+.cv-list li {
+  position: relative !important;
+  padding-left: 14px !important;
+  margin-bottom: 8px !important;
+}
+.curators-list li::before,
+.awards-list li::before,
+.cv-list li::before {
+  content: "·" !important;
+  position: absolute !important;
+  left: 0 !important;
+  color: #6B5D52 !important;
+}
