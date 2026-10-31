@@ -7220,3 +7220,103 @@ h2.section-title,
   color: #F7F3EC !important;
   margin-bottom: 28px !important;
 }
+
+/* === FINAL FORCE v1600 — must be last in file === */
+@media (max-width: 900px) {
+  .site-header {
+    background: #F7F3EC !important;
+  }
+  .mobile-toggle {
+    display: inline-flex !important;
+    background: transparent !important;
+    background-color: transparent !important;
+    color: #2A211C !important;
+    border: 1px solid #2A211C !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+  }
+  .main-nav,
+  .main-nav.open,
+  nav.main-nav {
+    background: #F7F3EC !important;
+    background-color: #F7F3EC !important;
+    box-shadow: 0 10px 20px rgba(42,33,28,0.08) !important;
+  }
+  .main-nav .nav-link,
+  .main-nav a {
+    color: #2A211C !important;
+    border-bottom: 1px solid #E5DFD4 !important;
+  }
+}
+
+.home-section-title-muted,
+h2.home-section-title-muted,
+h2.section-title.home-section-title-muted,
+.section-title.home-section-title-muted a {
+  font-family: 'Cormorant Garamond', Georgia, serif !important;
+  font-weight: 500 !important;
+  font-size: 32px !important;
+  color: #2A211C !important;
+  text-transform: none !important;
+  text-decoration: none !important;
+  border: none !important;
+}
+@media (max-width: 768px) {
+  .home-section-title-muted,
+  h2.home-section-title-muted,
+  .section-title.home-section-title-muted a {
+    font-size: 26px !important;
+  }
+}
+
+h2.page-title-16,
+.page-title-16 {
+  font-family: 'Cormorant Garamond', Georgia, serif !important;
+  font-weight: 500 !important;
+  font-size: 32px !important;
+  color: #2A211C !important;
+  text-transform: none !important;
+}
+@media (max-width: 768px) {
+  h2.page-title-16, .page-title-16 { font-size: 26px !important; }
+}
+
+.artist-quote {
+  font-family: 'Cormorant Garamond', Georgia, serif !important;
+  font-style: italic !important;
+  font-size: 26px !important;
+  color: #2A211C !important;
+  border-left: 2px solid #B6452C !important;
+  padding-left: 18px !important;
+  margin: 16px 0 !important;
+  display: block !important;
+}
+@media (max-width: 768px) {
+  .artist-quote { font-size: 20px !important; }
+}
+
+.btn-telegram:hover,
+.bc-submit-btn:hover,
+a.btn-telegram:hover {
+  background: #3A2D26 !important;
+  border-color: #3A2D26 !important;
+}
+
+.nav-how-to-buy,
+.nav-link-btn {
+  background: transparent !important;
+  border: 1px solid #2A211C !important;
+  color: #2A211C !important;
+  border-radius: 0 !important;
+  font-weight: 500 !important;
+  font-size: 14px !important;
+  letter-spacing: 0.04em !important;
+}
+.nav-how-to-buy:hover {
+  background: #241C18 !important;
+  color: #F7F3EC !important;
+}
+
+.cookie-banner, #cookieBanner, .cookie-banner--v2 {
+  background: #F7F3EC !important;
+}
