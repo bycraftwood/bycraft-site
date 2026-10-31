@@ -7340,3 +7340,32 @@ a.btn-arrow .arrow,
   object-fit: cover !important;
   display: block !important;
 }
+
+/* === home-block-title (NOT section-title) v1720 === */
+h2.home-block-title,
+.home-block-title,
+.home-block-title a {
+  font-family: 'Cormorant Garamond', Georgia, serif !important;
+  font-weight: 500 !important;
+  font-size: 32px !important;
+  line-height: 1.2 !important;
+  color: #2A211C !important;
+  text-transform: none !important;
+  letter-spacing: 0.01em !important;
+  text-decoration: none !important;
+  border: none !important;
+  background: none !important;
+  margin-bottom: 18px !important;
+  display: block !important;
+}
+.home-block-title a:hover {
+  color: #2A211C !important;
+  text-decoration: none !important;
+}
+@media (max-width: 768px) {
+  h2.home-block-title,
+  .home-block-title,
+  .home-block-title a {
+    font-size: 26px !important;
+  }
+}
