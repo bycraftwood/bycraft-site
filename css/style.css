@@ -7674,3 +7674,58 @@ body.page-contacts,
   left: 0 !important;
   color: #6B5D52 !important;
 }
+
+/* === CONTACTS + WORKSHOP v1750 === */
+body.page-contacts,
+.page-contacts,
+.page-contacts main,
+.page-contacts .container {
+  background: #F7F3EC !important;
+  color: #2A211C !important;
+}
+.page-contacts .contact-card,
+.page-contacts .contacts-dark,
+.page-contacts section,
+.page-contacts .home-curators-box,
+.page-contacts [style*="background"] {
+  background: transparent !important;
+  background-color: transparent !important;
+  box-shadow: none !important;
+  border: none !important;
+}
+.page-contacts,
+.page-contacts p,
+.page-contacts h1,
+.page-contacts h2,
+.page-contacts h3,
+.page-contacts a,
+.page-contacts li,
+.page-contacts .lead-text,
+.page-contacts .contacts-page-title,
+.page-contacts .contacts-section-title {
+  color: #2A211C !important;
+}
+.page-contacts .btn-telegram,
+.page-contacts .btn-tg-solid {
+  background: #241C18 !important;
+  color: #F7F3EC !important;
+  border: 1px solid #241C18 !important;
+}
+.page-contacts .btn-instagram-outline {
+  background: transparent !important;
+  border: 1px solid #2A211C !important;
+  color: #2A211C !important;
+}
+
+.geo-before-intro,
+p.geo-before-intro {
+  background: transparent !important;
+  background-color: transparent !important;
+  padding: 0 !important;
+  margin: 0 0 20px 0 !important;
+  border: none !important;
+  box-shadow: none !important;
+  color: #2A211C !important;
+  display: block !important;
+  width: 100% !important;
+}
