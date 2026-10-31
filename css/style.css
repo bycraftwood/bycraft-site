@@ -3164,7 +3164,7 @@ html, body {
 .home-workshop-section .section-title a {
   font-size: 26px !important;
   font-weight: 700 !important;
-  text-decoration: underline !important;
+  text-decoration: none !important;
   text-underline-offset: 6px !important;
   color: #1A1A1A !important;
   letter-spacing: 0 !important;
@@ -3182,7 +3182,7 @@ html, body {
 .home-events-preview .section-title a {
   font-size: 26px !important;
   font-weight: 700 !important;
-  text-decoration: underline !important;
+  text-decoration: none !important;
   text-underline-offset: 6px !important;
   color: #1A1A1A !important;
   letter-spacing: 0 !important;
@@ -6790,3 +6790,254 @@ select.works-filter,
   text-decoration: none !important;
 }
 .btn-arrow .arrow { color: #B6452C !important; }
+
+/* === FIXES 2026-10-31c === */
+
+@media (max-width: 900px) {
+  .site-header { background: #F7F3EC !important; }
+  .mobile-toggle {
+    color: #2A211C !important;
+    border: 1px solid #2A211C !important;
+    background: transparent !important;
+  }
+}
+
+/* section titles: ONE accent underline only, no text-decoration */
+.section-title,
+h2.section-title,
+.home-section-title-muted,
+.page-title-16,
+.page-title-16-upper {
+  font-family: 'Cormorant Garamond', Georgia, serif !important;
+  font-weight: 500 !important;
+  font-size: 32px !important;
+  color: #2A211C !important;
+  text-transform: none !important;
+  text-decoration: none !important;
+  border: none !important;
+  border-bottom: none !important;
+  box-shadow: none !important;
+  display: inline-block !important;
+  padding-bottom: 8px !important;
+  margin-bottom: 18px !important;
+  background-image: linear-gradient(#B6452C, #B6452C) !important;
+  background-position: left bottom !important;
+  background-repeat: no-repeat !important;
+  background-size: 100% 1.5px !important;
+}
+.section-title a,
+.home-section-title-muted a {
+  text-decoration: none !important;
+  border-bottom: none !important;
+  box-shadow: none !important;
+  color: inherit !important;
+  background: none !important;
+}
+@media (max-width: 768px) {
+  .section-title, h2.section-title, .home-section-title-muted { font-size: 26px !important; }
+}
+
+/* page H1 with single underline */
+h1.page-h1 {
+  font-family: 'Cormorant Garamond', Georgia, serif !important;
+  font-weight: 500 !important;
+  font-size: 44px !important;
+  color: #2A211C !important;
+  text-transform: none !important;
+  display: inline-block !important;
+  padding-bottom: 10px !important;
+  background-image: linear-gradient(#B6452C, #B6452C) !important;
+  background-position: left bottom !important;
+  background-repeat: no-repeat !important;
+  background-size: 100% 1.5px !important;
+  border: none !important;
+}
+@media (max-width: 768px) {
+  h1.page-h1 { font-size: 32px !important; }
+}
+
+/* works filter arrow closer */
+.works-filter,
+select.works-filter {
+  appearance: none !important;
+  -webkit-appearance: none !important;
+  background-color: #F7F3EC !important;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%232A211C' stroke-width='1.5' fill='none'/%3E%3C/svg%3E") !important;
+  background-repeat: no-repeat !important;
+  background-position: right 12px center !important;
+  padding: 10px 36px 10px 14px !important;
+  border: 1px solid #2A211C !important;
+  min-width: 280px !important;
+  color: #2A211C !important;
+}
+
+/* workshop h1 underline under both lines */
+.workshop-page-h1 {
+  font-family: 'Cormorant Garamond', Georgia, serif !important;
+  font-weight: 500 !important;
+  font-size: 44px !important;
+  color: #2A211C !important;
+  line-height: 1.2 !important;
+  display: inline-block !important;
+  padding-bottom: 10px !important;
+  background-image: linear-gradient(#B6452C, #B6452C) !important;
+  background-position: left bottom !important;
+  background-repeat: no-repeat !important;
+  background-size: 100% 1.5px !important;
+}
+.workshop-page-h1 span { display: block; }
+@media (max-width: 768px) {
+  .workshop-page-h1 { font-size: 32px !important; }
+}
+
+.artist-quote {
+  font-family: 'Cormorant Garamond', Georgia, serif !important;
+  font-style: italic !important;
+  font-size: 26px !important;
+  color: #2A211C !important;
+  border-left: 2px solid #B6452C !important;
+  padding-left: 18px !important;
+  margin: 20px 0 !important;
+}
+@media (max-width: 768px) {
+  .artist-quote { font-size: 20px !important; }
+}
+
+/* curators PDF row */
+.curators-request-row {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  gap: 24px !important;
+  flex-wrap: wrap !important;
+  background: #EDE3D3 !important;
+  padding: 24px 28px !important;
+}
+.curators-request-row .lead-text {
+  margin: 0 !important;
+  flex: 1 1 280px !important;
+}
+
+/* ========== GEOGRAPHY REDESIGN ========== */
+.geography-section {
+  background: #EDE3D3 !important;
+  padding: 64px 56px !important;
+  margin: 0 auto 96px !important;
+  max-width: var(--container-max, 1240px) !important;
+  box-sizing: border-box !important;
+  border: none !important;
+}
+@media (max-width: 768px) {
+  .geography-section {
+    padding: 40px 20px !important;
+    margin-bottom: 64px !important;
+  }
+}
+.geo-inner { width: 100%; }
+.geo-title {
+  font-family: 'Cormorant Garamond', Georgia, serif !important;
+  font-weight: 500 !important;
+  font-size: 40px !important;
+  color: #2A211C !important;
+  text-transform: none !important;
+  margin: 0 0 12px !important;
+  background: none !important;
+  border: none !important;
+  display: block !important;
+  padding: 0 !important;
+}
+@media (max-width: 768px) {
+  .geo-title { font-size: 30px !important; }
+}
+.geo-intro {
+  font-family: 'Manrope', sans-serif !important;
+  font-size: 17px !important;
+  color: #6B5D52 !important;
+  max-width: 560px !important;
+  line-height: 1.55 !important;
+  margin: 0 0 28px !important;
+}
+.geo-stats {
+  display: flex !important;
+  gap: 40px !important;
+  margin-bottom: 28px !important;
+}
+.geo-stat-num {
+  font-family: 'Cormorant Garamond', Georgia, serif !important;
+  font-weight: 500 !important;
+  font-size: 64px !important;
+  line-height: 1 !important;
+  color: #2A211C !important;
+}
+.geo-stat-label {
+  font-family: 'Geist Mono', ui-monospace, monospace !important;
+  font-size: 12px !important;
+  color: #6B5D52 !important;
+  margin-top: 6px !important;
+  letter-spacing: 0.04em !important;
+}
+
+.map-svg-wrap {
+  background: transparent !important;
+  border: none !important;
+  padding: 0 !important;
+  margin: 0 0 28px !important;
+  width: 100% !important;
+}
+.map-svg-wrap svg {
+  width: 100% !important;
+  height: auto !important;
+  display: block !important;
+  max-height: none !important;
+}
+.geo-lands path {
+  fill: #DCCFBD !important;
+  stroke: none !important;
+}
+.geo-dots circle {
+  fill: #241C18 !important;
+}
+.geo-dot-minsk {
+  fill: #B6452C !important;
+}
+
+.map-continents-grid {
+  display: grid !important;
+  grid-template-columns: 1fr 2fr 1fr 1fr !important;
+  gap: 40px !important;
+  border: none !important;
+  background: transparent !important;
+  width: 100% !important;
+}
+.continent-group {
+  border: none !important;
+  padding: 0 !important;
+  background: transparent !important;
+  text-align: left !important;
+}
+.continent-group h4 {
+  font-family: 'Geist Mono', ui-monospace, monospace !important;
+  font-size: 12px !important;
+  font-weight: 400 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.1em !important;
+  color: #6B5D52 !important;
+  margin: 0 0 16px !important;
+  padding-bottom: 8px !important;
+  border-bottom: 1px solid rgba(42, 33, 28, 0.2) !important;
+  text-align: left !important;
+}
+.continent-countries {
+  font-family: 'Manrope', sans-serif !important;
+  font-size: 15px !important;
+  line-height: 1.7 !important;
+  color: #2A211C !important;
+  margin: 0 !important;
+  text-align: left !important;
+}
+@media (max-width: 900px) {
+  .map-continents-grid {
+    grid-template-columns: 1fr !important;
+    gap: 24px !important;
+  }
+}
