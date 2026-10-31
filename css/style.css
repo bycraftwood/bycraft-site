@@ -7914,3 +7914,74 @@ a.workshop-works-link {
 .lang-sep {
   color: #6B5D52 !important;
 }
+
+/* === v1770 === */
+.contacts-cta-row {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  gap: 12px !important;
+  align-items: stretch !important;
+}
+.contacts-cta-row .btn-telegram,
+.contacts-cta-row .btn-tg-solid,
+.contacts-cta-row .btn-instagram-outline {
+  min-width: 180px !important;
+  width: auto !important;
+  flex: 0 0 auto !important;
+  justify-content: center !important;
+  text-align: center !important;
+  padding: 10px 24px !important;
+  min-height: 44px !important;
+  box-sizing: border-box !important;
+  display: inline-flex !important;
+  align-items: center !important;
+}
+.btn-instagram-outline {
+  border: 1px solid #E5DFD4 !important;
+  color: #2A211C !important;
+  background: transparent !important;
+}
+
+h2.home-block-title,
+.home-block-title,
+h2.other-works-heading {
+  font-family: 'Cormorant Garamond', Georgia, serif !important;
+  font-weight: 500 !important;
+  font-size: 32px !important;
+  color: #2A211C !important;
+  text-transform: none !important;
+  display: inline-block !important;
+  padding-bottom: 8px !important;
+  margin-bottom: 18px !important;
+  background-image: linear-gradient(#B6452C, #B6452C) !important;
+  background-position: left bottom !important;
+  background-repeat: no-repeat !important;
+  background-size: 100% 1.5px !important;
+  border: none !important;
+  text-decoration: none !important;
+}
+h2.home-block-title a,
+.home-block-title a {
+  background: none !important;
+  text-decoration: none !important;
+  border: none !important;
+  color: inherit !important;
+  font: inherit !important;
+}
+@media (max-width: 768px) {
+  h2.home-block-title, .home-block-title, h2.other-works-heading {
+    font-size: 26px !important;
+  }
+}
+
+.exhibitions-back {
+  display: inline-block !important;
+  margin-top: 10px !important;
+  margin-bottom: 8px !important;
+  font-family: 'Manrope', sans-serif !important;
+  font-size: 14px !important;
+  color: #2A211C !important;
+  text-decoration: none !important;
+  border: none !important;
+  border-bottom: none !important;
+}
