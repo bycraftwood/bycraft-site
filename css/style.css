@@ -6259,3 +6259,386 @@ h2.section-title,
   font-family: inherit !important;
   font-weight: inherit !important;
 }
+
+/* === TYPO + COLOR SYSTEM 2026-10-31 === */
+:root {
+  --color-bg: #F7F3EC !important;
+  --color-primary: #2A211C !important;
+  --color-secondary: #6B5D52 !important;
+  --color-muted: #6B5D52 !important;
+  --color-dark: #241C18 !important;
+  --color-footer: #241C18 !important;
+  --color-accent: #B6452C !important;
+  --color-soft: #EDE3D3 !important;
+  --color-on-dark: #F7F3EC !important;
+  --color-footer-muted: #B5A898 !important;
+  --font-base: 'Manrope', -apple-system, BlinkMacSystemFont, sans-serif !important;
+  --font-serif: 'Cormorant Garamond', Georgia, serif !important;
+  --font-mono: 'Geist Mono', ui-monospace, monospace !important;
+}
+
+html, body {
+  background: var(--color-bg) !important;
+  color: #2A211C !important;
+  font-family: var(--font-base) !important;
+}
+
+/* 1. основной текст, меню, логотип */
+.brand-logo,
+.nav-link,
+.main-nav a,
+p, li, .lead-text,
+.btn-arrow {
+  color: #2A211C !important;
+}
+.brand-logo {
+  font-family: var(--font-base) !important;
+}
+
+/* 2. серые подписи */
+.meta-label, .meta-val, .caption, .caption-meta,
+.event-date, .lang-switch a, .lang-sep,
+.cookie-banner__text p, .cookie-cat__status, .cookie-cat__badge {
+  color: #6B5D52 !important;
+}
+.lang-switch a.active {
+  color: #2A211C !important;
+}
+
+/* 3. H1 страниц */
+h1.section-title,
+h1.page-h1,
+.page-h1,
+main > .container > h1:first-of-type,
+.curators h1,
+.workshop h1 {
+  font-family: var(--font-serif) !important;
+  font-weight: 500 !important;
+  font-size: 44px !important;
+  line-height: 1.15 !important;
+  color: #2A211C !important;
+  text-transform: none !important;
+  letter-spacing: 0.01em !important;
+}
+@media (max-width: 768px) {
+  h1.section-title,
+  h1.page-h1,
+  .page-h1,
+  main > .container > h1:first-of-type {
+    font-size: 32px !important;
+  }
+}
+
+/* 4. галерея главной — рамка/фон/промежутки */
+.hero-mosaic,
+.hero-mosaic-section .hero-mosaic {
+  background: #241C18 !important;
+  gap: 4px !important;
+  padding: 4px !important;
+}
+.hm-cell,
+.hm-cell.hm-photo {
+  background: #241C18 !important;
+}
+.hm-cell.hm-photo img {
+  background: #241C18 !important;
+}
+
+/* 5. заголовки разделов + underline accent */
+.section-title,
+h2.section-title,
+.home-section-title-muted,
+.page-title-16,
+.page-title-16-upper,
+.other-works-title {
+  font-family: var(--font-serif) !important;
+  font-weight: 500 !important;
+  font-size: 32px !important;
+  line-height: 1.2 !important;
+  color: #2A211C !important;
+  text-transform: none !important;
+  letter-spacing: 0.01em !important;
+  border-bottom: none !important;
+  display: inline-block !important;
+  padding-bottom: 8px !important;
+  margin-bottom: 20px !important;
+  background-image: linear-gradient(#B6452C, #B6452C) !important;
+  background-position: left bottom !important;
+  background-repeat: no-repeat !important;
+  background-size: 100% 1.5px !important;
+}
+.section-title a,
+.home-section-title-muted a {
+  font-family: inherit !important;
+  font-weight: inherit !important;
+  color: inherit !important;
+  text-decoration: none !important;
+  border: none !important;
+}
+@media (max-width: 768px) {
+  .section-title,
+  h2.section-title,
+  .home-section-title-muted,
+  .page-title-16,
+  .page-title-16-upper {
+    font-size: 26px !important;
+  }
+}
+
+/* 6. мобильная шапка */
+@media (max-width: 900px) {
+  .site-header {
+    background: #F7F3EC !important;
+  }
+  .mobile-toggle {
+    color: #2A211C !important;
+    border-color: #2A211C !important;
+    background: transparent !important;
+  }
+}
+
+/* 7. подвал */
+.site-footer {
+  background: #241C18 !important;
+  color: #F7F3EC !important;
+}
+.site-footer a {
+  color: #F7F3EC !important;
+}
+.footer-col-1,
+.footer-col-1 p,
+.footer-col-2,
+.footer-col-3 {
+  color: #B5A898 !important;
+}
+.footer-col-1 p:first-child,
+.footer-contact-title {
+  color: #F7F3EC !important;
+}
+.footer-social-row a,
+.btn-footer-outline,
+.btn-footer-white {
+  border: 1px solid #F7F3EC !important;
+  color: #F7F3EC !important;
+  background: transparent !important;
+}
+
+/* 8. cookie */
+.cookie-banner,
+.cookie-banner--v2,
+#cookieBanner {
+  background: #F7F3EC !important;
+  border-color: rgba(42,33,28,0.15) !important;
+  color: #2A211C !important;
+}
+.cookie-btn--ghost,
+#cookieConfigure {
+  background: transparent !important;
+  border: 1px solid #2A211C !important;
+  color: #2A211C !important;
+}
+.cookie-btn--primary,
+#cookieAcceptAll {
+  background: #241C18 !important;
+  border-color: #241C18 !important;
+  color: #F7F3EC !important;
+}
+.cookie-settings__box {
+  background: #F7F3EC !important;
+}
+
+/* 9. placeholder под фото */
+.hm-cell,
+.work-img-wrap,
+.sig-event-img,
+.flow-card-img,
+.wdm-cell,
+img {
+  background-color: #EDE3D3;
+}
+
+/* 10. слоган главной */
+.hero-mosaic-tagline,
+h1.hero-mosaic-tagline {
+  font-family: var(--font-serif) !important;
+  font-weight: 500 !important;
+  font-size: 52px !important;
+  line-height: 1.2 !important;
+  color: #2A211C !important;
+  text-transform: none !important;
+  letter-spacing: 0.01em !important;
+  text-align: center !important;
+}
+.hero-mosaic-tagline em,
+.hero-mosaic-tagline .tagline-italic {
+  font-style: italic !important;
+  font-weight: 500 !important;
+}
+@media (max-width: 768px) {
+  .hero-mosaic-tagline,
+  h1.hero-mosaic-tagline {
+    font-size: 34px !important;
+  }
+}
+
+/* 11. ссылки-стрелки */
+.btn-arrow,
+a.btn-arrow {
+  font-family: var(--font-base) !important;
+  font-weight: 600 !important;
+  font-size: 15px !important;
+  color: #2A211C !important;
+  border-bottom: none !important;
+}
+.btn-arrow .arrow,
+.btn-arrow::after {
+  color: #B6452C !important;
+}
+
+/* 12–18. события / кураторы */
+.event-name,
+.flow-card .event-name,
+h3.event-name {
+  font-family: var(--font-serif) !important;
+  font-weight: 500 !important;
+  font-size: 24px !important;
+  color: #2A211C !important;
+  text-transform: none !important;
+}
+@media (max-width: 768px) {
+  .event-name, h3.event-name { font-size: 22px !important; }
+}
+.home-events-list .event-name,
+.home-event-title {
+  font-family: var(--font-serif) !important;
+  font-weight: 500 !important;
+  font-size: 22px !important;
+  color: #2A211C !important;
+}
+
+/* 13. мозаика mono — не трогаем */
+.wdm-text,
+.hm-text,
+.hm-text span,
+.wdm-cell.wdm-text span {
+  font-family: var(--font-mono) !important;
+}
+
+/* 14. фильтр работы */
+.works-filter select,
+.filter-select,
+select.works-filter,
+.works-toolbar select {
+  background: #F7F3EC !important;
+  border: 1px solid #2A211C !important;
+  color: #2A211C !important;
+}
+
+/* 15. Продана */
+.work-status:not(.is-available),
+.status-sold {
+  color: #6B5D52 !important;
+  font-weight: 500 !important;
+}
+
+/* 17. мастерская process title */
+.workshop-process-title,
+.workshop .process-title {
+  font-family: var(--font-serif) !important;
+  font-weight: 500 !important;
+  font-size: 32px !important;
+  color: #2A211C !important;
+}
+@media (max-width: 768px) {
+  .workshop-process-title { font-size: 26px !important; }
+}
+
+/* 19. кураторы H1 */
+.curators-page h1,
+body[data-page="curators"] h1 {
+  font-family: var(--font-serif) !important;
+  font-weight: 500 !important;
+  font-size: 40px !important;
+  color: #2A211C !important;
+}
+@media (max-width: 768px) {
+  .curators-page h1 { font-size: 30px !important; }
+}
+
+/* 20. цитата */
+blockquote,
+.artist-quote,
+.quote-accent {
+  font-family: var(--font-serif) !important;
+  font-style: italic !important;
+  font-weight: 500 !important;
+  font-size: 30px !important;
+  line-height: 1.35 !important;
+  color: #2A211C !important;
+  border-left: 2px solid #B6452C !important;
+  padding-left: 20px !important;
+  margin: 24px 0 !important;
+  background: none !important;
+}
+@media (max-width: 768px) {
+  blockquote, .artist-quote, .quote-accent { font-size: 24px !important; }
+}
+
+/* 21. годы / образование */
+.cv-year,
+.cv-label,
+.education-label {
+  font-family: var(--font-serif) !important;
+  font-weight: 600 !important;
+  font-size: 22px !important;
+  color: #2A211C !important;
+}
+
+/* 23. контакты */
+.contacts-page,
+.contacts-hero,
+body.page-contacts main,
+.contacts-dark {
+  background: #241C18 !important;
+  color: #F7F3EC !important;
+}
+.contacts-dark p,
+.contacts-dark a,
+.contacts-dark h1,
+.contacts-dark h2 {
+  color: #F7F3EC !important;
+}
+
+/* 24. контакты section titles */
+.contacts-section-title {
+  font-family: var(--font-serif) !important;
+  font-weight: 500 !important;
+  font-size: 26px !important;
+  color: #F7F3EC !important;
+}
+
+/* 25. policy */
+.policy-page h1 {
+  font-family: var(--font-serif) !important;
+  font-weight: 500 !important;
+  font-size: 36px !important;
+  color: #2A211C !important;
+}
+.policy-page h2 {
+  font-family: var(--font-serif) !important;
+  font-weight: 600 !important;
+  font-size: 22px !important;
+  color: #2A211C !important;
+  background-image: none !important;
+  border-bottom: none !important;
+  display: block !important;
+}
+@media (max-width: 768px) {
+  .policy-page h1 { font-size: 28px !important; }
+}
+
+/* кнопки тёмные */
+.btn-telegram {
+  background: #241C18 !important;
+  color: #F7F3EC !important;
+}

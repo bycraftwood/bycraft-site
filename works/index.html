@@ -50,7 +50,7 @@
 }
   </script>
   <link rel="icon" href="../images/favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="../css/style.css?v=1485">
+  <link rel="stylesheet" href="../css/style.css?v=1500">
 
 
 
@@ -862,9 +862,9 @@ footer a[href^="mailto:"],
     cursor: pointer !important;
     pointer-events: auto !important;
     padding: 8px 14px !important;
-    border: 1px solid #1A1A1A !important;
+    border: 1px solid #2A211C !important;
     background: #fff !important;
-    color: #1A1A1A !important;
+    color: #2A211C !important;
     font-size: 13px !important;
     text-transform: uppercase !important;
     font-family: inherit !important;
@@ -997,7 +997,7 @@ footer a[href^="mailto:"],
     <div class="container works-title-row">
       <h1 class="section-title page-title-16">СКУЛЬПТУРНЫЕ АРТ-ОБЪЕКТЫ ИЗ СУВЕЛЯ БЕРЁЗЫ</h1>
       <label class="visually-hidden" for="works-filter-select" style="position:absolute;left:-9999px;">Фильтр</label>
-      <select id="works-filter-select" class="works-filter-select" aria-label="Фильтр работ">
+      <select class="works-filter" id="works-filter-select" class="works-filter-select" aria-label="Фильтр работ">
         <option value="all">Все работы</option>
         <option value="available">В наличии</option>
         <option value="exhibition">Выставочные</option>
@@ -1058,7 +1058,7 @@ footer a[href^="mailto:"],
             <img src="../images/works/work-247.jpg" alt="Скульптура из сувеля берёзы № 247" loading="lazy">
           </div>
           <div style="margin-top: 12px; font-size: 13px; line-height: 1.6;">
-            <div><strong style="color: var(--color-primary); font-weight: 500;">Продана</strong></div>
+            <div><span class="work-status status-sold">Продана</span></div>
             <button type="button" class="work-order-similar" onclick="window.openBycraftModal && window.openBycraftModal(event)">Заказать похожий арт-объект</button>
           </div>
         </div>
@@ -1069,7 +1069,7 @@ footer a[href^="mailto:"],
             <img src="../images/works/work-248.jpg" alt="Скульптура из сувеля берёзы № 248" loading="lazy">
           </div>
           <div style="margin-top: 12px; font-size: 13px; line-height: 1.6;">
-            <div><strong style="color: var(--color-primary); font-weight: 500;">Продана</strong></div>
+            <div><span class="work-status status-sold">Продана</span></div>
             <button type="button" class="work-order-similar" onclick="window.openBycraftModal && window.openBycraftModal(event)">Заказать похожий арт-объект</button>
           </div>
         </div>
@@ -1080,7 +1080,7 @@ footer a[href^="mailto:"],
             <img src="../images/works/work-253.jpg" alt="Скульптура из сувеля берёзы № 253" loading="lazy">
           </div>
           <div style="margin-top: 12px; font-size: 13px; line-height: 1.6;">
-            <div><strong style="color: var(--color-primary); font-weight: 500;">Продана</strong></div>
+            <div><span class="work-status status-sold">Продана</span></div>
             <button type="button" class="work-order-similar" onclick="window.openBycraftModal && window.openBycraftModal(event)">Заказать похожий арт-объект</button>
           </div>
         </div>
@@ -1091,7 +1091,7 @@ footer a[href^="mailto:"],
             <img src="../images/works/work-254.jpg" alt="Скульптура из сувеля берёзы № 254" loading="lazy">
           </div>
           <div style="margin-top: 12px; font-size: 13px; line-height: 1.6;">
-            <div><strong style="color: var(--color-primary); font-weight: 500;">Продана</strong></div>
+            <div><span class="work-status status-sold">Продана</span></div>
             <button type="button" class="work-order-similar" onclick="window.openBycraftModal && window.openBycraftModal(event)">Заказать похожий арт-объект</button>
           </div>
         </div>
@@ -1102,7 +1102,7 @@ footer a[href^="mailto:"],
             <img src="../images/works/work-255.jpg" alt="Скульптура из сувеля берёзы № 255" loading="lazy">
           </div>
           <div style="margin-top: 12px; font-size: 13px; line-height: 1.6;">
-            <div><strong style="color: var(--color-primary); font-weight: 500;">Продана</strong></div>
+            <div><span class="work-status status-sold">Продана</span></div>
             <button type="button" class="work-order-similar" onclick="window.openBycraftModal && window.openBycraftModal(event)">Заказать похожий арт-объект</button>
           </div>
         </div>
@@ -1113,7 +1113,7 @@ footer a[href^="mailto:"],
     <!-- Блок «Как купить» -->
     <section id="kak-kupit" class="how-to-buy section-beige" class="container" style="margin-bottom: 90px;">
       <div style="background: #EDE3D3; padding: 48px 36px;">
-        <h2 class="section-title page-title-16">КАК КУПИТЬ</h2>
+        <h2 class="section-title page-title-16">Как купить</h2>
         <div class="how-to-buy-grid">
           <div>
             <p class="lead-text" style="font-size: 15px; line-height: 1.6;">
@@ -1150,7 +1150,7 @@ footer a[href^="mailto:"],
     <section class="geography-section section-beige container" style="margin-bottom:72px;">
       <div class="map-header-flex">
         <div>
-          <h2 class="section-title page-title-16-upper">ГЕОГРАФИЯ РАБОТ</h2>
+          <h2 class="section-title page-title-16-upper">География работ</h2>
           <p class="lead-text" style="font-size: 15px;"></p>
         </div>
         <div class="map-badge">
