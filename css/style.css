@@ -8121,3 +8121,17 @@ body.page-contacts .site-footer div {
   color: #2A211C !important;
   font-size: 14px !important;
 }
+
+/* === FOOTER BTN v1790 === */
+.site-footer .btn-footer-outline,
+.footer .btn-footer-outline {
+  color: #F7F3EC !important;
+  border: 1px solid rgba(247, 243, 236, 0.35) !important;
+  background: transparent !important;
+}
+.site-footer .btn-footer-outline:hover,
+.footer .btn-footer-outline:hover {
+  color: #F7F3EC !important;
+  border-color: #B6452C !important;
+  background: rgba(182, 69, 44, 0.15) !important;
+}
