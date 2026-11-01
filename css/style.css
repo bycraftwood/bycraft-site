@@ -8243,25 +8243,18 @@ a.btn-telegram,
   font-size: 14px !important;
 }
 
-/* === MODAL WORK PHOTO v1810 === */
+/* === MODAL WORK PHOTO v1811 === */
 .bc-modal__photo {
-  width: 100%;
-  margin: 0 0 18px 0;
-  overflow: hidden;
-  background: #EDE3D3;
-  aspect-ratio: 4 / 3;
+  width: 50% !important;
+  max-width: 200px !important;
+  margin: 0 auto 16px auto !important;
+  overflow: hidden !important;
+  background: #EDE3D3 !important;
+  aspect-ratio: 4 / 3 !important;
 }
 .bc-modal__photo img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-}
-.bc-modal__container {
-  max-width: 440px;
-}
-@media (max-width: 520px) {
-  .bc-modal__photo {
-    aspect-ratio: 16 / 10;
-  }
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  display: block !important;
 }
