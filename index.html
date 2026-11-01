@@ -49,7 +49,7 @@
 }
   </script>
   <link rel="icon" href="./images/favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="./css/style.css?v=1800">
+  <link rel="stylesheet" href="./css/style.css?v=1810">
 
 
 
@@ -1475,6 +1475,61 @@ footer a[href^="mailto:"],
   document.addEventListener("keydown", function (e) {
     if (e.key === "Escape") window.closeBycraftModal();
   });
+})();
+</script>
+
+
+<script id="bc-modal-photo-patch">
+(function () {
+  function findWorkImage(fromEl) {
+    if (fromEl) {
+      var card = fromEl.closest ? fromEl.closest(".work-card, .works-grid > *, article, .work-item") : null;
+      if (card) {
+        var im = card.querySelector("img");
+        if (im && im.src) return im.src;
+      }
+      if (fromEl.getAttribute && fromEl.getAttribute("data-image")) {
+        return fromEl.getAttribute("data-image");
+      }
+    }
+    var og = document.querySelector('meta[property="og:image"]');
+    if (og && og.content) return og.content;
+    var w = document.querySelector(".wdm-cell img, .work-detail img, .work-layout img, .hm-cell img");
+    if (w && w.src) return w.src;
+    return "";
+  }
+
+  var _open = window.openBycraftModal;
+  if (typeof _open !== "function") return;
+
+  window.openBycraftModal = function (e) {
+    var from = e && e.currentTarget ? e.currentTarget : (e && e.target ? e.target : null);
+    var imgUrl = findWorkImage(from);
+
+    // call original (builds modal)
+    _open(e);
+
+    var modal = document.getElementById("bycraft-modal");
+    if (!modal || !imgUrl) return;
+
+    // avoid duplicate
+    if (modal.querySelector(".bc-modal__photo")) return;
+
+    var header = modal.querySelector(".bc-modal__header");
+    var photo = document.createElement("div");
+    photo.className = "bc-modal__photo";
+    var im = document.createElement("img");
+    im.src = imgUrl;
+    im.alt = "";
+    im.loading = "lazy";
+    photo.appendChild(im);
+    if (header && header.parentNode) {
+      header.parentNode.insertBefore(photo, header.nextSibling);
+    } else {
+      var box = modal.querySelector(".bc-modal__container");
+      if (box) box.insertBefore(photo, box.firstChild);
+    }
+  };
 })();
 </script>
 
