@@ -69,7 +69,7 @@
 }
   </script>
   <link rel="icon" href="/images/favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="../../css/style.css?v=1840">
+  <link rel="stylesheet" href="../../css/style.css?v=1850">
 
 
 
@@ -1035,7 +1035,7 @@ footer a[href^="mailto:"],
           <a href="../../en/works/face-to-face/">
             <div class="work-img-wrap">
               <picture>
-                <source srcset="../../../images/works/work-exhibit-02.webp" type="image/webp">
+                <source srcset="../../../images/works/work-exhibit-02.jpg" type="image/webp">
                 <img src="/images/works/work-exhibit-02.jpg" alt="Face to Face" loading="lazy">
               </picture>
             </div>
@@ -1048,7 +1048,7 @@ footer a[href^="mailto:"],
           <a href="../../en/works/the-wolf/">
             <div class="work-img-wrap">
               <picture>
-                <source srcset="../../../images/works/work-exhibit-05.webp" type="image/webp">
+                <source srcset="../../../images/works/work-exhibit-05.jpg" type="image/webp">
                 <img src="/images/works/work-exhibit-05.jpg" alt="The Wolf" loading="lazy">
               </picture>
             </div>
@@ -1061,7 +1061,7 @@ footer a[href^="mailto:"],
           <a href="../../en/works/confession/">
             <div class="work-img-wrap">
               <picture>
-                <source srcset="../../../images/works/work-exhibit-03.webp" type="image/webp">
+                <source srcset="../../../images/works/work-exhibit-03.jpg" type="image/webp">
                 <img src="/images/works/work-exhibit-03.jpg" alt="Confession" loading="lazy">
               </picture>
             </div>
@@ -1074,7 +1074,7 @@ footer a[href^="mailto:"],
           <a href="../../en/works/resentment/">
             <div class="work-img-wrap">
               <picture>
-                <source srcset="../../../images/works/work-exhibit-04.webp" type="image/webp">
+                <source srcset="../../../images/works/work-exhibit-04.jpg" type="image/webp">
                 <img src="/images/works/work-exhibit-04.jpg" alt="Resentment" loading="lazy">
               </picture>
             </div>
@@ -1087,7 +1087,7 @@ footer a[href^="mailto:"],
           <a href="../../en/works/foundation/">
             <div class="work-img-wrap">
               <picture>
-                <source srcset="../../../images/works/work-exhibit-01.webp" type="image/webp">
+                <source srcset="../../../images/works/work-exhibit-01.jpg" type="image/webp">
                 <img src="/images/works/work-exhibit-01.jpg" alt="Foundation" loading="lazy">
               </picture>
             </div>
@@ -1410,7 +1410,7 @@ footer a[href^="mailto:"],
     <button type="button" class="lightbox-close" id="lightboxClose" aria-label="Close" tabindex="-1">&times;</button>
     <img class="lightbox-img" id="lightboxImg" alt="" role="presentation" hidden>
   </div>
-  <script src="../..//js/main.js?v=1050"></script>
+  <script src="../../js/main.js?v=1050"></script>
 
 
 
@@ -1930,6 +1930,29 @@ footer a[href^="mailto:"],
       if (box) box.insertBefore(photo, box.firstChild);
     }
   };
+})();
+</script>
+
+
+<script id="cookie-en-patch">
+(function () {
+  if (location.pathname.indexOf("/en/") === -1) return;
+  function tr() {
+    var b = document.getElementById("cookieBanner") || document.querySelector(".cookie-banner, .cookie-banner--v2");
+    if (!b) return;
+    var t = b.querySelector("strong, h3, .cookie-banner__title");
+    if (t) t.textContent = "We use cookies";
+    var p = b.querySelector("p");
+    if (p) p.textContent = "They help improve the experience. By continuing, you agree to their use.";
+    var a = document.getElementById("cookieAcceptAll") || b.querySelector(".cookie-btn--primary");
+    if (a) a.textContent = "Accept all";
+    var s = document.getElementById("cookieConfigure") || b.querySelector(".cookie-btn--ghost");
+    if (s) s.textContent = "Settings";
+  }
+  if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", function () { setTimeout(tr, 50); setTimeout(tr, 400); });
+  else { setTimeout(tr, 50); setTimeout(tr, 400); }
+  var obs = new MutationObserver(tr);
+  obs.observe(document.documentElement, { childList: true, subtree: true });
 })();
 </script>
 

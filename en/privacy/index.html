@@ -24,7 +24,7 @@
   <meta name="twitter:description" content="Personal data processing and cookie policy for BYCRAFT by Valentin Atrosh.">
   <meta name="twitter:image" content="https://bycraft.by/images/hero/hero-valentin.jpg">
   <link rel="icon" href="/images/favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="../../css/style.css?v=1840">
+  <link rel="stylesheet" href="../../css/style.css?v=1850">
 
 
 
@@ -1039,7 +1039,7 @@ footer a[href^="mailto:"],
       </div>
     </div>
   </footer>
-  <script src="../..//js/main.js?v=1050"></script>
+  <script src="../../js/main.js?v=1050"></script>
 
 
 
@@ -1559,6 +1559,29 @@ footer a[href^="mailto:"],
       if (box) box.insertBefore(photo, box.firstChild);
     }
   };
+})();
+</script>
+
+
+<script id="cookie-en-patch">
+(function () {
+  if (location.pathname.indexOf("/en/") === -1) return;
+  function tr() {
+    var b = document.getElementById("cookieBanner") || document.querySelector(".cookie-banner, .cookie-banner--v2");
+    if (!b) return;
+    var t = b.querySelector("strong, h3, .cookie-banner__title");
+    if (t) t.textContent = "We use cookies";
+    var p = b.querySelector("p");
+    if (p) p.textContent = "They help improve the experience. By continuing, you agree to their use.";
+    var a = document.getElementById("cookieAcceptAll") || b.querySelector(".cookie-btn--primary");
+    if (a) a.textContent = "Accept all";
+    var s = document.getElementById("cookieConfigure") || b.querySelector(".cookie-btn--ghost");
+    if (s) s.textContent = "Settings";
+  }
+  if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", function () { setTimeout(tr, 50); setTimeout(tr, 400); });
+  else { setTimeout(tr, 50); setTimeout(tr, 400); }
+  var obs = new MutationObserver(tr);
+  obs.observe(document.documentElement, { childList: true, subtree: true });
 })();
 </script>
 
