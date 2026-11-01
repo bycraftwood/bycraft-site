@@ -8376,3 +8376,133 @@ body.page-contacts .site-footer a:not(.btn-footer-outline) {
   letter-spacing: 0.04em !important;
   margin-bottom: 4px !important;
 }
+
+/* === v1840 footer + contacts + cookie === */
+.site-footer .footer-inner-grid {
+  display: grid !important;
+  grid-template-columns: 1.4fr 1fr 1fr !important;
+  gap: 32px 40px !important;
+  align-items: start !important;
+  width: 100% !important;
+}
+.site-footer .footer-col-1,
+.site-footer .footer-col-2,
+.site-footer .footer-col-3 {
+  min-width: 0 !important;
+}
+.site-footer .footer-col-3 .footer-contact-title,
+.site-footer .footer-col-3 a {
+  font-size: 12px !important;
+}
+@media (max-width: 768px) {
+  .site-footer .footer-inner-grid {
+    grid-template-columns: 1fr !important;
+    gap: 28px !important;
+  }
+  .site-footer .footer-col-1 p:last-child a {
+    display: inline !important;
+  }
+  .site-footer .footer-policy-line {
+    display: block !important;
+  }
+}
+
+.contacts-page-title {
+  font-family: 'Cormorant Garamond', Georgia, serif !important;
+  font-weight: 500 !important;
+  font-size: 40px !important;
+  color: #2A211C !important;
+  display: inline-block !important;
+  padding-bottom: 8px !important;
+  background-image: linear-gradient(#B6452C, #B6452C) !important;
+  background-position: left bottom !important;
+  background-repeat: no-repeat !important;
+  background-size: 100% 1.5px !important;
+  margin-bottom: 28px !important;
+}
+
+.page-contacts .btn-telegram,
+.page-contacts .btn-tg-solid,
+.page-contacts .btn-instagram-outline {
+  font-family: 'Manrope', sans-serif !important;
+  font-weight: 500 !important;
+  font-size: 15px !important;
+  letter-spacing: 0.04em !important;
+  min-width: 280px !important;
+  width: 280px !important;
+  max-width: 100% !important;
+  padding: 12px 28px !important;
+  min-height: 48px !important;
+  justify-content: center !important;
+  text-align: center !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  box-sizing: border-box !important;
+  border-radius: 0 !important;
+}
+.page-contacts .btn-telegram,
+.page-contacts .btn-tg-solid {
+  background: #241C18 !important;
+  color: #F7F3EC !important;
+  border: 1px solid #241C18 !important;
+}
+.page-contacts .btn-instagram-outline {
+  background: #241C18 !important;
+  color: #F7F3EC !important;
+  border: 1px solid #241C18 !important;
+}
+
+.contacts-arrow-link {
+  font-family: 'Manrope', sans-serif !important;
+  font-weight: 500 !important;
+  font-size: 15px !important;
+  color: #2A211C !important;
+  text-decoration: none !important;
+  border-bottom: 1px solid #2A211C !important;
+  display: inline-block !important;
+  margin: 8px 0 !important;
+}
+.contacts-arrow-link:hover {
+  color: #B6452C !important;
+  border-bottom-color: #B6452C !important;
+}
+
+.cookie-banner,
+.cookie-banner--v2,
+#cookieBanner {
+  max-width: 360px !important;
+  padding: 14px 16px !important;
+}
+.cookie-banner__text strong {
+  font-size: 13px !important;
+  font-weight: 600 !important;
+  color: #2A211C !important;
+}
+.cookie-banner__text p {
+  font-size: 13px !important;
+  color: #6B5D52 !important;
+  margin: 4px 0 10px !important;
+  line-height: 1.35 !important;
+}
+.cookie-banner__actions {
+  display: flex !important;
+  flex-wrap: nowrap !important;
+  gap: 8px !important;
+}
+.cookie-banner__actions .cookie-btn,
+.cookie-banner__actions #cookieAcceptAll,
+.cookie-banner__actions #cookieConfigure {
+  flex: 1 1 0 !important;
+  white-space: nowrap !important;
+  font-size: 12px !important;
+  padding: 7px 10px !important;
+}
+@media (max-width: 480px) {
+  .cookie-banner,
+  #cookieBanner {
+    max-width: calc(100vw - 24px) !important;
+    right: 12px !important;
+    left: auto !important;
+    bottom: 12px !important;
+  }
+}
