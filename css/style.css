@@ -1938,7 +1938,7 @@ picture img {
     height: calc(100vh - 53px) !important;
     max-height: calc(100vh - 53px) !important;
     overflow-y: auto !important;
-    background: #FFFFFF !important;
+    background: #F7F3EC !important;
     z-index: 99998 !important;
     padding: 24px 20px 48px !important;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08) !important;
@@ -2838,7 +2838,7 @@ main > section.container {
 /* Cookie — читаемый контраст */
 .cookie-banner {
   color: #222629 !important;
-  background: #FFFFFF !important;
+  background: #F7F3EC !important;
   z-index: 100001 !important;
 }
 
@@ -2940,7 +2940,7 @@ html, body {
   color: var(--color-primary, #2A211C) !important;
 }
 .site-header {
-  background: #FFFFFF !important;
+  background: #F7F3EC !important;
   border-bottom-color: #E5E0D8 !important;
 }
 .brand-logo, .nav-link, .section-title, .lead-text, h1, h2, h3 {
@@ -8335,4 +8335,44 @@ body.page-contacts .site-footer a:not(.btn-footer-outline) {
   border-color: #B6452C !important;
   background: rgba(182, 69, 44, 0.15) !important;
   color: #F7F3EC !important;
+}
+
+/* === v1830 mobile nav + footer type === */
+@media (max-width: 900px) {
+  .site-header,
+  header.site-header {
+    background: #F7F3EC !important;
+    background-color: #F7F3EC !important;
+  }
+  .main-nav,
+  .main-nav.open,
+  nav.main-nav,
+  .site-header .main-nav,
+  .header-inner .main-nav,
+  header .main-nav.open {
+    background: #F7F3EC !important;
+    background-color: #F7F3EC !important;
+    background-image: none !important;
+  }
+  .mobile-toggle {
+    background: transparent !important;
+    background-color: transparent !important;
+    border: 1px solid #2A211C !important;
+    color: #2A211C !important;
+  }
+}
+
+.site-footer .footer-col-2,
+.site-footer .footer-col-2 a,
+.site-footer .footer-col-2 div,
+.site-footer .footer-contact-title {
+  font-size: 12px !important;
+  line-height: 1.55 !important;
+  font-weight: 400 !important;
+  color: #F7F3EC !important;
+}
+.site-footer .footer-contact-title {
+  font-size: 12px !important;
+  letter-spacing: 0.04em !important;
+  margin-bottom: 4px !important;
 }
