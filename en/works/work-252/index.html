@@ -7,5 +7,80 @@
   <link rel="canonical" href="https://bycraft.by/en/works/work-192/">
   <script>location.replace("/en/works/work-192/");</script>
 </head>
-<body><p><a href="/en/works/work-192/">Continue to work 192</a></p></body>
+<body><p><a href="/en/works/work-192/">Continue to work 192</a></p>
+<script id="bycraft-modal-i18n-en">
+(function () {
+  if (location.pathname.indexOf("/en/") === -1) return;
+  var dict = {
+    "Запрос информации о работе": "Request information about this work",
+    "Приобрести работу": "Purchase this work",
+    "Записаться на визит в мастерскую": "Book a studio visit",
+    "Обсудить похожий арт-объект": "Discuss a similar art object",
+    "Заказать арт-объект в похожей стилистике": "Commission a work in a similar style",
+    "Ваше имя": "Your name",
+    "Как к вам обращаться": "How should we address you",
+    "Контакт для связи": "Contact details",
+    "Telegram / Телефон / любой удобный способ связи": "Telegram / Phone / any convenient way to reach you",
+    "Страна доставки": "Delivery country",
+    "Беларусь": "Belarus",
+    "Россия": "Russia",
+    "другая": "other",
+    "Укажите страну": "Specify country",
+    "Комментарий": "Comment",
+    "Вопросы, пожелания, срок, если нужно к дате": "Questions, wishes, deadline if needed",
+    "Согласен(на) на обработку персональных данных": "I agree to the processing of personal data",
+    "Отметьте согласие, чтобы отправить заявку": "Tick the box to submit the request",
+    "Отправить заявку": "Submit request",
+    "или напишите в Telegram": "or write on Telegram",
+    "Спасибо!": "Thank you!",
+    "Закрыть": "Close",
+    "Мы свяжемся с вами в течение одного рабочего дня": "We will contact you within one business day",
+    "Наличие, стоимость, условия бронирования": "Availability, price, reservation terms",
+    "напишите удобное время для визита": "suggest a convenient time for a visit"
+  };
+  function trText(s) {
+    if (!s) return s;
+    var t = s.trim();
+    if (dict[t]) return dict[t];
+    for (var k in dict) {
+      if (t.indexOf(k) !== -1) t = t.split(k).join(dict[k]);
+    }
+    return t;
+  }
+  function translateModal(root) {
+    if (!root) return;
+    root.querySelectorAll("h3, h4, label, button, p, span, option").forEach(function (el) {
+      if (el.closest("a")) return;
+      if (el.childNodes.length === 1 && el.childNodes[0].nodeType === 3) {
+        el.textContent = trText(el.textContent);
+      }
+    });
+    root.querySelectorAll("input[placeholder], textarea[placeholder]").forEach(function (el) {
+      var ph = el.getAttribute("placeholder");
+      if (ph) el.setAttribute("placeholder", trText(ph));
+    });
+  }
+  var _open = window.openBycraftModal;
+  if (typeof _open === "function") {
+    window.openBycraftModal = function (e) {
+      var r = _open.apply(this, arguments);
+      setTimeout(function () {
+        translateModal(document.getElementById("bycraft-modal"));
+      }, 0);
+      setTimeout(function () {
+        translateModal(document.getElementById("bycraft-modal"));
+      }, 50);
+      return r;
+    };
+  }
+  var obs = new MutationObserver(function () {
+    translateModal(document.getElementById("bycraft-modal"));
+  });
+  if (document.documentElement) {
+    obs.observe(document.documentElement, { childList: true, subtree: true });
+  }
+})();
+</script>
+
+</body>
 </html>
