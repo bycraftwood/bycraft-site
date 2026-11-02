@@ -49,7 +49,7 @@
 }
   </script>
   <link rel="icon" href="./images/favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="./css/style.css?v=1850">
+  <link rel="stylesheet" href="./css/style.css?v=1860">
 
 
 
@@ -1016,7 +1016,7 @@ footer a[href^="mailto:"],
     <section class="container home-workshop-section">
       <h2 class="home-block-title"><a href="workshop/" style="color:#2A211C;text-decoration:none;border:none;background:none;">Мастерская</a></h2>
       <p class="lead-text" style="margin-bottom: 20px; width: 100%;">
-        Сувель — нарост на берёзе, который нельзя просчитать или выстроить по линейке. Его текстура формируется годами. Задача мастера — увидеть в этой бесформенной массе то, чего в ней ещё не видно
+        Сувель — нарост на берёзе, который нельзя просчитать или выстроить по линейке. Его текстура накручивается годами. Задача мастера — увидеть в этой бесформенной массе будущую форму, скрытую внутри
       </p>
       <a href="workshop/" class="btn-arrow">Увидеть процесс <span class="arrow">→</span></a>
     </section>
@@ -1539,6 +1539,34 @@ footer a[href^="mailto:"],
       if (box) box.insertBefore(photo, box.firstChild);
     }
   };
+})();
+</script>
+
+
+<script id="nav-active-v1860">
+(function () {
+  var path = location.pathname.replace(/\/+$/, "") || "/";
+  document.querySelectorAll(".main-nav a.nav-link, .main-nav a.nav-link-btn").forEach(function (a) {
+    var href = a.getAttribute("href") || "";
+    if (href.indexOf("#") !== -1 && href.split("#")[0]) {
+      // how-to-buy: active only if hash matches
+      if (href.indexOf("#kak-kupit") !== -1 || href.indexOf("#how-to-buy") !== -1) {
+        if (path.indexOf("/works") !== -1 && location.hash && location.hash.indexOf("kak-kupit") !== -1) {
+          a.classList.add("is-active");
+        }
+        return;
+      }
+    }
+    var clean = href.split("#")[0].replace(/\/+$/, "") || "/";
+    if (clean === "/") {
+      if (path === "/" || path === "") a.classList.add("is-active");
+      return;
+    }
+    if (path === clean || path.indexOf(clean + "/") === 0) {
+      a.classList.add("is-active");
+      a.setAttribute("aria-current", "page");
+    }
+  });
 })();
 </script>
 

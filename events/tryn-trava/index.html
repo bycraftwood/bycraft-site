@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Выставка «Трын*Трава», 2026 · BYCRAFT</title>
-  <link rel="stylesheet" href="/css/style.css?v=1850">
+  <link rel="stylesheet" href="/css/style.css?v=1860">
   <meta name="description" content="9-я выставка «Трын*Трава. Современный русский стиль», Москва, 8–25 октября 2026: три работы Валентина Атроша в основной экспозиции.">
   <meta property="og:title" content="Выставка «Трын*Трава», 2026 · BYCRAFT">
   <meta property="og:description" content="9-я выставка «Трын*Трава. Современный русский стиль», Москва, 8–25 октября 2026: три работы Валентина Атроша в основной экспозиции.">
@@ -89,5 +89,33 @@
       </div>
     </div>
   </footer>
+
+<script id="nav-active-v1860">
+(function () {
+  var path = location.pathname.replace(/\/+$/, "") || "/";
+  document.querySelectorAll(".main-nav a.nav-link, .main-nav a.nav-link-btn").forEach(function (a) {
+    var href = a.getAttribute("href") || "";
+    if (href.indexOf("#") !== -1 && href.split("#")[0]) {
+      // how-to-buy: active only if hash matches
+      if (href.indexOf("#kak-kupit") !== -1 || href.indexOf("#how-to-buy") !== -1) {
+        if (path.indexOf("/works") !== -1 && location.hash && location.hash.indexOf("kak-kupit") !== -1) {
+          a.classList.add("is-active");
+        }
+        return;
+      }
+    }
+    var clean = href.split("#")[0].replace(/\/+$/, "") || "/";
+    if (clean === "/") {
+      if (path === "/" || path === "") a.classList.add("is-active");
+      return;
+    }
+    if (path === clean || path.indexOf(clean + "/") === 0) {
+      a.classList.add("is-active");
+      a.setAttribute("aria-current", "page");
+    }
+  });
+})();
+</script>
+
 </body>
 </html>

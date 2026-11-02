@@ -50,7 +50,7 @@
 }
   </script>
   <link rel="icon" href="../images/favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="../css/style.css?v=1850">
+  <link rel="stylesheet" href="../css/style.css?v=1860">
 
 
 
@@ -982,7 +982,7 @@ footer a[href^="mailto:"],
       Мастерская расположена в 20 км от Минска. Здесь происходит весь цикл работы: от многомесячной подготовки до чистовой скульптурной проработки и обжига. Более 50 часов ручной работы в каждом объекте. Хотите увидеть процесс своими глазами? Приезжайте в гости
     </p>
       <div style="margin-top: 24px;">
-        <a href="javascript:void(0);" onclick="window.openBycraftModal && window.openBycraftModal(event); return false;" class="btn-telegram" role="button">Приезжайте по записи</a>
+        <a href="javascript:void(0);" onclick="window.openBycraftModal && window.openBycraftModal(event); return false;" class="btn-telegram" role="button">Договориться о визите</a>
         </div>
 
   </div>
@@ -1008,7 +1008,7 @@ footer a[href^="mailto:"],
 
     <div class="workshop-video-side">
       <div class="video-vertical-wrapper">
-        <video webkit-playsinline playsinline autoplay muted loop controls poster="../images/workshop/workshop-valentin-01.jpg">
+        <video webkit-playsinline playsinline autoplay muted loop controls poster="/images/workshop/video-poster.jpg">
           <source src="../images/workshop/process-video.mp4" type="video/mp4">
         </video>
       </div>
@@ -1659,6 +1659,34 @@ footer a[href^="mailto:"],
       if (box) box.insertBefore(photo, box.firstChild);
     }
   };
+})();
+</script>
+
+
+<script id="nav-active-v1860">
+(function () {
+  var path = location.pathname.replace(/\/+$/, "") || "/";
+  document.querySelectorAll(".main-nav a.nav-link, .main-nav a.nav-link-btn").forEach(function (a) {
+    var href = a.getAttribute("href") || "";
+    if (href.indexOf("#") !== -1 && href.split("#")[0]) {
+      // how-to-buy: active only if hash matches
+      if (href.indexOf("#kak-kupit") !== -1 || href.indexOf("#how-to-buy") !== -1) {
+        if (path.indexOf("/works") !== -1 && location.hash && location.hash.indexOf("kak-kupit") !== -1) {
+          a.classList.add("is-active");
+        }
+        return;
+      }
+    }
+    var clean = href.split("#")[0].replace(/\/+$/, "") || "/";
+    if (clean === "/") {
+      if (path === "/" || path === "") a.classList.add("is-active");
+      return;
+    }
+    if (path === clean || path.indexOf(clean + "/") === 0) {
+      a.classList.add("is-active");
+      a.setAttribute("aria-current", "page");
+    }
+  });
 })();
 </script>
 

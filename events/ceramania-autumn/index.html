@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>CERAMANIA — События · BYCRAFT</title>
-  <link rel="stylesheet" href="/css/style.css?v=1850">
+  <link rel="stylesheet" href="/css/style.css?v=1860">
 </head>
 <body>
     <header class="site-header">
@@ -34,7 +34,7 @@
       <a href="/events/" class="btn-arrow" style="font-size:14px; border:none; padding:0;">← Все события</a>
       <h1 class="event-detail-title">CERAMANIA</h1>
       <p class="event-detail-meta"><strong>Дата:</strong> 19–20 сентября 2026</p>
-      <p class="event-detail-meta"><strong>Место:</strong> Москва, ЦСИ Винзавод, Зеленый Ангар</p>
+      <p class="event-detail-meta"><strong>Место:</strong> Москва, ЦСИ Винзавод, Зелёный Ангар</p>
       <p class="event-detail-meta"><strong>Результат:</strong> Участие BYCRAFT</p>
       <p class="event-detail-meta"><strong>Источник:</strong> <a href="https://ceramania.ru/" target="_blank" rel="noopener noreferrer">ceramania.ru</a></p>
       <div class="event-detail-grid">
@@ -46,9 +46,9 @@
         
         <p><strong>Фестиваль-маркет «Ceramania»</strong></p>
         <p>19–20 сентября 2026<br>
-        Москва, ЦСИ Винзавод, Зеленый Ангар<br>
+        Москва, ЦСИ Винзавод, Зелёный Ангар<br>
         Сайт выставки: <a href="https://ceramania.ru/" target="_blank" rel="noopener noreferrer">https://ceramania.ru/</a></p>
-        <p>Главная тема фестиваля «Черно-белое». Отсутствие цвета позволит сосредоточиться на форме, фактуре и характере материалов. 19 и 20 сентября 2026 года в Центре современного искусства Винзавод пройдет фестиваль-маркет «Ceramania». Более 130 участников представят посуду, предметы интерьера, украшения и подарки из керамики, стекла, дерева и металла. Мастер-классы для взрослых и детей: ручная лепка, работа на гончарном круге, мозаика, создание витражей в стиле Тиффани и изготовление игрушек. Участники смогут попробовать разные техники и поработать с материалами под руководством профессиональных мастеров. Вход на фестиваль свободный.</p>
+        <p>Главная тема фестиваля — «Чёрно-белое». Отсутствие цвета позволит сосредоточиться на форме, фактуре и характере материалов. 19 и 20 сентября 2026 года в Центре современного искусства Винзавод пройдет фестиваль-маркет «Ceramania». Более 130 участников представят посуду, предметы интерьера, украшения и подарки из керамики, стекла, дерева и металла. Мастер-классы для взрослых и детей: ручная лепка, работа на гончарном круге, мозаика, создание витражей в стиле Тиффани и изготовление игрушек. Участники смогут попробовать разные техники и поработать с материалами под руководством профессиональных мастеров. Вход на фестиваль свободный.</p>
 
       </div>
     </div>
@@ -87,5 +87,33 @@
       </div>
     </div>
   </footer>
+
+<script id="nav-active-v1860">
+(function () {
+  var path = location.pathname.replace(/\/+$/, "") || "/";
+  document.querySelectorAll(".main-nav a.nav-link, .main-nav a.nav-link-btn").forEach(function (a) {
+    var href = a.getAttribute("href") || "";
+    if (href.indexOf("#") !== -1 && href.split("#")[0]) {
+      // how-to-buy: active only if hash matches
+      if (href.indexOf("#kak-kupit") !== -1 || href.indexOf("#how-to-buy") !== -1) {
+        if (path.indexOf("/works") !== -1 && location.hash && location.hash.indexOf("kak-kupit") !== -1) {
+          a.classList.add("is-active");
+        }
+        return;
+      }
+    }
+    var clean = href.split("#")[0].replace(/\/+$/, "") || "/";
+    if (clean === "/") {
+      if (path === "/" || path === "") a.classList.add("is-active");
+      return;
+    }
+    if (path === clean || path.indexOf(clean + "/") === 0) {
+      a.classList.add("is-active");
+      a.setAttribute("aria-current", "page");
+    }
+  });
+})();
+</script>
+
 </body>
 </html>
