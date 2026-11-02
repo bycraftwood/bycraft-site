@@ -101,7 +101,7 @@
       '<a href="' + tgUrl + '" target="_blank" rel="noopener noreferrer" style="color:inherit;text-decoration:underline">или напишите в Telegram</a></p></form>' +
         '<div id="bc-modal-success" class="bc-modal__success" style="display:none">' +
         "<h4>Thank you!</h4>" +
-        '<p id="bc-success-text">We will contact you within one business day.</p>' +
+        '<p id="bc-success-text">We will contact you within one business day</p>' +
         '<button type="button" class="bc-submit-btn" style="margin-top:16px" onclick="window.closeBycraftModal()">Close</button>' +
         "</div></div>";
 
@@ -128,6 +128,32 @@
     } catch (err) {
       console.error("openBycraftModal EN", err);
       return false;
+    }
+  };
+})();
+</script>
+
+
+<script id="bycraft-similar-title">
+(function () {
+  var _open = window.openBycraftModal;
+  if (typeof _open !== "function") return;
+  window.openBycraftModal = function (e) {
+    try {
+      var t = e && e.currentTarget;
+      var label = t && (t.textContent || "").trim();
+      var r = _open.apply(this, arguments);
+      if (label && /Заказать похожий|Order similar|similar/i.test(label)) {
+        var title = document.querySelector("#bycraft-modal .bc-modal__title");
+        if (title) {
+          title.textContent = location.pathname.indexOf("/en/") === -1
+            ? "Заказать похожий арт-объект"
+            : "Order a similar art object";
+        }
+      }
+      return r;
+    } catch (err) {
+      return _open.apply(this, arguments);
     }
   };
 })();

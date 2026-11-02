@@ -7,5 +7,31 @@
   <link rel="canonical" href="https://bycraft.by/works/work-192/">
   <script>location.replace("/works/work-192/");</script>
 </head>
-<body><p><a href="/works/work-192/">Continue to work 192</a></p></body>
+<body><p><a href="/works/work-192/">Continue to work 192</a></p>
+<script id="bycraft-similar-title">
+(function () {
+  var _open = window.openBycraftModal;
+  if (typeof _open !== "function") return;
+  window.openBycraftModal = function (e) {
+    try {
+      var t = e && e.currentTarget;
+      var label = t && (t.textContent || "").trim();
+      var r = _open.apply(this, arguments);
+      if (label && /Заказать похожий|Order similar|similar/i.test(label)) {
+        var title = document.querySelector("#bycraft-modal .bc-modal__title");
+        if (title) {
+          title.textContent = location.pathname.indexOf("/en/") === -1
+            ? "Заказать похожий арт-объект"
+            : "Order a similar art object";
+        }
+      }
+      return r;
+    } catch (err) {
+      return _open.apply(this, arguments);
+    }
+  };
+})();
+</script>
+
+</body>
 </html>
