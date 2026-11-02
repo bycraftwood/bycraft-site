@@ -50,7 +50,7 @@
 }
   </script>
   <link rel="icon" href="/images/favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="../../css/style.css?v=1941">
+  <link rel="stylesheet" href="../../css/style.css?v=1942">
 
 
 
@@ -1627,77 +1627,128 @@ footer a[href^="mailto:"],
 </script>
 
 
-<script id="bycraft-modal-i18n-en">
+
+<script id="bycraft-modal-en-native">
 (function () {
   if (location.pathname.indexOf("/en/") === -1) return;
-  var dict = {
-    "Запрос информации о работе": "Request information about this work",
-    "Приобрести работу": "Purchase this work",
-    "Записаться на визит в мастерскую": "Book a studio visit",
-    "Обсудить похожий арт-объект": "Discuss a similar art object",
-    "Заказать арт-объект в похожей стилистике": "Commission a work in a similar style",
-    "Ваше имя": "Your name",
-    "Как к вам обращаться": "How should we address you",
-    "Контакт для связи": "Contact details",
-    "Telegram / Телефон / любой удобный способ связи": "Telegram / Phone / any convenient way to reach you",
-    "Страна доставки": "Delivery country",
-    "Беларусь": "Belarus",
-    "Россия": "Russia",
-    "другая": "other",
-    "Укажите страну": "Specify country",
-    "Комментарий": "Comment",
-    "Вопросы, пожелания, срок, если нужно к дате": "Questions, wishes, deadline if needed",
-    "Согласен(на) на обработку персональных данных": "I agree to the processing of personal data",
-    "Отметьте согласие, чтобы отправить заявку": "Tick the box to submit the request",
-    "Отправить заявку": "Submit request",
-    "или напишите в Telegram": "or write on Telegram",
-    "Спасибо!": "Thank you!",
-    "Закрыть": "Close",
-    "Мы свяжемся с вами в течение одного рабочего дня": "We will contact you within one business day",
-    "Наличие, стоимость, условия бронирования": "Availability, price, reservation terms",
-    "напишите удобное время для визита": "suggest a convenient time for a visit"
-  };
-  function trText(s) {
-    if (!s) return s;
-    var t = s.trim();
-    if (dict[t]) return dict[t];
-    for (var k in dict) {
-      if (t.indexOf(k) !== -1) t = t.split(k).join(dict[k]);
+
+  function esc(s) {
+    return String(s || "")
+      .replace(/&/g, "&amp;")
+      .replace(/</g, "&lt;")
+      .replace(/>/g, "&gt;")
+      .replace(/"/g, "&quot;");
+  }
+
+  window.closeBycraftModal = function () {
+    var modal = document.getElementById("bycraft-modal");
+    if (modal) {
+      modal.classList.remove("is-active");
+      modal.style.display = "none";
+      modal.innerHTML = "";
     }
-    return t;
-  }
-  function translateModal(root) {
-    if (!root) return;
-    root.querySelectorAll("h3, h4, label, button, p, span, option").forEach(function (el) {
-      if (el.closest("a")) return;
-      if (el.childNodes.length === 1 && el.childNodes[0].nodeType === 3) {
-        el.textContent = trText(el.textContent);
+    document.body.style.overflow = "";
+  };
+
+  window.openBycraftModal = function (e) {
+    try {
+      if (e) {
+        if (e.preventDefault) e.preventDefault();
+        if (e.stopPropagation) e.stopPropagation();
       }
-    });
-    root.querySelectorAll("input[placeholder], textarea[placeholder]").forEach(function (el) {
-      var ph = el.getAttribute("placeholder");
-      if (ph) el.setAttribute("placeholder", trText(ph));
-    });
-  }
-  var _open = window.openBycraftModal;
-  if (typeof _open === "function") {
-    window.openBycraftModal = function (e) {
-      var r = _open.apply(this, arguments);
-      setTimeout(function () {
-        translateModal(document.getElementById("bycraft-modal"));
-      }, 0);
-      setTimeout(function () {
-        translateModal(document.getElementById("bycraft-modal"));
-      }, 50);
-      return r;
-    };
-  }
-  var obs = new MutationObserver(function () {
-    translateModal(document.getElementById("bycraft-modal"));
-  });
-  if (document.documentElement) {
-    obs.observe(document.documentElement, { childList: true, subtree: true });
-  }
+
+      var path = location.pathname || "";
+      var h1 = document.querySelector("h1");
+      var title = h1 ? h1.textContent.trim() : "BYCRAFT";
+      var m = path.match(/work-(\d+)/);
+      var num = m ? m[1] : "";
+
+      var modal = document.getElementById("bycraft-modal");
+      if (!modal) {
+        modal = document.createElement("div");
+        modal.id = "bycraft-modal";
+        modal.className = "bc-modal";
+        document.body.appendChild(modal);
+      }
+
+      var formTitle = "Request information about this work";
+      var formSub = esc(title);
+      var commentPh = "Questions, wishes, deadline if needed";
+      var tgHint = num
+        ? "Hello! I am interested in work No. " + num
+        : "Hello! " + title;
+      var tgUrl = "https://t.me/bycraft_by?text=" + encodeURIComponent(tgHint);
+
+      // optional photo from page
+      var img = document.querySelector(".work-detail-mosaic img, .pered-licom-hero-photo img, .wdm-cell img, main img");
+      var photoHtml = "";
+      if (img && img.src) {
+        photoHtml =
+          '<div class="bc-modal__photo" style="width:50%;max-width:200px;margin:0 auto 16px;aspect-ratio:4/3;overflow:hidden;">' +
+          '<img src="' + esc(img.src) + '" alt="" style="width:100%;height:100%;object-fit:cover;display:block">' +
+          "</div>";
+      }
+
+      modal.innerHTML =
+        '<div class="bc-modal__overlay" onclick="window.closeBycraftModal()"></div>' +
+        '<div class="bc-modal__container" role="dialog" aria-modal="true">' +
+        '<button type="button" class="bc-modal__close" onclick="window.closeBycraftModal()" aria-label="Close">&times;</button>' +
+        '<div class="bc-modal__header">' +
+        '<div class="bc-modal__title">' + esc(formTitle) + "</div>" +
+        (formSub ? '<div class="bc-modal__subtitle">' + formSub + "</div>" : "") +
+        "</div>" +
+        photoHtml +
+        '<form id="bc-inquiry-form" onsubmit="return window.handleBycraftSubmit(event)" novalidate>' +
+        '<input type="text" name="website" id="bc-hp" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px;opacity:0;height:0;width:0" aria-hidden="true">' +
+        '<input type="hidden" name="work_number" value="' + esc(num) + '">' +
+        '<input type="hidden" name="page_url" value="' + esc(path) + '">' +
+        '<input type="hidden" name="page_title" value="' + esc(title) + '">' +
+        '<input type="hidden" name="lang" value="EN">' +
+        '<div class="bc-field"><label for="bc-name">Your name</label>' +
+        '<input type="text" id="bc-name" name="name" required autocomplete="name" placeholder="How should we address you"></div>' +
+        '<div class="bc-field"><label for="bc-contact">Contact details</label>' +
+        '<input type="text" id="bc-contact" name="contact" required placeholder="Telegram / Phone / any convenient way"></div>' +
+        '<div class="bc-field"><label for="bc-comment">Comment</label>' +
+        '<textarea id="bc-comment" name="comment" rows="3" placeholder="' + esc(commentPh) + '"></textarea></div>' +
+        '<div class="bc-field bc-consent-row" style="width:100%;margin:0 0 12px 0;">' +
+        '<label for="bc-consent" class="bc-consent-label" style="display:grid;grid-template-columns:18px 1fr;column-gap:10px;align-items:start;width:100%;margin:0;cursor:pointer;line-height:1.4;">' +
+        '<input type="checkbox" id="bc-consent" name="consent" style="width:16px;height:16px;margin:2px 0 0 0;padding:0;">' +
+        "<span>I agree to the processing of personal data</span></label>" +
+        '<p id="bc-consent-hint" class="bc-consent-hint" style="margin:8px 0 0 28px;">Tick the box to submit the request</p></div>' +
+        '<button type="submit" class="bc-submit-btn" id="bc-submit" disabled>Submit request</button>' +
+        '<p class="bc-modal-alt" style="text-align:center;margin-top:14px;line-height:1.5;">or write on Telegram<br>' +
+        '<a href="' + tgUrl + '" target="_blank" rel="noopener noreferrer">t.me/bycraft_by</a></p></form>' +
+        '<div id="bc-modal-success" class="bc-modal__success" style="display:none">' +
+        "<h4>Thank you!</h4>" +
+        '<p id="bc-success-text">We will contact you within one business day.</p>' +
+        '<button type="button" class="bc-submit-btn" style="margin-top:16px" onclick="window.closeBycraftModal()">Close</button>' +
+        "</div></div>";
+
+      modal.classList.add("is-active");
+      modal.style.cssText =
+        "display:flex!important;position:fixed!important;inset:0!important;z-index:2147483647!important;align-items:center!important;justify-content:center!important;";
+      document.body.style.overflow = "hidden";
+
+      var consent = document.getElementById("bc-consent");
+      var submit = document.getElementById("bc-submit");
+      var hint = document.getElementById("bc-consent-hint");
+      function syncConsent() {
+        var ok = consent && consent.checked;
+        if (submit) {
+          submit.disabled = !ok;
+          submit.style.opacity = ok ? "1" : "0.45";
+          submit.style.cursor = ok ? "pointer" : "not-allowed";
+        }
+        if (hint) hint.style.display = ok ? "none" : "block";
+      }
+      if (consent) consent.addEventListener("change", syncConsent);
+      syncConsent();
+      return false;
+    } catch (err) {
+      console.error("openBycraftModal EN", err);
+      return false;
+    }
+  };
 })();
 </script>
 
