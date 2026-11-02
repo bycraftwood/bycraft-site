@@ -8579,3 +8579,28 @@ body.page-contacts .site-footer a:not(.btn-footer-outline) {
   justify-content: center !important;
   box-sizing: border-box !important;
 }
+
+/* === v1880 contacts equal buttons === */
+body.page-contacts .btn-telegram,
+body.page-contacts .btn-tg-solid,
+body.page-contacts .btn-instagram-outline,
+body.page-contacts a.btn-instagram-outline {
+  font-family: 'Manrope', sans-serif !important;
+  font-weight: 500 !important;
+  font-size: 15px !important;
+  letter-spacing: 0.04em !important;
+  background: #241C18 !important;
+  color: #F7F3EC !important;
+  border: 1px solid #241C18 !important;
+  border-radius: 0 !important;
+  min-width: 280px !important;
+  width: 280px !important;
+  max-width: 100% !important;
+  padding: 12px 28px !important;
+  min-height: 48px !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  box-sizing: border-box !important;
+  text-decoration: none !important;
+}
