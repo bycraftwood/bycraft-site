@@ -8965,3 +8965,103 @@ h2.other-works-heading {
   display: block !important;
   background: transparent !important;
 }
+
+/* === v1950 typography polish === */
+
+/* Home event titles = body lead size (like «Сувель — нарост…») */
+.home-events-grid .event-name,
+.home-event-card .event-name,
+.index-events .event-name,
+h3.event-name {
+  font-family: 'Manrope', system-ui, sans-serif !important;
+  font-weight: 400 !important;
+  font-size: 16px !important;
+  line-height: 1.6 !important;
+  color: #2A211C !important;
+  text-transform: none !important;
+}
+
+/* Dark mosaic title tiles — mono like 188/192 */
+.work-detail-mosaic .wdm-text,
+.work-detail-mosaic .wdm-text span,
+.wdm-cell.wdm-text,
+.wdm-cell.wdm-text span {
+  font-family: 'Geist Mono', ui-monospace, monospace !important;
+  font-size: 12px !important;
+  font-weight: 400 !important;
+  letter-spacing: 0.12em !important;
+  text-transform: uppercase !important;
+}
+
+/* Specs status */
+.work-detail-info .meta-row,
+.work-detail-info .meta-label,
+.work-detail-info .meta-val,
+.work-detail-info .status-available,
+.work-detail-info .status-sold {
+  font-family: 'Geist Mono', ui-monospace, monospace !important;
+  font-size: 12px !important;
+  color: #6B5D52 !important;
+  font-weight: 400 !important;
+}
+
+/* Other exhibition works labels */
+.other-works-grid .work-title,
+.other-works-grid .museum-label .work-title,
+.other-works-grid .ml-title {
+  font-family: 'Cormorant Garamond', Georgia, serif !important;
+  font-weight: 500 !important;
+  font-size: 20px !important;
+  color: #2A211C !important;
+  line-height: 1.3 !important;
+}
+.other-works-grid .work-status,
+.other-works-grid .work-material,
+.other-works-grid .ml-meta,
+.other-works-grid .museum-label .work-status {
+  font-family: 'Manrope', system-ui, sans-serif !important;
+  font-size: 13px !important;
+  color: #6B5D52 !important;
+  font-weight: 400 !important;
+}
+
+/* Stock work titles */
+.work-stock-title,
+h1.work-stock-title,
+.work-188-title,
+.work-192-title {
+  font-family: 'Cormorant Garamond', Georgia, serif !important;
+  font-weight: 500 !important;
+  font-size: 26px !important;
+  color: #2A211C !important;
+  text-transform: none !important;
+}
+
+/* Curators */
+.curators-name-lead,
+.curators-intro-title {
+  line-height: 1.15 !important;
+}
+.curators-role-line {
+  font-size: 14px !important;
+  color: #6B5D52 !important;
+  font-weight: 400 !important;
+  margin-top: 8px !important;
+}
+.curators-awards li,
+.awards-list li,
+.curators-cv-list li {
+  list-style: none !important;
+  padding-left: 0 !important;
+  margin: 0 0 0.2em !important;
+  line-height: 1.6 !important;
+}
+.curators-awards li::before,
+.awards-list li::before {
+  content: none !important;
+}
+.curators-block-gap,
+.curators-membership,
+.curators-education {
+  margin-top: 26px !important;
+}
