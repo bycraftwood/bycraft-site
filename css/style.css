@@ -8872,7 +8872,7 @@ h2.other-works-heading {
   width: 100%;
   margin: 20px 0 28px;
   overflow: hidden;
-  background: #EDE3D3;
+  background: transparent;
   aspect-ratio: 3 / 4;
 }
 .pered-licom-hero-photo img {
@@ -8895,4 +8895,21 @@ h2.other-works-heading {
   .work-layout-6-6.pered-layout {
     grid-template-columns: 1fr !important;
   }
+}
+
+/* === v1931 pered-licom === */
+.pered-licom-hero-photo {
+  width: 100% !important;
+  margin: 20px 0 28px !important;
+  overflow: hidden !important;
+  background: transparent !important;
+  background-color: transparent !important;
+  aspect-ratio: 3 / 4 !important;
+}
+.pered-licom-hero-photo img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  display: block !important;
+  background: transparent !important;
 }
