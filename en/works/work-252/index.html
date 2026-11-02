@@ -7,56 +7,5 @@
   <link rel="canonical" href="https://bycraft.by/en/works/work-192/">
   <script>location.replace("/en/works/work-192/");</script>
 </head>
-<body><p><a href="/en/works/work-192/">Continue</a></p>
-<script id="cookie-en-patch">
-(function () {
-  if (location.pathname.indexOf("/en/") === -1) return;
-  function tr() {
-    var b = document.getElementById("cookieBanner") || document.querySelector(".cookie-banner, .cookie-banner--v2");
-    if (!b) return;
-    var t = b.querySelector("strong, h3, .cookie-banner__title");
-    if (t) t.textContent = "We use cookies";
-    var p = b.querySelector("p");
-    if (p) p.textContent = "They help improve the experience. By continuing, you agree to their use.";
-    var a = document.getElementById("cookieAcceptAll") || b.querySelector(".cookie-btn--primary");
-    if (a) a.textContent = "Accept all";
-    var s = document.getElementById("cookieConfigure") || b.querySelector(".cookie-btn--ghost");
-    if (s) s.textContent = "Settings";
-  }
-  if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", function () { setTimeout(tr, 50); setTimeout(tr, 400); });
-  else { setTimeout(tr, 50); setTimeout(tr, 400); }
-  var obs = new MutationObserver(tr);
-  obs.observe(document.documentElement, { childList: true, subtree: true });
-})();
-</script>
-
-
-<script id="nav-active-v1860">
-(function () {
-  var path = location.pathname.replace(/\/+$/, "") || "/";
-  document.querySelectorAll(".main-nav a.nav-link, .main-nav a.nav-link-btn").forEach(function (a) {
-    var href = a.getAttribute("href") || "";
-    if (href.indexOf("#") !== -1 && href.split("#")[0]) {
-      // how-to-buy: active only if hash matches
-      if (href.indexOf("#kak-kupit") !== -1 || href.indexOf("#how-to-buy") !== -1) {
-        if (path.indexOf("/works") !== -1 && location.hash && location.hash.indexOf("kak-kupit") !== -1) {
-          a.classList.add("is-active");
-        }
-        return;
-      }
-    }
-    var clean = href.split("#")[0].replace(/\/+$/, "") || "/";
-    if (clean === "/") {
-      if (path === "/" || path === "") a.classList.add("is-active");
-      return;
-    }
-    if (path === clean || path.indexOf(clean + "/") === 0) {
-      a.classList.add("is-active");
-      a.setAttribute("aria-current", "page");
-    }
-  });
-})();
-</script>
-
-</body>
+<body><p><a href="/en/works/work-192/">Continue to work 192</a></p></body>
 </html>
