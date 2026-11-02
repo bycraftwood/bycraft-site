@@ -8681,32 +8681,7 @@ h3.event-name {
 /* beige blocks same width as main content 1168 / padding 136 */
 .container,
 .geography-section .container,
-.how-to-buy-section,
-.how-to-buy-block,
-.section-beige,
-.home-curators-box,
-.curators-pdf-box,
-.kak-kupit-block,
-#kak-kupit,
-.beige-block {
-  max-width: 1440px !important;
-  width: 100% !important;
-  box-sizing: border-box !important;
-}
-.how-to-buy-section,
-.how-to-buy-block,
-.kak-kupit-block,
-#kak-kupit,
-.section-beige,
-.home-curators-box,
-.curators-pdf-box,
-.beige-block {
-  margin-left: auto !important;
-  margin-right: auto !important;
-  padding-left: 136px !important;
-  padding-right: 136px !important;
-  box-sizing: border-box !important;
-}
+
 @media (max-width: 1100px) {
   .how-to-buy-section,
   .how-to-buy-block,
@@ -8781,4 +8756,113 @@ p.geo-before-intro {
 .designer-special-link:hover {
   color: #B6452C;
   border-bottom-color: #B6452C;
+}
+
+/* === v1920 full-width 12-col alignment === */
+
+/* Home event titles */
+.home-events-grid .event-name,
+.home-event-card .event-name,
+.index-events .event-name,
+h3.event-name {
+  font-family: 'Cormorant Garamond', Georgia, serif !important;
+  font-weight: 500 !important;
+  font-size: 24px !important;
+  line-height: 1.3 !important;
+  color: #2A211C !important;
+  text-transform: none !important;
+}
+
+/*
+  Unified content width = same as .container
+  (site uses container max-width + horizontal padding)
+*/
+.site-footer .container,
+.site-footer .footer-inner-grid,
+.how-to-buy-section,
+.how-to-buy-block,
+.kak-kupit-block,
+#kak-kupit,
+.section-beige,
+.beige-block,
+.home-curators-box,
+.curators-pdf-box,
+.geo-before-intro,
+p.geo-before-intro,
+.geography-section {
+  max-width: var(--container-max, 1240px) !important;
+  width: 100% !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  box-sizing: border-box !important;
+}
+
+/* Beige blocks: no extra outer offset beyond container */
+.how-to-buy-section,
+.how-to-buy-block,
+.kak-kupit-block,
+#kak-kupit,
+.section-beige,
+.beige-block,
+.home-curators-box,
+.curators-pdf-box {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+.how-to-buy-section > .container,
+.how-to-buy-block > .container,
+.kak-kupit-block > .container,
+.section-beige > .container,
+.beige-block > .container,
+.home-curators-box > .container {
+  width: 100% !important;
+  max-width: var(--container-max, 1240px) !important;
+}
+
+/* If beige is not nested in container — give same side padding as .container */
+@media (min-width: 1101px) {
+  .how-to-buy-section:not(:has(> .container)),
+  .kak-kupit-block:not(:has(> .container)),
+  .section-beige:not(:has(> .container)),
+  .beige-block:not(:has(> .container)),
+  .home-curators-box:not(:has(> .container)),
+  .curators-pdf-box:not(:has(> .container)),
+  p.geo-before-intro,
+  .geo-before-intro {
+    padding-left: 24px !important;
+    padding-right: 24px !important;
+  }
+}
+
+.site-footer {
+  width: 100% !important;
+}
+.site-footer .footer-inner-grid {
+  display: grid !important;
+  grid-template-columns: 1.4fr 1fr 1fr !important;
+  gap: 32px 40px !important;
+  width: 100% !important;
+}
+
+.designer-special-link {
+  display: inline-block !important;
+  margin: 16px 0 8px !important;
+  font-family: 'Manrope', sans-serif !important;
+  font-weight: 500 !important;
+  font-size: 15px !important;
+  color: #2A211C !important;
+  text-decoration: none !important;
+  border-bottom: 1px solid #2A211C !important;
+}
+.designer-special-link:hover {
+  color: #B6452C !important;
+  border-bottom-color: #B6452C !important;
+}
+.other-works-heading,
+h2.other-works-heading {
+  font-family: 'Cormorant Garamond', Georgia, serif !important;
+  font-weight: 500 !important;
+  font-size: 32px !important;
+  color: #2A211C !important;
+  text-transform: none !important;
 }
