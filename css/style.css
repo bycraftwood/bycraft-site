@@ -8913,3 +8913,28 @@ h2.other-works-heading {
   display: block !important;
   background: transparent !important;
 }
+
+/* === v1932 pered-licom === */
+.pered-licom-hero-photo {
+  width: 100% !important;
+  margin: 20px 0 28px !important;
+  overflow: hidden !important;
+  background: transparent !important;
+  /* как карточки на /works/exhibitions/ */
+  aspect-ratio: 4 / 5 !important;
+}
+.pered-licom-hero-photo img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  display: block !important;
+}
+
+/* detail-3: не растягивать — показать как в файле */
+.work-detail-mosaic .wdm-cell.wdm-natural img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: contain !important;
+  object-position: center !important;
+  background: transparent !important;
+}
