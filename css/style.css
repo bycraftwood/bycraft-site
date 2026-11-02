@@ -9065,3 +9065,37 @@ h1.work-stock-title,
 .curators-education {
   margin-top: 26px !important;
 }
+
+/* === v1960 curators + footer === */
+.curators-intro-title {
+  line-height: 1.15 !important;
+}
+.awards-list li,
+.curators-awards li,
+.curators-cv-list li {
+  list-style: none !important;
+  padding-left: 0 !important;
+}
+.awards-list li::before,
+.curators-awards li::before {
+  content: none !important;
+}
+
+.site-footer .footer-inner-grid {
+  max-width: 1240px !important;
+  width: 100% !important;
+  margin: 0 auto !important;
+  display: grid !important;
+  grid-template-columns: 1.4fr 1fr 1fr !important;
+  gap: 32px 40px !important;
+  box-sizing: border-box !important;
+}
+.site-footer .footer-social-inline a {
+  color: #F7F3EC !important;
+  text-decoration: none !important;
+  margin-right: 14px !important;
+  font-size: 12px !important;
+}
+.site-footer .footer-social-inline a:hover {
+  color: #B6452C !important;
+}
