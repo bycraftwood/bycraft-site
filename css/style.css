@@ -8931,13 +8931,7 @@ h2.other-works-heading {
 }
 
 /* detail-3: не растягивать — показать как в файле */
-.work-detail-mosaic .wdm-cell.wdm-natural img {
-  width: 100% !important;
-  height: 100% !important;
-  object-fit: contain !important;
-  object-position: center !important;
-  background: transparent !important;
-}
+
 
 /* === v1933 pered-licom hero half height === */
 .pered-licom-hero-photo {
@@ -8954,4 +8948,20 @@ h2.other-works-heading {
   object-fit: cover !important;
   object-position: center !important;
   display: block !important;
+}
+
+/* === v1934 mosaic fill, no letterbox === */
+.work-detail-mosaic .wdm-cell {
+  background: #0D0D0D !important;
+}
+.work-detail-mosaic .wdm-cell img,
+.work-detail-mosaic .wdm-cell.wdm-natural img {
+  position: absolute !important;
+  inset: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  object-position: center center !important;
+  display: block !important;
+  background: transparent !important;
 }
