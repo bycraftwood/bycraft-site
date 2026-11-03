@@ -9623,3 +9623,73 @@ h1.work-page-title.page-h1 {
 .work-stock-desc .stock-desc-gap {
   margin-top: 16px !important;
 }
+
+/* === v2012 work-192 same as 188 === */
+body.page-work-192 h1.work-page-title,
+h1.work-page-title.page-h1 {
+  font-family: 'Cormorant Garamond', Georgia, serif !important;
+  font-weight: 500 !important;
+  font-size: 32px !important;
+  color: #2A211C !important;
+  display: inline-block !important;
+  padding-bottom: 8px !important;
+  background-image: linear-gradient(#B6452C, #B6452C) !important;
+  background-position: left bottom !important;
+  background-repeat: no-repeat !important;
+  background-size: 100% 1.5px !important;
+  text-transform: none !important;
+}
+.page-work-192 .meta-label,
+.page-work-192 .meta-val,
+.page-work-192 .work-detail-info .meta-row {
+  font-family: 'Geist Mono', ui-monospace, monospace !important;
+  font-size: 14px !important;
+  color: #6B5D52 !important;
+  font-weight: 400 !important;
+}
+.work-192-mosaic-col { width: 100%; }
+.work-192-hero-photo {
+  width: 100% !important;
+  margin: 16px 0 0 !important;
+  overflow: hidden !important;
+  background: transparent !important;
+  aspect-ratio: 8 / 5 !important;
+}
+.work-192-hero-photo img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  display: block !important;
+}
+.page-work-192 .work-stock-desc,
+.page-work-192 .work-stock-desc p {
+  font-family: 'Manrope', sans-serif !important;
+  font-size: 16px !important;
+  font-weight: 400 !important;
+  color: #2A211C !important;
+  line-height: 1.6 !important;
+}
+.page-work-192 .stock-desc-h {
+  font-weight: 700 !important;
+  margin-top: 16px !important;
+  margin-bottom: 6px !important;
+}
+.page-work-192 .stock-desc-gap { margin-top: 16px !important; }
+.page-work-192 .btn-back-works {
+  font-family: 'Manrope', sans-serif !important;
+  font-size: 16px !important;
+  font-weight: 400 !important;
+  color: #2A211C !important;
+  border-bottom: none !important;
+}
+.page-work-192 .other-works-section .work-title {
+  font-family: 'Manrope', sans-serif !important;
+  font-size: 16px !important;
+  color: #2A211C !important;
+}
+.page-work-192 .other-works-section .work-status.is-available {
+  font-family: 'Manrope', sans-serif !important;
+  font-size: 16px !important;
+  color: #B6452C !important;
+  font-weight: 400 !important;
+}
