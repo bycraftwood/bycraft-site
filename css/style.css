@@ -9178,3 +9178,133 @@ h1.work-stock-title,
   background: transparent !important;
   vertical-align: top;
 }
+
+/* === v1990 type scale === */
+h1.page-h1,
+.page-h1,
+.work-page-title,
+h1.work-page-title {
+  font-family: 'Cormorant Garamond', Georgia, serif !important;
+  font-weight: 500 !important;
+  font-size: 44px !important;
+  line-height: 1.15 !important;
+  color: #2A211C !important;
+  text-transform: none !important;
+}
+@media (max-width: 768px) {
+  h1.page-h1, .page-h1, .work-page-title, h1.work-page-title {
+    font-size: 32px !important;
+  }
+}
+
+h2.home-block-title,
+.home-block-title,
+.home-block-title a,
+.section-title-32,
+h2.section-title-32,
+.events-live-title,
+.other-works-heading,
+.geography-title,
+#kak-kupit .section-title,
+.how-to-buy .section-title,
+.how-to-buy-section .section-title,
+.contacts-page-title + .contacts-section-title,
+.contacts-section-title,
+.curators-section-title {
+  font-family: 'Cormorant Garamond', Georgia, serif !important;
+  font-weight: 500 !important;
+  font-size: 32px !important;
+  color: #2A211C !important;
+  text-transform: none !important;
+}
+@media (max-width: 768px) {
+  h2.home-block-title, .home-block-title, .home-block-title a,
+  .events-live-title, .other-works-heading, .geography-title,
+  #kak-kupit .section-title, .how-to-buy .section-title {
+    font-size: 26px !important;
+  }
+}
+
+/* Works H1 44 */
+.works-page-title,
+.works-index-title,
+body.page-works h1,
+.works-hero-title {
+  font-family: 'Cormorant Garamond', Georgia, serif !important;
+  font-weight: 500 !important;
+  font-size: 44px !important;
+  color: #2A211C !important;
+  text-transform: none !important;
+}
+
+/* Event / card names 24 Cormorant */
+.event-name,
+.home-event-card .event-name,
+.home-events-grid .event-name,
+.flow-card .event-name,
+.sig-event-card .event-name,
+.sig-event-title,
+.flow-card-title,
+h3.event-name {
+  font-family: 'Cormorant Garamond', Georgia, serif !important;
+  font-weight: 500 !important;
+  font-size: 24px !important;
+  color: #2A211C !important;
+  text-transform: none !important;
+  line-height: 1.3 !important;
+}
+
+/* 24px secondary titles */
+.geo-before-intro,
+p.geo-before-intro,
+.workshop-process-title,
+.curators-quote,
+.curators-subhead,
+.membership-title,
+.education-title {
+  font-family: 'Cormorant Garamond', Georgia, serif !important;
+  font-weight: 500 !important;
+  font-size: 24px !important;
+  color: #2A211C !important;
+}
+
+.curators-intro-title {
+  font-family: 'Cormorant Garamond', Georgia, serif !important;
+  font-weight: 500 !important;
+  font-size: 32px !important;
+  line-height: 1.15 !important;
+  color: #2A211C !important;
+}
+
+/* video no black bars */
+.workshop-video-wrap,
+.work-detail-video-wrap {
+  background: transparent !important;
+  line-height: 0 !important;
+}
+.workshop-video-wrap video,
+.work-detail-video-wrap video {
+  width: 100% !important;
+  height: auto !important;
+  max-height: none !important;
+  object-fit: contain !important;
+  background: transparent !important;
+  display: block !important;
+}
+
+/* footer accent line / text hint */
+.site-footer {
+  border-top: 3px solid #EDE3D3 !important;
+}
+
+/* awards no bullets */
+.awards-list li,
+.curators-awards li {
+  list-style: none !important;
+  padding-left: 0 !important;
+}
+.awards-list li::before,
+.curators-awards li::before {
+  content: none !important;
+  display: none !important;
+}
