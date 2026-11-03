@@ -7669,7 +7669,7 @@ body.page-contacts,
 .curators-list li::before,
 .awards-list li::before,
 .cv-list li::before {
-  content: "·" !important;
+  content: none !important;
   position: absolute !important;
   left: 0 !important;
   color: #6B5D52 !important;
@@ -9307,4 +9307,16 @@ p.geo-before-intro,
 .curators-awards li::before {
   content: none !important;
   display: none !important;
+}
+
+/* === v2001 restore curators lists no dots === */
+.curators-list li::before,
+.awards-list li::before,
+.cv-list li::before {
+  content: none !important;
+  display: none !important;
+}
+.curators-list li {
+  list-style: none !important;
+  padding-left: 0 !important;
 }
