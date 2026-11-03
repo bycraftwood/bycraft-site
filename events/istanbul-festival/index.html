@@ -4,7 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>27-Й МЕЖДУНАРОДНЫЙ ФЕСТИВАЛЬ КУЛЬТУРЫ И ИСКУССТВ — События · BYCRAFT</title>
-  <link rel="stylesheet" href="/css/style.css?v=1971">
+  <link rel="stylesheet" href="/css/style.css?v=1980">
+  <link rel="icon" href="/images/favicon.svg" type="image/svg+xml">
 </head>
 <body>
     <header class="site-header">
@@ -52,7 +53,7 @@
       <div class="footer-inner-grid">
         <div class="footer-col-1">
           <p style="margin:0 0 6px;font-size:12px;color:#F7F3EC!important;">© 2026 BYCRAFT</p>
-          <p style="margin:0 0 8px;font-size:12px;line-height:1.55;color:#F7F3EC!important;">Сайт не является интернет-магазином и носит информационный характер (каталог авторских работ). Фотографии, тексты и видеоматериалы принадлежат автору. Ремесленник Атрош Валентин Владимирович / УНП: КА0278799</p>
+          <p style="margin:0 0 8px;font-size:12px;line-height:1.55;color:#F7F3EC!important;">Сайт не является интернет-магазином и носит информационный характер (каталог авторских работ). Фотографии, тексты и видеоматериалы принадлежат автору. Ремесленник Атрош Валентин Владимирович / УНП: KA0278799</p>
           <p style="margin:0;font-size:12px;line-height:1.55;color:#F7F3EC!important;">
             <a href="/privacy/" style="color:#F7F3EC!important;text-decoration:none;">Политика конфиденциальности и обработки персональных данных</a>.
             <a href="javascript:void(0)" onclick="window.bycraftOpenCookieSettings&&window.bycraftOpenCookieSettings()" style="color:#F7F3EC!important;text-decoration:none;">Настройки cookie</a>
@@ -128,6 +129,32 @@
     } catch (err) {
       return _open.apply(this, arguments);
     }
+  };
+})();
+</script>
+
+
+<script id="bycraft-form-title-data">
+(function(){
+  var _o = window.openBycraftModal;
+  if (typeof _o !== "function") return;
+  window.openBycraftModal = function(e){
+    var btn = e && (e.currentTarget || e.target);
+    var r = _o.apply(this, arguments);
+    try {
+      if (btn && btn.getAttribute) {
+        var t = btn.getAttribute("data-form-title");
+        var s = btn.getAttribute("data-form-sub");
+        var title = document.querySelector("#bycraft-modal .bc-modal__title");
+        var sub = document.querySelector("#bycraft-modal .bc-modal__subtitle");
+        if (t && title) title.textContent = t;
+        if (s !== null && sub) { if (s === "") sub.style.display = "none"; else sub.textContent = s; }
+        if (s === "" && !sub && title) {
+          /* subtitle may be in next sibling */
+        }
+      }
+    } catch(err) {}
+    return r;
   };
 })();
 </script>

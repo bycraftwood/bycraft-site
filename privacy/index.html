@@ -6,7 +6,7 @@
   <title>Политика в отношении обработки персональных данных и cookie — BYCRAFT</title>
   <meta name="description" content="Политика BYCRAFT в отношении обработки персональных данных и использования файлов cookie. Редакция от 27 октября 2026 г.">
   <link rel="canonical" href="https://bycraft.by/privacy/">
-  <link rel="stylesheet" href="/css/style.css?v=1971">
+  <link rel="stylesheet" href="/css/style.css?v=1980">
   <style>
     .policy-page { max-width: 760px; margin: 0 auto; padding: 48px 0 96px; }
     .policy-page h1 {
@@ -30,6 +30,7 @@
     .policy-page a { color: #2A211C; text-decoration: underline; text-underline-offset: 2px; }
     .policy-back { display: inline-block; font-size: 14px; margin-bottom: 28px; color: #2A211C; border-bottom: 1px solid #2A211C; text-decoration: none; padding-bottom: 2px; }
   </style>
+  <link rel="icon" href="/images/favicon.svg" type="image/svg+xml">
 </head>
 <body>
     <header class="site-header">
@@ -67,7 +68,7 @@
 
       <h2>1. Общие положения</h2>
       <p>1.1. Настоящая Политика объясняет, какие персональные данные обрабатываются при использовании сайта <a href="https://bycraft.by/">https://bycraft.by/</a> (далее — Сайт), для каких целей, на каких основаниях и в течение какого срока они хранятся, кому могут передаваться и как пользователь может реализовать свои права.</p>
-      <p>1.2. Операторы персональных данных (далее совместно — Оператор): ремесленники Атрош Валентин Владимирович (УНП KA0278799) и Атрош Елена Михайловна (АВ5940993). Адрес: Минская обл., Минский р-н, с/т Рябиновка, Республика Беларусь.</p>
+      <p>1.2. Операторы персональных данных (далее совместно — Оператор): ремесленники Атрош Валентин Владимирович (УНП KA0278799) и Атрош Елена Михайловна (УНП: АВ5940993). Адрес: Минская обл., Минский р-н, с/т Рябиновка, Республика Беларусь.</p>
       <p>Для обращений по вопросам обработки персональных данных: <a href="mailto:bycraftwood@mail.ru">bycraftwood@mail.ru</a>.<br>
       Для связи по вопросам работ и заказов: <a href="mailto:info@bycraft.by">info@bycraft.by</a>.<br>
       Телефон: <a href="tel:+375295507250">+375 (29) 550-72-50</a>.</p>
@@ -199,7 +200,7 @@
       <div class="footer-inner-grid">
         <div class="footer-col-1">
           <p style="margin:0 0 6px;font-size:12px;color:#F7F3EC!important;">© 2026 BYCRAFT</p>
-          <p style="margin:0 0 8px;font-size:12px;line-height:1.55;color:#F7F3EC!important;">Сайт не является интернет-магазином и носит информационный характер (каталог авторских работ). Фотографии, тексты и видеоматериалы принадлежат автору. Ремесленник Атрош Валентин Владимирович / УНП: КА0278799</p>
+          <p style="margin:0 0 8px;font-size:12px;line-height:1.55;color:#F7F3EC!important;">Сайт не является интернет-магазином и носит информационный характер (каталог авторских работ). Фотографии, тексты и видеоматериалы принадлежат автору. Ремесленник Атрош Валентин Владимирович / УНП: KA0278799</p>
           <p style="margin:0;font-size:12px;line-height:1.55;color:#F7F3EC!important;">
             <a href="/privacy/" style="color:#F7F3EC!important;text-decoration:none;">Политика конфиденциальности и обработки персональных данных</a>.
             <a href="javascript:void(0)" onclick="window.bycraftOpenCookieSettings&&window.bycraftOpenCookieSettings()" style="color:#F7F3EC!important;text-decoration:none;">Настройки cookie</a>
@@ -275,6 +276,32 @@
     } catch (err) {
       return _open.apply(this, arguments);
     }
+  };
+})();
+</script>
+
+
+<script id="bycraft-form-title-data">
+(function(){
+  var _o = window.openBycraftModal;
+  if (typeof _o !== "function") return;
+  window.openBycraftModal = function(e){
+    var btn = e && (e.currentTarget || e.target);
+    var r = _o.apply(this, arguments);
+    try {
+      if (btn && btn.getAttribute) {
+        var t = btn.getAttribute("data-form-title");
+        var s = btn.getAttribute("data-form-sub");
+        var title = document.querySelector("#bycraft-modal .bc-modal__title");
+        var sub = document.querySelector("#bycraft-modal .bc-modal__subtitle");
+        if (t && title) title.textContent = t;
+        if (s !== null && sub) { if (s === "") sub.style.display = "none"; else sub.textContent = s; }
+        if (s === "" && !sub && title) {
+          /* subtitle may be in next sibling */
+        }
+      }
+    } catch(err) {}
+    return r;
   };
 })();
 </script>

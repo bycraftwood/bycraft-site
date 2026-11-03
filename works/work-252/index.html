@@ -6,6 +6,7 @@
   <meta http-equiv="refresh" content="0;url=/works/work-192/">
   <link rel="canonical" href="https://bycraft.by/works/work-192/">
   <script>location.replace("/works/work-192/");</script>
+  <link rel="icon" href="/images/favicon.svg" type="image/svg+xml">
 </head>
 <body><p><a href="/works/work-192/">Continue to work 192</a></p>
 <script id="bycraft-similar-title">
@@ -29,6 +30,32 @@
     } catch (err) {
       return _open.apply(this, arguments);
     }
+  };
+})();
+</script>
+
+
+<script id="bycraft-form-title-data">
+(function(){
+  var _o = window.openBycraftModal;
+  if (typeof _o !== "function") return;
+  window.openBycraftModal = function(e){
+    var btn = e && (e.currentTarget || e.target);
+    var r = _o.apply(this, arguments);
+    try {
+      if (btn && btn.getAttribute) {
+        var t = btn.getAttribute("data-form-title");
+        var s = btn.getAttribute("data-form-sub");
+        var title = document.querySelector("#bycraft-modal .bc-modal__title");
+        var sub = document.querySelector("#bycraft-modal .bc-modal__subtitle");
+        if (t && title) title.textContent = t;
+        if (s !== null && sub) { if (s === "") sub.style.display = "none"; else sub.textContent = s; }
+        if (s === "" && !sub && title) {
+          /* subtitle may be in next sibling */
+        }
+      }
+    } catch(err) {}
+    return r;
   };
 })();
 </script>
