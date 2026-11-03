@@ -9507,3 +9507,30 @@ h2.curators-section-title {
   font-weight: 500 !important;
   color: #6B5D52 !important;
 }
+
+/* === v2005 curators 18px labels === */
+.curators-location {
+  font-size: 18px !important;
+  font-family: 'Cormorant Garamond', Georgia, serif !important;
+  color: #6B5D52 !important;
+}
+.curator-works-grid-2rows .caption,
+.curator-works-grid-2rows .museum-label .caption {
+  font-size: 18px !important;
+  font-family: 'Cormorant Garamond', Georgia, serif !important;
+  font-weight: 500 !important;
+  color: #6B5D52 !important;
+  line-height: 1.7 !important;
+}
+.cv-label,
+span.cv-label,
+.cv-year-title {
+  font-size: 18px !important;
+  font-family: 'Cormorant Garamond', Georgia, serif !important;
+  font-weight: 500 !important;
+  color: #6B5D52 !important;
+}
+.curator-diplomas-three-grid .caption strong {
+  font-weight: 700 !important;
+  color: #6B5D52 !important;
+}
