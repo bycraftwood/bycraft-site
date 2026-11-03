@@ -9693,3 +9693,68 @@ h1.work-page-title.page-h1 {
   color: #B6452C !important;
   font-weight: 400 !important;
 }
+
+/* === v2015 exhibitions page === */
+.exhibitions-intro-block h1.page-h1 {
+  font-family: 'Cormorant Garamond', Georgia, serif !important;
+  font-weight: 500 !important;
+  font-size: 32px !important;
+  color: #2A211C !important;
+  display: inline-block !important;
+  padding-bottom: 8px !important;
+  background-image: linear-gradient(#B6452C, #B6452C) !important;
+  background-position: left bottom !important;
+  background-repeat: no-repeat !important;
+  background-size: 100% 1.5px !important;
+  text-transform: none !important;
+}
+.exhibitions-intro-block .lead-text {
+  font-family: 'Manrope', sans-serif !important;
+  font-size: 16px !important;
+  font-weight: 400 !important;
+  color: #2A211C !important;
+  line-height: 1.7 !important;
+}
+.exhibitions-intro-block .btn-arrow,
+.exhibitions-intro-block a.btn-arrow {
+  font-family: 'Manrope', sans-serif !important;
+  font-size: 16px !important;
+  font-weight: 400 !important;
+  color: #2A211C !important;
+  border: none !important;
+  border-bottom: none !important;
+  text-decoration: none !important;
+}
+.exhibits-unified-grid .work-title,
+.exhibits-unified-grid .ml-title {
+  font-family: 'Cormorant Garamond', Georgia, serif !important;
+  font-weight: 500 !important;
+  font-size: 14px !important;
+  color: #2A211C !important;
+  line-height: 1.4 !important;
+}
+.exhibits-unified-grid .work-material,
+.exhibits-unified-grid .ml-meta,
+.exhibits-unified-grid .work-status,
+.exhibits-unified-grid .ml-status {
+  font-family: 'Manrope', sans-serif !important;
+  font-size: 14px !important;
+  font-weight: 400 !important;
+  color: #6B5D52 !important;
+}
+/* единый кадр — без «раздувания» */
+.exhibits-unified-grid .work-img-wrap {
+  aspect-ratio: 4 / 5 !important;
+  overflow: hidden !important;
+  background: #EDE3D3 !important;
+}
+.exhibits-unified-grid .work-img-wrap img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  object-position: center !important;
+  transform: none !important;
+}
+.exhibits-unified-grid .work-card:hover .work-img-wrap img {
+  transform: scale(1.02) !important;
+}
