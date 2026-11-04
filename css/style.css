@@ -10010,3 +10010,55 @@ h2.other-works-heading {
     font-size: 14px !important;
   }
 }
+
+/* === v2032 home hero sizes === */
+.home-hero-eyebrow {
+  font-family: 'Geist Mono', ui-monospace, monospace !important;
+  font-size: 22px !important;
+  font-weight: 400 !important;
+  letter-spacing: 0.06em !important;
+  text-transform: uppercase !important;
+  color: #6B5D52 !important;
+  margin: 0 0 24px !important;
+  line-height: 1.3 !important;
+}
+.home-hero-lead {
+  font-family: 'Manrope', sans-serif !important;
+  font-size: 17px !important;
+  font-weight: 400 !important;
+  line-height: 1.7 !important;
+  color: #2A211C !important;
+  margin: 0 0 32px !important;
+  max-width: 420px !important;
+  white-space: pre-line !important;
+}
+.home-hero-photo-caption {
+  font-family: 'Geist Mono', ui-monospace, monospace !important;
+  font-size: 22px !important;
+  font-weight: 400 !important;
+  letter-spacing: 0.06em !important;
+  text-transform: uppercase !important;
+  color: #6B5D52 !important;
+  line-height: 1.2 !important;
+}
+.home-hero-btn {
+  font-size: 17px !important;
+  font-weight: 600 !important;
+  height: 52px !important;
+}
+.home-hero-link {
+  font-size: 17px !important;
+  font-weight: 600 !important;
+  line-height: 1.7 !important;
+}
+@media (max-width: 900px) {
+  .home-hero-eyebrow,
+  .home-hero-photo-caption {
+    font-size: 13px !important;
+  }
+  .home-hero-lead,
+  .home-hero-btn,
+  .home-hero-link {
+    font-size: 15px !important;
+  }
+}
