@@ -10430,52 +10430,79 @@ a.nav-link-btn.nav-how-to-buy {
   .home-quote, .home-process-valentin, .home-awards-only { margin-bottom: 72px !important; }
 }
 
-/* === v2047 video size fit no bars === */
+/* === v2048 home balance video quote pick === */
+.home-quote .container {
+  text-align: center !important;
+}
+.home-quote-text {
+  margin-left: auto !important;
+  margin-right: auto !important;
+  text-align: center !important;
+  max-width: 720px !important;
+  font-size: clamp(24px, 2.6vw, 30px) !important;
+}
+.home-quote-author {
+  text-align: center !important;
+}
+
+.home-process-valentin .home-row-head {
+  justify-content: flex-start !important;
+  text-align: left !important;
+}
+.home-process-valentin .home-h32 {
+  text-align: left !important;
+  margin-left: 0 !important;
+}
+
+/* видео ~55% ряда, фото ~40% — визуальный баланс */
 .home-pv-grid {
   display: grid !important;
-  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr) !important;
-  gap: 28px 36px !important;
+  grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.85fr) !important;
+  gap: 32px 40px !important;
   align-items: start !important;
 }
 .home-pv-video {
   width: 100% !important;
-  max-width: 420px !important;
-  margin: 0 !important;
+  max-width: none !important;
   background: transparent !important;
   line-height: 0 !important;
 }
 .home-pv-video video {
   width: 100% !important;
   height: auto !important;
-  max-height: 520px !important;
+  max-height: 560px !important;
   display: block !important;
   object-fit: contain !important;
   background: transparent !important;
-  aspect-ratio: auto !important;
-  min-height: 0 !important;
 }
 .home-pv-side {
-  display: flex !important;
-  flex-direction: column !important;
-  max-width: 420px !important;
+  max-width: none !important;
 }
 .home-pv-photo {
-  width: 100% !important;
   aspect-ratio: 4/5 !important;
-  max-height: 520px !important;
-  overflow: hidden !important;
-  background: #EDE3D3 !important;
-  margin-bottom: 12px !important;
+  max-height: 560px !important;
 }
-.home-pv-photo img {
-  width: 100% !important;
-  height: 100% !important;
-  object-fit: cover !important;
-  display: block !important;
+
+/* крупнее карточки работ */
+.home-pick-grid {
+  grid-template-columns: repeat(3, 1fr) !important;
+  gap: 28px !important;
+}
+.home-pick-img {
+  aspect-ratio: 4/5 !important;
+  min-height: 0 !important;
+}
+@media (min-width: 901px) {
+  .home-pick-grid {
+    gap: 32px !important;
+  }
+  .home-pick-card .home-pick-img {
+    aspect-ratio: 3/4 !important;
+  }
 }
 @media (max-width: 800px) {
   .home-pv-grid { grid-template-columns: 1fr !important; }
-  .home-pv-video { order: -1 !important; max-width: 100% !important; }
-  .home-pv-video video { max-height: 360px !important; }
-  .home-pv-side { max-width: 100% !important; }
+  .home-pv-video { order: -1 !important; }
+  .home-pv-video video { max-height: 420px !important; }
+  .home-pick-grid { grid-template-columns: 1fr !important; }
 }
