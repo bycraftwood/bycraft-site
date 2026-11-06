@@ -10429,3 +10429,43 @@ a.nav-link-btn.nav-how-to-buy {
   .home-process-title-right { text-align: left !important; margin-left: 0 !important; }
   .home-quote, .home-process-valentin, .home-awards-only { margin-bottom: 72px !important; }
 }
+
+/* === v2046 video height = photo === */
+.home-pv-grid {
+  display: grid !important;
+  grid-template-columns: 1.2fr 0.8fr !important;
+  gap: 32px !important;
+  align-items: stretch !important;
+}
+.home-pv-video {
+  min-height: 0 !important;
+  height: 100% !important;
+}
+.home-pv-video video {
+  width: 100% !important;
+  height: 100% !important;
+  min-height: 100% !important;
+  object-fit: cover !important;
+  display: block !important;
+  background: #241C18 !important;
+  aspect-ratio: auto !important;
+}
+.home-pv-side {
+  display: flex !important;
+  flex-direction: column !important;
+  height: 100% !important;
+}
+.home-pv-photo {
+  flex: 1 1 auto !important;
+  aspect-ratio: 4/5 !important;
+  min-height: 280px !important;
+}
+@media (max-width: 800px) {
+  .home-pv-grid { grid-template-columns: 1fr !important; }
+  .home-pv-video { order: -1 !important; height: auto !important; }
+  .home-pv-video video {
+    aspect-ratio: 16/9 !important;
+    height: auto !important;
+    min-height: 0 !important;
+  }
+}
