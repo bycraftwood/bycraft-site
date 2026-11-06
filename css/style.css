@@ -10144,3 +10144,95 @@ section.home-author {
   .footer-grid-4 { grid-template-columns: 1fr !important; }
   .footer-bottom { flex-direction: column !important; }
 }
+
+/* === v2042 layout + home copy === */
+.container {
+  max-width: 1200px !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  padding-left: 40px !important;
+  padding-right: 40px !important;
+  box-sizing: border-box !important;
+}
+section.home-hero-split {
+  max-width: 1200px !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  padding-left: 40px !important;
+  padding-right: 40px !important;
+  margin-bottom: 120px !important;
+}
+.home-trust,
+section.home-stock,
+section.home-pick,
+section.home-process,
+section.home-author,
+section.home-buy,
+section.home-events-new,
+section.home-workshop-section,
+section.home-curators-box,
+section.home-events-preview {
+  margin-bottom: 120px !important;
+}
+section.home-trust {
+  background: #EDE3D3 !important;
+  width: 100vw !important;
+  max-width: 100vw !important;
+  margin-left: calc(50% - 50vw) !important;
+  margin-right: calc(50% - 50vw) !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+.home-trust-inner {
+  max-width: 1200px !important;
+  margin: 0 auto !important;
+  padding-left: 40px !important;
+  padding-right: 40px !important;
+  box-sizing: border-box !important;
+}
+section.home-author {
+  background: #EDE3D3 !important;
+  width: 100vw !important;
+  max-width: 100vw !important;
+  margin-left: calc(50% - 50vw) !important;
+  margin-right: calc(50% - 50vw) !important;
+}
+.home-author .container,
+.home-author-inner {
+  max-width: 1200px !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  padding-left: 40px !important;
+  padding-right: 40px !important;
+  box-sizing: border-box !important;
+}
+.home-pick .home-row-head {
+  flex-direction: column !important;
+  align-items: flex-start !important;
+}
+.home-pick-note {
+  text-align: left !important;
+  white-space: normal !important;
+  max-width: none !important;
+  margin: 0 0 24px !important;
+}
+@media (max-width: 768px) {
+  .container,
+  section.home-hero-split,
+  .home-trust-inner,
+  .home-author .container,
+  .home-author-inner {
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+  }
+  section.home-hero-split,
+  .home-trust,
+  section.home-stock,
+  section.home-pick,
+  section.home-process,
+  section.home-author,
+  section.home-buy,
+  section.home-events-new {
+    margin-bottom: 72px !important;
+  }
+}
