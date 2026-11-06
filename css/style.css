@@ -10348,3 +10348,84 @@ a.nav-link-btn.nav-how-to-buy {
   .home-pick-grid, .home-awards-photos { grid-template-columns: 1fr !important; }
   .home-pick-price { white-space: normal !important; }
 }
+
+.home-trust { display: none !important; }
+.home-author { display: none !important; }
+
+/* === v2045 home quote + process valentin === */
+.home-quote {
+  background: transparent !important;
+  margin-bottom: 120px !important;
+  padding: 0 !important;
+}
+.home-quote-text {
+  font-family: 'Cormorant Garamond', Georgia, serif !important;
+  font-weight: 500 !important;
+  font-style: italic !important;
+  font-size: clamp(22px, 2.4vw, 28px) !important;
+  line-height: 1.35 !important;
+  color: #2A211C !important;
+  margin: 0 0 16px !important;
+  max-width: 820px !important;
+  border: none !important;
+  padding: 0 !important;
+}
+.home-quote-author {
+  font-family: 'Geist Mono', ui-monospace, monospace !important;
+  font-size: 12px !important;
+  letter-spacing: 0.1em !important;
+  text-transform: uppercase !important;
+  color: #6B5D52 !important;
+  margin: 0 !important;
+}
+.home-process-valentin { margin-bottom: 120px !important; }
+.home-process-valentin .home-row-head {
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: baseline !important;
+  gap: 16px !important;
+  margin-bottom: 28px !important;
+  flex-wrap: wrap !important;
+}
+.home-process-title-right { margin-left: auto !important; text-align: right !important; }
+.home-pv-grid {
+  display: grid !important;
+  grid-template-columns: 1.2fr 0.8fr !important;
+  gap: 32px !important;
+  align-items: start !important;
+}
+.home-pv-video video {
+  width: 100% !important;
+  display: block !important;
+  background: #241C18 !important;
+  aspect-ratio: 16/9 !important;
+  object-fit: cover !important;
+}
+.home-pv-photo {
+  aspect-ratio: 4/5 !important;
+  overflow: hidden !important;
+  background: #EDE3D3 !important;
+  margin-bottom: 12px !important;
+}
+.home-pv-photo img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  display: block !important;
+}
+.home-pv-caption {
+  font-family: Manrope, sans-serif !important;
+  font-size: 15px !important;
+  line-height: 1.55 !important;
+  color: #6B5D52 !important;
+  margin: 0 0 14px !important;
+}
+.home-pv-side .home-body { margin: 0 0 20px !important; }
+.home-curators-quiet { margin-top: 28px !important; }
+.home-awards-only { margin-bottom: 120px !important; }
+@media (max-width: 800px) {
+  .home-pv-grid { grid-template-columns: 1fr !important; }
+  .home-pv-video { order: -1 !important; }
+  .home-process-title-right { text-align: left !important; margin-left: 0 !important; }
+  .home-quote, .home-process-valentin, .home-awards-only { margin-bottom: 72px !important; }
+}

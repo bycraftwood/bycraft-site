@@ -49,7 +49,7 @@
 }
   </script>
   <link rel="icon" href="/images/favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="./css/style.css?v=2044">
+  <link rel="stylesheet" href="./css/style.css?v=2045">
 
 
 
@@ -971,12 +971,9 @@ footer a[href^="mailto:"],
       </nav>
     </div>
   </header>
+  
   <main>
-
-    <!-- БЛОК 1: фото-сетка + подпись -->
-    <!-- БЛОК 1: сетка 5×3, ячейки 4:5 -->
-    <!-- 1 БЛОК: HERO SPLIT (текст + фото) -->
-        <section class="home-hero-split">
+<section class="home-hero-split">
       <div class="home-hero-copy">
         <p class="home-hero-eyebrow">Атрош Валентин · Минск</p>
         <h1 class="home-hero-title">Создано природой,<br><em>завершено человеком</em></h1>
@@ -991,21 +988,14 @@ footer a[href^="mailto:"],
       </div>
     </section>
 
-    <!-- 2. Полоса доверия -->
-    <section class="home-trust">
-      <div class="home-trust-inner">
-        <div class="home-trust-item"><div class="home-trust-num">24</div><div class="home-trust-label">страны<br>куда уехали работы</div></div>
-        <div class="home-trust-item"><div class="home-trust-num">50+</div><div class="home-trust-label">часов<br>ручной работы в каждой</div></div>
-        <div class="home-trust-item"><div class="home-trust-num">8+</div><div class="home-trust-label">лет<br>работы в мастерской</div></div>
-        <div class="home-trust-item"><div class="home-trust-num">3-е</div><div class="home-trust-label">место<br>UNITED BY ART · 2026</div></div>
+<section class="home-quote">
+      <div class="container">
+        <blockquote class="home-quote-text">«Форму сувеля нельзя рассчитать или разметить линейкой. Моя задача — увидеть будущую скульптуру в бесформенной массе»</blockquote>
+        <p class="home-quote-author">Атрош Валентин</p>
       </div>
     </section>
 
-    <!-- 3. В наличии -->
-
-
-    <!-- 4. Подбор -->
-    <section class="container home-pick">
+<section class="container home-pick">
       <div class="home-row-head">
         <a href="/works/" class="home-text-link home-pick-all">Все работы →</a>
       </div>
@@ -1032,40 +1022,54 @@ footer a[href^="mailto:"],
       <p class="home-pick-footnote">Цена в ₽ — по курсу на день оплаты</p>
     </section>
 
-    <!-- 5. Как создаётся -->
-    <section class="container home-process">
+<section class="container home-process-valentin">
       <div class="home-row-head">
-        <div>
-          <p class="home-eyebrow">Как создаётся работа</p>
-          <h2 class="home-h32">Из нароста — в скульптуру</h2>
+        <p class="home-eyebrow">Как создаётся работа</p>
+        <h2 class="home-h32 home-process-title-right">Из нароста — в скульптуру</h2>
+      </div>
+      <div class="home-pv-grid">
+        <div class="home-pv-video">
+          <video controls playsinline preload="metadata" poster="/images/workshop/video-poster.jpg">
+            <source src="/images/workshop/process.mp4" type="video/mp4">
+            <source src="/video/workshop-process.mp4" type="video/mp4">
+          </video>
         </div>
-        <a href="/workshop/" class="home-text-link">Увидеть процесс в мастерской →</a>
-      </div>
-      <div class="home-process-grid">
-        <div class="home-process-card"><img src="/images/home/grid-04.jpg" alt="" loading="lazy"></div>
-        <div class="home-process-card"><img src="/images/home/grid-06.jpg" alt="" loading="lazy"></div>
-        <div class="home-process-card"><img src="/images/home/grid-07.jpg" alt="" loading="lazy"></div>
-        <div class="home-process-card"><img src="/images/home/grid-08.jpg" alt="" loading="lazy"></div>
-      </div>
-    </section>
-
-    <!-- 6. Об авторе -->
-    <section class="home-author">
-      <div class="container home-author-inner">
-        <div class="home-author-photo"><img src="/images/curators/curator-portrait.jpg" alt="Атрош Валентин" loading="lazy"></div>
-        <div class="home-author-text">
-          <h2 class="home-h32">Атрош Валентин</h2>
-          <p class="home-author-role">скульптор, автор арт‑объектов</p>
-          <p class="home-author-loc">Минск, Беларусь</p>
-          <p class="home-author-quote">Я узнаю в природной форме то, чего буквально в ней нет</p>
-          <p class="home-body">От управленческой карьеры к ремеслу. Берёзовый сувель — материал сложный и непредсказуемый. Каждый объект проходит восьмичасовую варку в солевом растворе и многоэтапную ручную шлифовку. Хотите увидеть процесс своими глазами? Приезжайте в гости.</p>
+        <div class="home-pv-side">
+          <div class="home-pv-photo">
+            <img src="/images/curators/curator-portrait.jpg" alt="Атрош Валентин" loading="lazy">
+          </div>
+          <p class="home-pv-caption">Атрош Валентин. Работает с сувелем с 2018 года. Мастерская в Минске</p>
+          <p class="home-body">Каждый объект проходит восьмичасовую варку в солёной воде, многоэтапную ручную шлифовку и авторский обжиг огнём.</p>
           <a href="/workshop/" class="home-btn-outline">В мастерскую</a>
         </div>
       </div>
     </section>
 
-    <!-- 7. Как купить -->
-    <section class="container home-buy" id="kak-kupit-home">
+
+    <section class="container home-awards-only">
+      <h2 class="home-h32" style="margin-top:48px;">Выставки и награды</h2>
+      <div class="home-awards-photos">
+        <a href="/events/united-by-art/" class="home-award-photo">
+          <img src="/images/events/sig-event-01.jpg" alt="UNITED BY ART" loading="lazy" onerror="this.onerror=null;this.src='/images/events/event-01.jpg'">
+          <p class="home-award-cap">UNITED BY ART — 3-е место</p>
+        </a>
+        <a href="/events/tryn-trava/" class="home-award-photo">
+          <img src="/images/events/event-01.jpg" alt="Трын*Трава" loading="lazy">
+          <p class="home-award-cap">«Трын*Трава» — три работы в основной экспозиции</p>
+        </a>
+        <a href="/events/istanbul-festival/" class="home-award-photo">
+          <img src="/images/events/sig-event-02.jpg" alt="Стамбул" loading="lazy" onerror="this.onerror=null;this.src='/images/events/event-artflection.jpg'">
+          <p class="home-award-cap">Турция, Стамбул</p>
+        </a>
+      </div>
+    
+      <p class="home-curators-quiet"><a href="/curators/" class="home-text-link">Artist Statement, CV, портфолио для кураторов →</a></p>
+    
+      <p class="home-curators-quiet"><a href="/curators/" class="home-text-link">Artist Statement, CV, портфолио для кураторов →</a></p>
+    </section>
+
+
+<section class="container home-buy" id="kak-kupit-home">
       <h2 class="home-h32">Как купить</h2>
       <div class="home-buy-steps">
         <div>
@@ -1100,8 +1104,7 @@ footer a[href^="mailto:"],
       </div>
     </section>
 
-    <!-- 8. События + награды -->
-    <section class="container home-events-new">
+<section class="container home-events-new">
       <p class="home-eyebrow">События. Анонсы. Истории</p>
       <div class="home-row-head">
         <h2 class="home-h32">Где увидеть работы</h2>
@@ -1128,24 +1131,11 @@ footer a[href^="mailto:"],
           <p class="home-event-desc">9-я выставка современного русского стиля</p>
         </a>
       </div>
-      <h2 class="home-h32" style="margin-top:48px;">Выставки и награды</h2>
-      <div class="home-awards-photos">
-        <a href="/events/united-by-art/" class="home-award-photo">
-          <img src="/images/events/sig-event-01.jpg" alt="UNITED BY ART" loading="lazy" onerror="this.onerror=null;this.src='/images/events/event-01.jpg'">
-          <p class="home-award-cap">UNITED BY ART — 3-е место</p>
-        </a>
-        <a href="/events/tryn-trava/" class="home-award-photo">
-          <img src="/images/events/event-01.jpg" alt="Трын*Трава" loading="lazy">
-          <p class="home-award-cap">«Трын*Трава» — три работы в основной экспозиции</p>
-        </a>
-        <a href="/events/istanbul-festival/" class="home-award-photo">
-          <img src="/images/events/sig-event-02.jpg" alt="Стамбул" loading="lazy" onerror="this.onerror=null;this.src='/images/events/event-artflection.jpg'">
-          <p class="home-award-cap">Турция, Стамбул</p>
-        </a>
-      </div>
+      
     </section>
 
   </main>
+
                         <footer class="site-footer">
   <div class="container">
     <div class="footer-grid-4">
