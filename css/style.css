@@ -10430,42 +10430,52 @@ a.nav-link-btn.nav-how-to-buy {
   .home-quote, .home-process-valentin, .home-awards-only { margin-bottom: 72px !important; }
 }
 
-/* === v2046 video height = photo === */
+/* === v2047 video size fit no bars === */
 .home-pv-grid {
   display: grid !important;
-  grid-template-columns: 1.2fr 0.8fr !important;
-  gap: 32px !important;
-  align-items: stretch !important;
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr) !important;
+  gap: 28px 36px !important;
+  align-items: start !important;
 }
 .home-pv-video {
-  min-height: 0 !important;
-  height: 100% !important;
+  width: 100% !important;
+  max-width: 420px !important;
+  margin: 0 !important;
+  background: transparent !important;
+  line-height: 0 !important;
 }
 .home-pv-video video {
   width: 100% !important;
-  height: 100% !important;
-  min-height: 100% !important;
-  object-fit: cover !important;
+  height: auto !important;
+  max-height: 520px !important;
   display: block !important;
-  background: #241C18 !important;
+  object-fit: contain !important;
+  background: transparent !important;
   aspect-ratio: auto !important;
+  min-height: 0 !important;
 }
 .home-pv-side {
   display: flex !important;
   flex-direction: column !important;
-  height: 100% !important;
+  max-width: 420px !important;
 }
 .home-pv-photo {
-  flex: 1 1 auto !important;
+  width: 100% !important;
   aspect-ratio: 4/5 !important;
-  min-height: 280px !important;
+  max-height: 520px !important;
+  overflow: hidden !important;
+  background: #EDE3D3 !important;
+  margin-bottom: 12px !important;
+}
+.home-pv-photo img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  display: block !important;
 }
 @media (max-width: 800px) {
   .home-pv-grid { grid-template-columns: 1fr !important; }
-  .home-pv-video { order: -1 !important; height: auto !important; }
-  .home-pv-video video {
-    aspect-ratio: 16/9 !important;
-    height: auto !important;
-    min-height: 0 !important;
-  }
+  .home-pv-video { order: -1 !important; max-width: 100% !important; }
+  .home-pv-video video { max-height: 360px !important; }
+  .home-pv-side { max-width: 100% !important; }
 }
