@@ -10430,82 +10430,6 @@ a.nav-link-btn.nav-how-to-buy {
   .home-quote, .home-process-valentin, .home-awards-only { margin-bottom: 72px !important; }
 }
 
-/* === v2048 home balance video quote pick === */
-.home-quote .container {
-  text-align: center !important;
-}
-.home-quote-text {
-  margin-left: auto !important;
-  margin-right: auto !important;
-  text-align: center !important;
-  max-width: 720px !important;
-  font-size: clamp(24px, 2.6vw, 30px) !important;
-}
-.home-quote-author {
-  text-align: center !important;
-}
-
-.home-process-valentin .home-row-head {
-  justify-content: flex-start !important;
-  text-align: left !important;
-}
-.home-process-valentin .home-h32 {
-  text-align: left !important;
-  margin-left: 0 !important;
-}
-
-/* видео ~55% ряда, фото ~40% — визуальный баланс */
-.home-pv-grid {
-  display: grid !important;
-  grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.85fr) !important;
-  gap: 32px 40px !important;
-  align-items: start !important;
-}
-.home-pv-video {
-  width: 100% !important;
-  max-width: none !important;
-  background: transparent !important;
-  line-height: 0 !important;
-}
-.home-pv-video video {
-  width: 100% !important;
-  height: auto !important;
-  max-height: 560px !important;
-  display: block !important;
-  object-fit: contain !important;
-  background: transparent !important;
-}
-.home-pv-side {
-  max-width: none !important;
-}
-.home-pv-photo {
-  aspect-ratio: 4/5 !important;
-  max-height: 560px !important;
-}
-
-/* крупнее карточки работ */
-.home-pick-grid {
-  grid-template-columns: repeat(3, 1fr) !important;
-  gap: 28px !important;
-}
-.home-pick-img {
-  aspect-ratio: 4/5 !important;
-  min-height: 0 !important;
-}
-@media (min-width: 901px) {
-  .home-pick-grid {
-    gap: 32px !important;
-  }
-  .home-pick-card .home-pick-img {
-    aspect-ratio: 3/4 !important;
-  }
-}
-@media (max-width: 800px) {
-  .home-pv-grid { grid-template-columns: 1fr !important; }
-  .home-pv-video { order: -1 !important; }
-  .home-pv-video video { max-height: 420px !important; }
-  .home-pick-grid { grid-template-columns: 1fr !important; }
-}
 
 /* === v2051 works filter tabs === */
 .works-title-row {
@@ -10548,3 +10472,54 @@ a.nav-link-btn.nav-how-to-buy {
 a.works-tab { display: inline-block !important; }
 .works-filter,
 .works-filter-select { display: none !important; }
+
+/* === v2049 process 4:5 video + photo === */
+.home-pv-grid {
+  display: grid !important;
+  grid-template-columns: 1fr 1fr !important;
+  gap: 24px 28px !important;
+  align-items: start !important;
+  margin-bottom: 24px !important;
+}
+.home-pv-video,
+.home-pv-photo {
+  width: 100% !important;
+  aspect-ratio: 4 / 5 !important;
+  overflow: hidden !important;
+  background: #EDE3D3 !important;
+  line-height: 0 !important;
+  max-width: none !important;
+  max-height: none !important;
+}
+.home-pv-video video {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  display: block !important;
+  background: #241C18 !important;
+  max-height: none !important;
+}
+.home-pv-photo img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  display: block !important;
+}
+.home-pv-below {
+  max-width: 640px !important;
+}
+.home-pv-below .home-pv-caption {
+  margin: 0 0 12px !important;
+  font-family: Manrope, sans-serif !important;
+  font-size: 15px !important;
+  line-height: 1.55 !important;
+  color: #6B5D52 !important;
+}
+.home-pv-below .home-body {
+  margin: 0 0 20px !important;
+}
+@media (max-width: 800px) {
+  .home-pv-grid { grid-template-columns: 1fr !important; }
+  .home-pv-video { order: 0 !important; }
+  .home-pv-photo { order: 1 !important; }
+}
