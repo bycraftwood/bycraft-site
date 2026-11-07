@@ -10506,3 +10506,45 @@ a.nav-link-btn.nav-how-to-buy {
   .home-pv-video video { max-height: 420px !important; }
   .home-pick-grid { grid-template-columns: 1fr !important; }
 }
+
+/* === v2051 works filter tabs === */
+.works-title-row {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  align-items: flex-end !important;
+  justify-content: space-between !important;
+  gap: 16px 24px !important;
+}
+.works-tabs {
+  display: flex !important;
+  flex-wrap: nowrap !important;
+  gap: 8px 20px !important;
+  overflow-x: auto !important;
+  -webkit-overflow-scrolling: touch !important;
+  scrollbar-width: none !important;
+  max-width: 100% !important;
+}
+.works-tabs::-webkit-scrollbar { display: none !important; }
+.works-tab {
+  flex: 0 0 auto !important;
+  font-family: Manrope, sans-serif !important;
+  font-size: 14px !important;
+  font-weight: 500 !important;
+  color: #6B5D52 !important;
+  background: none !important;
+  border: none !important;
+  border-bottom: 2px solid transparent !important;
+  padding: 6px 0 !important;
+  cursor: pointer !important;
+  text-decoration: none !important;
+  white-space: nowrap !important;
+  border-radius: 0 !important;
+}
+.works-tab:hover { color: #2A211C !important; }
+.works-tab.is-active {
+  color: #2A211C !important;
+  border-bottom-color: #B6452C !important;
+}
+a.works-tab { display: inline-block !important; }
+.works-filter,
+.works-filter-select { display: none !important; }

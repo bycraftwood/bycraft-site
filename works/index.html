@@ -50,7 +50,7 @@
 }
   </script>
   <link rel="icon" href="/images/favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="../css/style.css?v=2043">
+  <link rel="stylesheet" href="../css/style.css?v=2051">
 
 
 
@@ -1002,13 +1002,12 @@ footer a[href^="mailto:"],
     
     <div class="container works-title-row">
       <h1 class="page-h1 works-page-title">Скульптурные арт‑объекты из сувеля берёзы</h1>
-      <label class="visually-hidden" for="works-filter-select" style="position:absolute;left:-9999px;">Фильтр</label>
-      <select class="works-filter" id="works-filter-select" class="works-filter-select" aria-label="Фильтр работ">
-        <option value="all">Все работы</option>
-        <option value="available">В наличии</option>
-        <option value="exhibition">Выставочные</option>
-        <option value="archive">Архив</option>
-      </select>
+      <nav class="works-tabs" aria-label="Фильтр работ">
+        <button type="button" class="works-tab is-active" data-filter="available">В наличии (2)</button>
+        <button type="button" class="works-tab" data-filter="all">Все работы</button>
+        <a class="works-tab" href="/works/exhibitions/">Выставочные (5)</a>
+        <button type="button" class="works-tab" data-filter="archive">Архив (4)</button>
+      </nav>
     </div>
 
 
@@ -1902,6 +1901,35 @@ footer a[href^="mailto:"],
     } catch(err) {}
     return r;
   };
+})();
+</script>
+
+
+<script id="works-tabs-filter">
+(function(){
+  function apply(f){
+    document.querySelectorAll('.work-card[data-cat]').forEach(function(card){
+      if(f === 'all') { card.style.display = ''; return; }
+      card.style.display = (card.getAttribute('data-cat') === f) ? '' : 'none';
+    });
+  }
+  function ready(fn){
+    if(document.readyState === 'loading') document.addEventListener('DOMContentLoaded', fn);
+    else fn();
+  }
+  ready(function(){
+    var tabs = document.querySelectorAll('.works-tabs .works-tab[data-filter]');
+    if(!tabs.length) return;
+    tabs.forEach(function(tab){
+      tab.addEventListener('click', function(){
+        tabs.forEach(function(t){ t.classList.remove('is-active'); });
+        tab.classList.add('is-active');
+        apply(tab.getAttribute('data-filter'));
+      });
+    });
+    // default: В наличии
+    apply('available');
+  });
 })();
 </script>
 
