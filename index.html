@@ -49,7 +49,7 @@
 }
   </script>
   <link rel="icon" href="/images/favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="./css/style.css?v=2094">
+  <link rel="stylesheet" href="./css/style.css?v=2100">
 
 
 
@@ -999,36 +999,66 @@ footer a[href^="mailto:"],
 
   <div class="cube-bottom">
     <p class="cube-caption">Сувель берёзы · авторский обжиг</p>
-    <a href="#home-after-hero" class="cube-scroll">Листать экспозицию ↓</a>
+    <a href="#exposition" class="cube-scroll">Листать экспозицию ↓</a>
   </div>
 </section>
 <div id="home-after-hero" class="cube-anchor" tabindex="-1"></div>
-<section class="container home-pick">
-      <div class="home-row-head">
-        <a href="/works/" class="home-text-link home-pick-all">Все работы →</a>
+<section class="cube-expo" id="exposition">
+  <div class="g12">
+    <header class="expo-head g12-span-12">
+      <p class="expo-kicker">Экспозиция</p>
+      <h2 class="expo-title">Избранные объекты</h2>
+    </header>
+
+    <!-- объект 1: фото col 2–7, текст 8–12 -->
+    <article class="expo-row expo-row--a">
+      <a href="/works/work-188/" class="expo-figure expo-figure--left">
+        <img src="/images/works/work-188.jpg" alt="№ 188" loading="lazy">
+        <span class="expo-soft-shadow" aria-hidden="true"></span>
+      </a>
+      <div class="expo-meta expo-meta--right">
+        <p class="expo-num">№&nbsp;188 · Burnt burl</p>
+        <p class="expo-mat">Сувель берёзы, авторский обжиг</p>
+        <p class="expo-dims">В 20 × Ш 47 × Г 33&nbsp;см</p>
+        <p class="expo-avail">Доступен для приобретения</p>
+        <a href="/works/work-188/" class="expo-cta">Запросить стоимость →</a>
       </div>
-      <div class="home-pick-grid">
-        <article class="home-pick-card">
-          <a href="/works/work-188/" class="home-pick-img"><img src="/images/works/work-188.jpg" alt="№ 188" loading="lazy"></a>
-          <p class="home-pick-status">№&nbsp;188 · В наличии</p>
-          <p class="home-pick-price">795&nbsp;BYN · 22&nbsp;800&nbsp;₽</p>
-          <a href="/works/work-188/" class="home-text-link">Подробнее →</a>
-        </article>
-        <article class="home-pick-card">
-          <a href="/works/work-197/" class="home-pick-img"><img src="/images/works/work-197.jpg?v=2" alt="№ 197" loading="lazy"></a>
-          <p class="home-pick-status">№&nbsp;197 · В наличии</p>
-          <p class="home-pick-price">1&nbsp;300&nbsp;BYN · 37&nbsp;200&nbsp;₽</p>
-          <a href="/works/work-197/" class="home-text-link">Подробнее →</a>
-        </article>
-        <article class="home-pick-card">
-          <a href="/works/" class="home-pick-img"><img src="/images/works/work-248.jpg" alt="Работа" loading="lazy"></a>
-          <p class="home-pick-status is-sold">Продана</p>
-          <p class="home-pick-price">&nbsp;</p>
-          <a href="/works/" class="home-text-link">В каталог →</a>
-        </article>
+    </article>
+
+    <!-- объект 2: текст col 1–5, фото 6–11 (продан / частная коллекция) -->
+    <article class="expo-row expo-row--b">
+      <div class="expo-meta expo-meta--left">
+        <p class="expo-badge">В частной коллекции</p>
+        <p class="expo-num">№&nbsp;192 · Скульптура из сувеля</p>
+        <p class="expo-mat">Собрание: Минск</p>
+        <p class="expo-dims">Единственный экземпляр</p>
       </div>
-      <p class="home-pick-footnote">Цена в ₽ — по курсу на день оплаты</p>
-    </section>
+      <a href="/works/work-192/" class="expo-figure expo-figure--right">
+        <img src="/images/works/work-192.jpg" alt="№ 192" loading="lazy">
+        <span class="expo-soft-shadow" aria-hidden="true"></span>
+      </a>
+    </article>
+
+    <!-- объект 3: центр col 3–10 -->
+    <article class="expo-row expo-row--c">
+      <a href="/works/work-197/" class="expo-figure expo-figure--center">
+        <img src="/images/works/work-197.jpg?v=2" alt="№ 197" loading="lazy">
+        <span class="expo-soft-shadow" aria-hidden="true"></span>
+      </a>
+      <div class="expo-meta expo-meta--under">
+        <p class="expo-num">№&nbsp;197 · Пластина огня</p>
+        <p class="expo-mat">Сувель берёзы, авторский обжиг</p>
+        <p class="expo-dims">В 24 × Ш 37 × Г 33&nbsp;см</p>
+        <p class="expo-avail">Доступен для приобретения</p>
+        <a href="/works/work-197/" class="expo-cta">Запросить стоимость →</a>
+      </div>
+    </article>
+
+    <div class="expo-more g12-span-12">
+      <a href="/works/" class="expo-all">Все работы →</a>
+    </div>
+  </div>
+</section>
 
 <section class="container home-process-valentin">
       <div class="home-row-head">
