@@ -12352,3 +12352,146 @@ html body .cube-craft .craft-atelier-quote {
     grid-column: 1 / -1 !important;
   }
 }
+
+/* === v2104 recognition two wings === */
+html body .cube-recog {
+  width: 100% !important;
+  background: #F8F7F4 !important;
+  padding: 100px 0 120px !important;
+  box-sizing: border-box !important;
+}
+html body .cube-recog .g12 {
+  display: grid !important;
+  grid-template-columns: repeat(12, minmax(0, 1fr)) !important;
+  column-gap: clamp(16px, 1.6vw, 28px) !important;
+  padding-left: clamp(40px, 4.5vw, 72px) !important;
+  padding-right: clamp(40px, 4.5vw, 72px) !important;
+  width: 100% !important;
+  box-sizing: border-box !important;
+}
+html body .cube-recog .g12-span-12,
+html body .cube-recog .recog-head,
+html body .cube-recog .recog-wings {
+  grid-column: 1 / -1 !important;
+  width: 100% !important;
+}
+html body .cube-recog .recog-kicker {
+  font-family: 'Geist Mono', ui-monospace, monospace !important;
+  font-size: 11px !important;
+  letter-spacing: 0.14em !important;
+  text-transform: uppercase !important;
+  color: #6B5D52 !important;
+  margin: 0 0 48px !important;
+}
+html body .cube-recog .recog-wings {
+  display: grid !important;
+  grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr) !important;
+  column-gap: clamp(20px, 2.5vw, 40px) !important;
+  align-items: start !important;
+}
+html body .cube-recog .recog-section-label {
+  font-family: 'Geist Mono', ui-monospace, monospace !important;
+  font-size: 11px !important;
+  letter-spacing: 0.12em !important;
+  text-transform: uppercase !important;
+  color: #6B5D52 !important;
+  margin: 0 0 20px !important;
+}
+html body .cube-recog .recog-item {
+  margin-bottom: 28px !important;
+}
+html body .cube-recog .recog-item-year {
+  font-family: 'Geist Mono', ui-monospace, monospace !important;
+  font-size: 11px !important;
+  letter-spacing: 0.1em !important;
+  text-transform: uppercase !important;
+  color: #2A211C !important;
+  margin: 0 0 6px !important;
+}
+html body .cube-recog .recog-item-title {
+  font-family: Manrope, sans-serif !important;
+  font-size: 15px !important;
+  font-weight: 500 !important;
+  color: #2A211C !important;
+  margin: 0 0 6px !important;
+  line-height: 1.4 !important;
+}
+html body .cube-recog .recog-item-text {
+  font-family: Manrope, sans-serif !important;
+  font-size: 14px !important;
+  line-height: 1.6 !important;
+  color: #6B5D52 !important;
+  margin: 0 !important;
+  max-width: 36em !important;
+}
+html body .cube-recog .recog-pdf {
+  display: inline-block !important;
+  margin-top: 12px !important;
+  font-family: Manrope, sans-serif !important;
+  font-size: 14px !important;
+  font-weight: 500 !important;
+  color: #2A211C !important;
+  text-decoration: none !important;
+  border-bottom: 1px solid #2A211C !important;
+  padding-bottom: 2px !important;
+}
+html body .cube-recog .recog-pdf:hover {
+  color: #B6452C !important;
+  border-bottom-color: #B6452C !important;
+}
+
+html body .cube-recog .recog-spine {
+  width: 72px !important;
+  display: flex !important;
+  justify-content: center !important;
+  padding-top: 8px !important;
+  color: #6B5D52 !important;
+}
+html body .cube-recog .recog-wire {
+  width: 56px !important;
+  height: auto !important;
+  max-height: 220px !important;
+}
+
+html body .cube-recog .recog-manifest {
+  font-family: 'Cormorant Garamond', Georgia, serif !important;
+  font-size: clamp(18px, 1.7vw, 22px) !important;
+  line-height: 1.45 !important;
+  color: #2A211C !important;
+  margin: 0 0 32px !important;
+}
+html body .cube-recog .recog-right-rule {
+  height: 1px !important;
+  background: #E5E2DC !important;
+  margin: 0 0 28px !important;
+}
+html body .cube-recog .recog-collab {
+  font-family: Manrope, sans-serif !important;
+  font-size: 14px !important;
+  line-height: 1.65 !important;
+  color: #6B5D52 !important;
+  margin: 0 0 16px !important;
+  max-width: 36em !important;
+}
+html body .cube-recog .recog-designers {
+  font-family: Manrope, sans-serif !important;
+  font-size: 14px !important;
+  font-weight: 500 !important;
+  color: #2A211C !important;
+  text-decoration: none !important;
+  border-bottom: 1px solid #2A211C !important;
+  padding-bottom: 2px !important;
+}
+html body .cube-recog .recog-designers:hover {
+  color: #B6452C !important;
+  border-bottom-color: #B6452C !important;
+}
+
+@media (max-width: 900px) {
+  html body .cube-recog { padding: 64px 0 80px !important; }
+  html body .cube-recog .recog-wings {
+    grid-template-columns: 1fr !important;
+    row-gap: 40px !important;
+  }
+  html body .cube-recog .recog-spine { display: none !important; }
+}
