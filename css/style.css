@@ -11741,3 +11741,21 @@ body.page-cube .home-hero-split {
   }
   .cube-caption { max-width: 100% !important; }
 }
+
+/* === v2093 cube object 85vh === */
+.cube-object {
+  height: min(85dvh, 85vh) !important;
+  max-width: min(780px, 90vw) !important;
+}
+.cube-stage {
+  padding: 72px 40px 88px !important;
+}
+@media (max-width: 900px) {
+  .cube-object {
+    height: min(78dvh, 78vh) !important;
+    max-width: 94vw !important;
+  }
+  .cube-stage {
+    padding: 64px 16px 80px !important;
+  }
+}
