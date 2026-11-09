@@ -11508,3 +11508,20 @@ html body .product-detail .pd-other-grid {
     font-size: 32px !important;
   }
 }
+
+/* === v2072 other exhibit thumbs 4:5 centered === */
+.exhibit-detail .ex-other-img,
+.ex-other-img {
+  aspect-ratio: 4 / 5 !important;
+  overflow: hidden !important;
+  background: #EDE3D3 !important;
+  position: relative !important;
+}
+.exhibit-detail .ex-other-img img,
+.ex-other-img img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  object-position: center center !important;
+  display: block !important;
+}
