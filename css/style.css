@@ -13330,3 +13330,197 @@ html body.page-cube .lookbook-cta {
     font-size: 14px !important;
   }
 }
+
+/* === v2120 design system tokens (global) === */
+:root {
+  --ink: #1A1918;
+  --muted: #76736F;
+  --paper: #F8F7F4;
+  --line: #E5E2DC;
+  --ember: #B6452C;
+  --font-serif: 'Cormorant Garamond', Georgia, serif;
+  --font-sans: Manrope, system-ui, sans-serif;
+  --font-mono: 'Geist Mono', ui-monospace, monospace;
+}
+html, body {
+  background: var(--paper) !important;
+  color: var(--ink) !important;
+}
+body, p, li, td, th, label, input, textarea, select {
+  font-family: var(--font-sans) !important;
+  color: var(--ink) !important;
+}
+/* body / menu / section titles default */
+.site-header a,
+.cube-nav a,
+.cube-logo,
+.nav a,
+main p,
+main li,
+main a:not(.cta-btn):not(.btn-primary),
+.expo-title,
+.craft-atelier-title,
+.lookbook-price,
+.lookbook-more {
+  color: var(--ink) !important;
+}
+
+/* Epigraphs / quotes / manifests */
+.cube-manifest,
+.craft-epigraph,
+.cta-quote,
+.craft-atelier-quote,
+.recog-manifest,
+blockquote,
+.ex-quote,
+.home-quote-text {
+  font-family: var(--font-serif) !important;
+  font-weight: 400 !important;
+  font-size: 32px !important;
+  line-height: 1.1 !important;
+  letter-spacing: -0.01em !important;
+  color: var(--ink) !important;
+}
+.craft-atelier-quote,
+.ex-quote,
+blockquote.italic,
+.quote-italic {
+  font-style: italic !important;
+}
+
+/* Menu + body UI */
+.cube-nav a,
+.cube-logo,
+.cube-lang,
+.site-header a,
+.nav-link,
+.lookbook-price,
+.lookbook-more,
+.expo-cta,
+.craft-atelier-link,
+.recog-pdf,
+.recog-designers,
+.recog-event-link {
+  font-family: var(--font-sans) !important;
+  font-weight: 500 !important;
+  letter-spacing: 0.2em !important;
+  color: var(--ink) !important;
+}
+.craft-step-text,
+.recog-item-text,
+.recog-collab,
+.recog-visit-text,
+.cta-lead,
+.expo-item-text {
+  font-family: var(--font-sans) !important;
+  font-weight: 400 !important;
+  font-size: 16px !important;
+  letter-spacing: 0.2em !important;
+  color: var(--ink) !important;
+}
+
+/* Buttons */
+.cta-btn,
+.btn-primary,
+button[type="submit"],
+.btn-solid {
+  font-family: var(--font-sans) !important;
+  font-weight: 500 !important;
+  font-size: 13px !important;
+  letter-spacing: 0.04em !important;
+  text-transform: uppercase !important;
+  border-radius: 0 !important;
+  padding: 16px 32px !important;
+  background: var(--ink) !important;
+  color: var(--paper) !important;
+  border: 1px solid var(--ink) !important;
+}
+.cta-btn--ghost,
+.btn-outline {
+  background: transparent !important;
+  color: var(--ink) !important;
+  border: 1px solid var(--ink) !important;
+}
+
+/* Meta / mono */
+.sec-label,
+.expo-kicker,
+.craft-kicker,
+.recog-kicker,
+.lookbook-meta,
+.cube-caption,
+.craft-step-num,
+.recog-section-label,
+.recog-item-year,
+.recog-event-tag,
+.cta-foot,
+.ex-kicker,
+.pd-spec dt,
+.specs dt,
+.geist-meta {
+  font-family: var(--font-mono) !important;
+  font-weight: 400 !important;
+  font-size: 12px !important;
+  letter-spacing: 0.12em !important;
+  text-transform: uppercase !important;
+  color: var(--muted) !important;
+}
+
+/* Availability: text ink + ember dot */
+.lookbook-meta .is-avail,
+.status-in-stock {
+  color: var(--ink) !important;
+}
+.status-dot,
+.lookbook-dot {
+  display: inline-block !important;
+  width: 6px !important;
+  height: 6px !important;
+  border-radius: 50% !important;
+  background: var(--ember) !important;
+  margin-right: 8px !important;
+  vertical-align: middle !important;
+}
+.lookbook-no,
+.lot-bracket {
+  color: var(--ember) !important;
+}
+
+/* Lines */
+hr, .craft-divider, .recog-right-rule, .cta-rule,
+.site-footer,
+.line-soft {
+  border-color: var(--line) !important;
+  background-color: var(--line) !important;
+}
+
+/* Arrow hover */
+.lookbook-more .lookbook-arrow,
+.arrow-link span,
+a .arrow {
+  transition: color 0.3s ease !important;
+  color: var(--ink) !important;
+}
+.lookbook-more:hover .lookbook-arrow,
+.arrow-link:hover span,
+a:hover .arrow {
+  color: var(--ember) !important;
+}
+
+@media (max-width: 900px) {
+  .cube-manifest,
+  .craft-epigraph,
+  .cta-quote,
+  .craft-atelier-quote,
+  .recog-manifest,
+  blockquote {
+    font-size: 28px !important;
+  }
+  .craft-step-text,
+  .recog-item-text,
+  .lookbook-price,
+  .lookbook-more,
+  .cube-nav a {
+    font-size: 14px !important;
+  }
+}
