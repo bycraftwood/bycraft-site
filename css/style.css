@@ -13046,3 +13046,68 @@ html body.page-cube .cube-object::after {
     #F8F7F4 100%
   ) !important;
 }
+
+/* === v2112 spacing system home === */
+:root {
+  --home-pad-x: 80px;
+  --home-pad-x-m: 22px;
+  --home-block-gap: 120px;
+  --home-block-gap-m: 72px;
+}
+html body.page-cube .g12,
+html body.page-cube .cube-top,
+html body.page-cube .cube-bottom {
+  padding-left: var(--home-pad-x) !important;
+  padding-right: var(--home-pad-x) !important;
+  box-sizing: border-box !important;
+}
+html body.page-cube .cube-expo,
+html body.page-cube .cube-craft,
+html body.page-cube .cube-recog,
+html body.page-cube .cube-cta {
+  padding-top: var(--home-block-gap) !important;
+  padding-bottom: var(--home-block-gap) !important;
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+}
+html body.page-cube .cube-cta {
+  padding-bottom: 0 !important;
+}
+html body.page-cube .cube-cta .cta-foot {
+  margin-bottom: 48px !important;
+}
+html body.page-cube .cube-expo .expo-head,
+html body.page-cube .cube-craft .craft-head {
+  margin-bottom: 48px !important;
+}
+html body.page-cube .cube-expo .lookbook {
+  row-gap: 80px !important;
+}
+html body.page-cube .cube-craft .craft-triptych {
+  margin-bottom: 64px !important;
+}
+html body.page-cube .cube-craft .craft-divider {
+  margin-bottom: 56px !important;
+}
+
+@media (max-width: 900px) {
+  html body.page-cube .g12,
+  html body.page-cube .cube-top,
+  html body.page-cube .cube-bottom {
+    padding-left: var(--home-pad-x-m) !important;
+    padding-right: var(--home-pad-x-m) !important;
+  }
+  html body.page-cube .cube-expo,
+  html body.page-cube .cube-craft,
+  html body.page-cube .cube-recog,
+  html body.page-cube .cube-cta {
+    padding-top: var(--home-block-gap-m) !important;
+    padding-bottom: var(--home-block-gap-m) !important;
+  }
+  html body.page-cube .cube-cta {
+    padding-bottom: 0 !important;
+  }
+  html body.page-cube .cube-expo .lookbook {
+    row-gap: 48px !important;
+  }
+}
