@@ -11759,3 +11759,19 @@ body.page-cube .home-hero-split {
     padding: 64px 16px 80px !important;
   }
 }
+
+/* === v2094 home bg #F8F7F4; no split/quote === */
+html body.page-cube,
+html body.page-home,
+html body.page-cube main,
+html body.page-home main {
+  background: #F8F7F4 !important;
+}
+html body.page-cube main > section,
+html body.page-cube main > .container {
+  background: transparent !important;
+}
+.home-hero-split,
+.home-quote {
+  display: none !important;
+}
