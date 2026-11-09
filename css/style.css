@@ -12663,3 +12663,61 @@ html body .cube-cta .cta-rule {
   html body .cube-cta .cta-actions { flex-direction: column !important; align-items: stretch !important; }
   html body .cube-cta .cta-btn { width: 100% !important; }
 }
+
+/* === v2107 home cleanup + larger hero === */
+html body.page-cube > .site-header,
+html body.page-cube header.site-header {
+  display: none !important;
+}
+html body.page-cube .cube-hero {
+  padding-top: 0 !important;
+  margin-top: 0 !important;
+  background: #F8F7F4 !important;
+}
+html body.page-cube .cube-top {
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  z-index: 5 !important;
+  background: transparent !important;
+  padding-top: 24px !important;
+  padding-bottom: 12px !important;
+}
+html body.page-cube .cube-stage {
+  padding-top: 56px !important;
+  padding-bottom: 72px !important;
+}
+/* +50% к прежним ~85vh → ориентир ~100vh visual weight, cap sensible */
+html body.page-cube .cube-object {
+  height: min(92dvh, 92vh) !important;
+  max-width: min(92vw, 980px) !important;
+  width: auto !important;
+}
+html body.page-cube .cube-img {
+  height: 100% !important;
+  width: auto !important;
+  max-width: 100% !important;
+}
+html body.page-cube .lookbook-foot {
+  display: none !important;
+}
+html body.page-cube .home-process-valentin,
+html body.page-cube .home-awards-only,
+html body.page-cube .home-buy,
+html body.page-cube .home-events-new,
+html body.page-cube .home-pick,
+html body.page-cube .home-hero-split,
+html body.page-cube .home-quote {
+  display: none !important;
+}
+@media (max-width: 900px) {
+  html body.page-cube .cube-object {
+    height: min(78dvh, 78vh) !important;
+    max-width: 96vw !important;
+  }
+  html body.page-cube .cube-stage {
+    padding-top: 48px !important;
+    padding-bottom: 64px !important;
+  }
+}
