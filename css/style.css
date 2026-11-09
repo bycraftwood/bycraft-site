@@ -11429,3 +11429,82 @@ html body .product-detail .pd-other-grid {
   }
   .ex-other-grid { grid-template-columns: 1fr 1fr !important; }
 }
+
+/* === v2071 exhibit title in right col + photo sizes === */
+.exhibit-detail .ex-grid {
+  display: grid !important;
+  grid-template-columns: minmax(0, 3fr) minmax(0, 2fr) !important;
+  column-gap: 64px !important;
+  align-items: start !important;
+}
+.exhibit-detail .ex-gallery {
+  width: 100% !important;
+  max-width: 681px !important;
+}
+.exhibit-detail .ex-main {
+  width: 100% !important;
+  max-width: 681px !important;
+  aspect-ratio: 4 / 5 !important;
+  height: auto !important;
+  overflow: hidden !important;
+  background: #EDE3D3 !important;
+}
+.exhibit-detail .ex-main img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  object-position: center !important;
+  display: block !important;
+}
+.exhibit-detail .ex-thumbs {
+  display: grid !important;
+  grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  gap: 12px !important;
+  margin-top: 12px !important;
+  max-width: 681px !important;
+}
+.exhibit-detail .ex-thumb {
+  aspect-ratio: 1 / 1 !important;
+  overflow: hidden !important;
+}
+.exhibit-detail .ex-thumb img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  object-position: center !important;
+}
+.exhibit-detail .ex-info {
+  position: sticky !important;
+  top: 96px !important;
+  max-width: 455px !important;
+  width: 100% !important;
+}
+.exhibit-detail .ex-info .ex-kicker {
+  margin: 0 0 10px !important;
+}
+.exhibit-detail .ex-info .ex-title-row {
+  flex-direction: column !important;
+  align-items: flex-start !important;
+  gap: 12px !important;
+  margin: 0 0 28px !important;
+}
+.exhibit-detail .ex-info .ex-title {
+  font-size: 42px !important;
+}
+@media (max-width: 900px) {
+  .exhibit-detail .ex-grid {
+    grid-template-columns: 1fr !important;
+  }
+  .exhibit-detail .ex-gallery,
+  .exhibit-detail .ex-main,
+  .exhibit-detail .ex-thumbs {
+    max-width: 100% !important;
+  }
+  .exhibit-detail .ex-info {
+    position: static !important;
+    max-width: 100% !important;
+  }
+  .exhibit-detail .ex-info .ex-title {
+    font-size: 32px !important;
+  }
+}
