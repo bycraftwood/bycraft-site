@@ -11995,3 +11995,76 @@ html body.page-cube main {
   .expo-figure img { max-height: 55vh !important; }
   .expo-head { margin-bottom: 40px !important; }
 }
+
+/* === v2101 expo rows full width of g12 === */
+html body .cube-expo .g12 {
+  display: grid !important;
+  grid-template-columns: repeat(12, minmax(0, 1fr)) !important;
+  column-gap: clamp(16px, 1.6vw, 28px) !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  padding-left: clamp(40px, 4.5vw, 72px) !important;
+  padding-right: clamp(40px, 4.5vw, 72px) !important;
+  box-sizing: border-box !important;
+}
+html body .cube-expo .expo-head,
+html body .cube-expo .expo-row,
+html body .cube-expo .expo-more {
+  grid-column: 1 / -1 !important;
+  width: 100% !important;
+  max-width: 100% !important;
+}
+html body .cube-expo .expo-row {
+  display: grid !important;
+  grid-template-columns: repeat(12, minmax(0, 1fr)) !important;
+  column-gap: clamp(16px, 1.6vw, 28px) !important;
+  align-items: end !important;
+  margin-bottom: 120px !important;
+}
+html body .cube-expo .expo-row--a .expo-figure--left {
+  grid-column: 2 / 8 !important;
+}
+html body .cube-expo .expo-row--a .expo-meta--right {
+  grid-column: 8 / 13 !important;
+  align-self: end !important;
+  padding-bottom: 6% !important;
+}
+html body .cube-expo .expo-row--b {
+  align-items: start !important;
+  padding-top: 32px !important;
+}
+html body .cube-expo .expo-row--b .expo-meta--left {
+  grid-column: 1 / 6 !important;
+  padding-top: 10% !important;
+}
+html body .cube-expo .expo-row--b .expo-figure--right {
+  grid-column: 6 / 12 !important;
+}
+html body .cube-expo .expo-row--c .expo-figure--center {
+  grid-column: 3 / 11 !important;
+}
+html body .cube-expo .expo-row--c .expo-meta--under {
+  grid-column: 3 / 11 !important;
+  margin-top: 18px !important;
+}
+html body .cube-expo .expo-figure img {
+  width: 100% !important;
+  height: auto !important;
+  max-height: 70vh !important;
+  object-fit: contain !important;
+  display: block !important;
+}
+@media (max-width: 900px) {
+  html body .cube-expo .expo-row {
+    grid-template-columns: minmax(0, 1fr) !important;
+    margin-bottom: 72px !important;
+  }
+  html body .cube-expo .expo-row--a .expo-figure--left,
+  html body .cube-expo .expo-row--a .expo-meta--right,
+  html body .cube-expo .expo-row--b .expo-meta--left,
+  html body .cube-expo .expo-row--b .expo-figure--right,
+  html body .cube-expo .expo-row--c .expo-figure--center,
+  html body .cube-expo .expo-row--c .expo-meta--under {
+    grid-column: 1 / -1 !important;
+  }
+}
