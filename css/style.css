@@ -13908,3 +13908,140 @@ html body .cookie-banner__text p,
 html body .cookie-banner__text strong {
   color: #1A1918 !important;
 }
+
+/* === v2129 works page collection === */
+.works-page-title,
+h1.works-page-title {
+  font-family: 'Cormorant Garamond', Georgia, serif !important;
+  font-weight: 400 !important;
+  font-size: 32px !important;
+  color: #1A1918 !important;
+  letter-spacing: normal !important;
+  line-height: normal !important;
+}
+.works-tabs {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  gap: 8px 20px !important;
+  margin-top: 20px !important;
+}
+.works-tab {
+  font-family: 'Geist Mono', ui-monospace, monospace !important;
+  font-size: 12px !important;
+  text-transform: uppercase !important;
+  letter-spacing: normal !important;
+  color: #76736F !important;
+  background: none !important;
+  border: none !important;
+  padding: 0 !important;
+  cursor: pointer !important;
+  text-decoration: none !important;
+}
+.works-tab.is-active {
+  color: #1A1918 !important;
+  border-bottom: 1px solid #B6452C !important;
+}
+.works-page-intro .lead-text {
+  font-family: Manrope, sans-serif !important;
+  font-weight: 400 !important;
+  font-size: 16px !important;
+  color: #1A1918 !important;
+  letter-spacing: normal !important;
+  max-width: 42em !important;
+}
+.work-card-meta {
+  margin-top: 12px !important;
+}
+.work-lot,
+.work-avail,
+.work-private {
+  font-family: 'Geist Mono', ui-monospace, monospace !important;
+  font-size: 12px !important;
+  text-transform: uppercase !important;
+  color: #76736F !important;
+  margin: 0 0 4px !important;
+  letter-spacing: normal !important;
+}
+.work-avail {
+  color: #1A1918 !important;
+  display: flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+}
+.work-dot {
+  width: 6px !important;
+  height: 6px !important;
+  border-radius: 50% !important;
+  background: #B6452C !important;
+  display: inline-block !important;
+}
+.work-price-line {
+  font-family: Manrope, sans-serif !important;
+  font-size: 16px !important;
+  color: #1A1918 !important;
+  margin: 6px 0 !important;
+}
+.work-passport {
+  font-family: Manrope, sans-serif !important;
+  font-size: 14px !important;
+  color: #1A1918 !important;
+}
+.work-card a:hover .work-passport {
+  color: #B6452C !important;
+}
+#kak-kupit,
+.how-to-buy,
+section:has(> .section-title-32) {
+  /* how-to-buy removed in html; hide residual */
+}
+.geography-section,
+#geography {
+  background: transparent !important;
+  background-color: transparent !important;
+  border-top: 1px solid #E5E2DC !important;
+  padding-top: 48px !important;
+  margin-top: 48px !important;
+}
+.geography-title {
+  font-family: 'Geist Mono', ui-monospace, monospace !important;
+  font-size: 12px !important;
+  text-transform: uppercase !important;
+  color: #76736F !important;
+  letter-spacing: normal !important;
+}
+.geo-stats-line {
+  font-family: Manrope, sans-serif !important;
+  font-size: 16px !important;
+  color: #1A1918 !important;
+  margin: 12px 0 20px !important;
+}
+.geo-before-intro {
+  font-family: Manrope, sans-serif !important;
+  font-weight: 400 !important;
+  font-size: 16px !important;
+  color: #76736F !important;
+  letter-spacing: normal !important;
+}
+.geo-continent-title,
+.geo-col-title,
+.geography-section .continent-name {
+  font-family: 'Geist Mono', ui-monospace, monospace !important;
+  font-size: 12px !important;
+  font-weight: 500 !important;
+  text-transform: uppercase !important;
+  color: #1A1918 !important;
+  letter-spacing: normal !important;
+}
+.geography-section .country,
+.geography-section li,
+.geo-countries,
+.geo-col li {
+  font-family: Manrope, sans-serif !important;
+  font-weight: 400 !important;
+  font-size: 12px !important;
+  color: #76736F !important;
+  letter-spacing: normal !important;
+}
+@media (max-width: 900px) {
+  .works-page-title { font-size: 28px !important; }
+}
