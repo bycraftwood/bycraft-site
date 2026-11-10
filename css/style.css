@@ -13662,3 +13662,66 @@ html body.page-cube .cube-stage {
     font-size: 14px !important;
   }
 }
+
+/* === v2122 fonts pure — no tracking / leading overrides === */
+html body,
+html body *:not(script):not(style) {
+  letter-spacing: normal !important;
+  line-height: normal !important;
+}
+
+/* families only */
+html body,
+html body p,
+html body li,
+html body a,
+html body button,
+html body input,
+html body textarea,
+html body label,
+html body .site-top-logo,
+html body .site-top-nav a,
+html body .site-top-lang,
+html body .lookbook-price,
+html body .lookbook-more,
+html body .craft-step-text,
+html body .recog-item-text,
+html body .cta-lead,
+html body .cta-btn,
+html body .btn-primary {
+  font-family: Manrope, system-ui, sans-serif !important;
+}
+
+html body .cube-manifest,
+html body .craft-epigraph,
+html body .cta-quote,
+html body .craft-atelier-quote,
+html body .recog-manifest,
+html body blockquote,
+html body .ex-quote,
+html body .ex-title,
+html body h1,
+html body h2,
+html body h3 {
+  font-family: 'Cormorant Garamond', Georgia, serif !important;
+}
+
+html body .sec-label,
+html body .expo-kicker,
+html body .craft-kicker,
+html body .recog-kicker,
+html body .lookbook-meta,
+html body .cube-caption,
+html body .craft-step-num,
+html body .recog-section-label,
+html body .recog-item-year,
+html body .recog-event-tag,
+html body .cta-foot,
+html body .ex-kicker,
+html body .geist-meta,
+html body .pd-spec dt,
+html body .specs dt {
+  font-family: 'Geist Mono', ui-monospace, monospace !important;
+}
+
+/* keep size/weight/color from prior design where needed, but no ls/lh */
