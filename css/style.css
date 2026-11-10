@@ -14318,3 +14318,93 @@ html body main:has(.contacts-page),
     gap: 40px !important;
   }
 }
+
+/* === v2133 contacts buttons + no underlay + footer === */
+html body.page-contacts,
+html body.page-contacts main,
+html body:has(.contacts-page),
+html body:has(.contacts-page) main,
+.contacts-page,
+.contacts-page .container {
+  background: #F8F7F4 !important;
+  background-color: #F8F7F4 !important;
+  box-shadow: none !important;
+}
+html body.page-contacts main {
+  background: #F8F7F4 !important;
+}
+/* kill residual dark/beige plates */
+.contacts-page [style*="background"],
+.contacts-grid-2,
+.contacts-left,
+.contacts-right,
+.contacts-people,
+.contacts-editorial,
+.editorial-block {
+  background: transparent !important;
+  background-color: transparent !important;
+  box-shadow: none !important;
+  border: none !important;
+}
+
+.contacts-cta-top {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  gap: 12px !important;
+  margin-bottom: 56px !important;
+}
+.contacts-cta-top .btn-tg-solid,
+.contacts-cta-top a.btn-tg-solid {
+  background: #1A1918 !important;
+  color: #F8F7F4 !important;
+  border: 1px solid #1A1918 !important;
+  font-family: Manrope, sans-serif !important;
+  font-weight: 500 !important;
+  font-size: 15px !important;
+  padding: 14px 32px !important;
+  min-width: 220px !important;
+  text-align: center !important;
+  border-radius: 0 !important;
+  text-decoration: none !important;
+}
+.contacts-cta-top .btn-ig-outline,
+.contacts-cta-top a.btn-ig-outline {
+  background: transparent !important;
+  color: #1A1918 !important;
+  border: 1px solid #1A1918 !important;
+  font-family: Manrope, sans-serif !important;
+  font-weight: 500 !important;
+  font-size: 15px !important;
+  padding: 14px 32px !important;
+  min-width: 220px !important;
+  text-align: center !important;
+  border-radius: 0 !important;
+  text-decoration: none !important;
+}
+
+/* product page telegram outline stays readable; solid primary */
+.product-detail .pd-btn-outline {
+  color: #1A1918 !important;
+  border: 1px solid #1A1918 !important;
+  background: transparent !important;
+}
+.product-detail .pd-btn-primary {
+  color: #F8F7F4 !important;
+  background: #1A1918 !important;
+}
+
+/* contacts footer = global footer paper */
+html body.page-contacts .site-footer,
+html body:has(.contacts-page) .site-footer {
+  background: #F8F7F4 !important;
+  color: #1A1918 !important;
+  border-top: 1px solid #E5E2DC !important;
+}
+html body.page-contacts .site-footer *,
+html body:has(.contacts-page) .site-footer * {
+  color: #1A1918 !important;
+}
+html body.page-contacts .site-footer a:hover {
+  color: #B6452C !important;
+}
