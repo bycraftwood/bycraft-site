@@ -118,7 +118,7 @@
     banner.innerHTML =
       '<div class="cookie-banner__text">' +
       "<strong>Мы используем файлы cookie</strong>" +
-      "<p>Они помогают улучшать пользовательский опыт. Продолжая, вы соглашаетесь на их использование.</p>" +
+      "<p>Мы используем файлы cookie для корректной работы сайта и сбора статистики. Вы можете изменить параметры в настройках cookie в любое время.</p>" +
       "</div>" +
       '<div class="cookie-banner__actions">' +
       '<button type="button" class="cookie-btn cookie-btn--primary" id="cookieAcceptAll">Принять все</button>' +

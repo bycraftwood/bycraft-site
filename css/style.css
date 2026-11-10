@@ -13895,3 +13895,16 @@ html body .footer .btn-footer-outline:hover {
   background: #1A1918 !important;
   border-color: #1A1918 !important;
 }
+
+/* === v2128 footer links + cookie text color === */
+html body .site-footer .footer-bottom a,
+html body .site-footer a[href="/privacy/"],
+html body .site-footer a[href*="privacy"] {
+  color: #1A1918 !important;
+}
+html body .cookie-banner,
+html body .cookie-banner__text,
+html body .cookie-banner__text p,
+html body .cookie-banner__text strong {
+  color: #1A1918 !important;
+}
