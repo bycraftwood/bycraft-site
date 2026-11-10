@@ -14059,26 +14059,7 @@ section:has(> .section-title-32) {
   font-size: 16px !important;
   color: #1A1918 !important;
 }
-#geography.geography-section,
-.geography-section {
-  width: 100% !important;
-  max-width: 100% !important;
-  background: transparent !important;
-  background-color: transparent !important;
-  box-shadow: none !important;
-  border-top: 1px solid #E5E2DC !important;
-  padding-top: 48px !important;
-  margin-top: 56px !important;
-}
-.geography-section .geo-inner,
-.geography-section .container {
-  width: 100% !important;
-  max-width: 100% !important;
-  background: transparent !important;
-  padding-left: 80px !important;
-  padding-right: 80px !important;
-  box-sizing: border-box !important;
-}
+/* superseded by v2131 */
 .geo-before-intro {
   font-family: Manrope, sans-serif !important;
   font-size: 16px !important;
@@ -14097,5 +14078,125 @@ section:has(> .section-title-32) {
   .geography-section .container {
     padding-left: 22px !important;
     padding-right: 22px !important;
+  }
+}
+
+/* === v2131 works content width 12-col shell === */
+:root {
+  --works-max: 1200px;
+  --works-pad: 80px;
+  --works-pad-m: 22px;
+}
+/* common content shell */
+.works-intro-block.container,
+.works-intro-block,
+section.container.works-intro-block,
+.works-title-row.container,
+.works-title-row,
+section.container:has(.works-six-grid),
+.geography-section.container,
+#geography.geography-section {
+  width: 100% !important;
+  max-width: var(--works-max) !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  padding-left: var(--works-pad) !important;
+  padding-right: var(--works-pad) !important;
+  box-sizing: border-box !important;
+}
+.works-page-intro,
+.works-page-intro .lead-text {
+  width: 100% !important;
+  max-width: 100% !important;
+}
+
+#geography.geography-section,
+.geography-section {
+  background: transparent !important;
+  background-color: transparent !important;
+  border-top: 1px solid #E5E2DC !important;
+  padding-top: 48px !important;
+  margin-top: 56px !important;
+  margin-bottom: 80px !important;
+  box-shadow: none !important;
+}
+.geography-section .geo-inner {
+  all: unset !important;
+  display: block !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  background: transparent !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+.geography-section .geo-head,
+.geography-section .geo-stat,
+.geography-section .geo-stats {
+  background: transparent !important;
+  box-shadow: none !important;
+  border: none !important;
+}
+.geo-before-intro {
+  font-family: Manrope, sans-serif !important;
+  font-size: 16px !important;
+  color: #76736F !important;
+  margin: 0 0 12px !important;
+}
+.geography-title {
+  font-family: 'Geist Mono', ui-monospace, monospace !important;
+  font-size: 12px !important;
+  text-transform: uppercase !important;
+  color: #76736F !important;
+  margin: 0 0 10px !important;
+}
+.geo-stats-line {
+  font-family: Manrope, sans-serif !important;
+  font-size: 16px !important;
+  color: #1A1918 !important;
+  margin: 0 0 28px !important;
+}
+.map-continents-grid {
+  display: grid !important;
+  grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+  gap: 24px !important;
+  margin-top: 28px !important;
+  background: transparent !important;
+}
+.continent-group {
+  background: transparent !important;
+  border: none !important;
+  padding: 0 !important;
+  box-shadow: none !important;
+}
+.continent-group h4 {
+  font-family: 'Geist Mono', ui-monospace, monospace !important;
+  font-size: 12px !important;
+  font-weight: 500 !important;
+  text-transform: uppercase !important;
+  color: #1A1918 !important;
+  margin: 0 0 8px !important;
+}
+.continent-countries {
+  font-family: Manrope, sans-serif !important;
+  font-size: 12px !important;
+  color: #76736F !important;
+  margin: 0 !important;
+}
+.map-svg-wrap {
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+}
+@media (max-width: 900px) {
+  .works-intro-block,
+  .works-title-row,
+  section.container:has(.works-six-grid),
+  #geography.geography-section {
+    padding-left: var(--works-pad-m) !important;
+    padding-right: var(--works-pad-m) !important;
+  }
+  .map-continents-grid {
+    grid-template-columns: 1fr 1fr !important;
   }
 }
