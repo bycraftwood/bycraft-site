@@ -49,7 +49,7 @@
 }
   </script>
   <link rel="icon" href="/images/favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="./css/style.css?v=2120">
+  <link rel="stylesheet" href="./css/style.css?v=2121">
 
 
 
@@ -950,22 +950,24 @@ footer a[href^="mailto:"],
 </head>
 <body class="page-home page-cube"
       <main>
-<section class="cube-hero" aria-label="Экспозиция">
-  <header class="cube-top">
-    <a href="/" class="cube-logo">BYCRAFT</a>
-    <nav class="cube-nav" aria-label="Меню">
+<header class="site-top g12-top" role="banner">
+  <div class="site-top-inner">
+    <a href="/" class="site-top-logo">BYCRAFT</a>
+    <nav class="site-top-nav" aria-label="Меню">
       <a href="/works/">Работы</a>
       <a href="/workshop/">Мастерская</a>
       <a href="/events/">События</a>
       <a href="/contacts/">Контакты</a>
     </nav>
-    <div class="cube-top-right">
-      <span class="cube-lang"><a href="/en/">EN</a> / <span>RU</span></span>
-</div>
-    <button type="button" class="cube-menu-btn" aria-label="Меню"
-      onclick="document.body.classList.toggle('cube-nav-open')">Menu</button>
-  </header>
+    <div class="site-top-right">
+      <span class="site-top-lang"><a href="/en/">EN</a> / <span>RU</span></span>
+      <button type="button" class="site-top-menu-btn" aria-label="Меню"
+        onclick="document.body.classList.toggle('nav-open')">Menu</button>
+    </div>
+  </div>
+</header>
 
+<section class="cube-hero" aria-label="Экспозиция">
   <div class="cube-stage">
     <div class="cube-object">
       <img src="/images/home/grid-01.jpg?v=5" alt="Скульптура из сувеля берёзы" class="cube-img">
@@ -1034,7 +1036,7 @@ footer a[href^="mailto:"],
     <div class="craft-triptych g12-span-12">
       <article class="craft-step">
         <div class="craft-photo">
-          <img src="/images/workshop/process-01.jpg" alt="Дикий сувель" loading="lazy"
+          <img src="/images/workshop/process-01.jpg?v=2" alt="Дикий сувель" loading="lazy"
                onerror="this.onerror=null;this.src='/images/home/grid-01.jpg'">
         </div>
         <p class="craft-step-num">01 · Аномалия природы</p>
@@ -1042,7 +1044,7 @@ footer a[href^="mailto:"],
       </article>
       <article class="craft-step">
         <div class="craft-photo">
-          <img src="/images/workshop/process-02.jpg" alt="Процесс работы" loading="lazy"
+          <img src="/images/workshop/process-02.jpg?v=2" alt="Процесс работы" loading="lazy"
                onerror="this.onerror=null;this.src='/images/home/grid-02.jpg'">
         </div>
         <p class="craft-step-num">02 · 8 часов вываривания</p>
@@ -1050,7 +1052,7 @@ footer a[href^="mailto:"],
       </article>
       <article class="craft-step">
         <div class="craft-photo">
-          <img src="/images/workshop/process-03.jpg" alt="Обжиг огнём" loading="lazy"
+          <img src="/images/workshop/process-03.jpg?v=2" alt="Обжиг огнём" loading="lazy"
                onerror="this.onerror=null;this.src='/images/home/grid-03.jpg'">
         </div>
         <p class="craft-step-num">03 · Авторский обжиг</p>
@@ -1093,13 +1095,7 @@ footer a[href^="mailto:"],
           <p class="recog-item-title">Международная выставка-конкурс «UNITED BY ART»</p>
           <p class="recog-item-text">3-е место в номинации «Человек и его мир», раздел скульптура. Москва / «Гоголь Арт».</p>
         </article>
-
-        <article class="recog-item">
-          <p class="recog-item-year">География собраний</p>
-          <p class="recog-item-text">Скульптуры находятся в частных интерьерах и закрытых коллекциях Беларуси, России и Европы.</p>
-        </article>
-
-        <a href="/curators/" class="recog-pdf">Скачать биографию и выставочный CV автора (PDF) ↓</a>
+<a href="/works/exhibitions/" class="recog-pdf">Смотреть выставочный архив (5 объектов) →</a>
       </div>
 <div class="recog-right">
         <p class="recog-section-label">Ближайшая экспозиция</p>
