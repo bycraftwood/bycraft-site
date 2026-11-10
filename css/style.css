@@ -13850,3 +13850,48 @@ html body, html body * {
   .product-detail .pd-price-rub { font-size: 14px !important; }
   .product-detail .pd-price-note { font-size: 10px !important; }
 }
+
+/* === v2127 footer paper === */
+html body .site-footer,
+html body footer.site-footer,
+html body footer.footer,
+html body .footer {
+  background: #F8F7F4 !important;
+  background-color: #F8F7F4 !important;
+  color: #1A1918 !important;
+  border-top: 1px solid #E5E2DC !important;
+  box-shadow: none !important;
+}
+html body .site-footer *,
+html body footer.site-footer *,
+html body footer.footer *,
+html body .footer * {
+  color: #1A1918 !important;
+}
+html body .site-footer a,
+html body footer.site-footer a,
+html body footer.footer a,
+html body .footer a {
+  color: #1A1918 !important;
+  text-decoration: none !important;
+}
+html body .site-footer a:hover,
+html body footer.site-footer a:hover,
+html body footer.footer a:hover,
+html body .footer a:hover {
+  color: #B6452C !important;
+}
+html body .site-footer .btn-footer-outline,
+html body .footer .btn-footer-outline,
+html body .site-footer .btn,
+html body .footer .btn {
+  color: #1A1918 !important;
+  border: 1px solid #1A1918 !important;
+  background: transparent !important;
+}
+html body .site-footer .btn-footer-outline:hover,
+html body .footer .btn-footer-outline:hover {
+  color: #F8F7F4 !important;
+  background: #1A1918 !important;
+  border-color: #1A1918 !important;
+}
