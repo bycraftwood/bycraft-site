@@ -970,8 +970,8 @@ img, video {
 .site-footer {
   margin-top: auto;
   padding: 50px 0;
-  background-color: #222629;
-  color: #FFFFFF;
+  background-color: #F8F7F4;
+  color: #1A1918;
   font-size: 14px;
   line-height: 1.7;
 }
@@ -1457,7 +1457,7 @@ img, video {
   display: inline-block;
   padding: 10px 22px;
   background-color: var(--color-primary) !important;
-  color: #FFFFFF !important;
+  color: #1A1918 !important;
   font-size: 14.5px;
   font-weight: 500;
   letter-spacing: normal;
@@ -1468,7 +1468,7 @@ img, video {
 }
 .nav-link-btn:hover {
   background-color: #000000 !important;
-  color: #FFFFFF !important;
+  color: #1A1918 !important;
   opacity: 1;
 }
 
@@ -1637,7 +1637,7 @@ img, video {
   align-self: flex-start !important;
   padding: 6px 16px !important;
   background: var(--color-primary) !important;
-  color: #FFFFFF !important;
+  color: #1A1918 !important;
   border: none !important;
   font-size: 11.5px !important;
   font-weight: 500 !important;
@@ -1771,7 +1771,7 @@ picture img {
 /* Фирменные цвета кнопок соцсетей */
 .btn-social-tg {
   background-color: #229ED9 !important;
-  color: #FFFFFF !important;
+  color: #1A1918 !important;
   border: none !important;
 }
 .btn-social-tg:hover {
@@ -1780,7 +1780,7 @@ picture img {
 
 .btn-social-ig {
   background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%) !important;
-  color: #FFFFFF !important;
+  color: #1A1918 !important;
   border: none !important;
 }
 .btn-social-ig:hover {
@@ -1829,7 +1829,7 @@ picture img {
 .btn-footer-white {
   display: inline-block;
   padding: 7px 16px;
-  background-color: #FFFFFF !important;
+  background-color: #1A1918 !important;
   color: #222629 !important;
   font-size: 13px;
   font-weight: 500;
@@ -1859,18 +1859,18 @@ picture img {
 .footer-col-1 p:first-child {
   font-size: 12px !important;
   font-weight: 600 !important;
-  color: #FFFFFF !important;
+  color: #1A1918 !important;
   margin-bottom: 7px !important;
 }
 
 .footer-col-1 a {
   font-size: 11px !important;
-  color: #FFFFFF !important;
+  color: #1A1918 !important;
   text-decoration: none !important;
 }
 
 .footer-col-1 a:hover {
-  color: #FFFFFF !important;
+  color: #1A1918 !important;
 }
 
 /* Кнопки соцсетей в цвет подвала с тонким белым контуром */
@@ -1878,7 +1878,7 @@ picture img {
   display: inline-block;
   padding: 6px 16px;
   background-color: transparent !important;
-  color: #FFFFFF !important;
+  color: #1A1918 !important;
   border: 1px solid rgba(255, 255, 255, 0.75) !important;
   font-size: 13px;
   font-weight: 500;
@@ -1888,9 +1888,9 @@ picture img {
 }
 
 .btn-footer-outline:hover {
-  background-color: #FFFFFF !important;
+  background-color: #1A1918 !important;
   color: #222629 !important;
-  border-color: #FFFFFF !important;
+  border-color: #1A1918 !important;
 }
 
 
@@ -2824,7 +2824,7 @@ main > section.container {
 .footer-col-1 a,
 .footer-contact-title,
 .footer-contact-group {
-  color: #EEEEEE !important;
+  color: #1A1918 !important;
 }
 .site-footer a[style*="#ADB5BD"],
 .footer-col-1 a {
@@ -2936,7 +2936,7 @@ main > section.container {
 
 /* === GALLERY DESIGN SYSTEM v1 === */
 html, body {
-  background-color: #FFFFFF !important;
+  background-color: #1A1918 !important;
   color: var(--color-primary, #2A211C) !important;
 }
 .site-header {
@@ -3025,7 +3025,7 @@ h1.hero-title {
 
 /* === HOME + EXHIBITS + FOOTER TWEAKS === */
 html, body {
-  background-color: #FFFFFF !important;
+  background-color: #1A1918 !important;
   color: var(--color-primary, #2A211C);
 }
 .site-header {
@@ -3149,14 +3149,14 @@ html, body {
 .btn-telegram,
 .btn-telegram:visited {
   background-color: var(--color-primary, #2A211C) !important;
-  color: #FFFFFF !important;
+  color: #1A1918 !important;
   border: 1px solid #1A1A1A !important;
   font-size: 14px !important;
   text-decoration: none !important;
 }
 .btn-telegram:hover {
   opacity: 0.85 !important;
-  color: #FFFFFF !important;
+  color: #1A1918 !important;
 }
 
 /* Заголовки секций на главной */
@@ -3198,11 +3198,11 @@ html, body {
 .footer-col-1,
 .footer-col-1 p,
 .footer-col-1 a {
-  color: #FFFFFF !important;
+  color: #1A1918 !important;
 }
 .site-footer a[href*="privacy"],
 .site-footer a[href^="mailto:"] {
-  color: #FFFFFF !important;
+  color: #1A1918 !important;
   text-decoration: none !important;
 }
 
@@ -3210,9 +3210,9 @@ html, body {
 .btn-footer-outline,
 .footer-social-row a,
 a.btn-footer-outline {
-  border: 1px solid #FFFFFF !important;
-  border-bottom: 1px solid #FFFFFF !important;
-  color: #FFFFFF !important;
+  border: 1px solid #1A1918 !important;
+  border-bottom: 1px solid #1A1918 !important;
+  color: #1A1918 !important;
   text-decoration: none !important;
   background: transparent !important;
   display: inline-block !important;
@@ -14437,7 +14437,7 @@ html body.page-contacts a.btn-tg-solid {
   max-width: 336px !important;
   box-sizing: border-box !important;
   background: #1A1918 !important;
-  background-color: #1A1918 !important;
+  background-color: #F8F7F4 !important;
   color: #F8F7F4 !important;
   border: 1px solid #1A1918 !important;
   padding: 14px 24px !important;
@@ -14509,4 +14509,27 @@ html body.page-contacts footer.site-footer * {
 html body.page-contacts .site-footer a:hover,
 html body.page-contacts footer.site-footer a:hover {
   color: #B6452C !important;
+}
+
+/* === v2136 footer dark text global === */
+html body .site-footer,
+html body footer.site-footer {
+  background: #F8F7F4 !important;
+  background-color: #F8F7F4 !important;
+  color: #1A1918 !important;
+}
+html body .site-footer *,
+html body footer.site-footer * {
+  color: #1A1918 !important;
+}
+html body .site-footer a:hover {
+  color: #B6452C !important;
+}
+html body .site-footer .btn-footer-outline {
+  color: #1A1918 !important;
+  border: 1px solid #1A1918 !important;
+  background: transparent !important;
+}
+html body.page-contacts a.btn-tg-solid {
+  color: #F8F7F4 !important;
 }
