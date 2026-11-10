@@ -6399,8 +6399,8 @@ h2.section-title,
 
 /* 7. подвал */
 .site-footer {
-  background: #241C18 !important;
-  color: #F7F3EC !important;
+  background: #F8F7F4 !important;
+  color: #1A1918 !important;
 }
 .site-footer a {
   color: #F7F3EC !important;
@@ -8636,8 +8636,8 @@ html body.page-contacts .btn-tg-solid {
 /* === v1900 === */
 html body.page-contacts .site-footer,
 html body.page-contacts footer.site-footer {
-  background: #241C18 !important;
-  color: #F7F3EC !important;
+  background: #F8F7F4 !important;
+  color: #1A1918 !important;
 }
 html body.page-contacts .site-footer,
 html body.page-contacts .site-footer * {
