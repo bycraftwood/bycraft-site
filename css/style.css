@@ -16,7 +16,7 @@
 .hero-eyebrow {
   font-size: 13px;
   font-weight: 500;
-  letter-spacing: 0.12em;
+  letter-spacing: normal;
   text-transform: uppercase;
   color: var(--color-muted);
   margin-bottom: 10px;
@@ -33,7 +33,7 @@
 .hero-material-info {
   font-size: 13px;
   color: var(--color-secondary);
-  letter-spacing: 0.02em;
+  letter-spacing: normal;
   margin-bottom: 20px;
 }
 
@@ -434,7 +434,7 @@ img, video {
 .brand-logo {
   font-size: 26px;
   font-weight: 600;
-  letter-spacing: 0.08em;
+  letter-spacing: normal;
   text-transform: uppercase;
   color: var(--color-primary);
   line-height: 1;
@@ -477,7 +477,7 @@ img, video {
   font-family: var(--font-base);
   cursor: pointer;
   color: var(--color-primary);
-  letter-spacing: 0.05em;
+  letter-spacing: normal;
   text-transform: uppercase;
 }
 
@@ -485,7 +485,7 @@ img, video {
 .section-title {
   font-size: 18px;
   font-weight: 500;
-  letter-spacing: 0.08em;
+  letter-spacing: normal;
   text-transform: none;
   margin-bottom: 24px;
   color: var(--color-primary);
@@ -526,7 +526,7 @@ img, video {
   background-color: var(--color-primary);
   color: #FFFFFF;
   font-size: 15px;
-  letter-spacing: 0.04em;
+  letter-spacing: normal;
   transition: background-color 0.2s ease;
 }
 
@@ -554,7 +554,7 @@ img, video {
 .hero-statement h1 {
   font-size: 18px;
   font-weight: 500;
-  letter-spacing: 0.08em;
+  letter-spacing: normal;
   margin-bottom: 12px;
   color: var(--color-primary);
 }
@@ -708,7 +708,7 @@ img, video {
   font-size: 13px;
   color: var(--color-muted);
   text-transform: uppercase;
-  letter-spacing: 0.05em;
+  letter-spacing: normal;
   white-space: nowrap;
 }
 
@@ -920,7 +920,7 @@ img, video {
   color: #FFFFFF;
   font-size: 16px;
   font-weight: 500;
-  letter-spacing: 0.05em;
+  letter-spacing: normal;
   transition: background-color 0.2s ease;
   text-align: center;
 }
@@ -945,7 +945,7 @@ img, video {
 .contact-label {
   font-size: 13px;
   text-transform: uppercase;
-  letter-spacing: 0.08em;
+  letter-spacing: normal;
   color: var(--color-muted);
   margin-bottom: 8px;
 }
@@ -1172,7 +1172,7 @@ img, video {
   gap: 8px;
   font-size: 14px;
   font-weight: 500;
-  letter-spacing: 0.05em;
+  letter-spacing: normal;
   margin-left: 20px;
 }
 .lang-switch a {
@@ -1352,7 +1352,7 @@ img, video {
 
 .map-badge {
   font-size: 13px;
-  letter-spacing: 0.08em;
+  letter-spacing: normal;
   text-transform: uppercase;
   color: var(--color-muted);
   border: 1px solid var(--color-border);
@@ -1406,7 +1406,7 @@ img, video {
   font-size: 13px;
   font-weight: 600;
   text-transform: uppercase;
-  letter-spacing: 0.1em;
+  letter-spacing: normal;
   color: var(--color-primary);
   margin-bottom: 16px;
   padding-bottom: 8px;
@@ -1460,7 +1460,7 @@ img, video {
   color: #FFFFFF !important;
   font-size: 14.5px;
   font-weight: 500;
-  letter-spacing: 0.04em;
+  letter-spacing: normal;
   border: none !important;
   transition: background-color 0.2s ease;
   white-space: nowrap;
@@ -1642,7 +1642,7 @@ img, video {
   font-size: 11.5px !important;
   font-weight: 500 !important;
   cursor: pointer !important;
-  letter-spacing: 0.04em !important;
+  letter-spacing: normal;
   transition: opacity 0.2s ease !important;
 }
 
@@ -1801,7 +1801,7 @@ picture img {
   font-weight: 600;
   font-size: 12.5px;
   text-transform: uppercase;
-  letter-spacing: 0.08em;
+  letter-spacing: normal;
   color: #FFFFFF;
   margin-bottom: 4px;
 }
@@ -1924,7 +1924,7 @@ picture img {
     border-radius: 2px;
     font-size: 13px !important;
     font-weight: 500 !important;
-    letter-spacing: 0.06em !important;
+    letter-spacing: normal;
     text-transform: uppercase;
     background: transparent;
     color: var(--color-primary);
@@ -2398,7 +2398,7 @@ img, video, iframe, embed, object {
 
   .site-footer .footer-contact-title {
     font-size: 7px !important;
-    letter-spacing: 0.04em !important;
+    letter-spacing: normal;
   }
 
   .btn-footer-outline {
@@ -2665,7 +2665,7 @@ main > section.container {
 .exhibits-unified-grid .work-status {
   font-size: 12px !important;
   margin: 0 !important;
-  letter-spacing: 0.04em !important;
+  letter-spacing: normal;
 }
 
 /* === EXHIBITIONS UNIFIED 4:3 PHOTOS === */
@@ -2893,7 +2893,7 @@ main > section.container {
   padding: 0;
   font-size: 11px;
   font-weight: 500;
-  letter-spacing: 0.12em;
+  letter-spacing: normal;
   text-transform: uppercase;
   color: #868E96;
   line-height: 1.4;
@@ -2958,7 +2958,7 @@ html, body {
 .section-title {
   font-size: var(--fs-sm) !important;
   font-weight: 500 !important;
-  letter-spacing: 0.08em !important;
+  letter-spacing: normal;
   text-transform: none !important;
   color: var(--color-secondary, #6B5D52) !important;
 }
@@ -2969,7 +2969,7 @@ main .hero h1,
 h1.hero-title {
   font-size: clamp(22px, 4vw, 32px) !important;
   font-weight: 400 !important;
-  letter-spacing: 0.01em !important;
+  letter-spacing: normal;
   line-height: 1.25 !important;
   text-transform: none !important;
 }
@@ -2983,7 +2983,7 @@ h1.hero-title {
 }
 .work-status {
   font-size: var(--fs-xs) !important;
-  letter-spacing: 0.08em !important;
+  letter-spacing: normal;
   color: var(--color-secondary, #6B5D52) !important;
   background: none !important;
   border: none !important;
@@ -3009,7 +3009,7 @@ h1.hero-title {
 .museum-label .ml-status {
   color: var(--color-secondary, #6B5D52);
   font-size: 12px;
-  letter-spacing: 0.06em;
+  letter-spacing: normal;
   margin-top: 2px;
 }
 
@@ -3036,7 +3036,7 @@ html, body {
 .hero-eyebrow {
   font-size: 14px !important;
   font-weight: 400 !important;
-  letter-spacing: 0.08em !important;
+  letter-spacing: normal;
   text-transform: uppercase !important;
   margin-bottom: 12px !important;
 }
@@ -3044,7 +3044,7 @@ html, body {
   font-size: 26px !important;
   font-weight: 700 !important;
   line-height: 1.25 !important;
-  letter-spacing: 0 !important;
+  letter-spacing: normal;
   text-transform: none !important;
 }
 .hero-split-text .lead-text {
@@ -3061,7 +3061,7 @@ html, body {
 .home-events-preview .section-title {
   font-size: 26px !important;
   font-weight: 400 !important;
-  letter-spacing: 0 !important;
+  letter-spacing: normal;
   text-transform: none !important;
   color: var(--color-primary, #2A211C) !important;
 }
@@ -3117,7 +3117,7 @@ html, body {
   font-size: 13px !important;
   font-weight: 400 !important;
   color: var(--color-secondary, #6B5D52) !important;
-  letter-spacing: 0.02em !important;
+  letter-spacing: normal;
   text-transform: none !important;
   background: none !important;
   border: none !important;
@@ -3167,14 +3167,14 @@ html, body {
   text-decoration: none !important;
   text-underline-offset: 6px !important;
   color: var(--color-primary, #2A211C) !important;
-  letter-spacing: 0 !important;
+  letter-spacing: normal;
   text-transform: none !important;
 }
 .home-curators-box .section-title {
   font-size: 26px !important;
   font-weight: 700 !important;
   text-decoration: none !important;
-  letter-spacing: 0 !important;
+  letter-spacing: normal;
   text-transform: none !important;
   color: var(--color-primary, #2A211C) !important;
 }
@@ -3185,7 +3185,7 @@ html, body {
   text-decoration: none !important;
   text-underline-offset: 6px !important;
   color: var(--color-primary, #2A211C) !important;
-  letter-spacing: 0 !important;
+  letter-spacing: normal;
   text-transform: none !important;
 }
 
@@ -3229,7 +3229,7 @@ a.btn-footer-outline {
 .works-filter button {
   font-family: inherit;
   font-size: 13px;
-  letter-spacing: 0.04em;
+  letter-spacing: normal;
   padding: 8px 14px;
   border: 1px solid #1A1A1A;
   background: #fff;
@@ -3290,7 +3290,7 @@ a.btn-footer-outline {
 .works-title-row .section-title {
   font-size: 14px !important;
   margin: 0 !important;
-  letter-spacing: 0.06em;
+  letter-spacing: normal;
   text-transform: none;
   font-weight: 500;
 }
@@ -3323,7 +3323,7 @@ a.btn-footer-outline {
 .works-title-row .section-title {
   font-size: 14px !important;
   font-weight: 500 !important;
-  letter-spacing: 0.06em !important;
+  letter-spacing: normal;
   text-transform: none !important;
 }
 
@@ -3443,7 +3443,7 @@ a.btn-arrow {
 /* Заголовки works/exhibitions без принудительного uppercase из section-title */
 .works-title-row .section-title {
   text-transform: none !important;
-  letter-spacing: 0.02em !important;
+  letter-spacing: normal;
   font-size: 14px !important;
   font-weight: 500 !important;
 }
@@ -3454,14 +3454,14 @@ a.btn-arrow {
   font-weight: 500 !important;
   color: var(--color-primary, #1A1A1A) !important;
   text-transform: none !important;
-  letter-spacing: 0.02em !important;
+  letter-spacing: normal;
 }
 .page-title-14-bold {
   font-size: 14px !important;
   font-weight: 700 !important;
   color: var(--color-primary, #1A1A1A) !important;
   text-transform: none !important;
-  letter-spacing: 0.02em !important;
+  letter-spacing: normal;
 }
 
 /* Характеристики снова видны */
@@ -3528,7 +3528,7 @@ a.btn-arrow {
   font-weight: 700 !important;
   color: var(--color-primary, #1A1A1A) !important;
   text-transform: none !important;
-  letter-spacing: 0.02em !important;
+  letter-spacing: normal;
   margin-bottom: 24px !important;
 }
 
@@ -3567,14 +3567,14 @@ a.btn-arrow {
   font-weight: 500 !important;
   color: var(--color-primary, #1A1A1A) !important;
   text-transform: none !important;
-  letter-spacing: 0.02em !important;
+  letter-spacing: normal;
 }
 .page-title-14-bold {
   font-size: 14px !important;
   font-weight: 700 !important;
   color: var(--color-primary, #1A1A1A) !important;
   text-transform: none !important;
-  letter-spacing: 0.02em !important;
+  letter-spacing: normal;
 }
 .other-works-title {
   font-size: 14px !important;
@@ -3613,14 +3613,14 @@ a.btn-arrow {
   font-weight: 500 !important;
   color: var(--color-primary, #1A1A1A) !important;
   text-transform: none !important;
-  letter-spacing: 0.02em !important;
+  letter-spacing: normal;
 }
 .page-title-16-bold {
   font-size: 16px !important;
   font-weight: 700 !important;
   color: var(--color-primary, #1A1A1A) !important;
   text-transform: none !important;
-  letter-spacing: 0.02em !important;
+  letter-spacing: normal;
 }
 .other-works-title {
   font-size: 16px !important;
@@ -3662,7 +3662,7 @@ a.btn-arrow {
   font-weight: 700 !important;
   color: var(--color-primary, #1A1A1A) !important;
   text-transform: none !important;
-  letter-spacing: 0.02em !important;
+  letter-spacing: normal;
   line-height: 1.7 !important;
 }
 .page-title-16 {
@@ -3767,14 +3767,14 @@ a.btn-arrow {
   font-weight: 500 !important;
   color: var(--color-primary, #1A1A1A) !important;
   text-transform: none !important;
-  letter-spacing: 0.02em !important;
+  letter-spacing: normal;
 }
 .page-title-14 {
   font-size: 14px !important;
   font-weight: 500 !important;
   color: var(--color-primary, #1A1A1A) !important;
   text-transform: none !important;
-  letter-spacing: 0.02em !important;
+  letter-spacing: normal;
 }
 .other-works-title {
   font-size: 14px !important;
@@ -3788,7 +3788,7 @@ h1.page-title-12, h2.page-title-12, .section-title.page-title-12,
 h1.page-title-12.section-title, h2.page-title-12.section-title {
   font-size: 12px !important;
   font-weight: 500 !important;
-  letter-spacing: 0.02em !important;
+  letter-spacing: normal;
   text-transform: none !important;
   color: var(--color-primary, #1A1A1A) !important;
   line-height: 1.5 !important;
@@ -3797,7 +3797,7 @@ h1.page-title-14, h2.page-title-14, .section-title.page-title-14,
 h1.page-title-14.section-title, h2.page-title-14.section-title {
   font-size: 14px !important;
   font-weight: 500 !important;
-  letter-spacing: 0.02em !important;
+  letter-spacing: normal;
   text-transform: none !important;
   color: var(--color-primary, #1A1A1A) !important;
   line-height: 1.5 !important;
@@ -3806,14 +3806,14 @@ h1.page-title-14-bold, h2.page-title-14-bold,
 .section-title.page-title-14-bold {
   font-size: 14px !important;
   font-weight: 700 !important;
-  letter-spacing: 0.02em !important;
+  letter-spacing: normal;
   text-transform: none !important;
   color: var(--color-primary, #1A1A1A) !important;
 }
 h2.other-works-title, .section-title.other-works-title {
   font-size: 14px !important;
   font-weight: 400 !important;
-  letter-spacing: 0.02em !important;
+  letter-spacing: normal;
   text-transform: none !important;
   color: var(--color-primary, #1A1A1A) !important;
 }
@@ -3953,7 +3953,7 @@ h1.page-title-muted,
 h2.page-title-muted {
   font-size: 14px !important;
   font-weight: 400 !important;
-  letter-spacing: 0.06em !important;
+  letter-spacing: normal;
   text-transform: none !important;
   color: var(--color-secondary, #6B5D52) !important;
   line-height: 1.5 !important;
@@ -3961,7 +3961,7 @@ h2.page-title-muted {
 .section-title.page-title-muted-upper {
   font-size: 14px !important;
   font-weight: 400 !important;
-  letter-spacing: 0.08em !important;
+  letter-spacing: normal;
   text-transform: uppercase !important;
   color: var(--color-secondary, #6B5D52) !important;
   line-height: 1.5 !important;
@@ -3994,13 +3994,13 @@ h2.page-title-muted-upper {
   font-size: 12px !important;
   font-weight: 400 !important;
   color: var(--color-secondary, #6B5D52) !important;
-  letter-spacing: 0.06em !important;
+  letter-spacing: normal;
   text-transform: none !important;
   line-height: 1.5 !important;
 }
 .section-title.page-title-muted-upper {
   text-transform: uppercase !important;
-  letter-spacing: 0.08em !important;
+  letter-spacing: normal;
 }
 
 
@@ -4021,7 +4021,7 @@ h2.section-title.home-section-title-muted,
   font-family: 'Cormorant Garamond', Georgia, serif !important;
   font-size: 32px !important;
   font-weight: 500 !important;
-  letter-spacing: 0.01em !important;
+  letter-spacing: normal;
   text-transform: none !important;
   color: #2A211C !important;
   line-height: 1.2 !important;
@@ -4047,7 +4047,7 @@ h2.section-title.page-title-16,
 .section-title.page-title-16 {
   font-size: 16px !important;
   font-weight: 400 !important;
-  letter-spacing: 0.08em !important;
+  letter-spacing: normal;
   text-transform: uppercase !important;
   color: var(--color-secondary, #6B5D52) !important;
   line-height: 1.5 !important;
@@ -4065,7 +4065,7 @@ main h1.section-title.work-page-title,
 h1.work-page-title {
   font-size: 16px !important;
   font-weight: 500 !important;
-  letter-spacing: 0.08em !important;
+  letter-spacing: normal;
   text-transform: uppercase !important;
   color: var(--color-primary, #2A211C) !important;
   line-height: 1.4 !important;
@@ -4082,7 +4082,7 @@ h2.other-works-title,
 .section-title.other-works-title {
   font-size: 16px !important;
   font-weight: 400 !important;
-  letter-spacing: 0.06em !important;
+  letter-spacing: normal;
   text-transform: none !important;
   color: var(--color-secondary, #6B5D52) !important;
 }
@@ -4112,7 +4112,7 @@ h1.work-page-title,
 h1.section-title.work-page-title {
   font-size: 16px !important;
   font-weight: 500 !important;
-  letter-spacing: 0.08em !important;
+  letter-spacing: normal;
   text-transform: uppercase !important;
   color: var(--color-secondary, #6B5D52) !important;
   line-height: 1.4 !important;
@@ -4133,7 +4133,7 @@ h2.other-works-title,
 .section-title.other-works-title {
   font-size: 16px !important;
   font-weight: 400 !important;
-  letter-spacing: 0.08em !important;
+  letter-spacing: normal;
   text-transform: uppercase !important;
   color: var(--color-secondary, #6B5D52) !important;
 }
@@ -4276,7 +4276,7 @@ section .work-awards,
 h2.other-works-title {
   font-size: 16px !important;
   font-weight: 400 !important;
-  letter-spacing: 0.08em !important;
+  letter-spacing: normal;
   text-transform: uppercase !important;
   color: var(--color-secondary, #6B5D52) !important;
   margin-bottom: 24px !important;
@@ -4369,7 +4369,7 @@ h1.work-page-title,
 h1.section-title.work-page-title {
   font-size: 26px !important;
   font-weight: 500 !important;
-  letter-spacing: 0.08em !important;
+  letter-spacing: normal;
   text-transform: uppercase !important;
   color: var(--color-secondary, #6B5D52) !important;
   line-height: 1.3 !important;
@@ -4421,7 +4421,7 @@ h1.section-title.work-page-title {
 .event-detail-title {
   font-size: 16px !important;
   font-weight: 400 !important;
-  letter-spacing: 0.08em !important;
+  letter-spacing: normal;
   text-transform: uppercase !important;
   color: var(--color-secondary, #6B5D52) !important;
   margin: 16px 0 20px !important;
@@ -4470,7 +4470,7 @@ h1.section-title.work-page-title {
     text-align: left !important;
     font-size: 16px !important;
     font-weight: 400 !important;
-    letter-spacing: normal !important;
+    letter-spacing: normal;
     box-shadow: none !important;
     white-space: normal !important;
   }
@@ -4651,7 +4651,7 @@ h1.section-title.work-page-title {
   font-size: 16px !important;
   font-weight: 700 !important;
   color: var(--color-secondary, #6B5D52) !important;
-  letter-spacing: 0.08em !important;
+  letter-spacing: normal;
   text-transform: none !important;
 }
 
@@ -4665,7 +4665,7 @@ h1.section-title.work-page-title {
   font-size: 16px !important;
   font-weight: 700 !important;
   color: var(--color-secondary, #6B5D52) !important;
-  letter-spacing: 0.08em !important;
+  letter-spacing: normal;
   text-transform: uppercase !important;
 }
 
@@ -4705,7 +4705,7 @@ h1.section-title.work-page-title {
   color: #F5F2EC !important;
   font-family: var(--font-mono, 'Geist Mono', ui-monospace, monospace) !important;
   font-size: clamp(9px, 1.05vw, 13px) !important;
-  letter-spacing: 0.14em !important;
+  letter-spacing: normal;
   line-height: 1.45 !important;
   text-transform: uppercase !important;
   box-sizing: border-box !important;
@@ -4759,7 +4759,7 @@ h1.section-title.work-page-title {
   color: #F5F2EC !important;
   font-family: var(--font-mono, 'Geist Mono', ui-monospace, monospace) !important;
   font-size: 12px !important;
-  letter-spacing: 0.12em !important;
+  letter-spacing: normal;
   text-transform: uppercase !important;
   line-height: 1.4 !important;
 }
@@ -4792,7 +4792,7 @@ h1.section-title.work-page-title {
   font-size: 16px !important;
   font-weight: 500 !important;
   color: var(--color-secondary, #6B5D52) !important;
-  letter-spacing: 0.06em !important;
+  letter-spacing: normal;
   text-transform: uppercase !important;
   margin: 0 !important;
 }
@@ -4801,7 +4801,7 @@ h1.section-title.work-page-title {
   font-size: 16px !important;
   font-weight: 400 !important;
   color: var(--color-secondary, #6B5D52) !important;
-  letter-spacing: 0.06em !important;
+  letter-spacing: normal;
   text-transform: uppercase !important;
 }
 
@@ -4822,7 +4822,7 @@ a.hero-mosaic-btn.btn-telegram {
   font-size: 16px !important;
   font-weight: 400 !important;
   color: var(--color-secondary, #6B5D52) !important;
-  letter-spacing: 0.08em !important;
+  letter-spacing: normal;
   text-transform: uppercase !important;
 }
 .work-subtitle-muted,
@@ -4833,7 +4833,7 @@ p.work-page-quote,
   font-weight: 400 !important;
   font-style: normal !important;
   color: var(--color-secondary, #6B5D52) !important;
-  letter-spacing: 0.06em !important;
+  letter-spacing: normal;
   text-transform: uppercase !important;
 }
 .home-events-preview .home-events-grid {
@@ -4930,7 +4930,7 @@ p.work-page-quote,
   font-weight: 400 !important;
   font-style: normal !important;
   color: var(--color-secondary, #6B5D52) !important;
-  letter-spacing: 0.06em !important;
+  letter-spacing: normal;
   text-transform: uppercase !important;
   font-style: normal !important;
 }
@@ -5018,7 +5018,7 @@ i .work-subtitle-muted,
   color: #F5F2EC !important;
   font-family: var(--font-mono, 'Geist Mono', monospace) !important;
   font-size: 12px !important;
-  letter-spacing: 0.12em !important;
+  letter-spacing: normal;
   text-transform: uppercase !important;
 }
 @media (max-width: 767px) {
@@ -5155,7 +5155,7 @@ i .work-subtitle-muted,
 .work-detail-mosaic .wdm-text span {
   font-size: 26px !important;
   line-height: 1.25 !important;
-  letter-spacing: 0.06em !important;
+  letter-spacing: normal;
 }
 .bc-consent-hint {
   display: block;
@@ -5227,7 +5227,7 @@ i .work-subtitle-muted,
   font-family: 'Manrope', sans-serif !important;
   font-size: 16px !important;
   font-weight: 400 !important;
-  letter-spacing: 0.04em !important;
+  letter-spacing: normal;
 }
 .lang-switch a {
   color: var(--color-secondary, #6B5D52) !important;
@@ -5845,7 +5845,7 @@ section.geography,
   margin: 0 auto 32px auto !important;
   padding: 0 !important;
   border: none !important;
-  letter-spacing: 0.04em !important;
+  letter-spacing: normal;
 }
 .hero-mosaic-caption {
   text-align: center !important;
@@ -6090,7 +6090,7 @@ main {
   font-family: 'Manrope', sans-serif !important;
   font-size: 13px !important;
   font-weight: 600 !important;
-  letter-spacing: 0.04em !important;
+  letter-spacing: normal;
   text-transform: uppercase !important;
   color: #2A211C !important;
   margin: 0 0 12px 0 !important;
@@ -6240,7 +6240,7 @@ main {
 h1.hero-mosaic-tagline {
   font-family: 'Cormorant Garamond', Georgia, serif !important;
   font-weight: 500 !important;
-  letter-spacing: 0.06em !important;
+  letter-spacing: normal;
 }
 
 .section-title,
@@ -6251,7 +6251,7 @@ h2.section-title,
 .other-works-title {
   font-family: 'Cormorant Garamond', Georgia, serif !important;
   font-weight: 500 !important;
-  letter-spacing: 0.04em !important;
+  letter-spacing: normal;
 }
 
 .section-title a,
@@ -6318,7 +6318,7 @@ main > .container > h1:first-of-type,
   line-height: 1.15 !important;
   color: #2A211C !important;
   text-transform: none !important;
-  letter-spacing: 0.01em !important;
+  letter-spacing: normal;
 }
 @media (max-width: 768px) {
   h1.section-title,
@@ -6357,7 +6357,7 @@ h2.section-title,
   line-height: 1.2 !important;
   color: #2A211C !important;
   text-transform: none !important;
-  letter-spacing: 0.01em !important;
+  letter-spacing: normal;
   border-bottom: none !important;
   display: inline-block !important;
   padding-bottom: 8px !important;
@@ -6466,7 +6466,7 @@ h1.hero-mosaic-tagline {
   line-height: 1.2 !important;
   color: #2A211C !important;
   text-transform: none !important;
-  letter-spacing: 0.01em !important;
+  letter-spacing: normal;
   text-align: center !important;
 }
 .hero-mosaic-tagline em,
@@ -6669,7 +6669,7 @@ h1.section-title.page-h1,
   line-height: 1.15 !important;
   color: #2A211C !important;
   text-transform: none !important;
-  letter-spacing: 0.01em !important;
+  letter-spacing: normal;
   background-image: none !important;
   border: none !important;
   display: block !important;
@@ -6695,7 +6695,7 @@ h2.section-title,
   line-height: 1.2 !important;
   color: #2A211C !important;
   text-transform: none !important;
-  letter-spacing: 0.01em !important;
+  letter-spacing: normal;
   display: inline-block !important;
   padding-bottom: 8px !important;
   margin-bottom: 18px !important;
@@ -6974,7 +6974,7 @@ select.works-filter {
   font-size: 12px !important;
   color: #6B5D52 !important;
   margin-top: 6px !important;
-  letter-spacing: 0.04em !important;
+  letter-spacing: normal;
 }
 
 .map-svg-wrap {
@@ -7020,7 +7020,7 @@ select.works-filter {
   font-size: 12px !important;
   font-weight: 400 !important;
   text-transform: uppercase !important;
-  letter-spacing: 0.1em !important;
+  letter-spacing: normal;
   color: #6B5D52 !important;
   margin: 0 0 16px !important;
   padding-bottom: 8px !important;
@@ -7055,7 +7055,7 @@ select.works-filter {
     border: 1px solid #2A211C !important;
     border-radius: 0 !important;
     font-family: 'Manrope', sans-serif !important;
-    letter-spacing: 0.04em !important;
+    letter-spacing: normal;
   }
   .main-nav {
     background: #F7F3EC !important;
@@ -7082,7 +7082,7 @@ a.nav-how-to-buy {
   font-family: 'Manrope', sans-serif !important;
   font-weight: 500 !important;
   font-size: 14px !important;
-  letter-spacing: 0.04em !important;
+  letter-spacing: normal;
   border-radius: 0 !important;
   padding: 8px 14px !important;
   text-decoration: none !important;
@@ -7105,7 +7105,7 @@ button.btn-telegram {
   font-family: 'Manrope', sans-serif !important;
   font-weight: 500 !important;
   font-size: 15px !important;
-  letter-spacing: 0.04em !important;
+  letter-spacing: normal;
 }
 .btn-telegram:hover,
 .bc-submit-btn:hover {
@@ -7126,7 +7126,7 @@ a.btn-instagram-outline {
   border-radius: 0 !important;
   font-family: 'Manrope', sans-serif !important;
   font-weight: 500 !important;
-  letter-spacing: 0.04em !important;
+  letter-spacing: normal;
 }
 .btn-outline:hover,
 .btn-footer-outline:hover,
@@ -7145,7 +7145,7 @@ a.btn-instagram-outline:hover {
   border: 1px solid #F7F3EC !important;
   font-weight: 500 !important;
   font-size: 15px !important;
-  letter-spacing: 0.04em !important;
+  letter-spacing: normal;
 }
 .contacts-dark .btn-instagram-outline {
   border-color: #F7F3EC !important;
@@ -7163,7 +7163,7 @@ a.btn-arrow {
   font-weight: 500 !important;
   font-size: 15px !important;
   color: #2A211C !important;
-  letter-spacing: 0.04em !important;
+  letter-spacing: normal;
   text-decoration: none !important;
   border-bottom: 1px solid #2A211C !important;
   padding-bottom: 2px !important;
@@ -7200,7 +7200,7 @@ h2.section-title,
 }
 .cookie-btn {
   font-size: 13px !important;
-  letter-spacing: 0.04em !important;
+  letter-spacing: normal;
   border-radius: 0 !important;
 }
 
@@ -7240,7 +7240,7 @@ h2.section-title.home-section-title-muted,
   font-size: 32px !important;
   color: #2A211C !important;
   text-transform: none !important;
-  letter-spacing: 0.01em !important;
+  letter-spacing: normal;
 }
 @media (max-width: 768px) {
   main .container > h2.section-title.page-title-16,
@@ -7302,7 +7302,7 @@ h2.home-section-title-muted.section-h2 {
   font-size: 32px !important;
   color: #2A211C !important;
   text-transform: none !important;
-  letter-spacing: 0.01em !important;
+  letter-spacing: normal;
   text-decoration: none !important;
 }
 @media (max-width: 768px) {
@@ -7322,7 +7322,7 @@ a.btn-arrow,
   color: #2A211C !important;
   text-decoration: none !important;
   border-bottom: 1px solid #2A211C !important;
-  letter-spacing: 0.04em !important;
+  letter-spacing: normal;
 }
 a.btn-arrow:hover,
 .btn-arrow:hover {
@@ -7351,7 +7351,7 @@ h2.home-block-title,
   line-height: 1.2 !important;
   color: #2A211C !important;
   text-transform: none !important;
-  letter-spacing: 0.01em !important;
+  letter-spacing: normal;
   text-decoration: none !important;
   border: none !important;
   background: none !important;
@@ -7408,7 +7408,7 @@ a.order-similar,
   color: #2A211C !important;
   text-decoration: none !important;
   border-bottom: 1px solid #2A211C !important;
-  letter-spacing: 0.02em !important;
+  letter-spacing: normal;
 }
 a.order-similar:hover,
 .order-similar:hover {
@@ -7461,7 +7461,7 @@ a.order-similar:hover,
   font-size: 12px !important;
   font-weight: 400 !important;
   text-transform: uppercase !important;
-  letter-spacing: 0.08em !important;
+  letter-spacing: normal;
   color: #6B5D52 !important;
   border-bottom: 1px solid rgba(42,33,28,0.18) !important;
   padding-bottom: 8px !important;
@@ -7504,7 +7504,7 @@ a.btn-arrow.workshop-works-link:hover {
   font-family: 'Manrope', sans-serif !important;
   font-weight: 500 !important;
   font-size: 15px !important;
-  letter-spacing: 0.04em !important;
+  letter-spacing: normal;
 }
 .btn-instagram-outline {
   background: transparent !important;
@@ -7514,7 +7514,7 @@ a.btn-arrow.workshop-works-link:hover {
   font-family: 'Manrope', sans-serif !important;
   font-weight: 500 !important;
   font-size: 15px !important;
-  letter-spacing: 0.04em !important;
+  letter-spacing: normal;
 }
 .contacts-dark .btn-instagram-outline {
   border-color: #F7F3EC !important;
@@ -7571,7 +7571,7 @@ a.nav-how-to-buy {
   font-weight: 500 !important;
   font-family: 'Manrope', sans-serif !important;
   font-size: 14px !important;
-  letter-spacing: 0.04em !important;
+  letter-spacing: normal;
   padding: 8px 14px !important;
 }
 .nav-how-to-buy:hover,
@@ -7790,7 +7790,7 @@ a.btn-instagram-outline {
   font-family: 'Manrope', sans-serif !important;
   font-weight: 500 !important;
   font-size: 15px !important;
-  letter-spacing: 0.04em !important;
+  letter-spacing: normal;
   display: inline-flex !important;
   align-items: center !important;
   min-height: 44px !important;
@@ -8132,7 +8132,7 @@ h1.work-page-title {
   line-height: 1.2 !important;
   color: #2A211C !important;
   text-transform: none !important;
-  letter-spacing: 0.01em !important;
+  letter-spacing: normal;
   display: inline-block !important;
   padding-bottom: 10px !important;
   margin: 36px 0 24px !important;
@@ -8156,7 +8156,7 @@ a.btn-telegram,
   color: #F7F3EC !important;
   border: 1px solid #241C18 !important;
   border-radius: 0 !important;
-  letter-spacing: 0.04em !important;
+  letter-spacing: normal;
 }
 
 /* status in specs */
@@ -8365,7 +8365,7 @@ body.page-contacts .site-footer a:not(.btn-footer-outline) {
 }
 .site-footer .footer-contact-title {
   font-size: 12px !important;
-  letter-spacing: 0.04em !important;
+  letter-spacing: normal;
   margin-bottom: 4px !important;
 }
 
@@ -8419,7 +8419,7 @@ body.page-contacts .site-footer a:not(.btn-footer-outline) {
   font-family: 'Manrope', sans-serif !important;
   font-weight: 500 !important;
   font-size: 15px !important;
-  letter-spacing: 0.04em !important;
+  letter-spacing: normal;
   min-width: 280px !important;
   width: 280px !important;
   max-width: 100% !important;
@@ -8515,7 +8515,7 @@ body.page-contacts .site-footer a:not(.btn-footer-outline) {
   font-family: 'Manrope', sans-serif !important;
   font-weight: 500 !important;
   font-size: 15px !important;
-  letter-spacing: 0.04em !important;
+  letter-spacing: normal;
   background: #241C18 !important;
   color: #F7F3EC !important;
   border: 1px solid #241C18 !important;
@@ -8556,7 +8556,7 @@ body.page-contacts .site-footer a:not(.btn-footer-outline) {
   font-family: 'Manrope', sans-serif !important;
   font-weight: 500 !important;
   font-size: 15px !important;
-  letter-spacing: 0.04em !important;
+  letter-spacing: normal;
   background: #241C18 !important;
   color: #F7F3EC !important;
   border: 1px solid #241C18 !important;
@@ -8580,7 +8580,7 @@ body.page-contacts a.btn-instagram-outline {
   font-family: 'Manrope', sans-serif !important;
   font-weight: 500 !important;
   font-size: 15px !important;
-  letter-spacing: 0.04em !important;
+  letter-spacing: normal;
   background: #241C18 !important;
   color: #F7F3EC !important;
   border: 1px solid #241C18 !important;
@@ -8986,7 +8986,7 @@ h3.event-name {
   font-family: 'Geist Mono', ui-monospace, monospace !important;
   font-size: 12px !important;
   font-weight: 400 !important;
-  letter-spacing: 0.12em !important;
+  letter-spacing: normal;
   text-transform: uppercase !important;
 }
 
@@ -9137,7 +9137,7 @@ h1.work-stock-title,
   color: #F7F3EC !important;
   border: none !important;
   text-transform: none !important;
-  letter-spacing: 0.04em !important;
+  letter-spacing: normal;
   font-weight: 500 !important;
 }
 #bycraft-modal a,
@@ -9811,7 +9811,7 @@ section.home-hero-split {
 .home-hero-copy { max-width: 520px !important; width: 100% !important; }
 p.home-hero-eyebrow {
   font-family: 'Geist Mono', ui-monospace, monospace !important;
-  font-size: 12px !important; letter-spacing: 0.12em !important;
+  font-size: 12px !important; letter-spacing: normal;
   text-transform: uppercase !important; color: #6B5D52 !important;
   margin: 0 0 20px !important;
 }
@@ -9855,7 +9855,7 @@ a.home-hero-link:hover { border-bottom-color: #241C18 !important; }
 p.home-hero-photo-caption {
   position: absolute !important; left: 16px !important; bottom: 14px !important;
   font-family: 'Geist Mono', ui-monospace, monospace !important;
-  font-size: 12px !important; letter-spacing: 0.12em !important;
+  font-size: 12px !important; letter-spacing: normal;
   text-transform: uppercase !important; color: #F7F3EC !important; margin: 0 !important;
   text-shadow: 0 1px 3px rgba(0,0,0,0.35) !important;
 }
@@ -9869,7 +9869,7 @@ p.home-hero-photo-caption {
 .home-h32{font-family:'Cormorant Garamond',Georgia,serif!important;font-weight:500!important;font-size:32px!important;color:#2A211C!important;margin:0!important;text-transform:none!important;}
 .home-h22{font-family:'Cormorant Garamond',Georgia,serif!important;font-weight:500!important;font-size:22px!important;color:#2A211C!important;margin:0 0 12px!important;}
 .home-body{font-family:Manrope,sans-serif!important;font-size:17px!important;font-weight:400!important;line-height:1.6!important;color:#2A211C!important;margin:0!important;}
-.home-eyebrow{font-family:'Geist Mono',ui-monospace,monospace!important;font-size:12px!important;letter-spacing:0.12em!important;text-transform:uppercase!important;color:#6B5D52!important;margin:0 0 12px!important;}
+.home-eyebrow{font-family:'Geist Mono',ui-monospace,monospace!important;font-size:12px!important;letter-spacing: normal;text-transform:uppercase!important;color:#6B5D52!important;margin:0 0 12px!important;}
 .home-text-link{font-family:Manrope,sans-serif!important;font-size:15px!important;font-weight:600!important;color:#2A211C!important;text-decoration:none!important;}
 .home-text-link:hover{color:#B6452C!important;}
 .home-row-head{display:flex!important;justify-content:space-between!important;align-items:baseline!important;gap:16px!important;margin-bottom:28px!important;flex-wrap:wrap!important;}
@@ -9886,9 +9886,9 @@ p.home-hero-photo-caption {
 .home-stock-grid{display:grid!important;grid-template-columns:repeat(4,1fr)!important;gap:24px!important;}
 .home-stock-img{display:block!important;aspect-ratio:4/5!important;overflow:hidden!important;background:#EDE3D3!important;}
 .home-stock-img img{width:100%!important;height:100%!important;object-fit:cover!important;}
-.home-stock-meta{font-family:'Geist Mono',ui-monospace,monospace!important;font-size:12px!important;letter-spacing:0.12em!important;text-transform:uppercase!important;color:#B6452C!important;margin:12px 0 6px!important;}
+.home-stock-meta{font-family:'Geist Mono',ui-monospace,monospace!important;font-size:12px!important;letter-spacing: normal;text-transform:uppercase!important;color:#B6452C!important;margin:12px 0 6px!important;}
 .home-stock-price{font-family:Manrope,sans-serif!important;font-size:17px!important;font-weight:400!important;line-height:1.6!important;color:#2A211C!important;margin:0 0 4px!important;}
-.home-stock-mat{font-family:'Geist Mono',ui-monospace,monospace!important;font-size:12px!important;letter-spacing:0.12em!important;text-transform:uppercase!important;color:#6B5D52!important;margin:0 0 14px!important;}
+.home-stock-mat{font-family:'Geist Mono',ui-monospace,monospace!important;font-size:12px!important;letter-spacing: normal;text-transform:uppercase!important;color:#6B5D52!important;margin:0 0 14px!important;}
 .home-stock-card .home-btn-outline{width:100%!important;}
 @media(max-width:900px){.home-stock-grid{grid-template-columns:1fr!important;}}
 
@@ -9930,7 +9930,7 @@ p.home-hero-photo-caption {
 .home-events-new{margin-bottom:72px!important;}
 .home-events-list{display:grid!important;gap:18px!important;margin-bottom:12px!important;}
 .home-event-row{display:block!important;text-decoration:none!important;padding:14px 0!important;border-bottom:1px solid #E5DFD4!important;}
-.home-event-date{font-family:'Geist Mono',ui-monospace,monospace!important;font-size:12px!important;letter-spacing:0.12em!important;text-transform:uppercase!important;color:#6B5D52!important;margin:0 0 6px!important;}
+.home-event-date{font-family:'Geist Mono',ui-monospace,monospace!important;font-size:12px!important;letter-spacing: normal;text-transform:uppercase!important;color:#6B5D52!important;margin:0 0 6px!important;}
 .home-event-name{font-family:Manrope,sans-serif!important;font-size:22px!important;font-weight:400!important;line-height:1.6!important;color:#2A211C!important;margin:0 0 4px!important;}
 .home-event-desc{font-family:Manrope,sans-serif!important;font-size:17px!important;line-height:1.6!important;color:#2A211C!important;margin:0!important;}
 .home-awards-grid{display:grid!important;grid-template-columns:repeat(3,1fr)!important;gap:20px!important;margin-top:24px!important;}
@@ -9942,7 +9942,7 @@ p.home-hero-eyebrow {
   font-family: 'Geist Mono', ui-monospace, monospace !important;
   font-size: 12px !important;
   font-weight: 600 !important;
-  letter-spacing: 0.12em !important;
+  letter-spacing: normal;
   text-transform: uppercase !important;
   color: #6B5D52 !important;
 }
@@ -10055,7 +10055,7 @@ section.home-author {
   font-weight: 500 !important;
   color: #F7F3EC !important;
   margin-bottom: 12px !important;
-  letter-spacing: 0.04em !important;
+  letter-spacing: normal;
 }
 .footer-about {
   font-family: Manrope, sans-serif !important;
@@ -10088,7 +10088,7 @@ section.home-author {
   font-family: 'Geist Mono', ui-monospace, monospace !important;
   font-size: 12px !important;
   font-weight: 600 !important;
-  letter-spacing: 0.12em !important;
+  letter-spacing: normal;
   text-transform: uppercase !important;
   color: #B5A898 !important;
   margin: 0 0 14px !important;
@@ -10241,7 +10241,7 @@ a.brand-logo {
   font-weight: 600 !important;
   font-size: 32px !important;
   color: #6B5D52 !important;
-  letter-spacing: 0.04em !important;
+  letter-spacing: normal;
   text-decoration: none !important;
 }
 .nav-how-to-buy,
@@ -10273,7 +10273,7 @@ a.nav-link-btn.nav-how-to-buy {
   font-family: Manrope, sans-serif !important;
   font-size: 14px !important;
   font-weight: 500 !important;
-  letter-spacing: 0 !important;
+  letter-spacing: normal;
   text-transform: none !important;
 }
 .home-pick-grid {
@@ -10296,7 +10296,7 @@ a.nav-link-btn.nav-how-to-buy {
 .home-pick-status {
   font-family: 'Geist Mono', ui-monospace, monospace !important;
   font-size: 12px !important;
-  letter-spacing: 0.08em !important;
+  letter-spacing: normal;
   text-transform: uppercase !important;
   color: #B6452C !important;
   margin: 12px 0 4px !important;
@@ -10370,7 +10370,7 @@ a.nav-link-btn.nav-how-to-buy {
 .home-quote-author {
   font-family: 'Geist Mono', ui-monospace, monospace !important;
   font-size: 12px !important;
-  letter-spacing: 0.1em !important;
+  letter-spacing: normal;
   text-transform: uppercase !important;
   color: #6B5D52 !important;
   margin: 0 !important;
@@ -10526,7 +10526,7 @@ a.works-tab { display: inline-block !important; }
   display: inline-block !important;
   font-family: Manrope, sans-serif !important;
   font-size: 13px !important;
-  letter-spacing: 0.06em !important;
+  letter-spacing: normal;
   text-transform: uppercase !important;
   color: #2A211C !important;
   text-decoration: none !important;
@@ -10577,7 +10577,7 @@ a.works-tab { display: inline-block !important; }
   gap: 8px !important;
   font-family: 'Geist Mono', ui-monospace, monospace !important;
   font-size: 12px !important;
-  letter-spacing: 0.1em !important;
+  letter-spacing: normal;
   text-transform: uppercase !important;
   color: #2A211C !important;
   margin: 0 0 12px !important;
@@ -10665,7 +10665,7 @@ a.works-tab { display: inline-block !important; }
 .pd-specs dt {
   font-family: 'Geist Mono', ui-monospace, monospace !important;
   font-size: 11px !important;
-  letter-spacing: 0.08em !important;
+  letter-spacing: normal;
   text-transform: uppercase !important;
   color: #6B5D52 !important;
   margin: 0 !important;
@@ -10978,7 +10978,7 @@ html body .product-detail .pd-specs > div {
 html body .product-detail .pd-specs dt {
   font-family: 'Geist Mono', ui-monospace, monospace !important;
   font-size: 11px !important;
-  letter-spacing: 0.08em !important;
+  letter-spacing: normal;
   text-transform: uppercase !important;
   color: #6B5D52 !important;
 }
@@ -11180,7 +11180,7 @@ html body .product-detail .pd-other-grid {
 .ex-kicker {
   font-family: 'Geist Mono', ui-monospace, monospace !important;
   font-size: 11px !important;
-  letter-spacing: 0.12em !important;
+  letter-spacing: normal;
   text-transform: uppercase !important;
   color: #B6452C !important;
   margin: 0 0 10px !important;
@@ -11262,7 +11262,7 @@ html body .product-detail .pd-other-grid {
 .ex-specs dt {
   font-family: 'Geist Mono', ui-monospace, monospace !important;
   font-size: 11px !important;
-  letter-spacing: 0.08em !important;
+  letter-spacing: normal;
   text-transform: uppercase !important;
   color: #6B5D52 !important;
   margin: 0 !important;
@@ -11354,7 +11354,7 @@ html body .product-detail .pd-other-grid {
   display: inline-block !important;
   font-family: 'Geist Mono', ui-monospace, monospace !important;
   font-size: 11px !important;
-  letter-spacing: 0.08em !important;
+  letter-spacing: normal;
   text-transform: uppercase !important;
   color: #B6452C !important;
   border: 1px solid #B6452C !important;
@@ -11570,7 +11570,7 @@ body.page-cube .home-hero-split {
   font-family: 'Cormorant Garamond', Georgia, serif !important;
   font-weight: 500 !important;
   font-size: 16px !important;
-  letter-spacing: 0.22em !important;
+  letter-spacing: normal;
   text-transform: uppercase !important;
   color: #2A211C !important;
   text-decoration: none !important;
@@ -11586,7 +11586,7 @@ body.page-cube .home-hero-split {
   font-family: Manrope, sans-serif !important;
   font-size: 12px !important;
   font-weight: 500 !important;
-  letter-spacing: 0.04em !important;
+  letter-spacing: normal;
   color: #6B5D52 !important;
   text-decoration: none !important;
   border-bottom: 1px solid transparent !important;
@@ -11606,7 +11606,7 @@ body.page-cube .home-hero-split {
 .cube-lang {
   font-family: 'Geist Mono', ui-monospace, monospace !important;
   font-size: 11px !important;
-  letter-spacing: 0.1em !important;
+  letter-spacing: normal;
   color: #6B5D52 !important;
 }
 .cube-lang a { color: #6B5D52 !important; text-decoration: none !important; }
@@ -11615,7 +11615,7 @@ body.page-cube .home-hero-split {
   font-size: 12px !important;
   color: #2A211C !important;
   text-decoration: none !important;
-  letter-spacing: 0.04em !important;
+  letter-spacing: normal;
 }
 .cube-menu-btn {
   display: none !important;
@@ -11623,7 +11623,7 @@ body.page-cube .home-hero-split {
   border: none !important;
   font-family: Manrope, sans-serif !important;
   font-size: 12px !important;
-  letter-spacing: 0.08em !important;
+  letter-spacing: normal;
   color: #2A211C !important;
   cursor: pointer !important;
   justify-self: end !important;
@@ -11692,7 +11692,7 @@ body.page-cube .home-hero-split {
   margin: 0 !important;
   font-family: 'Geist Mono', ui-monospace, monospace !important;
   font-size: 11px !important;
-  letter-spacing: 0.12em !important;
+  letter-spacing: normal;
   text-transform: uppercase !important;
   color: #6B5D52 !important;
   max-width: 55% !important;
@@ -11700,7 +11700,7 @@ body.page-cube .home-hero-split {
 .cube-scroll {
   font-family: 'Geist Mono', ui-monospace, monospace !important;
   font-size: 11px !important;
-  letter-spacing: 0.12em !important;
+  letter-spacing: normal;
   text-transform: uppercase !important;
   color: #6B5D52 !important;
   text-decoration: none !important;
@@ -11836,7 +11836,7 @@ html body.page-cube main {
 .expo-kicker {
   font-family: 'Geist Mono', ui-monospace, monospace !important;
   font-size: 11px !important;
-  letter-spacing: 0.14em !important;
+  letter-spacing: normal;
   text-transform: uppercase !important;
   color: #6B5D52 !important;
   margin: 0 0 10px !important;
@@ -11920,7 +11920,7 @@ html body.page-cube main {
 .expo-num {
   font-family: 'Geist Mono', ui-monospace, monospace !important;
   font-size: 11px !important;
-  letter-spacing: 0.12em !important;
+  letter-spacing: normal;
   text-transform: uppercase !important;
   color: #2A211C !important;
   margin: 0 0 8px !important;
@@ -11943,7 +11943,7 @@ html body.page-cube main {
   display: inline-block !important;
   font-family: 'Geist Mono', ui-monospace, monospace !important;
   font-size: 10px !important;
-  letter-spacing: 0.12em !important;
+  letter-spacing: normal;
   text-transform: uppercase !important;
   color: #6B5D52 !important;
   border: 1px solid #DCCFBD !important;
@@ -11970,7 +11970,7 @@ html body.page-cube main {
   font-size: 14px !important;
   color: #2A211C !important;
   text-decoration: none !important;
-  letter-spacing: 0.04em !important;
+  letter-spacing: normal;
 }
 .expo-all:hover { color: #B6452C !important; }
 
@@ -12097,7 +12097,7 @@ html body .cube-expo .expo-head {
 html body .cube-expo .expo-kicker {
   font-family: 'Geist Mono', ui-monospace, monospace !important;
   font-size: 11px !important;
-  letter-spacing: 0.14em !important;
+  letter-spacing: normal;
   text-transform: uppercase !important;
   color: #6B5D52 !important;
   margin: 0 0 8px !important;
@@ -12140,7 +12140,7 @@ html body .cube-expo .lookbook-img img {
 html body .cube-expo .lookbook-num {
   font-family: 'Geist Mono', ui-monospace, monospace !important;
   font-size: 11px !important;
-  letter-spacing: 0.12em !important;
+  letter-spacing: normal;
   text-transform: uppercase !important;
   color: #2A211C !important;
   margin: 0 0 6px !important;
@@ -12221,7 +12221,7 @@ html body .cube-craft .craft-atelier {
 html body .cube-craft .craft-kicker {
   font-family: 'Geist Mono', ui-monospace, monospace !important;
   font-size: 11px !important;
-  letter-spacing: 0.14em !important;
+  letter-spacing: normal;
   text-transform: uppercase !important;
   color: #6B5D52 !important;
   margin: 0 0 20px !important;
@@ -12260,7 +12260,7 @@ html body .cube-craft .craft-photo img {
 html body .cube-craft .craft-step-num {
   font-family: 'Geist Mono', ui-monospace, monospace !important;
   font-size: 11px !important;
-  letter-spacing: 0.12em !important;
+  letter-spacing: normal;
   text-transform: uppercase !important;
   color: #2A211C !important;
   margin: 0 0 10px !important;
@@ -12378,7 +12378,7 @@ html body .cube-recog .recog-wings {
 html body .cube-recog .recog-kicker {
   font-family: 'Geist Mono', ui-monospace, monospace !important;
   font-size: 11px !important;
-  letter-spacing: 0.14em !important;
+  letter-spacing: normal;
   text-transform: uppercase !important;
   color: #6B5D52 !important;
   margin: 0 0 48px !important;
@@ -12392,7 +12392,7 @@ html body .cube-recog .recog-wings {
 html body .cube-recog .recog-section-label {
   font-family: 'Geist Mono', ui-monospace, monospace !important;
   font-size: 11px !important;
-  letter-spacing: 0.12em !important;
+  letter-spacing: normal;
   text-transform: uppercase !important;
   color: #6B5D52 !important;
   margin: 0 0 20px !important;
@@ -12403,7 +12403,7 @@ html body .cube-recog .recog-item {
 html body .cube-recog .recog-item-year {
   font-family: 'Geist Mono', ui-monospace, monospace !important;
   font-size: 11px !important;
-  letter-spacing: 0.1em !important;
+  letter-spacing: normal;
   text-transform: uppercase !important;
   color: #2A211C !important;
   margin: 0 0 6px !important;
@@ -12510,7 +12510,7 @@ html body .cube-recog .recog-event {
 html body .cube-recog .recog-event-tag {
   font-family: 'Geist Mono', ui-monospace, monospace !important;
   font-size: 11px !important;
-  letter-spacing: 0.12em !important;
+  letter-spacing: normal;
   text-transform: uppercase !important;
   color: #2A211C !important;
   margin: 0 0 8px !important;
@@ -12588,7 +12588,7 @@ html body .cube-cta .cta-quote {
   color: #2A211C !important;
   margin: 0 0 28px !important;
   text-transform: uppercase !important;
-  letter-spacing: 0.02em !important;
+  letter-spacing: normal;
 }
 html body .cube-cta .cta-lead {
   font-family: Manrope, sans-serif !important;
@@ -12612,7 +12612,7 @@ html body .cube-cta .cta-btn {
   font-family: Manrope, sans-serif !important;
   font-size: 13px !important;
   font-weight: 600 !important;
-  letter-spacing: 0.04em !important;
+  letter-spacing: normal;
   text-transform: uppercase !important;
   text-decoration: none !important;
   background: #241C18 !important;
@@ -12637,7 +12637,7 @@ html body .cube-cta .cta-phone {
   display: inline-block !important;
   font-family: 'Geist Mono', ui-monospace, monospace !important;
   font-size: 14px !important;
-  letter-spacing: 0.06em !important;
+  letter-spacing: normal;
   color: #2A211C !important;
   text-decoration: none !important;
   margin-bottom: 36px !important;
@@ -12646,7 +12646,7 @@ html body .cube-cta .cta-phone:hover { color: #B6452C !important; }
 html body .cube-cta .cta-foot {
   font-family: 'Geist Mono', ui-monospace, monospace !important;
   font-size: 11px !important;
-  letter-spacing: 0.1em !important;
+  letter-spacing: normal;
   text-transform: uppercase !important;
   color: #6B5D52 !important;
   margin: 0 0 56px !important;
@@ -13131,7 +13131,7 @@ html body.page-cube .cube-logo {
   font-family: Manrope, sans-serif !important;
   font-weight: 500 !important;
   font-size: 16px !important;
-  letter-spacing: 0.2em !important;
+  letter-spacing: normal;
   text-transform: uppercase !important;
   color: #1A1918 !important;
   text-decoration: none !important;
@@ -13151,7 +13151,7 @@ html body.page-cube .cube-nav a {
   font-weight: 500 !important;
   font-size: 16px !important;
   line-height: 1.55 !important;
-  letter-spacing: 0 !important;
+  letter-spacing: normal;
   color: #1A1918 !important;
   text-decoration: none !important;
   border-bottom: 1px solid transparent !important;
@@ -13172,7 +13172,7 @@ html body.page-cube .cube-lang {
   font-size: 16px !important;
   line-height: 1.55 !important;
   color: #1A1918 !important;
-  letter-spacing: 0 !important;
+  letter-spacing: normal;
   white-space: nowrap !important;
 }
 html body.page-cube .cube-lang a {
@@ -13216,7 +13216,7 @@ html body.page-cube .cube-manifest {
   font-weight: 400 !important;
   font-size: 32px !important;
   line-height: 1.1 !important;
-  letter-spacing: -0.01em !important;
+  letter-spacing: normal;
   color: #1A1918 !important;
   margin: 0 !important;
   max-width: 16em !important;
@@ -13225,7 +13225,7 @@ html body.page-cube .cube-caption {
   font-family: 'Geist Mono', ui-monospace, monospace !important;
   font-weight: 400 !important;
   font-size: 12px !important;
-  letter-spacing: 0.12em !important;
+  letter-spacing: normal;
   text-transform: uppercase !important;
   color: #76736F !important;
   margin: 0 !important;
@@ -13274,7 +13274,7 @@ html body.page-cube .recog-kicker {
   font-family: 'Geist Mono', ui-monospace, monospace !important;
   font-weight: 400 !important;
   font-size: 12px !important;
-  letter-spacing: 0.12em !important;
+  letter-spacing: normal;
   text-transform: uppercase !important;
   color: #76736F !important;
   margin: 0 0 16px !important;
@@ -13283,7 +13283,7 @@ html body.page-cube .lookbook-meta {
   font-family: 'Geist Mono', ui-monospace, monospace !important;
   font-weight: 400 !important;
   font-size: 12px !important;
-  letter-spacing: 0.12em !important;
+  letter-spacing: normal;
   text-transform: uppercase !important;
   color: #76736F !important;
   margin: 0 0 8px !important;
@@ -13298,7 +13298,7 @@ html body.page-cube .lookbook-price {
   font-family: Manrope, sans-serif !important;
   font-weight: 500 !important;
   font-size: 16px !important;
-  letter-spacing: 0.2em !important;
+  letter-spacing: normal;
   color: #1A1918 !important;
   margin: 0 0 10px !important;
 }
@@ -13306,7 +13306,7 @@ html body.page-cube .lookbook-more {
   font-family: Manrope, sans-serif !important;
   font-weight: 500 !important;
   font-size: 16px !important;
-  letter-spacing: 0.2em !important;
+  letter-spacing: normal;
   color: #1A1918 !important;
   text-decoration: none !important;
   border: none !important;
@@ -13378,7 +13378,7 @@ blockquote,
   font-weight: 400 !important;
   font-size: 32px !important;
   line-height: 1.1 !important;
-  letter-spacing: -0.01em !important;
+  letter-spacing: normal;
   color: var(--ink) !important;
 }
 .craft-atelier-quote,
@@ -13403,7 +13403,7 @@ blockquote.italic,
 .recog-event-link {
   font-family: var(--font-sans) !important;
   font-weight: 500 !important;
-  letter-spacing: 0.2em !important;
+  letter-spacing: normal;
   color: var(--ink) !important;
 }
 .craft-step-text,
@@ -13415,7 +13415,7 @@ blockquote.italic,
   font-family: var(--font-sans) !important;
   font-weight: 400 !important;
   font-size: 16px !important;
-  letter-spacing: 0.2em !important;
+  letter-spacing: normal;
   color: var(--ink) !important;
 }
 
@@ -13427,7 +13427,7 @@ button[type="submit"],
   font-family: var(--font-sans) !important;
   font-weight: 500 !important;
   font-size: 13px !important;
-  letter-spacing: 0.04em !important;
+  letter-spacing: normal;
   text-transform: uppercase !important;
   border-radius: 0 !important;
   padding: 16px 32px !important;
@@ -13461,7 +13461,7 @@ button[type="submit"],
   font-family: var(--font-mono) !important;
   font-weight: 400 !important;
   font-size: 12px !important;
-  letter-spacing: 0.12em !important;
+  letter-spacing: normal;
   text-transform: uppercase !important;
   color: var(--muted) !important;
 }
@@ -13568,7 +13568,7 @@ html body .site-top-logo {
   font-family: Manrope, sans-serif !important;
   font-weight: 500 !important;
   font-size: 16px !important;
-  letter-spacing: 0.2em !important;
+  letter-spacing: normal;
   text-transform: uppercase !important;
   color: #1A1918 !important;
   text-decoration: none !important;
@@ -13586,7 +13586,7 @@ html body .site-top-nav a {
   font-weight: 500 !important;
   font-size: 16px !important;
   line-height: 1.55 !important;
-  letter-spacing: 0.2em !important;
+  letter-spacing: normal;
   color: #1A1918 !important;
   text-decoration: none !important;
   border-bottom: 1px solid transparent !important;
@@ -13606,7 +13606,7 @@ html body .site-top-lang {
   font-weight: 500 !important;
   font-size: 16px !important;
   color: #1A1918 !important;
-  letter-spacing: 0.2em !important;
+  letter-spacing: normal;
   white-space: nowrap !important;
 }
 html body .site-top-lang a {
@@ -13619,7 +13619,7 @@ html body .site-top-menu-btn {
   border: none !important;
   font-family: Manrope, sans-serif !important;
   font-size: 14px !important;
-  letter-spacing: 0.2em !important;
+  letter-spacing: normal;
   color: #1A1918 !important;
   cursor: pointer !important;
 }
@@ -13663,65 +13663,7 @@ html body.page-cube .cube-stage {
   }
 }
 
-/* === v2122 fonts pure — no tracking / leading overrides === */
-html body,
-html body *:not(script):not(style) {
+/* === v2123 kill tracking stretch === */
+html body, html body * {
   letter-spacing: normal !important;
-  line-height: normal !important;
 }
-
-/* families only */
-html body,
-html body p,
-html body li,
-html body a,
-html body button,
-html body input,
-html body textarea,
-html body label,
-html body .site-top-logo,
-html body .site-top-nav a,
-html body .site-top-lang,
-html body .lookbook-price,
-html body .lookbook-more,
-html body .craft-step-text,
-html body .recog-item-text,
-html body .cta-lead,
-html body .cta-btn,
-html body .btn-primary {
-  font-family: Manrope, system-ui, sans-serif !important;
-}
-
-html body .cube-manifest,
-html body .craft-epigraph,
-html body .cta-quote,
-html body .craft-atelier-quote,
-html body .recog-manifest,
-html body blockquote,
-html body .ex-quote,
-html body .ex-title,
-html body h1,
-html body h2,
-html body h3 {
-  font-family: 'Cormorant Garamond', Georgia, serif !important;
-}
-
-html body .sec-label,
-html body .expo-kicker,
-html body .craft-kicker,
-html body .recog-kicker,
-html body .lookbook-meta,
-html body .cube-caption,
-html body .craft-step-num,
-html body .recog-section-label,
-html body .recog-item-year,
-html body .recog-event-tag,
-html body .cta-foot,
-html body .ex-kicker,
-html body .geist-meta,
-html body .pd-spec dt,
-html body .specs dt {
-  font-family: 'Geist Mono', ui-monospace, monospace !important;
-}
-
-/* keep size/weight/color from prior design where needed, but no ls/lh */
