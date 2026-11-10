@@ -85,7 +85,7 @@
 }
   </script>
   <link rel="icon" href="/images/favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="../../css/style.css?v=2125">
+  <link rel="stylesheet" href="../../css/style.css?v=2126">
 
 
 
@@ -1076,15 +1076,7 @@ footer a[href^="mailto:"],
     <div class="pd-info">
       <p class="pd-badge"><span class="pd-dot" aria-hidden="true"></span> <span class="pd-badge-text">В НАЛИЧИИ</span></p>
       <h1 class="pd-number">LOT №&nbsp;188 / UNIQUE PIECE</h1>
-<p class="pd-price"><span class="pd-price-byn">795&nbsp;BYN</span> <span class="pd-price-rub">≈ 22&nbsp;800&nbsp;₽</span> <span class="pd-price-note">/ цена в ₽ — по курсу на день оплаты</span></p>
-
-      <div class="pd-actions">
-        <button type="button" class="pd-btn-primary" onclick="openBycraftModal(event); return false;"
-          data-work="188" data-title="Забронировать работу № 188">Забронировать работу</button>
-        <a class="pd-btn-outline" href="https://t.me/bycraft_by?text=188" target="_blank" rel="noopener">Написать в Telegram</a>
-        <p class="pd-reply">Ответим в течение часа</p>
-      </div>
-
+      <p class="pd-price"><span class="pd-price-byn">795&nbsp;BYN</span> <span class="pd-price-rub">≈ 22&nbsp;800&nbsp;₽</span> <span class="pd-price-note">/ цена в ₽ — по курсу на день оплаты</span></p>
       <div class="pd-rule" aria-hidden="true"></div>
       <dl class="pd-specs">
         <div><dt>Материал</dt><dd>сувель берёзы, обжиг огнём</dd></div>
@@ -1093,12 +1085,18 @@ footer a[href^="mailto:"],
         <div><dt>Год создания</dt><dd>2026</dd></div>
       </dl>
       <div class="pd-rule" aria-hidden="true"></div>
-
-            <div class="pd-acc pd-acc-simple">
+      <div class="pd-actions">
+        <button type="button" class="pd-btn-primary" onclick="openBycraftModal(event); return false;"
+          data-work="188" data-title="Забронировать работу № 188">Забронировать работу</button>
+        <a class="pd-btn-outline" href="https://t.me/bycraft_by?text=188" target="_blank" rel="noopener">Написать в Telegram</a>
+        <p class="pd-reply">Ответим в течение часа</p>
+      </div>
+      <div class="pd-acc pd-acc-simple">
         <p class="pd-ship-p">Бережная курьерская доставка «до двери»; стоимость и сроки зависят от габаритов работы и страны назначения. Изделия из сувеля не требуют дополнительного ухода.</p>
         <p class="pd-ship-p">Если вы сомневаетесь, подойдёт ли вам скульптура по размеру или рисунку, напишите в Telegram — запросим видеообзор объекта со всех ракурсов.</p>
       </div>
-</div><!-- /.pd-info -->
+
+    </div><!-- /.pd-info -->
   </div><!-- /.pd-grid -->
 
   <div class="pd-about">
@@ -1416,7 +1414,7 @@ footer a[href^="mailto:"],
       displayName = "Мастерская";
     } else if (m) {
       kind = "stock";
-      formTitle = "Приобрести работу № " + num;
+      formTitle = "Забронировать работу № " + num;
       formSub = "Мы свяжемся с вами в течение рабочего дня";
       successMsg = "Заявка по работе № " + num + " получена. Мы свяжемся с вами в течение рабочего дня";
     } else if (/pered-licom/.test(path)) {
@@ -1483,7 +1481,7 @@ footer a[href^="mailto:"],
       meta.kind === "stock"
         ? '<div class="bc-field"><label for="bc-country">Страна доставки</label>' +
           '<select id="bc-country" name="country" required onchange="window.bcCountryChange()">' +
-          '<option value="">Выберите страну</option>' +
+          '<option value="">выберите страну доставки</option>' +
           '<option value="Беларусь">Беларусь</option>' +
           '<option value="Россия">Россия</option>' +
           '<option value="другая">другая</option></select></div>' +
