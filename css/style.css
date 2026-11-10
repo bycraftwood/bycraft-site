@@ -14045,3 +14045,57 @@ section:has(> .section-title-32) {
 @media (max-width: 900px) {
   .works-page-title { font-size: 28px !important; }
 }
+
+/* === v2130 works intro full width + geo 12 col === */
+.works-intro-block,
+.works-intro-block .works-page-intro,
+.works-page-intro,
+.works-page-intro .lead-text {
+  width: 100% !important;
+  max-width: 100% !important;
+}
+.works-page-intro .lead-text {
+  font-family: Manrope, sans-serif !important;
+  font-size: 16px !important;
+  color: #1A1918 !important;
+}
+#geography.geography-section,
+.geography-section {
+  width: 100% !important;
+  max-width: 100% !important;
+  background: transparent !important;
+  background-color: transparent !important;
+  box-shadow: none !important;
+  border-top: 1px solid #E5E2DC !important;
+  padding-top: 48px !important;
+  margin-top: 56px !important;
+}
+.geography-section .geo-inner,
+.geography-section .container {
+  width: 100% !important;
+  max-width: 100% !important;
+  background: transparent !important;
+  padding-left: 80px !important;
+  padding-right: 80px !important;
+  box-sizing: border-box !important;
+}
+.geo-before-intro {
+  font-family: Manrope, sans-serif !important;
+  font-size: 16px !important;
+  color: #76736F !important;
+  margin: 0 0 12px !important;
+}
+.geography-title {
+  font-family: 'Geist Mono', ui-monospace, monospace !important;
+  font-size: 12px !important;
+  text-transform: uppercase !important;
+  color: #76736F !important;
+  margin: 0 0 20px !important;
+}
+@media (max-width: 900px) {
+  .geography-section .geo-inner,
+  .geography-section .container {
+    padding-left: 22px !important;
+    padding-right: 22px !important;
+  }
+}
