@@ -4808,7 +4808,7 @@ h1.section-title.work-page-title {
 /* === HOME BTN + TITLES Oct24 === */
 .hero-mosaic-btn,
 a.hero-mosaic-btn.btn-telegram {
-  min-width: 240px !important;
+  min-width: 336px !important;
   padding: 14px 36px !important;
   display: inline-block !important;
   text-align: center !important;
@@ -5792,7 +5792,7 @@ a.card-link:focus-visible {
   #cookieBanner {
     right: 10px !important;
     bottom: 10px !important;
-    max-width: 240px !important;
+    max-width: 336px !important;
     left: auto !important;
   }
 }
@@ -14360,7 +14360,7 @@ html body.page-contacts main {
   font-weight: 500 !important;
   font-size: 15px !important;
   padding: 14px 32px !important;
-  min-width: 220px !important;
+  min-width: 336px !important;
   text-align: center !important;
   border-radius: 0 !important;
   text-decoration: none !important;
@@ -14374,7 +14374,7 @@ html body.page-contacts main {
   font-weight: 500 !important;
   font-size: 15px !important;
   padding: 14px 32px !important;
-  min-width: 220px !important;
+  min-width: 336px !important;
   text-align: center !important;
   border-radius: 0 !important;
   text-decoration: none !important;
@@ -14432,9 +14432,9 @@ html body.page-contacts a.btn-tg-solid {
   display: inline-flex !important;
   align-items: center !important;
   justify-content: center !important;
-  width: 240px !important;
-  min-width: 240px !important;
-  max-width: 240px !important;
+  width: 336px !important;
+  min-width: 336px !important;
+  max-width: 336px !important;
   box-sizing: border-box !important;
   background: #1A1918 !important;
   background-color: #1A1918 !important;
@@ -14452,9 +14452,9 @@ html body.page-contacts a.btn-ig-outline {
   display: inline-flex !important;
   align-items: center !important;
   justify-content: center !important;
-  width: 240px !important;
-  min-width: 240px !important;
-  max-width: 240px !important;
+  width: 336px !important;
+  min-width: 336px !important;
+  max-width: 336px !important;
   box-sizing: border-box !important;
   background: transparent !important;
   background-color: transparent !important;
@@ -14489,4 +14489,24 @@ html body.page-contacts .site-footer .btn-footer-outline {
   color: #1A1918 !important;
   border: 1px solid #1A1918 !important;
   background: transparent !important;
+}
+
+/* === v2135 contacts CTA +40% width, footer text === */
+html body.page-contacts .contacts-cta-top a.btn-tg-solid,
+html body.page-contacts a.btn-tg-solid,
+html body.page-contacts .contacts-cta-top a.btn-ig-outline,
+html body.page-contacts a.btn-ig-outline {
+  width: 336px !important;
+  min-width: 336px !important;
+  max-width: 336px !important;
+}
+html body.page-contacts .site-footer,
+html body.page-contacts .site-footer *,
+html body.page-contacts footer.site-footer,
+html body.page-contacts footer.site-footer * {
+  color: #1A1918 !important;
+}
+html body.page-contacts .site-footer a:hover,
+html body.page-contacts footer.site-footer a:hover {
+  color: #B6452C !important;
 }
