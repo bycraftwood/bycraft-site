@@ -50,7 +50,7 @@
 }
   </script>
   <link rel="icon" href="/images/favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="../css/style.css?v=1794383314">
+  <link rel="stylesheet" href="../css/style.css?v=1794383821">
 
 
 
@@ -1041,27 +1041,38 @@ body.page-contacts a[href^="tel:"]:hover {
     background-color: rgba(26, 25, 24, 0.06) !important;
   }
 
-  /* 3. ПОДВАЛ: глубокий тёмный цвет текста #1A1918 и 100% непрозрачность */
+  /* 3. ПОДВАЛ: ПОЛНОСТЬЮ ПРОЗРАЧНЫЙ ФОН (без подложки), цвет текста #1A1918 */
+  footer,
+  footer *,
+  .site-footer,
+  .site-footer *,
   footer.contacts-dark-footer,
   footer.contacts-dark-footer *,
-  footer.contacts-dark-footer p,
-  footer.contacts-dark-footer span,
-  footer.contacts-dark-footer div,
-  footer.contacts-dark-footer small {
+  [class*="footer"],
+  [class*="footer"] * {
+    background: transparent !important;
+    background-color: transparent !important;
+    box-shadow: none !important;
     color: #1A1918 !important;
     -webkit-text-fill-color: #1A1918 !important;
     opacity: 1 !important;
   }
+
+  footer a,
+  .site-footer a,
   footer.contacts-dark-footer a {
     color: #1A1918 !important;
     text-decoration: underline !important;
     text-decoration-color: rgba(26, 25, 24, 0.45) !important;
     opacity: 1 !important;
+    background: transparent !important;
   }
+  footer a:hover,
   footer.contacts-dark-footer a:hover {
     text-decoration-color: #1A1918 !important;
   }
 </style>
+
 
 </head>
 <body class="page-contacts">
@@ -1438,7 +1449,7 @@ body.page-contacts a[href^="tel:"]:hover {
       "</div></div>";
 
     modal.classList.add("is-active");
-    modal.style.css?v=1794383314 =
+    modal.style.css?v=1794383821 =
       "display:flex!important;position:fixed!important;inset:0!important;z-index:2147483647!important;align-items:center!important;justify-content:center!important;";
     document.body.style.overflow = "hidden";
 
@@ -1470,7 +1481,7 @@ body.page-contacts a[href^="tel:"]:hover {
     var modal = document.getElementById("bycraft-modal");
     if (!modal) return;
     modal.classList.remove("is-active");
-    modal.style.css?v=1794383314 = "display:none!important;";
+    modal.style.css?v=1794383821 = "display:none!important;";
     document.body.style.overflow = "";
   };
 
