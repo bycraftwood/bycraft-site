@@ -14512,10 +14512,6 @@ html body.page-contacts a.btn-tg-solid {
   color: #F8F7F4 !important;
 }
 
-/* BYCRAFT Contacts Footer Background Fix */
-footer.contacts-dark-footer { background-color: #F8F7F4 !important; background: #F8F7F4 !important; }
 
-/* BYCRAFT Seamless Footer Fix */
-footer, .site-footer { background-color: #F8F7F4 !important; background: #F8F7F4 !important; }
-footer *, .site-footer * { background: transparent !important; background-color: transparent !important; }
-footer::before, footer::after, .site-footer::before, .site-footer::after { display: none !important; }
+
+
