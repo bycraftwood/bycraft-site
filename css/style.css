@@ -14511,3 +14511,6 @@ html body .site-footer .btn-footer-outline {
 html body.page-contacts a.btn-tg-solid {
   color: #F8F7F4 !important;
 }
+
+/* BYCRAFT Contacts Footer Background Fix */
+footer.contacts-dark-footer { background-color: #F8F7F4 !important; background: #F8F7F4 !important; }
