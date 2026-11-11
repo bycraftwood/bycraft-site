@@ -49,7 +49,7 @@
 }
   </script>
   <link rel="icon" href="/images/favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="./css/style.css?v=2137">
+  <link rel="stylesheet" href="./css/style.css?v=1794383664">
 
 
 
@@ -947,6 +947,32 @@ footer a[href^="mailto:"],
 }
 </style>
 
+<!-- seamless hero vase styling -->
+<style id="seamless-hero-vase">
+  /* 1. Плавное растворение границ фото вазы в фон страницы #F8F7F4 */
+  img[src*="home-grid-01"],
+  img[src*="grid-01"],
+  .seamless-hero-vase {
+    border: none !important;
+    outline: none !important;
+    box-shadow: none !important;
+    background: transparent !important;
+    /* Края картинки мягко тают в 0% прозрачности, сливаясь с фоном */
+    mask-image: radial-gradient(ellipse 90% 90% at 50% 50%, black 72%, transparent 99%);
+    -webkit-mask-image: radial-gradient(ellipse 90% 90% at 50% 50%, black 72%, transparent 99%);
+  }
+
+  /* 2. Убираем рамки, тени и фон у родительской ячейки сетки */
+  .grid-item:has(img[src*="home-grid-01"]),
+  .grid-cell:has(img[src*="home-grid-01"]),
+  div:has(> img[src*="home-grid-01"]),
+  a:has(> img[src*="home-grid-01"]) {
+    border: none !important;
+    box-shadow: none !important;
+    background: transparent !important;
+  }
+</style>
+
 </head>
 <body class="page-home page-cube"
       <main>
@@ -970,7 +996,7 @@ footer a[href^="mailto:"],
 <section class="cube-hero" aria-label="Экспозиция">
   <div class="cube-stage">
     <div class="cube-object">
-      <img src="/images/home/grid-01.jpg?v=5" alt="Скульптура из сувеля берёзы" class="cube-img">
+      <img src="/images/home/grid-01.jpg?v=5" alt="Скульптура из сувеля берёзы" class="cube-img seamless-hero-vase">
       <div class="cube-shadow" aria-hidden="true"></div>
     </div>
   </div>
@@ -1461,7 +1487,7 @@ footer a[href^="mailto:"],
       "</div></div>";
 
     modal.classList.add("is-active");
-    modal.style.cssText =
+    modal.style.css?v=1794383664Text =
       "display:flex!important;position:fixed!important;inset:0!important;z-index:2147483647!important;align-items:center!important;justify-content:center!important;";
     document.body.style.overflow = "hidden";
 
@@ -1493,7 +1519,7 @@ footer a[href^="mailto:"],
     var modal = document.getElementById("bycraft-modal");
     if (!modal) return;
     modal.classList.remove("is-active");
-    modal.style.cssText = "display:none!important;";
+    modal.style.css?v=1794383664Text = "display:none!important;";
     document.body.style.overflow = "";
   };
 
