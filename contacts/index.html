@@ -50,7 +50,7 @@
 }
   </script>
   <link rel="icon" href="/images/favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="../css/style.css?v=1794380504">
+  <link rel="stylesheet" href="../css/style.css?v=1794380851">
 
 
 
@@ -1009,36 +1009,12 @@ body.page-contacts a[href^="tel:"]:hover {
   font-weight: 400 !important;
   margin: 0 0 10px !important;
 }
-</style><!-- contacts fix: dark footer text & telegram button -->
-<style id="contacts-force-palette">
-  /* 1. ПОДВАЛ: цвет текста и ссылок #1A1918, без полупрозрачности */
-  footer,
-  footer *,
-  .site-footer,
-  .site-footer *,
-  .footer,
-  .footer *,
-  [class*="footer"],
-  [class*="footer"] * {
-    color: #1A1918 !important;
-    -webkit-text-fill-color: #1A1918 !important;
-    opacity: 1 !important;
-  }
-  footer a,
-  .site-footer a,
-  .footer a,
-  [class*="footer"] a {
-    color: #1A1918 !important;
-    text-decoration-color: #1A1918 !important;
-  }
+</style>
 
-  /* 2. КНОПКА TELEGRAM: заливка #1A1918, текст #F8F7F4 */
-  .bycraft-tg-btn,
-  a[href*="t.me"],
-  a[href*="telegram"],
-  button[data-action*="telegram"],
-  .btn-telegram,
-  .telegram-btn {
+<!-- contacts fix: dark footer text & telegram button -->
+<style id="contacts-targeted-fix">
+  /* ТОЛЬКО кнопка «Написать в Telegram» */
+  a.bycraft-exact-tg-btn {
     background-color: #1A1918 !important;
     background: #1A1918 !important;
     color: #F8F7F4 !important;
@@ -1048,27 +1024,40 @@ body.page-contacts a[href^="tel:"]:hover {
     justify-content: center !important;
     text-decoration: none !important;
   }
-
-  .bycraft-tg-btn:hover,
-  a[href*="t.me"]:hover,
-  a[href*="telegram"]:hover {
+  a.bycraft-exact-tg-btn:hover {
     background-color: #2b2a28 !important;
-    background: #2b2a28 !important;
     color: #F8F7F4 !important;
-    opacity: 0.92 !important;
   }
-
-  .bycraft-tg-btn *,
-  a[href*="t.me"] *,
-  a[href*="telegram"] * {
+  a.bycraft-exact-tg-btn * {
     color: #F8F7F4 !important;
     -webkit-text-fill-color: #F8F7F4 !important;
   }
-
-  .bycraft-tg-btn svg path,
-  a[href*="t.me"] svg path,
-  a[href*="telegram"] svg path {
+  a.bycraft-exact-tg-btn svg path {
     fill: #F8F7F4 !important;
+  }
+
+  /* Подвал: красим только нижнюю часть страницы (footer, copyright, bottom) */
+  footer,
+  footer *,
+  .site-footer,
+  .site-footer *,
+  .footer,
+  .footer *,
+  [class*="footer"],
+  [class*="footer"] *,
+  [class*="copyright"],
+  [class*="copyright"] *,
+  .bottom-bar,
+  .bottom-bar * {
+    color: #1A1918 !important;
+    -webkit-text-fill-color: #1A1918 !important;
+    opacity: 1 !important;
+  }
+  footer a,
+  .footer a,
+  [class*="footer"] a {
+    color: #1A1918 !important;
+    text-decoration-color: #1A1918 !important;
   }
 </style>
 
@@ -1076,7 +1065,7 @@ body.page-contacts a[href^="tel:"]:hover {
 <body class="page-contacts">
 <header class="site-top g12-top" role="banner">
   <div class="site-top-inner">
-    <a href="/" class="site-top-logo bycraft-tg-btn" style="background-color: #1A1918 !important; background: #1A1918 !important; color: #F8F7F4 !important; border: 1px solid #1A1918 !important; text-decoration: none !important;">BYCRAFT</a>
+    <a href="/" class="site-top-logo">BYCRAFT</a>
     <nav class="site-top-nav" aria-label="Меню">
       <a href="/works/">Работы</a>
       <a href="/workshop/">Мастерская</a>
@@ -1095,7 +1084,7 @@ body.page-contacts a[href^="tel:"]:hover {
   <div class="container contacts-page">
     <div class="contacts-cta-top">
       <a class="btn-tg-solid" href="https://t.me/bycraft_by" target="_blank" rel="noopener">Telegram-канал</a>
-      <a class="btn-ig-outline bycraft-tg-btn" href="https://www.instagram.com/bycraft.by/" target="_blank" rel="noopener" style="background-color: #1A1918 !important; background: #1A1918 !important; color: #F8F7F4 !important; border: 1px solid #1A1918 !important; text-decoration: none !important;">Instagram</a>
+      <a class="btn-ig-outline" href="https://www.instagram.com/bycraft.by/" target="_blank" rel="noopener">Instagram</a>
     </div>
 
     <div class="contacts-grid-2">
@@ -1137,13 +1126,13 @@ body.page-contacts a[href^="tel:"]:hover {
         <p class="footer-about">Скульптурные арт-объекты из сувеля берёзы. Ремесленник Атрош Валентин Владимирович / УНП: KA0278799</p>
         <p class="footer-socials">
           <a href="https://www.instagram.com/bycraft.by/" target="_blank" rel="noopener" class="btn-footer-outline">Instagram</a>
-          <a href="https://t.me/bycraft" target="_blank" rel="noopener" class="btn-footer-outline">Telegram</a>
+          <a href="https://t.me/bycraft" target="_blank" rel="noopener" class="btn-footer-outline bycraft-exact-tg-btn">Telegram</a>
         </p>
       </div>
       <div class="footer-col">
                 <p class="footer-col-title">Покупателям</p>
         <ul class="footer-links">
-          <li><a href="/works/" class="bycraft-tg-btn" style="background-color: #1A1918 !important; !important; background: #1A1918 !important; color: #1A1918 !important; !important; border: 1px solid #1A1918 !important; text-decoration: none !important;">Работы</a></li>
+          <li><a href="/works/" class="bycraft-tg-btn">Работы</a></li>
           <li><a href="/workshop/">Мастерская</a></li>
           <li><a href="/events/">События</a></li>
         </ul>
@@ -1436,7 +1425,7 @@ body.page-contacts a[href^="tel:"]:hover {
       '<input type="checkbox" id="bc-consent" name="consent" style="width:16px;height:16px;margin:2px 0 0 0;padding:0;">' +
       '<span>Согласен(на) на <a href="/privacy/" target="_blank" rel="noopener" style="color:#2A211C;text-decoration:underline">обработку персональных данных</a></span></label>' +
       '<p id="bc-consent-hint" class="bc-consent-hint" style="margin:8px 0 0 28px;">Отметьте согласие, чтобы отправить заявку</p></div>' +
-      '<button type="submit" class="bc-submit-btn bycraft-tg-btn" id="bc-submit" disabled style="background-color: #1A1918 !important; background: #1A1918 !important; color: #F8F7F4 !important; border: 1px solid #1A1918 !important; text-decoration: none !important;">Отправить заявку</button>' +
+      '<button type="submit" class="bc-submit-btn" id="bc-submit" disabled>Отправить заявку</button>' +
       '<p class="bc-modal-alt" style="text-align:center;margin-top:14px;line-height:1.5;">' +
       '<a href="' + tgUrl + '" target="_blank" rel="noopener noreferrer" style="color:inherit;text-decoration:underline">или напишите в Telegram</a></p></form>' +
       '<div id="bc-modal-success" class="bc-modal__success" style="display:none">' +
@@ -1446,7 +1435,7 @@ body.page-contacts a[href^="tel:"]:hover {
       "</div></div>";
 
     modal.classList.add("is-active");
-    modal.style.css?v=1794380504 =
+    modal.style.css?v=1794380851 =
       "display:flex!important;position:fixed!important;inset:0!important;z-index:2147483647!important;align-items:center!important;justify-content:center!important;";
     document.body.style.overflow = "hidden";
 
@@ -1478,7 +1467,7 @@ body.page-contacts a[href^="tel:"]:hover {
     var modal = document.getElementById("bycraft-modal");
     if (!modal) return;
     modal.classList.remove("is-active");
-    modal.style.css?v=1794380504 = "display:none!important;";
+    modal.style.css?v=1794380851 = "display:none!important;";
     document.body.style.overflow = "";
   };
 
