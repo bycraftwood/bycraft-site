@@ -50,7 +50,7 @@
 }
   </script>
   <link rel="icon" href="/images/favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="../css/style.css?v=2138">
+  <link rel="stylesheet" href="../css/style.css?v=1794380040">
 
 
 
@@ -1011,6 +1011,58 @@ body.page-contacts a[href^="tel:"]:hover {
 }
 </style>
 
+
+    <!-- Custom styling: contacts footer & telegram button -->
+    <style id="contacts-palette-style">
+      /* Подвал: цвет текста и ссылок #1A1918 */
+      footer,
+      footer p,
+      footer a,
+      footer span,
+      .site-footer,
+      .site-footer p,
+      .site-footer a,
+      .footer,
+      .footer * {
+        color: #1A1918 !important;
+      }
+
+      /* Кнопка Telegram: заливка #1A1918, текст #F8F7F4 */
+      a[href*="t.me"],
+      .btn-telegram,
+      .telegram-btn {
+        background-color: #1A1918 !important;
+        color: #F8F7F4 !important;
+        border: 1px solid #1A1918 !important;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+        transition: opacity 0.2s ease, background-color 0.2s ease;
+      }
+
+      a[href*="t.me"]:hover,
+      .btn-telegram:hover,
+      .telegram-btn:hover {
+        background-color: #2c2b29 !important;
+        color: #F8F7F4 !important;
+        opacity: 0.92;
+      }
+
+      /* Цвет текста и SVG-иконки внутри кнопки Telegram */
+      a[href*="t.me"] *,
+      .btn-telegram *,
+      .telegram-btn * {
+        color: #F8F7F4 !important;
+      }
+
+      a[href*="t.me"] svg path,
+      .btn-telegram svg path,
+      .telegram-btn svg path {
+        fill: #F8F7F4 !important;
+      }
+    </style>
+
 </head>
 <body class="page-contacts">
 <header class="site-top g12-top" role="banner">
@@ -1385,7 +1437,7 @@ body.page-contacts a[href^="tel:"]:hover {
       "</div></div>";
 
     modal.classList.add("is-active");
-    modal.style.cssText =
+    modal.style.css?v=1794380040Text =
       "display:flex!important;position:fixed!important;inset:0!important;z-index:2147483647!important;align-items:center!important;justify-content:center!important;";
     document.body.style.overflow = "hidden";
 
@@ -1417,7 +1469,7 @@ body.page-contacts a[href^="tel:"]:hover {
     var modal = document.getElementById("bycraft-modal");
     if (!modal) return;
     modal.classList.remove("is-active");
-    modal.style.cssText = "display:none!important;";
+    modal.style.css?v=1794380040Text = "display:none!important;";
     document.body.style.overflow = "";
   };
 
