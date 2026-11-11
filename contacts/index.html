@@ -50,7 +50,7 @@
 }
   </script>
   <link rel="icon" href="/images/favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="../css/style.css?v=1794386130">
+  <link rel="stylesheet" href="../css/style.css?v=1794386930">
 
 
 
@@ -1013,7 +1013,77 @@ body.page-contacts a[href^="tel:"]:hover {
 
 <!-- contacts page styling -->
 <style id="contacts-page-styling">
-  /* 1. Монолитный фон страницы и самого подвала: строго #F8F7F4 */
+  /* КОНТЕЙНЕР КНОПОК: вертикальная колонка, строго одинаковая ширина */
+  .contacts-action-buttons {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 12px !important;
+    width: 100% !important;
+    max-width: 290px !important;
+    margin: 1.75rem 0 !important;
+  }
+
+  .contacts-action-buttons a,
+  a.bycraft-tg-solid-btn,
+  a.bycraft-ig-btn {
+    width: 100% !important;
+    box-sizing: border-box !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 10px !important;
+    padding: 13px 20px !important;
+    border-radius: 2px !important;
+    text-decoration: none !important;
+    font-size: 0.95rem !important;
+    font-weight: 500 !important;
+    letter-spacing: 0.02em !important;
+    cursor: pointer !important;
+    transition: background-color 0.2s ease, opacity 0.2s ease !important;
+  }
+
+  /* 1. Кнопка Telegram (первая): фон #1A1918, текст #F8F7F4 */
+  a.bycraft-tg-solid-btn {
+    background-color: #1A1918 !important;
+    background: #1A1918 !important;
+    border: 1px solid #1A1918 !important;
+    color: #F8F7F4 !important;
+  }
+  a.bycraft-tg-solid-btn *,
+  a.bycraft-tg-solid-btn span {
+    color: #F8F7F4 !important;
+    -webkit-text-fill-color: #F8F7F4 !important;
+    background: transparent !important;
+  }
+  a.bycraft-tg-solid-btn:hover {
+    background-color: #2b2a28 !important;
+    opacity: 0.94 !important;
+  }
+  a.bycraft-tg-solid-btn svg {
+    stroke: #F8F7F4 !important;
+  }
+
+  /* 2. Кнопка Instagram (вторая, под Telegram): прозрачный фон, рамка #1A1918 */
+  a.bycraft-ig-btn {
+    background-color: transparent !important;
+    background: transparent !important;
+    border: 1px solid #1A1918 !important;
+    color: #1A1918 !important;
+  }
+  a.bycraft-ig-btn *,
+  a.bycraft-ig-btn span {
+    color: #1A1918 !important;
+    -webkit-text-fill-color: #1A1918 !important;
+    background: transparent !important;
+  }
+  a.bycraft-ig-btn:hover {
+    background-color: rgba(26, 25, 24, 0.06) !important;
+  }
+  a.bycraft-ig-btn svg {
+    stroke: #1A1918 !important;
+  }
+
+  /* ПОДВАЛ: монолитный фон #F8F7F4, без рамок и без кусков */
   html,
   body,
   main,
@@ -1027,7 +1097,6 @@ body.page-contacts a[href^="tel:"]:hover {
     box-shadow: none !important;
   }
 
-  /* 2. УБИРАЕМ КУСКИ: все элементы ВНУТРИ подвала строго прозрачные */
   footer *,
   .site-footer *,
   footer.contacts-dark-footer * {
@@ -1036,72 +1105,33 @@ body.page-contacts a[href^="tel:"]:hover {
     box-shadow: none !important;
   }
 
-  /* 3. УБИРАЕМ ПСЕВДОЭЛЕМЕНТЫ (подложки ::before и ::after) */
   footer::before,
   footer::after,
   .site-footer::before,
-  .site-footer::after,
-  footer.contacts-dark-footer::before,
-  footer.contacts-dark-footer::after {
+  .site-footer::after {
     display: none !important;
     content: none !important;
     background: transparent !important;
   }
 
-  /* 4. Текст и ссылки подвала: глубокий тёмный цвет #1A1918 */
   footer,
   footer *,
   .site-footer,
-  .site-footer *,
-  footer.contacts-dark-footer,
-  footer.contacts-dark-footer * {
+  .site-footer * {
     color: #1A1918 !important;
     -webkit-text-fill-color: #1A1918 !important;
     opacity: 1 !important;
   }
 
   footer a,
-  .site-footer a,
-  footer.contacts-dark-footer a {
+  .site-footer a {
     color: #1A1918 !important;
     text-decoration: underline !important;
     text-decoration-color: rgba(26, 25, 24, 0.45) !important;
     opacity: 1 !important;
   }
-  footer a:hover,
-  footer.contacts-dark-footer a:hover {
-    text-decoration-color: #1A1918 !important;
-  }
-
-  /* 5. Кнопка Telegram: фон #1A1918, текст #F8F7F4 */
-  a.bycraft-tg-solid-btn,
-  .bycraft-tg-solid-btn {
-    background-color: #1A1918 !important;
-    background: #1A1918 !important;
-    border: 1px solid #1A1918 !important;
-  }
-  a.bycraft-tg-solid-btn *,
-  .bycraft-tg-solid-btn * {
-    color: #F8F7F4 !important;
-    -webkit-text-fill-color: #F8F7F4 !important;
-    background: transparent !important;
-  }
-  a.bycraft-tg-solid-btn svg,
-  a.bycraft-tg-solid-btn svg path {
-    fill: #F8F7F4 !important;
-    stroke: #F8F7F4 !important;
-  }
-
-  /* 6. Кнопка Instagram */
-  a.bycraft-ig-btn {
-    color: #1A1918 !important;
-    border: 1px solid #1A1918 !important;
-    background: transparent !important;
-  }
-  a.bycraft-ig-btn:hover {
-    background-color: rgba(26, 25, 24, 0.06) !important;
-  }
 </style>
+
 
 
 
@@ -1110,26 +1140,23 @@ body.page-contacts a[href^="tel:"]:hover {
 <body class="page-contacts">
 <header class="site-top g12-top" role="banner">
   <div class="site-top-inner">
-    <a href="/" class="site-top-logo">BYCRAFT</a>
-    <nav class="site-top-nav" aria-label="Меню">
-      <a href="/works/">Работы</a>
-      <a href="/workshop/">Мастерская</a>
-      <a href="/events/">События</a>
-      <a href="/contacts/">Контакты</a>
-    </nav>
-    <div class="site-top-right">
-      <span class="site-top-lang"><a href="/en/">EN</a> / <span>RU</span></span>
-      <button type="button" class="site-top-menu-btn" aria-label="Меню"
-        onclick="document.body.classList.toggle('nav-open')">Menu</button>
-    </div>
-  </div>
-</header>
-
-      <main>
-  <div class="container contacts-page">
-    <div class="contacts-cta-top">
-      <a class="btn-ig-outline" href="https://www.instagram.com/bycraft.by/" target="_blank" rel="noopener">Instagram</a>
-        <a href="https://t.me/bycraft_by" target="_blank" rel="noopener" class="bycraft-tg-solid-btn" style="background-color: #1A1918 !important; background: #1A1918 !important; border: 1px solid #1A1918 !important; display: inline-flex !important; align-items: center !important; justify-content: center !important; gap: 10px; text-decoration: none !important; padding: 13px 28px; border-radius: 2px; cursor: pointer;"><span style="color: #F8F7F4 !important; -webkit-text-fill-color: #F8F7F4 !important; font-family: inherit; font-size: 0.95rem; font-weight: 500; letter-spacing: 0.02em; display: inline-block;">Написать в Telegram</span></a>
+    <div class="contacts-action-buttons">
+        <a href="https://t.me/bycraft" target="_blank" rel="noopener" class="bycraft-tg-solid-btn">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#F8F7F4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="22" y1="2" x2="11" y2="13"></line>
+            <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+          </svg>
+          <span>Написать в Telegram</span>
+        </a>
+        <a href="https://instagram.com/bycraftwood" target="_blank" rel="noopener" class="bycraft-ig-btn">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1A1918" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
+            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+            <line x1="17.5" x2="17.51" y1="6.5" y2="6.5"></line>
+          </svg>
+          <span>Instagram</span>
+        </a>
+      </div>
     </div>
 
     <div class="contacts-grid-2">
@@ -1481,7 +1508,7 @@ body.page-contacts a[href^="tel:"]:hover {
       "</div></div>";
 
     modal.classList.add("is-active");
-    modal.style.css?v=1794386130 =
+    modal.style.css?v=1794386930 =
       "display:flex!important;position:fixed!important;inset:0!important;z-index:2147483647!important;align-items:center!important;justify-content:center!important;";
     document.body.style.overflow = "hidden";
 
@@ -1513,7 +1540,7 @@ body.page-contacts a[href^="tel:"]:hover {
     var modal = document.getElementById("bycraft-modal");
     if (!modal) return;
     modal.classList.remove("is-active");
-    modal.style.css?v=1794386130 = "display:none!important;";
+    modal.style.css?v=1794386930 = "display:none!important;";
     document.body.style.overflow = "";
   };
 
