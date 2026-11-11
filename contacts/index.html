@@ -50,7 +50,7 @@
 }
   </script>
   <link rel="icon" href="/images/favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="../css/style.css?v=1794385896">
+  <link rel="stylesheet" href="../css/style.css?v=1794386130">
 
 
 
@@ -1013,34 +1013,42 @@ body.page-contacts a[href^="tel:"]:hover {
 
 <!-- contacts page styling -->
 <style id="contacts-page-styling">
-  /* 1. Единый фон страницы и подвала: строго #F8F7F4, никакой белой/серой подложки */
+  /* 1. Монолитный фон страницы и самого подвала: строго #F8F7F4 */
   html,
   body,
   main,
   footer,
-  footer *,
   .site-footer,
-  .site-footer *,
   footer.contacts-dark-footer,
-  footer.contacts-dark-footer *,
-  [class*="footer"],
-  [class*="footer"] * {
+  section:has(footer),
+  div:has(> footer) {
     background-color: #F8F7F4 !important;
     background: #F8F7F4 !important;
     box-shadow: none !important;
   }
 
-  /* Тонкая аккуратная линия-разделитель сверху (без боковых рамок) */
-  footer,
-  .site-footer,
-  footer.contacts-dark-footer {
-    border-top: 1px solid rgba(26, 25, 24, 0.12) !important;
-    border-bottom: none !important;
-    border-left: none !important;
-    border-right: none !important;
+  /* 2. УБИРАЕМ КУСКИ: все элементы ВНУТРИ подвала строго прозрачные */
+  footer *,
+  .site-footer *,
+  footer.contacts-dark-footer * {
+    background: transparent !important;
+    background-color: transparent !important;
+    box-shadow: none !important;
   }
 
-  /* 2. Текст подвала: глубокий темный цвет #1A1918, без бледности */
+  /* 3. УБИРАЕМ ПСЕВДОЭЛЕМЕНТЫ (подложки ::before и ::after) */
+  footer::before,
+  footer::after,
+  .site-footer::before,
+  .site-footer::after,
+  footer.contacts-dark-footer::before,
+  footer.contacts-dark-footer::after {
+    display: none !important;
+    content: none !important;
+    background: transparent !important;
+  }
+
+  /* 4. Текст и ссылки подвала: глубокий тёмный цвет #1A1918 */
   footer,
   footer *,
   .site-footer,
@@ -1065,7 +1073,7 @@ body.page-contacts a[href^="tel:"]:hover {
     text-decoration-color: #1A1918 !important;
   }
 
-  /* 3. Кнопка Telegram: фон #1A1918, текст #F8F7F4 */
+  /* 5. Кнопка Telegram: фон #1A1918, текст #F8F7F4 */
   a.bycraft-tg-solid-btn,
   .bycraft-tg-solid-btn {
     background-color: #1A1918 !important;
@@ -1076,6 +1084,7 @@ body.page-contacts a[href^="tel:"]:hover {
   .bycraft-tg-solid-btn * {
     color: #F8F7F4 !important;
     -webkit-text-fill-color: #F8F7F4 !important;
+    background: transparent !important;
   }
   a.bycraft-tg-solid-btn svg,
   a.bycraft-tg-solid-btn svg path {
@@ -1083,7 +1092,7 @@ body.page-contacts a[href^="tel:"]:hover {
     stroke: #F8F7F4 !important;
   }
 
-  /* 4. Кнопка Instagram */
+  /* 6. Кнопка Instagram */
   a.bycraft-ig-btn {
     color: #1A1918 !important;
     border: 1px solid #1A1918 !important;
@@ -1093,6 +1102,7 @@ body.page-contacts a[href^="tel:"]:hover {
     background-color: rgba(26, 25, 24, 0.06) !important;
   }
 </style>
+
 
 
 
@@ -1154,7 +1164,7 @@ body.page-contacts a[href^="tel:"]:hover {
   </div>
 </main>
               <!-- ЧИСТЫЙ СЕМАНТИЧЕСКИЙ ПОДВАЛ (БЕЗ OPACITY) -->
-  <footer style="background: #F8F7F4 !important; background-color: #F8F7F4 !important; box-shadow: none !important;" class="contacts-dark-footer" class="site-footer">
+  <footer style="background: #F8F7F4 !important; background-color: #F8F7F4 !important; box-shadow: none !important;; background: #F8F7F4 !important; background-color: #F8F7F4 !important; border-top: 1px solid rgba(26, 25, 24, 0.12) !important;" class="contacts-dark-footer" class="site-footer">
   <div class="container">
     <div class="footer-grid-4">
       <div class="footer-col">
@@ -1471,7 +1481,7 @@ body.page-contacts a[href^="tel:"]:hover {
       "</div></div>";
 
     modal.classList.add("is-active");
-    modal.style.css?v=1794385896 =
+    modal.style.css?v=1794386130 =
       "display:flex!important;position:fixed!important;inset:0!important;z-index:2147483647!important;align-items:center!important;justify-content:center!important;";
     document.body.style.overflow = "hidden";
 
@@ -1503,7 +1513,7 @@ body.page-contacts a[href^="tel:"]:hover {
     var modal = document.getElementById("bycraft-modal");
     if (!modal) return;
     modal.classList.remove("is-active");
-    modal.style.css?v=1794385896 = "display:none!important;";
+    modal.style.css?v=1794386130 = "display:none!important;";
     document.body.style.overflow = "";
   };
 
