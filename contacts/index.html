@@ -50,7 +50,7 @@
 }
   </script>
   <link rel="icon" href="/images/favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="../css/style.css?v=1794382587">
+  <link rel="stylesheet" href="../css/style.css?v=1794382993">
 
 
 
@@ -1013,24 +1013,35 @@ body.page-contacts a[href^="tel:"]:hover {
 
 <!-- contacts page styling -->
 <style id="contacts-page-styling">
-  /* 1. Кнопка Telegram: светлый текст #F8F7F4 на темном фоне #1A1918 */
-  a.bycraft-tg-solid-btn,
+  /* Кнопка Telegram: фон #1A1918, текст и SVG строго #F8F7F4 */
   .bycraft-tg-solid-btn,
-  a.bycraft-tg-solid-btn *,
-  .bycraft-tg-solid-btn * {
+  a.bycraft-tg-solid-btn {
+    background-color: #1A1918 !important;
+    background: #1A1918 !important;
+    color: #F8F7F4 !important;
+    border: 1px solid #1A1918 !important;
+  }
+  .bycraft-tg-solid-btn *,
+  a.bycraft-tg-solid-btn * {
     color: #F8F7F4 !important;
     -webkit-text-fill-color: #F8F7F4 !important;
   }
+  .bycraft-tg-solid-btn:hover,
   a.bycraft-tg-solid-btn:hover {
     background-color: #2b2a28 !important;
-    background: #2b2a28 !important;
-    opacity: 0.94 !important;
+    opacity: 0.92 !important;
   }
-  a.bycraft-tg-solid-btn svg path {
+  .bycraft-tg-solid-btn svg,
+  .bycraft-tg-solid-btn svg path {
     fill: #F8F7F4 !important;
   }
 
-  /* 2. Подвал: 100% темный цвет #1A1918, отключение любой полупрозрачности */
+  /* Кнопка Instagram */
+  .bycraft-ig-btn:hover {
+    background-color: rgba(26, 25, 24, 0.05) !important;
+  }
+
+  /* Подвал страницы контактов: 100% цвет #1A1918 и сброс прозрачности */
   footer,
   footer *,
   .site-footer,
@@ -1107,48 +1118,48 @@ body.page-contacts a[href^="tel:"]:hover {
   </div>
 </main>
               <!-- ЧИСТЫЙ СЕМАНТИЧЕСКИЙ ПОДВАЛ (БЕЗ OPACITY) -->
-  <footer style="color: #1A1918 !important; opacity: 1 !important; -webkit-text-fill-color: #1A1918 !important;" class="site-footer">
-  < class="container" style="color: #1A1918 !important; opacity: 1 !important; -webkit-text-fill-color: #1A1918 !important;">
-    < class="footer-grid-4" style="color: #1A1918 !important; opacity: 1 !important; -webkit-text-fill-color: #1A1918 !important;">
-      < class="footer-col" style="color: #1A1918 !important; opacity: 1 !important; -webkit-text-fill-color: #1A1918 !important;">
-        < href="/" class="footer-brand" style="color: #1A1918 !important; opacity: 1 !important; -webkit-text-fill-color: #1A1918 !important;">BYCRAFT</a>
-        < class="footer-about" style="color: #1A1918 !important; opacity: 1 !important; -webkit-text-fill-color: #1A1918 !important;">Скульптурные арт-объекты из сувеля берёзы. Ремесленник Атрош Валентин Владимирович / УНП: KA0278799</p>
-        < class="footer-socials" style="color: #1A1918 !important; opacity: 1 !important; -webkit-text-fill-color: #1A1918 !important;">
-          < href="https://www.instagram.com/bycraft.by/" target="_blank" rel="noopener" class="btn-footer-outline" style="color: #1A1918 !important; opacity: 1 !important; -webkit-text-fill-color: #1A1918 !important;">Instagram</a>
-          < href="https://t.me/bycraft" target="_blank" rel="noopener" class="btn-footer-outline" style="color: #1A1918 !important; opacity: 1 !important; -webkit-text-fill-color: #1A1918 !important;">Telegram</a>
+  <footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid-4">
+      <div class="footer-col">
+        <a href="/" class="footer-brand">BYCRAFT</a>
+        <p class="footer-about">Скульптурные арт-объекты из сувеля берёзы. Ремесленник Атрош Валентин Владимирович / УНП: KA0278799</p>
+        <p class="footer-socials">
+          <a href="https://www.instagram.com/bycraft.by/" target="_blank" rel="noopener" class="btn-footer-outline">Instagram</a>
+          <a href="https://t.me/bycraft" target="_blank" rel="noopener" class="btn-footer-outline">Telegram</a>
         </p>
       </div>
-      < class="footer-col" style="color: #1A1918 !important; opacity: 1 !important; -webkit-text-fill-color: #1A1918 !important;">
-                < class="footer-col-title" style="color: #1A1918 !important; opacity: 1 !important; -webkit-text-fill-color: #1A1918 !important;">Покупателям</p>
+      <div class="footer-col">
+                <p class="footer-col-title">Покупателям</p>
         <ul class="footer-links">
-          <li>< href="/works/" style="color: #1A1918 !important; opacity: 1 !important; -webkit-text-fill-color: #1A1918 !important;">Работы</a></li>
-          <li>< href="/workshop/" style="color: #1A1918 !important; opacity: 1 !important; -webkit-text-fill-color: #1A1918 !important;">Мастерская</a></li>
-          <li>< href="/events/" style="color: #1A1918 !important; opacity: 1 !important; -webkit-text-fill-color: #1A1918 !important;">События</a></li>
+          <li><a href="/works/">Работы</a></li>
+          <li><a href="/workshop/">Мастерская</a></li>
+          <li><a href="/events/">События</a></li>
         </ul>
       </div>
-      < class="footer-col" style="color: #1A1918 !important; opacity: 1 !important; -webkit-text-fill-color: #1A1918 !important;">
-        < class="footer-col-title" style="color: #1A1918 !important; opacity: 1 !important; -webkit-text-fill-color: #1A1918 !important;">Профессионалам</p>
+      <div class="footer-col">
+        <p class="footer-col-title">Профессионалам</p>
         <ul class="footer-links">
-          <li>< href="/designers/" style="color: #1A1918 !important; opacity: 1 !important; -webkit-text-fill-color: #1A1918 !important;">Дизайнерам интерьеров</a></li>
-          <li>< href="/curators/" style="color: #1A1918 !important; opacity: 1 !important; -webkit-text-fill-color: #1A1918 !important;">Кураторам</a></li>
+          <li><a href="/designers/">Дизайнерам интерьеров</a></li>
+          <li><a href="/curators/">Кураторам</a></li>
         </ul>
       </div>
-      < class="footer-col" style="color: #1A1918 !important; opacity: 1 !important; -webkit-text-fill-color: #1A1918 !important;">
-        < class="footer-col-title" style="color: #1A1918 !important; opacity: 1 !important; -webkit-text-fill-color: #1A1918 !important;">Контакты</p>
+      <div class="footer-col">
+        <p class="footer-col-title">Контакты</p>
         <ul class="footer-contacts">
-          <li>Валентин: < href="tel:+375295507250" style="color: #1A1918 !important; opacity: 1 !important; -webkit-text-fill-color: #1A1918 !important;">+375 (29) 550-72-50</a></li>
-          <li>Россия: < href="tel:+79525311270" style="color: #1A1918 !important; opacity: 1 !important; -webkit-text-fill-color: #1A1918 !important;">+7 (952) 531-12-70</a></li>
-          <li>Елена: < href="tel:+375296815576" style="color: #1A1918 !important; opacity: 1 !important; -webkit-text-fill-color: #1A1918 !important;">+375 (29) 681-55-76</a></li>
-          <li>< href="mailto:info@bycraft.by" style="color: #1A1918 !important; opacity: 1 !important; -webkit-text-fill-color: #1A1918 !important;">info@bycraft.by</a></li>
+          <li>Валентин: <a href="tel:+375295507250">+375 (29) 550-72-50</a></li>
+          <li>Россия: <a href="tel:+79525311270">+7 (952) 531-12-70</a></li>
+          <li>Елена: <a href="tel:+375296815576">+375 (29) 681-55-76</a></li>
+          <li><a href="mailto:info@bycraft.by">info@bycraft.by</a></li>
         </ul>
       </div>
     </div>
-    < class="footer-bottom" style="color: #1A1918 !important; opacity: 1 !important; -webkit-text-fill-color: #1A1918 !important;">
-      < class="footer-copy" style="color: #1A1918 !important; opacity: 1 !important; -webkit-text-fill-color: #1A1918 !important;">© 2026 BYCRAFT. Сайт носит информационный характер и служит виртуальной галереей автора. Фотографии, тексты и видеоматериалы принадлежат владельцу.</p>
-      < class="footer-legal" style="color: #1A1918 !important; opacity: 1 !important; -webkit-text-fill-color: #1A1918 !important;">
-        < href="/privacy/" style="color: #1A1918 !important; opacity: 1 !important; -webkit-text-fill-color: #1A1918 !important;">Политика конфиденциальности</a>
-        < class="footer-dot" style="color: #1A1918 !important; opacity: 1 !important; -webkit-text-fill-color: #1A1918 !important;">·</span>
-        < href="javascript:void(0)" onclick="window.bycraftopencookiesettings&&window.bycraftopencookiesettings()" style="color: #1A1918 !important; opacity: 1 !important; -webkit-text-fill-color: #1A1918 !important;">Настройки cookie</a>
+    <div class="footer-bottom">
+      <p class="footer-copy">© 2026 BYCRAFT. Сайт носит информационный характер и служит виртуальной галереей автора. Фотографии, тексты и видеоматериалы принадлежат владельцу.</p>
+      <p class="footer-legal">
+        <a href="/privacy/">Политика конфиденциальности</a>
+        <span class="footer-dot">·</span>
+        <a href="javascript:void(0)" onclick="window.bycraftOpenCookieSettings&&window.bycraftOpenCookieSettings()">Настройки cookie</a>
       </p>
     </div>
   </div>
@@ -1424,7 +1435,7 @@ body.page-contacts a[href^="tel:"]:hover {
       "</div></div>";
 
     modal.classList.add("is-active");
-    modal.style.css?v=1794382587 =
+    modal.style.css?v=1794382993 =
       "display:flex!important;position:fixed!important;inset:0!important;z-index:2147483647!important;align-items:center!important;justify-content:center!important;";
     document.body.style.overflow = "hidden";
 
@@ -1456,7 +1467,7 @@ body.page-contacts a[href^="tel:"]:hover {
     var modal = document.getElementById("bycraft-modal");
     if (!modal) return;
     modal.classList.remove("is-active");
-    modal.style.css?v=1794382587 = "display:none!important;";
+    modal.style.css?v=1794382993 = "display:none!important;";
     document.body.style.overflow = "";
   };
 
