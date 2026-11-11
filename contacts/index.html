@@ -50,7 +50,7 @@
 }
   </script>
   <link rel="icon" href="/images/favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="../css/style.css?v=1794382993">
+  <link rel="stylesheet" href="../css/style.css?v=1794383314">
 
 
 
@@ -1013,50 +1013,52 @@ body.page-contacts a[href^="tel:"]:hover {
 
 <!-- contacts page styling -->
 <style id="contacts-page-styling">
-  /* Кнопка Telegram: фон #1A1918, текст и SVG строго #F8F7F4 */
-  .bycraft-tg-solid-btn,
-  a.bycraft-tg-solid-btn {
+  /* 1. Кнопка Telegram: фон #1A1918, текст #F8F7F4 */
+  a.bycraft-tg-solid-btn,
+  .bycraft-tg-solid-btn {
     background-color: #1A1918 !important;
     background: #1A1918 !important;
-    color: #F8F7F4 !important;
     border: 1px solid #1A1918 !important;
   }
-  .bycraft-tg-solid-btn *,
-  a.bycraft-tg-solid-btn * {
+  a.bycraft-tg-solid-btn *,
+  .bycraft-tg-solid-btn * {
     color: #F8F7F4 !important;
     -webkit-text-fill-color: #F8F7F4 !important;
   }
-  .bycraft-tg-solid-btn:hover,
-  a.bycraft-tg-solid-btn:hover {
-    background-color: #2b2a28 !important;
-    opacity: 0.92 !important;
-  }
-  .bycraft-tg-solid-btn svg,
-  .bycraft-tg-solid-btn svg path {
+  a.bycraft-tg-solid-btn svg,
+  a.bycraft-tg-solid-btn svg path {
     fill: #F8F7F4 !important;
+    stroke: #F8F7F4 !important;
   }
 
-  /* Кнопка Instagram */
-  .bycraft-ig-btn:hover {
-    background-color: rgba(26, 25, 24, 0.05) !important;
+  /* 2. Кнопка Instagram */
+  a.bycraft-ig-btn {
+    color: #1A1918 !important;
+    border: 1px solid #1A1918 !important;
+    background: transparent !important;
+  }
+  a.bycraft-ig-btn:hover {
+    background-color: rgba(26, 25, 24, 0.06) !important;
   }
 
-  /* Подвал страницы контактов: 100% цвет #1A1918 и сброс прозрачности */
-  footer,
-  footer *,
-  .site-footer,
-  .site-footer * {
+  /* 3. ПОДВАЛ: глубокий тёмный цвет текста #1A1918 и 100% непрозрачность */
+  footer.contacts-dark-footer,
+  footer.contacts-dark-footer *,
+  footer.contacts-dark-footer p,
+  footer.contacts-dark-footer span,
+  footer.contacts-dark-footer div,
+  footer.contacts-dark-footer small {
     color: #1A1918 !important;
     -webkit-text-fill-color: #1A1918 !important;
     opacity: 1 !important;
   }
-  footer a,
-  .site-footer a {
+  footer.contacts-dark-footer a {
     color: #1A1918 !important;
-    text-decoration-color: rgba(26, 25, 24, 0.4) !important;
+    text-decoration: underline !important;
+    text-decoration-color: rgba(26, 25, 24, 0.45) !important;
+    opacity: 1 !important;
   }
-  footer a:hover,
-  .site-footer a:hover {
+  footer.contacts-dark-footer a:hover {
     text-decoration-color: #1A1918 !important;
   }
 </style>
@@ -1083,7 +1085,8 @@ body.page-contacts a[href^="tel:"]:hover {
       <main>
   <div class="container contacts-page">
     <div class="contacts-cta-top">
-      <a href="https://t.me/bycraft_by" target="_blank" rel="noopener" class="bycraft-tg-solid-btn" style="background-color: #1A1918 !important; background: #1A1918 !important; border: 1px solid #1A1918 !important; display: inline-flex !important; align-items: center !important; justify-content: center !important; gap: 10px; text-decoration: none !important; padding: 13px 28px; border-radius: 2px; cursor: pointer;"><span style="color: #F8F7F4 !important; -webkit-text-fill-color: #F8F7F4 !important; font-family: inherit; font-size: 0.95rem; font-weight: 500; letter-spacing: 0.02em; display: inline-block;">Написать в Telegram</span></a>
+      <a class="btn-ig-outline" href="https://www.instagram.com/bycraft.by/" target="_blank" rel="noopener">Instagram</a>
+        <a href="https://t.me/bycraft_by" target="_blank" rel="noopener" class="bycraft-tg-solid-btn" style="background-color: #1A1918 !important; background: #1A1918 !important; border: 1px solid #1A1918 !important; display: inline-flex !important; align-items: center !important; justify-content: center !important; gap: 10px; text-decoration: none !important; padding: 13px 28px; border-radius: 2px; cursor: pointer;"><span style="color: #F8F7F4 !important; -webkit-text-fill-color: #F8F7F4 !important; font-family: inherit; font-size: 0.95rem; font-weight: 500; letter-spacing: 0.02em; display: inline-block;">Написать в Telegram</span></a>
     </div>
 
     <div class="contacts-grid-2">
@@ -1118,7 +1121,7 @@ body.page-contacts a[href^="tel:"]:hover {
   </div>
 </main>
               <!-- ЧИСТЫЙ СЕМАНТИЧЕСКИЙ ПОДВАЛ (БЕЗ OPACITY) -->
-  <footer class="site-footer">
+  <footer class="contacts-dark-footer" class="site-footer">
   <div class="container">
     <div class="footer-grid-4">
       <div class="footer-col">
@@ -1435,7 +1438,7 @@ body.page-contacts a[href^="tel:"]:hover {
       "</div></div>";
 
     modal.classList.add("is-active");
-    modal.style.css?v=1794382993 =
+    modal.style.css?v=1794383314 =
       "display:flex!important;position:fixed!important;inset:0!important;z-index:2147483647!important;align-items:center!important;justify-content:center!important;";
     document.body.style.overflow = "hidden";
 
@@ -1467,7 +1470,7 @@ body.page-contacts a[href^="tel:"]:hover {
     var modal = document.getElementById("bycraft-modal");
     if (!modal) return;
     modal.classList.remove("is-active");
-    modal.style.css?v=1794382993 = "display:none!important;";
+    modal.style.css?v=1794383314 = "display:none!important;";
     document.body.style.overflow = "";
   };
 
