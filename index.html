@@ -974,35 +974,7 @@ footer a[href^="mailto:"],
 </style>
 
 
-<style id="footer-force-v2140">
-html body footer.site-footer, html body .site-footer {
-  background: #F8F7F4 !important;
-  color: #1A1918 !important;
-  border-top: 1px solid #E5E2DC !important;
-}
-html body footer.site-footer *, html body .site-footer * {
-  color: #1A1918 !important;
-  text-decoration: none !important;
-}
-html body footer.site-footer a.btn-footer-outline,
-html body .site-footer a.btn-footer-outline {
-  display: inline-block !important;
-  background: transparent !important;
-  color: #1A1918 !important;
-  border: 1px solid #1A1918 !important;
-  padding: 10px 18px !important;
-  text-decoration: none !important;
-}
-html body footer.site-footer a.btn-footer-outline:hover {
-  background: #1A1918 !important;
-  color: #F8F7F4 !important;
-}
-html body.page-contacts a.btn-tg-solid {
-  background: #1A1918 !important;
-  color: #F8F7F4 !important;
-  border: 1px solid #1A1918 !important;
-}
-</style>
+
 
 
 
@@ -1074,6 +1046,135 @@ html body .lookbook-no {
   letter-spacing: 0.04em !important;
   text-transform: uppercase !important;
   color: #6B5D52 !important;
+}
+</style>
+
+
+<style id="footer-typo-v2147">
+/* ===== ФУТЕР: сброс 7px и нормальная типографика ===== */
+html body footer.site-footer,
+html body .site-footer,
+html body footer {
+  font-size: 14px !important;
+  line-height: 1.55 !important;
+  color: #1A1918 !important;
+  background: #F8F7F4 !important;
+}
+
+/* Сброс всех вложенных 7px */
+html body footer.site-footer *,
+html body .site-footer *,
+html body footer * {
+  font-size: inherit !important;
+  line-height: inherit !important;
+  font-weight: 400 !important;
+  color: #1A1918 !important;
+  -webkit-text-fill-color: #1A1918 !important;
+  text-decoration: none !important;
+  opacity: 1 !important;
+}
+
+/* Логотип футера */
+html body footer .footer-brand,
+html body .site-footer .footer-brand {
+  font-family: Manrope, sans-serif !important;
+  font-weight: 600 !important;
+  font-size: 22px !important;
+  letter-spacing: 0.02em !important;
+  text-transform: uppercase !important;
+  color: #1A1918 !important;
+  display: inline-block !important;
+  margin-bottom: 12px !important;
+}
+
+/* Основной текст */
+html body footer .footer-about,
+html body footer .footer-links a,
+html body footer .footer-contacts,
+html body footer .footer-contacts a,
+html body footer .footer-links li,
+html body footer p {
+  font-family: Manrope, sans-serif !important;
+  font-weight: 400 !important;
+  font-size: 14px !important;
+  line-height: 1.55 !important;
+  color: #1A1918 !important;
+}
+
+/* Заголовки колонок */
+html body footer .footer-col-title {
+  font-family: Manrope, sans-serif !important;
+  font-weight: 500 !important;
+  font-size: 13px !important;
+  letter-spacing: 0.04em !important;
+  text-transform: uppercase !important;
+  color: #1A1918 !important;
+  margin: 0 0 12px !important;
+}
+
+/* Юридическая строка и копирайт */
+html body footer .footer-copy,
+html body footer .footer-legal,
+html body footer .footer-legal a {
+  font-family: Manrope, sans-serif !important;
+  font-weight: 400 !important;
+  font-size: 12px !important;
+  line-height: 1.5 !important;
+  color: #1A1918 !important;
+}
+
+/* Разделитель без жирности */
+html body footer .footer-sep {
+  font-weight: 400 !important;
+  font-size: 12px !important;
+  opacity: 0.5 !important;
+  margin: 0 0.25em !important;
+}
+
+/* Кнопки соцсетей в футере */
+html body footer a.btn-footer-outline {
+  display: inline-block !important;
+  background: transparent !important;
+  color: #1A1918 !important;
+  border: 1px solid #1A1918 !important;
+  padding: 8px 14px !important;
+  font-size: 12px !important;
+  letter-spacing: 0.04em !important;
+  text-transform: uppercase !important;
+  text-decoration: none !important;
+  border-radius: 0 !important;
+  margin-right: 8px !important;
+}
+html body footer a.btn-footer-outline:hover {
+  background: #1A1918 !important;
+  color: #F8F7F4 !important;
+  -webkit-text-fill-color: #F8F7F4 !important;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  html body footer.site-footer,
+  html body .site-footer {
+    font-size: 13px !important;
+  }
+  html body footer .footer-brand {
+    font-size: 18px !important;
+  }
+  html body footer .footer-about,
+  html body footer .footer-links a,
+  html body footer .footer-contacts,
+  html body footer .footer-contacts a,
+  html body footer p {
+    font-size: 13px !important;
+  }
+  html body footer .footer-col-title {
+    font-size: 12px !important;
+  }
+  html body footer .footer-copy,
+  html body footer .footer-legal,
+  html body footer .footer-legal a {
+    font-size: 11px !important;
+  }
 }
 </style>
 
@@ -1311,7 +1412,7 @@ html body .lookbook-no {
       <p class="footer-copy">© 2026 BYCRAFT. Сайт носит информационный характер и служит виртуальной галереей автора. Фотографии, тексты и видеоматериалы принадлежат владельцу.</p>
       <p class="footer-legal">
         <a href="/privacy/">Политика конфиденциальности</a>
-        <span class="footer-dot">·</span>
+        <span class="footer-sep"> · </span>
         <a href="javascript:void(0)" onclick="window.bycraftOpenCookieSettings&&window.bycraftOpenCookieSettings()">Настройки cookie</a>
       </p>
     </div>
