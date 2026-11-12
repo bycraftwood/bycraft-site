@@ -50,7 +50,7 @@
 }
   </script>
   <link rel="icon" href="/images/favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="../css/style.css?v=2141">
+  <link rel="stylesheet" href="../css/style.css?v=2142">
 
 
 
@@ -957,8 +957,11 @@ footer a[href^="mailto:"],
 
 
 
-<style id="contacts-cosmetics-v2141">
-/* ===== Кнопки по центру ===== */
+
+
+
+<style id="contacts-cosmetics-v2142">
+/* ===== Кнопки по центру (только текст) ===== */
 .contacts-cta-top {
   display: flex !important;
   justify-content: center !important;
@@ -977,7 +980,7 @@ footer a[href^="mailto:"],
   display: flex !important;
   align-items: center !important;
   justify-content: center !important;
-  gap: 10px !important;
+  gap: 0 !important;
   width: 100% !important;
   box-sizing: border-box !important;
   padding: 13px 20px !important;
@@ -1000,10 +1003,8 @@ footer a[href^="mailto:"],
   color: #F8F7F4 !important;
   border: 1px solid #1A1918 !important;
 }
-.bycraft-buttons-stack a.btn-tg span,
-.bycraft-buttons-stack a.btn-tg svg {
+.bycraft-buttons-stack a.btn-tg span {
   color: #F8F7F4 !important;
-  stroke: #F8F7F4 !important;
   -webkit-text-fill-color: #F8F7F4 !important;
 }
 /* Instagram — контур */
@@ -1012,14 +1013,12 @@ footer a[href^="mailto:"],
   color: #1A1918 !important;
   border: 1px solid #1A1918 !important;
 }
-.bycraft-buttons-stack a.btn-ig span,
-.bycraft-buttons-stack a.btn-ig svg {
+.bycraft-buttons-stack a.btn-ig span {
   color: #1A1918 !important;
-  stroke: #1A1918 !important;
   -webkit-text-fill-color: #1A1918 !important;
 }
 
-/* ===== Футер: фон страницы, без подложек, без подчёркиваний ===== */
+/* ===== Футер: фон #F8F7F4, текст #1A1918, без подчёркиваний ===== */
 html body footer.contacts-dark-footer,
 html body footer.site-footer,
 html body .contacts-dark-footer,
@@ -1069,6 +1068,7 @@ html body .site-footer a.btn-footer-outline {
 html body footer a.btn-footer-outline:hover {
   background: #1A1918 !important;
   color: #F8F7F4 !important;
+  -webkit-text-fill-color: #F8F7F4 !important;
 }
 </style>
 
@@ -1093,21 +1093,12 @@ html body footer a.btn-footer-outline:hover {
 
       <main>
   <div class="container contacts-page">
-        <div class="contacts-cta-top">
+            <div class="contacts-cta-top">
       <div class="bycraft-buttons-stack">
         <a href="https://t.me/bycraft" target="_blank" rel="noopener" class="btn-tg">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-            <line x1="22" y1="2" x2="11" y2="13"></line>
-            <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
-          </svg>
           <span>Telegram-канал</span>
         </a>
-        <a href="https://instagram.com/bycraftwood" target="_blank" rel="noopener" class="btn-ig">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-            <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
-            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
-            <line x1="17.5" x2="17.51" y1="6.5" y2="6.5"></line>
-          </svg>
+        <a href="https://www.instagram.com/bycraft.by/" target="_blank" rel="noopener" class="btn-ig">
           <span>Instagram</span>
         </a>
       </div>
