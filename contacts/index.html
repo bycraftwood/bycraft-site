@@ -50,7 +50,7 @@
 }
   </script>
   <link rel="icon" href="/images/favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="../css/style.css?v=2140">
+  <link rel="stylesheet" href="../css/style.css?v=2141">
 
 
 
@@ -950,38 +950,110 @@ footer a[href^="mailto:"],
 
 
 <!-- safe contacts styling -->
-<style id="contacts-safe-styling">
-  /* Подвал: восстанавливаем естественный фон страницы #F8F7F4 и тёмный цвет текста */
-  body, footer, .site-footer {
-    background-color: #F8F7F4 !important;
-  }
-  footer, footer *, .site-footer, .site-footer * {
-    color: #1A1918 !important;
-    -webkit-text-fill-color: #1A1918 !important;
-    opacity: 1 !important;
-  }
-  footer a, .site-footer a {
-    color: #1A1918 !important;
-    text-decoration: underline !important;
-  }
-  .bycraft-buttons-stack a:hover {
-    opacity: 0.88;
-  }
-</style>
 
 
 
-<style id="footer-force-v2140">
-html body footer.site-footer, html body .site-footer {
+
+
+
+
+<style id="contacts-cosmetics-v2141">
+/* ===== Кнопки по центру ===== */
+.contacts-cta-top {
+  display: flex !important;
+  justify-content: center !important;
+  width: 100% !important;
+  margin: 32px 0 40px !important;
+}
+.bycraft-buttons-stack {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 12px !important;
+  width: 100% !important;
+  max-width: 290px !important;
+  margin: 0 auto !important;
+}
+.bycraft-buttons-stack a {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 10px !important;
+  width: 100% !important;
+  box-sizing: border-box !important;
+  padding: 13px 20px !important;
+  border-radius: 0 !important;
+  text-decoration: none !important;
+  font-family: 'Manrope', sans-serif !important;
+  font-size: 13px !important;
+  font-weight: 500 !important;
+  letter-spacing: 0.04em !important;
+  text-transform: uppercase !important;
+  cursor: pointer !important;
+  transition: opacity 0.25s ease !important;
+}
+.bycraft-buttons-stack a:hover {
+  opacity: 0.88 !important;
+}
+/* Telegram-канал — заливка */
+.bycraft-buttons-stack a.btn-tg {
+  background-color: #1A1918 !important;
+  color: #F8F7F4 !important;
+  border: 1px solid #1A1918 !important;
+}
+.bycraft-buttons-stack a.btn-tg span,
+.bycraft-buttons-stack a.btn-tg svg {
+  color: #F8F7F4 !important;
+  stroke: #F8F7F4 !important;
+  -webkit-text-fill-color: #F8F7F4 !important;
+}
+/* Instagram — контур */
+.bycraft-buttons-stack a.btn-ig {
+  background-color: transparent !important;
+  color: #1A1918 !important;
+  border: 1px solid #1A1918 !important;
+}
+.bycraft-buttons-stack a.btn-ig span,
+.bycraft-buttons-stack a.btn-ig svg {
+  color: #1A1918 !important;
+  stroke: #1A1918 !important;
+  -webkit-text-fill-color: #1A1918 !important;
+}
+
+/* ===== Футер: фон страницы, без подложек, без подчёркиваний ===== */
+html body footer.contacts-dark-footer,
+html body footer.site-footer,
+html body .contacts-dark-footer,
+html body .site-footer {
   background: #F8F7F4 !important;
+  background-color: #F8F7F4 !important;
   color: #1A1918 !important;
   border-top: 1px solid #E5E2DC !important;
+  box-shadow: none !important;
 }
-html body footer.site-footer *, html body .site-footer * {
+html body footer.contacts-dark-footer *,
+html body footer.site-footer *,
+html body .contacts-dark-footer *,
+html body .site-footer * {
+  color: #1A1918 !important;
+  -webkit-text-fill-color: #1A1918 !important;
+  text-decoration: none !important;
+  border-bottom: none !important;
+  opacity: 1 !important;
+}
+html body footer a,
+html body .site-footer a,
+html body .contacts-dark-footer a {
   color: #1A1918 !important;
   text-decoration: none !important;
+  border-bottom: none !important;
 }
-html body footer.site-footer a.btn-footer-outline,
+html body footer a:hover,
+html body .site-footer a:hover {
+  opacity: 0.7 !important;
+  text-decoration: none !important;
+}
+/* Кнопки соцсетей в футере — контур */
+html body footer a.btn-footer-outline,
 html body .site-footer a.btn-footer-outline {
   display: inline-block !important;
   background: transparent !important;
@@ -989,15 +1061,14 @@ html body .site-footer a.btn-footer-outline {
   border: 1px solid #1A1918 !important;
   padding: 10px 18px !important;
   text-decoration: none !important;
+  border-radius: 0 !important;
+  font-size: 12px !important;
+  letter-spacing: 0.04em !important;
+  text-transform: uppercase !important;
 }
-html body footer.site-footer a.btn-footer-outline:hover {
+html body footer a.btn-footer-outline:hover {
   background: #1A1918 !important;
   color: #F8F7F4 !important;
-}
-html body.page-contacts a.btn-tg-solid {
-  background: #1A1918 !important;
-  color: #F8F7F4 !important;
-  border: 1px solid #1A1918 !important;
 }
 </style>
 
@@ -1022,22 +1093,22 @@ html body.page-contacts a.btn-tg-solid {
 
       <main>
   <div class="container contacts-page">
-    <div class="contacts-cta-top">
-      <div class="bycraft-buttons-stack" style="display: flex; flex-direction: column; gap: 12px; width: 100%; max-width: 290px; margin: 24px 0;">
-        <a href="https://t.me/bycraft" target="_blank" rel="noopener" style="display: flex; align-items: center; justify-content: center; gap: 10px; width: 100%; box-sizing: border-box; padding: 13px 20px; background-color: #1A1918; color: #F8F7F4; border: 1px solid #1A1918; border-radius: 2px; text-decoration: none; font-size: 0.95rem; font-weight: 500; cursor: pointer;">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#F8F7F4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <div class="contacts-cta-top">
+      <div class="bycraft-buttons-stack">
+        <a href="https://t.me/bycraft" target="_blank" rel="noopener" class="btn-tg">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
             <line x1="22" y1="2" x2="11" y2="13"></line>
             <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
           </svg>
-          <span style="color: #F8F7F4 !important; -webkit-text-fill-color: #F8F7F4 !important;">Написать в Telegram</span>
+          <span>Telegram-канал</span>
         </a>
-        <a href="https://instagram.com/bycraftwood" target="_blank" rel="noopener" style="display: flex; align-items: center; justify-content: center; gap: 10px; width: 100%; box-sizing: border-box; padding: 13px 20px; background-color: transparent; color: #1A1918; border: 1px solid #1A1918; border-radius: 2px; text-decoration: none; font-size: 0.95rem; font-weight: 500; cursor: pointer;">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1A1918" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+        <a href="https://instagram.com/bycraftwood" target="_blank" rel="noopener" class="btn-ig">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
             <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
             <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
             <line x1="17.5" x2="17.51" y1="6.5" y2="6.5"></line>
           </svg>
-          <span style="color: #1A1918 !important; -webkit-text-fill-color: #1A1918 !important;">Instagram</span>
+          <span>Instagram</span>
         </a>
       </div>
     </div>
@@ -1074,7 +1145,7 @@ html body.page-contacts a.btn-tg-solid {
   </div>
 </main>
               <!-- ЧИСТЫЙ СЕМАНТИЧЕСКИЙ ПОДВАЛ (БЕЗ OPACITY) -->
-  <footer class="contacts-dark-footer" class="site-footer">
+  <footer class="contacts-dark-footer site-footer">
   <div class="container">
     <div class="footer-grid-4">
       <div class="footer-col">
