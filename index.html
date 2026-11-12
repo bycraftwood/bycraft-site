@@ -1005,101 +1005,129 @@ html body.page-contacts a.btn-tg-solid {
 </style>
 
 
-<style id="home-cosmetics-v2143">
-/* ===== Главное меню ===== */
-html body .site-top-logo {
-  font-family: Manrope, sans-serif !important;
-  font-weight: 600 !important;
-  font-size: 22px !important;
-  letter-spacing: 0.02em !important;
-  text-transform: uppercase !important;
-  color: #1A1918 !important;
-}
-html body .site-top-nav a {
-  font-family: Manrope, sans-serif !important;
-  font-weight: 500 !important;
-  font-size: 16px !important;
-  color: #1A1918 !important;
-}
-html body .site-top-lang {
-  font-size: 16px !important;
-}
-@media (max-width: 768px) {
-  html body .site-top-logo {
-    font-size: 18px !important;
-    font-weight: 600 !important;
-  }
-  html body .site-top-nav a {
-    font-size: 14px !important;
-  }
-  html body .site-top-lang {
-    font-size: 14px !important;
-  }
-}
 
-/* ===== Hero: надзаголовок + заголовок ===== */
-html body .cube-caption,
-html body.page-cube .cube-caption,
-html body.page-home .cube-caption {
-  font-family: 'Geist Mono', ui-monospace, monospace !important;
-  font-weight: 400 !important;
-  font-size: 12px !important;
-  letter-spacing: 0.04em !important;
-  text-transform: uppercase !important;
-  color: #6B5D52 !important;
-  margin: 0 0 10px !important;
-  max-width: none !important;
-}
-html body .cube-manifest,
-html body.page-cube .cube-manifest,
-html body.page-home .cube-manifest {
-  font-family: 'Cormorant Garamond', Georgia, serif !important;
-  font-weight: 400 !important;
-  font-size: 32px !important;
-  line-height: 1.15 !important;
-  letter-spacing: -0.01em !important;
-  color: #1A1918 !important;
-  margin: 0 !important;
-  max-width: none !important;
-  white-space: nowrap !important;
-}
-@media (max-width: 768px) {
-  html body .cube-manifest,
-  html body.page-cube .cube-manifest,
-  html body.page-home .cube-manifest {
-    font-size: 28px !important;
-    white-space: normal !important;
-  }
-}
 
-/* ===== Секция Collection / Коллекция ===== */
-html body .cube-expo .expo-kicker,
-html body .cube-expo .sec-label,
+
+<style id="home-cosmetics-v2144">
+/* ===== Кикеры и метки (Geist Mono 12px, ls 0.04em, #6B5D52) ===== */
+html body .sec-label,
 html body .expo-kicker,
-html body .sec-label {
+html body .craft-kicker,
+html body .recog-kicker,
+html body .cube-expo .sec-label,
+html body .cube-craft .sec-label,
+html body .cube-recog .sec-label {
   font-family: 'Geist Mono', ui-monospace, monospace !important;
   font-weight: 400 !important;
   font-size: 12px !important;
   letter-spacing: 0.04em !important;
   text-transform: uppercase !important;
   color: #6B5D52 !important;
-  margin: 0 0 10px !important;
 }
-html body .cube-expo .expo-title,
-html body .expo-title {
-  font-family: 'Cormorant Garamond', Georgia, serif !important;
+
+/* Lookbook meta */
+html body .lookbook-meta,
+html body .lookbook-no {
+  font-family: 'Geist Mono', ui-monospace, monospace !important;
   font-weight: 400 !important;
-  font-size: 32px !important;
-  line-height: 1.15 !important;
-  letter-spacing: -0.01em !important;
+  font-size: 12px !important;
+  letter-spacing: 0.04em !important;
+  text-transform: uppercase !important;
+  color: #6B5D52 !important;
+}
+html body .lookbook-meta--sold {
+  color: #6B5D52 !important;
+}
+
+/* Шаги процесса — номер */
+html body .craft-step-num {
+  font-family: 'Geist Mono', ui-monospace, monospace !important;
+  font-weight: 400 !important;
+  font-size: 12px !important;
+  letter-spacing: 0.04em !important;
+  text-transform: uppercase !important;
+  color: #6B5D52 !important;
+  margin: 12px 0 8px !important;
+}
+
+/* Тексты шагов */
+html body .craft-step-text {
+  font-family: Manrope, sans-serif !important;
+  font-weight: 400 !important;
+  font-size: 16px !important;
+  line-height: 1.55 !important;
   color: #1A1918 !important;
   margin: 0 !important;
-  text-transform: none !important;
 }
 @media (max-width: 768px) {
-  html body .cube-expo .expo-title,
-  html body .expo-title {
-    font-size: 28px !important;
+  html body .craft-step-text {
+    font-size: 14px !important;
+  }
+}
+
+/* Цитата мастера */
+html body .craft-atelier-quote,
+html body blockquote.craft-atelier-quote {
+  font-family: 'Cormorant Garamond', Georgia, serif !important;
+  font-weight: 400 !important;
+  font-style: italic !important;
+  font-size: 22px !important;
+  line-height: 1.35 !important;
+  color: #1A1918 !important;
+  margin: 0 !important;
+}
+@media (max-width: 768px) {
+  html body .craft-atelier-quote,
+  html body blockquote.craft-atelier-quote {
+    font-size: 18px !important;
+  }
+}
+
+/* Заголовок блока atelier */
+html body .craft-atelier-title {
+  font-family: Manrope, sans-serif !important;
+  font-weight: 400 !important;
+  font-size: 22px !important;
+  color: #1A1918 !important;
+  margin: 0 0 8px !important;
+}
+@media (max-width: 768px) {
+  html body .craft-atelier-title {
+    font-size: 14px !important;
+  }
+}
+
+/* Подзаголовок atelier */
+html body .craft-atelier-sub {
+  font-family: Manrope, sans-serif !important;
+  font-weight: 400 !important;
+  font-size: 16px !important;
+  color: #6B5D52 !important;
+  margin: 0 0 16px !important;
+}
+@media (max-width: 768px) {
+  html body .craft-atelier-sub {
+    font-size: 14px !important;
+  }
+}
+
+/* Ссылка «в мастерскую» */
+html body .craft-atelier-link {
+  font-family: Manrope, sans-serif !important;
+  font-weight: 400 !important;
+  font-size: 16px !important;
+  color: #1A1918 !important;
+  text-decoration: none !important;
+  border-bottom: 1px solid transparent !important;
+  transition: border-color 0.25s ease, color 0.25s ease !important;
+}
+html body .craft-atelier-link:hover {
+  color: #B6452C !important;
+  border-bottom-color: #B6452C !important;
+}
+@media (max-width: 768px) {
+  html body .craft-atelier-link {
+    font-size: 14px !important;
   }
 }
 </style>
@@ -1150,7 +1178,7 @@ html body .expo-title {
         <a href="/works/work-188/" class="lookbook-img">
           <img src="/images/works/work-188.jpg" alt="№ 188" loading="lazy">
         </a>
-        <p class="lookbook-meta"><span class="lookbook-no">[№&nbsp;188]</span> · В наличии</p>
+        <p class="lookbook-meta"><span class="lookbook-no">[№&nbsp;188]</span> · В НАЛИЧИИ</p>
         <p class="lookbook-price">795&nbsp;BYN ≈ 22&nbsp;800&nbsp;₽</p>
         <a href="/works/work-188/" class="lookbook-more">Подробнее <span class="lookbook-arrow">→</span></a>
       </article>
@@ -1159,7 +1187,7 @@ html body .expo-title {
         <a href="/works/work-192/" class="lookbook-img">
           <img src="/images/works/work-192.jpg" alt="№ 192" loading="lazy">
         </a>
-        <p class="lookbook-meta"><span class="lookbook-no">[№&nbsp;192]</span> · В наличии</p>
+        <p class="lookbook-meta"><span class="lookbook-no">[№&nbsp;192]</span> · В НАЛИЧИИ</p>
         <p class="lookbook-price">2&nbsp;300&nbsp;BYN ≈ 65&nbsp;800&nbsp;₽</p>
         <a href="/works/work-192/" class="lookbook-more">Подробнее <span class="lookbook-arrow">→</span></a>
       </article>
@@ -1168,7 +1196,7 @@ html body .expo-title {
         <a href="/works/work-197/" class="lookbook-img">
           <img src="/images/works/work-197.jpg?v=2" alt="№ 197" loading="lazy">
         </a>
-        <p class="lookbook-meta"><span class="lookbook-no">[№&nbsp;197]</span> · В наличии</p>
+        <p class="lookbook-meta"><span class="lookbook-no">[№&nbsp;197]</span> · В НАЛИЧИИ</p>
         <p class="lookbook-price">1&nbsp;300&nbsp;BYN ≈ 37&nbsp;200&nbsp;₽</p>
         <a href="/works/work-197/" class="lookbook-more">Подробнее <span class="lookbook-arrow">→</span></a>
       </article>
@@ -1177,7 +1205,7 @@ html body .expo-title {
         <a href="/works/" class="lookbook-img">
           <img src="/images/works/work-248.jpg" alt="Продана" loading="lazy">
         </a>
-        <p class="lookbook-meta lookbook-meta--sold">Продана</p>
+        <p class="lookbook-meta lookbook-meta--sold">В ЧАСТНОЙ КОЛЛЕКЦИИ</p>
         <a href="/works/" class="lookbook-more">Другие работы <span class="lookbook-arrow">→</span></a>
       </article>
     </div>
@@ -1186,7 +1214,7 @@ html body .expo-title {
 <section class="cube-craft" id="material">
   <div class="g12">
     <header class="craft-head g12-span-12">
-      <p class="craft-kicker"><span class="sec-label">02 · Материал и мастерская</span></p>
+      <p class="craft-kicker"><span class="sec-label">02 · МАТЕРИАЛ И МАСТЕРСКАЯ</span></p>
       <p class="craft-epigraph">«Форма уже существует внутри нароста. Задача мастера — отсечь лишнее и зафиксировать её характер огнём.»</p>
     </header>
 
@@ -1196,24 +1224,24 @@ html body .expo-title {
           <img src="/images/workshop/process-01.jpg?v=2" alt="Дикий сувель" loading="lazy"
                onerror="this.onerror=null;this.src='/images/home/grid-01.jpg'">
         </div>
-        <p class="craft-step-num">01 · Аномалия природы</p>
-        <p class="craft-step-text">Сувель — редкий каповый нарост с хаотичным, мраморным переплетением волокон. Найти нарост нужного объёма и выразительной формы — результат длительных экспедиций.</p>
+        <p class="craft-step-num">01 · АНОМАЛИЯ ПРИРОДЫ</p>
+        <p class="craft-step-text">Сувель — редкий нарост с мраморным переплетением волокон. Двух одинаковых не бывает. Найти выразительный экземпляр непросто: поиски могут занимать несколько месяцев и сотни километров.</p>
       </article>
       <article class="craft-step">
         <div class="craft-photo">
           <img src="/images/workshop/process-02.jpg?v=2" alt="Процесс работы" loading="lazy"
                onerror="this.onerror=null;this.src='/images/home/grid-02.jpg'">
         </div>
-        <p class="craft-step-num">02 · 8 часов вываривания</p>
-        <p class="craft-step-text">Древесина вываривается в насыщенном солевом растворе, снимающем внутреннее напряжение, и сушится месяцами, чтобы скульптура обрела каменную плотность и не растрескалась со временем.</p>
+        <p class="craft-step-num">02 · 8 ЧАСОВ ВЫВАРИВАНИЯ</p>
+        <p class="craft-step-text">Древесину вываривают в насыщенном солевом растворе от 8 часов и сушат месяцами: так скульптура обретает каменную плотность и сохраняет форму.</p>
       </article>
       <article class="craft-step">
         <div class="craft-photo">
           <img src="/images/workshop/process-03.jpg?v=2" alt="Обжиг огнём" loading="lazy"
                onerror="this.onerror=null;this.src='/images/home/grid-03.jpg'">
         </div>
-        <p class="craft-step-num">03 · Авторский обжиг</p>
-        <p class="craft-step-text">Пламя выжигает мягкие слои, обнажая твёрдый графитовый скелет древесины. Огонь делает каждую вещь абсолютно неповторимой — природа не создаёт дубликатов.</p>
+        <p class="craft-step-num">03 · АВТОРСКИЙ ОБЖИГ</p>
+        <p class="craft-step-text">От грубой коры до идеально гладкой поверхности: молоток, бензопила, болгарка, 8 этапов шлифовки. Финал, обжиг огнём, проявляет рисунок и глубину дерева.</p>
       </article>
     </div>
 
@@ -1221,12 +1249,12 @@ html body .expo-title {
 
     <div class="craft-atelier g12-span-12">
       <div class="craft-atelier-left">
-        <p class="craft-atelier-title">В мастерскую</p>
-        <p class="craft-atelier-sub">Минск · Ручной труд · Штучное авторское искусство</p>
-        <a href="/workshop/" class="craft-atelier-link">Читать философию автора →</a>
+        <p class="craft-atelier-title">Из нароста — в скульптуру</p>
+        <p class="craft-atelier-sub">до 6 месяцев работы над одной формой</p>
+        <a href="/workshop/" class="craft-atelier-link">в мастерскую</a>
       </div>
       <div class="craft-atelier-right">
-        <blockquote class="craft-atelier-quote">«Я отношусь к дереву не как к сырью, а как к соавтору. Моя работа — это медитация и диалог: где-то уступить природному изгибу волокна, а где-то подчеркнуть его драматизм резцом.»</blockquote>
+        <blockquote class="craft-atelier-quote">«Сувель — материал сложный и непредсказуемый: у него нет правильной геометрии, его нельзя просчитать или выстроить по линейке. Моя задача — увидеть в этой бесформенной массе будущую форму.»</blockquote>
       </div>
     </div>
   </div>
@@ -1234,7 +1262,7 @@ html body .expo-title {
 <section class="cube-recog" id="recognition">
   <div class="g12">
     <header class="recog-head g12-span-12">
-      <p class="recog-kicker"><span class="sec-label">03 · Выставки и события</span></p>
+      <p class="recog-kicker"><span class="sec-label">03 · ВЫСТАВКИ И СОБЫТИЯ</span></p>
     </header>
 
     <div class="recog-wings g12-span-12">
