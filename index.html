@@ -1185,7 +1185,10 @@ html body footer a.btn-footer-outline:hover {
 
 
 
-<style id="home-hero-text-force-v2151">
+
+
+
+<style id="home-hero-text-force-v2152">
 html body.page-home .site-top,
 html body.page-cube .site-top {
   position: relative !important;
@@ -1193,22 +1196,28 @@ html body.page-cube .site-top {
   padding-top: 28px !important;
   padding-bottom: 8px !important;
 }
+
 html body .cube-hero {
   display: block !important;
+  position: relative !important;
   padding: 0 !important;
   margin: 0 !important;
   overflow: visible !important;
 }
-html body .cube-hero .cube-stage { padding: 24px 40px 0 !important; }
-html body .cube-hero .cube-bottom { display: none !important; }
+html body .cube-hero .cube-stage {
+  padding: 24px 40px 0 !important;
+}
+html body .cube-hero > .cube-bottom,
+html body .cube-hero .cube-bottom {
+  display: none !important;
+}
 
 html body section.cube-hero-text,
 html body .cube-hero-text {
   display: block !important;
+  position: relative !important;
   visibility: visible !important;
   opacity: 1 !important;
-  position: static !important;
-  order: 0 !important;
   padding: 48px 24px 56px !important;
   margin: 0 !important;
   text-align: center !important;
@@ -1216,16 +1225,35 @@ html body .cube-hero-text {
   min-height: 120px !important;
   z-index: 2 !important;
 }
-html body .cube-hero-text .cube-bottom {
+
+/* Сброс absolute bottom:0 */
+html body.page-cube .cube-hero-text .cube-bottom,
+html body.page-home .cube-hero-text .cube-bottom,
+html body .cube-hero-text .cube-bottom,
+html body section.cube-hero-text .cube-bottom {
+  position: static !important;
+  left: auto !important;
+  right: auto !important;
+  bottom: auto !important;
+  top: auto !important;
+  z-index: auto !important;
   display: flex !important;
   flex-direction: column !important;
   align-items: center !important;
+  justify-content: center !important;
   gap: 12px !important;
   margin: 0 auto !important;
   max-width: 800px !important;
+  width: 100% !important;
+  padding: 0 !important;
+  background: transparent !important;
+  box-sizing: border-box !important;
 }
+
+html body.page-cube .cube-hero-text .cube-caption,
 html body .cube-hero-text .cube-caption {
   display: block !important;
+  position: static !important;
   font-family: 'Geist Mono', ui-monospace, monospace !important;
   font-size: 12px !important;
   letter-spacing: 0.04em !important;
@@ -1233,9 +1261,13 @@ html body .cube-hero-text .cube-caption {
   color: #6B5D52 !important;
   -webkit-text-fill-color: #6B5D52 !important;
   margin: 0 !important;
+  max-width: none !important;
 }
+
+html body.page-cube .cube-hero-text .cube-manifest,
 html body .cube-hero-text .cube-manifest {
   display: block !important;
+  position: static !important;
   font-family: 'Cormorant Garamond', Georgia, serif !important;
   font-weight: 400 !important;
   font-size: 32px !important;
@@ -1243,11 +1275,17 @@ html body .cube-hero-text .cube-manifest {
   color: #1A1918 !important;
   -webkit-text-fill-color: #1A1918 !important;
   margin: 0 !important;
+  max-width: none !important;
   white-space: normal !important;
 }
+
 @media (max-width: 768px) {
-  html body .cube-hero-text { padding: 32px 20px 40px !important; }
-  html body .cube-hero-text .cube-manifest { font-size: 28px !important; }
+  html body .cube-hero-text {
+    padding: 32px 20px 40px !important;
+  }
+  html body .cube-hero-text .cube-manifest {
+    font-size: 28px !important;
+  }
 }
 </style>
 
