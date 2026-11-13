@@ -11710,7 +11710,7 @@ html body.page-cube main > .container {
 :root {
   --g12-pad: clamp(40px, 4.5vw, 72px);
   --g12-gap: clamp(16px, 1.6vw, 28px);
-  --paper: #F8F7F4;
+  --paper: #F7F6F2;
 }
 html body.page-cube,
 html body.page-cube main {
@@ -13265,7 +13265,7 @@ html body.page-cube .lookbook-cta {
 :root {
   --ink: #1A1918;
   --muted: #76736F;
-  --paper: #F8F7F4;
+  --paper: #F7F6F2;
   --line: #E5E2DC;
   --ember: #B6452C;
   --font-serif: 'Cormorant Garamond', Georgia, serif;
@@ -14703,3 +14703,75 @@ html body.page-home.page-cube .cube-object::after {
   background: none !important;
 }
 /* BYCRAFT HERO VASE PATCH END */
+
+/* === BYCRAFT UPDATE SITE: START === */
+:root {
+  --paper: #F7F6F2;
+}
+
+/* One paper colour for the page background and its main sections. */
+html body.page-home,
+html body.page-cube,
+html body.page-home main,
+html body.page-cube main,
+html body.page-home .site-top,
+html body.page-cube .site-top,
+html body.page-home .cube-hero,
+html body.page-home .cube-hero-text,
+html body.page-home .cube-expo,
+html body.page-home .cube-craft,
+html body.page-home .cube-recog,
+html body.page-home footer.site-footer,
+html body.page-cube footer.site-footer,
+html body .site-footer {
+  background: var(--paper) !important;
+  background-color: var(--paper) !important;
+}
+
+/* Header wordmark. */
+html body .site-top-logo {
+  font-family: Manrope, sans-serif !important;
+  font-size: 22px !important;
+  font-weight: 600 !important;
+}
+
+/* Keyboard focus must stay clearly visible. */
+html body .site-top-logo:focus-visible,
+html body .site-top-nav a:focus-visible,
+html body .site-top-menu-btn:focus-visible,
+html body .site-top-lang a:focus-visible {
+  outline: 2px solid #B6452C !important;
+  outline-offset: 4px !important;
+  position: relative !important;
+  z-index: 2 !important;
+}
+
+@media (max-width: 900px) {
+  html body .site-top-logo {
+    font-size: 18px !important;
+    font-weight: 600 !important;
+  }
+
+  /* Give every menu link a 44px minimum touch area without changing its text size. */
+  html body.nav-open .site-top-nav a {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    box-sizing: border-box !important;
+    width: 100% !important;
+    min-height: 44px !important;
+    padding: 10px 12px !important;
+  }
+
+  /* The Menu control itself gets a 44px by 44px hit area. */
+  html body .site-top-menu-btn {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    box-sizing: border-box !important;
+    min-width: 44px !important;
+    min-height: 44px !important;
+    padding: 10px 8px !important;
+  }
+}
+/* === BYCRAFT UPDATE SITE: END === */
