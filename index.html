@@ -1440,6 +1440,92 @@ html body .recog-item-more:hover {
 }
 </style>
 
+
+<style id="bycraft-mobile-home-spacing-v1">
+/* BYCRAFT mobile hero spacing and one-column work details */
+@media (max-width: 768px) {
+  /* Keep the mobile menu in normal flow, then start the hero close below it. */
+  html body.page-home .site-top {
+    position: relative !important;
+    inset: auto !important;
+    margin: 0 !important;
+    padding: 12px 0 0 !important;
+  }
+  html body.page-home .site-top-inner {
+    min-height: 40px !important;
+    align-items: center !important;
+  }
+
+  /* Remove the inherited full-viewport stage that creates excess blank space. */
+  html body.page-home .cube-hero {
+    position: relative !important;
+    height: auto !important;
+    min-height: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    overflow: visible !important;
+  }
+  html body.page-home .cube-hero .cube-stage {
+    position: relative !important;
+    inset: auto !important;
+    height: auto !important;
+    min-height: 0 !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    margin: 0 !important;
+    padding: 0 12px !important;
+    box-sizing: border-box !important;
+  }
+  html body.page-home .cube-hero .cube-object {
+    position: relative !important;
+    width: 100% !important;
+    height: min(56svh, 430px) !important;
+    max-width: 100% !important;
+    max-height: 430px !important;
+    margin: 0 !important;
+    justify-content: center !important;
+  }
+  html body.page-home .cube-hero .cube-img {
+    display: block !important;
+    width: auto !important;
+    height: min(56svh, 430px) !important;
+    max-width: 100% !important;
+    max-height: 430px !important;
+    object-fit: contain !important;
+    object-position: center !important;
+  }
+
+  /* Bring the visible work number and title up close to the photograph. */
+  html body.page-home .cube-hero-text {
+    min-height: 0 !important;
+    margin: 0 !important;
+    padding: 10px 18px 22px !important;
+  }
+  html body.page-home .cube-hero-text .cube-bottom {
+    gap: 6px !important;
+    margin: 0 auto !important;
+  }
+  html body.page-home .cube-hero-text .cube-caption,
+  html body.page-home .cube-hero-text .cube-manifest {
+    margin: 0 !important;
+  }
+
+  /* Stack work number/status, prices and the detail link in one column. */
+  html body.page-home .cube-expo .lookbook-card-info {
+    display: grid !important;
+    grid-template-columns: minmax(0, 1fr) !important;
+    row-gap: 6px !important;
+    column-gap: 0 !important;
+  }
+  html body.page-home .cube-expo .lookbook-card-info .lookbook-more {
+    justify-self: start !important;
+    margin: 0 !important;
+    text-align: left !important;
+  }
+}
+</style>
+
 </head>
 <body class="page-home page-cube">
 <main>
@@ -1495,7 +1581,7 @@ html body .recog-item-more:hover {
             <p class="lookbook-meta"><span class="lookbook-no">[№&nbsp;188]</span> · В НАЛИЧИИ</p>
             <p class="lookbook-price"><span class="lookbook-price-byn">795&nbsp;BYN</span><span class="lookbook-price-rub">≈ 22&nbsp;800&nbsp;₽</span></p>
           </div>
-          <a href="/works/work-188/" class="lookbook-more" aria-label="Подробнее о работе №188">Подробнее о работе №188 <span class="lookbook-arrow" aria-hidden="true">→</span></a>
+          <a href="/works/work-188/" class="lookbook-more" aria-label="Подробнее о работе №188">Подробнее о работе <span class="lookbook-arrow" aria-hidden="true">→</span></a>
         </div>
         
         
@@ -1511,7 +1597,7 @@ html body .recog-item-more:hover {
             <p class="lookbook-meta"><span class="lookbook-no">[№&nbsp;197]</span> · В НАЛИЧИИ</p>
             <p class="lookbook-price"><span class="lookbook-price-byn">1&nbsp;300&nbsp;BYN</span><span class="lookbook-price-rub">≈ 37&nbsp;200&nbsp;₽</span></p>
           </div>
-          <a href="/works/work-197/" class="lookbook-more" aria-label="Подробнее о работе №197">Подробнее о работе №197 <span class="lookbook-arrow" aria-hidden="true">→</span></a>
+          <a href="/works/work-197/" class="lookbook-more" aria-label="Подробнее о работе №197">Подробнее о работе <span class="lookbook-arrow" aria-hidden="true">→</span></a>
         </div>
         
         
@@ -1527,7 +1613,7 @@ html body .recog-item-more:hover {
             <p class="lookbook-meta"><span class="lookbook-no">[№&nbsp;192]</span> · В НАЛИЧИИ</p>
             <p class="lookbook-price"><span class="lookbook-price-byn">2&nbsp;300&nbsp;BYN</span><span class="lookbook-price-rub">≈ 65&nbsp;800&nbsp;₽</span></p>
           </div>
-          <a href="/works/work-192/" class="lookbook-more" aria-label="Подробнее о работе №192">Подробнее о работе №192 <span class="lookbook-arrow" aria-hidden="true">→</span></a>
+          <a href="/works/work-192/" class="lookbook-more" aria-label="Подробнее о работе №192">Подробнее о работе <span class="lookbook-arrow" aria-hidden="true">→</span></a>
         </div>
         
         
@@ -1584,7 +1670,7 @@ html body .recog-item-more:hover {
       <div class="craft-atelier-left">
         <p class="craft-atelier-title">Из нароста — в скульптуру</p>
         <p class="craft-atelier-sub">до 6 месяцев работы над одной формой</p>
-        <a href="/workshop/" class="craft-atelier-link">в мастерскую</a>
+        <a href="/workshop/" class="craft-atelier-link">В мастерскую →</a>
       </div>
       <div class="craft-atelier-right">
         <blockquote class="craft-atelier-quote">«Сувель — материал сложный и непредсказуемый: у него нет правильной геометрии, его нельзя просчитать или выстроить по линейке. Моя задача — увидеть в этой бесформенной массе будущую форму.»</blockquote>
@@ -1628,7 +1714,7 @@ html body .recog-item-more:hover {
           <a href="/works/exhibitions/" class="recog-item-more">Подробнее →</a>
         </article>
 
-        <a href="/works/exhibitions/" class="recog-pdf">Смотреть выставочный архив (5 объектов) →</a>
+        <a href="/works/exhibitions/" class="recog-pdf">Смотреть выставочный архив <span class="lookbook-arrow" aria-hidden="true">→</span></a>
       </div>
       <div class="recog-right">
         <p class="recog-section-label">Ближайшие события</p>
