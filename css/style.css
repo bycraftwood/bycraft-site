@@ -14666,3 +14666,24 @@ html body .site-footer a.btn-footer-outline:hover {
   color: #F8F7F4 !important;
   border-color: #1A1918 !important;
 }
+
+/* BYCRAFT HERO VASE PATCH START */
+/* Мягкая тень строится по альфа-контуру прозрачного PNG */
+html body.page-home.page-cube img.cube-img.seamless-hero-vase {
+  -webkit-mask: none !important;
+  mask: none !important;
+  filter: drop-shadow(0 5px 12px rgba(42, 33, 28, 0.16)) !important;
+}
+
+/* Убираем отдельную широкую тень под объектом */
+html body.page-home.page-cube .cube-object .cube-shadow {
+  display: none !important;
+}
+
+/* Убираем старую радиальную вуаль поверх изображения */
+html body.page-home.page-cube .cube-object::after {
+  content: none !important;
+  display: none !important;
+  background: none !important;
+}
+/* BYCRAFT HERO VASE PATCH END */
