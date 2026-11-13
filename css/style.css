@@ -15218,3 +15218,64 @@ html body.page-cube .cube-recog .recog-photo-strip .recog-event-photo {
   }
 }
 /* === BYCRAFT UNIFIED FOOTER: END === */
+
+/* BYCRAFT MOBILE MANROPE 15PX + CRAFT QUOTE V2 START */
+/* Mobile body/UI text in Manrope: 15px. Keep display headings and metadata
+   hierarchy intact; the wordmark is 18px and the requested quote is serif. */
+@media (max-width: 900px) {
+  html body :is(
+    p, a, li, button, input, select, textarea, label, summary,
+    .footer-about, .footer-links a, .footer-contacts, .footer-contacts a,
+    .footer-col-title, .footer-copy,
+    .craft-step-text, .craft-step-num, .craft-atelier-sub, .craft-atelier-link,
+    .recog-item-text, .recog-event-link, .lookbook-price, .lookbook-more,
+    [class*="-text"], [class*="-link"]
+  ):not(.craft-epigraph):not(.craft-atelier-quote):not(.craft-atelier-title)
+   :not(.sec-label):not(.craft-kicker):not(.site-top-logo)
+   :not([class*="title"]):not([class*="heading"]):not([class*="quote"])
+   :not([class*="manifest"]):not([class*="epigraph"]):not([class*="kicker"])
+   :not([class*="meta"]):not([class*="num"]):not([class*="label"]) {
+    font-size: 15px !important;
+  }
+
+  /* Direct targets for text links and components with existing small sizes. */
+  html body .site-top-nav a,
+  html body .site-top-menu-btn,
+  html body .site-top-lang,
+  html body .footer-col-title,
+  html body .footer-copy,
+  html body .craft-step-text,
+  html body .craft-atelier-sub,
+  html body .craft-atelier-link,
+  html body .recog-item-text,
+  html body .lookbook-more,
+  html body .lookbook-price { font-size: 15px !important; }
+
+  /* Keep the agreed mobile BYCRAFT wordmark size. */
+  html body .site-top-logo { font-size: 18px !important; }
+
+  /* Opening quote in section 02: Cormorant Garamond Regular, aligned left. */
+  html body .cube-craft .craft-epigraph {
+    font-family: 'Cormorant Garamond', Georgia, serif !important;
+    font-size: 28px !important;
+    font-weight: 400 !important;
+    line-height: 1.3 !important;
+    text-align: left !important;
+    max-width: none !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+}
+
+@media (min-width: 901px) {
+  html body .cube-craft .craft-epigraph {
+    font-family: 'Cormorant Garamond', Georgia, serif !important;
+    font-size: 32px !important;
+    font-weight: 400 !important;
+    line-height: 1.3 !important;
+    text-align: left !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+}
+/* BYCRAFT MOBILE MANROPE 15PX + CRAFT QUOTE V2 END */
