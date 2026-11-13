@@ -14775,3 +14775,62 @@ html body .site-top-lang a:focus-visible {
   }
 }
 /* === BYCRAFT UPDATE SITE: END === */
+
+/* === BYCRAFT MOBILE MENU + HERO SHADOW: START === */
+/* The hero image already contains its own photographic shading. Remove the
+   separate artificial line/ellipse shadow on every screen size. */
+html body .cube-shadow {
+  display: none !important;
+}
+
+@media (max-width: 900px) {
+  /* Start the menu below the full header so it cannot cover the BYCRAFT logo. */
+  html body.nav-open .site-top-nav {
+    top: calc(100% + 8px) !important;
+    gap: 0 !important;
+    padding: 12px 16px !important;
+  }
+
+  /* Keep each main menu destination easy to tap. */
+  html body.nav-open .site-top-nav > a {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    box-sizing: border-box !important;
+    width: 100% !important;
+    min-height: 44px !important;
+    padding: 10px 12px !important;
+  }
+
+  /* Show the language switcher only in the dropdown, after Contacts. */
+  html body .site-top-right > .site-top-lang {
+    display: none !important;
+  }
+  html body.nav-open .site-top-nav > .site-top-lang {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    min-height: 44px !important;
+    margin-top: 4px !important;
+    white-space: nowrap !important;
+  }
+  html body.nav-open .site-top-nav > .site-top-lang a {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: auto !important;
+    min-height: 44px !important;
+    padding: 10px 8px !important;
+  }
+}
+
+@media (min-width: 901px) {
+  /* The copied switcher is for mobile only; keep the original desktop one. */
+  html body .site-top-nav > .site-top-lang {
+    display: none !important;
+  }
+  html body .site-top-right > .site-top-lang {
+    display: inline-block !important;
+  }
+}
+/* === BYCRAFT MOBILE MENU + HERO SHADOW: END === */
