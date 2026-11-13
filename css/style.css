@@ -14777,9 +14777,16 @@ html body .site-top-lang a:focus-visible {
 /* === BYCRAFT UPDATE SITE: END === */
 
 /* === BYCRAFT MOBILE MENU + HERO SHADOW: START === */
-/* The hero photo contains its own shading; remove the old separate line shadow. */
-html body .cube-shadow {
+/* The hero photo contains its own shading. A later legacy rule targets this
+   exact element more specifically, so override that selector at the end too. */
+html body .cube-shadow,
+html body.page-home.page-cube .cube-object .cube-shadow {
   display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+  background: none !important;
+  box-shadow: none !important;
+  filter: none !important;
 }
 
 @media (max-width: 900px) {
