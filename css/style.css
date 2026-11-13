@@ -15279,3 +15279,129 @@ html body.page-cube .cube-recog .recog-photo-strip .recog-event-photo {
   }
 }
 /* BYCRAFT MOBILE MANROPE 15PX + CRAFT QUOTE V2 END */
+
+/* BYCRAFT homepage typography and accessibility update */
+/* Card prices: prominent BYN first, approximate RUB on a quieter second line. */
+html body.page-home .lookbook-card .lookbook-price {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: flex-start !important;
+  gap: 2px !important;
+  margin: 0 0 10px !important;
+  line-height: 1.35 !important;
+}
+html body.page-home .lookbook-card .lookbook-price-byn {
+  display: block !important;
+  font-family: Manrope, sans-serif !important;
+  font-size: 16px !important;
+  font-weight: 500 !important;
+  line-height: 1.4 !important;
+  color: #1A1918 !important;
+}
+html body.page-home .lookbook-card .lookbook-price-rub {
+  display: block !important;
+  font-family: Manrope, sans-serif !important;
+  font-size: 12px !important;
+  font-weight: 400 !important;
+  line-height: 1.4 !important;
+  color: #6B5D52 !important;
+}
+html body.page-home .lookbook-meta {
+  font-family: 'Geist Mono', ui-monospace, monospace !important;
+  font-size: 12px !important;
+  font-weight: 400 !important;
+  letter-spacing: normal !important;
+}
+
+/* Section 02: match the opening quote to the atelier quote. */
+html body.page-home .cube-craft .craft-epigraph {
+  font-family: 'Cormorant Garamond', Georgia, serif !important;
+  font-style: italic !important;
+  font-weight: 400 !important;
+  font-size: clamp(18px, 1.8vw, 22px) !important;
+  line-height: 1.45 !important;
+  text-align: left !important;
+  max-width: none !important;
+  color: #2A211C !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
+html body.page-home .cube-craft .craft-atelier-quote {
+  font-family: 'Cormorant Garamond', Georgia, serif !important;
+  font-style: italic !important;
+  font-weight: 400 !important;
+  font-size: clamp(18px, 1.8vw, 22px) !important;
+  line-height: 1.45 !important;
+  color: #2A211C !important;
+}
+
+/* Process steps. */
+html body.page-home .cube-craft .craft-step-text {
+  font-family: Manrope, sans-serif !important;
+  font-size: 16px !important;
+  font-weight: 400 !important;
+  line-height: 1.6 !important;
+}
+html body.page-home .cube-craft .craft-step-num {
+  font-family: 'Geist Mono', ui-monospace, monospace !important;
+  font-size: 12px !important;
+  font-weight: 400 !important;
+  letter-spacing: normal !important;
+}
+
+/* Exhibition and event headings follow the atelier title treatment. */
+html body.page-home .cube-recog .recog-section-label {
+  font-family: 'Cormorant Garamond', Georgia, serif !important;
+  font-size: 28px !important;
+  font-weight: 500 !important;
+  line-height: 1.2 !important;
+  letter-spacing: normal !important;
+  text-transform: none !important;
+  color: #2A211C !important;
+  margin: 0 0 20px !important;
+}
+html body.page-home .cube-recog .recog-item-title {
+  font-family: Manrope, sans-serif !important;
+  font-size: 16px !important;
+  font-weight: 600 !important;
+  line-height: 1.4 !important;
+  letter-spacing: normal !important;
+  text-transform: none !important;
+  color: #2A211C !important;
+}
+html body.page-home .cube-recog .recog-item-text,
+html body.page-home .cube-recog .recog-event-place {
+  font-family: Manrope, sans-serif !important;
+  font-size: 16px !important;
+  font-weight: 400 !important;
+  line-height: 1.6 !important;
+  color: #6B5D52 !important;
+}
+html body.page-home .cube-recog .recog-item-year,
+html body.page-home .cube-recog .recog-event-tag,
+html body.page-home .cube-recog .recog-event-date {
+  font-family: 'Geist Mono', ui-monospace, monospace !important;
+  font-size: 12px !important;
+  font-weight: 400 !important;
+  letter-spacing: normal !important;
+  text-transform: uppercase !important;
+}
+html body.page-home .cube-recog .recog-event-link {
+  font-family: Manrope, sans-serif !important;
+  font-size: 16px !important;
+  font-weight: 400 !important;
+}
+
+@media (max-width: 768px) {
+  html body.page-home .lookbook-card .lookbook-price-byn { font-size: 15px !important; }
+  html body.page-home .lookbook-card .lookbook-price-rub { font-size: 12px !important; }
+  html body.page-home .cube-craft .craft-step-text,
+  html body.page-home .cube-recog .recog-item-text,
+  html body.page-home .cube-recog .recog-event-place {
+    font-size: 15px !important;
+    line-height: 1.6 !important;
+  }
+  html body.page-home .cube-recog .recog-item-title,
+  html body.page-home .cube-recog .recog-event-link { font-size: 15px !important; }
+  html body.page-home .cube-recog .recog-section-label { font-size: 24px !important; }
+}
