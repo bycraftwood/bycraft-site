@@ -1304,93 +1304,7 @@ html body.page-home .cube-object::after {
 </style>
 
 
-<style id="home-recog-v2155">
-html body .craft-epigraph {
-  font-family: Manrope, sans-serif !important;
-  font-weight: 400 !important;
-  font-style: normal !important;
-  font-size: 22px !important;
-  line-height: 1.4 !important;
-  color: #1A1918 !important;
-  -webkit-text-fill-color: #1A1918 !important;
-  text-align: right !important;
-  max-width: none !important;
-  width: 100% !important;
-  margin: 12px 0 0 !important;
-  display: block !important;
-}
-@media (max-width: 768px) {
-  html body .craft-epigraph { font-size: 18px !important; }
-}
 
-html body .cube-recog .g12,
-html body .recog-wings,
-html body .recog-head {
-  width: 100% !important;
-  max-width: none !important;
-}
-html body .recog-wings.g12-span-12 {
-  grid-column: 1 / -1 !important;
-}
-
-html body .recog-section-label {
-  font-family: Manrope, sans-serif !important;
-  font-weight: 400 !important;
-  font-size: 22px !important;
-  color: #1A1918 !important;
-  -webkit-text-fill-color: #1A1918 !important;
-  text-transform: uppercase !important;
-  letter-spacing: 0.02em !important;
-  margin: 0 0 20px !important;
-}
-@media (max-width: 768px) {
-  html body .recog-section-label { font-size: 18px !important; }
-}
-
-html body .recog-item-year,
-html body .recog-item-place,
-html body .recog-event-tag {
-  font-family: 'Geist Mono', ui-monospace, monospace !important;
-  font-weight: 400 !important;
-  font-size: 12px !important;
-  letter-spacing: 0.04em !important;
-  text-transform: uppercase !important;
-  color: #6B5D52 !important;
-  -webkit-text-fill-color: #6B5D52 !important;
-  margin: 0 0 6px !important;
-}
-
-html body .recog-item-title {
-  font-family: Manrope, sans-serif !important;
-  font-weight: 500 !important;
-  font-size: 16px !important;
-  color: #1A1918 !important;
-  margin: 0 0 8px !important;
-}
-html body .recog-item-text {
-  font-family: Manrope, sans-serif !important;
-  font-weight: 400 !important;
-  font-size: 14px !important;
-  line-height: 1.5 !important;
-  color: #1A1918 !important;
-  margin: 0 0 8px !important;
-}
-html body .recog-item-more {
-  font-family: Manrope, sans-serif !important;
-  font-size: 14px !important;
-  color: #1A1918 !important;
-  text-decoration: none !important;
-  border-bottom: 1px solid #1A1918 !important;
-  display: inline-block !important;
-  margin-bottom: 24px !important;
-}
-html body .recog-item-more:hover {
-  color: #B6452C !important;
-  border-bottom-color: #B6452C !important;
-}
-html body .recog-item { margin-bottom: 8px !important; }
-html body .expo-title { display: none !important; }
-</style>
 
 
 <style id="home-epigraph-v2156">
@@ -1440,6 +1354,81 @@ html body.page-home .cube-recog,
 html body.page-home footer.site-footer {
   background: #F7F6F2 !important;
   background-color: #F7F6F2 !important;
+}
+</style>
+
+
+<style id="home-recog-v2158">
+html body .cube-recog .g12 {
+  width: 100% !important;
+  max-width: none !important;
+}
+html body .recog-head,
+html body .recog-wings.g12-span-12 {
+  grid-column: 1 / -1 !important;
+  width: 100% !important;
+}
+html body .recog-wings {
+  display: grid !important;
+  grid-template-columns: 1fr 1fr !important;
+  gap: 48px !important;
+  max-width: 1100px !important;
+  margin: 0 auto !important;
+  width: 100% !important;
+  box-sizing: border-box !important;
+  padding: 0 24px !important;
+}
+html body .recog-head {
+  text-align: center !important;
+  max-width: 1100px !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+html body .recog-section-label {
+  font-family: Manrope, sans-serif !important;
+  font-weight: 400 !important;
+  font-size: 22px !important;
+  color: #1A1918 !important;
+  -webkit-text-fill-color: #1A1918 !important;
+  text-transform: none !important;
+  letter-spacing: 0 !important;
+  margin: 0 0 20px !important;
+}
+@media (max-width: 768px) {
+  html body .recog-wings {
+    grid-template-columns: 1fr !important;
+    gap: 32px !important;
+    padding: 0 16px !important;
+  }
+  html body .recog-section-label {
+    font-size: 18px !important;
+  }
+}
+
+html body .recog-item-year {
+  font-family: 'Geist Mono', ui-monospace, monospace !important;
+  font-weight: 400 !important;
+  font-size: 12px !important;
+  letter-spacing: 0.04em !important;
+  text-transform: uppercase !important;
+  color: #6B5D52 !important;
+  -webkit-text-fill-color: #6B5D52 !important;
+  margin: 0 0 8px !important;
+}
+
+html body .recog-item-more {
+  font-family: Manrope, sans-serif !important;
+  font-size: 14px !important;
+  color: #1A1918 !important;
+  text-decoration: none !important;
+  border-bottom: 1px solid #1A1918 !important;
+  display: inline-block !important;
+  margin: 4px 0 24px !important;
+}
+html body .recog-item-more:hover {
+  color: #B6452C !important;
+  border-bottom-color: #B6452C !important;
 }
 </style>
 
@@ -1499,7 +1488,7 @@ html body.page-home footer.site-footer {
 
       <article class="lookbook-card">
         <a href="/works/work-197/" class="lookbook-img">
-          <img src="/images/works/work-197.jpg?v=3" alt="№ 197" loading="lazy">
+          <img src="/images/works/work-197.jpg?v=4" alt="№ 197" loading="lazy">
         </a>
         <p class="lookbook-meta"><span class="lookbook-no">[№&nbsp;197]</span> · В НАЛИЧИИ</p>
         <p class="lookbook-price">1&nbsp;300&nbsp;BYN ≈ 37&nbsp;200&nbsp;₽</p>
@@ -1581,35 +1570,33 @@ html body.page-home footer.site-footer {
 
         <div class="recog-wings g12-span-12">
       <div class="recog-left">
-        <p class="recog-section-label">ИЗБРАННЫЕ ВЫСТАВКИ</p>
+        <p class="recog-section-label">Избранные выставки</p>
 
         <article class="recog-item">
           <p class="recog-item-year">2026 · ТРЫН*ТРАВА</p>
-          <p class="recog-item-place">ON VIEW · МИНСК</p>
-          <p class="recog-item-title">9-я выставка «Трын*Трава. Современный русский стиль»</p>
+<p class="recog-item-title">9-я выставка «Трын*Трава. Современный русский стиль»</p>
           <p class="recog-item-text">Москва, Музей-усадьба Муравьёвых-Апостолов. Более 80 авторов — признанные художники, дизайнеры и мастера традиционных производств, начинающие креаторы.</p>
-          <a href="/works/exhibitions/" class="recog-item-more">Подробнее</a>
+          <a href="/works/exhibitions/" class="recog-item-more">Подробнее →</a>
         </article>
 
         <article class="recog-item">
           <p class="recog-item-year">2026 · UNITED BY ART</p>
-          <p class="recog-item-place">ON VIEW · МОСКВА</p>
-          <p class="recog-item-title">Международная выставка-конкурс современного искусства «UNITED BY ART»</p>
+<p class="recog-item-title">Международная выставка-конкурс современного искусства «UNITED BY ART»</p>
           <p class="recog-item-text">3-е место в номинации «Человек и его мир», раздел скульптура. Москва / «Гоголь Арт».</p>
-          <a href="/works/exhibitions/" class="recog-item-more">Подробнее</a>
+          <a href="/works/exhibitions/" class="recog-item-more">Подробнее →</a>
         </article>
 
         <article class="recog-item">
           <p class="recog-item-year">2026 · ISTANBUL</p>
           <p class="recog-item-title">XXVII Международный фестиваль культуры и искусств</p>
           <p class="recog-item-text">Турция, Стамбул</p>
-          <a href="/works/exhibitions/" class="recog-item-more">Подробнее</a>
+          <a href="/works/exhibitions/" class="recog-item-more">Подробнее →</a>
         </article>
 
         <a href="/works/exhibitions/" class="recog-pdf">Смотреть выставочный архив (5 объектов) →</a>
       </div>
       <div class="recog-right">
-        <p class="recog-section-label">БЛИЖАЙШАЯ ЭКСПОЗИЦИЯ</p>
+        <p class="recog-section-label">Ближайшие события</p>
 
         <article class="recog-event">
           <p class="recog-event-tag">ON VIEW · МИНСК</p>
