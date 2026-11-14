@@ -1,16 +1,16 @@
 /* BYCRAFT: Вход + Hero (генерируется update_site.py) */
 (function () {
   'use strict';
-  var root = document.documentElement;
   var hero = document.querySelector('.bc-hero');
   if (!hero) return;
   var nav = document.querySelector('.bc-nav');
   var media = hero.querySelector('.bc-hero__media');
+  var cap = hero.querySelector('.bc-hero__caption');
   var reduced = window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches;
 
   /* Убираем оверлей входа после анимации */
   var entry = document.querySelector('.bc-entry');
-  if (entry) setTimeout(function () { if (entry.parentNode) entry.parentNode.removeChild(entry); }, 2400);
+  if (entry) setTimeout(function () { if (entry.parentNode) entry.parentNode.removeChild(entry); }, 3400);
 
   /* Навигация */
   if (nav) {
@@ -19,14 +19,20 @@
       nav.classList.toggle('is-open', open);
       if (btn) {
         btn.setAttribute('aria-expanded', open ? 'true' : 'false');
-        btn.textContent = open ? 'Закрыть' : 'Меню';
+        btn.setAttribute('aria-label', open ? 'Закрыть меню' : 'Открыть меню');
       }
     };
-    if (btn) btn.addEventListener('click', function () {
-      setOpen(btn.getAttribute('aria-expanded') !== 'true');
+    setOpen(false);                                       /* при загрузке меню всегда закрыто */
+    window.addEventListener('pageshow', function () { setOpen(false); });
+    if (btn) btn.addEventListener('click', function (e) {
+      e.stopPropagation();
+      setOpen(!nav.classList.contains('is-open'));
     });
     nav.addEventListener('click', function (e) {
       if (e.target.closest && e.target.closest('.bc-nav__menu a')) setOpen(false);
+    });
+    document.addEventListener('click', function (e) {
+      if (nav.classList.contains('is-open') && !nav.contains(e.target)) setOpen(false);
     });
     document.addEventListener('keydown', function (e) {
       if (e.key === 'Escape' && nav.classList.contains('is-open')) { setOpen(false); if (btn) btn.focus(); }
@@ -36,6 +42,19 @@
     window.addEventListener('scroll', onScroll, { passive: true });
     onScroll();
   }
+
+  /* Кнопка = ширине подписи к фото */
+  var syncChip = function () {
+    if (!cap) return;
+    var w = cap.offsetWidth;
+    if (w > 0) hero.style.setProperty('--bc-chip-w', w + 'px');
+  };
+  syncChip();
+  window.addEventListener('load', syncChip);
+  window.addEventListener('resize', syncChip);
+  window.addEventListener('orientationchange', syncChip);
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(syncChip);
+  if ('ResizeObserver' in window && cap) new ResizeObserver(syncChip).observe(cap);
 
   /* Свет: курсор = источник света */
   if (!media) return;

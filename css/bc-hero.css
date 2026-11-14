@@ -2,6 +2,7 @@
 :root{
   --bc-paper:#F7F6F2;--bc-ink:#1A1918;--bc-ember:#8A3F1B;--bc-nav-h:64px;
   --bc-chip-h:44px;                      /* единая высота кнопки и подписи к фото */
+  --bc-chip-w:20.5rem;                   /* запасная ширина; точную ставит скрипт по ширине подписи */
   --bc-edge:clamp(16px,2.4vw,40px);      /* общий отступ от низа: кнопка и подпись на одной линии */
   --bc-sans:"Manrope",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
   --bc-serif:"Cormorant Garamond","Cormorant",Georgia,"Times New Roman",serif;
@@ -14,26 +15,26 @@
 
 /* ---------- 0. ВХОД ---------- */
 .bc-entry{position:fixed;inset:0;z-index:1000;pointer-events:none;display:none}
-html.bc-intro .bc-entry{display:block;animation:bcEntryGone 0s linear 2.3s forwards}
+html.bc-intro .bc-entry{display:block;animation:bcEntryGone 0s linear 3.3s forwards}
 .bc-entry__top,.bc-entry__bot{position:absolute;left:0;right:0;height:50.2%;background:var(--bc-paper);will-change:transform}
 .bc-entry__top{top:0}
 .bc-entry__bot{bottom:0}
-html.bc-intro .bc-entry__top{animation:bcUp .85s cubic-bezier(.76,0,.24,1) 1.25s forwards}
-html.bc-intro .bc-entry__bot{animation:bcDown .85s cubic-bezier(.76,0,.24,1) 1.25s forwards}
+html.bc-intro .bc-entry__top{animation:bcUp 0.95s cubic-bezier(.76,0,.24,1) 2.3s forwards}
+html.bc-intro .bc-entry__bot{animation:bcDown 0.95s cubic-bezier(.76,0,.24,1) 2.3s forwards}
 .bc-entry__line{position:absolute;left:0;top:50%;width:0;height:1px;margin-top:-.5px;
   background:linear-gradient(90deg,#1A1918 0,#1A1918 94%,#8A3F1B 100%);
-  animation:bcBurn 1.1s cubic-bezier(.5,0,.2,1) .2s forwards,bcLineOut .15s linear 1.25s forwards}
+  animation:bcBurn 1.8s cubic-bezier(.45,.05,.25,1) 0.3s forwards,bcLineOut .15s linear 2.3s forwards}
 @keyframes bcBurn{from{width:0}to{width:100%}}
 @keyframes bcLineOut{to{opacity:0}}
 @keyframes bcUp{to{transform:translateY(-101%)}}
 @keyframes bcDown{to{transform:translateY(101%)}}
 @keyframes bcEntryGone{to{visibility:hidden}}
+@keyframes bcCurtainFade{to{opacity:0}}
 
 /* ---------- Появление элементов ---------- */
 @keyframes bcRise{from{opacity:0;transform:translateY(14px);filter:blur(6px)}to{opacity:1;transform:none;filter:none}}
 @keyframes bcFade{from{opacity:0}to{opacity:1}}
 html.bc-intro .bc-r{opacity:0;animation:bcRise .9s cubic-bezier(.2,.7,.2,1) both;animation-delay:var(--d,0s)}
-html.bc-quick .bc-r{animation:bcFade .4s ease both}
 
 /* ---------- Навигация ---------- */
 .bc-nav{position:fixed;top:0;left:0;right:0;z-index:50;height:var(--bc-nav-h);box-sizing:border-box;
@@ -50,7 +51,17 @@ html.bc-quick .bc-r{animation:bcFade .4s ease both}
 @media (hover:hover){.bc-nav__menu ul a:hover::after{transform:scaleX(1)}}
 .bc-nav__menu ul a:focus-visible::after{transform:scaleX(1)}
 .bc-nav a:focus-visible,.bc-nav__toggle:focus-visible{outline:2px solid var(--bc-ink);outline-offset:4px}
-.bc-nav__toggle{display:none}
+
+/* Гамбургер: две тонкие линии, при открытии превращаются в крестик */
+.bc-nav__toggle{display:none;position:relative;width:44px;height:44px;margin:0 -11px 0 0;padding:0;
+  background:none;border:0;border-radius:0;color:inherit;cursor:pointer;
+  -webkit-appearance:none;appearance:none;-webkit-tap-highlight-color:transparent}
+.bc-nav__toggle i{position:absolute;left:11px;right:11px;height:1.5px;background:currentColor;
+  transition:transform .35s cubic-bezier(.2,.7,.2,1)}
+.bc-nav__toggle i:nth-child(1){top:19px}
+.bc-nav__toggle i:nth-child(2){top:25px}
+.bc-nav.is-open .bc-nav__toggle i:nth-child(1){transform:translateY(3px) rotate(45deg)}
+.bc-nav.is-open .bc-nav__toggle i:nth-child(2){transform:translateY(-3px) rotate(-45deg)}
 
 /* Переключатель языка EN / RU */
 .bc-lang{display:flex;align-items:center;gap:6px;font:500 12px/1 var(--bc-mono);letter-spacing:.08em}
@@ -62,14 +73,15 @@ html.bc-quick .bc-r{animation:bcFade .4s ease both}
 .bc-lang__off{opacity:.35;cursor:default}
 
 @media (max-width:899px){
-  .bc-nav__toggle{display:inline-flex;align-items:center;min-height:44px;padding:0 4px;background:none;border:0;
-    font:600 14px var(--bc-sans);color:inherit;cursor:pointer}
-  .bc-nav__menu{display:none;position:absolute;top:100%;left:0;right:0;background:var(--bc-paper);
-    padding:8px clamp(16px,4vw,72px) 24px;box-shadow:0 1px 0 rgba(26,25,24,.12)}
-  .bc-nav.is-open .bc-nav__menu{display:block}
-  .bc-nav__menu ul{flex-direction:column;gap:0}
-  .bc-nav__menu ul a{display:block;padding:14px 0;font-size:20px}
-  .bc-nav__menu ul a::after{display:none}
+  html .bc-nav .bc-nav__toggle{display:block}
+  html .bc-nav .bc-nav__menu{display:block;position:absolute;top:100%;left:0;right:0;
+    max-height:calc(100vh - var(--bc-nav-h));max-height:calc(100svh - var(--bc-nav-h));overflow:auto;
+    background:var(--bc-paper);padding:8px clamp(16px,4vw,72px) 24px;box-shadow:0 1px 0 rgba(26,25,24,.12)}
+  /* закрыто по умолчанию; жёсткое правило, чтобы старые стили сайта его не перебили */
+  html.bc-js .bc-nav:not(.is-open) .bc-nav__menu{display:none!important}
+  html .bc-nav .bc-nav__menu ul{flex-direction:column;gap:0}
+  html .bc-nav .bc-nav__menu ul a{display:block;padding:14px 0;font-size:20px}
+  html .bc-nav .bc-nav__menu ul a::after{display:none}
   .bc-lang{margin-top:12px;padding-top:6px;border-top:1px solid rgba(26,25,24,.12);font-size:14px;gap:10px}
   .bc-lang a,.bc-lang span{padding:14px 4px}
 }
@@ -88,8 +100,9 @@ html.bc-quick .bc-r{animation:bcFade .4s ease both}
 .bc-hero__title .bc-line{display:block}
 .bc-hero__sub{margin:0 0 28px;max-width:46ch;font-size:1rem;line-height:1.6;font-weight:400;color:rgba(26,25,24,.8)}
 
-/* CTA: высота = высоте подписи к фото; hover: кнопка #2A211C, текст светлый, стрелка #B6452C (уголёк) */
-.bc-cta{display:inline-flex;align-items:center;gap:16px;height:var(--bc-chip-h);padding:0 22px;
+/* CTA: высота и ширина = подписи к фото; hover: кнопка #2A211C, текст светлый, стрелка #B6452C (уголёк) */
+.bc-cta{display:flex;align-items:center;justify-content:space-between;align-self:flex-start;gap:16px;
+  width:var(--bc-chip-w);max-width:100%;height:var(--bc-chip-h);padding:0 16px;
   background:#1A1918;color:var(--bc-paper);font:600 14px/1 var(--bc-sans);letter-spacing:.02em;
   text-decoration:none;transition:background-color .3s ease}
 .bc-cta:visited{color:var(--bc-paper)}
@@ -109,10 +122,10 @@ html.bc-quick .bc-r{animation:bcFade .4s ease both}
   --lx:38%;--ly:40%;contain:paint}
 .bc-hero__media:focus-visible{outline:2px solid var(--bc-ink);outline-offset:4px}
 .bc-hero__plate{position:absolute;inset:0;transform-origin:50% 50%;animation:bcBreath 1.65s ease-in-out infinite alternate}
-html.bc-intro .bc-hero__plate{animation-delay:2.8s}
+html.bc-intro .bc-hero__plate{animation-delay:3.85s}
 @keyframes bcBreath{from{transform:scale(1)}to{transform:scale(1.008)}}
 .bc-hero__img{display:block;width:100%;height:100%;object-fit:cover;object-position:50% 50%}
-html.bc-intro .bc-hero__img{animation:bcImgIn 1.9s cubic-bezier(.2,.7,.2,1) 1.1s both}
+html.bc-intro .bc-hero__img{animation:bcImgIn 1.9s cubic-bezier(.2,.7,.2,1) 2.15s both}
 @keyframes bcImgIn{from{transform:scale(1.07)}to{transform:none}}
 
 /* Свет, управляемый курсором */
@@ -126,6 +139,7 @@ html.bc-intro .bc-hero__img{animation:bcImgIn 1.9s cubic-bezier(.2,.7,.2,1) 1.1s
   background:var(--bc-paper);color:var(--bc-ink);font:500 11.5px/1 var(--bc-mono);letter-spacing:.06em;text-transform:uppercase}
 @media (max-width:380px){
   .bc-hero__caption{padding:0 10px;font-size:10px;letter-spacing:.03em}
+  .bc-cta{padding:0 10px}
 }
 
 @media (min-width:900px){
@@ -137,7 +151,13 @@ html.bc-intro .bc-hero__img{animation:bcImgIn 1.9s cubic-bezier(.2,.7,.2,1) 1.1s
   .bc-hero__sub{margin-bottom:36px;font-size:1.0625rem}
   .bc-hero__media{order:0;height:auto;min-height:420px;margin:16px var(--bc-edge) var(--bc-edge) 0}
 }
+
+/* Уменьшенное движение: вход остаётся, но без движения: линия уже проведена и плавно гаснет */
 @media (prefers-reduced-motion:reduce){
   .bc-hero__plate{animation:none}
   html.bc-intro .bc-hero__img{animation:none}
+  html.bc-intro .bc-entry{animation:bcEntryGone 0s linear 1.5s forwards}
+  html.bc-intro .bc-entry__line{width:100%;animation:bcLineOut .3s linear .7s forwards}
+  html.bc-intro .bc-entry__top,html.bc-intro .bc-entry__bot{animation:bcCurtainFade .6s ease .8s forwards}
+  html.bc-intro .bc-r{animation:bcFade .6s ease .8s both}
 }
