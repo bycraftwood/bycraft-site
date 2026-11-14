@@ -1529,7 +1529,7 @@ html body .recog-item-more:hover {
 <!-- BYCRAFT:HEAD:START -->
 <script>(function(){var d=document.documentElement;d.classList.add('js');var rm=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;var force=/[?&]intro=1/.test(location.search);var seen=false;try{var t=+localStorage.getItem('bc_intro_seen_v1');seen=!!t&&(Date.now()-t)<6048e5;}catch(e){}if(force)seen=false;if(rm&&!force)seen=true;if(seen){d.classList.add('bc-quick');}else{d.classList.add('bc-intro');try{localStorage.setItem('bc_intro_seen_v1',String(Date.now()));}catch(e){}}})();</script>
 <link rel="preload" as="image" href="/images/home/grid-01.jpg" fetchpriority="high">
-<link rel="stylesheet" href="/css/bc-hero.css?v=0339b39a">
+<link rel="stylesheet" href="/css/bc-hero.css?v=a54dbb55">
 <!-- BYCRAFT:HEAD:END -->
 </head>
 <body class="page-home page-cube">
@@ -1541,11 +1541,14 @@ html body .recog-item-more:hover {
   <button class="bc-nav__toggle" type="button" aria-expanded="false" aria-controls="bc-menu">Меню</button>
   <nav class="bc-nav__menu" id="bc-menu" aria-label="Основная навигация">
     <ul>
-        <li><a href="/#collection">Работы</a></li>
-        <li><a href="/#workshop">Мастерская</a></li>
-        <li><a href="/#events">События</a></li>
-        <li><a href="/#contacts">Контакты</a></li>
+        <li><a href="/works/">Работы</a></li>
+        <li><a href="/workshop/">Мастерская</a></li>
+        <li><a href="/events/">События</a></li>
+        <li><a href="/contacts/">Контакты</a></li>
     </ul>
+    <div class="bc-lang" role="group" aria-label="Язык / Language">
+      <a href="/en/" hreflang="en" lang="en" aria-label="English version">EN</a><span class="bc-lang__sep" aria-hidden="true">/</span><span aria-current="true" lang="ru">RU</span>
+    </div>
   </nav>
 </header>
 
@@ -1557,7 +1560,7 @@ html body .recog-item-more:hover {
       <span class="bc-line bc-r" style="--d:1.62s">Завершено человеком</span>
     </h1>
     <p class="bc-hero__sub bc-r" style="--d:1.85s">Скульптурные арт-объекты из берёзового сувеля. Каждый существует в одном экземпляре.</p>
-    <a class="bc-cta bc-r" style="--d:2.15s" href="#collection">
+    <a class="bc-cta bc-r" style="--d:2.15s" href="/works/">
       <span>Войти в коллекцию</span>
       <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" focusable="false"><path d="M3 12h17M14 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.5"/></svg>
     </a>
@@ -1576,40 +1579,10 @@ html body .recog-item-more:hover {
 <!-- BYCRAFT:BODY:END -->
 
 
+
 <main>
-<header class="site-top g12-top" role="banner">
-  <div class="site-top-inner">
-    <a href="/" class="site-top-logo">BYCRAFT</a>
-    <nav class="site-top-nav" aria-label="Меню">
-      <a href="/works/">Работы</a>
-      <a href="/workshop/">Мастерская</a>
-      <a href="/events/">События</a>
-      <a href="/contacts/">Контакты</a>
-<span class="site-top-lang"><a href="/en/">EN</a> / <span>RU</span></span>
-    </nav>
-    <div class="site-top-right">
-      <span class="site-top-lang"><a href="/en/">EN</a> / <span>RU</span></span>
-      <button type="button" class="site-top-menu-btn" aria-label="Меню"
-        onclick="document.body.classList.toggle('nav-open')">Menu</button>
-    </div>
-  </div>
-</header>
 
-<section class="cube-hero" aria-label="Экспозиция">
-  <div class="cube-stage">
-    <div class="cube-object">
-      <img src="/images/home/grid-01-transparent.png?v=2" alt="Скульптурная композиция из двух форм, чёрной и светлой, на белом фоне — работа № 197." class="cube-img seamless-hero-vase">
-      <div class="cube-shadow" aria-hidden="true"></div>
-    </div>
-  </div>
-</section>
 
-<section class="cube-hero-text" aria-label="Манифест">
-  <div class="cube-bottom">
-    <p class="cube-caption">№&nbsp;197 · СУВЕЛЬ БЕРЁЗЫ · ОБЖИГ ОГНЁМ</p>
-    <h1 class="cube-manifest">Создано природой. Завершено человеком</h1>
-  </div>
-</section>
 
 
 <div id="home-after-hero" class="cube-anchor" tabindex="-1"></div>

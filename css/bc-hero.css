@@ -40,14 +40,25 @@ html.bc-quick .bc-r{animation:bcFade .4s ease both}
   font-family:var(--bc-sans);-webkit-font-smoothing:antialiased;transition:box-shadow .3s}
 .bc-nav.is-scrolled{box-shadow:0 1px 0 rgba(26,25,24,.12)}
 .bc-nav__brand{font-weight:800;font-size:15px;letter-spacing:.24em;color:inherit;text-decoration:none}
+.bc-nav__menu{display:flex;align-items:center;gap:clamp(28px,4vw,64px)}
 .bc-nav__menu ul{display:flex;gap:clamp(20px,3vw,44px);list-style:none;margin:0;padding:0}
-.bc-nav__menu a{position:relative;display:inline-block;padding:10px 0;font-size:14px;font-weight:500;letter-spacing:.02em;color:inherit;text-decoration:none}
-.bc-nav__menu a::after{content:"";position:absolute;left:0;right:0;bottom:6px;height:1px;background:currentColor;
+.bc-nav__menu ul a{position:relative;display:inline-block;padding:10px 0;font-size:14px;font-weight:500;letter-spacing:.02em;color:inherit;text-decoration:none}
+.bc-nav__menu ul a::after{content:"";position:absolute;left:0;right:0;bottom:6px;height:1px;background:currentColor;
   transform:scaleX(0);transform-origin:left;transition:transform .35s cubic-bezier(.2,.7,.2,1)}
-@media (hover:hover){.bc-nav__menu a:hover::after{transform:scaleX(1)}}
-.bc-nav__menu a:focus-visible::after{transform:scaleX(1)}
+@media (hover:hover){.bc-nav__menu ul a:hover::after{transform:scaleX(1)}}
+.bc-nav__menu ul a:focus-visible::after{transform:scaleX(1)}
 .bc-nav a:focus-visible,.bc-nav__toggle:focus-visible{outline:2px solid var(--bc-ink);outline-offset:4px}
 .bc-nav__toggle{display:none}
+
+/* Переключатель языка EN / RU */
+.bc-lang{display:flex;align-items:center;gap:6px;font:500 12px/1 var(--bc-mono);letter-spacing:.08em}
+.bc-lang a,.bc-lang span{display:inline-block;padding:10px 2px;color:inherit;text-decoration:none}
+.bc-lang a{opacity:.6;transition:opacity .25s}
+@media (hover:hover){.bc-lang a:hover{opacity:1}}
+.bc-lang [aria-current]{font-weight:700;box-shadow:inset 0 -1px 0 currentColor}
+.bc-lang__sep{opacity:.35}
+.bc-lang__off{opacity:.35;cursor:default}
+
 @media (max-width:899px){
   .bc-nav__toggle{display:inline-flex;align-items:center;min-height:44px;padding:0 4px;background:none;border:0;
     font:600 14px var(--bc-sans);color:inherit;cursor:pointer}
@@ -55,8 +66,10 @@ html.bc-quick .bc-r{animation:bcFade .4s ease both}
     padding:8px clamp(16px,4vw,72px) 24px;box-shadow:0 1px 0 rgba(26,25,24,.12)}
   .bc-nav.is-open .bc-nav__menu{display:block}
   .bc-nav__menu ul{flex-direction:column;gap:0}
-  .bc-nav__menu a{display:block;padding:14px 0;font-size:20px}
-  .bc-nav__menu a::after{display:none}
+  .bc-nav__menu ul a{display:block;padding:14px 0;font-size:20px}
+  .bc-nav__menu ul a::after{display:none}
+  .bc-lang{margin-top:12px;padding-top:6px;border-top:1px solid rgba(26,25,24,.12);font-size:14px;gap:10px}
+  .bc-lang a,.bc-lang span{padding:14px 4px}
 }
 
 /* ---------- 1. HERO ---------- */
@@ -73,12 +86,20 @@ html.bc-quick .bc-r{animation:bcFade .4s ease both}
 .bc-hero__title .bc-line{display:block}
 .bc-hero__sub{margin:0 0 28px;max-width:36ch;font-size:1rem;line-height:1.6;font-weight:400;color:rgba(26,25,24,.8)}
 
+/* CTA: при наведении кнопка #2A211C, текст светлый, стрелка #B6452C (тлеющий уголёк) */
 .bc-cta{display:inline-flex;align-items:center;gap:16px;min-height:56px;padding:0 28px;
-  background:var(--bc-ink);color:var(--bc-paper);font:600 14px/1 var(--bc-sans);letter-spacing:.02em;
+  background:#1A1918;color:var(--bc-paper);font:600 14px/1 var(--bc-sans);letter-spacing:.02em;
   text-decoration:none;transition:background-color .3s ease}
-.bc-cta svg{flex:none;transition:transform .35s cubic-bezier(.2,.7,.2,1)}
-@media (hover:hover){.bc-cta:hover{background:var(--bc-ember)}.bc-cta:hover svg{transform:translateX(5px)}}
-.bc-cta:focus-visible{outline:2px solid var(--bc-ink);outline-offset:4px;background:var(--bc-ember)}
+.bc-cta:visited{color:var(--bc-paper)}
+.bc-cta svg{flex:none;color:currentColor;transition:transform .35s cubic-bezier(.2,.7,.2,1),color .3s ease}
+@media (hover:hover){
+  .bc-cta:hover{background:#2A211C;color:var(--bc-paper)}
+  .bc-cta:hover svg{color:#B6452C;transform:translateX(5px)}
+}
+.bc-cta:active{background:#2A211C;color:var(--bc-paper)}
+.bc-cta:active svg{color:#B6452C}
+.bc-cta:focus-visible{outline:2px solid var(--bc-ink);outline-offset:4px;background:#2A211C;color:var(--bc-paper)}
+.bc-cta:focus-visible svg{color:#B6452C}
 
 /* Фото-«пластина» */
 .bc-hero__media{order:-1;position:relative;margin:0 16px;height:clamp(280px,46vh,520px);height:clamp(280px,46svh,520px);
