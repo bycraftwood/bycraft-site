@@ -1,0 +1,115 @@
+/* BYCRAFT: Вход + Hero (генерируется update_site.py) */
+:root{
+  --bc-paper:#F7F6F2;--bc-ink:#1A1918;--bc-ember:#8A3F1B;--bc-nav-h:64px;
+  --bc-sans:"Manrope",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  --bc-serif:"Cormorant Garamond","Cormorant",Georgia,"Times New Roman",serif;
+  --bc-mono:"Geist Mono",ui-monospace,"SF Mono",Menlo,Consolas,monospace;
+}
+@media (min-width:900px){:root{--bc-nav-h:76px}}
+@media (prefers-reduced-motion:no-preference){html{scroll-behavior:smooth}}
+
+.bc-sr{position:absolute!important;width:1px;height:1px;margin:-1px;padding:0;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}
+
+/* ---------- 0. ВХОД ---------- */
+.bc-entry{position:fixed;inset:0;z-index:1000;pointer-events:none;display:none}
+html.bc-intro .bc-entry{display:block;animation:bcEntryGone 0s linear 2.3s forwards}
+.bc-entry__top,.bc-entry__bot{position:absolute;left:0;right:0;height:50.2%;background:var(--bc-paper);will-change:transform}
+.bc-entry__top{top:0}
+.bc-entry__bot{bottom:0}
+html.bc-intro .bc-entry__top{animation:bcUp .85s cubic-bezier(.76,0,.24,1) 1.25s forwards}
+html.bc-intro .bc-entry__bot{animation:bcDown .85s cubic-bezier(.76,0,.24,1) 1.25s forwards}
+.bc-entry__line{position:absolute;left:0;top:50%;width:0;height:1px;margin-top:-.5px;
+  background:linear-gradient(90deg,#1A1918 0,#1A1918 94%,#8A3F1B 100%);
+  animation:bcBurn 1.1s cubic-bezier(.5,0,.2,1) .2s forwards,bcLineOut .15s linear 1.25s forwards}
+@keyframes bcBurn{from{width:0}to{width:100%}}
+@keyframes bcLineOut{to{opacity:0}}
+@keyframes bcUp{to{transform:translateY(-101%)}}
+@keyframes bcDown{to{transform:translateY(101%)}}
+@keyframes bcEntryGone{to{visibility:hidden}}
+
+/* ---------- Появление элементов ---------- */
+@keyframes bcRise{from{opacity:0;transform:translateY(14px);filter:blur(6px)}to{opacity:1;transform:none;filter:none}}
+@keyframes bcFade{from{opacity:0}to{opacity:1}}
+html.bc-intro .bc-r{opacity:0;animation:bcRise .9s cubic-bezier(.2,.7,.2,1) both;animation-delay:var(--d,0s)}
+html.bc-quick .bc-r{animation:bcFade .4s ease both}
+
+/* ---------- Навигация ---------- */
+.bc-nav{position:fixed;top:0;left:0;right:0;z-index:50;height:var(--bc-nav-h);box-sizing:border-box;
+  display:flex;align-items:center;justify-content:space-between;
+  padding:0 clamp(16px,4vw,72px);background:var(--bc-paper);color:var(--bc-ink);
+  font-family:var(--bc-sans);-webkit-font-smoothing:antialiased;transition:box-shadow .3s}
+.bc-nav.is-scrolled{box-shadow:0 1px 0 rgba(26,25,24,.12)}
+.bc-nav__brand{font-weight:800;font-size:15px;letter-spacing:.24em;color:inherit;text-decoration:none}
+.bc-nav__menu ul{display:flex;gap:clamp(20px,3vw,44px);list-style:none;margin:0;padding:0}
+.bc-nav__menu a{position:relative;display:inline-block;padding:10px 0;font-size:14px;font-weight:500;letter-spacing:.02em;color:inherit;text-decoration:none}
+.bc-nav__menu a::after{content:"";position:absolute;left:0;right:0;bottom:6px;height:1px;background:currentColor;
+  transform:scaleX(0);transform-origin:left;transition:transform .35s cubic-bezier(.2,.7,.2,1)}
+@media (hover:hover){.bc-nav__menu a:hover::after{transform:scaleX(1)}}
+.bc-nav__menu a:focus-visible::after{transform:scaleX(1)}
+.bc-nav a:focus-visible,.bc-nav__toggle:focus-visible{outline:2px solid var(--bc-ink);outline-offset:4px}
+.bc-nav__toggle{display:none}
+@media (max-width:899px){
+  .bc-nav__toggle{display:inline-flex;align-items:center;min-height:44px;padding:0 4px;background:none;border:0;
+    font:600 14px var(--bc-sans);color:inherit;cursor:pointer}
+  .bc-nav__menu{display:none;position:absolute;top:100%;left:0;right:0;background:var(--bc-paper);
+    padding:8px clamp(16px,4vw,72px) 24px;box-shadow:0 1px 0 rgba(26,25,24,.12)}
+  .bc-nav.is-open .bc-nav__menu{display:block}
+  .bc-nav__menu ul{flex-direction:column;gap:0}
+  .bc-nav__menu a{display:block;padding:14px 0;font-size:20px}
+  .bc-nav__menu a::after{display:none}
+}
+
+/* ---------- 1. HERO ---------- */
+.bc-hero{position:relative;box-sizing:border-box;min-height:100vh;min-height:100svh;padding-top:var(--bc-nav-h);
+  display:grid;grid-template-columns:minmax(0,1fr);background:var(--bc-paper);color:var(--bc-ink);
+  font-family:var(--bc-sans);-webkit-font-smoothing:antialiased;overflow:hidden}
+.bc-hero *,.bc-hero *::before,.bc-hero *::after{box-sizing:border-box}
+
+.bc-hero__copy{padding:26px clamp(16px,4vw,72px) 36px}
+.bc-hero__rule{display:block;width:56px;height:1px;background:var(--bc-ember);margin:0 0 24px}
+.bc-hero__title{margin:0 0 20px;font-family:var(--bc-serif);font-weight:500;
+  font-size:clamp(2.5rem,1rem + 4.2vw,5.25rem);line-height:1.02;letter-spacing:-.01em;
+  color:var(--bc-ink);text-wrap:balance;overflow-wrap:break-word}
+.bc-hero__title .bc-line{display:block}
+.bc-hero__sub{margin:0 0 28px;max-width:36ch;font-size:1rem;line-height:1.6;font-weight:400;color:rgba(26,25,24,.8)}
+
+.bc-cta{display:inline-flex;align-items:center;gap:16px;min-height:56px;padding:0 28px;
+  background:var(--bc-ink);color:var(--bc-paper);font:600 14px/1 var(--bc-sans);letter-spacing:.02em;
+  text-decoration:none;transition:background-color .3s ease}
+.bc-cta svg{flex:none;transition:transform .35s cubic-bezier(.2,.7,.2,1)}
+@media (hover:hover){.bc-cta:hover{background:var(--bc-ember)}.bc-cta:hover svg{transform:translateX(5px)}}
+.bc-cta:focus-visible{outline:2px solid var(--bc-ink);outline-offset:4px;background:var(--bc-ember)}
+
+/* Фото-«пластина» */
+.bc-hero__media{order:-1;position:relative;margin:0 16px;height:clamp(280px,46vh,520px);height:clamp(280px,46svh,520px);
+  overflow:hidden;background:radial-gradient(ellipse at 40% 35%,#5a4636 0%,#2a211b 55%,#14100d 100%);
+  --lx:38%;--ly:40%;contain:paint}
+.bc-hero__media:focus-visible{outline:2px solid var(--bc-ink);outline-offset:4px}
+.bc-hero__plate{position:absolute;inset:0;transform-origin:50% 50%;animation:bcBreath 1.65s ease-in-out infinite alternate}
+html.bc-intro .bc-hero__plate{animation-delay:2.8s}
+@keyframes bcBreath{from{transform:scale(1)}to{transform:scale(1.008)}}
+.bc-hero__img{display:block;width:100%;height:100%;object-fit:cover;object-position:50% 50%}
+html.bc-intro .bc-hero__img{animation:bcImgIn 1.9s cubic-bezier(.2,.7,.2,1) 1.1s both}
+@keyframes bcImgIn{from{transform:scale(1.07)}to{transform:none}}
+
+/* Свет, управляемый курсором */
+.bc-hero__shade,.bc-hero__glow{position:absolute;inset:0;pointer-events:none}
+.bc-hero__shade{background:radial-gradient(ellipse 90% 90% at var(--lx) var(--ly),rgba(16,12,9,0) 0%,rgba(16,12,9,.42) 75%)}
+.bc-hero__glow{mix-blend-mode:soft-light;background:radial-gradient(ellipse 40% 40% at var(--lx) var(--ly),rgba(255,226,186,.42),rgba(255,226,186,0))}
+
+.bc-hero__caption{position:absolute;left:0;bottom:0;z-index:3;margin:0;padding:10px 14px;
+  background:var(--bc-paper);color:var(--bc-ink);font:500 11.5px/1.3 var(--bc-mono);letter-spacing:.06em;text-transform:uppercase}
+
+@media (min-width:900px){
+  .bc-hero{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
+  .bc-hero__copy{display:flex;flex-direction:column;justify-content:flex-end;
+    padding:0 clamp(24px,4vw,72px) clamp(32px,7vh,72px)}
+  .bc-hero__rule{margin-bottom:28px}
+  .bc-hero__title{margin-bottom:24px}
+  .bc-hero__sub{margin-bottom:36px;font-size:1.0625rem}
+  .bc-hero__media{order:0;height:auto;min-height:420px;margin:16px clamp(16px,2.4vw,40px) clamp(16px,2.4vw,40px) 0}
+}
+@media (prefers-reduced-motion:reduce){
+  .bc-hero__plate{animation:none}
+  html.bc-intro .bc-hero__img{animation:none}
+}
