@@ -1,6 +1,8 @@
 /* BYCRAFT: Вход + Hero (генерируется update_site.py) */
 :root{
   --bc-paper:#F7F6F2;--bc-ink:#1A1918;--bc-ember:#8A3F1B;--bc-nav-h:64px;
+  --bc-chip-h:44px;                      /* единая высота кнопки и подписи к фото */
+  --bc-edge:clamp(16px,2.4vw,40px);      /* общий отступ от низа: кнопка и подпись на одной линии */
   --bc-sans:"Manrope",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
   --bc-serif:"Cormorant Garamond","Cormorant",Georgia,"Times New Roman",serif;
   --bc-mono:"Geist Mono",ui-monospace,"SF Mono",Menlo,Consolas,monospace;
@@ -79,15 +81,15 @@ html.bc-quick .bc-r{animation:bcFade .4s ease both}
 .bc-hero *,.bc-hero *::before,.bc-hero *::after{box-sizing:border-box}
 
 .bc-hero__copy{padding:26px clamp(16px,4vw,72px) 36px}
-.bc-hero__rule{display:block;width:56px;height:1px;background:var(--bc-ember);margin:0 0 24px}
+.bc-hero__byline{margin:0 0 22px;font:500 11.5px/1.3 var(--bc-mono);letter-spacing:.06em;text-transform:uppercase;color:rgba(26,25,24,.7)}
 .bc-hero__title{margin:0 0 20px;font-family:var(--bc-serif);font-weight:500;
   font-size:clamp(2.5rem,1rem + 4.2vw,5.25rem);line-height:1.02;letter-spacing:-.01em;
   color:var(--bc-ink);text-wrap:balance;overflow-wrap:break-word}
 .bc-hero__title .bc-line{display:block}
-.bc-hero__sub{margin:0 0 28px;max-width:36ch;font-size:1rem;line-height:1.6;font-weight:400;color:rgba(26,25,24,.8)}
+.bc-hero__sub{margin:0 0 28px;max-width:46ch;font-size:1rem;line-height:1.6;font-weight:400;color:rgba(26,25,24,.8)}
 
-/* CTA: при наведении кнопка #2A211C, текст светлый, стрелка #B6452C (тлеющий уголёк) */
-.bc-cta{display:inline-flex;align-items:center;gap:16px;min-height:56px;padding:0 28px;
+/* CTA: высота = высоте подписи к фото; hover: кнопка #2A211C, текст светлый, стрелка #B6452C (уголёк) */
+.bc-cta{display:inline-flex;align-items:center;gap:16px;height:var(--bc-chip-h);padding:0 22px;
   background:#1A1918;color:var(--bc-paper);font:600 14px/1 var(--bc-sans);letter-spacing:.02em;
   text-decoration:none;transition:background-color .3s ease}
 .bc-cta:visited{color:var(--bc-paper)}
@@ -118,17 +120,22 @@ html.bc-intro .bc-hero__img{animation:bcImgIn 1.9s cubic-bezier(.2,.7,.2,1) 1.1s
 .bc-hero__shade{background:radial-gradient(ellipse 90% 90% at var(--lx) var(--ly),rgba(16,12,9,0) 0%,rgba(16,12,9,.42) 75%)}
 .bc-hero__glow{mix-blend-mode:soft-light;background:radial-gradient(ellipse 40% 40% at var(--lx) var(--ly),rgba(255,226,186,.42),rgba(255,226,186,0))}
 
-.bc-hero__caption{position:absolute;left:0;bottom:0;z-index:3;margin:0;padding:10px 14px;
-  background:var(--bc-paper);color:var(--bc-ink);font:500 11.5px/1.3 var(--bc-mono);letter-spacing:.06em;text-transform:uppercase}
+/* Подпись к фото: высота = высоте кнопки */
+.bc-hero__caption{position:absolute;left:0;bottom:0;z-index:3;margin:0;max-width:100%;
+  display:flex;align-items:center;height:var(--bc-chip-h);padding:0 16px;white-space:nowrap;overflow:hidden;
+  background:var(--bc-paper);color:var(--bc-ink);font:500 11.5px/1 var(--bc-mono);letter-spacing:.06em;text-transform:uppercase}
+@media (max-width:380px){
+  .bc-hero__caption{padding:0 10px;font-size:10px;letter-spacing:.03em}
+}
 
 @media (min-width:900px){
   .bc-hero{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
   .bc-hero__copy{display:flex;flex-direction:column;justify-content:flex-end;
-    padding:0 clamp(24px,4vw,72px) clamp(32px,7vh,72px)}
-  .bc-hero__rule{margin-bottom:28px}
+    padding:0 clamp(24px,4vw,72px) var(--bc-edge)}
+  .bc-hero__byline{margin-bottom:26px}
   .bc-hero__title{margin-bottom:24px}
   .bc-hero__sub{margin-bottom:36px;font-size:1.0625rem}
-  .bc-hero__media{order:0;height:auto;min-height:420px;margin:16px clamp(16px,2.4vw,40px) clamp(16px,2.4vw,40px) 0}
+  .bc-hero__media{order:0;height:auto;min-height:420px;margin:16px var(--bc-edge) var(--bc-edge) 0}
 }
 @media (prefers-reduced-motion:reduce){
   .bc-hero__plate{animation:none}
