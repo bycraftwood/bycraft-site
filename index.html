@@ -1497,13 +1497,26 @@ html body.page-home .cube-expo .lookbook-meta {
   gap: 6px 12px !important;
 }
 html body.page-home .cube-expo .lookbook-no {
+  font-family: 'Geist Mono', ui-monospace, monospace !important;
+  font-weight: 400 !important;
+  font-size: 12px !important;
+  line-height: 1.4 !important;
+  letter-spacing: 0.04em !important;
   color: #2A211C !important;
+  margin: 0 !important;
 }
 html body.page-home .cube-expo .lookbook-status {
   display: inline-flex !important;
   align-items: center !important;
   gap: 6px !important;
+  font-family: 'Geist Mono', ui-monospace, monospace !important;
+  font-weight: 400 !important;
+  font-size: 12px !important;
+  line-height: 1.4 !important;
+  letter-spacing: 0.04em !important;
+  text-transform: uppercase !important;
   color: #6B5D52 !important;
+  margin: 0 !important;
 }
 html body.page-home .cube-expo .lookbook-dot {
   display: inline-block !important;
@@ -1520,6 +1533,38 @@ html body.page-home .cube-expo .lookbook-status--avail .lookbook-dot {
 html body.page-home .cube-expo .lookbook-status--sold .lookbook-dot {
   background-color: transparent !important;
   border: 1.5px solid #6B5D52 !important;
+}
+html body.page-home .cube-expo a.lookbook-more.lookbook-more--collection {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 8px !important;
+  margin-top: 4px !important;
+  padding: 11px 18px !important;
+  background-color: #1A1918 !important;
+  color: #F8F7F4 !important;
+  border: none !important;
+  border-radius: 2px !important;
+  font-family: Manrope, sans-serif !important;
+  font-size: 14px !important;
+  font-weight: 500 !important;
+  line-height: 1.3 !important;
+  text-decoration: none !important;
+  transition: background-color 0.25s ease, color 0.25s ease !important;
+}
+html body.page-home .cube-expo a.lookbook-more.lookbook-more--collection .lookbook-arrow {
+  color: #F8F7F4 !important;
+  font-size: inherit !important;
+  transition: color 0.25s ease !important;
+}
+html body.page-home .cube-expo a.lookbook-more.lookbook-more--collection:hover,
+html body.page-home .cube-expo a.lookbook-more.lookbook-more--collection:focus-visible {
+  background-color: #2A211C !important;
+  color: #F8F7F4 !important;
+}
+html body.page-home .cube-expo a.lookbook-more.lookbook-more--collection:hover .lookbook-arrow,
+html body.page-home .cube-expo a.lookbook-more.lookbook-more--collection:focus-visible .lookbook-arrow {
+  color: #B6452C !important;
 }
 </style>
 </head>
@@ -1635,7 +1680,7 @@ html body.page-home .cube-expo .lookbook-status--sold .lookbook-dot {
           <img src="/images/works/work-248.jpg" alt="Светлая скульптура из сувеля берёзы с естественными отверстиями, вид спереди — работа № 248." loading="lazy">
         </a>
         <p class="lookbook-meta lookbook-meta--sold"><span class="lookbook-status lookbook-status--sold"><span class="lookbook-dot" aria-hidden="true"></span>ПРОДАНА</span></p>
-        <a href="/works/" class="lookbook-more">Смотреть все работы <span class="lookbook-arrow">→</span></a>
+        <a href="/works/" class="lookbook-more lookbook-more--collection">Смотреть всю коллекцию <span class="lookbook-arrow" aria-hidden="true">→</span></a>
       </article>
     </div>
 </div>
