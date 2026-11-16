@@ -1568,8 +1568,59 @@ html body.page-home .cube-expo a.lookbook-more.lookbook-more--collection:focus-v
 }
 </style>
 <style id="bc-home-recog-grid-style">
-html body.page-home .cube-craft .craft-atelier-left {
+html body.page-home .cube-expo .lookbook-card-sold-bar {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  gap: 10px 16px !important;
+  width: 100% !important;
+}
+html body.page-home .cube-expo .lookbook-card-sold-bar .lookbook-meta--sold {
+  margin: 0 !important;
+}
+html body.page-home .cube-expo .lookbook-card-sold-bar .lookbook-more--collection {
+  margin-top: 0 !important;
+  margin-left: auto !important;
+}
+html body.page-home .cube-craft .craft-head {
+  display: block !important;
   grid-column: 1 / -1 !important;
+  width: 100% !important;
+  text-align: center !important;
+  margin: 0 0 32px !important;
+}
+html body.page-home .cube-craft .craft-epigraph {
+  grid-column: 1 / -1 !important;
+  justify-self: center !important;
+  text-align: center !important;
+  margin: 0 auto !important;
+  max-width: 28em !important;
+}
+html body.page-home .cube-craft .craft-divider {
+  margin: 0 0 32px !important;
+}
+html body.page-home .cube-craft .craft-atelier {
+  display: flex !important;
+  align-items: flex-end !important;
+  justify-content: space-between !important;
+  gap: 16px 32px !important;
+  flex-wrap: wrap !important;
+  margin: 0 0 36px !important;
+}
+html body.page-home .cube-craft .craft-atelier-left {
+  grid-column: auto !important;
+  flex: 1 1 320px !important;
+}
+html body.page-home .cube-craft .craft-atelier-sub {
+  margin-bottom: 0 !important;
+}
+html body.page-home .cube-craft .craft-atelier-actions {
+  flex: 0 0 auto !important;
+  margin-left: auto !important;
+}
+html body.page-home .cube-craft .craft-triptych {
+  margin-bottom: 0 !important;
 }
 html body.page-home .cube-recog .recog-showcase {
   grid-column: 1 / -1 !important;
@@ -1634,7 +1685,24 @@ html body.page-home .cube-recog .recog-awards-grid .recog-item {
 html body.page-home .cube-recog .recog-awards-grid .recog-item-more {
   margin: 10px 0 0 !important;
 }
+html body.page-home .cube-recog .recog-photo-strip {
+  max-width: 1100px !important;
+  width: 100% !important;
+  margin: 40px auto 0 !important;
+  padding: 0 24px !important;
+  box-sizing: border-box !important;
+}
 @media (max-width: 768px) {
+  html body.page-home .cube-craft .craft-head {
+    margin-bottom: 24px !important;
+  }
+  html body.page-home .cube-craft .craft-divider {
+    margin-bottom: 24px !important;
+  }
+  html body.page-home .cube-craft .craft-atelier {
+    align-items: flex-start !important;
+    margin-bottom: 28px !important;
+  }
   html body.page-home .cube-recog .recog-showcase {
     padding: 0 16px !important;
   }
@@ -1642,6 +1710,10 @@ html body.page-home .cube-recog .recog-awards-grid .recog-item-more {
   html body.page-home .cube-recog .recog-awards-grid {
     grid-template-columns: 1fr !important;
     gap: 20px !important;
+  }
+  html body.page-home .cube-recog .recog-photo-strip {
+    margin: 28px auto 0 !important;
+    padding: 0 16px !important;
   }
 }
 </style>
@@ -1757,8 +1829,10 @@ html body.page-home .cube-recog .recog-awards-grid .recog-item-more {
         <a href="/works/" class="lookbook-img">
           <img src="/images/works/work-248.jpg" alt="Светлая скульптура из сувеля берёзы с естественными отверстиями, вид спереди — работа № 248." loading="lazy">
         </a>
-        <p class="lookbook-meta lookbook-meta--sold"><span class="lookbook-status lookbook-status--sold"><span class="lookbook-dot" aria-hidden="true"></span>ПРОДАНА</span></p>
-        <a href="/works/" class="lookbook-more lookbook-more--collection">Смотреть всю коллекцию <span class="lookbook-arrow" aria-hidden="true">→</span></a>
+        <div class="lookbook-card-sold-bar">
+          <p class="lookbook-meta lookbook-meta--sold"><span class="lookbook-status lookbook-status--sold"><span class="lookbook-dot" aria-hidden="true"></span>ПРОДАНА</span></p>
+          <a href="/works/" class="lookbook-more lookbook-more--collection">Смотреть всю коллекцию <span class="lookbook-arrow" aria-hidden="true">→</span></a>
+        </div>
       </article>
     </div>
 </div>
@@ -1766,9 +1840,20 @@ html body.page-home .cube-recog .recog-awards-grid .recog-item-more {
 <section class="cube-craft" id="material">
   <div class="g12">
     <header class="craft-head g12-span-12">
-      <h2 class="craft-kicker"><span class="sec-label">02 · МАТЕРИАЛ И МАСТЕРСКАЯ</span></h2>
-      <p class="craft-epigraph">«Я узнаю в природной форме то, чего буквально в ней нет.»</p>
+      <p class="craft-epigraph">«Я узнаю в природной форме то, чего буквально в ней нет»</p>
     </header>
+
+    <div class="craft-divider g12-span-12" aria-hidden="true"></div>
+
+    <div class="craft-atelier g12-span-12">
+      <div class="craft-atelier-left">
+        <p class="craft-atelier-title">Из нароста — в скульптуру</p>
+        <p class="craft-atelier-sub">до 6 месяцев работы над одной формой</p>
+      </div>
+      <div class="craft-atelier-actions">
+        <a href="/workshop/" class="craft-atelier-link">В мастерскую →</a>
+      </div>
+    </div>
 
     <div class="craft-triptych g12-span-12">
       <article class="craft-step">
@@ -1796,29 +1881,11 @@ html body.page-home .cube-recog .recog-awards-grid .recog-item-more {
         <p class="craft-step-text">От грубой коры до идеально гладкой поверхности: молоток, бензопила, болгарка, 8 этапов шлифовки. Финал, обжиг огнём, проявляет рисунок и глубину дерева.</p>
       </article>
     </div>
-
-    <div class="craft-divider g12-span-12" aria-hidden="true"></div>
-
-    <div class="craft-atelier g12-span-12">
-      <div class="craft-atelier-left">
-        <p class="craft-atelier-title">Из нароста — в скульптуру</p>
-        <p class="craft-atelier-sub">до 6 месяцев работы над одной формой</p>
-        <a href="/workshop/" class="craft-atelier-link">В мастерскую →</a>
-      </div>
-    </div>
   </div>
 </section>
 <section class="cube-recog" id="recognition">
   <div class="g12">
-    <header class="recog-head g12-span-12">
-      <h2 class="recog-kicker"><span class="sec-label">03 · СОБЫТИЯ. АНОНСЫ. ИСТОРИИ</span></h2>
-    </header>
-  <div class="recog-photo-strip g12-span-12" aria-label="Фотографии выставок и событий">
-    <img class="recog-event-photo" src="/images/events/sig-event-02.webp" alt="Диплом конкурса UNITED BY ART, фотография награды BYCRAFT." loading="lazy" decoding="async">
-    <img class="recog-event-photo" src="/images/events/home-events-feature-01.webp" alt="Вручение диплома на выставочном мероприятии BYCRAFT, общий план." loading="lazy" decoding="async">
-  </div>
-
-        <div class="recog-showcase g12-span-12">
+    <div class="recog-showcase g12-span-12">
       <div class="recog-top-bar">
         <p class="recog-section-label">Где увидеть работы</p>
         <a href="/events/" class="recog-all-link">Все события <span class="lookbook-arrow" aria-hidden="true">→</span></a>
@@ -1867,6 +1934,11 @@ html body.page-home .cube-recog .recog-awards-grid .recog-item-more {
         </div>
       </div>
     </div>
+
+    <div class="recog-photo-strip g12-span-12" aria-label="Фотографии выставок и событий">
+    <img class="recog-event-photo" src="/images/events/sig-event-02.webp" alt="Диплом конкурса UNITED BY ART, фотография награды BYCRAFT." loading="lazy" decoding="async">
+    <img class="recog-event-photo" src="/images/events/home-events-feature-01.webp" alt="Вручение диплома на выставочном мероприятии BYCRAFT, общий план." loading="lazy" decoding="async">
+  </div>
   </div>
 </section>
 <footer class="site-footer">
