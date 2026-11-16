@@ -13157,7 +13157,7 @@ html body.page-cube .cube-caption {
   font-size: 12px !important;
   letter-spacing: normal;
   text-transform: uppercase !important;
-  color: #76736F !important;
+  color: #625B55 !important;
   margin: 0 !important;
   max-width: none !important;
   text-align: center !important;
@@ -13206,7 +13206,7 @@ html body.page-cube .recog-kicker {
   font-size: 12px !important;
   letter-spacing: normal;
   text-transform: uppercase !important;
-  color: #76736F !important;
+  color: #625B55 !important;
   margin: 0 0 16px !important;
 }
 html body.page-cube .lookbook-meta {
@@ -13215,14 +13215,14 @@ html body.page-cube .lookbook-meta {
   font-size: 12px !important;
   letter-spacing: normal;
   text-transform: uppercase !important;
-  color: #76736F !important;
+  color: #625B55 !important;
   margin: 0 0 8px !important;
 }
 html body.page-cube .lookbook-no {
   color: #B6452C !important;
 }
 html body.page-cube .lookbook-meta--sold {
-  color: #76736F !important;
+  color: #625B55 !important;
 }
 html body.page-cube .lookbook-price {
   font-family: Manrope, sans-serif !important;
@@ -13264,7 +13264,7 @@ html body.page-cube .lookbook-cta {
 /* === v2120 design system tokens (global) === */
 :root {
   --ink: #1A1918;
-  --muted: #76736F;
+  --muted: #625B55;
   --paper: #F7F6F2;
   --line: #E5E2DC;
   --ember: #B6452C;
@@ -13602,7 +13602,7 @@ html body, html body * {
 .product-detail .pd-back {
   font-family: 'Geist Mono', ui-monospace, monospace !important;
   font-size: 12px !important;
-  color: #76736F !important;
+  color: #625B55 !important;
   letter-spacing: normal !important;
   line-height: normal !important;
   text-decoration: none !important;
@@ -13648,7 +13648,7 @@ html body, html body * {
 .product-detail .pd-price-note {
   font-family: 'Geist Mono', ui-monospace, monospace !important;
   font-size: 12px !important;
-  color: #76736F !important;
+  color: #625B55 !important;
   letter-spacing: normal !important;
 }
 .product-detail .pd-rule {
@@ -13667,7 +13667,7 @@ html body, html body * {
   font-family: 'Geist Mono', ui-monospace, monospace !important;
   font-size: 12px !important;
   text-transform: uppercase !important;
-  color: #76736F !important;
+  color: #625B55 !important;
   letter-spacing: normal !important;
   margin: 0 !important;
 }
@@ -13860,7 +13860,7 @@ h1.works-page-title {
   font-size: 12px !important;
   text-transform: uppercase !important;
   letter-spacing: normal !important;
-  color: #76736F !important;
+  color: #625B55 !important;
   background: none !important;
   border: none !important;
   padding: 0 !important;
@@ -13888,7 +13888,7 @@ h1.works-page-title {
   font-family: 'Geist Mono', ui-monospace, monospace !important;
   font-size: 12px !important;
   text-transform: uppercase !important;
-  color: #76736F !important;
+  color: #625B55 !important;
   margin: 0 0 4px !important;
   letter-spacing: normal !important;
 }
@@ -13936,7 +13936,7 @@ section:has(> .section-title-32) {
   font-family: 'Geist Mono', ui-monospace, monospace !important;
   font-size: 12px !important;
   text-transform: uppercase !important;
-  color: #76736F !important;
+  color: #625B55 !important;
   letter-spacing: normal !important;
 }
 .geo-stats-line {
@@ -13949,7 +13949,7 @@ section:has(> .section-title-32) {
   font-family: Manrope, sans-serif !important;
   font-weight: 400 !important;
   font-size: 16px !important;
-  color: #76736F !important;
+  color: #625B55 !important;
   letter-spacing: normal !important;
 }
 .geo-continent-title,
@@ -13969,7 +13969,7 @@ section:has(> .section-title-32) {
   font-family: Manrope, sans-serif !important;
   font-weight: 400 !important;
   font-size: 12px !important;
-  color: #76736F !important;
+  color: #625B55 !important;
   letter-spacing: normal !important;
 }
 @media (max-width: 900px) {
@@ -13993,14 +13993,14 @@ section:has(> .section-title-32) {
 .geo-before-intro {
   font-family: Manrope, sans-serif !important;
   font-size: 16px !important;
-  color: #76736F !important;
+  color: #625B55 !important;
   margin: 0 0 12px !important;
 }
 .geography-title {
   font-family: 'Geist Mono', ui-monospace, monospace !important;
   font-size: 12px !important;
   text-transform: uppercase !important;
-  color: #76736F !important;
+  color: #625B55 !important;
   margin: 0 0 20px !important;
 }
 @media (max-width: 900px) {
@@ -14069,14 +14069,14 @@ section.container:has(.works-six-grid),
 .geo-before-intro {
   font-family: Manrope, sans-serif !important;
   font-size: 16px !important;
-  color: #76736F !important;
+  color: #625B55 !important;
   margin: 0 0 12px !important;
 }
 .geography-title {
   font-family: 'Geist Mono', ui-monospace, monospace !important;
   font-size: 12px !important;
   text-transform: uppercase !important;
-  color: #76736F !important;
+  color: #625B55 !important;
   margin: 0 0 10px !important;
 }
 .geo-stats-line {
@@ -14109,7 +14109,7 @@ section.container:has(.works-six-grid),
 .continent-countries {
   font-family: Manrope, sans-serif !important;
   font-size: 12px !important;
-  color: #76736F !important;
+  color: #625B55 !important;
   margin: 0 !important;
 }
 .map-svg-wrap {
@@ -14208,7 +14208,7 @@ html body main:has(.contacts-page),
 }
 .contact-role {
   font-weight: 400 !important;
-  color: #76736F !important;
+  color: #625B55 !important;
 }
 .contact-line {
   font-family: Manrope, sans-serif !important;
@@ -14497,7 +14497,7 @@ html body .site-footer .btn-footer-outline {
   font-family: Manrope, sans-serif !important;
   font-weight: 400 !important;
   font-size: 13px !important;
-  color: #76736F !important;
+  color: #625B55 !important;
   margin: 0 0 10px !important;
 }
 .contact-line a[href^="tel:"] {
