@@ -1567,6 +1567,84 @@ html body.page-home .cube-expo a.lookbook-more.lookbook-more--collection:focus-v
   color: #B6452C !important;
 }
 </style>
+<style id="bc-home-recog-grid-style">
+html body.page-home .cube-craft .craft-atelier-left {
+  grid-column: 1 / -1 !important;
+}
+html body.page-home .cube-recog .recog-showcase {
+  grid-column: 1 / -1 !important;
+  max-width: 1100px !important;
+  width: 100% !important;
+  margin: 0 auto !important;
+  padding: 0 24px !important;
+  box-sizing: border-box !important;
+}
+html body.page-home .cube-recog .recog-top-bar {
+  display: flex !important;
+  align-items: baseline !important;
+  justify-content: space-between !important;
+  gap: 16px !important;
+  flex-wrap: wrap !important;
+  margin: 0 0 24px !important;
+}
+html body.page-home .cube-recog .recog-top-bar .recog-section-label {
+  margin: 0 !important;
+}
+html body.page-home .cube-recog .recog-all-link {
+  display: inline-block !important;
+  font-family: Manrope, sans-serif !important;
+  font-size: 15px !important;
+  font-weight: 500 !important;
+  line-height: 1.45 !important;
+  color: #2A211C !important;
+  text-decoration: none !important;
+  border-bottom: 1px solid #2A211C !important;
+  padding: 0 0 2px !important;
+}
+html body.page-home .cube-recog .recog-all-link:hover,
+html body.page-home .cube-recog .recog-all-link:hover .lookbook-arrow {
+  color: #B6452C !important;
+  border-bottom-color: #B6452C !important;
+}
+html body.page-home .cube-recog .recog-events-grid {
+  display: grid !important;
+  grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  gap: 24px 36px !important;
+}
+html body.page-home .cube-recog .recog-event-card {
+  padding-top: 18px !important;
+  border-top: 1px solid #E5E2DC !important;
+}
+html body.page-home .cube-recog .recog-event-card .recog-item-title {
+  margin-bottom: 4px !important;
+}
+html body.page-home .cube-recog .recog-awards-block {
+  margin-top: 40px !important;
+  padding-top: 32px !important;
+  border-top: 1px solid #E5E2DC !important;
+}
+html body.page-home .cube-recog .recog-awards-grid {
+  display: grid !important;
+  grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  gap: 24px 36px !important;
+}
+html body.page-home .cube-recog .recog-awards-grid .recog-item {
+  margin-bottom: 0 !important;
+}
+html body.page-home .cube-recog .recog-awards-grid .recog-item-more {
+  margin: 10px 0 0 !important;
+}
+@media (max-width: 768px) {
+  html body.page-home .cube-recog .recog-showcase {
+    padding: 0 16px !important;
+  }
+  html body.page-home .cube-recog .recog-events-grid,
+  html body.page-home .cube-recog .recog-awards-grid {
+    grid-template-columns: 1fr !important;
+    gap: 20px !important;
+  }
+}
+</style>
 </head>
 <body class="page-home page-cube">
 <!-- BYCRAFT:BODY:START -->
@@ -1698,8 +1776,8 @@ html body.page-home .cube-expo a.lookbook-more.lookbook-more--collection:focus-v
           <img src="/images/workshop/process-01.jpg?v=5" alt="Берёзовый сувель на стволе дерева в лесу, общий план." loading="lazy"
                onerror="this.onerror=null;this.src='/images/home/grid-01.jpg'">
         </div>
-        <p class="craft-step-num">01 · АНОМАЛИЯ ПРИРОДЫ</p>
-        <p class="craft-step-text">Сувель — редкий нарост с мраморным переплетением волокон. Двух одинаковых не бывает. Найти выразительный экземпляр непросто: поиски могут занимать несколько месяцев и сотни километров.</p>
+        <p class="craft-step-num">01 · МАТЕРИАЛ</p>
+        <p class="craft-step-text">Сувель — редкий нарост с мраморным переплетением волокон. Найти выразительный экземпляр непросто: поиски могут занимать несколько месяцев и сотни километров.</p>
       </article>
       <article class="craft-step">
         <div class="craft-photo">
@@ -1707,7 +1785,7 @@ html body.page-home .cube-expo a.lookbook-more.lookbook-more--collection:focus-v
                onerror="this.onerror=null;this.src='/images/home/grid-02.jpg'">
         </div>
         <p class="craft-step-num">02 · 8 ЧАСОВ ВЫВАРИВАНИЯ</p>
-        <p class="craft-step-text">Древесину вываривают в насыщенном солевом растворе от 8 часов и сушат месяцами: так скульптура обретает каменную плотность и сохраняет форму.</p>
+        <p class="craft-step-text">Древесину вываривают в насыщенном солевом не менее 8 часов и сушат месяцами: так скульптура обретает каменную плотность и сохраняет форму.</p>
       </article>
       <article class="craft-step">
         <div class="craft-photo">
@@ -1727,70 +1805,66 @@ html body.page-home .cube-expo a.lookbook-more.lookbook-more--collection:focus-v
         <p class="craft-atelier-sub">до 6 месяцев работы над одной формой</p>
         <a href="/workshop/" class="craft-atelier-link">В мастерскую →</a>
       </div>
-      <div class="craft-atelier-right">
-        <blockquote class="craft-atelier-quote">«Сувель — материал сложный и непредсказуемый: у него нет правильной геометрии, его нельзя просчитать или выстроить по линейке. Моя задача — увидеть в этой бесформенной массе будущую форму.»</blockquote>
-      </div>
     </div>
   </div>
 </section>
 <section class="cube-recog" id="recognition">
   <div class="g12">
     <header class="recog-head g12-span-12">
-      <h2 class="recog-kicker"><span class="sec-label">03 · ВЫСТАВКИ И СОБЫТИЯ</span></h2>
+      <h2 class="recog-kicker"><span class="sec-label">03 · СОБЫТИЯ. АНОНСЫ. ИСТОРИИ</span></h2>
     </header>
   <div class="recog-photo-strip g12-span-12" aria-label="Фотографии выставок и событий">
     <img class="recog-event-photo" src="/images/events/sig-event-02.webp" alt="Диплом конкурса UNITED BY ART, фотография награды BYCRAFT." loading="lazy" decoding="async">
     <img class="recog-event-photo" src="/images/events/home-events-feature-01.webp" alt="Вручение диплома на выставочном мероприятии BYCRAFT, общий план." loading="lazy" decoding="async">
   </div>
 
-        <div class="recog-wings g12-span-12">
-      <div class="recog-left">
-        <p class="recog-section-label">Избранные выставки</p>
-
-        <article class="recog-item">
-          <p class="recog-item-year">2026 · ТРЫН*ТРАВА</p>
-<p class="recog-item-title">9-я выставка «Трын*Трава. Современный русский стиль»</p>
-          <p class="recog-item-text">Москва, Музей-усадьба Муравьёвых-Апостолов. Более 80 авторов — признанные художники, дизайнеры и мастера традиционных производств, начинающие креаторы.</p>
-          <a href="/works/exhibitions/" class="recog-item-more">Подробнее →</a>
-        </article>
-
-        <article class="recog-item">
-          <p class="recog-item-year">2026 · UNITED BY ART</p>
-<p class="recog-item-title">Международная выставка-конкурс современного искусства «UNITED BY ART»</p>
-          <p class="recog-item-text">3-е место в номинации «Человек и его мир», раздел скульптура. Москва / «Гоголь Арт».</p>
-          <a href="/works/exhibitions/" class="recog-item-more">Подробнее →</a>
-        </article>
-
-        <article class="recog-item">
-          <p class="recog-item-year">2026 · ISTANBUL</p>
-          <p class="recog-item-title">XXVII Международный фестиваль культуры и искусств</p>
-          <p class="recog-item-text">Турция, Стамбул</p>
-          <a href="/works/exhibitions/" class="recog-item-more">Подробнее →</a>
-        </article>
-
-        <a href="/works/exhibitions/" class="recog-pdf">Смотреть выставочный архив <span class="lookbook-arrow" aria-hidden="true">→</span></a>
+        <div class="recog-showcase g12-span-12">
+      <div class="recog-top-bar">
+        <p class="recog-section-label">Где увидеть работы</p>
+        <a href="/events/" class="recog-all-link">Все события <span class="lookbook-arrow" aria-hidden="true">→</span></a>
       </div>
-      <div class="recog-right">
-        <p class="recog-section-label">Ближайшие события</p>
 
-        <article class="recog-event">
-          <p class="recog-event-tag">ДЕКАБРЬ · МИНСК</p>
-          <p class="recog-event-date">С 10 по 14 декабря 2026</p>
-          <p class="recog-event-place">Пр. Победителей, 14</p>
-          <a href="/events/" class="recog-event-link" aria-label="Подробнее о событии: выставка «Чароўны Млын», Минск">Детали →</a>
+      <div class="recog-events-grid">
+        <article class="recog-event-card">
+          <p class="recog-item-year">26-27 декабря, 2026</p>
+          <p class="recog-item-title">ArtFlection · Москва, Amber Plaza</p>
         </article>
 
-        <article class="recog-event">
-          <p class="recog-event-tag">ДЕКАБРЬ · МОСКВА</p>
-          <p class="recog-event-date">С 26 по 27 декабря 2026</p>
-          <p class="recog-event-place">AMBER PLAZA</p>
-          <a href="/events/" class="recog-event-link" aria-label="Подробнее о событии: ArtFlection, Москва">Детали →</a>
+        <article class="recog-event-card">
+          <p class="recog-item-year">10-13 декабря, 2026</p>
+          <p class="recog-item-title">Чароуны Млын · Минск, пр. Победителей, 14</p>
         </article>
 
-        <div class="recog-right-rule" aria-hidden="true"></div>
+        <article class="recog-event-card">
+          <p class="recog-item-year">21-22 ноября, 2026</p>
+          <p class="recog-item-title">Ceramania, Москва, ЦСИ Винзавод</p>
+        </article>
 
-        <p class="recog-visit-text">Вы можете согласовать индивидуальный визит в мастерскую для знакомства с объектами и автором вживую</p>
-        <a href="/workshop/" class="recog-designers">Согласовать визит →</a>
+        <article class="recog-event-card">
+          <p class="recog-item-year">8-25 октября, 2026 · АРХИВ</p>
+          <p class="recog-item-title">9-я выставка «Трын*Трава. Современный русский стиль»</p>
+          <p class="recog-item-text">Москва, Музей-усадьба Муравьёвых-Апостолов</p>
+        </article>
+      </div>
+
+      <div class="recog-awards-block">
+        <p class="recog-section-label">Награды и конкурсы</p>
+
+        <div class="recog-awards-grid">
+          <article class="recog-item">
+            <p class="recog-item-year">2026 · UNITED BY ART</p>
+            <p class="recog-item-title">Международная выставка-конкурс современного искусства «UNITED BY ART»</p>
+            <p class="recog-item-text">3-е место в номинации «Человек и его мир», раздел скульптура. Москва / «Гоголь Арт».</p>
+            <a href="/events/united-by-art/" class="recog-item-more">Подробнее →</a>
+          </article>
+
+          <article class="recog-item">
+            <p class="recog-item-year">2026 · ISTANBUL</p>
+            <p class="recog-item-title">XXVII Международный фестиваль культуры и искусств</p>
+            <p class="recog-item-text">Турция, Стамбул</p>
+            <a href="/events/istanbul-festival/" class="recog-item-more">Подробнее →</a>
+          </article>
+        </div>
       </div>
     </div>
   </div>
