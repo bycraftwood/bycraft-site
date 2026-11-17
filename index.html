@@ -233,7 +233,7 @@
 }
   </script>
   <link rel="icon" href="/images/favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="./css/style.css?v=2144">
+  <link rel="stylesheet" href="./css/style.css?v=2153">
 
 <!-- BYCRAFT 4:3 Photos & Modal Styles -->
 <style id="bc-unified-styles">
@@ -2001,6 +2001,76 @@ html body.page-home .bc-hero .bc-hero__title .bc-line {
   }
 }
 /* /HERO_TITLE_AND_MOBILE_LANG */
+/* === HOME UNIFIED 80PX / 22PX GRID === */
+html body.page-home main {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+html body.page-home .bc-nav {
+  padding-left: 80px !important;
+  padding-right: 80px !important;
+}
+html body.page-home .cube-expo .g12,
+html body.page-home .cube-craft .g12,
+html body.page-home .cube-recog .g12 {
+  padding-left: 80px !important;
+  padding-right: 80px !important;
+  box-sizing: border-box !important;
+}
+html body.page-home .cube-recog .recog-showcase {
+  max-width: 100% !important;
+  width: 100% !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+html body.page-home .cube-recog .recog-photo-strip {
+  max-width: 100% !important;
+  width: 100% !important;
+  margin: 40px 0 0 !important;
+  padding: 0 !important;
+}
+@media (min-width: 900px) {
+  html body.page-home .bc-hero .bc-hero__copy {
+    padding-left: 80px !important;
+    padding-right: clamp(24px, 3vw, 48px) !important;
+  }
+  html body.page-home .bc-hero .bc-hero__media {
+    margin-left: 0 !important;
+    margin-right: 80px !important;
+  }
+}
+@media (max-width: 899px) {
+  html body.page-home .bc-nav {
+    padding-left: 22px !important;
+    padding-right: 22px !important;
+  }
+  html body.page-home .bc-nav .bc-nav__menu {
+    padding-left: 22px !important;
+    padding-right: 22px !important;
+  }
+  html body.page-home .bc-hero .bc-hero__copy {
+    padding-left: 22px !important;
+    padding-right: 22px !important;
+  }
+  html body.page-home .bc-hero .bc-hero__media {
+    margin-left: 22px !important;
+    margin-right: 22px !important;
+  }
+  html body.page-home .cube-expo .g12,
+  html body.page-home .cube-craft .g12,
+  html body.page-home .cube-recog .g12 {
+    padding-left: 22px !important;
+    padding-right: 22px !important;
+  }
+  html body.page-home .cube-recog .recog-showcase {
+    padding: 0 !important;
+  }
+  html body.page-home .cube-recog .recog-photo-strip {
+    margin: 28px 0 0 !important;
+    padding: 0 !important;
+  }
+}
+/* === /HOME UNIFIED 80PX / 22PX GRID === */
 </style>
 </head>
 <body class="page-home page-cube">
@@ -2518,7 +2588,7 @@ html body.page-home .bc-hero .bc-hero__title .bc-line {
       "</div></div>";
 
     modal.classList.add("is-active");
-    modal.style.css?v=1794383665Text =
+    modal.style.css?v=2153Text =
       "display:flex!important;position:fixed!important;inset:0!important;z-index:2147483647!important;align-items:center!important;justify-content:center!important;";
     document.body.style.overflow = "hidden";
 
@@ -2550,7 +2620,7 @@ html body.page-home .bc-hero .bc-hero__title .bc-line {
     var modal = document.getElementById("bycraft-modal");
     if (!modal) return;
     modal.classList.remove("is-active");
-    modal.style.css?v=1794383665Text = "display:none!important;";
+    modal.style.css?v=2153Text = "display:none!important;";
     document.body.style.overflow = "";
   };
 

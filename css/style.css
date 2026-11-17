@@ -15527,3 +15527,32 @@ html body.page-home .cube-recog .recog-pdf {
     font-size: 15px !important;
   }
 }
+
+/* === UNIFIED FOOTER GRID === */
+html body footer.site-footer {
+  width: 100% !important;
+  max-width: 100% !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  box-sizing: border-box !important;
+}
+html body footer.site-footer .container {
+  width: 100% !important;
+  max-width: 100% !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  padding-left: 80px !important;
+  padding-right: 80px !important;
+  box-sizing: border-box !important;
+}
+@media (max-width: 899px) {
+  html body footer.site-footer {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+  html body footer.site-footer .container {
+    padding-left: 22px !important;
+    padding-right: 22px !important;
+  }
+}
+/* === /UNIFIED FOOTER GRID === */
