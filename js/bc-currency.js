@@ -99,24 +99,35 @@
     var bars = document.querySelectorAll('.bc-curr-bar:not(.bc-curr-bar--detail)');
     if (!bars.length) return;
     if (window.innerWidth < 900) {
-      for (var i = 0; i < bars.length; i++) bars[i].style.paddingRight = '';
+      for (var i = 0; i < bars.length; i++) {
+        bars[i].style.removeProperty('padding-right');
+      }
       return;
     }
     var langEnd = document.querySelector('.bc-nav .bc-lang > :last-child');
     if (!langEnd) return;
     var ruRight = textRight(langEnd);
+    if (!ruRight) return;
+
     for (var j = 0; j < bars.length; j++) {
       var bar = bars[j];
-      bar.style.paddingRight = '';
+      bar.style.removeProperty('padding-right');
       var rubBtn = bar.querySelector('[data-bc-curr="RUB"]');
       if (!rubBtn) continue;
       var rubRight = textRight(rubBtn);
       var diff = rubRight - ruRight;
-      if (Math.abs(diff) > 0.4 && diff > -30 && diff < 120) {
+      if (Math.abs(diff) > 0.3 && diff > -50 && diff < 250) {
         var curPad = parseFloat(window.getComputedStyle(bar).paddingRight) || 0;
         var nextPad = Math.max(0, curPad + diff);
-        bar.style.paddingRight = nextPad.toFixed(1) + 'px';
+        bar.style.setProperty('padding-right', nextPad.toFixed(1) + 'px', 'important');
       }
+    }
+  }
+
+  function scheduleAlign() {
+    alignCurrencyToLang();
+    if (typeof requestAnimationFrame === 'function') {
+      requestAnimationFrame(alignCurrencyToLang);
     }
   }
 
@@ -140,7 +151,7 @@
       notes[k].hidden = (curr !== 'RUB');
     }
 
-    alignCurrencyToLang();
+    scheduleAlign();
   }
 
   function readCachedRate() {
@@ -253,10 +264,10 @@
       fetchLiveRate();
     }
     if (document.fonts && document.fonts.ready) {
-      document.fonts.ready.then(alignCurrencyToLang);
+      document.fonts.ready.then(scheduleAlign);
     }
-    window.addEventListener('load', alignCurrencyToLang);
-    window.addEventListener('resize', alignCurrencyToLang);
+    window.addEventListener('load', scheduleAlign);
+    window.addEventListener('resize', scheduleAlign);
   }
 
   document.addEventListener('click', function (e) {
