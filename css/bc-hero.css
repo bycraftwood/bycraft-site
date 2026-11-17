@@ -201,8 +201,8 @@ html body .bc-nav {
   box-sizing: border-box !important;
 }
 html body .bc-nav.is-scrolled {
-  background: rgba(244, 241, 236, 0.9) !important;
-  background-color: rgba(244, 241, 236, 0.9) !important;
+  background: rgba(247, 246, 242, 0.9) !important;
+  background-color: rgba(247, 246, 242, 0.9) !important;
   -webkit-backdrop-filter: blur(12px) !important;
   backdrop-filter: blur(12px) !important;
   box-shadow: 0 1px 0 rgba(26, 25, 24, 0.08) !important;
@@ -246,7 +246,7 @@ html body.bc-inner-nav {
     padding-right: 22px !important;
   }
   html body .bc-nav.is-open {
-    background: rgba(244, 241, 236, 0.96) !important;
+    background: rgba(247, 246, 242, 0.96) !important;
     -webkit-backdrop-filter: blur(12px) !important;
     backdrop-filter: blur(12px) !important;
   }
@@ -256,7 +256,7 @@ html body.bc-inner-nav {
   html body .bc-nav .bc-nav__menu {
     padding-left: 22px !important;
     padding-right: 22px !important;
-    background: rgba(244, 241, 236, 0.96) !important;
+    background: rgba(247, 246, 242, 0.96) !important;
     -webkit-backdrop-filter: blur(12px) !important;
     backdrop-filter: blur(12px) !important;
   }

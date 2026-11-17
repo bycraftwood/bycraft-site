@@ -85,6 +85,41 @@
     }
   }
 
+  function textRight(el) {
+    if (!el) return null;
+    if (el.firstChild && el.firstChild.nodeType === 3 && document.createRange) {
+      var r = document.createRange();
+      r.selectNodeContents(el.firstChild);
+      return r.getBoundingClientRect().right;
+    }
+    return el.getBoundingClientRect().right;
+  }
+
+  function alignCurrencyToLang() {
+    var bars = document.querySelectorAll('.bc-curr-bar:not(.bc-curr-bar--detail)');
+    if (!bars.length) return;
+    if (window.innerWidth < 900) {
+      for (var i = 0; i < bars.length; i++) bars[i].style.paddingRight = '';
+      return;
+    }
+    var langEnd = document.querySelector('.bc-nav .bc-lang > :last-child');
+    if (!langEnd) return;
+    var ruRight = textRight(langEnd);
+    for (var j = 0; j < bars.length; j++) {
+      var bar = bars[j];
+      bar.style.paddingRight = '';
+      var rubBtn = bar.querySelector('[data-bc-curr="RUB"]');
+      if (!rubBtn) continue;
+      var rubRight = textRight(rubBtn);
+      var diff = rubRight - ruRight;
+      if (Math.abs(diff) > 0.4 && diff > -30 && diff < 120) {
+        var curPad = parseFloat(window.getComputedStyle(bar).paddingRight) || 0;
+        var nextPad = Math.max(0, curPad + diff);
+        bar.style.paddingRight = nextPad.toFixed(1) + 'px';
+      }
+    }
+  }
+
   function applyCurrency(curr) {
     var attr = (curr === 'RUB') ? 'data-rub' : 'data-byn';
     var prices = document.querySelectorAll('.bc-price[data-byn][data-rub]');
@@ -104,6 +139,8 @@
     for (var k = 0; k < notes.length; k++) {
       notes[k].hidden = (curr !== 'RUB');
     }
+
+    alignCurrencyToLang();
   }
 
   function readCachedRate() {
@@ -215,6 +252,11 @@
     if (!cached) {
       fetchLiveRate();
     }
+    if (document.fonts && document.fonts.ready) {
+      document.fonts.ready.then(alignCurrencyToLang);
+    }
+    window.addEventListener('load', alignCurrencyToLang);
+    window.addEventListener('resize', alignCurrencyToLang);
   }
 
   document.addEventListener('click', function (e) {
