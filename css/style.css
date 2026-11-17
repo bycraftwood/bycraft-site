@@ -15742,3 +15742,54 @@ html body footer.site-footer .footer-legal a:focus-visible {
   }
 }
 /* === /SITE-WIDE 80PX / 22PX WIDTH & 4-COL FOOTER === */
+
+/* === CONTACTS FOOTER & 80PX/22PX RESET === */
+html body.page-contacts main {
+  max-width: 100% !important;
+  width: 100% !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+html body.page-contacts footer.site-footer .footer-brand,
+html body footer.site-footer .footer-brand {
+  font-size: 22px !important;
+  font-weight: 600 !important;
+  letter-spacing: 0.02em !important;
+  color: #1A1918 !important;
+  -webkit-text-fill-color: #1A1918 !important;
+}
+html body.page-contacts footer.site-footer .footer-col-title,
+html body footer.site-footer .footer-col-title {
+  font-size: 14px !important;
+  font-weight: 600 !important;
+  color: #1A1918 !important;
+  -webkit-text-fill-color: #1A1918 !important;
+}
+html body.page-contacts footer.site-footer .footer-socials a.btn-footer-outline,
+html body footer.site-footer .footer-socials a.btn-footer-outline {
+  border: 1px solid #1A1918 !important;
+  color: #1A1918 !important;
+  -webkit-text-fill-color: #1A1918 !important;
+}
+html body.page-contacts footer.site-footer .footer-socials a.btn-footer-outline:hover,
+html body footer.site-footer .footer-socials a.btn-footer-outline:hover {
+  background: #1A1918 !important;
+  color: #F8F7F4 !important;
+  -webkit-text-fill-color: #F8F7F4 !important;
+}
+html body.page-contacts footer.site-footer .footer-links a:hover,
+html body.page-contacts footer.site-footer .footer-contacts a:hover,
+html body.page-contacts footer.site-footer .footer-legal a:hover,
+html body footer.site-footer .footer-links a:hover,
+html body footer.site-footer .footer-contacts a:hover,
+html body footer.site-footer .footer-legal a:hover {
+  color: #B6452C !important;
+  -webkit-text-fill-color: #B6452C !important;
+}
+@media (max-width: 899px) {
+  html body.page-contacts footer.site-footer .footer-brand,
+  html body footer.site-footer .footer-brand {
+    font-size: 18px !important;
+  }
+}
+/* === /CONTACTS FOOTER & 80PX/22PX RESET === */
