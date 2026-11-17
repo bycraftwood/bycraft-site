@@ -4705,7 +4705,7 @@ h1.section-title.work-page-title {
   color: #F5F2EC !important;
   font-family: var(--font-mono, 'Geist Mono', ui-monospace, monospace) !important;
   font-size: clamp(9px, 1.05vw, 13px) !important;
-  letter-spacing: normal;
+  letter-spacing: 0.04em;
   line-height: 1.45 !important;
   text-transform: uppercase !important;
   box-sizing: border-box !important;
@@ -4759,7 +4759,7 @@ h1.section-title.work-page-title {
   color: #F5F2EC !important;
   font-family: var(--font-mono, 'Geist Mono', ui-monospace, monospace) !important;
   font-size: 12px !important;
-  letter-spacing: normal;
+  letter-spacing: 0.04em;
   text-transform: uppercase !important;
   line-height: 1.4 !important;
 }
@@ -5018,7 +5018,7 @@ i .work-subtitle-muted,
   color: #F5F2EC !important;
   font-family: var(--font-mono, 'Geist Mono', monospace) !important;
   font-size: 12px !important;
-  letter-spacing: normal;
+  letter-spacing: 0.04em;
   text-transform: uppercase !important;
 }
 @media (max-width: 767px) {
@@ -6974,7 +6974,7 @@ select.works-filter {
   font-size: 12px !important;
   color: #6B5D52 !important;
   margin-top: 6px !important;
-  letter-spacing: normal;
+  letter-spacing: 0.04em;
 }
 
 .map-svg-wrap {
@@ -7020,7 +7020,7 @@ select.works-filter {
   font-size: 12px !important;
   font-weight: 400 !important;
   text-transform: uppercase !important;
-  letter-spacing: normal;
+  letter-spacing: 0.04em;
   color: #6B5D52 !important;
   margin: 0 0 16px !important;
   padding-bottom: 8px !important;
@@ -7458,7 +7458,7 @@ a.order-similar:hover,
   font-size: 12px !important;
   font-weight: 400 !important;
   text-transform: uppercase !important;
-  letter-spacing: normal;
+  letter-spacing: 0.04em;
   color: #6B5D52 !important;
   border-bottom: 1px solid rgba(42,33,28,0.18) !important;
   padding-bottom: 8px !important;
@@ -8983,7 +8983,7 @@ h3.event-name {
   font-family: 'Geist Mono', ui-monospace, monospace !important;
   font-size: 12px !important;
   font-weight: 400 !important;
-  letter-spacing: normal;
+  letter-spacing: 0.04em;
   text-transform: uppercase !important;
 }
 
@@ -9808,7 +9808,7 @@ section.home-hero-split {
 .home-hero-copy { max-width: 520px !important; width: 100% !important; }
 p.home-hero-eyebrow {
   font-family: 'Geist Mono', ui-monospace, monospace !important;
-  font-size: 12px !important; letter-spacing: normal;
+  font-size: 12px !important; letter-spacing: 0.04em;
   text-transform: uppercase !important; color: #6B5D52 !important;
   margin: 0 0 20px !important;
 }
@@ -9852,7 +9852,7 @@ a.home-hero-link:hover { border-bottom-color: #241C18 !important; }
 p.home-hero-photo-caption {
   position: absolute !important; left: 16px !important; bottom: 14px !important;
   font-family: 'Geist Mono', ui-monospace, monospace !important;
-  font-size: 12px !important; letter-spacing: normal;
+  font-size: 12px !important; letter-spacing: 0.04em;
   text-transform: uppercase !important; color: #F7F3EC !important; margin: 0 !important;
   text-shadow: 0 1px 3px rgba(0,0,0,0.35) !important;
 }
@@ -9866,7 +9866,7 @@ p.home-hero-photo-caption {
 .home-h32{font-family:'Cormorant Garamond',Georgia,serif!important;font-weight:500!important;font-size:32px!important;color:#2A211C!important;margin:0!important;text-transform:none!important;}
 .home-h22{font-family:'Cormorant Garamond',Georgia,serif!important;font-weight:500!important;font-size:22px!important;color:#2A211C!important;margin:0 0 12px!important;}
 .home-body{font-family:Manrope,sans-serif!important;font-size:17px!important;font-weight:400!important;line-height:1.6!important;color:#2A211C!important;margin:0!important;}
-.home-eyebrow{font-family:'Geist Mono',ui-monospace,monospace!important;font-size:12px!important;letter-spacing: normal;text-transform:uppercase!important;color:#6B5D52!important;margin:0 0 12px!important;}
+.home-eyebrow{font-family:'Geist Mono',ui-monospace,monospace!important;font-size:12px!important;letter-spacing: 0.04em;text-transform:uppercase!important;color:#6B5D52!important;margin:0 0 12px!important;}
 .home-text-link{font-family:Manrope,sans-serif!important;font-size:15px!important;font-weight:600!important;color:#2A211C!important;text-decoration:none!important;}
 .home-text-link:hover{color:#B6452C!important;}
 .home-row-head{display:flex!important;justify-content:space-between!important;align-items:baseline!important;gap:16px!important;margin-bottom:28px!important;flex-wrap:wrap!important;}
@@ -9883,9 +9883,9 @@ p.home-hero-photo-caption {
 .home-stock-grid{display:grid!important;grid-template-columns:repeat(4,1fr)!important;gap:24px!important;}
 .home-stock-img{display:block!important;aspect-ratio:4/5!important;overflow:hidden!important;background:#EDE3D3!important;}
 .home-stock-img img{width:100%!important;height:100%!important;object-fit:cover!important;}
-.home-stock-meta{font-family:'Geist Mono',ui-monospace,monospace!important;font-size:12px!important;letter-spacing: normal;text-transform:uppercase!important;color:#B6452C!important;margin:12px 0 6px!important;}
+.home-stock-meta{font-family:'Geist Mono',ui-monospace,monospace!important;font-size:12px!important;letter-spacing: 0.04em;text-transform:uppercase!important;color:#B6452C!important;margin:12px 0 6px!important;}
 .home-stock-price{font-family:Manrope,sans-serif!important;font-size:17px!important;font-weight:400!important;line-height:1.6!important;color:#2A211C!important;margin:0 0 4px!important;}
-.home-stock-mat{font-family:'Geist Mono',ui-monospace,monospace!important;font-size:12px!important;letter-spacing: normal;text-transform:uppercase!important;color:#6B5D52!important;margin:0 0 14px!important;}
+.home-stock-mat{font-family:'Geist Mono',ui-monospace,monospace!important;font-size:12px!important;letter-spacing: 0.04em;text-transform:uppercase!important;color:#6B5D52!important;margin:0 0 14px!important;}
 .home-stock-card .home-btn-outline{width:100%!important;}
 @media(max-width:900px){.home-stock-grid{grid-template-columns:1fr!important;}}
 
@@ -9927,7 +9927,7 @@ p.home-hero-photo-caption {
 .home-events-new{margin-bottom:72px!important;}
 .home-events-list{display:grid!important;gap:18px!important;margin-bottom:12px!important;}
 .home-event-row{display:block!important;text-decoration:none!important;padding:14px 0!important;border-bottom:1px solid #E5DFD4!important;}
-.home-event-date{font-family:'Geist Mono',ui-monospace,monospace!important;font-size:12px!important;letter-spacing: normal;text-transform:uppercase!important;color:#6B5D52!important;margin:0 0 6px!important;}
+.home-event-date{font-family:'Geist Mono',ui-monospace,monospace!important;font-size:12px!important;letter-spacing: 0.04em;text-transform:uppercase!important;color:#6B5D52!important;margin:0 0 6px!important;}
 .home-event-name{font-family:Manrope,sans-serif!important;font-size:22px!important;font-weight:400!important;line-height:1.6!important;color:#2A211C!important;margin:0 0 4px!important;}
 .home-event-desc{font-family:Manrope,sans-serif!important;font-size:17px!important;line-height:1.6!important;color:#2A211C!important;margin:0!important;}
 .home-awards-grid{display:grid!important;grid-template-columns:repeat(3,1fr)!important;gap:20px!important;margin-top:24px!important;}
@@ -9939,7 +9939,7 @@ p.home-hero-eyebrow {
   font-family: 'Geist Mono', ui-monospace, monospace !important;
   font-size: 12px !important;
   font-weight: 600 !important;
-  letter-spacing: normal;
+  letter-spacing: 0.04em;
   text-transform: uppercase !important;
   color: #6B5D52 !important;
 }
@@ -10226,7 +10226,7 @@ a.nav-link-btn.nav-how-to-buy {
 .home-pick-status {
   font-family: 'Geist Mono', ui-monospace, monospace !important;
   font-size: 12px !important;
-  letter-spacing: normal;
+  letter-spacing: 0.04em;
   text-transform: uppercase !important;
   color: #B6452C !important;
   margin: 12px 0 4px !important;
@@ -10300,7 +10300,7 @@ a.nav-link-btn.nav-how-to-buy {
 .home-quote-author {
   font-family: 'Geist Mono', ui-monospace, monospace !important;
   font-size: 12px !important;
-  letter-spacing: normal;
+  letter-spacing: 0.04em;
   text-transform: uppercase !important;
   color: #6B5D52 !important;
   margin: 0 !important;
@@ -10507,7 +10507,7 @@ a.works-tab { display: inline-block !important; }
   gap: 8px !important;
   font-family: 'Geist Mono', ui-monospace, monospace !important;
   font-size: 12px !important;
-  letter-spacing: normal;
+  letter-spacing: 0.04em;
   text-transform: uppercase !important;
   color: #2A211C !important;
   margin: 0 0 12px !important;
@@ -10595,7 +10595,7 @@ a.works-tab { display: inline-block !important; }
 .pd-specs dt {
   font-family: 'Geist Mono', ui-monospace, monospace !important;
   font-size: 11px !important;
-  letter-spacing: normal;
+  letter-spacing: 0.04em;
   text-transform: uppercase !important;
   color: #6B5D52 !important;
   margin: 0 !important;
@@ -10908,7 +10908,7 @@ html body .product-detail .pd-specs > div {
 html body .product-detail .pd-specs dt {
   font-family: 'Geist Mono', ui-monospace, monospace !important;
   font-size: 11px !important;
-  letter-spacing: normal;
+  letter-spacing: 0.04em;
   text-transform: uppercase !important;
   color: #6B5D52 !important;
 }
@@ -11110,7 +11110,7 @@ html body .product-detail .pd-other-grid {
 .ex-kicker {
   font-family: 'Geist Mono', ui-monospace, monospace !important;
   font-size: 11px !important;
-  letter-spacing: normal;
+  letter-spacing: 0.04em;
   text-transform: uppercase !important;
   color: #B6452C !important;
   margin: 0 0 10px !important;
@@ -11192,7 +11192,7 @@ html body .product-detail .pd-other-grid {
 .ex-specs dt {
   font-family: 'Geist Mono', ui-monospace, monospace !important;
   font-size: 11px !important;
-  letter-spacing: normal;
+  letter-spacing: 0.04em;
   text-transform: uppercase !important;
   color: #6B5D52 !important;
   margin: 0 !important;
@@ -11284,7 +11284,7 @@ html body .product-detail .pd-other-grid {
   display: inline-block !important;
   font-family: 'Geist Mono', ui-monospace, monospace !important;
   font-size: 11px !important;
-  letter-spacing: normal;
+  letter-spacing: 0.04em;
   text-transform: uppercase !important;
   color: #B6452C !important;
   border: 1px solid #B6452C !important;
@@ -11536,7 +11536,7 @@ body.page-cube .home-hero-split {
 .cube-lang {
   font-family: 'Geist Mono', ui-monospace, monospace !important;
   font-size: 11px !important;
-  letter-spacing: normal;
+  letter-spacing: 0.04em;
   color: #6B5D52 !important;
 }
 .cube-lang a { color: #6B5D52 !important; text-decoration: none !important; }
@@ -11622,7 +11622,7 @@ body.page-cube .home-hero-split {
   margin: 0 !important;
   font-family: 'Geist Mono', ui-monospace, monospace !important;
   font-size: 11px !important;
-  letter-spacing: normal;
+  letter-spacing: 0.04em;
   text-transform: uppercase !important;
   color: #6B5D52 !important;
   max-width: 55% !important;
@@ -11630,7 +11630,7 @@ body.page-cube .home-hero-split {
 .cube-scroll {
   font-family: 'Geist Mono', ui-monospace, monospace !important;
   font-size: 11px !important;
-  letter-spacing: normal;
+  letter-spacing: 0.04em;
   text-transform: uppercase !important;
   color: #6B5D52 !important;
   text-decoration: none !important;
@@ -11766,7 +11766,7 @@ html body.page-cube main {
 .expo-kicker {
   font-family: 'Geist Mono', ui-monospace, monospace !important;
   font-size: 11px !important;
-  letter-spacing: normal;
+  letter-spacing: 0.04em;
   text-transform: uppercase !important;
   color: #6B5D52 !important;
   margin: 0 0 10px !important;
@@ -11850,7 +11850,7 @@ html body.page-cube main {
 .expo-num {
   font-family: 'Geist Mono', ui-monospace, monospace !important;
   font-size: 11px !important;
-  letter-spacing: normal;
+  letter-spacing: 0.04em;
   text-transform: uppercase !important;
   color: #2A211C !important;
   margin: 0 0 8px !important;
@@ -11873,7 +11873,7 @@ html body.page-cube main {
   display: inline-block !important;
   font-family: 'Geist Mono', ui-monospace, monospace !important;
   font-size: 10px !important;
-  letter-spacing: normal;
+  letter-spacing: 0.04em;
   text-transform: uppercase !important;
   color: #6B5D52 !important;
   border: 1px solid #DCCFBD !important;
@@ -12027,7 +12027,7 @@ html body .cube-expo .expo-head {
 html body .cube-expo .expo-kicker {
   font-family: 'Geist Mono', ui-monospace, monospace !important;
   font-size: 11px !important;
-  letter-spacing: normal;
+  letter-spacing: 0.04em;
   text-transform: uppercase !important;
   color: #6B5D52 !important;
   margin: 0 0 8px !important;
@@ -12070,7 +12070,7 @@ html body .cube-expo .lookbook-img img {
 html body .cube-expo .lookbook-num {
   font-family: 'Geist Mono', ui-monospace, monospace !important;
   font-size: 11px !important;
-  letter-spacing: normal;
+  letter-spacing: 0.04em;
   text-transform: uppercase !important;
   color: #2A211C !important;
   margin: 0 0 6px !important;
@@ -12151,7 +12151,7 @@ html body .cube-craft .craft-atelier {
 html body .cube-craft .craft-kicker {
   font-family: 'Geist Mono', ui-monospace, monospace !important;
   font-size: 11px !important;
-  letter-spacing: normal;
+  letter-spacing: 0.04em;
   text-transform: uppercase !important;
   color: #6B5D52 !important;
   margin: 0 0 20px !important;
@@ -12190,7 +12190,7 @@ html body .cube-craft .craft-photo img {
 html body .cube-craft .craft-step-num {
   font-family: 'Geist Mono', ui-monospace, monospace !important;
   font-size: 11px !important;
-  letter-spacing: normal;
+  letter-spacing: 0.04em;
   text-transform: uppercase !important;
   color: #2A211C !important;
   margin: 0 0 10px !important;
@@ -12308,7 +12308,7 @@ html body .cube-recog .recog-wings {
 html body .cube-recog .recog-kicker {
   font-family: 'Geist Mono', ui-monospace, monospace !important;
   font-size: 11px !important;
-  letter-spacing: normal;
+  letter-spacing: 0.04em;
   text-transform: uppercase !important;
   color: #6B5D52 !important;
   margin: 0 0 48px !important;
@@ -12322,7 +12322,7 @@ html body .cube-recog .recog-wings {
 html body .cube-recog .recog-section-label {
   font-family: 'Geist Mono', ui-monospace, monospace !important;
   font-size: 11px !important;
-  letter-spacing: normal;
+  letter-spacing: 0.04em;
   text-transform: uppercase !important;
   color: #6B5D52 !important;
   margin: 0 0 20px !important;
@@ -12333,7 +12333,7 @@ html body .cube-recog .recog-item {
 html body .cube-recog .recog-item-year {
   font-family: 'Geist Mono', ui-monospace, monospace !important;
   font-size: 11px !important;
-  letter-spacing: normal;
+  letter-spacing: 0.04em;
   text-transform: uppercase !important;
   color: #2A211C !important;
   margin: 0 0 6px !important;
@@ -12440,7 +12440,7 @@ html body .cube-recog .recog-event {
 html body .cube-recog .recog-event-tag {
   font-family: 'Geist Mono', ui-monospace, monospace !important;
   font-size: 11px !important;
-  letter-spacing: normal;
+  letter-spacing: 0.04em;
   text-transform: uppercase !important;
   color: #2A211C !important;
   margin: 0 0 8px !important;
@@ -12567,7 +12567,7 @@ html body .cube-cta .cta-phone {
   display: inline-block !important;
   font-family: 'Geist Mono', ui-monospace, monospace !important;
   font-size: 14px !important;
-  letter-spacing: normal;
+  letter-spacing: 0.04em;
   color: #2A211C !important;
   text-decoration: none !important;
   margin-bottom: 36px !important;
@@ -12576,7 +12576,7 @@ html body .cube-cta .cta-phone:hover { color: #B6452C !important; }
 html body .cube-cta .cta-foot {
   font-family: 'Geist Mono', ui-monospace, monospace !important;
   font-size: 11px !important;
-  letter-spacing: normal;
+  letter-spacing: 0.04em;
   text-transform: uppercase !important;
   color: #6B5D52 !important;
   margin: 0 0 56px !important;
@@ -13155,7 +13155,7 @@ html body.page-cube .cube-caption {
   font-family: 'Geist Mono', ui-monospace, monospace !important;
   font-weight: 400 !important;
   font-size: 12px !important;
-  letter-spacing: normal;
+  letter-spacing: 0.04em;
   text-transform: uppercase !important;
   color: #625B55 !important;
   margin: 0 !important;
@@ -13204,7 +13204,7 @@ html body.page-cube .recog-kicker {
   font-family: 'Geist Mono', ui-monospace, monospace !important;
   font-weight: 400 !important;
   font-size: 12px !important;
-  letter-spacing: normal;
+  letter-spacing: 0.04em;
   text-transform: uppercase !important;
   color: #625B55 !important;
   margin: 0 0 16px !important;
@@ -13213,7 +13213,7 @@ html body.page-cube .lookbook-meta {
   font-family: 'Geist Mono', ui-monospace, monospace !important;
   font-weight: 400 !important;
   font-size: 12px !important;
-  letter-spacing: normal;
+  letter-spacing: 0.04em;
   text-transform: uppercase !important;
   color: #625B55 !important;
   margin: 0 0 8px !important;
@@ -13391,7 +13391,7 @@ button[type="submit"],
   font-family: var(--font-mono) !important;
   font-weight: 400 !important;
   font-size: 12px !important;
-  letter-spacing: normal;
+  letter-spacing: 0.04em;
   text-transform: uppercase !important;
   color: var(--muted) !important;
 }
@@ -13603,7 +13603,7 @@ html body, html body * {
   font-family: 'Geist Mono', ui-monospace, monospace !important;
   font-size: 12px !important;
   color: #625B55 !important;
-  letter-spacing: normal !important;
+  letter-spacing: 0.04em !important;
   line-height: normal !important;
   text-decoration: none !important;
 }
@@ -13614,7 +13614,7 @@ html body, html body * {
   font-family: 'Geist Mono', ui-monospace, monospace !important;
   font-size: 12px !important;
   text-transform: uppercase !important;
-  letter-spacing: normal !important;
+  letter-spacing: 0.04em !important;
   margin: 0 0 12px !important;
 }
 .product-detail .pd-dot {
@@ -13649,7 +13649,7 @@ html body, html body * {
   font-family: 'Geist Mono', ui-monospace, monospace !important;
   font-size: 12px !important;
   color: #625B55 !important;
-  letter-spacing: normal !important;
+  letter-spacing: 0.04em !important;
 }
 .product-detail .pd-rule {
   height: 1px !important;
@@ -13668,14 +13668,14 @@ html body, html body * {
   font-size: 12px !important;
   text-transform: uppercase !important;
   color: #625B55 !important;
-  letter-spacing: normal !important;
+  letter-spacing: 0.04em !important;
   margin: 0 !important;
 }
 .product-detail .pd-specs dd {
   font-family: 'Geist Mono', ui-monospace, monospace !important;
   font-size: 12px !important;
   color: #1A1918 !important;
-  letter-spacing: normal !important;
+  letter-spacing: 0.04em !important;
   margin: 0 !important;
 }
 .product-detail .pd-btn-primary {
@@ -13859,7 +13859,7 @@ h1.works-page-title {
   font-family: 'Geist Mono', ui-monospace, monospace !important;
   font-size: 12px !important;
   text-transform: uppercase !important;
-  letter-spacing: normal !important;
+  letter-spacing: 0.04em !important;
   color: #625B55 !important;
   background: none !important;
   border: none !important;
@@ -13890,7 +13890,7 @@ h1.works-page-title {
   text-transform: uppercase !important;
   color: #625B55 !important;
   margin: 0 0 4px !important;
-  letter-spacing: normal !important;
+  letter-spacing: 0.04em !important;
 }
 .work-avail {
   color: #1A1918 !important;
@@ -13937,7 +13937,7 @@ section:has(> .section-title-32) {
   font-size: 12px !important;
   text-transform: uppercase !important;
   color: #625B55 !important;
-  letter-spacing: normal !important;
+  letter-spacing: 0.04em !important;
 }
 .geo-stats-line {
   font-family: Manrope, sans-serif !important;
@@ -13960,7 +13960,7 @@ section:has(> .section-title-32) {
   font-weight: 500 !important;
   text-transform: uppercase !important;
   color: #1A1918 !important;
-  letter-spacing: normal !important;
+  letter-spacing: 0.04em !important;
 }
 .geography-section .country,
 .geography-section li,
@@ -15310,7 +15310,7 @@ html body.page-home .lookbook-meta {
   font-family: 'Geist Mono', ui-monospace, monospace !important;
   font-size: 12px !important;
   font-weight: 400 !important;
-  letter-spacing: normal !important;
+  letter-spacing: 0.04em !important;
 }
 
 /* Section 02: match the opening quote to the atelier quote. */
@@ -15346,7 +15346,7 @@ html body.page-home .cube-craft .craft-step-num {
   font-family: 'Geist Mono', ui-monospace, monospace !important;
   font-size: 12px !important;
   font-weight: 400 !important;
-  letter-spacing: normal !important;
+  letter-spacing: 0.04em !important;
 }
 
 /* Exhibition and event headings follow the atelier title treatment. */
@@ -15383,7 +15383,7 @@ html body.page-home .cube-recog .recog-event-date {
   font-family: 'Geist Mono', ui-monospace, monospace !important;
   font-size: 12px !important;
   font-weight: 400 !important;
-  letter-spacing: normal !important;
+  letter-spacing: 0.04em !important;
   text-transform: uppercase !important;
 }
 html body.page-home .cube-recog .recog-event-link {
@@ -15556,3 +15556,29 @@ html body footer.site-footer .container {
   }
 }
 /* === /UNIFIED FOOTER GRID === */
+
+/* === GEIST MONO TRACKING 0.04EM === */
+html body .font-mono,
+html body .geist-meta,
+html body .sec-label,
+html body .expo-kicker,
+html body .craft-kicker,
+html body .recog-kicker,
+html body .lookbook-meta,
+html body .lookbook-no,
+html body .lookbook-status,
+html body .cube-caption,
+html body .craft-step-num,
+html body .craft-epigraph-author,
+html body .recog-item-year,
+html body .recog-event-tag,
+html body .cta-foot,
+html body .ex-kicker,
+html body .pd-spec dt,
+html body .specs dt,
+html body .bc-hero__byline,
+html body .bc-hero__caption,
+html body .bc-lang {
+  letter-spacing: 0.04em !important;
+}
+/* === /GEIST MONO TRACKING 0.04EM === */

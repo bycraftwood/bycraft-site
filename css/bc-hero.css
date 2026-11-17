@@ -161,3 +161,29 @@ html.bc-intro .bc-hero__img{animation:bcImgIn 1.9s cubic-bezier(.2,.7,.2,1) 2.15
   html.bc-intro .bc-entry__top,html.bc-intro .bc-entry__bot{animation:bcCurtainFade .6s ease .8s forwards}
   html.bc-intro .bc-r{animation:bcFade .6s ease .8s both}
 }
+
+/* === GEIST MONO TRACKING 0.04EM === */
+html body .font-mono,
+html body .geist-meta,
+html body .sec-label,
+html body .expo-kicker,
+html body .craft-kicker,
+html body .recog-kicker,
+html body .lookbook-meta,
+html body .lookbook-no,
+html body .lookbook-status,
+html body .cube-caption,
+html body .craft-step-num,
+html body .craft-epigraph-author,
+html body .recog-item-year,
+html body .recog-event-tag,
+html body .cta-foot,
+html body .ex-kicker,
+html body .pd-spec dt,
+html body .specs dt,
+html body .bc-hero__byline,
+html body .bc-hero__caption,
+html body .bc-lang {
+  letter-spacing: 0.04em !important;
+}
+/* === /GEIST MONO TRACKING 0.04EM === */
