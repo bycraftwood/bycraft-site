@@ -15804,7 +15804,8 @@ html body .bc-curr-bar {
   gap: 8px 16px !important;
   width: 100% !important;
   margin: 0 0 20px !important;
-  padding: 0 !important;
+  padding: 0 2px 0 0 !important;
+  box-sizing: border-box !important;
 }
 html body.page-home .cube-expo .bc-curr-bar {
   grid-column: 1 / -1 !important;
@@ -15814,7 +15815,15 @@ html body .bc-curr-switch {
   align-items: center !important;
   gap: 8px !important;
 }
-html body .bc-curr-label,
+html body .bc-curr-label {
+  font-family: 'Manrope', sans-serif !important;
+  font-size: 12px !important;
+  font-weight: 600 !important;
+  letter-spacing: 0.05em !important;
+  text-transform: uppercase !important;
+  color: #1A1918 !important;
+  margin: 0 12px 0 0 !important;
+}
 html body .bc-curr-note {
   font-family: 'Manrope', sans-serif !important;
   font-size: 12px !important;
@@ -15822,9 +15831,6 @@ html body .bc-curr-note {
   letter-spacing: 0.05em !important;
   color: #625B55 !important;
   margin: 0 !important;
-}
-html body .bc-curr-label {
-  text-transform: uppercase !important;
 }
 html body .bc-curr-note[hidden] {
   display: none !important;
@@ -15864,6 +15870,7 @@ html body.bc-inner-nav .works-filter-top {
 html body.bc-inner-nav .works-filter-top .bc-curr-bar--inline {
   width: auto !important;
   margin: 0 !important;
+  padding: 0 2px 0 0 !important;
 }
 html body .pd-price-row {
   display: flex !important;
@@ -15879,6 +15886,7 @@ html body .pd-price-row .bc-curr-bar--detail {
   width: auto !important;
   justify-content: flex-start !important;
   margin: 0 !important;
+  padding: 0 !important;
   gap: 8px 12px !important;
 }
 @media (max-width: 899px) {
@@ -15888,6 +15896,7 @@ html body .pd-price-row .bc-curr-bar--detail {
   }
   html body.bc-inner-nav .works-filter-top .bc-curr-bar--inline {
     justify-content: flex-start !important;
+    padding: 0 !important;
   }
 }
 /* === /CURRENCY SWITCHER BYN / RUB === */
