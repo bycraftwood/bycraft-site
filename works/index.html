@@ -1250,6 +1250,107 @@ html body.bc-inner-nav .works-six-grid .work-card a.work-card-link:hover .lookbo
     gap: 6px 16px !important;
   }
 }
+/* === GEOGRAPHY CLEAN STYLE === */
+html body.bc-inner-nav #geography.geography-section,
+html body.bc-inner-nav #geography .geo-before-intro,
+html body.bc-inner-nav #geography .geography-title,
+html body.bc-inner-nav #geography .geo-stats-line,
+html body.bc-inner-nav #geography .map-svg-wrap,
+html body.bc-inner-nav #geography .map-continents-grid,
+html body.bc-inner-nav #geography .continent-group {
+  background: transparent !important;
+  background-color: transparent !important;
+  box-shadow: none !important;
+}
+html body.bc-inner-nav #geography.geography-section {
+  border-top: 1px solid #E5E2DC !important;
+  padding-top: 48px !important;
+  padding-bottom: 0 !important;
+  margin-top: 56px !important;
+  margin-bottom: 80px !important;
+}
+html body.bc-inner-nav #geography .map-svg-wrap {
+  width: 100% !important;
+  max-width: 960px !important;
+  margin: 24px auto 36px !important;
+  padding: 0 !important;
+  border: none !important;
+}
+html body.bc-inner-nav #geography .map-svg-wrap svg {
+  width: 100% !important;
+  height: auto !important;
+  display: block !important;
+  margin: 0 auto !important;
+}
+html body.bc-inner-nav #geography .map-svg-wrap svg .geo-lands path {
+  fill: #E8E2D7 !important;
+  stroke: #D5CEC0 !important;
+  stroke-width: 0.75 !important;
+}
+html body.bc-inner-nav #geography .map-svg-wrap svg .geo-dots circle {
+  fill: #B6452C !important;
+  stroke: #F7F6F2 !important;
+  stroke-width: 1 !important;
+}
+html body.bc-inner-nav #geography .map-svg-wrap svg .geo-dots circle.geo-dot-minsk-halo {
+  fill: rgba(182, 69, 44, 0.16) !important;
+  stroke: none !important;
+}
+html body.bc-inner-nav #geography .map-svg-wrap svg .geo-dots circle.geo-dot-minsk {
+  fill: #1A1918 !important;
+  stroke: #F7F6F2 !important;
+  stroke-width: 1.5 !important;
+}
+html body.bc-inner-nav #geography .map-svg-wrap svg .geo-dots circle.geo-dot-minsk-core {
+  fill: #B6452C !important;
+  stroke: none !important;
+}
+html body.bc-inner-nav #geography .map-continents-grid {
+  display: grid !important;
+  grid-template-columns: 1fr 2fr 1fr 1fr !important;
+  gap: 24px 36px !important;
+  padding-top: 28px !important;
+  margin-top: 0 !important;
+  border-top: 1px solid #E5E2DC !important;
+}
+html body.bc-inner-nav #geography .continent-group {
+  padding: 0 !important;
+  border: none !important;
+}
+html body.bc-inner-nav #geography .continent-group h4 {
+  font-family: 'Geist Mono', ui-monospace, monospace !important;
+  font-size: 12px !important;
+  font-weight: 400 !important;
+  letter-spacing: 0.04em !important;
+  text-transform: uppercase !important;
+  color: #1A1918 !important;
+  margin: 0 0 8px !important;
+}
+html body.bc-inner-nav #geography .continent-group .continent-countries {
+  font-family: Manrope, sans-serif !important;
+  font-size: 14px !important;
+  line-height: 1.6 !important;
+  color: #625B55 !important;
+  margin: 0 !important;
+}
+@media (max-width: 899px) {
+  html body.bc-inner-nav #geography.geography-section {
+    padding-top: 36px !important;
+    margin-top: 40px !important;
+    margin-bottom: 56px !important;
+  }
+  html body.bc-inner-nav #geography .map-continents-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 24px 20px !important;
+  }
+}
+@media (max-width: 540px) {
+  html body.bc-inner-nav #geography .map-continents-grid {
+    grid-template-columns: 1fr !important;
+    gap: 20px !important;
+  }
+}
+/* === /GEOGRAPHY CLEAN STYLE === */
 </style>
 </head>
 <body class="bc-inner-nav">
@@ -1433,8 +1534,9 @@ html body.bc-inner-nav .works-six-grid .work-card a.work-card-link:hover .lookbo
           <circle cx="772" cy="275" r="3.5"/><circle cx="765" cy="262" r="3"/><circle cx="855" cy="385" r="4"/>
           <circle cx="795" cy="375" r="3.5"/><circle cx="902" cy="418" r="3.5"/>
           <!-- Belarus / Minsk highlight -->
-          <circle class="geo-dot-minsk" cx="538" cy="114" r="7" fill="#B6452C"/>
-          <circle cx="538" cy="114" r="2.5" fill="#F7F3EC"/>
+          <circle class="geo-dot-minsk-halo" cx="538" cy="114" r="14"/>
+          <circle class="geo-dot-minsk" cx="538" cy="114" r="6"/>
+          <circle class="geo-dot-minsk-core" cx="538" cy="114" r="2.2"/>
         </g>
         
       </svg>
