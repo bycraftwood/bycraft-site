@@ -15794,3 +15794,100 @@ html body .continent-group h4 {
   letter-spacing: 0.05em !important;
 }
 /* === /MANROPE 12PX META (REPLACED GEIST MONO) === */
+
+/* === CURRENCY SWITCHER BYN / RUB === */
+html body .bc-curr-bar {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  align-items: center !important;
+  justify-content: flex-end !important;
+  gap: 8px 16px !important;
+  width: 100% !important;
+  margin: 0 0 20px !important;
+  padding: 0 !important;
+}
+html body.page-home .cube-expo .bc-curr-bar {
+  grid-column: 1 / -1 !important;
+}
+html body .bc-curr-switch {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+}
+html body .bc-curr-label,
+html body .bc-curr-note {
+  font-family: 'Manrope', sans-serif !important;
+  font-size: 12px !important;
+  font-weight: 400 !important;
+  letter-spacing: 0.05em !important;
+  color: #625B55 !important;
+  margin: 0 !important;
+}
+html body .bc-curr-label {
+  text-transform: uppercase !important;
+}
+html body .bc-curr-note[hidden] {
+  display: none !important;
+}
+html body .bc-curr-btn {
+  background: none !important;
+  border: none !important;
+  padding: 2px 0 !important;
+  margin: 0 !important;
+  cursor: pointer !important;
+  font-family: 'Manrope', sans-serif !important;
+  font-size: 12px !important;
+  font-weight: 400 !important;
+  letter-spacing: 0.05em !important;
+  color: #625B55 !important;
+  transition: color 0.2s ease !important;
+}
+html body .bc-curr-btn:hover {
+  color: #1A1918 !important;
+}
+html body .bc-curr-btn.is-active {
+  font-weight: 600 !important;
+  color: #B6452C !important;
+}
+html body .bc-curr-sep {
+  color: #B9AEA1 !important;
+  font-size: 12px !important;
+}
+html body.bc-inner-nav .works-filter-top {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  align-items: baseline !important;
+  justify-content: space-between !important;
+  gap: 12px 24px !important;
+  width: 100% !important;
+}
+html body.bc-inner-nav .works-filter-top .bc-curr-bar--inline {
+  width: auto !important;
+  margin: 0 !important;
+}
+html body .pd-price-row {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  align-items: baseline !important;
+  gap: 8px 20px !important;
+  margin: 0 0 18px !important;
+}
+html body .pd-price-row .pd-price {
+  margin: 0 !important;
+}
+html body .pd-price-row .bc-curr-bar--detail {
+  width: auto !important;
+  justify-content: flex-start !important;
+  margin: 0 !important;
+  gap: 8px 12px !important;
+}
+@media (max-width: 899px) {
+  html body.bc-inner-nav .works-filter-top {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+  }
+  html body.bc-inner-nav .works-filter-top .bc-curr-bar--inline {
+    justify-content: flex-start !important;
+  }
+}
+/* === /CURRENCY SWITCHER BYN / RUB === */

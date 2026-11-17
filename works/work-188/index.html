@@ -85,7 +85,7 @@
 }
   </script>
   <link rel="icon" href="/images/favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="../../css/style.css?v=2159">
+  <link rel="stylesheet" href="../../css/style.css?v=2160">
 
 
 
@@ -1108,7 +1108,17 @@ html body.page-contacts a.btn-tg-solid {
     <div class="pd-info">
       <p class="pd-badge"><span class="pd-dot" aria-hidden="true"></span> <span class="pd-badge-text">В НАЛИЧИИ</span></p>
       <h1 class="pd-number">LOT №&nbsp;188 / UNIQUE PIECE</h1>
-      <p class="pd-price"><span class="pd-price-byn">795&nbsp;BYN</span> <span class="pd-price-rub">≈ 22&nbsp;800&nbsp;₽</span> <span class="pd-price-note">/ цена в ₽ — по курсу на день оплаты</span></p>
+      <div class="pd-price-row">
+          <p class="pd-price"><span class="bc-price pd-price-byn" data-byn="795&nbsp;BYN" data-rub="≈ 22&nbsp;800&nbsp;₽">795&nbsp;BYN</span></p>
+          <div class="bc-curr-bar bc-curr-bar--detail">
+            <div class="bc-curr-switch" role="group" aria-label="Валюта">
+              <button type="button" class="bc-curr-btn is-active" data-bc-curr="BYN" aria-pressed="true">BYN</button>
+              <span class="bc-curr-sep" aria-hidden="true">·</span>
+              <button type="button" class="bc-curr-btn" data-bc-curr="RUB" aria-pressed="false">RUB</button>
+            </div>
+            <span class="bc-curr-note" data-bc-rub-note hidden>по курсу на 17.11.2026</span>
+          </div>
+        </div>
       <div class="pd-rule" aria-hidden="true"></div>
       <dl class="pd-specs">
         <div><dt>Материал</dt><dd>сувель берёзы, обжиг огнём</dd></div>
@@ -1152,19 +1162,19 @@ html body.page-contacts a.btn-tg-solid {
           <div class="pd-other-img"><img src="/images/works/work-192.jpg?v=2" alt="№ 192" loading="lazy"></div>
           <p class="pd-other-num">№&nbsp;192</p>
           <p class="pd-other-status">В наличии</p>
-          <p class="pd-other-price">2&nbsp;300 BYN</p>
+          <p class="pd-other-price"><span class="bc-price" data-byn="2&nbsp;300&nbsp;BYN" data-rub="≈ 65&nbsp;800&nbsp;₽">2&nbsp;300&nbsp;BYN</span></p>
         </a>
         <a class="pd-other-card" href="/works/work-197/">
           <div class="pd-other-img"><img src="/images/works/work-197.jpg" alt="№ 197" loading="lazy"></div>
           <p class="pd-other-num">№&nbsp;197</p>
           <p class="pd-other-status">В наличии</p>
-          <p class="pd-other-price">1&nbsp;300 BYN</p>
+          <p class="pd-other-price"><span class="bc-price" data-byn="1&nbsp;300&nbsp;BYN" data-rub="≈ 37&nbsp;200&nbsp;₽">1&nbsp;300&nbsp;BYN</span></p>
         </a>
     </div>
   </section>
 <div class="pd-sticky" id="pd-sticky-188">
   <button type="button" class="pd-btn-primary" onclick="openBycraftModal(event); return false;"
-    data-work="188">Забронировать · 795&nbsp;BYN</button>
+    data-work="188"><span class="bc-price" data-byn="Забронировать · 795&nbsp;BYN" data-rub="Забронировать · ≈ 22&nbsp;800&nbsp;₽">Забронировать · 795&nbsp;BYN</span></button>
 </div>
 
 <script>
@@ -1835,5 +1845,6 @@ html body.page-contacts a.btn-tg-solid {
 </script>
 
 <script src="/js/bc-nav.js?v=1" defer></script>
+<script src="/js/bc-currency.js?v=1"></script>
 </body>
 </html>
