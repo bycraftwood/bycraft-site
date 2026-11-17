@@ -296,35 +296,6 @@
 }
 
 /* ================= GEIST MONO (Vercel, SIL OFL) ================= */
-@font-face {
-  font-family: 'Geist Mono';
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: url('../fonts/GeistMono-Regular.woff2') format('woff2');
-}
-@font-face {
-  font-family: 'Geist Mono';
-  font-style: normal;
-  font-weight: 500;
-  font-display: swap;
-  src: url('../fonts/GeistMono-Medium.woff2') format('woff2');
-}
-@font-face {
-  font-family: 'Geist Mono';
-  font-style: normal;
-  font-weight: 600;
-  font-display: swap;
-  src: url('../fonts/GeistMono-SemiBold.woff2') format('woff2');
-}
-@font-face {
-  font-family: 'Geist Mono';
-  font-style: normal;
-  font-weight: 700;
-  font-display: swap;
-  src: url('../fonts/GeistMono-Bold.woff2') format('woff2');
-}
-
 /* ================= КОНЕЦ ШРИФТОВ ================= */
 
 :root {
@@ -333,7 +304,7 @@
   --color-secondary: #6B5D52;
   --color-muted: #6B5D52;
   --color-border: #E5E0D8;
-  --font-mono: 'Geist Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  --font-mono: 'Manrope', sans-serif;
   --font-base: 'Manrope', -apple-system, BlinkMacSystemFont, sans-serif;
   --container-max: 1240px;
 }
@@ -4671,7 +4642,7 @@ h1.section-title.work-page-title {
 
 /* Утилита: второй шрифт */
 .font-mono {
-  font-family: var(--font-mono, 'Geist Mono', ui-monospace, monospace) !important;
+  font-family: var(--font-mono, 'Manrope', sans-serif) !important;
 }
 
 /* === HERO MOSAIC + WORK CARD GRID === */
@@ -4703,7 +4674,7 @@ h1.section-title.work-page-title {
   flex-direction: column !important;
   padding: 18px 14px !important;
   color: #F5F2EC !important;
-  font-family: var(--font-mono, 'Geist Mono', ui-monospace, monospace) !important;
+  font-family: var(--font-mono, 'Manrope', sans-serif) !important;
   font-size: clamp(9px, 1.05vw, 13px) !important;
   letter-spacing: 0.04em;
   line-height: 1.45 !important;
@@ -4757,21 +4728,21 @@ h1.section-title.work-page-title {
   align-items: flex-end !important;
   padding: 16px !important;
   color: #F5F2EC !important;
-  font-family: var(--font-mono, 'Geist Mono', ui-monospace, monospace) !important;
+  font-family: var(--font-mono, 'Manrope', sans-serif) !important;
   font-size: 12px !important;
   letter-spacing: 0.04em;
   text-transform: uppercase !important;
   line-height: 1.4 !important;
 }
 
-/* Характеристики — Geist Mono */
+/* Характеристики — 'Manrope', sans-serif */
 .work-detail-info .meta-row,
 .work-detail-info .meta-label,
 .work-detail-info .meta-val,
 .work-awards-block,
 .work-awards-block .meta-label,
 .work-awards-block .meta-val {
-  font-family: var(--font-mono, 'Geist Mono', ui-monospace, monospace) !important;
+  font-family: var(--font-mono, 'Manrope', sans-serif) !important;
   font-size: 14px !important;
   color: var(--color-secondary, #6B5D52) !important;
 }
@@ -5016,7 +4987,7 @@ i .work-subtitle-muted,
   align-items: flex-end !important;
   padding: 16px !important;
   color: #F5F2EC !important;
-  font-family: var(--font-mono, 'Geist Mono', monospace) !important;
+  font-family: var(--font-mono, 'Manrope', sans-serif) !important;
   font-size: 12px !important;
   letter-spacing: 0.04em;
   text-transform: uppercase !important;
@@ -6274,7 +6245,7 @@ h2.section-title,
   --color-footer-muted: #B5A898 !important;
   --font-base: 'Manrope', -apple-system, BlinkMacSystemFont, sans-serif !important;
   --font-serif: 'Cormorant Garamond', Georgia, serif !important;
-  --font-mono: 'Geist Mono', ui-monospace, monospace !important;
+  --font-mono: 'Manrope', sans-serif;
 }
 
 html, body {
@@ -6970,7 +6941,7 @@ select.works-filter {
   color: #2A211C !important;
 }
 .geo-stat-label {
-  font-family: 'Geist Mono', ui-monospace, monospace !important;
+  font-family: 'Manrope', sans-serif !important;
   font-size: 12px !important;
   color: #6B5D52 !important;
   margin-top: 6px !important;
@@ -7016,7 +6987,7 @@ select.works-filter {
   text-align: left !important;
 }
 .continent-group h4 {
-  font-family: 'Geist Mono', ui-monospace, monospace !important;
+  font-family: 'Manrope', sans-serif !important;
   font-size: 12px !important;
   font-weight: 400 !important;
   text-transform: uppercase !important;
@@ -7454,7 +7425,7 @@ a.order-similar:hover,
   margin-left: 0 !important;
 }
 .continent-group h4 {
-  font-family: 'Geist Mono', ui-monospace, monospace !important;
+  font-family: 'Manrope', sans-serif !important;
   font-size: 12px !important;
   font-weight: 400 !important;
   text-transform: uppercase !important;
@@ -8980,7 +8951,7 @@ h3.event-name {
 .work-detail-mosaic .wdm-text span,
 .wdm-cell.wdm-text,
 .wdm-cell.wdm-text span {
-  font-family: 'Geist Mono', ui-monospace, monospace !important;
+  font-family: 'Manrope', sans-serif !important;
   font-size: 12px !important;
   font-weight: 400 !important;
   letter-spacing: 0.04em;
@@ -8993,7 +8964,7 @@ h3.event-name {
 .work-detail-info .meta-val,
 .work-detail-info .status-available,
 .work-detail-info .status-sold {
-  font-family: 'Geist Mono', ui-monospace, monospace !important;
+  font-family: 'Manrope', sans-serif !important;
   font-size: 12px !important;
   color: #6B5D52 !important;
   font-weight: 400 !important;
@@ -9562,7 +9533,7 @@ h1.work-page-title.page-h1 {
 .work-detail-info .meta-row,
 .work-detail-info .meta-label,
 .work-detail-info .meta-val {
-  font-family: 'Geist Mono', ui-monospace, monospace !important;
+  font-family: 'Manrope', sans-serif !important;
   font-size: 16px !important;
   color: #6B5D52 !important;
   font-weight: 400 !important;
@@ -9593,7 +9564,7 @@ h1.work-page-title.page-h1 {
 .work-detail-info .meta-val,
 .page-work-188 .meta-label,
 .page-work-188 .meta-val {
-  font-family: 'Geist Mono', ui-monospace, monospace !important;
+  font-family: 'Manrope', sans-serif !important;
   font-size: 14px !important;
   color: #6B5D52 !important;
   font-weight: 400 !important;
@@ -9636,7 +9607,7 @@ h1.work-page-title.page-h1 {
 .page-work-192 .meta-label,
 .page-work-192 .meta-val,
 .page-work-192 .work-detail-info .meta-row {
-  font-family: 'Geist Mono', ui-monospace, monospace !important;
+  font-family: 'Manrope', sans-serif !important;
   font-size: 14px !important;
   color: #6B5D52 !important;
   font-weight: 400 !important;
@@ -9774,7 +9745,7 @@ h1.work-page-title {
 .work-detail-info .meta-val,
 .work-detail-info .status-available,
 .work-detail-info .status-sold {
-  font-family: 'Geist Mono', ui-monospace, monospace !important;
+  font-family: 'Manrope', sans-serif !important;
   font-size: 14px !important;
   color: #6B5D52 !important;
   font-weight: 400 !important;
@@ -9807,7 +9778,7 @@ section.home-hero-split {
 }
 .home-hero-copy { max-width: 520px !important; width: 100% !important; }
 p.home-hero-eyebrow {
-  font-family: 'Geist Mono', ui-monospace, monospace !important;
+  font-family: 'Manrope', sans-serif !important;
   font-size: 12px !important; letter-spacing: 0.04em;
   text-transform: uppercase !important; color: #6B5D52 !important;
   margin: 0 0 20px !important;
@@ -9851,7 +9822,7 @@ a.home-hero-link:hover { border-bottom-color: #241C18 !important; }
 }
 p.home-hero-photo-caption {
   position: absolute !important; left: 16px !important; bottom: 14px !important;
-  font-family: 'Geist Mono', ui-monospace, monospace !important;
+  font-family: 'Manrope', sans-serif !important;
   font-size: 12px !important; letter-spacing: 0.04em;
   text-transform: uppercase !important; color: #F7F3EC !important; margin: 0 !important;
   text-shadow: 0 1px 3px rgba(0,0,0,0.35) !important;
@@ -9866,7 +9837,7 @@ p.home-hero-photo-caption {
 .home-h32{font-family:'Cormorant Garamond',Georgia,serif!important;font-weight:500!important;font-size:32px!important;color:#2A211C!important;margin:0!important;text-transform:none!important;}
 .home-h22{font-family:'Cormorant Garamond',Georgia,serif!important;font-weight:500!important;font-size:22px!important;color:#2A211C!important;margin:0 0 12px!important;}
 .home-body{font-family:Manrope,sans-serif!important;font-size:17px!important;font-weight:400!important;line-height:1.6!important;color:#2A211C!important;margin:0!important;}
-.home-eyebrow{font-family:'Geist Mono',ui-monospace,monospace!important;font-size:12px!important;letter-spacing: 0.04em;text-transform:uppercase!important;color:#6B5D52!important;margin:0 0 12px!important;}
+.home-eyebrow{font-family:'Manrope', sans-serif!important;font-size:12px!important;letter-spacing: 0.04em;text-transform:uppercase!important;color:#6B5D52!important;margin:0 0 12px!important;}
 .home-text-link{font-family:Manrope,sans-serif!important;font-size:15px!important;font-weight:600!important;color:#2A211C!important;text-decoration:none!important;}
 .home-text-link:hover{color:#B6452C!important;}
 .home-row-head{display:flex!important;justify-content:space-between!important;align-items:baseline!important;gap:16px!important;margin-bottom:28px!important;flex-wrap:wrap!important;}
@@ -9876,16 +9847,16 @@ p.home-hero-photo-caption {
 .home-trust{background:#EDE3D3!important;padding:36px 20px!important;margin:0 0 56px!important;}
 .home-trust-inner{max-width:1240px!important;margin:0 auto!important;display:grid!important;grid-template-columns:repeat(4,1fr)!important;gap:24px!important;}
 .home-trust-num{font-family:'Cormorant Garamond',Georgia,serif!important;font-size:32px!important;color:#2A211C!important;line-height:1.1!important;}
-.home-trust-label{font-family:'Geist Mono',ui-monospace,monospace!important;font-size:12px!important;color:#6B5D52!important;margin-top:8px!important;line-height:1.4!important;}
+.home-trust-label{font-family:'Manrope', sans-serif!important;font-size:12px!important;color:#6B5D52!important;margin-top:8px!important;line-height:1.4!important;}
 @media(max-width:700px){.home-trust-inner{grid-template-columns:1fr 1fr!important;}}
 
 .home-stock{margin-bottom:64px!important;}
 .home-stock-grid{display:grid!important;grid-template-columns:repeat(4,1fr)!important;gap:24px!important;}
 .home-stock-img{display:block!important;aspect-ratio:4/5!important;overflow:hidden!important;background:#EDE3D3!important;}
 .home-stock-img img{width:100%!important;height:100%!important;object-fit:cover!important;}
-.home-stock-meta{font-family:'Geist Mono',ui-monospace,monospace!important;font-size:12px!important;letter-spacing: 0.04em;text-transform:uppercase!important;color:#B6452C!important;margin:12px 0 6px!important;}
+.home-stock-meta{font-family:'Manrope', sans-serif!important;font-size:12px!important;letter-spacing: 0.04em;text-transform:uppercase!important;color:#B6452C!important;margin:12px 0 6px!important;}
 .home-stock-price{font-family:Manrope,sans-serif!important;font-size:17px!important;font-weight:400!important;line-height:1.6!important;color:#2A211C!important;margin:0 0 4px!important;}
-.home-stock-mat{font-family:'Geist Mono',ui-monospace,monospace!important;font-size:12px!important;letter-spacing: 0.04em;text-transform:uppercase!important;color:#6B5D52!important;margin:0 0 14px!important;}
+.home-stock-mat{font-family:'Manrope', sans-serif!important;font-size:12px!important;letter-spacing: 0.04em;text-transform:uppercase!important;color:#6B5D52!important;margin:0 0 14px!important;}
 .home-stock-card .home-btn-outline{width:100%!important;}
 @media(max-width:900px){.home-stock-grid{grid-template-columns:1fr!important;}}
 
@@ -9927,7 +9898,7 @@ p.home-hero-photo-caption {
 .home-events-new{margin-bottom:72px!important;}
 .home-events-list{display:grid!important;gap:18px!important;margin-bottom:12px!important;}
 .home-event-row{display:block!important;text-decoration:none!important;padding:14px 0!important;border-bottom:1px solid #E5DFD4!important;}
-.home-event-date{font-family:'Geist Mono',ui-monospace,monospace!important;font-size:12px!important;letter-spacing: 0.04em;text-transform:uppercase!important;color:#6B5D52!important;margin:0 0 6px!important;}
+.home-event-date{font-family:'Manrope', sans-serif!important;font-size:12px!important;letter-spacing: 0.04em;text-transform:uppercase!important;color:#6B5D52!important;margin:0 0 6px!important;}
 .home-event-name{font-family:Manrope,sans-serif!important;font-size:22px!important;font-weight:400!important;line-height:1.6!important;color:#2A211C!important;margin:0 0 4px!important;}
 .home-event-desc{font-family:Manrope,sans-serif!important;font-size:17px!important;line-height:1.6!important;color:#2A211C!important;margin:0!important;}
 .home-awards-grid{display:grid!important;grid-template-columns:repeat(3,1fr)!important;gap:20px!important;margin-top:24px!important;}
@@ -9936,7 +9907,7 @@ p.home-hero-photo-caption {
 
 /* === v2041 home refinements === */
 p.home-hero-eyebrow {
-  font-family: 'Geist Mono', ui-monospace, monospace !important;
+  font-family: 'Manrope', sans-serif !important;
   font-size: 12px !important;
   font-weight: 600 !important;
   letter-spacing: 0.04em;
@@ -9980,7 +9951,7 @@ section.home-trust {
   line-height: 1.05 !important;
 }
 .home-trust-label {
-  font-family: 'Geist Mono', ui-monospace, monospace !important;
+  font-family: 'Manrope', sans-serif !important;
   font-size: 12px !important;
   font-weight: 600 !important;
   color: #6B5D52 !important;
@@ -10224,7 +10195,7 @@ a.nav-link-btn.nav-how-to-buy {
   display: block !important;
 }
 .home-pick-status {
-  font-family: 'Geist Mono', ui-monospace, monospace !important;
+  font-family: 'Manrope', sans-serif !important;
   font-size: 12px !important;
   letter-spacing: 0.04em;
   text-transform: uppercase !important;
@@ -10298,7 +10269,7 @@ a.nav-link-btn.nav-how-to-buy {
   padding: 0 !important;
 }
 .home-quote-author {
-  font-family: 'Geist Mono', ui-monospace, monospace !important;
+  font-family: 'Manrope', sans-serif !important;
   font-size: 12px !important;
   letter-spacing: 0.04em;
   text-transform: uppercase !important;
@@ -10505,7 +10476,7 @@ a.works-tab { display: inline-block !important; }
   display: flex !important;
   align-items: center !important;
   gap: 8px !important;
-  font-family: 'Geist Mono', ui-monospace, monospace !important;
+  font-family: 'Manrope', sans-serif !important;
   font-size: 12px !important;
   letter-spacing: 0.04em;
   text-transform: uppercase !important;
@@ -10593,7 +10564,7 @@ a.works-tab { display: inline-block !important; }
   border-bottom: 1px solid #E5DFD4 !important;
 }
 .pd-specs dt {
-  font-family: 'Geist Mono', ui-monospace, monospace !important;
+  font-family: 'Manrope', sans-serif !important;
   font-size: 11px !important;
   letter-spacing: 0.04em;
   text-transform: uppercase !important;
@@ -10906,7 +10877,7 @@ html body .product-detail .pd-specs > div {
   border-bottom: 1px solid #DCCFBD !important;
 }
 html body .product-detail .pd-specs dt {
-  font-family: 'Geist Mono', ui-monospace, monospace !important;
+  font-family: 'Manrope', sans-serif !important;
   font-size: 11px !important;
   letter-spacing: 0.04em;
   text-transform: uppercase !important;
@@ -11030,7 +11001,7 @@ html body .product-detail .pd-specs dd {
   margin: 0 0 2px !important;
 }
 .pd-other-status {
-  font-family: 'Geist Mono', ui-monospace, monospace !important;
+  font-family: 'Manrope', sans-serif !important;
   font-size: 12px !important;
   color: #B6452C !important;
   margin: 0 0 2px !important;
@@ -11099,7 +11070,7 @@ html body .product-detail .pd-other-grid {
   box-sizing: border-box !important;
 }
 .ex-crumbs {
-  font-family: 'Geist Mono', ui-monospace, monospace !important;
+  font-family: 'Manrope', sans-serif !important;
   font-size: 11px !important;
   color: #6B5D52 !important;
   margin: 0 0 20px !important;
@@ -11108,7 +11079,7 @@ html body .product-detail .pd-other-grid {
 .ex-crumbs a:hover { color: #B6452C !important; }
 .ex-crumbs-sep { margin: 0 6px !important; opacity: 0.6 !important; }
 .ex-kicker {
-  font-family: 'Geist Mono', ui-monospace, monospace !important;
+  font-family: 'Manrope', sans-serif !important;
   font-size: 11px !important;
   letter-spacing: 0.04em;
   text-transform: uppercase !important;
@@ -11190,7 +11161,7 @@ html body .product-detail .pd-other-grid {
   border-bottom: 1px solid #DCCFBD !important;
 }
 .ex-specs dt {
-  font-family: 'Geist Mono', ui-monospace, monospace !important;
+  font-family: 'Manrope', sans-serif !important;
   font-size: 11px !important;
   letter-spacing: 0.04em;
   text-transform: uppercase !important;
@@ -11282,7 +11253,7 @@ html body .product-detail .pd-other-grid {
 }
 .ex-badge {
   display: inline-block !important;
-  font-family: 'Geist Mono', ui-monospace, monospace !important;
+  font-family: 'Manrope', sans-serif !important;
   font-size: 11px !important;
   letter-spacing: 0.04em;
   text-transform: uppercase !important;
@@ -11534,7 +11505,7 @@ body.page-cube .home-hero-split {
   gap: 18px !important;
 }
 .cube-lang {
-  font-family: 'Geist Mono', ui-monospace, monospace !important;
+  font-family: 'Manrope', sans-serif !important;
   font-size: 11px !important;
   letter-spacing: 0.04em;
   color: #6B5D52 !important;
@@ -11620,7 +11591,7 @@ body.page-cube .home-hero-split {
 }
 .cube-caption {
   margin: 0 !important;
-  font-family: 'Geist Mono', ui-monospace, monospace !important;
+  font-family: 'Manrope', sans-serif !important;
   font-size: 11px !important;
   letter-spacing: 0.04em;
   text-transform: uppercase !important;
@@ -11628,7 +11599,7 @@ body.page-cube .home-hero-split {
   max-width: 55% !important;
 }
 .cube-scroll {
-  font-family: 'Geist Mono', ui-monospace, monospace !important;
+  font-family: 'Manrope', sans-serif !important;
   font-size: 11px !important;
   letter-spacing: 0.04em;
   text-transform: uppercase !important;
@@ -11764,7 +11735,7 @@ html body.page-cube main {
   margin-bottom: 72px !important;
 }
 .expo-kicker {
-  font-family: 'Geist Mono', ui-monospace, monospace !important;
+  font-family: 'Manrope', sans-serif !important;
   font-size: 11px !important;
   letter-spacing: 0.04em;
   text-transform: uppercase !important;
@@ -11848,7 +11819,7 @@ html body.page-cube main {
 }
 
 .expo-num {
-  font-family: 'Geist Mono', ui-monospace, monospace !important;
+  font-family: 'Manrope', sans-serif !important;
   font-size: 11px !important;
   letter-spacing: 0.04em;
   text-transform: uppercase !important;
@@ -11871,7 +11842,7 @@ html body.page-cube main {
 }
 .expo-badge {
   display: inline-block !important;
-  font-family: 'Geist Mono', ui-monospace, monospace !important;
+  font-family: 'Manrope', sans-serif !important;
   font-size: 10px !important;
   letter-spacing: 0.04em;
   text-transform: uppercase !important;
@@ -12025,7 +11996,7 @@ html body .cube-expo .expo-head {
   margin-bottom: 48px !important;
 }
 html body .cube-expo .expo-kicker {
-  font-family: 'Geist Mono', ui-monospace, monospace !important;
+  font-family: 'Manrope', sans-serif !important;
   font-size: 11px !important;
   letter-spacing: 0.04em;
   text-transform: uppercase !important;
@@ -12068,7 +12039,7 @@ html body .cube-expo .lookbook-img img {
 }
 
 html body .cube-expo .lookbook-num {
-  font-family: 'Geist Mono', ui-monospace, monospace !important;
+  font-family: 'Manrope', sans-serif !important;
   font-size: 11px !important;
   letter-spacing: 0.04em;
   text-transform: uppercase !important;
@@ -12149,7 +12120,7 @@ html body .cube-craft .craft-atelier {
 }
 
 html body .cube-craft .craft-kicker {
-  font-family: 'Geist Mono', ui-monospace, monospace !important;
+  font-family: 'Manrope', sans-serif !important;
   font-size: 11px !important;
   letter-spacing: 0.04em;
   text-transform: uppercase !important;
@@ -12188,7 +12159,7 @@ html body .cube-craft .craft-photo img {
   display: block !important;
 }
 html body .cube-craft .craft-step-num {
-  font-family: 'Geist Mono', ui-monospace, monospace !important;
+  font-family: 'Manrope', sans-serif !important;
   font-size: 11px !important;
   letter-spacing: 0.04em;
   text-transform: uppercase !important;
@@ -12306,7 +12277,7 @@ html body .cube-recog .recog-wings {
   width: 100% !important;
 }
 html body .cube-recog .recog-kicker {
-  font-family: 'Geist Mono', ui-monospace, monospace !important;
+  font-family: 'Manrope', sans-serif !important;
   font-size: 11px !important;
   letter-spacing: 0.04em;
   text-transform: uppercase !important;
@@ -12320,7 +12291,7 @@ html body .cube-recog .recog-wings {
   align-items: start !important;
 }
 html body .cube-recog .recog-section-label {
-  font-family: 'Geist Mono', ui-monospace, monospace !important;
+  font-family: 'Manrope', sans-serif !important;
   font-size: 11px !important;
   letter-spacing: 0.04em;
   text-transform: uppercase !important;
@@ -12331,7 +12302,7 @@ html body .cube-recog .recog-item {
   margin-bottom: 28px !important;
 }
 html body .cube-recog .recog-item-year {
-  font-family: 'Geist Mono', ui-monospace, monospace !important;
+  font-family: 'Manrope', sans-serif !important;
   font-size: 11px !important;
   letter-spacing: 0.04em;
   text-transform: uppercase !important;
@@ -12438,7 +12409,7 @@ html body .cube-recog .recog-event {
   margin-bottom: 28px !important;
 }
 html body .cube-recog .recog-event-tag {
-  font-family: 'Geist Mono', ui-monospace, monospace !important;
+  font-family: 'Manrope', sans-serif !important;
   font-size: 11px !important;
   letter-spacing: 0.04em;
   text-transform: uppercase !important;
@@ -12565,7 +12536,7 @@ html body .cube-cta .cta-btn--ghost:hover {
 }
 html body .cube-cta .cta-phone {
   display: inline-block !important;
-  font-family: 'Geist Mono', ui-monospace, monospace !important;
+  font-family: 'Manrope', sans-serif !important;
   font-size: 14px !important;
   letter-spacing: 0.04em;
   color: #2A211C !important;
@@ -12574,7 +12545,7 @@ html body .cube-cta .cta-phone {
 }
 html body .cube-cta .cta-phone:hover { color: #B6452C !important; }
 html body .cube-cta .cta-foot {
-  font-family: 'Geist Mono', ui-monospace, monospace !important;
+  font-family: 'Manrope', sans-serif !important;
   font-size: 11px !important;
   letter-spacing: 0.04em;
   text-transform: uppercase !important;
@@ -13152,7 +13123,7 @@ html body.page-cube .cube-manifest {
   max-width: 16em !important;
 }
 html body.page-cube .cube-caption {
-  font-family: 'Geist Mono', ui-monospace, monospace !important;
+  font-family: 'Manrope', sans-serif !important;
   font-weight: 400 !important;
   font-size: 12px !important;
   letter-spacing: 0.04em;
@@ -13201,7 +13172,7 @@ html body.page-cube .sec-label,
 html body.page-cube .expo-kicker,
 html body.page-cube .craft-kicker,
 html body.page-cube .recog-kicker {
-  font-family: 'Geist Mono', ui-monospace, monospace !important;
+  font-family: 'Manrope', sans-serif !important;
   font-weight: 400 !important;
   font-size: 12px !important;
   letter-spacing: 0.04em;
@@ -13210,7 +13181,7 @@ html body.page-cube .recog-kicker {
   margin: 0 0 16px !important;
 }
 html body.page-cube .lookbook-meta {
-  font-family: 'Geist Mono', ui-monospace, monospace !important;
+  font-family: 'Manrope', sans-serif !important;
   font-weight: 400 !important;
   font-size: 12px !important;
   letter-spacing: 0.04em;
@@ -13270,7 +13241,7 @@ html body.page-cube .lookbook-cta {
   --ember: #B6452C;
   --font-serif: 'Cormorant Garamond', Georgia, serif;
   --font-sans: Manrope, system-ui, sans-serif;
-  --font-mono: 'Geist Mono', ui-monospace, monospace;
+  --font-mono: 'Manrope', sans-serif;
 }
 html, body {
   background: var(--paper) !important;
@@ -13600,7 +13571,7 @@ html body, html body * {
 
 /* === v2125 in-stock card type (safe) === */
 .product-detail .pd-back {
-  font-family: 'Geist Mono', ui-monospace, monospace !important;
+  font-family: 'Manrope', sans-serif !important;
   font-size: 12px !important;
   color: #625B55 !important;
   letter-spacing: 0.04em !important;
@@ -13611,7 +13582,7 @@ html body, html body * {
   display: flex !important;
   align-items: center !important;
   gap: 8px !important;
-  font-family: 'Geist Mono', ui-monospace, monospace !important;
+  font-family: 'Manrope', sans-serif !important;
   font-size: 12px !important;
   text-transform: uppercase !important;
   letter-spacing: 0.04em !important;
@@ -13646,7 +13617,7 @@ html body, html body * {
   margin: 0 0 8px !important;
 }
 .product-detail .pd-price-note {
-  font-family: 'Geist Mono', ui-monospace, monospace !important;
+  font-family: 'Manrope', sans-serif !important;
   font-size: 12px !important;
   color: #625B55 !important;
   letter-spacing: 0.04em !important;
@@ -13664,7 +13635,7 @@ html body, html body * {
   margin-bottom: 10px !important;
 }
 .product-detail .pd-specs dt {
-  font-family: 'Geist Mono', ui-monospace, monospace !important;
+  font-family: 'Manrope', sans-serif !important;
   font-size: 12px !important;
   text-transform: uppercase !important;
   color: #625B55 !important;
@@ -13672,7 +13643,7 @@ html body, html body * {
   margin: 0 !important;
 }
 .product-detail .pd-specs dd {
-  font-family: 'Geist Mono', ui-monospace, monospace !important;
+  font-family: 'Manrope', sans-serif !important;
   font-size: 12px !important;
   color: #1A1918 !important;
   letter-spacing: 0.04em !important;
@@ -13856,7 +13827,7 @@ h1.works-page-title {
   margin-top: 20px !important;
 }
 .works-tab {
-  font-family: 'Geist Mono', ui-monospace, monospace !important;
+  font-family: 'Manrope', sans-serif !important;
   font-size: 12px !important;
   text-transform: uppercase !important;
   letter-spacing: 0.04em !important;
@@ -13885,7 +13856,7 @@ h1.works-page-title {
 .work-lot,
 .work-avail,
 .work-private {
-  font-family: 'Geist Mono', ui-monospace, monospace !important;
+  font-family: 'Manrope', sans-serif !important;
   font-size: 12px !important;
   text-transform: uppercase !important;
   color: #625B55 !important;
@@ -13933,7 +13904,7 @@ section:has(> .section-title-32) {
   margin-top: 48px !important;
 }
 .geography-title {
-  font-family: 'Geist Mono', ui-monospace, monospace !important;
+  font-family: 'Manrope', sans-serif !important;
   font-size: 12px !important;
   text-transform: uppercase !important;
   color: #625B55 !important;
@@ -13955,7 +13926,7 @@ section:has(> .section-title-32) {
 .geo-continent-title,
 .geo-col-title,
 .geography-section .continent-name {
-  font-family: 'Geist Mono', ui-monospace, monospace !important;
+  font-family: 'Manrope', sans-serif !important;
   font-size: 12px !important;
   font-weight: 500 !important;
   text-transform: uppercase !important;
@@ -13997,7 +13968,7 @@ section:has(> .section-title-32) {
   margin: 0 0 12px !important;
 }
 .geography-title {
-  font-family: 'Geist Mono', ui-monospace, monospace !important;
+  font-family: 'Manrope', sans-serif !important;
   font-size: 12px !important;
   text-transform: uppercase !important;
   color: #625B55 !important;
@@ -14073,7 +14044,7 @@ section.container:has(.works-six-grid),
   margin: 0 0 12px !important;
 }
 .geography-title {
-  font-family: 'Geist Mono', ui-monospace, monospace !important;
+  font-family: 'Manrope', sans-serif !important;
   font-size: 12px !important;
   text-transform: uppercase !important;
   color: #625B55 !important;
@@ -14099,7 +14070,7 @@ section.container:has(.works-six-grid),
   box-shadow: none !important;
 }
 .continent-group h4 {
-  font-family: 'Geist Mono', ui-monospace, monospace !important;
+  font-family: 'Manrope', sans-serif !important;
   font-size: 12px !important;
   font-weight: 500 !important;
   text-transform: uppercase !important;
@@ -14894,7 +14865,7 @@ html body.page-cube .cube-recog .recog-photo-placeholder {
   box-sizing: border-box !important;
 }
 html body.page-cube .cube-recog .recog-photo-placeholder span {
-  font-family: 'Geist Mono', ui-monospace, monospace !important;
+  font-family: 'Manrope', sans-serif !important;
   font-size: 10px !important;
   line-height: 1.5 !important;
   letter-spacing: .04em !important;
@@ -15307,7 +15278,7 @@ html body.page-home .lookbook-card .lookbook-price-rub {
   color: #6B5D52 !important;
 }
 html body.page-home .lookbook-meta {
-  font-family: 'Geist Mono', ui-monospace, monospace !important;
+  font-family: 'Manrope', sans-serif !important;
   font-size: 12px !important;
   font-weight: 400 !important;
   letter-spacing: 0.04em !important;
@@ -15343,7 +15314,7 @@ html body.page-home .cube-craft .craft-step-text {
   line-height: 1.6 !important;
 }
 html body.page-home .cube-craft .craft-step-num {
-  font-family: 'Geist Mono', ui-monospace, monospace !important;
+  font-family: 'Manrope', sans-serif !important;
   font-size: 12px !important;
   font-weight: 400 !important;
   letter-spacing: 0.04em !important;
@@ -15380,7 +15351,7 @@ html body.page-home .cube-recog .recog-event-place {
 html body.page-home .cube-recog .recog-item-year,
 html body.page-home .cube-recog .recog-event-tag,
 html body.page-home .cube-recog .recog-event-date {
-  font-family: 'Geist Mono', ui-monospace, monospace !important;
+  font-family: 'Manrope', sans-serif !important;
   font-size: 12px !important;
   font-weight: 400 !important;
   letter-spacing: 0.04em !important;
@@ -15527,32 +15498,6 @@ html body.page-home .cube-recog .recog-pdf {
     font-size: 15px !important;
   }
 }
-/* === GEIST MONO TRACKING 0.04EM === */
-html body .font-mono,
-html body .geist-meta,
-html body .sec-label,
-html body .expo-kicker,
-html body .craft-kicker,
-html body .recog-kicker,
-html body .lookbook-meta,
-html body .lookbook-no,
-html body .lookbook-status,
-html body .cube-caption,
-html body .craft-step-num,
-html body .craft-epigraph-author,
-html body .recog-item-year,
-html body .recog-event-tag,
-html body .cta-foot,
-html body .ex-kicker,
-html body .pd-spec dt,
-html body .specs dt,
-html body .bc-hero__byline,
-html body .bc-hero__caption,
-html body .bc-lang {
-  letter-spacing: 0.04em !important;
-}
-/* === /GEIST MONO TRACKING 0.04EM === */
-
 /* === SITE-WIDE 80PX / 22PX WIDTH & 4-COL FOOTER === */
 html body main {
   padding-left: 0 !important;
@@ -15820,3 +15765,32 @@ html body footer.site-footer .footer-legal a:focus-visible {
   }
 }
 /* === /CONTACTS FOOTER & 80PX/22PX RESET === */
+
+/* === MANROPE 12PX META (REPLACED GEIST MONO) === */
+html body .font-mono,
+html body .geist-meta,
+html body .sec-label,
+html body .expo-kicker,
+html body .craft-kicker,
+html body .recog-kicker,
+html body .lookbook-meta,
+html body .lookbook-no,
+html body .lookbook-status,
+html body .cube-caption,
+html body .craft-step-num,
+html body .craft-epigraph-author,
+html body .recog-item-year,
+html body .recog-event-tag,
+html body .cta-foot,
+html body .ex-kicker,
+html body .pd-spec dt,
+html body .specs dt,
+html body .bc-hero__caption,
+html body .works-filter-label,
+html body .geography-title,
+html body .continent-group h4 {
+  font-family: 'Manrope', sans-serif !important;
+  font-size: 12px !important;
+  letter-spacing: 0.05em !important;
+}
+/* === /MANROPE 12PX META (REPLACED GEIST MONO) === */
