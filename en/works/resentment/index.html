@@ -75,7 +75,7 @@
 }
   </script>
   <link rel="icon" href="/images/favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="../../../css/style.css?v=2154">
+  <link rel="stylesheet" href="../../../css/style.css?v=2155">
 
 
 
@@ -1057,23 +1057,24 @@ html body.page-contacts a.btn-tg-solid {
 }
 </style>
 
+<script>document.documentElement.classList.add('bc-js');</script>
+<link rel="stylesheet" href="/css/bc-hero.css?v=b71d114c">
 </head>
-<body>
-<header class="site-top g12-top" role="banner">
-  <div class="site-top-inner">
-    <a href="/en/" class="site-top-logo">BYCRAFT</a>
-    <nav class="site-top-nav" aria-label="Меню">
-      <a href="/en/works/">Работы</a>
-      <a href="/en/workshop/">Мастерская</a>
-      <a href="/en/events/">События</a>
-      <a href="/en/contacts/">Контакты</a>
-    </nav>
-    <div class="site-top-right">
-      <span class="site-top-lang"><a href="/">EN</a> / <span>RU</span></span>
-      <button type="button" class="site-top-menu-btn" aria-label="Меню"
-        onclick="document.body.classList.toggle('nav-open')">Menu</button>
+<body class="bc-inner-nav">
+<header class="bc-nav">
+  <a class="bc-nav__brand" href="/en/" aria-label="BYCRAFT: home">BYCRAFT</a>
+  <button class="bc-nav__toggle" type="button" aria-expanded="false" aria-controls="bc-menu" aria-label="Open menu"><i></i><i></i></button>
+  <nav class="bc-nav__menu" id="bc-menu" aria-label="Main navigation">
+    <ul>
+        <li><a href="/en/works/" aria-current="page">Works</a></li>
+        <li><a href="/en/workshop/">Workshop</a></li>
+        <li><a href="/en/events/">Events</a></li>
+        <li><a href="/en/contacts/">Contacts</a></li>
+    </ul>
+    <div class="bc-lang" role="group" aria-label="Language / Язык">
+      <span aria-current="true" lang="en">EN</span><span class="bc-lang__sep" aria-hidden="true">/</span><a href="/works/obida/" hreflang="ru" lang="ru" aria-label="Русская версия">RU</a>
     </div>
-  </div>
+  </nav>
 </header>
 
     <main>
@@ -1979,5 +1980,6 @@ Presented as part of the 27th International Culture & Arts Festival, Istanbul, T
 })();
 </script>
 
+<script src="/js/bc-nav.js?v=1" defer></script>
 </body>
 </html>

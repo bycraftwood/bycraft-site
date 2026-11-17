@@ -187,3 +187,92 @@ html body .bc-lang {
   letter-spacing: 0.04em !important;
 }
 /* === /GEIST MONO TRACKING 0.04EM === */
+
+/* === GLOBAL BC-NAV UNIFIED HEADER === */
+html body .bc-nav {
+  padding-left: 80px !important;
+  padding-right: 80px !important;
+  box-sizing: border-box !important;
+}
+html body .bc-nav .bc-nav__brand {
+  font-family: var(--bc-sans) !important;
+  font-weight: 800 !important;
+  font-size: 22px !important;
+  letter-spacing: 0.02em !important;
+  line-height: 1.2 !important;
+  color: var(--bc-ink) !important;
+  text-decoration: none !important;
+}
+html body .bc-nav .bc-nav__menu ul a {
+  font-family: var(--bc-sans) !important;
+  font-size: 16px !important;
+  font-weight: 500 !important;
+  letter-spacing: 0.02em !important;
+  color: var(--bc-ink) !important;
+  text-decoration: none !important;
+}
+html body .bc-nav .bc-nav__menu .bc-lang {
+  margin-left: clamp(48px, 6vw, 108px) !important;
+  font-family: var(--bc-mono) !important;
+  font-size: 13px !important;
+  letter-spacing: 0.04em !important;
+}
+html body .bc-nav .bc-nav__menu .bc-lang a,
+html body .bc-nav .bc-nav__menu .bc-lang span {
+  font-family: var(--bc-mono) !important;
+  font-size: 13px !important;
+  letter-spacing: 0.04em !important;
+  color: var(--bc-ink) !important;
+}
+html body.bc-inner-nav {
+  padding-top: var(--bc-nav-h) !important;
+}
+@media (max-width: 899px) {
+  html body .bc-nav {
+    padding-left: 22px !important;
+    padding-right: 22px !important;
+  }
+  html body .bc-nav .bc-nav__brand {
+    font-size: 18px !important;
+  }
+  html body .bc-nav .bc-nav__menu {
+    padding-left: 22px !important;
+    padding-right: 22px !important;
+  }
+  html body .bc-nav.is-open .bc-nav__menu {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 8px !important;
+  }
+  html body .bc-nav .bc-nav__menu ul {
+    display: flex !important;
+    flex-direction: column !important;
+    width: 100% !important;
+    gap: 0 !important;
+  }
+  html body .bc-nav .bc-nav__menu ul a {
+    font-size: 14px !important;
+    padding: 12px 0 !important;
+  }
+  html body .bc-nav .bc-nav__menu .bc-lang {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+    width: 100% !important;
+    margin-left: 0 !important;
+    margin-top: 4px !important;
+    padding-top: 10px !important;
+    border-top: 1px solid rgba(26, 25, 24, 0.12) !important;
+    font-size: 12px !important;
+    gap: 10px !important;
+  }
+  html body .bc-nav .bc-nav__menu .bc-lang a,
+  html body .bc-nav .bc-nav__menu .bc-lang span {
+    font-size: 12px !important;
+  }
+  html body .bc-nav .bc-nav__menu .bc-lang a:first-child {
+    padding-left: 0 !important;
+  }
+}
+/* === /GLOBAL BC-NAV UNIFIED HEADER === */

@@ -50,7 +50,7 @@
 }
   </script>
   <link rel="icon" href="/images/favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="../css/style.css?v=2154">
+  <link rel="stylesheet" href="../css/style.css?v=2155">
 
 
 
@@ -1087,23 +1087,24 @@ html body.page-contacts footer li {
 }
 </style>
 
+<script>document.documentElement.classList.add('bc-js');</script>
+<link rel="stylesheet" href="/css/bc-hero.css?v=b71d114c">
 </head>
-<body class="page-contacts">
-<header class="site-top g12-top" role="banner">
-  <div class="site-top-inner">
-    <a href="/" class="site-top-logo">BYCRAFT</a>
-    <nav class="site-top-nav" aria-label="Меню">
-      <a href="/works/">Работы</a>
-      <a href="/workshop/">Мастерская</a>
-      <a href="/events/">События</a>
-      <a href="/contacts/">Контакты</a>
-    </nav>
-    <div class="site-top-right">
-      <span class="site-top-lang"><a href="/en/">EN</a> / <span>RU</span></span>
-      <button type="button" class="site-top-menu-btn" aria-label="Меню"
-        onclick="document.body.classList.toggle('nav-open')">Menu</button>
+<body class="page-contacts bc-inner-nav">
+<header class="bc-nav">
+  <a class="bc-nav__brand" href="/" aria-label="BYCRAFT: на главную">BYCRAFT</a>
+  <button class="bc-nav__toggle" type="button" aria-expanded="false" aria-controls="bc-menu" aria-label="Открыть меню"><i></i><i></i></button>
+  <nav class="bc-nav__menu" id="bc-menu" aria-label="Основная навигация">
+    <ul>
+        <li><a href="/works/">Работы</a></li>
+        <li><a href="/workshop/">Мастерская</a></li>
+        <li><a href="/events/">События</a></li>
+        <li><a href="/contacts/" aria-current="page">Контакты</a></li>
+    </ul>
+    <div class="bc-lang" role="group" aria-label="Язык / Language">
+      <a href="/en/contacts/" hreflang="en" lang="en" aria-label="English version">EN</a><span class="bc-lang__sep" aria-hidden="true">/</span><span aria-current="true" lang="ru">RU</span>
     </div>
-  </div>
+  </nav>
 </header>
 
       <main>
@@ -1468,7 +1469,7 @@ html body.page-contacts footer li {
       "</div></div>";
 
     modal.classList.add("is-active");
-    modal.style.css?v=2154 =
+    modal.style.css?v=2155 =
       "display:flex!important;position:fixed!important;inset:0!important;z-index:2147483647!important;align-items:center!important;justify-content:center!important;";
     document.body.style.overflow = "hidden";
 
@@ -1500,7 +1501,7 @@ html body.page-contacts footer li {
     var modal = document.getElementById("bycraft-modal");
     if (!modal) return;
     modal.classList.remove("is-active");
-    modal.style.css?v=2154 = "display:none!important;";
+    modal.style.css?v=2155 = "display:none!important;";
     document.body.style.overflow = "";
   };
 
@@ -1720,5 +1721,6 @@ html body.page-contacts footer li {
 })();
 </script>
 
+<script src="/js/bc-nav.js?v=1" defer></script>
 </body>
 </html>

@@ -154,3 +154,26 @@ html.bc-js .bw-toolbar{display:flex;align-items:center;justify-content:space-bet
   .bw-photos{transition:none}
   .bw-list.is-entering .bw-item:not(.is-chosen),.bw-list.is-entering .bw-item.is-chosen{transition:none}
 }
+
+/* === WORKS PAGE 80PX / 22PX WIDTH === */
+html body.bw-page main,
+html body.bw-page footer.bw-foot {
+  width: 100% !important;
+  max-width: 100% !important;
+  padding-left: 80px !important;
+  padding-right: 80px !important;
+  box-sizing: border-box !important;
+}
+html body.bw-page main > * {
+  max-width: 100% !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+@media (max-width: 899px) {
+  html body.bw-page main,
+  html body.bw-page footer.bw-foot {
+    padding-left: 22px !important;
+    padding-right: 22px !important;
+  }
+}
+/* === /WORKS PAGE 80PX / 22PX WIDTH === */
