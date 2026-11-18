@@ -1507,6 +1507,8 @@ html body.page-contacts a.btn-tg-solid {
       '<input type="text" id="bc-name" name="name" required autocomplete="name" placeholder="Как к вам обращаться"></div>' +
       '<div class="bc-field"><label for="bc-contact">Контакт для связи</label>' +
       '<input type="text" id="bc-contact" name="contact" required placeholder="Telegram / Телефон / любой удобный способ связи"></div>' +
+      '<div class="bc-field"><label for="bc-role">Кто вы?</label>' +
+      '<input type="text" id="bc-role" name="role" placeholder="Клиент, дизайнер..."></div>' +
       countryBlock +
       '<div class="bc-field"><label for="bc-comment">Комментарий</label>' +
       '<textarea id="bc-comment" name="comment" rows="3" placeholder="' +
@@ -1577,6 +1579,7 @@ html body.page-contacts a.btn-tg-solid {
     var meta = pageMeta();
     var name = ((document.getElementById("bc-name") || {}).value || "").trim();
     var contact = ((document.getElementById("bc-contact") || {}).value || "").trim();
+    var role = ((document.getElementById("bc-role") || {}).value || "").trim();
     var comment = ((document.getElementById("bc-comment") || {}).value || "").trim();
     var country = ((document.getElementById("bc-country") || {}).value || "").trim();
     var countryOther = ((document.getElementById("bc-country-other") || {}).value || "").trim();
@@ -1587,6 +1590,7 @@ html body.page-contacts a.btn-tg-solid {
       _subject: "BYCRAFT: " + (meta.formTitle || meta.displayName),
       name: name,
       contact: contact,
+      role: role,
       country: country,
       comment: comment,
       work_number: meta.num,
