@@ -2257,6 +2257,303 @@ html body.page-home .cube-expo .lookbook-card-info {
   }
 }
 /* === /HOME EDITORIAL 7+5 AND 4+4+4 GRID === */
+
+/* === HOME EXHIBITIONS V2 & VISIT BAND === */
+html body.page-home .cube-recog {
+  padding-bottom: 88px !important;
+}
+html body.page-home .cube-recog .recog-v2 {
+  grid-column: 1 / -1 !important;
+  width: 100% !important;
+}
+html body.page-home .cube-recog .recog-v2-head {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  align-items: baseline !important;
+  justify-content: space-between !important;
+  gap: 12px 24px !important;
+  margin: 0 0 28px !important;
+}
+html body.page-home .cube-recog .recog-v2-head .recog-section-label {
+  margin: 0 !important;
+}
+html body.page-home .cube-recog .recog-upcoming-grid {
+  display: grid !important;
+  grid-template-columns: repeat(12, minmax(0, 1fr)) !important;
+  gap: 32px clamp(24px, 2.5vw, 36px) !important;
+}
+html body.page-home .cube-recog .recog-upcoming-card {
+  grid-column: span 6 !important;
+  border-top: 1px solid #1A1918 !important;
+  padding-top: 20px !important;
+  display: flex !important;
+  flex-direction: column !important;
+}
+html body.page-home .cube-recog .recog-upcoming-date {
+  font-family: 'Cormorant Garamond', Georgia, serif !important;
+  font-weight: 500 !important;
+  font-size: 48px !important;
+  line-height: 1.05 !important;
+  color: #1A1918 !important;
+  margin: 0 0 14px !important;
+}
+html body.page-home .cube-recog .recog-upcoming-venue {
+  font-family: 'Manrope', sans-serif !important;
+  font-weight: 500 !important;
+  font-size: 16px !important;
+  line-height: 1.45 !important;
+  color: #1A1918 !important;
+  margin: 0 0 6px !important;
+}
+html body.page-home .cube-recog .recog-upcoming-meta {
+  font-family: 'Manrope', sans-serif !important;
+  font-weight: 400 !important;
+  font-size: 14px !important;
+  line-height: 1.5 !important;
+  color: #625B55 !important;
+  margin: 0 0 4px !important;
+}
+html body.page-home .cube-recog .recog-upcoming-actions {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  align-items: center !important;
+  gap: 10px 24px !important;
+  margin-top: 16px !important;
+}
+html body.page-home .cube-recog .recog-action-link {
+  display: inline-block !important;
+  background: none !important;
+  border: none !important;
+  border-bottom: 1px solid #1A1918 !important;
+  padding: 0 0 2px !important;
+  margin: 0 !important;
+  cursor: pointer !important;
+  font-family: 'Manrope', sans-serif !important;
+  font-size: 14px !important;
+  font-weight: 500 !important;
+  line-height: 1.4 !important;
+  color: #1A1918 !important;
+  text-decoration: none !important;
+  transition: color 0.2s ease, border-color 0.2s ease !important;
+}
+html body.page-home .cube-recog .recog-action-link:hover {
+  color: #B6452C !important;
+  border-bottom-color: #B6452C !important;
+}
+html body.page-home .cube-recog .recog-wide-figure {
+  margin: 64px 0 64px !important;
+  padding: 0 !important;
+  width: 100% !important;
+}
+html body.page-home .cube-recog .recog-wide-frame {
+  width: 100% !important;
+  aspect-ratio: 16 / 7 !important;
+  overflow: hidden !important;
+  background: #EAE5DB !important;
+}
+html body.page-home .cube-recog .recog-wide-frame img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  object-position: center !important;
+  display: block !important;
+}
+html body.page-home .cube-recog .recog-wide-caption {
+  font-family: 'Manrope', sans-serif !important;
+  font-size: 12px !important;
+  font-weight: 400 !important;
+  letter-spacing: 0.05em !important;
+  color: #625B55 !important;
+  margin: 10px 0 0 !important;
+}
+html body.page-home .cube-recog .recog-selected .recog-section-label {
+  margin: 0 0 20px !important;
+}
+html body.page-home .cube-recog .recog-table {
+  width: 100% !important;
+  border-top: 1px solid #E5E2DC !important;
+}
+html body.page-home .cube-recog a.recog-table-row {
+  display: grid !important;
+  grid-template-columns: 76px minmax(0, 1.35fr) minmax(0, 1.15fr) minmax(0, 1.1fr) 24px !important;
+  align-items: baseline !important;
+  gap: 8px 24px !important;
+  padding: 20px 0 !important;
+  border-bottom: 1px solid #E5E2DC !important;
+  text-decoration: none !important;
+  color: #1A1918 !important;
+  transition: background-color 0.2s ease !important;
+}
+html body.page-home .cube-recog .recog-col-year {
+  font-family: 'Cormorant Garamond', Georgia, serif !important;
+  font-weight: 500 !important;
+  font-size: 28px !important;
+  line-height: 1.15 !important;
+  color: #1A1918 !important;
+}
+html body.page-home .cube-recog .recog-col-name {
+  font-family: 'Cormorant Garamond', Georgia, serif !important;
+  font-weight: 500 !important;
+  font-size: 24px !important;
+  line-height: 1.25 !important;
+  color: #1A1918 !important;
+  transition: color 0.2s ease !important;
+}
+html body.page-home .cube-recog .recog-col-place {
+  font-family: 'Manrope', sans-serif !important;
+  font-weight: 400 !important;
+  font-size: 14px !important;
+  line-height: 1.5 !important;
+  color: #625B55 !important;
+}
+html body.page-home .cube-recog .recog-col-result {
+  font-family: 'Manrope', sans-serif !important;
+  font-weight: 400 !important;
+  font-size: 14px !important;
+  line-height: 1.5 !important;
+  color: #1A1918 !important;
+}
+html body.page-home .cube-recog .recog-row-arrow {
+  justify-self: end !important;
+  font-family: 'Manrope', sans-serif !important;
+  font-size: 16px !important;
+  color: #B6452C !important;
+  opacity: 0 !important;
+  transform: translateX(-6px) !important;
+  transition: opacity 0.25s ease, transform 0.25s ease !important;
+}
+@media (hover: hover) {
+  html body.page-home .cube-recog a.recog-table-row:hover .recog-col-name {
+    color: #B6452C !important;
+  }
+  html body.page-home .cube-recog a.recog-table-row:hover .recog-row-arrow {
+    opacity: 1 !important;
+    transform: translateX(0) !important;
+  }
+}
+html body.page-home main section.bc-visit-band {
+  width: 100% !important;
+  max-width: 100% !important;
+  margin: 0 !important;
+  padding: 96px 80px !important;
+  background: #1A1815 !important;
+  background-color: #1A1815 !important;
+  color: #F4F1EC !important;
+  box-sizing: border-box !important;
+}
+html body.page-home main section.bc-visit-band .bc-visit-inner {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  gap: 28px 48px !important;
+  width: 100% !important;
+}
+html body.page-home main section.bc-visit-band .bc-visit-title {
+  font-family: 'Cormorant Garamond', Georgia, serif !important;
+  font-weight: 500 !important;
+  font-size: 40px !important;
+  line-height: 1.15 !important;
+  color: #F4F1EC !important;
+  -webkit-text-fill-color: #F4F1EC !important;
+  margin: 0 0 10px !important;
+}
+html body.page-home main section.bc-visit-band .bc-visit-text {
+  font-family: 'Manrope', sans-serif !important;
+  font-weight: 400 !important;
+  font-size: 16px !important;
+  line-height: 1.55 !important;
+  color: #F4F1EC !important;
+  -webkit-text-fill-color: #F4F1EC !important;
+  opacity: 0.86 !important;
+  margin: 0 !important;
+}
+html body.page-home main section.bc-visit-band .bc-visit-actions {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  align-items: center !important;
+  gap: 12px 16px !important;
+}
+html body.page-home main section.bc-visit-band .bc-visit-btn {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  min-height: 46px !important;
+  padding: 12px 26px !important;
+  font-family: 'Manrope', sans-serif !important;
+  font-size: 14px !important;
+  font-weight: 500 !important;
+  line-height: 1.2 !important;
+  text-decoration: none !important;
+  cursor: pointer !important;
+  border-radius: 0 !important;
+  box-sizing: border-box !important;
+  transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease !important;
+}
+html body.page-home main section.bc-visit-band .bc-visit-btn--light {
+  background: #F4F1EC !important;
+  background-color: #F4F1EC !important;
+  color: #1A1815 !important;
+  -webkit-text-fill-color: #1A1815 !important;
+  border: 1px solid #F4F1EC !important;
+}
+html body.page-home main section.bc-visit-band .bc-visit-btn--light:hover {
+  background: #FFFFFF !important;
+  border-color: #FFFFFF !important;
+}
+html body.page-home main section.bc-visit-band .bc-visit-btn--outline {
+  background: transparent !important;
+  color: #F4F1EC !important;
+  -webkit-text-fill-color: #F4F1EC !important;
+  border: 1px solid rgba(244, 241, 236, 0.55) !important;
+}
+html body.page-home main section.bc-visit-band .bc-visit-btn--outline:hover {
+  border-color: #F4F1EC !important;
+  background: rgba(244, 241, 236, 0.1) !important;
+}
+@media (max-width: 1020px) {
+  html body.page-home .cube-recog a.recog-table-row {
+    grid-template-columns: 64px minmax(0, 1fr) 24px !important;
+    gap: 4px 16px !important;
+  }
+  html body.page-home .cube-recog .recog-col-place,
+  html body.page-home .cube-recog .recog-col-result {
+    grid-column: 2 !important;
+  }
+  html body.page-home .cube-recog .recog-row-arrow {
+    grid-column: 3 !important;
+    grid-row: 1 !important;
+    opacity: 0.7 !important;
+    transform: none !important;
+  }
+}
+@media (max-width: 899px) {
+  html body.page-home .cube-recog .recog-upcoming-card {
+    grid-column: 1 / -1 !important;
+  }
+  html body.page-home .cube-recog .recog-upcoming-date {
+    font-size: 38px !important;
+  }
+  html body.page-home .cube-recog .recog-wide-figure {
+    margin: 44px 0 44px !important;
+  }
+  html body.page-home .cube-recog .recog-wide-frame {
+    aspect-ratio: 16 / 9 !important;
+  }
+  html body.page-home main section.bc-visit-band {
+    padding: 64px 22px !important;
+  }
+  html body.page-home main section.bc-visit-band .bc-visit-title {
+    font-size: 32px !important;
+  }
+  html body.page-home main section.bc-visit-band .bc-visit-actions {
+    width: 100% !important;
+  }
+  html body.page-home main section.bc-visit-band .bc-visit-btn {
+    flex: 1 1 200px !important;
+  }
+}
+/* === /HOME EXHIBITIONS V2 & VISIT BAND === */
 </style>
 </head>
 <body class="page-home page-cube">
@@ -2442,63 +2739,100 @@ html body.page-home .cube-expo .lookbook-card-info {
 </section>
 <section class="cube-recog" id="recognition">
   <div class="g12">
-    <div class="recog-showcase g12-span-12">
-      <div class="recog-top-bar">
-        <h2 class="recog-section-label">Где увидеть работы</h2>
+    <div class="recog-v2 g12-span-12">
+      <div class="recog-v2-head">
+        <h2 class="recog-section-label">Ближайшие события</h2>
         <a href="/events/" class="recog-all-link">Все события <span class="lookbook-arrow" aria-hidden="true">→</span></a>
       </div>
 
-      <div class="recog-events-grid">
-        <article class="recog-event-card">
-          <p class="recog-item-year">26-27 декабря 2026 · Москва</p>
-          <h3 class="recog-item-title">ArtFlection</h3>
-          <p class="recog-item-text">Всероссийский фестиваль искусств &amp; ремёсел</p>
+      <div class="recog-upcoming-grid">
+        <article class="recog-upcoming-card">
+          <p class="recog-upcoming-date">10–14 дек</p>
+          <p class="recog-upcoming-venue">Минск · «Чароўны Млын», БелЭкспо</p>
+          <p class="recog-upcoming-meta">Пр. Победителей, 14</p>
+          <p class="recog-upcoming-meta">10 дек: 12:00–19:00 · 11–13 дек: 11:00–20:00 · 14 дек: 11:00–19:00</p>
+          <div class="recog-upcoming-actions">
+            <a href="/events/" class="recog-action-link">Подробнее <span aria-hidden="true">→</span></a>
+            <button type="button" class="recog-action-link recog-ics-btn"
+              data-ics-file="bycraft-mlyn-2026.ics"
+              data-ics-title="BYCRAFT на выставке «Чароўны Млын»"
+              data-ics-start="20261210T120000"
+              data-ics-end="20261214T190000"
+              data-ics-loc="БелЭкспо, пр. Победителей, 14, Минск"
+              data-ics-desc="Скульптурные арт-объекты из сувеля берёзы BYCRAFT (Атрош Валентин).">Добавить в календарь</button>
+          </div>
         </article>
 
-        <article class="recog-event-card">
-          <p class="recog-item-year">10–13 декабря 2026 · Минск</p>
-          <h3 class="recog-item-title">Чароуны Млын</h3>
-          <p class="recog-item-text">Выставка-ярмарка изделий ручной работы</p>
-        </article>
-
-        <article class="recog-event-card">
-          <p class="recog-item-year">21-22 ноября 2026 · Москва</p>
-          <h3 class="recog-item-title">Ceramania</h3>
-          <p class="recog-item-text">Крупнейший в России фестиваль керамики ручной работы</p>
-        </article>
-
-        <article class="recog-event-card">
-          <p class="recog-item-year">8-25 октября 2026 · АРХИВ</p>
-          <h3 class="recog-item-title">9-я выставка «Трын*Трава. Современный русский стиль»</h3>
-          <p class="recog-item-text">Москва, Музей-усадьба Муравьёвых-Апостолов</p>
+        <article class="recog-upcoming-card">
+          <p class="recog-upcoming-date">26–27 дек</p>
+          <p class="recog-upcoming-venue">Москва · AMBER PLAZA (ArtFlection)</p>
+          <p class="recog-upcoming-meta">Ул. Краснопролетарская, 36</p>
+          <p class="recog-upcoming-meta">12:00–20:00</p>
+          <div class="recog-upcoming-actions">
+            <a href="/events/" class="recog-action-link">Подробнее <span aria-hidden="true">→</span></a>
+            <button type="button" class="recog-action-link recog-ics-btn"
+              data-ics-file="bycraft-artflection-2026.ics"
+              data-ics-title="BYCRAFT на фестивале ArtFlection"
+              data-ics-start="20261226T120000"
+              data-ics-end="20261227T200000"
+              data-ics-loc="AMBER PLAZA, ул. Краснопролетарская, 36, Москва"
+              data-ics-desc="Скульптурные арт-объекты из сувеля берёзы BYCRAFT (Атрош Валентин).">Добавить в календарь</button>
+          </div>
         </article>
       </div>
 
-      <div class="recog-awards-block">
-        <h2 class="recog-section-label">Награды и конкурсы</h2>
+      <figure class="recog-wide-figure">
+        <div class="recog-wide-frame">
+          <img src="/images/events/event-01.webp" alt="Работы BYCRAFT в экспозиции выставки Трын*Трава, Москва, 2026" loading="lazy" decoding="async">
+        </div>
+        <figcaption class="recog-wide-caption">Трын*Трава, Москва, 2026</figcaption>
+      </figure>
 
-        <div class="recog-awards-grid">
-          <article class="recog-item">
-            <p class="recog-item-year">2026 · Москва, «Гоголь Арт»</p>
-            <h3 class="recog-item-title">Международная выставка-конкурс современного искусства «UNITED BY ART»</h3>
-            <p class="recog-item-text">3-е место в номинации «Человек и его мир», раздел: скульптура</p>
-            <a href="/events/united-by-art/" class="recog-item-more">Подробнее →</a>
-          </article>
+      <div class="recog-selected">
+        <h2 class="recog-section-label">Избранные выставки</h2>
+        <div class="recog-table">
+          <a href="/events/tryn-trava/" class="recog-table-row">
+            <span class="recog-col-year">2026</span>
+            <span class="recog-col-name">«Трын*Трава. Современный русский стиль» (9-я выставка)</span>
+            <span class="recog-col-place">Москва, Музей-усадьба Муравьёвых-Апостолов</span>
+            <span class="recog-col-result">Участие, более 80 авторов</span>
+            <span class="recog-row-arrow" aria-hidden="true">→</span>
+          </a>
 
-          <article class="recog-item">
-            <p class="recog-item-year">2026 · Турция, Стамбул</p>
-            <h3 class="recog-item-title">XXVII Международный фестиваль культуры и искусств</h3>
-            <p class="recog-item-text">Диплом участника</p>
-            <a href="/events/istanbul-festival/" class="recog-item-more">Подробнее →</a>
-          </article>
+          <a href="/events/united-by-art/" class="recog-table-row">
+            <span class="recog-col-year">2026</span>
+            <span class="recog-col-name">«UNITED BY ART»</span>
+            <span class="recog-col-place">Москва, «Гоголь Арт»</span>
+            <span class="recog-col-result">3 место, номинация «Человек и его мир», скульптура</span>
+            <span class="recog-row-arrow" aria-hidden="true">→</span>
+          </a>
+
+          <a href="/events/istanbul-festival/" class="recog-table-row">
+            <span class="recog-col-year">2026</span>
+            <span class="recog-col-name">XXVII Международный фестиваль культуры и искусств</span>
+            <span class="recog-col-place">Стамбул, Турция</span>
+            <span class="recog-col-result">Участие, диплом участника</span>
+            <span class="recog-row-arrow" aria-hidden="true">→</span>
+          </a>
         </div>
       </div>
     </div>
-
-    <div class="recog-photo-strip g12-span-12" aria-label="Фотографии выставок и событий">
-    <img class="recog-event-photo" src="/images/events/sig-event-02.webp" alt="Диплом за третье место на конкурсе UNITED BY ART, 2026" loading="lazy" decoding="async">
-    <img class="recog-event-photo" src="/images/events/home-events-feature-01.webp" alt="Вручение диплома на выставочном мероприятии, 2026" loading="lazy" decoding="async">
   </div>
+</section>
+
+<section class="bc-visit-band" id="workshop-visit" aria-labelledby="bc-visit-heading">
+  <div class="bc-visit-inner">
+    <div class="bc-visit-copy">
+      <h2 id="bc-visit-heading" class="bc-visit-title">Визит в мастерскую</h2>
+      <p class="bc-visit-text">Познакомьтесь с объектами и автором вживую. Визит по предварительной записи.</p>
+    </div>
+    <div class="bc-visit-actions">
+      <button type="button" class="bc-visit-btn bc-visit-btn--light"
+        data-form-title="Записаться на визит в мастерскую"
+        data-form-sub=""
+        onclick="window.openBycraftModal && window.openBycraftModal(event)">Записаться</button>
+      <a href="https://t.me/bycraft" target="_blank" rel="noopener" class="bc-visit-btn bc-visit-btn--outline">Написать в Telegram</a>
+    </div>
   </div>
 </section>
 <footer class="site-footer">
@@ -3047,5 +3381,44 @@ html body.page-home .cube-expo .lookbook-card-info {
 <script src="/js/bc-hall.js?v=6611a8b8" defer></script>
 <!-- BYCRAFT:HALLJS:END -->
 <script src="/js/bc-currency.js?v=4"></script>
+<script id="bc-ics-calendar-js">
+(function () {
+  document.addEventListener('click', function (e) {
+    var btn = e.target && e.target.closest ? e.target.closest('.recog-ics-btn') : null;
+    if (!btn) return;
+    var title = btn.getAttribute('data-ics-title') || 'BYCRAFT';
+    var start = btn.getAttribute('data-ics-start') || '';
+    var end = btn.getAttribute('data-ics-end') || '';
+    var loc = btn.getAttribute('data-ics-loc') || '';
+    var desc = btn.getAttribute('data-ics-desc') || '';
+    var fname = btn.getAttribute('data-ics-file') || 'bycraft-event.ics';
+    var uid = fname + '@bycraft.by';
+    var ics = [
+      'BEGIN:VCALENDAR',
+      'VERSION:2.0',
+      'PRODID:-//BYCRAFT//Events//RU',
+      'BEGIN:VEVENT',
+      'UID:' + uid,
+      'DTSTART:' + start,
+      'DTEND:' + end,
+      'SUMMARY:' + title,
+      'LOCATION:' + loc,
+      'DESCRIPTION:' + desc,
+      'URL:https://bycraft.by/events/',
+      'END:VEVENT',
+      'END:VCALENDAR'
+    ].join('\r\n');
+    var blob = new Blob([ics], { type: 'text/calendar;charset=utf-8' });
+    var url = URL.createObjectURL(blob);
+    var a = document.createElement('a');
+    a.href = url;
+    a.download = fname;
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    setTimeout(function () { URL.revokeObjectURL(url); }, 1000);
+  });
+})();
+</script>
 </body>
 </html>
