@@ -2649,6 +2649,71 @@ html body.page-home .cube-craft .craft-epigraph {
   }
 }
 /* === /HERO SPACING, LINK & CORMORANT EPIGRAPH === */
+
+/* === HERO PHOTO, SIZES, CTA WIDTH & QUOTE CENTER === */
+@media (min-width: 900px) {
+  html body.page-home .bc-hero .bc-hero__media {
+    min-height: clamp(580px, 76svh, 740px) !important;
+    margin-bottom: var(--bc-edge) !important;
+  }
+  html body.page-home .bc-hero .bc-hero__img {
+    object-position: center bottom !important;
+  }
+}
+html body.page-home .cube-expo .lookbook-card .lookbook-no {
+  font-size: 15px !important;
+  font-weight: 500 !important;
+  letter-spacing: 0.04em !important;
+  color: #2A211C !important;
+}
+html body.page-home .cube-expo .lookbook-card .lookbook-status {
+  font-size: 15px !important;
+  font-weight: 500 !important;
+  letter-spacing: 0.04em !important;
+}
+html body.page-home .cube-expo .lookbook-card .lookbook-dot {
+  width: 9px !important;
+  height: 9px !important;
+}
+html body.page-home .cube-expo .lookbook-card .lookbook-price-byn,
+html body.page-home .cube-expo .lookbook-card .lookbook-price .bc-price {
+  font-size: 13px !important;
+  font-weight: 400 !important;
+  color: #625B55 !important;
+}
+html body.page-home .cube-expo .lookbook-collection-cta a.lookbook-more.lookbook-more--collection {
+  width: var(--bc-chip-w, 20.5rem) !important;
+  max-width: 100% !important;
+  height: var(--bc-chip-h, 44px) !important;
+  padding: 0 20px !important;
+  border-radius: 0 !important;
+  box-sizing: border-box !important;
+  justify-content: center !important;
+}
+html body.page-home .cube-expo {
+  padding-bottom: 40px !important;
+}
+html body.page-home .cube-craft {
+  padding-top: 40px !important;
+}
+html body.page-home .cube-craft .craft-head {
+  margin: 0 0 80px !important;
+}
+@media (max-width: 899px) {
+  html body.page-home .cube-expo {
+    padding-bottom: 28px !important;
+  }
+  html body.page-home .cube-craft {
+    padding-top: 28px !important;
+  }
+  html body.page-home .cube-craft .craft-head {
+    margin: 0 0 56px !important;
+  }
+  html body.page-home .cube-expo .lookbook-collection-cta a.lookbook-more.lookbook-more--collection {
+    width: 100% !important;
+  }
+}
+/* === /HERO PHOTO, SIZES, CTA WIDTH & QUOTE CENTER === */
 </style>
 </head>
 <body class="page-home page-cube">
@@ -2750,6 +2815,15 @@ html body.page-home .cube-craft .craft-epigraph {
       </article>
 
       <article class="lookbook-card lookbook-card--span-4">
+        <a href="/works/" class="lookbook-card-link" aria-label="Смотреть все работы в коллекции">
+          <div class="lookbook-img">
+            <img class="lookbook-img-main" src="/images/works/work-247.jpg" alt="Скульптурная работа из сувеля берёзы в частной коллекции — работа № 247." loading="lazy">
+          </div>
+          <p class="lookbook-meta lookbook-meta--sold"><span class="lookbook-status lookbook-status--sold"><span class="lookbook-dot" aria-hidden="true"></span>ПРОДАНА</span></p>
+        </a>
+      </article>
+
+      <article class="lookbook-card lookbook-card--span-4">
         <a href="/works/work-192/" class="lookbook-card-link" aria-label="Работа LOT № 192 — подробнее">
           <div class="lookbook-img">
             <img class="lookbook-img-main" src="/images/works/work-192.jpg?v=2" alt="Низкая скульптурная чаша из сувеля берёзы на тёмной подставке, вид сбоку — работа № 192." loading="lazy">
@@ -2772,19 +2846,10 @@ html body.page-home .cube-craft .craft-epigraph {
           <p class="lookbook-meta lookbook-meta--sold"><span class="lookbook-status lookbook-status--sold"><span class="lookbook-dot" aria-hidden="true"></span>ПРОДАНА</span></p>
         </a>
       </article>
-
-      <article class="lookbook-card lookbook-card--span-4">
-        <a href="/works/" class="lookbook-card-link" aria-label="Смотреть все работы в коллекции">
-          <div class="lookbook-img">
-            <img class="lookbook-img-main" src="/images/works/work-247.jpg" alt="Скульптурная работа из сувеля берёзы в частной коллекции — работа № 247." loading="lazy">
-          </div>
-          <p class="lookbook-meta lookbook-meta--sold"><span class="lookbook-status lookbook-status--sold"><span class="lookbook-dot" aria-hidden="true"></span>ПРОДАНА</span></p>
-        </a>
-      </article>
     </div>
 
     <div class="lookbook-collection-cta g12-span-12">
-      <a href="/works/" class="lookbook-more lookbook-more--collection">Смотреть всю коллекцию <span class="lookbook-arrow" aria-hidden="true">→</span></a>
+      <a href="/works/" class="lookbook-more lookbook-more--collection">Смотреть всю коллекцию</a>
     </div>
 </div>
 </section>
@@ -3524,6 +3589,28 @@ html body.page-home .cube-craft .craft-epigraph {
     btn.textContent = 'Файл .ics скачан ✓';
     setTimeout(function () { btn.textContent = origText; }, 2500);
   });
+})();
+</script>
+<script id="bc-sync-collection-btn">
+(function () {
+  function syncWidth() {
+    var heroCta = document.querySelector('.bc-hero .bc-cta');
+    var colBtn = document.querySelector('.lookbook-collection-cta .lookbook-more--collection');
+    if (!heroCta || !colBtn) return;
+    if (window.innerWidth < 900) {
+      colBtn.style.removeProperty('width');
+      return;
+    }
+    var w = heroCta.getBoundingClientRect().width;
+    if (w > 100) {
+      colBtn.style.setProperty('width', w.toFixed(1) + 'px', 'important');
+    }
+  }
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', syncWidth);
+  else syncWidth();
+  window.addEventListener('load', syncWidth);
+  window.addEventListener('resize', syncWidth);
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(syncWidth);
 })();
 </script>
 </body>
