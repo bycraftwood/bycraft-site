@@ -2212,6 +2212,51 @@ html body.page-home .cube-expo .lookbook-card-info {
   }
 }
 /* === /HOME CARDS HOVER & HERO BYLINE === */
+
+/* === HOME EDITORIAL 7+5 AND 4+4+4 GRID === */
+@media (min-width: 900px) {
+  html body.page-home .cube-expo .lookbook {
+    display: grid !important;
+    grid-template-columns: repeat(12, minmax(0, 1fr)) !important;
+    column-gap: clamp(24px, 2vw, 30px) !important;
+    row-gap: clamp(72px, 6.5vw, 96px) !important;
+    align-items: start !important;
+  }
+  html body.page-home .cube-expo .lookbook-card--span-7 {
+    grid-column: span 7 !important;
+  }
+  html body.page-home .cube-expo .lookbook-card--span-5 {
+    grid-column: span 5 !important;
+  }
+  html body.page-home .cube-expo .lookbook-card--span-4 {
+    grid-column: span 4 !important;
+  }
+  html body.page-home .cube-expo .lookbook-card--span-7 .lookbook-img,
+  html body.page-home .cube-expo .lookbook-card--span-5 .lookbook-img {
+    aspect-ratio: auto !important;
+    height: clamp(380px, 37vw, 540px) !important;
+  }
+  html body.page-home .cube-expo .lookbook-card--span-4 .lookbook-img {
+    aspect-ratio: 4 / 5 !important;
+    height: auto !important;
+  }
+}
+@media (max-width: 899px) {
+  html body.page-home .cube-expo .lookbook {
+    grid-template-columns: 1fr !important;
+    row-gap: 44px !important;
+  }
+  html body.page-home .cube-expo .lookbook-card--span-7,
+  html body.page-home .cube-expo .lookbook-card--span-5,
+  html body.page-home .cube-expo .lookbook-card--span-4 {
+    grid-column: 1 / -1 !important;
+  }
+  html body.page-home .cube-expo .lookbook-card .lookbook-img {
+    aspect-ratio: 4 / 5 !important;
+    height: auto !important;
+  }
+}
+/* === /HOME EDITORIAL 7+5 AND 4+4+4 GRID === */
 </style>
 </head>
 <body class="page-home page-cube">
@@ -2279,22 +2324,7 @@ html body.page-home .cube-expo .lookbook-card-info {
     </div>
 
         <div class="lookbook g12-span-12">
-      <article class="lookbook-card">
-        <a href="/works/work-188/" class="lookbook-card-link" aria-label="Работа LOT № 188 — подробнее">
-          <div class="lookbook-img">
-            <img class="lookbook-img-main" src="/images/works/work-188.jpg" alt="Светлый скульптурный объект из сувеля берёзы с естественными полостями, вид сверху — работа № 188." loading="lazy">
-            <img class="lookbook-img-hover" src="/images/works/work-188-detail.jpg" alt="" aria-hidden="true" loading="lazy">
-          </div>
-          <div class="lookbook-card-info">
-            <div class="lookbook-card-copy">
-              <p class="lookbook-meta"><span class="lookbook-no">LOT №&nbsp;188</span><span class="lookbook-status lookbook-status--avail"><span class="lookbook-dot" aria-hidden="true"></span>ДОСТУПНА</span></p>
-              <p class="lookbook-price"><span class="bc-price lookbook-price-byn" data-byn="795&nbsp;BYN" data-rub="≈ 22&nbsp;800&nbsp;₽">795&nbsp;BYN</span></p>
-            </div>
-          </div>
-        </a>
-      </article>
-
-      <article class="lookbook-card">
+      <article class="lookbook-card lookbook-card--span-7">
         <a href="/works/work-197/" class="lookbook-card-link" aria-label="Работа LOT № 197 — подробнее">
           <div class="lookbook-img">
             <img class="lookbook-img-main" src="/images/works/work-197.jpg?v=4" alt="Композиция из чёрной и светлой деревянных форм на подставке — работа № 197." loading="lazy">
@@ -2309,7 +2339,22 @@ html body.page-home .cube-expo .lookbook-card-info {
         </a>
       </article>
 
-      <article class="lookbook-card">
+      <article class="lookbook-card lookbook-card--span-5">
+        <a href="/works/work-188/" class="lookbook-card-link" aria-label="Работа LOT № 188 — подробнее">
+          <div class="lookbook-img">
+            <img class="lookbook-img-main" src="/images/works/work-188.jpg" alt="Светлый скульптурный объект из сувеля берёзы с естественными полостями, вид сверху — работа № 188." loading="lazy">
+            <img class="lookbook-img-hover" src="/images/works/work-188-detail.jpg" alt="" aria-hidden="true" loading="lazy">
+          </div>
+          <div class="lookbook-card-info">
+            <div class="lookbook-card-copy">
+              <p class="lookbook-meta"><span class="lookbook-no">LOT №&nbsp;188</span><span class="lookbook-status lookbook-status--avail"><span class="lookbook-dot" aria-hidden="true"></span>ДОСТУПНА</span></p>
+              <p class="lookbook-price"><span class="bc-price lookbook-price-byn" data-byn="795&nbsp;BYN" data-rub="≈ 22&nbsp;800&nbsp;₽">795&nbsp;BYN</span></p>
+            </div>
+          </div>
+        </a>
+      </article>
+
+      <article class="lookbook-card lookbook-card--span-4">
         <a href="/works/work-192/" class="lookbook-card-link" aria-label="Работа LOT № 192 — подробнее">
           <div class="lookbook-img">
             <img class="lookbook-img-main" src="/images/works/work-192.jpg?v=2" alt="Низкая скульптурная чаша из сувеля берёзы на тёмной подставке, вид сбоку — работа № 192." loading="lazy">
@@ -2324,10 +2369,19 @@ html body.page-home .cube-expo .lookbook-card-info {
         </a>
       </article>
 
-      <article class="lookbook-card">
+      <article class="lookbook-card lookbook-card--span-4">
         <a href="/works/" class="lookbook-card-link" aria-label="Смотреть все работы в коллекции">
           <div class="lookbook-img">
             <img class="lookbook-img-main" src="/images/works/work-248.jpg" alt="Светлая скульптура из сувеля берёзы с естественными отверстиями, вид спереди — работа № 248." loading="lazy">
+          </div>
+          <p class="lookbook-meta lookbook-meta--sold"><span class="lookbook-status lookbook-status--sold"><span class="lookbook-dot" aria-hidden="true"></span>ПРОДАНА</span></p>
+        </a>
+      </article>
+
+      <article class="lookbook-card lookbook-card--span-4">
+        <a href="/works/" class="lookbook-card-link" aria-label="Смотреть все работы в коллекции">
+          <div class="lookbook-img">
+            <img class="lookbook-img-main" src="/images/works/work-247.jpg" alt="Скульптурная работа из сувеля берёзы в частной коллекции — работа № 247." loading="lazy">
           </div>
           <p class="lookbook-meta lookbook-meta--sold"><span class="lookbook-status lookbook-status--sold"><span class="lookbook-dot" aria-hidden="true"></span>ПРОДАНА</span></p>
         </a>
