@@ -15900,3 +15900,17 @@ html body .pd-price-row .bc-curr-bar--detail {
   }
 }
 /* === /CURRENCY SWITCHER BYN / RUB === */
+
+/* === FOOTER EQUAL NAV/CONTACTS GAPS === */
+@media (min-width: 900px) {
+  html body footer.site-footer .footer-grid-4 {
+    grid-template-columns: minmax(240px, 1fr) max-content max-content max-content !important;
+    column-gap: clamp(32px, 4.5vw, 68px) !important;
+  }
+  html body footer.site-footer .footer-col:first-child {
+    width: fit-content !important;
+    max-width: 100% !important;
+    padding-right: clamp(16px, 2.5vw, 40px) !important;
+  }
+}
+/* === /FOOTER EQUAL NAV/CONTACTS GAPS === */
