@@ -2652,12 +2652,23 @@ html body.page-home .cube-craft .craft-epigraph {
 
 /* === HERO PHOTO, SIZES, CTA WIDTH & QUOTE CENTER === */
 @media (min-width: 900px) {
+  html body.page-home .bc-hero {
+    min-height: 100vh !important;
+    min-height: 100svh !important;
+    padding-top: var(--bc-nav-h) !important;
+  }
+  html body.page-home .bc-hero .bc-hero__copy {
+    justify-content: flex-start !important;
+    padding-top: 80px !important;
+    padding-bottom: 64px !important;
+  }
   html body.page-home .bc-hero .bc-hero__media {
-    min-height: clamp(580px, 76svh, 740px) !important;
+    min-height: 420px !important;
+    height: auto !important;
     margin-bottom: var(--bc-edge) !important;
   }
   html body.page-home .bc-hero .bc-hero__img {
-    object-position: center bottom !important;
+    object-position: 50% 50% !important;
   }
 }
 html body.page-home .cube-expo .lookbook-card .lookbook-no {
