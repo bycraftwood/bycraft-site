@@ -6,7 +6,7 @@
   <title>Политика в отношении обработки персональных данных и cookie — BYCRAFT</title>
   <meta name="description" content="Политика BYCRAFT в отношении обработки персональных данных и использования файлов cookie. Редакция от 27 октября 2026 г.">
   <link rel="canonical" href="https://bycraft.by/privacy/">
-  <link rel="stylesheet" href="/css/style.css?v=2162">
+  <link rel="stylesheet" href="/css/style.css?v=2163">
   <style>
     .policy-page { max-width: 760px; margin: 0 auto; padding: 48px 0 96px; }
     .policy-page h1 {
@@ -262,38 +262,11 @@ html body.page-contacts a.btn-tg-solid {
       <p class="footer-legal">
         <a href="/privacy/">Политика конфиденциальности</a>
         <span class="footer-dot">·</span>
-        <a href="javascript:void(0)" onclick="window.bycraftOpenCookieSettings&&window.bycraftOpenCookieSettings()">Настройки файлов-cookie</a>
+        <button type="button" class="footer-cookie-btn" onclick="window.bycraftOpenCookieSettings&&window.bycraftOpenCookieSettings()">Настройки файлов-cookie</button>
       </p>
     </div>
   </div>
 </footer>
-
-<script id="nav-active-v1860">
-(function () {
-  var path = location.pathname.replace(/\/+$/, "") || "/";
-  document.querySelectorAll(".main-nav a.nav-link, .main-nav a.nav-link-btn").forEach(function (a) {
-    var href = a.getAttribute("href") || "";
-    if (href.indexOf("#") !== -1 && href.split("#")[0]) {
-      // how-to-buy: active only if hash matches
-      if (href.indexOf("#kak-kupit") !== -1 || href.indexOf("#how-to-buy") !== -1) {
-        if (path.indexOf("/works") !== -1 && location.hash && location.hash.indexOf("kak-kupit") !== -1) {
-          a.classList.add("is-active");
-        }
-        return;
-      }
-    }
-    var clean = href.split("#")[0].replace(/\/+$/, "") || "/";
-    if (clean === "/") {
-      if (path === "/" || path === "") a.classList.add("is-active");
-      return;
-    }
-    if (path === clean || path.indexOf(clean + "/") === 0) {
-      a.classList.add("is-active");
-      a.setAttribute("aria-current", "page");
-    }
-  });
-})();
-</script>
 
 
 <script id="bycraft-similar-title">

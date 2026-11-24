@@ -19,9 +19,10 @@
   <meta property="og:url" content="https://bycraft.by/">
   <meta property="og:image" content="https://bycraft.by/images/hero/hero-main.jpg">
   <meta property="og:image:width" content="1200">
-  <meta property="og:image:height" content="630">
+  <meta property="og:image:height" content="1500">
   <meta property="og:image:alt" content="Скульптурный арт-объект из берёзового сувеля с обжигом — BYCRAFT">
-  <meta property="og:locale" content="ru_RU">
+  <meta property="og:locale" content="ru_BY">
+  <meta property="og:locale:alternate" content="ru_RU">
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
@@ -206,7 +207,7 @@
 }
   </script>
   <link rel="icon" href="/images/favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="./css/style.css?v=2162">
+  <link rel="stylesheet" href="./css/style.css?v=2163">
 
 <!-- BYCRAFT 4:3 Photos & Modal Styles -->
 <style id="bc-unified-styles">
@@ -1468,7 +1469,7 @@ html body.page-home .cube-craft .craft-head {
     </div>
   </div>
 
-  <figure class="bc-hero__media" tabindex="0" aria-describedby="bc-light-hint" style="margin-left:16px;margin-right:16px">
+  <figure class="bc-hero__media" tabindex="0" aria-describedby="bc-light-hint">
     <div class="bc-hero__plate">
       <img class="bc-hero__img" src="/images/home/grid-01.jpg" alt="Скульптурный арт-объект № 197 из берёзового сувеля с обжигом" fetchpriority="high" decoding="async">
     </div>
@@ -1548,7 +1549,7 @@ html body.page-home .cube-craft .craft-head {
       <article class="lookbook-card lookbook-card--span-4">
         <a href="/works/" class="lookbook-card-link" aria-label="Смотреть все работы в коллекции">
           <div class="lookbook-img">
-            <img class="lookbook-img-main" src="/images/works/work-247.jpg" alt="Скульптурная работа из сувеля берёзы в частной коллекции — работа № 247." loading="lazy">
+            <img class="lookbook-img-main" src="/images/works/work-247.jpg" alt="Скульптурная работа из сувеля берёзы в частной коллекции (продана)" loading="lazy">
           </div>
           <p class="lookbook-meta lookbook-meta--sold"><span class="lookbook-status lookbook-status--sold"><span class="lookbook-dot" aria-hidden="true"></span>ПРОДАНА</span></p>
         </a>
@@ -1557,7 +1558,7 @@ html body.page-home .cube-craft .craft-head {
       <article class="lookbook-card lookbook-card--span-4">
         <a href="/works/" class="lookbook-card-link" aria-label="Смотреть все работы в коллекции">
           <div class="lookbook-img">
-            <img class="lookbook-img-main" src="/images/works/work-248.jpg?v=2" alt="Светлая скульптура из сувеля берёзы с естественными отверстиями, вид спереди — работа № 248." loading="lazy">
+            <img class="lookbook-img-main" src="/images/works/work-248.jpg?v=2" alt="Светлая скульптура из сувеля берёзы с естественными отверстиями (продана)" loading="lazy">
           </div>
           <p class="lookbook-meta lookbook-meta--sold"><span class="lookbook-status lookbook-status--sold"><span class="lookbook-dot" aria-hidden="true"></span>ПРОДАНА</span></p>
         </a>
@@ -1755,7 +1756,7 @@ html body.page-home .cube-craft .craft-head {
       <p class="footer-legal">
         <a href="/privacy/">Политика конфиденциальности</a>
         <span class="footer-sep"> · </span>
-        <a href="javascript:void(0)" onclick="window.bycraftOpenCookieSettings&&window.bycraftOpenCookieSettings()">Настройки файлов-cookie</a>
+        <button type="button" class="footer-cookie-btn" onclick="window.bycraftOpenCookieSettings&&window.bycraftOpenCookieSettings()">Настройки файлов-cookie</button>
       </p>
     </div>
   </div>
@@ -2177,33 +2178,6 @@ html body.page-home .cube-craft .craft-head {
       if (box) box.insertBefore(photo, box.firstChild);
     }
   };
-})();
-</script>
-
-<script id="nav-active-v1860">
-(function () {
-  var path = location.pathname.replace(/\/+$/, "") || "/";
-  document.querySelectorAll(".main-nav a.nav-link, .main-nav a.nav-link-btn").forEach(function (a) {
-    var href = a.getAttribute("href") || "";
-    if (href.indexOf("#") !== -1 && href.split("#")[0]) {
-      // how-to-buy: active only if hash matches
-      if (href.indexOf("#kak-kupit") !== -1 || href.indexOf("#how-to-buy") !== -1) {
-        if (path.indexOf("/works") !== -1 && location.hash && location.hash.indexOf("kak-kupit") !== -1) {
-          a.classList.add("is-active");
-        }
-        return;
-      }
-    }
-    var clean = href.split("#")[0].replace(/\/+$/, "") || "/";
-    if (clean === "/") {
-      if (path === "/" || path === "") a.classList.add("is-active");
-      return;
-    }
-    if (path === clean || path.indexOf(clean + "/") === 0) {
-      a.classList.add("is-active");
-      a.setAttribute("aria-current", "page");
-    }
-  });
 })();
 </script>
 

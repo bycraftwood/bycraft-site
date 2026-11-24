@@ -49,7 +49,7 @@
 }
   </script>
   <link rel="icon" href="/images/favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="../css/style.css?v=2162">
+  <link rel="stylesheet" href="../css/style.css?v=2163">
 
 
 
@@ -1120,7 +1120,7 @@ html body.page-contacts a.btn-tg-solid {
       <p class="footer-legal">
         <a href="/en/privacy/">Политика конфиденциальности</a>
         <span class="footer-dot">·</span>
-        <a href="javascript:void(0)" onclick="window.bycraftOpenCookieSettings&&window.bycraftOpenCookieSettings()">Настройки файлов-cookie</a>
+        <button type="button" class="footer-cookie-btn" onclick="window.bycraftOpenCookieSettings&&window.bycraftOpenCookieSettings()">Настройки файлов-cookie</button>
       </p>
     </div>
   </div>
@@ -1666,34 +1666,6 @@ html body.page-contacts a.btn-tg-solid {
   else { setTimeout(tr, 50); setTimeout(tr, 400); }
   var obs = new MutationObserver(tr);
   obs.observe(document.documentElement, { childList: true, subtree: true });
-})();
-</script>
-
-
-<script id="nav-active-v1860">
-(function () {
-  var path = location.pathname.replace(/\/+$/, "") || "/";
-  document.querySelectorAll(".main-nav a.nav-link, .main-nav a.nav-link-btn").forEach(function (a) {
-    var href = a.getAttribute("href") || "";
-    if (href.indexOf("#") !== -1 && href.split("#")[0]) {
-      // how-to-buy: active only if hash matches
-      if (href.indexOf("#kak-kupit") !== -1 || href.indexOf("#how-to-buy") !== -1) {
-        if (path.indexOf("/works") !== -1 && location.hash && location.hash.indexOf("kak-kupit") !== -1) {
-          a.classList.add("is-active");
-        }
-        return;
-      }
-    }
-    var clean = href.split("#")[0].replace(/\/+$/, "") || "/";
-    if (clean === "/") {
-      if (path === "/" || path === "") a.classList.add("is-active");
-      return;
-    }
-    if (path === clean || path.indexOf(clean + "/") === 0) {
-      a.classList.add("is-active");
-      a.setAttribute("aria-current", "page");
-    }
-  });
 })();
 </script>
 
