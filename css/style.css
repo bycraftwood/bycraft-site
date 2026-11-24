@@ -15956,3 +15956,50 @@ html body footer.site-footer button.footer-cookie-btn:focus-visible {
   }
 }
 /* === /FOOTER EQUAL NAV/CONTACTS GAPS === */
+
+/* === WORK DETAIL RUB DISCLAIMER & QUIET LINKS === */
+html body .pd-rub-disclaimer {
+  font-family: 'Manrope', sans-serif !important;
+  font-size: 12px !important;
+  font-weight: 400 !important;
+  line-height: 1.5 !important;
+  color: #625B55 !important;
+  margin: -8px 0 18px !important;
+}
+html body .pd-rub-disclaimer[hidden] {
+  display: none !important;
+}
+html body .pd-actions .pd-quiet-links {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  align-items: center !important;
+  gap: 8px 14px !important;
+  margin: 12px 0 0 !important;
+}
+html body .pd-actions .pd-quiet-link {
+  background: none !important;
+  border: none !important;
+  border-bottom: 1px solid rgba(26, 25, 24, 0.28) !important;
+  padding: 0 0 2px !important;
+  margin: 0 !important;
+  cursor: pointer !important;
+  font-family: 'Manrope', sans-serif !important;
+  font-size: 13px !important;
+  font-weight: 400 !important;
+  line-height: 1.4 !important;
+  color: #625B55 !important;
+  -webkit-text-fill-color: #625B55 !important;
+  text-decoration: none !important;
+  transition: color 0.2s ease, border-color 0.2s ease !important;
+}
+html body .pd-actions .pd-quiet-link:hover,
+html body .pd-actions .pd-quiet-link:focus-visible {
+  color: #B6452C !important;
+  -webkit-text-fill-color: #B6452C !important;
+  border-bottom-color: #B6452C !important;
+}
+html body .pd-actions .pd-quiet-sep {
+  color: #B9AEA1 !important;
+  font-size: 13px !important;
+}
+/* === /WORK DETAIL RUB DISCLAIMER & QUIET LINKS === */

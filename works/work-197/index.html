@@ -85,7 +85,7 @@
 }
   </script>
   <link rel="icon" href="/images/favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="../../css/style.css?v=2164">
+  <link rel="stylesheet" href="../../css/style.css?v=2165">
 
 
 
@@ -1119,6 +1119,7 @@ html body.page-contacts a.btn-tg-solid {
             <span class="bc-curr-note" data-bc-rub-note hidden>по ориентировочному курсу</span>
           </div>
         </div>
+      <p class="pd-rub-disclaimer" data-bc-rub-only hidden>Цена в российских рублях ориентировочная. Итоговая сумма определяется по курсу на день оплаты</p>
       <div class="pd-rule" aria-hidden="true"></div>
       <dl class="pd-specs">
         <div><dt>Материал</dt><dd>сувель берёзы, обжиг огнём</dd></div>
@@ -1132,6 +1133,11 @@ html body.page-contacts a.btn-tg-solid {
           data-work="197" data-title="Забронировать работу № 197">Забронировать работу</button>
         <a class="pd-btn-outline" href="https://t.me/bycraft_by?text=197" target="_blank" rel="noopener">Написать в Telegram</a>
         <p class="pd-reply">Ответим в течение часа</p>
+              <div class="pd-quiet-links">
+          <a href="tel:+375295507250" class="pd-quiet-link">Позвонить</a>
+          <span class="pd-quiet-sep" aria-hidden="true">·</span>
+          <button type="button" class="pd-quiet-link pd-share-btn" data-copy-url="https://bycraft.by/works/work-197/">Поделиться с дизайнером</button>
+        </div>
       </div>
       <div class="pd-acc pd-acc-simple">
         <p class="pd-ship-p">Бережная курьерская доставка «до двери»; стоимость и сроки зависят от габаритов работы и страны назначения. Изделия из сувеля не требуют дополнительного ухода.</p>
@@ -1456,7 +1462,7 @@ html body.page-contacts a.btn-tg-solid {
     } else if (m) {
       kind = "stock";
       formTitle = "Забронировать работу № " + num;
-      formSub = "Мы свяжемся с вами в течение рабочего дня";
+      formSub = "Работа бронируется на 48 часов. Мы свяжемся с вами в течение рабочего дня";
       successMsg = "Заявка по работе № " + num + " получена. Мы свяжемся с вами в течение рабочего дня";
     } else if (/pered-licom/.test(path)) {
       kind = "exhibit";
@@ -1572,8 +1578,6 @@ html body.page-contacts a.btn-tg-solid {
       '<input type="text" id="bc-name" name="name" required autocomplete="name" placeholder="Как к вам обращаться"></div>' +
       '<div class="bc-field"><label for="bc-contact">Контакт для связи</label>' +
       '<input type="text" id="bc-contact" name="contact" required placeholder="Telegram / Телефон / любой удобный способ связи"></div>' +
-      '<div class="bc-field"><label for="bc-role">Кто вы?</label>' +
-      '<input type="text" id="bc-role" name="role" placeholder="Клиент, дизайнер..."></div>' +
       countryBlock +
       '<div class="bc-field"><label for="bc-comment">Комментарий</label>' +
       '<textarea id="bc-comment" name="comment" rows="3" placeholder="' +
@@ -1644,7 +1648,7 @@ html body.page-contacts a.btn-tg-solid {
     var meta = pageMeta();
     var name = ((document.getElementById("bc-name") || {}).value || "").trim();
     var contact = ((document.getElementById("bc-contact") || {}).value || "").trim();
-    var role = ((document.getElementById("bc-role") || {}).value || "").trim();
+    var role = "";
     var comment = ((document.getElementById("bc-comment") || {}).value || "").trim();
     var country = ((document.getElementById("bc-country") || {}).value || "").trim();
     var countryOther = ((document.getElementById("bc-country-other") || {}).value || "").trim();
@@ -1821,6 +1825,41 @@ html body.page-contacts a.btn-tg-solid {
 </script>
 
 <script src="/js/bc-nav.js?v=1" defer></script>
-<script src="/js/bc-currency.js?v=5"></script>
+<script src="/js/bc-currency.js?v=6"></script>
+<script id="bc-pd-share-js">
+(function () {
+  document.addEventListener('click', function (e) {
+    var btn = e.target && e.target.closest ? e.target.closest('.pd-share-btn') : null;
+    if (!btn) return;
+    var url = btn.getAttribute('data-copy-url') || window.location.href.split('#')[0];
+    var origText = btn.getAttribute('data-orig-text') || btn.textContent;
+    btn.setAttribute('data-orig-text', origText);
+
+    function showCopied() {
+      btn.textContent = 'Ссылка скопирована ✓';
+      setTimeout(function () { btn.textContent = origText; }, 2500);
+    }
+
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(url).then(showCopied, fallbackCopy);
+    } else {
+      fallbackCopy();
+    }
+
+    function fallbackCopy() {
+      var ta = document.createElement('textarea');
+      ta.value = url;
+      ta.setAttribute('readonly', '');
+      ta.style.position = 'fixed';
+      ta.style.left = '-9999px';
+      document.body.appendChild(ta);
+      ta.select();
+      try { document.execCommand('copy'); } catch (err) {}
+      document.body.removeChild(ta);
+      showCopied();
+    }
+  });
+})();
+</script>
 </body>
 </html>

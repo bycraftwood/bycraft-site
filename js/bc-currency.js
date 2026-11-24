@@ -151,6 +151,11 @@
       notes[k].hidden = (curr !== 'RUB');
     }
 
+    var rubOnly = document.querySelectorAll('[data-bc-rub-only]');
+    for (var m = 0; m < rubOnly.length; m++) {
+      rubOnly[m].hidden = (curr !== 'RUB');
+    }
+
     scheduleAlign();
   }
 
