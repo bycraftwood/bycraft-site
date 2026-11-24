@@ -16003,3 +16003,55 @@ html body .pd-actions .pd-quiet-sep {
   font-size: 13px !important;
 }
 /* === /WORK DETAIL RUB DISCLAIMER & QUIET LINKS === */
+
+/* === WORK DETAIL DELIVERY LIST & 4:5 OTHER WORKS === */
+html body main section.product-detail .pd-acc-simple .pd-ship-lead {
+  font-family: 'Manrope', sans-serif !important;
+  font-size: 14px !important;
+  font-weight: 500 !important;
+  line-height: 1.5 !important;
+  color: #1A1918 !important;
+  margin: 0 0 10px !important;
+}
+html body main section.product-detail .pd-acc-simple .pd-ship-list {
+  list-style: none !important;
+  margin: 0 0 14px !important;
+  padding: 0 !important;
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 4px !important;
+}
+html body main section.product-detail .pd-acc-simple .pd-ship-list li {
+  font-family: 'Manrope', sans-serif !important;
+  font-size: 14px !important;
+  font-weight: 400 !important;
+  line-height: 1.5 !important;
+  color: #625B55 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+html body main section.product-detail .pd-acc-simple .pd-ship-p:not(.pd-ship-lead) {
+  font-size: 14px !important;
+  line-height: 1.55 !important;
+  color: #625B55 !important;
+  margin: 0 0 10px !important;
+}
+html body main section.product-detail .pd-acc-simple .pd-ship-p:last-child {
+  margin-bottom: 0 !important;
+}
+html body main section.product-detail .pd-other .pd-other-img {
+  aspect-ratio: 4 / 5 !important;
+  width: 100% !important;
+  height: auto !important;
+  overflow: hidden !important;
+  background: #F4F1EC !important;
+}
+html body main section.product-detail .pd-other .pd-other-img img {
+  aspect-ratio: 4 / 5 !important;
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  object-position: center !important;
+  display: block !important;
+}
+/* === /WORK DETAIL DELIVERY LIST & 4:5 OTHER WORKS === */
