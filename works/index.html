@@ -50,7 +50,7 @@
 }
   </script>
   <link rel="icon" href="/images/favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="../css/style.css?v=2163">
+  <link rel="stylesheet" href="../css/style.css?v=2164">
 
 
 
@@ -1385,6 +1385,70 @@ html body.bc-inner-nav .works-six-grid .work-card .lookbook-price .bc-price {
   color: #625B55 !important;
 }
 /* === /WORKS CARD META LARGER THAN PRICE === */
+
+/* === WORKS TELEGRAM CTA === */
+html body.bc-inner-nav main section.works-tg-cta {
+  margin: 0 0 56px !important;
+}
+html body.bc-inner-nav main section.works-tg-cta .works-tg-cta-inner {
+  border-top: 1px solid #E5E2DC !important;
+  padding-top: 40px !important;
+  display: flex !important;
+  flex-wrap: wrap !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  gap: 20px 36px !important;
+}
+html body.bc-inner-nav main section.works-tg-cta .works-tg-cta-text {
+  font-family: Manrope, sans-serif !important;
+  font-size: 16px !important;
+  font-weight: 400 !important;
+  line-height: 1.55 !important;
+  color: #1A1918 !important;
+  margin: 0 !important;
+  max-width: 48ch !important;
+}
+html body.bc-inner-nav main section.works-tg-cta a.works-tg-cta-btn {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  min-height: 44px !important;
+  padding: 0 24px !important;
+  background: #1A1918 !important;
+  background-color: #1A1918 !important;
+  color: #F7F6F2 !important;
+  -webkit-text-fill-color: #F7F6F2 !important;
+  font-family: Manrope, sans-serif !important;
+  font-size: 14px !important;
+  font-weight: 600 !important;
+  letter-spacing: 0.02em !important;
+  text-decoration: none !important;
+  border-radius: 0 !important;
+  box-sizing: border-box !important;
+  transition: background-color 0.25s ease !important;
+}
+html body.bc-inner-nav main section.works-tg-cta a.works-tg-cta-btn:hover,
+html body.bc-inner-nav main section.works-tg-cta a.works-tg-cta-btn:focus-visible {
+  background: #2A211C !important;
+  background-color: #2A211C !important;
+  color: #F7F6F2 !important;
+  -webkit-text-fill-color: #F7F6F2 !important;
+}
+@media (max-width: 899px) {
+  html body.bc-inner-nav main section.works-tg-cta {
+    margin-bottom: 40px !important;
+  }
+  html body.bc-inner-nav main section.works-tg-cta .works-tg-cta-inner {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    padding-top: 32px !important;
+    gap: 18px !important;
+  }
+  html body.bc-inner-nav main section.works-tg-cta a.works-tg-cta-btn {
+    width: 100% !important;
+  }
+}
+/* === /WORKS TELEGRAM CTA === */
 </style>
 </head>
 <body class="bc-inner-nav">
@@ -1434,14 +1498,6 @@ html body.bc-inner-nav .works-six-grid .work-card .lookbook-price .bc-price {
             <span class="bc-curr-sep" aria-hidden="true">·</span>
             <button type="button" class="bc-curr-btn" data-bc-curr="RUB" aria-pressed="false">RUB</button>
           </div>
-        </div>
-      </div>
-      <div class="works-filter-row" role="group" aria-label="Размер работы">
-        <span class="works-filter-label">РАЗМЕР:</span>
-        <div class="works-filter-list">
-          <button type="button" class="works-filter-item" data-size="s" aria-pressed="false">до 40 см</button>
-          <button type="button" class="works-filter-item" data-size="m" aria-pressed="false">40-50 см</button>
-          <button type="button" class="works-filter-item" data-size="l" aria-pressed="false">более 50 см</button>
         </div>
       </div>
     </div>
@@ -1546,6 +1602,13 @@ html body.bc-inner-nav .works-six-grid .work-card .lookbook-price .bc-price {
         <button type="button" id="works-filter-reset" class="works-filter-reset">Сбросить фильтры</button>
       </div>
     </section>
+<section class="container works-tg-cta">
+  <div class="works-tg-cta-inner">
+    <p class="works-tg-cta-text">Если вы не нашли работу, которая откликнулась, переходите в наш Telegram-канал</p>
+    <a href="https://t.me/bycraft" target="_blank" rel="noopener" class="works-tg-cta-btn">Подписаться на новые работы</a>
+  </div>
+</section>
+
 <section class="container geography-section" id="geography">
       <p class="geo-before-intro">Работы BYCRAFT уехали в 24 страны мира: их покупают для себя и дарят близким</p>
       <h2 class="geography-title">География работ</h2>
@@ -2468,21 +2531,15 @@ html body.bc-inner-nav .works-six-grid .work-card .lookbook-price .bc-price {
     if (!grid) return;
     var cards = Array.prototype.slice.call(grid.querySelectorAll('.work-card[data-cat]'));
     var statusBtns = Array.prototype.slice.call(document.querySelectorAll('.works-filter-item[data-status]'));
-    var sizeBtns = Array.prototype.slice.call(document.querySelectorAll('.works-filter-item[data-size]'));
     var emptyEl = document.getElementById('works-filter-empty');
     var resetBtn = document.getElementById('works-filter-reset');
-
     var activeStatus = 'all';
-    var activeSize = '';
 
     function applyFilters() {
       var visible = 0;
       cards.forEach(function (card) {
         var cat = card.getAttribute('data-cat') || '';
-        var sz = card.getAttribute('data-size') || '';
-        var okStatus = (activeStatus === 'all') || (cat === activeStatus);
-        var okSize = (!activeSize) || (sz === activeSize);
-        var show = okStatus && okSize;
+        var show = (activeStatus === 'all') || (cat === activeStatus);
         card.style.display = show ? '' : 'none';
         if (show) visible++;
       });
@@ -2501,31 +2558,13 @@ html body.bc-inner-nav .works-six-grid .work-card .lookbook-price .bc-price {
       });
     });
 
-    sizeBtns.forEach(function (btn) {
-      btn.addEventListener('click', function () {
-        var val = btn.getAttribute('data-size') || '';
-        activeSize = (activeSize === val) ? '' : val;
-        sizeBtns.forEach(function (b) {
-          var isOn = (b.getAttribute('data-size') === activeSize);
-          b.classList.toggle('is-active', isOn);
-          b.setAttribute('aria-pressed', isOn ? 'true' : 'false');
-        });
-        applyFilters();
-      });
-    });
-
     if (resetBtn) {
       resetBtn.addEventListener('click', function () {
         activeStatus = 'all';
-        activeSize = '';
         statusBtns.forEach(function (b) {
           var isOn = b.getAttribute('data-status') === 'all';
           b.classList.toggle('is-active', isOn);
           b.setAttribute('aria-pressed', isOn ? 'true' : 'false');
-        });
-        sizeBtns.forEach(function (b) {
-          b.classList.remove('is-active');
-          b.setAttribute('aria-pressed', 'false');
         });
         applyFilters();
       });
