@@ -3,7 +3,7 @@
   'use strict';
 
   var STORAGE_KEY = 'bc_currency';
-  var RATE_CACHE_KEY = 'bc_rate_cache_v1';
+  var RATE_CACHE_KEY = 'bc_rate_cache_v2';
   var CACHE_TTL_MS = 6 * 3600 * 1000;
 
   var RU_TZ = {
@@ -52,7 +52,7 @@
 
   function formatRubAmount(bynAmount, rate) {
     var raw = bynAmount * rate;
-    var rounded = Math.round(raw / 100) * 100;
+    var rounded = Math.round(raw / 10) * 10;
     return String(rounded).replace(/\B(?=(\d{3})+(?!\d))/g, '\u00a0');
   }
 

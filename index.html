@@ -1422,6 +1422,14 @@ html body.page-home .cube-craft .craft-head {
   }
 }
 /* === /HERO PHOTO, SIZES, CTA WIDTH & QUOTE CENTER === */
+
+/* === EVENT DATE 2026 MOBILE FIT === */
+@media (max-width: 899px) {
+  html body.page-home .cube-recog .recog-upcoming-date {
+    font-size: clamp(32px, 8.2vw, 38px) !important;
+  }
+}
+/* === /EVENT DATE 2026 MOBILE FIT === */
 </style>
 </head>
 <body class="page-home page-cube">
@@ -1451,7 +1459,7 @@ html body.page-home .cube-craft .craft-head {
       <span class="bc-line bc-r" style="--d:2.55s">Создано природой.</span>
       <span class="bc-line bc-r" style="--d:2.67s">Завершено человеком.</span>
     </h1>
-    <p class="bc-hero__sub bc-r" style="--d:2.9s">Скульптурные арт-объекты из сувеля берёзы. Природа не создаёт дубликатов. Каждая работа существует в одном экземпляре.</p>
+    <p class="bc-hero__sub bc-r" style="--d:2.9s">Скульптурные арт-объекты из сувеля берёзы.<br>Каждая работа существует в одном экземпляре.</p>
     <div class="bc-hero__actions bc-r" style="--d:3.2s">
       <a class="bc-cta" href="/works/">
         <span>Смотреть коллекцию</span>
@@ -1482,7 +1490,7 @@ html body.page-home .cube-craft .craft-head {
   <div class="g12">
 
         <div class="bc-curr-bar g12-span-12">
-      <span class="bc-curr-note" data-bc-rub-note hidden>по курсу на 17.11.2026</span>
+      <span class="bc-curr-note" data-bc-rub-note hidden>по ориентировочному курсу</span>
       <div class="bc-curr-switch" role="group" aria-label="Валюта">
         <span class="bc-curr-label">ВАЛЮТА</span>
         <button type="button" class="bc-curr-btn is-active" data-bc-curr="BYN" aria-pressed="true">BYN</button>
@@ -1594,15 +1602,15 @@ html body.page-home .cube-craft .craft-head {
           <img src="/images/workshop/process-02.jpg?v=6" alt="Вываривание сувеля в котле на открытом огне, мастерская на улице." loading="lazy"
                onerror="this.onerror=null;this.src='/images/home/grid-02.jpg'">
         </div>
-        <h3 class="craft-step-num">02 · 8 ЧАСОВ ВЫВАРИВАНИЯ</h3>
-        <p class="craft-step-text">Древесину вываривают в насыщенном солевом не менее 8 часов и сушат месяцами: так скульптура обретает каменную плотность и сохраняет форму.</p>
+        <h3 class="craft-step-num">02 · ВЫВАРИВАНИЕ</h3>
+        <p class="craft-step-text">Древесину вываривают в насыщенном солевом растворе не менее 8 часов и сушат месяцами: так скульптура обретает каменную плотность и сохраняет форму.</p>
       </article>
       <article class="craft-step">
         <div class="craft-photo">
           <img src="/images/workshop/process-03.jpg?v=6" alt="Ручная обработка сувеля инструментом, крупный план рук мастера." loading="lazy"
                onerror="this.onerror=null;this.src='/images/home/grid-03.jpg'">
         </div>
-        <h3 class="craft-step-num">03 · РУЧНАЯ РАБОТА</h3>
+        <h3 class="craft-step-num">03 · РУЧНАЯ ОБРАБОТКА</h3>
         <p class="craft-step-text">От грубой коры до идеально гладкой поверхности: молоток, бензопила, болгарка, 8 этапов шлифовки. Финал, обжиг огнём, проявляет рисунок и глубину дерева.</p>
       </article>
     </div>
@@ -1618,7 +1626,7 @@ html body.page-home .cube-craft .craft-head {
 
       <div class="recog-upcoming-grid">
         <article class="recog-upcoming-card">
-          <p class="recog-upcoming-date">10–13 дек</p>
+          <p class="recog-upcoming-date">10–13 дек 2026</p>
           <p class="recog-upcoming-venue">Минск · «Чароўны Млын», БелЭкспо</p>
           <p class="recog-upcoming-meta">Пр. Победителей, 14</p>
           <p class="recog-upcoming-meta">10 дек: 12:00–19:00 · 11, 12 дек: 11:00–19:30 · 13 дек: 11:00–18:00</p>
@@ -1635,7 +1643,7 @@ html body.page-home .cube-craft .craft-head {
         </article>
 
         <article class="recog-upcoming-card">
-          <p class="recog-upcoming-date">26–27 дек</p>
+          <p class="recog-upcoming-date">26–27 дек 2026</p>
           <p class="recog-upcoming-venue">Москва · ArtFlection, Амбер Плаза</p>
           <p class="recog-upcoming-meta">Ул. Краснопролетарская, 36</p>
           <p class="recog-upcoming-meta">12:00–20:00</p>
@@ -2255,7 +2263,7 @@ html body.page-home .cube-craft .craft-head {
 <!-- BYCRAFT:HALLJS:START -->
 <script src="/js/bc-hall.js?v=6611a8b8" defer></script>
 <!-- BYCRAFT:HALLJS:END -->
-<script src="/js/bc-currency.js?v=4"></script>
+<script src="/js/bc-currency.js?v=5"></script>
 <script id="bc-ics-calendar-js">
 (function () {
   document.addEventListener('click', function (e) {
