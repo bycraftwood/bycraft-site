@@ -1817,6 +1817,20 @@ html body.page-home .bc-hero .bc-hero__dim-left span {
   background: #9E988E !important;
 }
 /* === /HERO DIMENSION TICKS FIX === */
+
+/* === HERO RIGHT COPY 40-64PX SPACING === */
+@media (min-width: 900px) {
+  html body.page-home .bc-hero .bc-hero__copy {
+    justify-content: center !important;
+  }
+  html body.page-home .bc-hero .bc-hero__sub {
+    margin: 0 !important;
+  }
+  html body.page-home .bc-hero a.bc-hero__sig {
+    margin: clamp(40px, 5vw, 64px) 0 24px !important;
+  }
+}
+/* === /HERO RIGHT COPY 40-64PX SPACING === */
 </style>
 </head>
 <body class="page-home page-cube">
