@@ -13,29 +13,6 @@
 
 .bc-sr{position:absolute!important;width:1px;height:1px;margin:-1px;padding:0;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}
 
-/* ---------- 0. ВХОД ---------- */
-.bc-entry{position:fixed;inset:0;z-index:1000;pointer-events:none;display:none}
-html.bc-intro .bc-entry{display:block;animation:bcEntryGone 0s linear 3.3s forwards}
-.bc-entry__top,.bc-entry__bot{position:absolute;left:0;right:0;height:50.2%;background:var(--bc-paper);will-change:transform}
-.bc-entry__top{top:0}
-.bc-entry__bot{bottom:0}
-html.bc-intro .bc-entry__top{animation:bcUp 0.95s cubic-bezier(.76,0,.24,1) 2.3s forwards}
-html.bc-intro .bc-entry__bot{animation:bcDown 0.95s cubic-bezier(.76,0,.24,1) 2.3s forwards}
-.bc-entry__line{position:absolute;left:0;top:50%;width:0;height:1px;margin-top:-.5px;
-  background:linear-gradient(90deg,#1A1918 0,#1A1918 94%,#8A3F1B 100%);
-  animation:bcBurn 1.8s cubic-bezier(.45,.05,.25,1) 0.3s forwards,bcLineOut .15s linear 2.3s forwards}
-@keyframes bcBurn{from{width:0}to{width:100%}}
-@keyframes bcLineOut{to{opacity:0}}
-@keyframes bcUp{to{transform:translateY(-101%)}}
-@keyframes bcDown{to{transform:translateY(101%)}}
-@keyframes bcEntryGone{to{visibility:hidden}}
-@keyframes bcCurtainFade{to{opacity:0}}
-
-/* ---------- Появление элементов ---------- */
-@keyframes bcRise{from{opacity:0;transform:translateY(14px);filter:blur(6px)}to{opacity:1;transform:none;filter:none}}
-@keyframes bcFade{from{opacity:0}to{opacity:1}}
-html.bc-intro .bc-r{opacity:0;animation:bcRise .9s cubic-bezier(.2,.7,.2,1) both;animation-delay:var(--d,0s)}
-
 /* ---------- Навигация ---------- */
 .bc-nav{position:fixed;top:0;left:0;right:0;z-index:50;height:var(--bc-nav-h);box-sizing:border-box;
   display:flex;align-items:center;justify-content:space-between;
@@ -93,100 +70,49 @@ html.bc-intro .bc-r{opacity:0;animation:bcRise .9s cubic-bezier(.2,.7,.2,1) both
 .bc-hero *,.bc-hero *::before,.bc-hero *::after{box-sizing:border-box}
 
 .bc-hero__copy{padding:26px clamp(16px,4vw,72px) 36px}
-.bc-hero__byline{margin:0 0 22px;font:500 11.5px/1.3 var(--bc-mono);letter-spacing:.06em;text-transform:uppercase;color:rgba(26,25,24,.7)}
+.bc-hero__byline{margin:0 0 22px;font:600 16px/1.3 var(--bc-sans);letter-spacing:.05em;color:rgba(26,25,24,.75)}
 .bc-hero__title{margin:0 0 20px;font-family:var(--bc-serif);font-weight:500;
   font-size:clamp(2.5rem,1rem + 4.2vw,5.25rem);line-height:1.02;letter-spacing:-.01em;
-  color:var(--bc-ink);text-wrap:balance;overflow-wrap:break-word}
+  color:var(--bc-ink);overflow-wrap:break-word}
 .bc-hero__title .bc-line{display:block}
 .bc-hero__sub{margin:0 0 28px;max-width:46ch;font-size:1rem;line-height:1.6;font-weight:400;color:rgba(26,25,24,.8)}
 
-/* CTA: высота и ширина = подписи к фото; hover: кнопка #2A211C, текст светлый, стрелка #B6452C (уголёк) */
-.bc-cta{display:flex;align-items:center;justify-content:space-between;align-self:flex-start;gap:16px;
-  width:var(--bc-chip-w);max-width:100%;height:var(--bc-chip-h);padding:0 16px;
+/* CTA: без привязки к ширине подписи */
+.bc-cta{display:inline-flex;align-items:center;justify-content:center;gap:16px;
+  min-width:240px;max-width:100%;height:var(--bc-chip-h);padding:0 28px;
   background:#1A1918;color:var(--bc-paper);font:600 14px/1 var(--bc-sans);letter-spacing:.02em;
   text-decoration:none;transition:background-color .3s ease}
 .bc-cta:visited{color:var(--bc-paper)}
-.bc-cta svg{flex:none;color:currentColor;transition:transform .35s cubic-bezier(.2,.7,.2,1),color .3s ease}
 @media (hover:hover){
   .bc-cta:hover{background:#2A211C;color:var(--bc-paper)}
-  .bc-cta:hover svg{color:#B6452C;transform:translateX(5px)}
 }
 .bc-cta:active{background:#2A211C;color:var(--bc-paper)}
-.bc-cta:active svg{color:#B6452C}
 .bc-cta:focus-visible{outline:2px solid var(--bc-ink);outline-offset:4px;background:#2A211C;color:var(--bc-paper)}
-.bc-cta:focus-visible svg{color:#B6452C}
 
-/* Фото-«пластина» */
+/* Видео-блок */
 .bc-hero__media{order:-1;position:relative;margin:0 16px;height:clamp(280px,46vh,520px);height:clamp(280px,46svh,520px);
-  overflow:hidden;background:radial-gradient(ellipse at 40% 35%,#5a4636 0%,#2a211b 55%,#14100d 100%);
-  --lx:38%;--ly:40%;contain:paint}
-.bc-hero__media:focus-visible{outline:2px solid var(--bc-ink);outline-offset:4px}
-.bc-hero__plate{position:absolute;inset:0;transform-origin:50% 50%;animation:bcBreath 1.65s ease-in-out infinite alternate}
-html.bc-intro .bc-hero__plate{animation-delay:3.85s}
-@keyframes bcBreath{from{transform:scale(1)}to{transform:scale(1.008)}}
-.bc-hero__img{display:block;width:100%;height:100%;object-fit:cover;object-position:50% 50%}
-html.bc-intro .bc-hero__img{animation:bcImgIn 1.9s cubic-bezier(.2,.7,.2,1) 2.15s both}
-@keyframes bcImgIn{from{transform:scale(1.07)}to{transform:none}}
+  overflow:hidden;background:#1A1815;contain:paint}
+.bc-hero__plate{position:absolute;inset:0}
+.bc-hero__img,.bc-hero__video{display:block;width:100%;height:100%;object-fit:cover;object-position:50% 50%}
 
-/* Свет, управляемый курсором */
-.bc-hero__shade,.bc-hero__glow{position:absolute;inset:0;pointer-events:none}
-.bc-hero__shade{background:radial-gradient(ellipse 90% 90% at var(--lx) var(--ly),rgba(16,12,9,0) 0%,rgba(16,12,9,.42) 75%)}
-.bc-hero__glow{mix-blend-mode:soft-light;background:radial-gradient(ellipse 40% 40% at var(--lx) var(--ly),rgba(255,226,186,.42),rgba(255,226,186,0))}
-
-/* Подпись к фото: высота = высоте кнопки */
+/* Подпись к медиа */
 .bc-hero__caption{position:absolute;left:0;bottom:0;z-index:3;margin:0;max-width:100%;
   display:flex;align-items:center;height:var(--bc-chip-h);padding:0 16px;white-space:nowrap;overflow:hidden;
-  background:var(--bc-paper);color:var(--bc-ink);font:500 11.5px/1 var(--bc-mono);letter-spacing:.06em;text-transform:uppercase}
+  background:var(--bc-paper);color:var(--bc-ink);font:500 12px/1 var(--bc-sans);letter-spacing:.05em;text-transform:uppercase}
 @media (max-width:380px){
   .bc-hero__caption{padding:0 10px;font-size:10px;letter-spacing:.03em}
-  .bc-cta{padding:0 10px}
+  .bc-cta{padding:0 16px}
 }
 
 @media (min-width:900px){
   .bc-hero{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
-  .bc-hero__copy{display:flex;flex-direction:column;justify-content:flex-end;
-    padding:0 clamp(24px,4vw,72px) var(--bc-edge)}
+  .bc-hero__copy{display:flex;flex-direction:column;justify-content:flex-start;
+    padding:80px clamp(24px,4vw,72px) 64px}
   .bc-hero__byline{margin-bottom:26px}
   .bc-hero__title{margin-bottom:24px}
   .bc-hero__sub{margin-bottom:36px;font-size:1.0625rem}
   .bc-hero__media{order:0;height:auto;min-height:420px;margin:16px var(--bc-edge) var(--bc-edge) 0}
 }
-
-/* Уменьшенное движение: вход остаётся, но без движения: линия уже проведена и плавно гаснет */
-@media (prefers-reduced-motion:reduce){
-  .bc-hero__plate{animation:none}
-  html.bc-intro .bc-hero__img{animation:none}
-  html.bc-intro .bc-entry{animation:bcEntryGone 0s linear 1.5s forwards}
-  html.bc-intro .bc-entry__line{width:100%;animation:bcLineOut .3s linear .7s forwards}
-  html.bc-intro .bc-entry__top,html.bc-intro .bc-entry__bot{animation:bcCurtainFade .6s ease .8s forwards}
-  html.bc-intro .bc-r{animation:bcFade .6s ease .8s both}
-}
-
-/* === GEIST MONO TRACKING 0.04EM === */
-html body .font-mono,
-html body .geist-meta,
-html body .sec-label,
-html body .expo-kicker,
-html body .craft-kicker,
-html body .recog-kicker,
-html body .lookbook-meta,
-html body .lookbook-no,
-html body .lookbook-status,
-html body .cube-caption,
-html body .craft-step-num,
-html body .craft-epigraph-author,
-html body .recog-item-year,
-html body .recog-event-tag,
-html body .cta-foot,
-html body .ex-kicker,
-html body .pd-spec dt,
-html body .specs dt,
-html body .bc-hero__byline,
-html body .bc-hero__caption,
-html body .bc-lang {
-  letter-spacing: 0.04em !important;
-}
-/* === /GEIST MONO TRACKING 0.04EM === */
 
 /* === GLOBAL BC-NAV UNIFIED HEADER === */
 html body .bc-nav {

@@ -364,9 +364,9 @@ img { max-width: 100%; }
 </style>
 
 <!-- BYCRAFT:HEAD:START -->
-<script>(function(){var d=document.documentElement;d.classList.add('bc-js');d.classList.add('bc-intro');})();</script>
-<link rel="preload" as="image" href="/images/home/grid-01.jpg" fetchpriority="high">
-<link rel="stylesheet" href="/css/bc-hero.css?v=b71d114f">
+<script>document.documentElement.classList.add('bc-js');</script>
+<link rel="preload" as="image" href="/images/home/grid-01.webp" type="image/webp" fetchpriority="high">
+<link rel="stylesheet" href="/css/bc-hero.css?v=b71d114g">
 <!-- BYCRAFT:HEAD:END -->
 <!-- BYCRAFT:HALLCSS:START -->
 <link rel="stylesheet" href="/css/bc-hall.css?v=49d4040c">
@@ -1435,9 +1435,7 @@ html body.page-home .cube-craft .craft-head {
 </head>
 <body class="page-home page-cube">
 <!-- BYCRAFT:BODY:START -->
-<div class="bc-entry" aria-hidden="true"><i class="bc-entry__top"></i><i class="bc-entry__bot"></i><i class="bc-entry__line"></i></div>
-
-<header class="bc-nav bc-r" style="--d:3.25s">
+<header class="bc-nav">
   <a class="bc-nav__brand" href="/" aria-label="BYCRAFT: на главную">BYCRAFT</a>
   <button class="bc-nav__toggle" type="button" aria-expanded="false" aria-controls="bc-menu" aria-label="Открыть меню"><i></i><i></i></button>
   <nav class="bc-nav__menu" id="bc-menu" aria-label="Основная навигация">
@@ -1455,13 +1453,13 @@ html body.page-home .cube-craft .craft-head {
 
 <section class="bc-hero" aria-labelledby="bc-h1">
   <div class="bc-hero__copy">
-    <p class="bc-hero__byline bc-r" style="--d:2.45s">Атрош Валентин · Минск</p>
+    <p class="bc-hero__byline">Атрош Валентин · Минск</p>
     <h1 class="bc-hero__title" id="bc-h1">
-      <span class="bc-line bc-r" style="--d:2.55s">Создано природой.</span>
-      <span class="bc-line bc-r" style="--d:2.67s">Завершено человеком.</span>
+      <span class="bc-line">Создано природой.</span>
+      <span class="bc-line">Завершено человеком.</span>
     </h1>
-    <p class="bc-hero__sub bc-r" style="--d:2.9s">Скульптурные арт-объекты из сувеля берёзы.<br>Каждая работа существует в одном экземпляре.</p>
-    <div class="bc-hero__actions bc-r" style="--d:3.2s">
+    <p class="bc-hero__sub">Скульптурные арт-объекты из сувеля берёзы.<br>Каждая работа существует в одном экземпляре.</p>
+    <div class="bc-hero__actions">
       <a class="bc-cta" href="/works/">
         <span>Смотреть коллекцию</span>
       </a>
@@ -1469,14 +1467,13 @@ html body.page-home .cube-craft .craft-head {
     </div>
   </div>
 
-  <figure class="bc-hero__media" tabindex="0" aria-describedby="bc-light-hint">
+  <figure class="bc-hero__media">
     <div class="bc-hero__plate">
-      <img class="bc-hero__img" src="/images/home/grid-01.jpg" alt="Скульптурный арт-объект № 197 из берёзового сувеля с обжигом" fetchpriority="high" decoding="async">
+      <video class="bc-hero__video" autoplay muted loop playsinline webkit-playsinline preload="auto" poster="/images/home/grid-01.webp">
+        <source src="/images/home/video-hero.mp4" type="video/mp4">
+      </video>
     </div>
-    <span class="bc-hero__shade" aria-hidden="true"></span>
-    <span class="bc-hero__glow" aria-hidden="true"></span>
-    <figcaption class="bc-hero__caption bc-r" style="--d:3.05s">Работа № 197 · берёзовый сувель · обжиг</figcaption>
-    <span class="bc-sr" id="bc-light-hint">Стрелки на клавиатуре перемещают свет по поверхности работы, Escape возвращает свет в исходное положение.</span>
+    <figcaption class="bc-hero__caption">Работа № 197 · берёзовый сувель · обжиг</figcaption>
   </figure>
 </section>
 <!-- BYCRAFT:BODY:END -->
@@ -2232,7 +2229,7 @@ html body.page-home .cube-craft .craft-head {
 </script>
 
 <!-- BYCRAFT:SCRIPT:START -->
-<script src="/js/bc-hero.js?v=6a1989ec" defer></script>
+<script src="/js/bc-hero.js?v=6a1989ed" defer></script>
 <!-- BYCRAFT:SCRIPT:END -->
 <!-- BYCRAFT:HALLJS:START -->
 <script src="/js/bc-hall.js?v=6611a8b8" defer></script>
