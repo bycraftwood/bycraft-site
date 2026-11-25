@@ -1,16 +1,6 @@
-/* BYCRAFT: Hero video autoplay + Nav */
+/* BYCRAFT: Nav only (no intro, no chip sync, no light, no video) */
 (function () {
   'use strict';
-
-  var vid = document.querySelector('.bc-hero__video');
-  if (vid) {
-    vid.muted = true;
-    var playPromise = vid.play && vid.play();
-    if (playPromise && typeof playPromise.catch === 'function') {
-      playPromise.catch(function () {});
-    }
-  }
-
   var nav = document.querySelector('.bc-nav');
   if (!nav || nav.dataset.bcNavInit) return;
   nav.dataset.bcNavInit = '1';

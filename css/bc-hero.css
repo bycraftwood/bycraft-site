@@ -93,7 +93,8 @@
 .bc-hero__media{order:-1;position:relative;margin:0 16px;height:clamp(280px,46vh,520px);height:clamp(280px,46svh,520px);
   overflow:hidden;background:#1A1815;contain:paint}
 .bc-hero__plate{position:absolute;inset:0}
-.bc-hero__img,.bc-hero__video{display:block;width:100%;height:100%;object-fit:cover;object-position:50% 50%}
+.bc-hero__plate picture{display:block;width:100%;height:100%}
+.bc-hero__img{display:block;width:100%;height:100%;object-fit:cover;object-position:50% 50%}
 
 /* Подпись к медиа */
 .bc-hero__caption{position:absolute;left:0;bottom:0;z-index:3;margin:0;max-width:100%;
