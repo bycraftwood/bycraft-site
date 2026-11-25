@@ -1831,6 +1831,454 @@ html body.page-home .bc-hero .bc-hero__dim-left span {
   }
 }
 /* === /HERO RIGHT COPY 40-64PX SPACING === */
+
+/* === HOME CONTEXT 02.1 & SHOWCASE 02.2 STYLE === */
+/* Блок 02.1: Контекст и масштаб */
+html body.page-home main section.bc-context {
+  width: 100% !important;
+  max-width: 100% !important;
+  background: #F7F6F2 !important;
+  padding: 56px 80px 48px !important;
+  margin: 0 !important;
+  box-sizing: border-box !important;
+}
+html body.page-home .bc-context-inner {
+  width: 100% !important;
+  padding-top: 40px !important;
+}
+html body.page-home .bc-context-top {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  gap: 12px 24px !important;
+  margin: 0 0 28px !important;
+}
+html body.page-home .bc-context-kicker {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  align-items: center !important;
+  gap: 10px !important;
+  font-family: 'Manrope', sans-serif !important;
+  font-size: 12px !important;
+  font-weight: 500 !important;
+  letter-spacing: 0.05em !important;
+  text-transform: uppercase !important;
+  color: #625B55 !important;
+}
+html body.page-home .bc-context-dot {
+  width: 5px !important;
+  height: 5px !important;
+  border-radius: 50% !important;
+  background: #B9AEA1 !important;
+  display: inline-block !important;
+}
+html body.page-home .bc-context-subkicker {
+  text-transform: none !important;
+  letter-spacing: normal !important;
+  color: #625B55 !important;
+  font-weight: 400 !important;
+}
+html body.page-home .bc-context-tag {
+  font-family: 'Manrope', sans-serif !important;
+  font-size: 12px !important;
+  font-weight: 400 !important;
+  letter-spacing: 0.08em !important;
+  text-transform: uppercase !important;
+  color: #8A8277 !important;
+}
+html body.page-home .bc-context-title {
+  font-family: 'Cormorant Garamond', Georgia, serif !important;
+  font-weight: 500 !important;
+  font-size: clamp(28px, 3vw, 40px) !important;
+  line-height: 1.15 !important;
+  color: #1A1918 !important;
+  max-width: 24ch !important;
+  margin: 0 0 40px !important;
+}
+html body.page-home .bc-context-grid {
+  display: grid !important;
+  grid-template-columns: 7fr 5fr !important;
+  gap: 32px !important;
+  align-items: stretch !important;
+}
+html body.page-home .bc-context-left {
+  position: relative !important;
+  overflow: hidden !important;
+  background: #EAE5DB !important;
+  border-radius: 2px !important;
+}
+html body.page-home .bc-context-hero-frame {
+  width: 100% !important;
+  height: 100% !important;
+  aspect-ratio: 16 / 11 !important;
+  overflow: hidden !important;
+}
+html body.page-home .bc-context-hero-frame picture {
+  display: block !important;
+  width: 100% !important;
+  height: 100% !important;
+}
+html body.page-home .bc-context-hero-frame img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  display: block !important;
+  transition: transform 0.7s cubic-bezier(0.22, 1, 0.36, 1) !important;
+}
+@media (hover: hover) {
+  html body.page-home .bc-context-left:hover .bc-context-hero-frame img {
+    transform: scale(1.04) !important;
+  }
+}
+html body.page-home .bc-context-overlay {
+  position: absolute !important;
+  left: 16px !important;
+  bottom: 16px !important;
+  max-width: 440px !important;
+  background: rgba(26, 24, 21, 0.84) !important;
+  -webkit-backdrop-filter: blur(10px) !important;
+  backdrop-filter: blur(10px) !important;
+  border: 1px solid rgba(255, 255, 255, 0.12) !important;
+  border-radius: 2px !important;
+  padding: 14px 16px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  gap: 16px !important;
+  color: #F7F6F2 !important;
+}
+html body.page-home .bc-context-ov-label {
+  font-family: 'Manrope', sans-serif !important;
+  font-size: 11px !important;
+  letter-spacing: 0.06em !important;
+  text-transform: uppercase !important;
+  color: rgba(247, 246, 242, 0.65) !important;
+  margin: 0 0 2px !important;
+}
+html body.page-home .bc-context-ov-title {
+  font-family: 'Manrope', sans-serif !important;
+  font-size: 14px !important;
+  font-weight: 500 !important;
+  color: #F7F6F2 !important;
+}
+html body.page-home .bc-context-ov-dims {
+  border-left: 1px solid rgba(255, 255, 255, 0.18) !important;
+  padding-left: 14px !important;
+  text-align: right !important;
+  flex-shrink: 0 !important;
+}
+html body.page-home .bc-context-ov-size {
+  font-family: 'Manrope', sans-serif !important;
+  font-size: 12px !important;
+  font-weight: 600 !important;
+  color: #F7F6F2 !important;
+  white-space: nowrap !important;
+}
+html body.page-home .bc-context-ov-scale {
+  font-family: 'Manrope', sans-serif !important;
+  font-size: 11px !important;
+  color: rgba(247, 246, 242, 0.65) !important;
+}
+html body.page-home .bc-context-right {
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: space-between !important;
+  gap: 24px !important;
+}
+html body.page-home .bc-context-diptych {
+  display: grid !important;
+  grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  gap: 16px !important;
+}
+html body.page-home .bc-context-macro {
+  position: relative !important;
+  aspect-ratio: 1 / 1 !important;
+  overflow: hidden !important;
+  background: #EAE5DB !important;
+  border-radius: 2px !important;
+}
+html body.page-home .bc-context-macro picture {
+  display: block !important;
+  width: 100% !important;
+  height: 100% !important;
+}
+html body.page-home .bc-context-macro img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  display: block !important;
+  filter: grayscale(100%) contrast(1.15) !important;
+  transition: filter 0.5s ease, transform 0.6s ease !important;
+}
+@media (hover: hover) {
+  html body.page-home .bc-context-macro:hover img {
+    filter: grayscale(0%) contrast(1) !important;
+    transform: scale(1.08) !important;
+  }
+}
+html body.page-home .bc-context-macro-grad {
+  position: absolute !important;
+  inset: 0 !important;
+  background: linear-gradient(to top, rgba(26, 24, 21, 0.62), transparent 55%) !important;
+  pointer-events: none !important;
+}
+html body.page-home .bc-context-macro-cap {
+  position: absolute !important;
+  left: 10px !important;
+  bottom: 10px !important;
+  font-family: 'Manrope', sans-serif !important;
+  font-size: 10px !important;
+  font-weight: 500 !important;
+  letter-spacing: 0.06em !important;
+  text-transform: uppercase !important;
+  color: rgba(255, 255, 255, 0.92) !important;
+}
+html body.page-home .bc-context-pillars {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 12px !important;
+}
+html body.page-home .bc-context-pillar {
+  padding: 14px 16px !important;
+  background: #EFECE5 !important;
+  border-left: 2px solid #1A1918 !important;
+  border-radius: 0 2px 2px 0 !important;
+}
+html body.page-home .bc-context-pillar-head {
+  display: flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+  margin: 0 0 4px !important;
+}
+html body.page-home .bc-context-pillar-num {
+  font-family: 'Manrope', sans-serif !important;
+  font-size: 12px !important;
+  font-weight: 600 !important;
+  letter-spacing: 0.05em !important;
+  color: #1A1918 !important;
+}
+html body.page-home .bc-context-pillar-title {
+  font-family: 'Manrope', sans-serif !important;
+  font-size: 12px !important;
+  font-weight: 600 !important;
+  letter-spacing: 0.05em !important;
+  text-transform: uppercase !important;
+  color: #1A1918 !important;
+  margin: 0 !important;
+}
+html body.page-home .bc-context-pillar-text {
+  font-family: 'Manrope', sans-serif !important;
+  font-size: 13px !important;
+  font-weight: 400 !important;
+  line-height: 1.55 !important;
+  color: #625B55 !important;
+  margin: 0 !important;
+}
+
+/* Блок 02.2: Стиль секции карточек (сетка 7+5 и 4+4+4 сохранена) */
+html body.page-home .cube-expo {
+  padding-top: 56px !important;
+}
+html body.page-home .cube-expo .bc-expo-head {
+  grid-column: 1 / -1 !important;
+  border-top: 1px solid #E5E2DC !important;
+  padding-top: 40px !important;
+  margin-bottom: 36px !important;
+  display: flex !important;
+  flex-wrap: wrap !important;
+  align-items: flex-end !important;
+  justify-content: space-between !important;
+  gap: 20px 32px !important;
+}
+html body.page-home .cube-expo .bc-expo-kicker-row {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  align-items: center !important;
+  gap: 10px 14px !important;
+  margin: 0 0 10px !important;
+}
+html body.page-home .cube-expo .bc-expo-kicker {
+  font-family: 'Manrope', sans-serif !important;
+  font-size: 12px !important;
+  font-weight: 500 !important;
+  letter-spacing: 0.05em !important;
+  text-transform: uppercase !important;
+  color: #625B55 !important;
+}
+html body.page-home .cube-expo .bc-expo-pill {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 6px !important;
+  padding: 4px 10px !important;
+  border-radius: 999px !important;
+  background: rgba(182, 69, 44, 0.08) !important;
+  border: 1px solid rgba(182, 69, 44, 0.24) !important;
+  font-family: 'Manrope', sans-serif !important;
+  font-size: 11px !important;
+  font-weight: 500 !important;
+  color: #8A3F1B !important;
+}
+html body.page-home .cube-expo .bc-expo-pill-dot {
+  width: 6px !important;
+  height: 6px !important;
+  border-radius: 50% !important;
+  background: #B6452C !important;
+}
+html body.page-home .cube-expo .bc-expo-title {
+  font-family: 'Cormorant Garamond', Georgia, serif !important;
+  font-weight: 500 !important;
+  font-size: clamp(28px, 2.8vw, 36px) !important;
+  line-height: 1.15 !important;
+  color: #1A1918 !important;
+  margin: 0 !important;
+}
+html body.page-home .cube-expo .bc-curr-bar--expo {
+  width: auto !important;
+  margin: 0 !important;
+}
+html body.page-home .cube-expo .bc-curr-seg {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 2px !important;
+  padding: 3px !important;
+  background: #EAE6DD !important;
+  border-radius: 4px !important;
+}
+html body.page-home .cube-expo .bc-curr-seg .bc-curr-btn {
+  padding: 5px 12px !important;
+  border-radius: 3px !important;
+  font-size: 12px !important;
+  color: #625B55 !important;
+}
+html body.page-home .cube-expo .bc-curr-seg .bc-curr-btn.is-active {
+  background: #FFFFFF !important;
+  color: #1A1918 !important;
+  font-weight: 600 !important;
+  box-shadow: 0 1px 2px rgba(26, 25, 24, 0.08) !important;
+}
+
+/* Карточки 02.2 в стиле галерейной витрины */
+html body.page-home .cube-expo .lookbook-card {
+  background: #FFFFFF !important;
+  border: 1px solid #E5E2DC !important;
+  border-radius: 2px !important;
+  overflow: hidden !important;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease !important;
+}
+@media (hover: hover) {
+  html body.page-home .cube-expo .lookbook-card:hover {
+    border-color: #1A1918 !important;
+    box-shadow: 0 14px 32px rgba(26, 25, 24, 0.08) !important;
+  }
+}
+html body.page-home .cube-expo .lookbook-img {
+  background: #F2F1ED !important;
+  margin-bottom: 0 !important;
+}
+html body.page-home .cube-expo .lookbook-card-info,
+html body.page-home .cube-expo .lookbook-card .lookbook-meta--sold {
+  padding: 18px 20px 20px !important;
+  margin: 0 !important;
+  border-top: 1px solid #F0EDE6 !important;
+  box-sizing: border-box !important;
+}
+
+/* Нижняя полоса гарантий + кнопка */
+html body.page-home .cube-expo .bc-expo-foot {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  gap: 20px 32px !important;
+  margin-top: 48px !important;
+  padding-top: 32px !important;
+  border-top: 1px solid #E5E2DC !important;
+}
+html body.page-home .cube-expo .bc-expo-guarantees {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  align-items: center !important;
+  gap: 12px 28px !important;
+}
+html body.page-home .cube-expo .bc-expo-guarantee {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+  font-family: 'Manrope', sans-serif !important;
+  font-size: 13px !important;
+  color: #625B55 !important;
+}
+html body.page-home .cube-expo .bc-expo-guarantee svg {
+  color: #1A1918 !important;
+  flex-shrink: 0 !important;
+}
+html body.page-home .cube-expo .lookbook-collection-cta a.lookbook-more.lookbook-more--collection {
+  width: auto !important;
+  min-width: 260px !important;
+  padding: 0 24px !important;
+  height: 46px !important;
+  background: transparent !important;
+  color: #1A1918 !important;
+  border: 1px solid #1A1918 !important;
+  font-size: 13px !important;
+  font-weight: 600 !important;
+  letter-spacing: 0.06em !important;
+  text-transform: uppercase !important;
+}
+html body.page-home .cube-expo .lookbook-collection-cta a.lookbook-more.lookbook-more--collection:hover {
+  background: #1A1918 !important;
+  color: #F7F6F2 !important;
+}
+
+@media (max-width: 899px) {
+  html body.page-home main section.bc-context {
+    padding: 36px 22px 32px !important;
+  }
+  html body.page-home .bc-context-inner {
+    padding-top: 28px !important;
+  }
+  html body.page-home .bc-context-grid {
+    grid-template-columns: 1fr !important;
+    gap: 24px !important;
+  }
+  html body.page-home .bc-context-hero-frame {
+    aspect-ratio: 4 / 3 !important;
+  }
+  html body.page-home .bc-context-overlay {
+    left: 12px !important;
+    right: 12px !important;
+    bottom: 12px !important;
+    max-width: none !important;
+    padding: 12px !important;
+  }
+  html body.page-home .bc-context-diptych {
+    gap: 12px !important;
+  }
+  html body.page-home .cube-expo {
+    padding-top: 36px !important;
+  }
+  html body.page-home .cube-expo .bc-expo-head {
+    padding-top: 28px !important;
+    margin-bottom: 24px !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+  }
+  html body.page-home .cube-expo .bc-curr-bar--expo {
+    justify-content: flex-start !important;
+    padding: 0 !important;
+  }
+  html body.page-home .cube-expo .bc-expo-foot {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    margin-top: 32px !important;
+    padding-top: 24px !important;
+  }
+  html body.page-home .cube-expo .lookbook-collection-cta a.lookbook-more.lookbook-more--collection {
+    width: 100% !important;
+  }
+}
+/* === /HOME CONTEXT 02.1 & SHOWCASE 02.2 STYLE === */
 </style>
 </head>
 <body class="page-home page-cube">
@@ -1915,16 +2363,109 @@ html body.page-home .bc-hero .bc-hero__dim-left span {
 <main>
 
 <div id="home-after-hero" class="cube-anchor" tabindex="-1"></div>
+<!-- BYCRAFT:CONTEXT:START -->
+<section class="bc-context" id="context" aria-labelledby="bc-context-title">
+  <div class="bc-context-inner">
+    <div class="bc-context-top">
+      <div class="bc-context-kicker">
+        <span>02.1 / Контекст и масштаб</span>
+        <i class="bc-context-dot" aria-hidden="true"></i>
+        <span class="bc-context-subkicker">Скульптура в жилом пространстве</span>
+      </div>
+      <div class="bc-context-tag">Архитектурная органика</div>
+    </div>
+
+    <h2 id="bc-context-title" class="bc-context-title">Природная форма в диалоге с современной архитектурой</h2>
+
+    <div class="bc-context-grid">
+      <div class="bc-context-left">
+        <div class="bc-context-hero-frame">
+          <picture>
+            <source srcset="/images/home/grid-05.webp" type="image/webp">
+            <img src="/images/home/grid-05.jpg" alt="Чаша № 197 на консоли из микроцемента" loading="lazy" decoding="async">
+          </picture>
+        </div>
+        <div class="bc-context-overlay">
+          <div class="bc-context-ov-copy">
+            <div class="bc-context-ov-label">Пример размещения</div>
+            <div class="bc-context-ov-title">Чаша № 197 на консоли из микроцемента</div>
+          </div>
+          <div class="bc-context-ov-dims">
+            <div class="bc-context-ov-size">24 × 37 × 33 см</div>
+            <div class="bc-context-ov-scale">масштаб 1:1</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="bc-context-right">
+        <div class="bc-context-diptych">
+          <div class="bc-context-macro">
+            <picture>
+              <source srcset="/images/home/grid-10.webp" type="image/webp">
+              <img src="/images/home/grid-10.jpg" alt="Эффект чатоянси — оптический перелив волокон сувеля" loading="lazy" decoding="async">
+            </picture>
+            <div class="bc-context-macro-grad" aria-hidden="true"></div>
+            <span class="bc-context-macro-cap">Эффект чатоянси</span>
+          </div>
+          <div class="bc-context-macro">
+            <picture>
+              <source srcset="/images/workshop/process-01.webp" type="image/webp">
+              <img src="/images/workshop/process-01.jpg" alt="Природные каверны и текстура берёзового сувеля" loading="lazy" decoding="async">
+            </picture>
+            <div class="bc-context-macro-grad" aria-hidden="true"></div>
+            <span class="bc-context-macro-cap">Природные каверны</span>
+          </div>
+        </div>
+
+        <div class="bc-context-pillars">
+          <div class="bc-context-pillar">
+            <div class="bc-context-pillar-head">
+              <span class="bc-context-pillar-num">01</span>
+              <h3 class="bc-context-pillar-title">Сувель вековых берёз</h3>
+            </div>
+            <p class="bc-context-pillar-text">Редкий наплыв древесины с хаотичным переплетением волокон. Заготовки выдерживаются от 2 лет для безупречной стабильности формы.</p>
+          </div>
+          <div class="bc-context-pillar">
+            <div class="bc-context-pillar-head">
+              <span class="bc-context-pillar-num">02</span>
+              <h3 class="bc-context-pillar-title">Оптический шёлк</h3>
+            </div>
+            <p class="bc-context-pillar-text">Эффект чатоянси: трёхмерная глубина рисунка оживает при движении источника света и смене угла обзора.</p>
+          </div>
+          <div class="bc-context-pillar">
+            <div class="bc-context-pillar-head">
+              <span class="bc-context-pillar-num">03</span>
+              <h3 class="bc-context-pillar-title">Единичный экземпляр 1/1</h3>
+            </div>
+            <p class="bc-context-pillar-text">Повторение формы невозможно. Каждый объект имеет авторское клеймо, индивидуальный номер и персональный паспорт подлинности.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- BYCRAFT:CONTEXT:END -->
+
 <section class="cube-expo" id="exposition">
   <div class="g12">
 
-        <div class="bc-curr-bar g12-span-12">
-      <span class="bc-curr-note" data-bc-rub-note hidden>по ориентировочному курсу</span>
-      <div class="bc-curr-switch" role="group" aria-label="Валюта">
-        <span class="bc-curr-label">ВАЛЮТА</span>
-        <button type="button" class="bc-curr-btn is-active" data-bc-curr="BYN" aria-pressed="true">BYN</button>
-        <span class="bc-curr-sep" aria-hidden="true">·</span>
-        <button type="button" class="bc-curr-btn" data-bc-curr="RUB" aria-pressed="false">RUB</button>
+        <div class="bc-expo-head g12-span-12">
+      <div class="bc-expo-head-left">
+        <div class="bc-expo-kicker-row">
+          <span class="bc-expo-kicker">02.2 / Экспозиция в мастерской</span>
+          <span class="bc-expo-pill"><i class="bc-expo-pill-dot" aria-hidden="true"></i>3 объекта готовы к отправке</span>
+        </div>
+        <h2 class="bc-expo-title">Скульптурные формы в наличии</h2>
+      </div>
+      <div class="bc-curr-bar bc-curr-bar--expo">
+        <span class="bc-curr-note" data-bc-rub-note hidden>по ориентировочному курсу</span>
+        <div class="bc-curr-switch bc-curr-switch--pill" role="group" aria-label="Валюта">
+          <span class="bc-curr-label">ВАЛЮТА</span>
+          <div class="bc-curr-seg">
+            <button type="button" class="bc-curr-btn is-active" data-bc-curr="BYN" aria-pressed="true">BYN</button>
+            <button type="button" class="bc-curr-btn" data-bc-curr="RUB" aria-pressed="false">RUB</button>
+          </div>
+        </div>
       </div>
     </div>
 
@@ -1993,7 +2534,17 @@ html body.page-home .bc-hero .bc-hero__dim-left span {
       </article>
     </div>
 
-    <div class="lookbook-collection-cta g12-span-12">
+    <div class="lookbook-collection-cta bc-expo-foot g12-span-12">
+      <div class="bc-expo-guarantees">
+        <div class="bc-expo-guarantee">
+          <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M5 8h14M5 8a2 2 0 110-4h14a2 2 0 110 4M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8m-9 4h4"/></svg>
+          <span>Индивидуальный фанерный кофр с фиксацией</span>
+        </div>
+        <div class="bc-expo-guarantee">
+          <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+          <span>Курьер по Минску / Доставка СДЭК и по миру</span>
+        </div>
+      </div>
       <a href="/works/" class="lookbook-more lookbook-more--collection">Смотреть всю коллекцию</a>
     </div>
 </div>
