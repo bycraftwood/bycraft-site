@@ -366,7 +366,7 @@ img { max-width: 100%; }
 <!-- BYCRAFT:HEAD:START -->
 <script>document.documentElement.classList.add('bc-js');</script>
 <link rel="preload" as="image" href="/images/home/grid-01.webp?v=2" type="image/webp" fetchpriority="high">
-<link rel="stylesheet" href="/css/bc-hero.css?v=b71d114h">
+<link rel="stylesheet" href="/css/bc-hero.css?v=b71d114i">
 <!-- BYCRAFT:HEAD:END -->
 <!-- BYCRAFT:HALLCSS:START -->
 <link rel="stylesheet" href="/css/bc-hall.css?v=49d4040c">
@@ -1790,6 +1790,33 @@ html body.page-home .cube-expo .lookbook-collection-cta a.lookbook-more.lookbook
   }
 }
 /* === /HERO 65/35 GALLERY REDESIGN === */
+
+/* === HERO DIMENSION TICKS FIX === */
+html body.page-home .bc-hero .bc-hero__media {
+  overflow: visible !important;
+  contain: none !important;
+}
+html body.page-home .bc-hero .bc-hero__dim-top {
+  top: -22px !important;
+  color: #625B55 !important;
+}
+html body.page-home .bc-hero .bc-hero__dim-top span {
+  display: block !important;
+  height: 1px !important;
+  min-height: 1px !important;
+  background: #9E988E !important;
+}
+html body.page-home .bc-hero .bc-hero__dim-left {
+  left: -26px !important;
+  color: #625B55 !important;
+}
+html body.page-home .bc-hero .bc-hero__dim-left span {
+  display: block !important;
+  width: 1px !important;
+  min-width: 1px !important;
+  background: #9E988E !important;
+}
+/* === /HERO DIMENSION TICKS FIX === */
 </style>
 </head>
 <body class="page-home page-cube">
@@ -1828,7 +1855,7 @@ html body.page-home .cube-expo .lookbook-collection-cta a.lookbook-more.lookbook
         <div class="bc-hero__cross-v" aria-hidden="true"></div>
         <div class="bc-hero__cross-h" aria-hidden="true"></div>
       </div>
-      <figcaption class="bc-hero__caption">Работа № 197 · берёзовый сувель · обжиг</figcaption>
+      <figcaption class="bc-hero__caption">X 370 / Y 240</figcaption>
     </figure>
   </div>
 
