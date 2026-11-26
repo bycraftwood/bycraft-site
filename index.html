@@ -67,6 +67,35 @@
         "VisualArtwork",
         "Product"
       ],
+      "name": "Скульптурный арт-объект № 200",
+      "sku": "LOT-200",
+      "brand": {
+        "@type": "Brand",
+        "name": "BYCRAFT"
+      },
+      "artform": "Скульптура",
+      "artMedium": "Берёзовый сувель, обжиг огнём",
+      "creator": {
+        "@id": "https://bycraft.by/#artist"
+      },
+      "image": "https://bycraft.by/images/works/work-200.jpg",
+      "url": "https://bycraft.by/works/work-200/",
+      "description": "Авторская скульптура из берёзового сувеля с обжигом огнём.",
+      "offers": {
+        "@type": "Offer",
+        "price": "1800",
+        "priceCurrency": "BYN",
+        "priceValidUntil": "2027-12-31",
+        "itemCondition": "https://schema.org/NewCondition",
+        "availability": "https://schema.org/InStock",
+        "url": "https://bycraft.by/works/work-200/"
+      }
+    },
+    {
+      "@type": [
+        "VisualArtwork",
+        "Product"
+      ],
       "name": "Скульптурный арт-объект № 188",
       "sku": "LOT-188",
       "brand": {
@@ -2279,6 +2308,43 @@ html body.page-home .cube-expo .lookbook-collection-cta a.lookbook-more.lookbook
   }
 }
 /* === /HOME CONTEXT 02.1 & SHOWCASE 02.2 STYLE === */
+
+/* === NO WHITE CARD BG & CLEAN MACRO === */
+html body.page-home .bc-context-macro img {
+  filter: none !important;
+  transition: none !important;
+}
+@media (hover: hover) {
+  html body.page-home .bc-context-macro:hover img {
+    filter: none !important;
+    transform: none !important;
+  }
+}
+html body.page-home .cube-expo .lookbook-card {
+  background: transparent !important;
+  background-color: transparent !important;
+  border: none !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  overflow: visible !important;
+}
+@media (hover: hover) {
+  html body.page-home .cube-expo .lookbook-card:hover {
+    border-color: transparent !important;
+    box-shadow: none !important;
+  }
+}
+html body.page-home .cube-expo .lookbook-img {
+  background: #F2F1ED !important;
+  margin-bottom: 14px !important;
+}
+html body.page-home .cube-expo .lookbook-card-info,
+html body.page-home .cube-expo .lookbook-card .lookbook-meta--sold {
+  padding: 0 !important;
+  margin: 0 !important;
+  border-top: none !important;
+}
+/* === /NO WHITE CARD BG & CLEAN MACRO === */
 </style>
 </head>
 <body class="page-home page-cube">
@@ -2329,12 +2395,12 @@ html body.page-home .cube-expo .lookbook-collection-cta a.lookbook-more.lookbook
     </h1>
     <p class="bc-hero__sub">Скульптурные арт-объекты<br>из сувеля берёзы</p>
 
-    <a href="/works/work-197/" class="bc-hero__sig">
+    <a href="/works/work-200/" class="bc-hero__sig">
       <div class="bc-hero__sig-top">
-        <img class="bc-hero__sig-thumb" src="/images/works/work-197.jpg?v=4" alt="Работа № 197" loading="eager">
+        <picture><source srcset="/images/works/work-200.webp" type="image/webp"><img class="bc-hero__sig-thumb" src="/images/works/work-200.jpg" alt="Работа № 200" loading="eager"></picture>
         <div class="bc-hero__sig-info">
-          <p class="bc-hero__sig-status"><span class="bc-hero__sig-dot" aria-hidden="true"></span>№ 197 · В наличии</p>
-          <p class="bc-hero__sig-price bc-price" data-byn="1&nbsp;300&nbsp;BYN" data-rub="≈ 37&nbsp;200&nbsp;₽">1&nbsp;300&nbsp;BYN</p>
+          <p class="bc-hero__sig-status"><span class="bc-hero__sig-dot" aria-hidden="true"></span>№ 200 · В наличии</p>
+          <p class="bc-hero__sig-price bc-price" data-byn="1&nbsp;800&nbsp;BYN" data-rub="≈ 51&nbsp;620&nbsp;₽">1&nbsp;800&nbsp;BYN</p>
           <p class="bc-hero__sig-meta">Сувель берёзы · обжиг</p>
         </div>
       </div>
@@ -2381,17 +2447,17 @@ html body.page-home .cube-expo .lookbook-collection-cta a.lookbook-more.lookbook
       <div class="bc-context-left">
         <div class="bc-context-hero-frame">
           <picture>
-            <source srcset="/images/home/grid-05.webp" type="image/webp">
-            <img src="/images/home/grid-05.jpg" alt="Чаша № 197 на консоли из микроцемента" loading="lazy" decoding="async">
+            <source srcset="/images/home/grid-05.webp?v=2" type="image/webp">
+            <img src="/images/home/grid-05.jpg?v=2" alt="Работа № 188 на консоли" loading="lazy" decoding="async">
           </picture>
         </div>
         <div class="bc-context-overlay">
           <div class="bc-context-ov-copy">
             <div class="bc-context-ov-label">Пример размещения</div>
-            <div class="bc-context-ov-title">Чаша № 197 на консоли из микроцемента</div>
+            <div class="bc-context-ov-title">Работа № 188 на консоли</div>
           </div>
           <div class="bc-context-ov-dims">
-            <div class="bc-context-ov-size">24 × 37 × 33 см</div>
+            <div class="bc-context-ov-size">20 × 47 × 33 см</div>
             <div class="bc-context-ov-scale">масштаб 1:1</div>
           </div>
         </div>
@@ -2404,16 +2470,12 @@ html body.page-home .cube-expo .lookbook-collection-cta a.lookbook-more.lookbook
               <source srcset="/images/home/grid-10.webp" type="image/webp">
               <img src="/images/home/grid-10.jpg" alt="Эффект чатоянси — оптический перелив волокон сувеля" loading="lazy" decoding="async">
             </picture>
-            <div class="bc-context-macro-grad" aria-hidden="true"></div>
-            <span class="bc-context-macro-cap">Эффект чатоянси</span>
           </div>
           <div class="bc-context-macro">
             <picture>
               <source srcset="/images/workshop/process-01.webp" type="image/webp">
               <img src="/images/workshop/process-01.jpg" alt="Природные каверны и текстура берёзового сувеля" loading="lazy" decoding="async">
             </picture>
-            <div class="bc-context-macro-grad" aria-hidden="true"></div>
-            <span class="bc-context-macro-cap">Природные каверны</span>
           </div>
         </div>
 
@@ -2453,7 +2515,7 @@ html body.page-home .cube-expo .lookbook-collection-cta a.lookbook-more.lookbook
       <div class="bc-expo-head-left">
         <div class="bc-expo-kicker-row">
           <span class="bc-expo-kicker">02.2 / Экспозиция в мастерской</span>
-          <span class="bc-expo-pill"><i class="bc-expo-pill-dot" aria-hidden="true"></i>3 объекта готовы к отправке</span>
+          <span class="bc-expo-pill"><i class="bc-expo-pill-dot" aria-hidden="true"></i>4 объекта готовы к отправке</span>
         </div>
         <h2 class="bc-expo-title">Скульптурные формы в наличии</h2>
       </div>
@@ -2471,10 +2533,24 @@ html body.page-home .cube-expo .lookbook-collection-cta a.lookbook-more.lookbook
 
         <div class="lookbook g12-span-12">
       <article class="lookbook-card lookbook-card--span-7">
-        <a href="/works/work-197/" class="lookbook-card-link" aria-label="Работа LOT № 197 — подробнее">
+        <a href="/works/work-200/" class="lookbook-card-link" aria-label="Работа № 200 — подробнее">
           <div class="lookbook-img">
-            <img class="lookbook-img-main" src="/images/works/work-197.jpg?v=4" alt="Композиция из чёрной и светлой деревянных форм на подставке — работа № 197." loading="lazy">
-            <img class="lookbook-img-hover" src="/images/works/work-197-detail.jpg?v=2" alt="" aria-hidden="true" loading="lazy">
+            <picture><source srcset="/images/works/work-200.webp" type="image/webp"><img class="lookbook-img-main" src="/images/works/work-200.jpg" alt="Скульптурный арт-объект № 200 из сувеля берёзы." loading="lazy"></picture>
+          </div>
+          <div class="lookbook-card-info">
+            <div class="lookbook-card-copy">
+              <p class="lookbook-meta"><span class="lookbook-no">№&nbsp;200</span><span class="lookbook-status lookbook-status--avail"><span class="lookbook-dot" aria-hidden="true"></span>ДОСТУПНА</span></p>
+              <p class="lookbook-price"><span class="bc-price lookbook-price-byn" data-byn="1&nbsp;800&nbsp;BYN" data-rub="≈ 51&nbsp;620&nbsp;₽">1&nbsp;800&nbsp;BYN</span></p>
+            </div>
+          </div>
+        </a>
+      </article>
+
+      <article class="lookbook-card lookbook-card--span-5">
+        <a href="/works/work-197/" class="lookbook-card-link" aria-label="Работа № 197 — подробнее">
+          <div class="lookbook-img">
+            <picture><source srcset="/images/works/work-197.webp?v=2" type="image/webp"><img class="lookbook-img-main" src="/images/works/work-197.jpg?v=4" alt="Композиция из чёрной и светлой деревянных форм на подставке — работа № 197." loading="lazy"></picture>
+            <picture class="lookbook-pic-hover"><source srcset="/images/works/work-197-detail.webp?v=2" type="image/webp"><img class="lookbook-img-hover" src="/images/works/work-197-detail.jpg?v=2" alt="" aria-hidden="true" loading="lazy"></picture>
           </div>
           <div class="lookbook-card-info">
             <div class="lookbook-card-copy">
@@ -2485,26 +2561,11 @@ html body.page-home .cube-expo .lookbook-collection-cta a.lookbook-more.lookbook
         </a>
       </article>
 
-      <article class="lookbook-card lookbook-card--span-5">
-        <a href="/works/work-188/" class="lookbook-card-link" aria-label="Работа LOT № 188 — подробнее">
-          <div class="lookbook-img">
-            <img class="lookbook-img-main" src="/images/works/work-188.jpg" alt="Светлый скульптурный объект из сувеля берёзы с естественными полостями, вид сверху — работа № 188." loading="lazy">
-            <img class="lookbook-img-hover" src="/images/works/work-188-detail.jpg?v=2" alt="" aria-hidden="true" loading="lazy">
-          </div>
-          <div class="lookbook-card-info">
-            <div class="lookbook-card-copy">
-              <p class="lookbook-meta"><span class="lookbook-no">№&nbsp;188</span><span class="lookbook-status lookbook-status--avail"><span class="lookbook-dot" aria-hidden="true"></span>ДОСТУПНА</span></p>
-              <p class="lookbook-price"><span class="bc-price lookbook-price-byn" data-byn="795&nbsp;BYN" data-rub="≈ 22&nbsp;800&nbsp;₽">795&nbsp;BYN</span></p>
-            </div>
-          </div>
-        </a>
-      </article>
-
       <article class="lookbook-card lookbook-card--span-4">
-        <a href="/works/work-192/" class="lookbook-card-link" aria-label="Работа LOT № 192 — подробнее">
+        <a href="/works/work-192/" class="lookbook-card-link" aria-label="Работа № 192 — подробнее">
           <div class="lookbook-img">
-            <img class="lookbook-img-main" src="/images/works/work-192.jpg?v=2" alt="Низкая скульптурная чаша из сувеля берёзы на тёмной подставке, вид сбоку — работа № 192." loading="lazy">
-            <img class="lookbook-img-hover" src="/images/works/work-192-detail.jpg" alt="" aria-hidden="true" loading="lazy">
+            <picture><source srcset="/images/works/work-192.webp?v=2" type="image/webp"><img class="lookbook-img-main" src="/images/works/work-192.jpg?v=2" alt="Низкая скульптурная чаша из сувеля берёзы на тёмной подставке, вид сбоку — работа № 192." loading="lazy"></picture>
+            <picture class="lookbook-pic-hover"><source srcset="/images/works/work-192-detail.webp?v=1" type="image/webp"><img class="lookbook-img-hover" src="/images/works/work-192-detail.jpg" alt="" aria-hidden="true" loading="lazy"></picture>
           </div>
           <div class="lookbook-card-info">
             <div class="lookbook-card-copy">
@@ -2516,18 +2577,24 @@ html body.page-home .cube-expo .lookbook-collection-cta a.lookbook-more.lookbook
       </article>
 
       <article class="lookbook-card lookbook-card--span-4">
-        <a href="/works/" class="lookbook-card-link" aria-label="Смотреть все работы в коллекции">
+        <a href="/works/work-188/" class="lookbook-card-link" aria-label="Работа № 188 — подробнее">
           <div class="lookbook-img">
-            <img class="lookbook-img-main" src="/images/works/work-247.jpg" alt="Скульптурная работа из сувеля берёзы в частной коллекции (продана)" loading="lazy">
+            <picture><source srcset="/images/works/work-188.webp?v=1" type="image/webp"><img class="lookbook-img-main" src="/images/works/work-188.jpg" alt="Светлый скульптурный объект из сувеля берёзы с естественными полостями, вид сверху — работа № 188." loading="lazy"></picture>
+            <picture class="lookbook-pic-hover"><source srcset="/images/works/work-188-detail.webp?v=2" type="image/webp"><img class="lookbook-img-hover" src="/images/works/work-188-detail.jpg?v=2" alt="" aria-hidden="true" loading="lazy"></picture>
           </div>
-          <p class="lookbook-meta lookbook-meta--sold"><span class="lookbook-status lookbook-status--sold"><span class="lookbook-dot" aria-hidden="true"></span>ПРОДАНА</span></p>
+          <div class="lookbook-card-info">
+            <div class="lookbook-card-copy">
+              <p class="lookbook-meta"><span class="lookbook-no">№&nbsp;188</span><span class="lookbook-status lookbook-status--avail"><span class="lookbook-dot" aria-hidden="true"></span>ДОСТУПНА</span></p>
+              <p class="lookbook-price"><span class="bc-price lookbook-price-byn" data-byn="795&nbsp;BYN" data-rub="≈ 22&nbsp;800&nbsp;₽">795&nbsp;BYN</span></p>
+            </div>
+          </div>
         </a>
       </article>
 
       <article class="lookbook-card lookbook-card--span-4">
         <a href="/works/" class="lookbook-card-link" aria-label="Смотреть все работы в коллекции">
           <div class="lookbook-img">
-            <img class="lookbook-img-main" src="/images/works/work-248.jpg?v=2" alt="Светлая скульптура из сувеля берёзы с естественными отверстиями (продана)" loading="lazy">
+            <picture><source srcset="/images/works/work-248.webp?v=2" type="image/webp"><img class="lookbook-img-main" src="/images/works/work-248.jpg?v=2" alt="Светлая скульптура из сувеля берёзы с естественными отверстиями (продана)" loading="lazy"></picture>
           </div>
           <p class="lookbook-meta lookbook-meta--sold"><span class="lookbook-status lookbook-status--sold"><span class="lookbook-dot" aria-hidden="true"></span>ПРОДАНА</span></p>
         </a>
