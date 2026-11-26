@@ -78,7 +78,7 @@
       "creator": {
         "@id": "https://bycraft.by/#artist"
       },
-      "image": "https://bycraft.by/images/works/work-200.jpg?v=2",
+      "image": "https://bycraft.by/images/works/work-200.jpg?v=3",
       "url": "https://bycraft.by/works/work-200/",
       "description": "Авторская скульптура из берёзового сувеля с обжигом огнём.",
       "offers": {
@@ -2391,6 +2391,39 @@ html body.page-home .bc-hero .bc-hero__sig-meta {
   overflow-wrap: break-word !important;
 }
 /* === /HERO SIG CARD THUMB FIX === */
+
+/* === CUBE EXPO PICTURE COVER FILL === */
+html body.page-home .cube-expo .lookbook-img {
+  padding: 0 !important;
+  background: #F2F1ED !important;
+  overflow: hidden !important;
+}
+html body.page-home .cube-expo .lookbook-img picture {
+  display: block !important;
+  width: 100% !important;
+  height: 100% !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+html body.page-home .cube-expo .lookbook-img picture.lookbook-pic-hover {
+  position: absolute !important;
+  inset: 0 !important;
+  pointer-events: none !important;
+}
+html body.page-home .cube-expo .lookbook-img img.lookbook-img-main {
+  display: block !important;
+  width: 100% !important;
+  height: 100% !important;
+  max-width: none !important;
+  max-height: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  object-fit: cover !important;
+  object-position: center !important;
+  -webkit-mask-image: none !important;
+  mask-image: none !important;
+}
+/* === /CUBE EXPO PICTURE COVER FILL === */
 </style>
 </head>
 <body class="page-home page-cube">
@@ -2443,7 +2476,7 @@ html body.page-home .bc-hero .bc-hero__sig-meta {
 
     <a href="/works/work-200/" class="bc-hero__sig">
       <div class="bc-hero__sig-top">
-        <picture><source srcset="/images/works/work-200.webp?v=2" type="image/webp"><img class="bc-hero__sig-thumb" src="/images/works/work-200.jpg?v=2" alt="Работа № 200" loading="eager"></picture>
+        <picture><source srcset="/images/works/work-200.webp?v=3" type="image/webp"><img class="bc-hero__sig-thumb" src="/images/works/work-200.jpg?v=3" alt="Работа № 200" loading="eager"></picture>
         <div class="bc-hero__sig-info">
           <p class="bc-hero__sig-status"><span class="bc-hero__sig-dot" aria-hidden="true"></span>№ 200 · В наличии</p>
           <p class="bc-hero__sig-price bc-price" data-byn="1&nbsp;800&nbsp;BYN" data-rub="≈ 51&nbsp;620&nbsp;₽">1&nbsp;800&nbsp;BYN</p>
@@ -2581,7 +2614,7 @@ html body.page-home .bc-hero .bc-hero__sig-meta {
       <article class="lookbook-card lookbook-card--span-7">
         <a href="/works/work-200/" class="lookbook-card-link" aria-label="Работа № 200 — подробнее">
           <div class="lookbook-img">
-            <picture><source srcset="/images/works/work-200.webp?v=2" type="image/webp"><img class="lookbook-img-main" src="/images/works/work-200.jpg?v=2" alt="Скульптурный арт-объект № 200 из сувеля берёзы." loading="lazy"></picture>
+            <picture><source srcset="/images/works/work-200.webp?v=3" type="image/webp"><img class="lookbook-img-main" src="/images/works/work-200.jpg?v=3" alt="Скульптурный арт-объект № 200 из сувеля берёзы." loading="lazy"></picture>
           </div>
           <div class="lookbook-card-info">
             <div class="lookbook-card-copy">
