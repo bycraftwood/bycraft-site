@@ -1069,6 +1069,640 @@ html body.page-contacts a.btn-tg-solid {
 
 <script>document.documentElement.classList.add('bc-js');</script>
 <link rel="stylesheet" href="/css/bc-hero.css?v=b71d114i">
+<style id="bc-pd-nordic-style">
+html body.bc-inner-nav main section.product-detail.pd-v2 {
+  width: 100% !important;
+  max-width: 100% !important;
+  padding: 28px 80px 80px !important;
+  margin: 0 !important;
+  box-sizing: border-box !important;
+}
+html body.bc-inner-nav main section.product-detail.pd-v2 .pd-v2-topbar {
+  border-bottom: 1px solid #E5E2DC !important;
+  padding-bottom: 18px !important;
+  margin-bottom: 36px !important;
+  display: flex !important;
+  flex-wrap: wrap !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  gap: 14px 24px !important;
+}
+html body.bc-inner-nav main section.product-detail.pd-v2 .pd-v2-crumbs {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  align-items: center !important;
+  gap: 8px !important;
+  font-family: 'Manrope', sans-serif !important;
+  font-size: 12px !important;
+  font-weight: 500 !important;
+  letter-spacing: 0.05em !important;
+  text-transform: uppercase !important;
+  color: #625B55 !important;
+}
+html body.bc-inner-nav main section.product-detail.pd-v2 .pd-v2-crumbs a {
+  color: #625B55 !important;
+  text-decoration: none !important;
+  transition: color 0.2s ease !important;
+}
+html body.bc-inner-nav main section.product-detail.pd-v2 .pd-v2-crumbs a:hover {
+  color: #B6452C !important;
+}
+html body.bc-inner-nav main section.product-detail.pd-v2 .pd-v2-crumbs .pd-v2-crumb-cur {
+  color: #1A1918 !important;
+  font-weight: 600 !important;
+}
+html body.bc-inner-nav main section.product-detail.pd-v2 .bc-curr-bar--detail {
+  width: auto !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+html body.bc-inner-nav main section.product-detail.pd-v2 .bc-curr-seg {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 2px !important;
+  padding: 3px !important;
+  background: #EAE6DD !important;
+  border-radius: 4px !important;
+}
+html body.bc-inner-nav main section.product-detail.pd-v2 .bc-curr-seg .bc-curr-btn {
+  padding: 5px 12px !important;
+  border-radius: 3px !important;
+  font-size: 12px !important;
+  color: #625B55 !important;
+}
+html body.bc-inner-nav main section.product-detail.pd-v2 .bc-curr-seg .bc-curr-btn.is-active {
+  background: #FFFFFF !important;
+  color: #1A1918 !important;
+  font-weight: 600 !important;
+  box-shadow: 0 1px 2px rgba(26, 25, 24, 0.08) !important;
+}
+
+/* Split 55 / 45 */
+html body.bc-inner-nav main section.product-detail.pd-v2 .pd-v2-grid {
+  display: grid !important;
+  grid-template-columns: 7fr 5fr !important;
+  gap: 32px clamp(28px, 4vw, 56px) !important;
+  align-items: start !important;
+}
+html body.bc-inner-nav main section.product-detail.pd-v2 .pd-v2-gallery {
+  display: flex !important;
+  flex-direction: row !important;
+  gap: 16px !important;
+  align-items: flex-start !important;
+  position: sticky !important;
+  top: calc(var(--bc-nav-h) + 24px) !important;
+  min-width: 0 !important;
+}
+html body.bc-inner-nav main section.product-detail.pd-v2 .pd-v2-thumbs {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 12px !important;
+  flex-shrink: 0 !important;
+}
+html body.bc-inner-nav main section.product-detail.pd-v2 .pd-v2-thumb {
+  width: 76px !important;
+  height: 95px !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  border: 1.5px solid transparent !important;
+  border-radius: 2px !important;
+  overflow: hidden !important;
+  background: #EAE5DB !important;
+  cursor: pointer !important;
+  transition: border-color 0.2s ease !important;
+}
+html body.bc-inner-nav main section.product-detail.pd-v2 .pd-v2-thumb:hover {
+  border-color: #9E988E !important;
+}
+html body.bc-inner-nav main section.product-detail.pd-v2 .pd-v2-thumb.is-active {
+  border-color: #1A1918 !important;
+}
+html body.bc-inner-nav main section.product-detail.pd-v2 .pd-v2-thumb picture,
+html body.bc-inner-nav main section.product-detail.pd-v2 .pd-v2-thumb img {
+  display: block !important;
+  width: 100% !important;
+  height: 100% !important;
+  aspect-ratio: 4 / 5 !important;
+  object-fit: cover !important;
+}
+html body.bc-inner-nav main section.product-detail.pd-v2 .pd-v2-main {
+  position: relative !important;
+  flex: 1 1 0 !important;
+  min-width: 0 !important;
+  aspect-ratio: 4 / 5 !important;
+  background: #F2F1ED !important;
+  border: 1px solid #E5E2DC !important;
+  border-radius: 2px !important;
+  overflow: hidden !important;
+}
+html body.bc-inner-nav main section.product-detail.pd-v2 .pd-v2-main img {
+  display: block !important;
+  width: 100% !important;
+  height: 100% !important;
+  aspect-ratio: 4 / 5 !important;
+  object-fit: cover !important;
+  object-position: center !important;
+  transition: opacity 0.18s ease !important;
+}
+html body.bc-inner-nav main section.product-detail.pd-v2 .pd-v2-badge {
+  position: absolute !important;
+  left: 16px !important;
+  bottom: 16px !important;
+  background: rgba(26, 24, 21, 0.82) !important;
+  -webkit-backdrop-filter: blur(8px) !important;
+  backdrop-filter: blur(8px) !important;
+  color: #F7F6F2 !important;
+  border: 1px solid rgba(255, 255, 255, 0.14) !important;
+  border-radius: 2px !important;
+  padding: 6px 12px !important;
+  font-family: 'Manrope', sans-serif !important;
+  font-size: 11px !important;
+  font-weight: 500 !important;
+  letter-spacing: 0.04em !important;
+}
+html body.bc-inner-nav main section.product-detail.pd-v2 .pd-v2-zoom {
+  position: absolute !important;
+  top: 16px !important;
+  right: 16px !important;
+  width: 38px !important;
+  height: 38px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  padding: 0 !important;
+  background: rgba(247, 246, 242, 0.92) !important;
+  -webkit-backdrop-filter: blur(6px) !important;
+  backdrop-filter: blur(6px) !important;
+  border: 1px solid #E5E2DC !important;
+  border-radius: 2px !important;
+  color: #1A1918 !important;
+  cursor: pointer !important;
+  transition: background-color 0.2s ease, border-color 0.2s ease !important;
+}
+html body.bc-inner-nav main section.product-detail.pd-v2 .pd-v2-zoom:hover {
+  background: #FFFFFF !important;
+  border-color: #1A1918 !important;
+}
+
+/* Правая коммерческая колонка */
+html body.bc-inner-nav main section.product-detail.pd-v2 .pd-v2-info {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 24px !important;
+  min-width: 0 !important;
+}
+html body.bc-inner-nav main section.product-detail.pd-v2 .pd-v2-status-row {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  align-items: center !important;
+  gap: 8px 14px !important;
+  margin: 0 0 12px !important;
+}
+html body.bc-inner-nav main section.product-detail.pd-v2 .pd-v2-status-pill {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 7px !important;
+  padding: 5px 11px !important;
+  border-radius: 999px !important;
+  background: rgba(182, 69, 44, 0.08) !important;
+  border: 1px solid rgba(182, 69, 44, 0.24) !important;
+  font-family: 'Manrope', sans-serif !important;
+  font-size: 12px !important;
+  font-weight: 500 !important;
+  color: #8A3F1B !important;
+}
+html body.bc-inner-nav main section.product-detail.pd-v2 .pd-v2-status-dot {
+  width: 7px !important;
+  height: 7px !important;
+  border-radius: 50% !important;
+  background: #B6452C !important;
+}
+html body.bc-inner-nav main section.product-detail.pd-v2 .pd-v2-unique {
+  font-family: 'Manrope', sans-serif !important;
+  font-size: 12px !important;
+  font-weight: 500 !important;
+  letter-spacing: 0.05em !important;
+  text-transform: uppercase !important;
+  color: #625B55 !important;
+}
+html body.bc-inner-nav main section.product-detail.pd-v2 .pd-v2-title {
+  font-family: 'Cormorant Garamond', Georgia, serif !important;
+  font-weight: 500 !important;
+  font-size: clamp(30px, 3vw, 42px) !important;
+  line-height: 1.1 !important;
+  color: #1A1918 !important;
+  margin: 0 0 8px !important;
+}
+html body.bc-inner-nav main section.product-detail.pd-v2 .pd-v2-subtitle {
+  font-family: 'Manrope', sans-serif !important;
+  font-size: 12px !important;
+  font-weight: 500 !important;
+  letter-spacing: 0.05em !important;
+  text-transform: uppercase !important;
+  color: #625B55 !important;
+  margin: 0 !important;
+}
+html body.bc-inner-nav main section.product-detail.pd-v2 .pd-v2-price-box {
+  background: #FFFFFF !important;
+  border: 1px solid #E5E2DC !important;
+  border-radius: 2px !important;
+  padding: 18px 20px !important;
+}
+html body.bc-inner-nav main section.product-detail.pd-v2 .pd-v2-price-label {
+  font-family: 'Manrope', sans-serif !important;
+  font-size: 11px !important;
+  font-weight: 500 !important;
+  letter-spacing: 0.05em !important;
+  text-transform: uppercase !important;
+  color: #625B55 !important;
+  margin: 0 0 4px !important;
+}
+html body.bc-inner-nav main section.product-detail.pd-v2 .pd-v2-price-val {
+  font-family: 'Manrope', sans-serif !important;
+  font-size: 28px !important;
+  font-weight: 600 !important;
+  letter-spacing: -0.02em !important;
+  line-height: 1.2 !important;
+  color: #1A1918 !important;
+  margin: 0 !important;
+}
+html body.bc-inner-nav main section.product-detail.pd-v2 .pd-rub-disclaimer {
+  margin: 10px 0 0 !important;
+}
+html body.bc-inner-nav main section.product-detail.pd-v2 .pd-v2-specs {
+  display: grid !important;
+  grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  gap: 16px 24px !important;
+  padding: 18px 0 !important;
+  margin: 0 !important;
+  border-top: 1px solid #E5E2DC !important;
+  border-bottom: 1px solid #E5E2DC !important;
+}
+html body.bc-inner-nav main section.product-detail.pd-v2 .pd-v2-specs dt {
+  font-family: 'Manrope', sans-serif !important;
+  font-size: 11px !important;
+  font-weight: 500 !important;
+  letter-spacing: 0.05em !important;
+  text-transform: uppercase !important;
+  color: #625B55 !important;
+  margin: 0 0 4px !important;
+}
+html body.bc-inner-nav main section.product-detail.pd-v2 .pd-v2-specs dd {
+  font-family: 'Manrope', sans-serif !important;
+  font-size: 14px !important;
+  font-weight: 500 !important;
+  color: #1A1918 !important;
+  margin: 0 !important;
+}
+html body.bc-inner-nav main section.product-detail.pd-v2 .pd-v2-actions {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 10px !important;
+}
+html body.bc-inner-nav main section.product-detail.pd-v2 button.pd-v2-btn-primary {
+  width: 100% !important;
+  min-height: 50px !important;
+  padding: 14px 24px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 10px !important;
+  background: #1A1918 !important;
+  color: #F7F6F2 !important;
+  -webkit-text-fill-color: #F7F6F2 !important;
+  border: 1px solid #1A1918 !important;
+  border-radius: 2px !important;
+  font-family: 'Manrope', sans-serif !important;
+  font-size: 13px !important;
+  font-weight: 600 !important;
+  letter-spacing: 0.06em !important;
+  text-transform: uppercase !important;
+  cursor: pointer !important;
+  transition: background-color 0.2s ease !important;
+}
+html body.bc-inner-nav main section.product-detail.pd-v2 button.pd-v2-btn-primary:hover {
+  background: #2A211C !important;
+}
+html body.bc-inner-nav main section.product-detail.pd-v2 a.pd-v2-btn-outline {
+  width: 100% !important;
+  min-height: 46px !important;
+  padding: 12px 24px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 10px !important;
+  background: transparent !important;
+  color: #1A1918 !important;
+  -webkit-text-fill-color: #1A1918 !important;
+  border: 1px solid #1A1918 !important;
+  border-radius: 2px !important;
+  font-family: 'Manrope', sans-serif !important;
+  font-size: 12px !important;
+  font-weight: 500 !important;
+  letter-spacing: 0.05em !important;
+  text-transform: uppercase !important;
+  text-decoration: none !important;
+  box-sizing: border-box !important;
+  transition: background-color 0.2s ease !important;
+}
+html body.bc-inner-nav main section.product-detail.pd-v2 a.pd-v2-btn-outline:hover {
+  background: #FFFFFF !important;
+}
+html body.bc-inner-nav main section.product-detail.pd-v2 .pd-v2-actions .pd-quiet-links {
+  margin-top: 4px !important;
+}
+html body.bc-inner-nav main section.product-detail.pd-v2 .pd-v2-triggers {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 10px !important;
+  padding-top: 4px !important;
+}
+html body.bc-inner-nav main section.product-detail.pd-v2 .pd-v2-trigger {
+  display: flex !important;
+  align-items: flex-start !important;
+  gap: 10px !important;
+  font-family: 'Manrope', sans-serif !important;
+  font-size: 13px !important;
+  line-height: 1.5 !important;
+  color: #625B55 !important;
+}
+html body.bc-inner-nav main section.product-detail.pd-v2 .pd-v2-trigger svg {
+  color: #1A1918 !important;
+  flex-shrink: 0 !important;
+  margin-top: 2px !important;
+}
+html body.bc-inner-nav main section.product-detail.pd-v2 .pd-v2-trigger strong {
+  color: #1A1918 !important;
+  font-weight: 600 !important;
+}
+
+/* История объекта */
+html body.bc-inner-nav main section.product-detail.pd-v2 .pd-v2-story {
+  border-top: 1px solid #E5E2DC !important;
+  padding-top: 48px !important;
+  margin-top: 64px !important;
+  display: grid !important;
+  grid-template-columns: 4fr 8fr !important;
+  gap: 28px 48px !important;
+  align-items: start !important;
+}
+html body.bc-inner-nav main section.product-detail.pd-v2 .pd-v2-story-kicker {
+  font-family: 'Manrope', sans-serif !important;
+  font-size: 12px !important;
+  font-weight: 500 !important;
+  letter-spacing: 0.05em !important;
+  text-transform: uppercase !important;
+  color: #625B55 !important;
+  display: block !important;
+  margin-bottom: 8px !important;
+}
+html body.bc-inner-nav main section.product-detail.pd-v2 .pd-v2-story-title {
+  font-family: 'Cormorant Garamond', Georgia, serif !important;
+  font-weight: 500 !important;
+  font-size: 30px !important;
+  line-height: 1.15 !important;
+  color: #1A1918 !important;
+  margin: 0 !important;
+}
+html body.bc-inner-nav main section.product-detail.pd-v2 .pd-v2-story-body p {
+  font-family: 'Manrope', sans-serif !important;
+  font-size: 15px !important;
+  font-weight: 400 !important;
+  line-height: 1.68 !important;
+  color: #2A211C !important;
+  margin: 0 0 16px !important;
+}
+html body.bc-inner-nav main section.product-detail.pd-v2 .pd-v2-stamp-row {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  gap: 20px !important;
+  margin-top: 24px !important;
+  padding-top: 20px !important;
+  border-top: 1px solid #E5E2DC !important;
+}
+html body.bc-inner-nav main section.product-detail.pd-v2 .pd-v2-stamp {
+  display: flex !important;
+  align-items: center !important;
+  gap: 14px !important;
+}
+html body.bc-inner-nav main section.product-detail.pd-v2 .pd-v2-stamp-badge {
+  width: 40px !important;
+  height: 40px !important;
+  border-radius: 50% !important;
+  background: #1A1918 !important;
+  color: #F7F6F2 !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  font-family: 'Manrope', sans-serif !important;
+  font-size: 12px !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.05em !important;
+  flex-shrink: 0 !important;
+}
+html body.bc-inner-nav main section.product-detail.pd-v2 .pd-v2-stamp-title {
+  font-family: 'Manrope', sans-serif !important;
+  font-size: 12px !important;
+  font-weight: 600 !important;
+  letter-spacing: 0.05em !important;
+  text-transform: uppercase !important;
+  color: #1A1918 !important;
+}
+html body.bc-inner-nav main section.product-detail.pd-v2 .pd-v2-stamp-sub {
+  font-family: 'Manrope', sans-serif !important;
+  font-size: 13px !important;
+  color: #625B55 !important;
+}
+html body.bc-inner-nav main section.product-detail.pd-v2 .pd-v2-cert-thumb {
+  width: 112px !important;
+  aspect-ratio: 4 / 3 !important;
+  border: 1px solid #E5E2DC !important;
+  overflow: hidden !important;
+  background: #EAE5DB !important;
+}
+html body.bc-inner-nav main section.product-detail.pd-v2 .pd-v2-cert-thumb img {
+  width: 100% !important;
+  height: 100% !important;
+  aspect-ratio: 4 / 3 !important;
+  object-fit: cover !important;
+  display: block !important;
+}
+
+/* Другие работы в наличии (вместо Стандартов галереи) */
+html body.bc-inner-nav main section.product-detail.pd-v2 .pd-other {
+  border-top: 1px solid #E5E2DC !important;
+  padding-top: 48px !important;
+  margin-top: 64px !important;
+}
+html body.bc-inner-nav main section.product-detail.pd-v2 .pd-other-head {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  align-items: baseline !important;
+  justify-content: space-between !important;
+  gap: 12px 24px !important;
+  margin: 0 0 28px !important;
+}
+html body.bc-inner-nav main section.product-detail.pd-v2 .pd-other-title {
+  font-family: 'Cormorant Garamond', Georgia, serif !important;
+  font-weight: 500 !important;
+  font-size: 28px !important;
+  line-height: 1.2 !important;
+  color: #1A1918 !important;
+  margin: 0 !important;
+}
+html body.bc-inner-nav main section.product-detail.pd-v2 .pd-other-all {
+  font-family: 'Manrope', sans-serif !important;
+  font-size: 14px !important;
+  font-weight: 500 !important;
+  color: #1A1918 !important;
+  text-decoration: none !important;
+  border-bottom: 1px solid #1A1918 !important;
+  padding-bottom: 2px !important;
+}
+html body.bc-inner-nav main section.product-detail.pd-v2 .pd-other-all:hover {
+  color: #B6452C !important;
+  border-bottom-color: #B6452C !important;
+}
+html body.bc-inner-nav main section.product-detail.pd-v2 .pd-other-grid {
+  display: grid !important;
+  grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  gap: 28px clamp(20px, 2.5vw, 32px) !important;
+}
+html body.bc-inner-nav main section.product-detail.pd-v2 .pd-other-card {
+  display: block !important;
+  text-decoration: none !important;
+  color: #1A1918 !important;
+}
+html body.bc-inner-nav main section.product-detail.pd-v2 .pd-other-img {
+  aspect-ratio: 4 / 5 !important;
+  width: 100% !important;
+  overflow: hidden !important;
+  background: #F2F1ED !important;
+  margin: 0 0 12px !important;
+}
+html body.bc-inner-nav main section.product-detail.pd-v2 .pd-other-img picture {
+  display: block !important;
+  width: 100% !important;
+  height: 100% !important;
+}
+html body.bc-inner-nav main section.product-detail.pd-v2 .pd-other-img img {
+  aspect-ratio: 4 / 5 !important;
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  display: block !important;
+  transition: transform 0.5s ease !important;
+}
+@media (hover: hover) {
+  html body.bc-inner-nav main section.product-detail.pd-v2 .pd-other-card:hover .pd-other-img img {
+    transform: scale(1.03) !important;
+  }
+}
+html body.bc-inner-nav main section.product-detail.pd-v2 .pd-other-meta {
+  display: flex !important;
+  align-items: center !important;
+  gap: 10px !important;
+  font-family: 'Manrope', sans-serif !important;
+  font-size: 14px !important;
+  font-weight: 500 !important;
+  letter-spacing: 0.04em !important;
+  color: #1A1918 !important;
+  margin: 0 0 4px !important;
+}
+html body.bc-inner-nav main section.product-detail.pd-v2 .pd-other-status {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 6px !important;
+  color: #625B55 !important;
+  font-size: 13px !important;
+  text-transform: uppercase !important;
+}
+html body.bc-inner-nav main section.product-detail.pd-v2 .pd-other-dot {
+  width: 8px !important;
+  height: 8px !important;
+  border-radius: 50% !important;
+  background: #B6452C !important;
+}
+html body.bc-inner-nav main section.product-detail.pd-v2 .pd-other-price {
+  font-family: 'Manrope', sans-serif !important;
+  font-size: 13px !important;
+  font-weight: 400 !important;
+  color: #625B55 !important;
+  margin: 0 !important;
+}
+
+/* Лайтбокс увеличения */
+#bc-pd-lightbox {
+  display: none;
+  position: fixed !important;
+  inset: 0 !important;
+  z-index: 2147483646 !important;
+  background: rgba(26, 24, 21, 0.92) !important;
+  align-items: center !important;
+  justify-content: center !important;
+  padding: 24px !important;
+}
+#bc-pd-lightbox.is-open {
+  display: flex !important;
+}
+#bc-pd-lightbox img {
+  max-width: 92vw !important;
+  max-height: 90vh !important;
+  width: auto !important;
+  height: auto !important;
+  object-fit: contain !important;
+}
+#bc-pd-lightbox-close {
+  position: fixed !important;
+  top: 20px !important;
+  right: 24px !important;
+  width: 44px !important;
+  height: 44px !important;
+  background: rgba(247, 246, 242, 0.12) !important;
+  border: 1px solid rgba(247, 246, 242, 0.3) !important;
+  color: #F7F6F2 !important;
+  font-size: 24px !important;
+  cursor: pointer !important;
+}
+
+@media (max-width: 899px) {
+  html body.bc-inner-nav main section.product-detail.pd-v2 {
+    padding: 20px 22px 56px !important;
+  }
+  html body.bc-inner-nav main section.product-detail.pd-v2 .pd-v2-grid {
+    grid-template-columns: 1fr !important;
+    gap: 28px !important;
+  }
+  html body.bc-inner-nav main section.product-detail.pd-v2 .pd-v2-gallery {
+    position: static !important;
+    flex-direction: column-reverse !important;
+  }
+  html body.bc-inner-nav main section.product-detail.pd-v2 .pd-v2-thumbs {
+    flex-direction: row !important;
+    overflow-x: auto !important;
+    width: 100% !important;
+  }
+  html body.bc-inner-nav main section.product-detail.pd-v2 .pd-v2-thumb {
+    width: 64px !important;
+    height: 80px !important;
+  }
+  html body.bc-inner-nav main section.product-detail.pd-v2 .pd-v2-story {
+    grid-template-columns: 1fr !important;
+    padding-top: 36px !important;
+    margin-top: 44px !important;
+  }
+  html body.bc-inner-nav main section.product-detail.pd-v2 .pd-other {
+    padding-top: 36px !important;
+    margin-top: 44px !important;
+  }
+  html body.bc-inner-nav main section.product-detail.pd-v2 .pd-other-grid {
+    grid-template-columns: 1fr !important;
+    gap: 32px !important;
+  }
+}
+</style>
 </head>
 <body class="bc-inner-nav">
 <header class="bc-nav">
@@ -1089,172 +1723,151 @@ html body.page-contacts a.btn-tg-solid {
 
     <main>
 
-<section class="container product-detail" data-work="197">
-  <a href="/works/" class="pd-back">← ВСЕ РАБОТЫ / В НАЛИЧИИ</a>
+<section class="container product-detail pd-v2" data-work="197">
+  <div class="pd-v2-topbar">
+    <nav class="pd-v2-crumbs" aria-label="Навигация">
+      <a href="/works/">Работы</a>
+      <span aria-hidden="true">/</span>
+      <a href="/works/">В наличии</a>
+      <span aria-hidden="true">/</span>
+      <span class="pd-v2-crumb-cur">№&nbsp;197</span>
+    </nav>
 
-  <div class="pd-grid">
-    <div class="pd-gallery">
-      <div class="pd-main">
-        <img id="pd-main-img-197" src="/images/works/work-197.jpg?v=2" alt="Скульптура из сувеля берёзы № 197">
+    <div class="bc-curr-bar bc-curr-bar--detail">
+      <span class="bc-curr-note" data-bc-rub-note hidden>по ориентировочному курсу</span>
+      <div class="bc-curr-switch bc-curr-switch--pill" role="group" aria-label="Валюта">
+        <span class="bc-curr-label">ВАЛЮТА</span>
+        <div class="bc-curr-seg">
+          <button type="button" class="bc-curr-btn is-active" data-bc-curr="BYN" aria-pressed="true">BYN</button>
+          <button type="button" class="bc-curr-btn" data-bc-curr="RUB" aria-pressed="false">RUB</button>
+        </div>
       </div>
-      <div class="pd-thumbs">
-          <button type="button" class="pd-thumb" data-full="/images/works/work-197.jpg?v=2" aria-label="Фото 1"><img src="/images/works/work-197.jpg?v=2" alt=""></button>
-          <button type="button" class="pd-thumb" data-full="/images/works/work-197-detail.jpg?v=2" aria-label="Фото 2"><img src="/images/works/work-197-detail.jpg?v=2" alt=""></button>
-          <button type="button" class="pd-thumb" data-full="/images/works/work-197-detail-1.jpg?v=2" aria-label="Фото 3"><img src="/images/works/work-197-detail-1.jpg?v=2" alt=""></button>
-          <button type="button" class="pd-thumb" data-full="/images/works/work-197.webp?v=2" aria-label="Фото 4"><img src="/images/works/work-197.webp?v=2" alt=""></button>
+    </div>
+  </div>
+
+  <div class="pd-v2-grid">
+    <div class="pd-v2-gallery">
+      <div class="pd-v2-thumbs">
+          <button type="button" class="pd-v2-thumb is-active" data-webp="/images/works/work-197.webp?v=2" data-jpg="/images/works/work-197.jpg?v=2" data-label="Общий ракурс (геометрия формы)" aria-label="Фото 1: Общий ракурс (геометрия формы)"><picture><source srcset="/images/works/work-197.webp?v=2" type="image/webp"><img src="/images/works/work-197.jpg?v=2" alt=""></picture></button>
+          <button type="button" class="pd-v2-thumb" data-webp="/images/works/work-197-detail.webp?v=2" data-jpg="/images/works/work-197-detail.jpg?v=2" data-label="Второй ракурс (контраст фактур)" aria-label="Фото 2: Второй ракурс (контраст фактур)"><picture><source srcset="/images/works/work-197-detail.webp?v=2" type="image/webp"><img src="/images/works/work-197-detail.jpg?v=2" alt=""></picture></button>
+          <button type="button" class="pd-v2-thumb" data-webp="/images/works/work-197-detail-1.webp" data-jpg="/images/works/work-197-detail-1.jpg" data-label="Крупный план (обжиг и рельеф)" aria-label="Фото 3: Крупный план (обжиг и рельеф)"><picture><source srcset="/images/works/work-197-detail-1.webp" type="image/webp"><img src="/images/works/work-197-detail-1.jpg" alt=""></picture></button>
+          <button type="button" class="pd-v2-thumb" data-webp="/images/works/work-197-detail-2.webp" data-jpg="/images/works/work-197-detail-2.jpg" data-label="Дополнительный ракурс" aria-label="Фото 4: Дополнительный ракурс"><picture><source srcset="/images/works/work-197-detail-2.webp" type="image/webp"><img src="/images/works/work-197-detail-2.jpg" alt=""></picture></button>
+        </div>
+      <div class="pd-v2-main">
+        <picture>
+          <source id="pd-v2-main-webp" srcset="/images/works/work-197.webp?v=2" type="image/webp">
+          <img id="pd-v2-main-img" src="/images/works/work-197.jpg?v=2" alt="Скульптурный арт-объект № 197 из сувеля берёзы">
+        </picture>
+        <div id="pd-v2-badge" class="pd-v2-badge">1/4 • Общий ракурс (геометрия формы)</div>
+        <button type="button" id="pd-v2-zoom" class="pd-v2-zoom" title="Увеличить фото" aria-label="Увеличить фото">
+          <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4"/></svg>
+        </button>
       </div>
     </div>
 
-    <div class="pd-info">
-      <p class="pd-badge"><span class="pd-dot" aria-hidden="true"></span> <span class="pd-badge-text">В НАЛИЧИИ</span></p>
-      <h1 class="pd-number">№&nbsp;197 / UNIQUE PIECE</h1>
-      <div class="pd-price-row">
-          <p class="pd-price"><span class="bc-price pd-price-byn" data-byn="1&nbsp;300&nbsp;BYN" data-rub="≈ 37&nbsp;200&nbsp;₽">1&nbsp;300&nbsp;BYN</span></p>
-          <div class="bc-curr-bar bc-curr-bar--detail">
-            <div class="bc-curr-switch" role="group" aria-label="Валюта">
-              <button type="button" class="bc-curr-btn is-active" data-bc-curr="BYN" aria-pressed="true">BYN</button>
-              <span class="bc-curr-sep" aria-hidden="true">·</span>
-              <button type="button" class="bc-curr-btn" data-bc-curr="RUB" aria-pressed="false">RUB</button>
-            </div>
-            <span class="bc-curr-note" data-bc-rub-note hidden>по ориентировочному курсу</span>
-          </div>
+    <div class="pd-v2-info">
+      <div>
+        <div class="pd-v2-status-row">
+          <span class="pd-v2-status-pill"><span class="pd-v2-status-dot" aria-hidden="true"></span>В наличии в мастерской (Минск)</span>
+          <span class="pd-v2-unique">Экземпляр 1/1</span>
         </div>
-      <p class="pd-rub-disclaimer" data-bc-rub-only hidden>Цена в российских рублях ориентировочная. Итоговая сумма определяется по курсу на день оплаты</p>
-      <div class="pd-rule" aria-hidden="true"></div>
-      <dl class="pd-specs">
-        <div><dt>Материал</dt><dd>сувель берёзы, обжиг огнём</dd></div>
-        <div><dt>Габариты</dt><dd>В 24 × Ш 37 × Г 33&nbsp;см</dd></div>
-        <div><dt>Вес</dt><dd>2,6 кг</dd></div>
-        <div><dt>Год создания</dt><dd>2026</dd></div>
+        <h1 class="pd-v2-title">Скульптурный арт-объект №&nbsp;197</h1>
+        <p class="pd-v2-subtitle">Сувель берёзы · Обжиг огнём</p>
+      </div>
+
+      <div class="pd-v2-price-box">
+        <div class="pd-v2-price-label">Стоимость объекта</div>
+        <p class="pd-v2-price-val"><span class="bc-price" data-byn="1&nbsp;300&nbsp;BYN" data-rub="≈ 37&nbsp;200&nbsp;₽">1&nbsp;300&nbsp;BYN</span></p>
+        <p class="pd-rub-disclaimer" data-bc-rub-only hidden>Цена в российских рублях ориентировочная. Итоговая сумма определяется по курсу на день оплаты</p>
+      </div>
+
+      <dl class="pd-v2-specs">
+        <div><dt>Габариты (В × Ш × Г)</dt><dd>В 24 × Ш 37 × Г 33&nbsp;см</dd></div>
+        <div><dt>Вес объекта</dt><dd>2,6 кг</dd></div>
+        <div><dt>Материал</dt><dd>Сувель берёзы (РБ)</dd></div>
+        <div><dt>Обработка и год</dt><dd>Обжиг огнём · 2026</dd></div>
       </dl>
-      <div class="pd-rule" aria-hidden="true"></div>
-      <div class="pd-actions">
-        <button type="button" class="pd-btn-primary" onclick="openBycraftModal(event); return false;"
-          data-work="197" data-title="Забронировать работу № 197">Забронировать работу</button>
-        <a class="pd-btn-outline" href="https://t.me/bycraft_by?text=197" target="_blank" rel="noopener">Написать в Telegram</a>
-              <div class="pd-quiet-links">
+
+      <div class="pd-v2-actions">
+        <button type="button" class="pd-v2-btn-primary" onclick="openBycraftModal(event); return false;" data-work="197" data-title="Забронировать работу № 197">
+          <span>Забронировать объект (1/1)</span>
+          <span aria-hidden="true">→</span>
+        </button>
+        <a class="pd-v2-btn-outline" href="https://t.me/bycraft_by?text=197" target="_blank" rel="noopener">
+          <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 00-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.2-1.12-.31-1.08-.66.02-.18.27-.36.75-.55 2.92-1.27 4.86-2.11 5.83-2.52 2.78-1.16 3.35-1.36 3.73-1.36.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .37z"/></svg>
+          <span>Запросить живое видео в Telegram</span>
+        </a>
+        <div class="pd-quiet-links">
           <a href="tel:+375295507250" class="pd-quiet-link">Позвонить</a>
           <span class="pd-quiet-sep" aria-hidden="true">·</span>
           <button type="button" class="pd-quiet-link pd-share-btn" data-copy-url="https://bycraft.by/works/work-197/">Поделиться с дизайнером</button>
         </div>
       </div>
-      <div class="pd-acc pd-acc-simple">
-        <p class="pd-ship-p pd-ship-lead">Доставка / стоимость зависит от габаритов работы и страны назначения</p>
-        <ul class="pd-ship-list">
-          <li>Минск — курьером, 1–2 дня</li>
-          <li>Москва и Санкт-Петербург — СДЭК, 3–5 дней</li>
-          <li>Другие города России — СДЭК, 4–8 дней</li>
-          <li>ЕС, США, Канада — по запросу</li>
-        </ul>
-        <p class="pd-ship-p">Изделия из сувеля не требуют дополнительного ухода.</p>
-        <p class="pd-ship-p">Если вы сомневаетесь, подойдёт ли вам скульптура по размеру или рисунку, напишите в Telegram — запрос на видеообзор объекта со всех ракурсов.</p>
+
+      <div class="pd-v2-triggers">
+        <div class="pd-v2-trigger">
+          <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.6" d="M5 13l4 4L19 7"/></svg>
+          <span><strong>Доставка:</strong> Минск — курьером (1–2 дня), Москва и СПб — СДЭК (3–5 дней), РФ — СДЭК (4–8 дней), ЕС/США/Канада — по запросу.</span>
+        </div>
+        <div class="pd-v2-trigger">
+          <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.6" d="M5 13l4 4L19 7"/></svg>
+          <span><strong>Уход:</strong> изделия из берёзового сувеля не требуют дополнительного ухода.</span>
+        </div>
+        <div class="pd-v2-trigger">
+          <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.6" d="M5 13l4 4L19 7"/></svg>
+          <span><strong>Видеообзор:</strong> покажем объект в Telegram со всех ракурсов при естественном освещении.</span>
+        </div>
       </div>
+    </div>
+  </div>
 
-    </div><!-- /.pd-info -->
-  </div><!-- /.pd-grid -->
-
-  <div class="pd-about">
-    <h2 class="pd-about-title">Об этой работе</h2>
-    <div class="pd-about-grid">
-      <div class="pd-about-text">
-        <p>Рисунок волокон сувеля невозможно предсказать. Каждая скульптура диктует свою форму в процессе обработки, поэтому сделать две одинаковые работы невозможно. Края этой работы обожжены огнём: тёмный контур подчёркивает тёплый медовый узор внутри, хорошо смотрится на журнальном столике, консоли или комоде.</p>
-        <p>Каждая скульптура маркируется уникальным номером и личной подписью мастера.</p>
-</div>
-      <div class="pd-about-photo">
-        <img src="/images/works/sertifikat.jpg" alt="Сертификат" loading="lazy"
-             onerror="this.onerror=null;this.src='/images/works/sertifikat.webp'">
+  <div class="pd-v2-story">
+    <div>
+      <span class="pd-v2-story-kicker">История объекта</span>
+      <h2 class="pd-v2-story-title">Особенности формы №&nbsp;197</h2>
+    </div>
+    <div class="pd-v2-story-body">
+      <p>Рисунок волокон сувеля невозможно предсказать. Каждая скульптура диктует свою форму в процессе обработки, поэтому сделать две одинаковые работы невозможно. Края этой работы обожжены огнём: тёмный контур подчёркивает тёплый медовый узор внутри, хорошо смотрится на журнальном столике, консоли или комоде.</p>
+          <p>Каждая скульптура маркируется уникальным номером и личной подписью мастера.</p>
+      <div class="pd-v2-stamp-row">
+        <div class="pd-v2-stamp">
+          <div class="pd-v2-stamp-badge">BC</div>
+          <div>
+            <div class="pd-v2-stamp-title">Авторское клеймо и сертификат</div>
+            <div class="pd-v2-stamp-sub">Валентин Атрош · «BYCRAFT · 197 · 2026»</div>
+          </div>
+        </div>
+        <div class="pd-v2-cert-thumb">
+          <img src="/images/works/sertifikat.jpg" alt="Сертификат подлинности" loading="lazy" onerror="this.onerror=null;this.src='/images/works/sertifikat.webp'">
+        </div>
       </div>
     </div>
   </div>
 
   <section class="pd-other">
-    <h2 class="pd-other-title">Другие работы в наличии</h2>
+    <div class="pd-other-head">
+      <h2 class="pd-other-title">Другие работы в наличии</h2>
+      <a href="/works/" class="pd-other-all">Вся коллекция →</a>
+    </div>
     <div class="pd-other-grid">
-        <a class="pd-other-card" href="/works/work-188/">
-          <div class="pd-other-img"><img src="/images/works/work-188.jpg" alt="№ 188" loading="lazy"></div>
-          <p class="pd-other-num">№&nbsp;188</p>
-          <p class="pd-other-status">В наличии</p>
-          <p class="pd-other-price"><span class="bc-price" data-byn="795&nbsp;BYN" data-rub="≈ 22&nbsp;800&nbsp;₽">795&nbsp;BYN</span></p>
+        <a class="pd-other-card" href="/works/work-200/">
+          <div class="pd-other-img"><picture><source srcset="/images/works/work-200.webp?v=3" type="image/webp"><img src="/images/works/work-200.jpg?v=3" alt="№ 200" loading="lazy"></picture></div>
+          <div class="pd-other-meta"><span>№&nbsp;200</span><span class="pd-other-status"><span class="pd-other-dot" aria-hidden="true"></span>ДОСТУПНА</span></div>
+          <p class="pd-other-price"><span class="bc-price" data-byn="1&nbsp;800&nbsp;BYN" data-rub="≈ 51&nbsp;620&nbsp;₽">1&nbsp;800&nbsp;BYN</span></p>
         </a>
         <a class="pd-other-card" href="/works/work-192/">
-          <div class="pd-other-img"><img src="/images/works/work-192.jpg?v=2" alt="№ 192" loading="lazy"></div>
-          <p class="pd-other-num">№&nbsp;192</p>
-          <p class="pd-other-status">В наличии</p>
+          <div class="pd-other-img"><picture><source srcset="/images/works/work-192.webp?v=2" type="image/webp"><img src="/images/works/work-192.jpg?v=2" alt="№ 192" loading="lazy"></picture></div>
+          <div class="pd-other-meta"><span>№&nbsp;192</span><span class="pd-other-status"><span class="pd-other-dot" aria-hidden="true"></span>ДОСТУПНА</span></div>
           <p class="pd-other-price"><span class="bc-price" data-byn="2&nbsp;300&nbsp;BYN" data-rub="≈ 65&nbsp;800&nbsp;₽">2&nbsp;300&nbsp;BYN</span></p>
+        </a>
+        <a class="pd-other-card" href="/works/work-188/">
+          <div class="pd-other-img"><picture><source srcset="/images/works/work-188.webp" type="image/webp"><img src="/images/works/work-188.jpg" alt="№ 188" loading="lazy"></picture></div>
+          <div class="pd-other-meta"><span>№&nbsp;188</span><span class="pd-other-status"><span class="pd-other-dot" aria-hidden="true"></span>ДОСТУПНА</span></div>
+          <p class="pd-other-price"><span class="bc-price" data-byn="795&nbsp;BYN" data-rub="≈ 22&nbsp;800&nbsp;₽">795&nbsp;BYN</span></p>
         </a>
     </div>
   </section>
-<div class="pd-sticky" id="pd-sticky-197">
-  <button type="button" class="pd-btn-primary" onclick="openBycraftModal(event); return false;"
-    data-work="197"><span class="bc-price" data-byn="Забронировать · 1&nbsp;300&nbsp;BYN" data-rub="Забронировать · ≈ 37&nbsp;200&nbsp;₽">Забронировать · 1&nbsp;300&nbsp;BYN</span></button>
-</div>
-
-<script>
-(function(){
-  var main = document.getElementById('pd-main-img-197');
-  if(!main) return;
-  document.querySelectorAll('.product-detail[data-work="197"] .pd-thumb').forEach(function(btn){
-    btn.addEventListener('click', function(){
-      var src = btn.getAttribute('data-full');
-      if(src) main.src = src;
-      document.querySelectorAll('.product-detail[data-work="197"] .pd-thumb').forEach(function(b){ b.classList.remove('is-active'); });
-      btn.classList.add('is-active');
-    });
-  });
-})();
-</script>
-
-</main>
-                        <footer class="site-footer">
-  <div class="container">
-    <div class="footer-grid-4">
-      <div class="footer-col">
-        <a href="/" class="footer-brand">BYCRAFT</a>
-        <p class="footer-about">Скульптурные арт-объекты из сувеля берёзы<br>Ремесленник Атрош Валентин Владимирович<br>УНП:&nbsp;KA0278799</p>
-        <p class="footer-socials">
-          <a href="https://www.instagram.com/bycraft.by/" target="_blank" rel="noopener" class="btn-footer-outline">Instagram</a>
-          <a href="https://t.me/bycraft" target="_blank" rel="noopener" class="btn-footer-outline">Telegram</a>
-        </p>
-      </div>
-      <div class="footer-col">
-                <p class="footer-col-title">Покупателям</p>
-        <ul class="footer-links">
-          <li><a href="/works/">Работы</a></li>
-          <li><a href="/workshop/">Мастерская</a></li>
-          <li><a href="/events/">События</a></li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <p class="footer-col-title">Профессионалам</p>
-        <ul class="footer-links">
-          <li><a href="/designers/">Дизайнерам интерьеров</a></li>
-          <li><a href="/curators/">Кураторам</a></li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <p class="footer-col-title">Контакты</p>
-        <ul class="footer-contacts">
-          <li>Валентин: <a href="tel:+375295507250">+375 (29) 550-72-50</a></li>
-          <li>Россия: <a href="tel:+79525311270">+7 (952) 531-12-70</a></li>
-          <li>Елена: <a href="tel:+375296815576">+375 (29) 681-55-76</a></li>
-          <li><a href="mailto:info@bycraft.by">info@bycraft.by</a></li>
-        </ul>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <p class="footer-copy">© 2026 BYCRAFT. Сайт носит информационный характер и служит виртуальной галереей автора.<br>Фотографии, тексты и видеоматериалы принадлежат владельцу.</p>
-      <p class="footer-legal">
-        <a href="/privacy/">Политика конфиденциальности</a>
-        <span class="footer-dot">·</span>
-        <button type="button" class="footer-cookie-btn" onclick="window.bycraftOpenCookieSettings&&window.bycraftOpenCookieSettings()">Настройки файлов-cookie</button>
-      </p>
-    </div>
-  </div>
-</footer>
-  <div class="lightbox-overlay" id="lightboxOverlay" aria-hidden="true" hidden>
-    <button type="button" class="lightbox-close" id="lightboxClose" aria-label="Close" tabindex="-1">&times;</button>
-    <img class="lightbox-img" id="lightboxImg" alt="" hidden src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" width="1" height="1" style="display:none">
-  </div>
+</section>
   <script src="../../js/main.js?v=1050"></script>
 
 
@@ -1865,6 +2478,57 @@ html body.page-contacts a.btn-tg-solid {
       showCopied();
     }
   });
+})();
+</script>
+<script id="bc-pd-gallery-js">
+(function () {
+  var root = document.querySelector('.product-detail.pd-v2');
+  if (!root) return;
+  var mainImg = root.querySelector('#pd-v2-main-img');
+  var mainSrcWebp = root.querySelector('#pd-v2-main-webp');
+  var badge = root.querySelector('#pd-v2-badge');
+  var thumbs = Array.prototype.slice.call(root.querySelectorAll('.pd-v2-thumb'));
+  var total = thumbs.length || 1;
+
+  thumbs.forEach(function (btn, idx) {
+    btn.addEventListener('click', function () {
+      var jpg = btn.getAttribute('data-jpg');
+      var webp = btn.getAttribute('data-webp');
+      var label = btn.getAttribute('data-label') || '';
+      if (mainImg && jpg) {
+        mainImg.style.opacity = '0.35';
+        setTimeout(function () {
+          if (mainSrcWebp && webp) mainSrcWebp.srcset = webp;
+          mainImg.src = jpg;
+          mainImg.style.opacity = '1';
+        }, 120);
+      }
+      if (badge) badge.textContent = (idx + 1) + '/' + total + ' • ' + label;
+      thumbs.forEach(function (b) { b.classList.toggle('is-active', b === btn); });
+    });
+  });
+
+  var zoomBtn = root.querySelector('#pd-v2-zoom');
+  var lb = document.getElementById('bc-pd-lightbox');
+  var lbImg = document.getElementById('bc-pd-lightbox-img');
+  var lbClose = document.getElementById('bc-pd-lightbox-close');
+  function closeLb() {
+    if (lb) lb.classList.remove('is-open');
+    document.body.style.overflow = '';
+  }
+  if (zoomBtn && lb && lbImg && mainImg) {
+    zoomBtn.addEventListener('click', function () {
+      lbImg.src = mainImg.currentSrc || mainImg.src;
+      lb.classList.add('is-open');
+      document.body.style.overflow = 'hidden';
+    });
+    lb.addEventListener('click', function (e) {
+      if (e.target === lb || e.target === lbClose) closeLb();
+    });
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && lb.classList.contains('is-open')) closeLb();
+    });
+  }
 })();
 </script>
 </body>
