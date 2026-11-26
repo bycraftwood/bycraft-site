@@ -2394,17 +2394,34 @@ html body.page-home .bc-hero .bc-hero__sig-meta {
 
 /* === WORK 200 CONTAIN HARMONY === */
 html body.page-home .cube-expo .lookbook-card--span-7 .lookbook-img {
-  background: radial-gradient(ellipse at 50% 48%, #14130E 0%, #070803 72%) !important;
+  background-color: #070803 !important;
+  background-image: radial-gradient(ellipse at 50% 48%, #14130E 0%, #070803 72%) !important;
   padding: clamp(20px, 3vw, 44px) !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
   box-sizing: border-box !important;
 }
-html body.page-home .cube-expo .lookbook-card--span-7 .lookbook-img img.lookbook-img-main {
+html body.page-home .cube-expo .lookbook-card--span-7 .lookbook-img picture {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
   width: 100% !important;
   height: 100% !important;
+  background: transparent !important;
+}
+html body.page-home .cube-expo .lookbook-card--span-7 .lookbook-img img.lookbook-img-main {
+  width: auto !important;
+  height: 100% !important;
+  max-width: 100% !important;
+  max-height: 100% !important;
+  margin: 0 auto !important;
   object-fit: contain !important;
   object-position: center !important;
-  -webkit-mask-image: radial-gradient(ellipse 92% 94% at 50% 50%, #000 76%, transparent 100%) !important;
-  mask-image: radial-gradient(ellipse 92% 94% at 50% 50%, #000 76%, transparent 100%) !important;
+  background: transparent !important;
+  background-color: transparent !important;
+  -webkit-mask-image: radial-gradient(ellipse 92% 94% at 50% 50%, #000 72%, transparent 100%) !important;
+  mask-image: radial-gradient(ellipse 92% 94% at 50% 50%, #000 72%, transparent 100%) !important;
 }
 @media (max-width: 899px) {
   html body.page-home .cube-expo .lookbook-card--span-7 .lookbook-img {
