@@ -2393,21 +2393,25 @@ html body.bc-inner-nav main a.bw-v2-tg-btn:hover {
         var cat = c.getAttribute('data-cat') || '';
         c.style.display = (st === 'all' || cat === st) ? '' : 'none';
       });
+      tabs.forEach(function (b) {
+        var on = (b.getAttribute('data-status') === st);
+        b.classList.toggle('is-active', on);
+        b.setAttribute('aria-pressed', on ? 'true' : 'false');
+      });
     }
 
     tabs.forEach(function (t) {
       t.addEventListener('click', function () {
-        var st = t.getAttribute('data-status') || 'all';
-        tabs.forEach(function (b) {
-          var on = b === t;
-          b.classList.toggle('is-active', on);
-          b.setAttribute('aria-pressed', on ? 'true' : 'false');
-        });
-        apply(st);
+        apply(t.getAttribute('data-status') || 'all');
       });
     });
 
-    apply('all');
+    var initStatus = 'all';
+    try {
+      var sp = new URLSearchParams(window.location.search).get('status');
+      if (sp === 'available' || sp === 'archive') initStatus = sp;
+    } catch (e) {}
+    apply(initStatus);
   });
 })();
 </script>
