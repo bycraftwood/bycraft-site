@@ -1037,7 +1037,7 @@ html body.bc-inner-nav main .bw-v2-lead {
   font-weight: 400 !important;
   line-height: 1.55 !important;
   color: #625B55 !important;
-  max-width: 58ch !important;
+  max-width: none !important;
   margin: 0 !important;
 }
 html body.bc-inner-nav main .bw-v2-count {
@@ -1165,9 +1165,6 @@ html body.bc-inner-nav main .works-six-grid.bw-v2-grid .bw-v2-media img {
   html body.bc-inner-nav main .works-six-grid.bw-v2-grid .bw-v2-card:hover .bw-v2-media img {
     transform: scale(1.03) !important;
   }
-}
-html body.bc-inner-nav main .works-six-grid.bw-v2-grid .bw-v2-card--sold .bw-v2-media img {
-  filter: grayscale(100%) !important;
 }
 html body.bc-inner-nav main .works-six-grid.bw-v2-grid .bw-v2-badge {
   position: absolute !important;
@@ -1353,7 +1350,7 @@ html body.bc-inner-nav main a.bw-v2-tg-btn:hover {
     <div class="bw-v2-head">
       <div>
         <h1 class="bw-v2-title">Скульптурные арт-объекты из сувеля берёзы</h1>
-        <p class="bw-v2-lead">Каждая работа создаётся в единственном экземпляре. Единственный способ стать владельцем объекта — выбрать его из текущей коллекции.</p>
+        <p class="bw-v2-lead">Каждая работа создаётся в единственном экземпляре.<br>Единственный способ стать владельцем объекта — выбрать его из текущей коллекции.</p>
       </div>
       <p class="bw-v2-count">9 уникальных форм</p>
     </div>
@@ -1382,7 +1379,7 @@ html body.bc-inner-nav main a.bw-v2-tg-btn:hover {
       <article class="bw-v2-card" data-cat="available">
         <a href="/works/work-200/" class="bw-v2-media" style="display:block;">
           <picture><source srcset="/images/works/work-200.webp?v=3" type="image/webp"><img src="/images/works/work-200.jpg?v=3" alt="Скульптура из сувеля берёзы № 200" loading="lazy"></picture>
-          <span class="bw-v2-badge">В наличии · 1 экз.</span>
+          <span class="bw-v2-badge">В наличии</span>
         </a>
         <h3 class="bw-v2-name">Работа №&nbsp;200</h3>
         <p class="bw-v2-dims">Сувель берёзы · обжиг</p>
@@ -1392,7 +1389,7 @@ html body.bc-inner-nav main a.bw-v2-tg-btn:hover {
       <article class="bw-v2-card" data-cat="available">
         <a href="/works/work-197/" class="bw-v2-media" style="display:block;">
           <picture><source srcset="/images/works/work-197.webp?v=2" type="image/webp"><img src="/images/works/work-197.jpg?v=4" alt="Скульптура из сувеля берёзы № 197" loading="lazy"></picture>
-          <span class="bw-v2-badge">В наличии · 1 экз.</span>
+          <span class="bw-v2-badge">В наличии</span>
         </a>
         <h3 class="bw-v2-name">Работа №&nbsp;197</h3>
         <p class="bw-v2-dims">24 × 37 × 33 см · 2,6 кг</p>
@@ -1402,7 +1399,7 @@ html body.bc-inner-nav main a.bw-v2-tg-btn:hover {
       <article class="bw-v2-card" data-cat="available">
         <a href="/works/work-192/" class="bw-v2-media" style="display:block;">
           <picture><source srcset="/images/works/work-192.webp?v=2" type="image/webp"><img src="/images/works/work-192.jpg?v=2" alt="Скульптура из сувеля берёзы № 192" loading="lazy"></picture>
-          <span class="bw-v2-badge">В наличии · 1 экз.</span>
+          <span class="bw-v2-badge">В наличии</span>
         </a>
         <h3 class="bw-v2-name">Работа №&nbsp;192</h3>
         <p class="bw-v2-dims">19 × 52 × 37 см · 3,2 кг</p>
@@ -1412,7 +1409,7 @@ html body.bc-inner-nav main a.bw-v2-tg-btn:hover {
       <article class="bw-v2-card" data-cat="available">
         <a href="/works/work-188/" class="bw-v2-media" style="display:block;">
           <picture><source srcset="/images/works/work-188.webp" type="image/webp"><img src="/images/works/work-188.jpg" alt="Скульптура из сувеля берёзы № 188" loading="lazy"></picture>
-          <span class="bw-v2-badge">В наличии · 1 экз.</span>
+          <span class="bw-v2-badge">В наличии</span>
         </a>
         <h3 class="bw-v2-name">Работа №&nbsp;188</h3>
         <p class="bw-v2-dims">20 × 47 × 33 см · 2,6 кг</p>
@@ -1422,47 +1419,37 @@ html body.bc-inner-nav main a.bw-v2-tg-btn:hover {
       <article class="bw-v2-card bw-v2-card--sold" data-cat="archive">
         <div class="bw-v2-media">
           <img src="/images/works/work-247.jpg" alt="Скульптура из сувеля берёзы № 247 (в частной коллекции)" loading="lazy">
-          <span class="bw-v2-badge bw-v2-badge--sold">В частной коллекции</span>
+          <span class="bw-v2-badge bw-v2-badge--sold">ПРОДАНА</span>
         </div>
-        <h3 class="bw-v2-name">Работа №&nbsp;247</h3>
-        <p class="bw-v2-dims">Сувель берёзы · 1/1</p>
-        <p class="bw-v2-sold-label">Продана</p>
+        <a href="/contacts/" class="bw-v2-card-btn" onclick="if(window.openBycraftModal){window.openBycraftModal(event);return false;}" data-form-title="Работа № 247 (продана)" data-form-sub="Оставьте контакт — расскажем о деталях и похожих работах в наличии"><span>Подробнее о работе</span><span aria-hidden="true">→</span></a>
       </article>
       <article class="bw-v2-card bw-v2-card--sold" data-cat="archive">
         <div class="bw-v2-media">
           <img src="/images/works/work-248.jpg?v=2" alt="Скульптура из сувеля берёзы № 248 (в частной коллекции)" loading="lazy">
-          <span class="bw-v2-badge bw-v2-badge--sold">В частной коллекции</span>
+          <span class="bw-v2-badge bw-v2-badge--sold">ПРОДАНА</span>
         </div>
-        <h3 class="bw-v2-name">Работа №&nbsp;248</h3>
-        <p class="bw-v2-dims">Сувель берёзы · 1/1</p>
-        <p class="bw-v2-sold-label">Продана</p>
+        <a href="/contacts/" class="bw-v2-card-btn" onclick="if(window.openBycraftModal){window.openBycraftModal(event);return false;}" data-form-title="Работа № 248 (продана)" data-form-sub="Оставьте контакт — расскажем о деталях и похожих работах в наличии"><span>Подробнее о работе</span><span aria-hidden="true">→</span></a>
       </article>
       <article class="bw-v2-card bw-v2-card--sold" data-cat="archive">
         <div class="bw-v2-media">
           <img src="/images/works/work-253.jpg" alt="Скульптура из сувеля берёзы № 253 (в частной коллекции)" loading="lazy">
-          <span class="bw-v2-badge bw-v2-badge--sold">В частной коллекции</span>
+          <span class="bw-v2-badge bw-v2-badge--sold">ПРОДАНА</span>
         </div>
-        <h3 class="bw-v2-name">Работа №&nbsp;253</h3>
-        <p class="bw-v2-dims">Сувель берёзы · 1/1</p>
-        <p class="bw-v2-sold-label">Продана</p>
+        <a href="/contacts/" class="bw-v2-card-btn" onclick="if(window.openBycraftModal){window.openBycraftModal(event);return false;}" data-form-title="Работа № 253 (продана)" data-form-sub="Оставьте контакт — расскажем о деталях и похожих работах в наличии"><span>Подробнее о работе</span><span aria-hidden="true">→</span></a>
       </article>
       <article class="bw-v2-card bw-v2-card--sold" data-cat="archive">
         <div class="bw-v2-media">
           <img src="/images/works/work-254.jpg" alt="Скульптура из сувеля берёзы № 254 (в частной коллекции)" loading="lazy">
-          <span class="bw-v2-badge bw-v2-badge--sold">В частной коллекции</span>
+          <span class="bw-v2-badge bw-v2-badge--sold">ПРОДАНА</span>
         </div>
-        <h3 class="bw-v2-name">Работа №&nbsp;254</h3>
-        <p class="bw-v2-dims">Сувель берёзы · 1/1</p>
-        <p class="bw-v2-sold-label">Продана</p>
+        <a href="/contacts/" class="bw-v2-card-btn" onclick="if(window.openBycraftModal){window.openBycraftModal(event);return false;}" data-form-title="Работа № 254 (продана)" data-form-sub="Оставьте контакт — расскажем о деталях и похожих работах в наличии"><span>Подробнее о работе</span><span aria-hidden="true">→</span></a>
       </article>
       <article class="bw-v2-card bw-v2-card--sold" data-cat="archive">
         <div class="bw-v2-media">
           <img src="/images/works/work-255.jpg" alt="Скульптура из сувеля берёзы № 255 (в частной коллекции)" loading="lazy">
-          <span class="bw-v2-badge bw-v2-badge--sold">В частной коллекции</span>
+          <span class="bw-v2-badge bw-v2-badge--sold">ПРОДАНА</span>
         </div>
-        <h3 class="bw-v2-name">Работа №&nbsp;255</h3>
-        <p class="bw-v2-dims">Сувель берёзы · 1/1</p>
-        <p class="bw-v2-sold-label">Продана</p>
+        <a href="/contacts/" class="bw-v2-card-btn" onclick="if(window.openBycraftModal){window.openBycraftModal(event);return false;}" data-form-title="Работа № 255 (продана)" data-form-sub="Оставьте контакт — расскажем о деталях и похожих работах в наличии"><span>Подробнее о работе</span><span aria-hidden="true">→</span></a>
       </article>
     </div>
 
