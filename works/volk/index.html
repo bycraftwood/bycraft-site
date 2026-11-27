@@ -1422,7 +1422,10 @@ html body.bc-inner-nav main section.ex-v2 .ex-v2-author-bc {
   align-items: center !important;
   justify-content: center !important;
 }
+html body.bc-inner-nav main section.ex-v2 a.ex-v2-btn-primary,
 html body.bc-inner-nav main section.ex-v2 .ex-v2-btn-primary {
+  text-decoration: none !important;
+  box-sizing: border-box !important;
   width: 100% !important;
   min-height: 50px !important;
   padding: 14px 20px !important;
@@ -1442,6 +1445,7 @@ html body.bc-inner-nav main section.ex-v2 .ex-v2-btn-primary {
   cursor: pointer !important;
   transition: background-color 0.2s ease !important;
 }
+html body.bc-inner-nav main section.ex-v2 a.ex-v2-btn-primary:hover,
 html body.bc-inner-nav main section.ex-v2 .ex-v2-btn-primary:hover {
   background: #2A211C !important;
 }
@@ -1856,20 +1860,17 @@ html body.bc-inner-nav main section.ex-v2 .ex-v2-other-status {
       </div>
 
       <div class="ex-v2-box">
-        <p class="ex-v2-box-kicker">Наличие и заказ</p>
-        <p class="ex-v2-box-text" style="margin-bottom:0 !important;">Оригинал находится в частной коллекции. Вы можете заказать создание новой работы в похожей стилистике — автор подберёт выразительный сувель под ваш интерьер.</p>
+        <p class="ex-v2-box-kicker">Статус</p>
+        <p class="ex-v2-box-text" style="margin-bottom:0 !important;">Оригинал находится в частной коллекции. Выставочные работы существуют в единственном экземпляре и не повторяются на заказ.</p>
       </div>
 
-      <button type="button" class="ex-v2-btn-primary"
-        onclick="window.openBycraftModal && window.openBycraftModal(event); return false;"
-        data-form-title="Заказать арт-объект в похожей стилистике"
-        data-form-sub="По мотивам выставочной работы «Волк»">
-        <span>Заказать похожую работу</span>
+      <a href="/works/?status=available" class="ex-v2-btn-primary">
+        <span>Смотреть доступные работы</span>
         <span aria-hidden="true">→</span>
-      </button>
+      </a>
 
-      <a href="https://t.me/bycraft_by?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%D0%98%D0%BD%D1%82%D0%B5%D1%80%D0%B5%D1%81%D1%83%D0%B5%D1%82%20%D0%B2%D1%8B%D1%81%D1%82%D0%B0%D0%B2%D0%BE%D1%87%D0%BD%D0%B0%D1%8F%20%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%B0%20%C2%AB%D0%92%D0%BE%D0%BB%D0%BA%C2%BB" target="_blank" rel="noopener" class="ex-v2-btn-outline">
-        <span>Обсудить в Telegram</span>
+      <a href="https://t.me/bycraft" target="_blank" rel="noopener" class="ex-v2-btn-outline">
+        <span>Telegram-канал с новыми работами</span>
         <span aria-hidden="true">↗</span>
       </a>
 
