@@ -1008,447 +1008,326 @@ html body.page-contacts a.btn-tg-solid {
 <script>document.documentElement.classList.add('bc-js');</script>
 <link rel="stylesheet" href="/css/bc-hero.css?v=b71d114i">
 <style id="bc-works-grid-match">
-html body.bc-inner-nav .works-intro-block,
-html body.bc-inner-nav .works-title-row,
-html body.bc-inner-nav #geography.geography-section,
-html body.bc-inner-nav main .container {
+html body.bc-inner-nav main .bw-v2-wrap {
   width: 100% !important;
   max-width: 100% !important;
-  padding-left: 80px !important;
-  padding-right: 80px !important;
+  padding: 28px 80px 0 !important;
+  margin: 0 !important;
   box-sizing: border-box !important;
 }
-html body.bc-inner-nav #geography .geo-inner,
-html body.bc-inner-nav #geography .container,
-html body.bc-inner-nav main .container .container {
-  padding-left: 0 !important;
-  padding-right: 0 !important;
-}
-html body.bc-inner-nav .works-filters-wrap {
-  display: flex !important;
-  flex-direction: column !important;
-  gap: 12px !important;
-  margin-top: 24px !important;
-  margin-bottom: 36px !important;
-  width: 100% !important;
-}
-html body.bc-inner-nav .works-filter-row {
+html body.bc-inner-nav main .bw-v2-head {
   display: flex !important;
   flex-wrap: wrap !important;
-  align-items: baseline !important;
-  gap: 8px 24px !important;
+  align-items: flex-end !important;
+  justify-content: space-between !important;
+  gap: 16px 32px !important;
+  padding: 12px 0 28px !important;
 }
-html body.bc-inner-nav .works-filter-label {
-  font-family: 'Manrope', sans-serif !important;
-  font-size: 12px !important;
-  font-weight: 400 !important;
-  letter-spacing: 0.05em !important;
-  text-transform: uppercase !important;
-  color: #625B55 !important;
-  flex-shrink: 0 !important;
-}
-html body.bc-inner-nav .works-filter-list {
-  display: flex !important;
-  flex-wrap: wrap !important;
-  align-items: center !important;
-  gap: 8px 22px !important;
-}
-html body.bc-inner-nav .works-filters-wrap .works-filter-item {
-  display: inline-block !important;
-  background: none !important;
-  border: none !important;
-  padding: 2px 0 !important;
-  margin: 0 !important;
-  cursor: pointer !important;
-  font-family: Manrope, sans-serif !important;
-  font-weight: 400 !important;
-  font-size: 16px !important;
-  line-height: 1.45 !important;
-  letter-spacing: normal !important;
-  text-transform: none !important;
-  text-decoration: none !important;
-  color: #1A1918 !important;
-  transition: color 0.2s ease !important;
-}
-html body.bc-inner-nav .works-filters-wrap .works-filter-item:hover {
-  color: #B6452C !important;
-}
-html body.bc-inner-nav .works-filters-wrap .works-filter-item.is-active {
-  font-weight: 600 !important;
-  color: #B6452C !important;
-}
-html body.bc-inner-nav .works-filter-empty {
-  margin-top: 28px !important;
-  font-family: Manrope, sans-serif !important;
-  font-size: 15px !important;
-  color: #625B55 !important;
-  display: flex !important;
-  flex-wrap: wrap !important;
-  align-items: center !important;
-  gap: 12px !important;
-}
-html body.bc-inner-nav .works-filter-empty[hidden] {
-  display: none !important;
-}
-html body.bc-inner-nav .works-filter-reset {
-  background: none !important;
-  border: none !important;
-  border-bottom: 1px solid #1A1918 !important;
-  padding: 0 0 2px !important;
-  cursor: pointer !important;
-  font-family: Manrope, sans-serif !important;
-  font-size: 15px !important;
+html body.bc-inner-nav main .bw-v2-title {
+  font-family: 'Cormorant Garamond', Georgia, serif !important;
   font-weight: 500 !important;
+  font-size: clamp(28px, 2.8vw, 40px) !important;
+  line-height: 1.12 !important;
   color: #1A1918 !important;
+  margin: 0 0 10px !important;
 }
-html body.bc-inner-nav .works-filter-reset:hover {
-  color: #B6452C !important;
-  border-bottom-color: #B6452C !important;
-}
-/* Подписи карточек — как на главной */
-html body.bc-inner-nav .works-six-grid .work-card a.work-card-link {
-  display: block !important;
-  color: inherit !important;
-  text-decoration: none !important;
-}
-html body.bc-inner-nav .works-six-grid .work-card .lookbook-card-info {
-  display: grid !important;
-  grid-template-columns: minmax(0, 1fr) auto !important;
-  align-items: start !important;
-  column-gap: clamp(10px, 1.4vw, 20px) !important;
-  width: 100% !important;
-  margin-top: 14px !important;
-  padding: 0 !important;
-}
-html body.bc-inner-nav .works-six-grid .work-card .lookbook-card-info--sold {
-  grid-template-columns: minmax(0, 1fr) !important;
-}
-html body.bc-inner-nav .works-six-grid .work-card .lookbook-card-copy {
-  min-width: 0 !important;
-}
-html body.bc-inner-nav .works-six-grid .work-card p.lookbook-meta {
-  display: flex !important;
-  flex-wrap: wrap !important;
-  align-items: center !important;
-  gap: 6px 12px !important;
-  margin: 0 0 8px !important;
-  padding: 0 !important;
-}
-html body.bc-inner-nav .works-six-grid .work-card p.lookbook-meta--sold {
-  margin: 0 !important;
-}
-html body.bc-inner-nav .works-six-grid .work-card .lookbook-no {
+html body.bc-inner-nav main .bw-v2-lead {
   font-family: 'Manrope', sans-serif !important;
-  font-weight: 400 !important;
-  font-size: 12px !important;
-  line-height: 1.4 !important;
-  letter-spacing: 0.05em !important;
-  text-transform: uppercase !important;
-  color: #2A211C !important;
-  margin: 0 !important;
-}
-html body.bc-inner-nav .works-six-grid .work-card .lookbook-status {
-  display: inline-flex !important;
-  align-items: center !important;
-  gap: 6px !important;
-  font-family: 'Manrope', sans-serif !important;
-  font-weight: 400 !important;
-  font-size: 12px !important;
-  line-height: 1.4 !important;
-  letter-spacing: 0.05em !important;
-  text-transform: uppercase !important;
-  color: #6B5D52 !important;
-  margin: 0 !important;
-}
-html body.bc-inner-nav .works-six-grid .work-card .lookbook-dot {
-  display: inline-block !important;
-  box-sizing: border-box !important;
-  width: 8px !important;
-  height: 8px !important;
-  border-radius: 50% !important;
-  flex-shrink: 0 !important;
-  margin: 0 !important;
-}
-html body.bc-inner-nav .works-six-grid .work-card .lookbook-status--avail .lookbook-dot {
-  background-color: #B6452C !important;
-  border: none !important;
-}
-html body.bc-inner-nav .works-six-grid .work-card .lookbook-status--sold .lookbook-dot {
-  background-color: transparent !important;
-  border: 1.5px solid #6B5D52 !important;
-}
-html body.bc-inner-nav .works-six-grid .work-card p.lookbook-price {
-  display: flex !important;
-  flex-direction: row !important;
-  flex-wrap: wrap !important;
-  align-items: baseline !important;
-  gap: 2px 10px !important;
-  margin: 0 !important;
-  line-height: 1.35 !important;
-}
-html body.bc-inner-nav .works-six-grid .work-card .lookbook-price-byn {
-  display: block !important;
-  font-family: Manrope, sans-serif !important;
-  font-size: 15px !important;
-  font-weight: 500 !important;
-  line-height: 1.4 !important;
-  color: #1A1918 !important;
-}
-html body.bc-inner-nav .works-six-grid .work-card .lookbook-price-rub {
-  display: block !important;
-  font-family: Manrope, sans-serif !important;
-  font-size: 12px !important;
-  font-weight: 400 !important;
-  line-height: 1.4 !important;
-  color: #6B5D52 !important;
-}
-html body.bc-inner-nav .works-six-grid .work-card .lookbook-more {
-  justify-self: end !important;
-  text-align: right !important;
-  font-family: Manrope, sans-serif !important;
   font-size: 14px !important;
-  font-weight: 500 !important;
-  line-height: 1.45 !important;
-  color: #1A1918 !important;
+  font-weight: 400 !important;
+  line-height: 1.55 !important;
+  color: #625B55 !important;
+  max-width: 58ch !important;
   margin: 0 !important;
 }
-html body.bc-inner-nav .works-six-grid .work-card .lookbook-more .lookbook-arrow {
-  color: #1A1918 !important;
-  transition: color 0.25s ease !important;
-}
-html body.bc-inner-nav .works-six-grid .work-card a.work-card-link:hover .lookbook-arrow {
-  color: #B6452C !important;
-}
-@media (max-width: 1120px) {
-  html body.bc-inner-nav .works-six-grid .work-card .lookbook-card-info {
-    grid-template-columns: minmax(0, 1fr) !important;
-    row-gap: 6px !important;
-  }
-  html body.bc-inner-nav .works-six-grid .work-card .lookbook-more {
-    justify-self: start !important;
-    text-align: left !important;
-  }
-}
-@media (max-width: 899px) {
-  html body.bc-inner-nav .works-intro-block,
-  html body.bc-inner-nav .works-title-row,
-  html body.bc-inner-nav #geography.geography-section,
-  html body.bc-inner-nav main .container {
-    padding-left: 22px !important;
-    padding-right: 22px !important;
-  }
-  html body.bc-inner-nav #geography .geo-inner,
-  html body.bc-inner-nav #geography .container,
-  html body.bc-inner-nav main .container .container {
-    padding-left: 0 !important;
-    padding-right: 0 !important;
-  }
-  html body.bc-inner-nav .works-filters-wrap .works-filter-item {
-    font-size: 15px !important;
-  }
-  html body.bc-inner-nav .works-filters-wrap .works-filter-list {
-    gap: 6px 16px !important;
-  }
-}
-/* === GEOGRAPHY CLEAN STYLE === */
-html body.bc-inner-nav #geography.geography-section,
-html body.bc-inner-nav #geography .geo-before-intro,
-html body.bc-inner-nav #geography .geography-title,
-html body.bc-inner-nav #geography .geo-stats-line,
-html body.bc-inner-nav #geography .map-svg-wrap,
-html body.bc-inner-nav #geography .map-continents-grid,
-html body.bc-inner-nav #geography .continent-group {
-  background: transparent !important;
-  background-color: transparent !important;
-  box-shadow: none !important;
-}
-html body.bc-inner-nav #geography.geography-section {
-  border-top: 1px solid #E5E2DC !important;
-  padding-top: 48px !important;
-  padding-bottom: 0 !important;
-  margin-top: 56px !important;
-  margin-bottom: 80px !important;
-}
-html body.bc-inner-nav #geography .map-svg-wrap {
-  width: 100% !important;
-  max-width: 1040px !important;
-  margin: 28px auto 38px !important;
-  padding: 0 !important;
-  border: none !important;
-}
-html body.bc-inner-nav #geography .map-svg-wrap svg {
-  width: 100% !important;
-  height: auto !important;
-  display: block !important;
-  margin: 0 auto !important;
-}
-html body.bc-inner-nav #geography .map-svg-wrap svg path.geo-country {
-  fill: #F1EDE5 !important;
-  stroke: #CEC6B8 !important;
-  stroke-width: 0.7 !important;
-  stroke-linejoin: round !important;
-}
-html body.bc-inner-nav #geography .map-svg-wrap svg path.geo-country--active {
-  fill: #E3DACB !important;
-  stroke: #B5AC9D !important;
-  stroke-width: 0.8 !important;
-}
-html body.bc-inner-nav #geography .map-svg-wrap svg path.geo-country--origin {
-  fill: #DCC8B9 !important;
-  stroke: #A38D7E !important;
-  stroke-width: 0.9 !important;
-}
-html body.bc-inner-nav #geography .map-svg-wrap svg .geo-dots circle {
-  fill: #B6452C !important;
-  stroke: #F7F6F2 !important;
-  stroke-width: 0.9 !important;
-}
-html body.bc-inner-nav #geography .map-svg-wrap svg .geo-dots circle.geo-dot-minsk-halo {
-  fill: rgba(182, 69, 44, 0.16) !important;
-  stroke: none !important;
-}
-html body.bc-inner-nav #geography .map-svg-wrap svg .geo-dots circle.geo-dot-minsk {
-  fill: #1A1918 !important;
-  stroke: #F7F6F2 !important;
-  stroke-width: 1.3 !important;
-}
-html body.bc-inner-nav #geography .map-svg-wrap svg .geo-dots circle.geo-dot-minsk-core {
-  fill: #B6452C !important;
-  stroke: none !important;
-}
-html body.bc-inner-nav #geography .map-continents-grid {
-  display: grid !important;
-  grid-template-columns: 1fr 2fr 1fr 1fr !important;
-  gap: 24px 36px !important;
-  padding-top: 28px !important;
-  margin-top: 0 !important;
-  border-top: 1px solid #E5E2DC !important;
-}
-html body.bc-inner-nav #geography .continent-group {
-  padding: 0 !important;
-  border: none !important;
-}
-html body.bc-inner-nav #geography .continent-group h4 {
+html body.bc-inner-nav main .bw-v2-count {
   font-family: 'Manrope', sans-serif !important;
-  font-size: 12px !important;
-  font-weight: 400 !important;
-  letter-spacing: 0.05em !important;
+  font-size: 11px !important;
+  font-weight: 500 !important;
+  letter-spacing: 0.14em !important;
   text-transform: uppercase !important;
-  color: #1A1918 !important;
-  margin: 0 0 8px !important;
-}
-html body.bc-inner-nav #geography .continent-group .continent-countries {
-  font-family: Manrope, sans-serif !important;
-  font-size: 14px !important;
-  line-height: 1.6 !important;
   color: #625B55 !important;
   margin: 0 !important;
+  white-space: nowrap !important;
 }
-@media (max-width: 899px) {
-  html body.bc-inner-nav #geography.geography-section {
-    padding-top: 36px !important;
-    margin-top: 40px !important;
-    margin-bottom: 56px !important;
-  }
-  html body.bc-inner-nav #geography .map-continents-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
-    gap: 24px 20px !important;
-  }
-}
-@media (max-width: 540px) {
-  html body.bc-inner-nav #geography .map-continents-grid {
-    grid-template-columns: 1fr !important;
-    gap: 20px !important;
-  }
-}
-/* === /GEOGRAPHY CLEAN STYLE === */
 
-/* === WORKS CARD META LARGER THAN PRICE === */
-html body.bc-inner-nav .works-six-grid .work-card .lookbook-no {
-  font-size: 15px !important;
-  font-weight: 500 !important;
-  letter-spacing: 0.04em !important;
-}
-html body.bc-inner-nav .works-six-grid .work-card .lookbook-status {
-  font-size: 15px !important;
-  font-weight: 500 !important;
-  letter-spacing: 0.04em !important;
-}
-html body.bc-inner-nav .works-six-grid .work-card .lookbook-dot {
-  width: 9px !important;
-  height: 9px !important;
-}
-html body.bc-inner-nav .works-six-grid .work-card .lookbook-price-byn,
-html body.bc-inner-nav .works-six-grid .work-card .lookbook-price .bc-price {
-  font-size: 13px !important;
-  font-weight: 400 !important;
-  color: #625B55 !important;
-}
-/* === /WORKS CARD META LARGER THAN PRICE === */
-
-/* === WORKS TELEGRAM CTA === */
-html body.bc-inner-nav main section.works-tg-cta {
-  margin: 0 0 56px !important;
-}
-html body.bc-inner-nav main section.works-tg-cta .works-tg-cta-inner {
+/* Панель фильтров */
+html body.bc-inner-nav main .bw-v2-filterbar {
+  min-height: 56px !important;
   border-top: 1px solid #E5E2DC !important;
-  padding-top: 40px !important;
+  border-bottom: 1px solid #E5E2DC !important;
   display: flex !important;
   flex-wrap: wrap !important;
   align-items: center !important;
   justify-content: space-between !important;
-  gap: 20px 36px !important;
+  gap: 12px 24px !important;
 }
-html body.bc-inner-nav main section.works-tg-cta .works-tg-cta-text {
-  font-family: Manrope, sans-serif !important;
-  font-size: 16px !important;
-  font-weight: 400 !important;
-  line-height: 1.55 !important;
-  color: #1A1918 !important;
-  margin: 0 !important;
-  max-width: 48ch !important;
+html body.bc-inner-nav main .bw-v2-tabs {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  align-items: stretch !important;
+  gap: 8px 28px !important;
+  min-height: 54px !important;
 }
-html body.bc-inner-nav main section.works-tg-cta a.works-tg-cta-btn {
+html body.bc-inner-nav main .bw-v2-tab {
   display: inline-flex !important;
   align-items: center !important;
-  justify-content: center !important;
-  min-height: 44px !important;
-  padding: 0 24px !important;
-  background: #1A1918 !important;
-  background-color: #1A1918 !important;
-  color: #F7F6F2 !important;
-  -webkit-text-fill-color: #F7F6F2 !important;
-  font-family: Manrope, sans-serif !important;
+  background: none !important;
+  border: none !important;
+  border-bottom: 2px solid transparent !important;
+  padding: 14px 0 !important;
+  margin: 0 !important;
+  cursor: pointer !important;
+  font-family: 'Manrope', sans-serif !important;
   font-size: 14px !important;
-  font-weight: 600 !important;
-  letter-spacing: 0.02em !important;
+  font-weight: 400 !important;
+  color: #625B55 !important;
   text-decoration: none !important;
-  border-radius: 0 !important;
-  box-sizing: border-box !important;
-  transition: background-color 0.25s ease !important;
+  transition: color 0.2s ease, border-color 0.2s ease !important;
 }
-html body.bc-inner-nav main section.works-tg-cta a.works-tg-cta-btn:hover,
-html body.bc-inner-nav main section.works-tg-cta a.works-tg-cta-btn:focus-visible {
-  background: #2A211C !important;
-  background-color: #2A211C !important;
+html body.bc-inner-nav main .bw-v2-tab:hover {
+  color: #1A1918 !important;
+}
+html body.bc-inner-nav main .bw-v2-tab.is-active {
+  color: #1A1918 !important;
+  font-weight: 600 !important;
+  border-bottom-color: #1A1918 !important;
+}
+html body.bc-inner-nav main .bw-v2-filterbar .bc-curr-bar--works {
+  width: auto !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+html body.bc-inner-nav main .bw-v2-filterbar .bc-curr-seg {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 2px !important;
+  padding: 3px !important;
+  background: #EAE6DD !important;
+  border-radius: 4px !important;
+}
+html body.bc-inner-nav main .bw-v2-filterbar .bc-curr-seg .bc-curr-btn {
+  padding: 5px 12px !important;
+  border-radius: 3px !important;
+  font-size: 12px !important;
+  color: #625B55 !important;
+}
+html body.bc-inner-nav main .bw-v2-filterbar .bc-curr-seg .bc-curr-btn.is-active {
+  background: #FFFFFF !important;
+  color: #1A1918 !important;
+  font-weight: 600 !important;
+  box-shadow: 0 1px 2px rgba(26, 25, 24, 0.08) !important;
+}
+
+/* Трёхколоночная табличная сетка с линиями */
+html body.bc-inner-nav main .works-six-grid.bw-v2-grid {
+  display: grid !important;
+  grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  gap: 0 !important;
+  margin: 40px 0 0 !important;
+  padding: 0 !important;
+  border-top: 1px solid #E5E2DC !important;
+  border-left: 1px solid #E5E2DC !important;
+  width: 100% !important;
+  box-sizing: border-box !important;
+}
+html body.bc-inner-nav main .works-six-grid.bw-v2-grid .bw-v2-card {
+  display: flex !important;
+  flex-direction: column !important;
+  border-right: 1px solid #E5E2DC !important;
+  border-bottom: 1px solid #E5E2DC !important;
+  padding: 24px !important;
+  background: #F7F6F2 !important;
+  box-sizing: border-box !important;
+  min-width: 0 !important;
+}
+html body.bc-inner-nav main .works-six-grid.bw-v2-grid .bw-v2-media {
+  position: relative !important;
+  width: 100% !important;
+  aspect-ratio: 4 / 5 !important;
+  overflow: hidden !important;
+  background: #EAE5DB !important;
+}
+html body.bc-inner-nav main .works-six-grid.bw-v2-grid .bw-v2-media picture {
+  display: block !important;
+  width: 100% !important;
+  height: 100% !important;
+}
+html body.bc-inner-nav main .works-six-grid.bw-v2-grid .bw-v2-media img {
+  display: block !important;
+  width: 100% !important;
+  height: 100% !important;
+  aspect-ratio: 4 / 5 !important;
+  object-fit: cover !important;
+  transition: transform 0.6s ease !important;
+}
+@media (hover: hover) {
+  html body.bc-inner-nav main .works-six-grid.bw-v2-grid .bw-v2-card:hover .bw-v2-media img {
+    transform: scale(1.03) !important;
+  }
+}
+html body.bc-inner-nav main .works-six-grid.bw-v2-grid .bw-v2-card--sold .bw-v2-media img {
+  filter: grayscale(100%) !important;
+}
+html body.bc-inner-nav main .works-six-grid.bw-v2-grid .bw-v2-badge {
+  position: absolute !important;
+  top: 12px !important;
+  left: 12px !important;
+  padding: 5px 10px !important;
+  background: #FBF9F5 !important;
+  color: #1A1918 !important;
+  font-family: 'Manrope', sans-serif !important;
+  font-size: 10px !important;
+  font-weight: 500 !important;
+  letter-spacing: 0.08em !important;
+  text-transform: uppercase !important;
+}
+html body.bc-inner-nav main .works-six-grid.bw-v2-grid .bw-v2-badge--sold {
+  background: #1A1918 !important;
+  color: #F7F6F2 !important;
+}
+html body.bc-inner-nav main .works-six-grid.bw-v2-grid .bw-v2-name {
+  font-family: 'Manrope', sans-serif !important;
+  font-size: 18px !important;
+  font-weight: 600 !important;
+  letter-spacing: -0.02em !important;
+  color: #1A1918 !important;
+  margin: 18px 0 4px !important;
+}
+html body.bc-inner-nav main .works-six-grid.bw-v2-grid .bw-v2-dims {
+  font-family: 'Manrope', sans-serif !important;
+  font-size: 12px !important;
+  font-weight: 400 !important;
+  letter-spacing: 0.04em !important;
+  color: #625B55 !important;
+  margin: 0 !important;
+}
+html body.bc-inner-nav main .works-six-grid.bw-v2-grid .bw-v2-price {
+  font-family: 'Manrope', sans-serif !important;
+  font-size: 20px !important;
+  font-weight: 600 !important;
+  letter-spacing: -0.02em !important;
+  color: #1A1918 !important;
+  margin: 16px 0 0 !important;
+}
+html body.bc-inner-nav main .works-six-grid.bw-v2-grid .bw-v2-sold-label {
+  font-family: 'Manrope', sans-serif !important;
+  font-size: 18px !important;
+  font-weight: 300 !important;
+  color: #625B55 !important;
+  margin: 16px 0 0 !important;
+}
+html body.bc-inner-nav main .works-six-grid.bw-v2-grid a.bw-v2-card-btn {
+  margin-top: 16px !important;
+  height: 44px !important;
+  padding: 0 16px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  background: #1A1918 !important;
   color: #F7F6F2 !important;
   -webkit-text-fill-color: #F7F6F2 !important;
+  font-family: 'Manrope', sans-serif !important;
+  font-size: 12px !important;
+  font-weight: 500 !important;
+  letter-spacing: 0.08em !important;
+  text-transform: uppercase !important;
+  text-decoration: none !important;
+  transition: background-color 0.2s ease !important;
+}
+html body.bc-inner-nav main .works-six-grid.bw-v2-grid a.bw-v2-card-btn:hover {
+  background: #2A211C !important;
+}
+
+/* Тёмный баннер Telegram 65/35 */
+html body.bc-inner-nav main .bw-v2-tg-banner {
+  margin: 48px 0 0 !important;
+  display: grid !important;
+  grid-template-columns: 65% 35% !important;
+  background: #1A1815 !important;
+  color: #F7F6F2 !important;
+  width: 100% !important;
+  box-sizing: border-box !important;
+}
+html body.bc-inner-nav main .bw-v2-tg-left {
+  padding: 44px 40px !important;
+}
+html body.bc-inner-nav main .bw-v2-tg-kicker {
+  font-family: 'Manrope', sans-serif !important;
+  font-size: 11px !important;
+  font-weight: 500 !important;
+  letter-spacing: 0.14em !important;
+  text-transform: uppercase !important;
+  color: rgba(247, 246, 242, 0.55) !important;
+  margin: 0 0 16px !important;
+}
+html body.bc-inner-nav main .bw-v2-tg-title {
+  font-family: 'Cormorant Garamond', Georgia, serif !important;
+  font-size: clamp(24px, 2.3vw, 30px) !important;
+  font-weight: 500 !important;
+  line-height: 1.2 !important;
+  color: #F7F6F2 !important;
+  -webkit-text-fill-color: #F7F6F2 !important;
+  max-width: 34ch !important;
+  margin: 0 !important;
+}
+html body.bc-inner-nav main .bw-v2-tg-right {
+  border-left: 1px solid rgba(255, 255, 255, 0.15) !important;
+  padding: 40px !important;
+  display: flex !important;
+  align-items: center !important;
+}
+html body.bc-inner-nav main a.bw-v2-tg-btn {
+  width: 100% !important;
+  height: 48px !important;
+  padding: 0 20px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  background: #FBF9F5 !important;
+  color: #1A1918 !important;
+  -webkit-text-fill-color: #1A1918 !important;
+  font-family: 'Manrope', sans-serif !important;
+  font-size: 12px !important;
+  font-weight: 600 !important;
+  letter-spacing: 0.06em !important;
+  text-transform: uppercase !important;
+  text-decoration: none !important;
+  box-sizing: border-box !important;
+  transition: opacity 0.2s ease !important;
+}
+html body.bc-inner-nav main a.bw-v2-tg-btn:hover {
+  opacity: 0.9 !important;
+}
+
+@media (max-width: 1080px) {
+  html body.bc-inner-nav main .works-six-grid.bw-v2-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
 }
 @media (max-width: 899px) {
-  html body.bc-inner-nav main section.works-tg-cta {
-    margin-bottom: 40px !important;
+  html body.bc-inner-nav main .bw-v2-wrap {
+    padding: 20px 22px 0 !important;
   }
-  html body.bc-inner-nav main section.works-tg-cta .works-tg-cta-inner {
-    flex-direction: column !important;
-    align-items: flex-start !important;
-    padding-top: 32px !important;
-    gap: 18px !important;
+  html body.bc-inner-nav main .works-six-grid.bw-v2-grid {
+    grid-template-columns: 1fr !important;
+    margin-top: 28px !important;
   }
-  html body.bc-inner-nav main section.works-tg-cta a.works-tg-cta-btn {
-    width: 100% !important;
+  html body.bc-inner-nav main .works-six-grid.bw-v2-grid .bw-v2-card {
+    padding: 18px !important;
+  }
+  html body.bc-inner-nav main .bw-v2-tg-banner {
+    grid-template-columns: 1fr !important;
+  }
+  html body.bc-inner-nav main .bw-v2-tg-left {
+    padding: 32px 24px 20px !important;
+  }
+  html body.bc-inner-nav main .bw-v2-tg-right {
+    border-left: none !important;
+    border-top: 1px solid rgba(255, 255, 255, 0.15) !important;
+    padding: 20px 24px 32px !important;
   }
 }
-/* === /WORKS TELEGRAM CTA === */
 </style>
 </head>
 <body class="bc-inner-nav">
@@ -1470,144 +1349,133 @@ html body.bc-inner-nav main section.works-tg-cta a.works-tg-cta-btn:focus-visibl
 
       <main>
     
-    <div class="container works-title-row">
-      <h1 class="page-h1 works-page-title">Скульптурные арт‑объекты из сувеля берёзы</h1>
+    <div class="bw-v2-wrap">
+    <div class="bw-v2-head">
+      <div>
+        <h1 class="bw-v2-title">Скульптурные арт-объекты из сувеля берёзы</h1>
+        <p class="bw-v2-lead">Каждая работа создаётся в единственном экземпляре. Единственный способ стать владельцем объекта — выбрать его из текущей коллекции.</p>
+      </div>
+      <p class="bw-v2-count">9 уникальных форм</p>
     </div>
 
+    <div class="bw-v2-filterbar" role="region" aria-label="Фильтр коллекции">
+      <nav class="bw-v2-tabs" aria-label="Статус работы">
+        <button type="button" class="bw-v2-tab is-active" data-status="all" aria-pressed="true">Все (9)</button>
+        <button type="button" class="bw-v2-tab" data-status="available" aria-pressed="false">Доступны к покупке (4)</button>
+        <a class="bw-v2-tab" href="/works/exhibitions/">Выставочные работы (5)</a>
+        <button type="button" class="bw-v2-tab" data-status="archive" aria-pressed="false">Архив (5)</button>
+      </nav>
 
-<section class="container works-intro-block">
-  <div class="works-page-intro">
-    <p class="lead-text">Каждая работа создаётся из уникального берёзового сувеля. Природу невозможно заказать. Вы можете обладать только тем, что уже родилось в диалоге стихии и мастера. Единственный способ стать владельцем объекта — выбрать его из текущей коллекции</p>
-  </div>
-    <div class="works-filters-wrap" aria-label="Фильтр работ">
-      <div class="works-filter-top">
-        <div class="works-filter-row" role="group" aria-label="Статус работы">
-        <span class="works-filter-label">СТАТУС</span>
-        <div class="works-filter-list">
-          <button type="button" class="works-filter-item is-active" data-status="all" aria-pressed="true">Все</button>
-          <button type="button" class="works-filter-item" data-status="available" aria-pressed="false">Доступны к покупке</button>
-          <a class="works-filter-item" href="/works/exhibitions/">Выставочные работы</a>
-          <button type="button" class="works-filter-item" data-status="archive" aria-pressed="false">Архив</button>
-        </div>
-      </div>
-        <div class="bc-curr-bar bc-curr-bar--inline">
-          <span class="bc-curr-note" data-bc-rub-note hidden>по ориентировочному курсу</span>
-          <div class="bc-curr-switch" role="group" aria-label="Валюта">
-            <span class="bc-curr-label">ВАЛЮТА</span>
+      <div class="bc-curr-bar bc-curr-bar--works">
+        <span class="bc-curr-note" data-bc-rub-note hidden>по ориентировочному курсу</span>
+        <div class="bc-curr-switch bc-curr-switch--pill" role="group" aria-label="Валюта">
+          <span class="bc-curr-label">ВАЛЮТА</span>
+          <div class="bc-curr-seg">
             <button type="button" class="bc-curr-btn is-active" data-bc-curr="BYN" aria-pressed="true">BYN</button>
-            <span class="bc-curr-sep" aria-hidden="true">·</span>
             <button type="button" class="bc-curr-btn" data-bc-curr="RUB" aria-pressed="false">RUB</button>
           </div>
         </div>
       </div>
     </div>
-</section>
 
-<section class="container" style="margin-bottom: 80px;">
-      <div class="works-six-grid">
-
-        <div class="work-card" data-cat="available" data-size="s">
-          <a href="work-197/" class="work-card-link">
-            <div class="work-img-wrap">
-              <img src="../images/works/work-197.jpg" alt="Скульптура из сувеля берёзы № 197" loading="lazy">
-            </div>
-            <div class="lookbook-card-info">
-              <div class="lookbook-card-copy">
-                <p class="lookbook-meta"><span class="lookbook-no">№&nbsp;197</span><span class="lookbook-status lookbook-status--avail"><span class="lookbook-dot" aria-hidden="true"></span>ДОСТУПНА</span></p>
-                <p class="lookbook-price"><span class="bc-price lookbook-price-byn" data-byn="1&nbsp;300&nbsp;BYN" data-rub="≈ 37&nbsp;200&nbsp;₽">1&nbsp;300&nbsp;BYN</span></p>
-              </div>
-              <span class="lookbook-more">Подробнее о работе <span class="lookbook-arrow" aria-hidden="true">→</span></span>
-            </div>
-          </a>
+    <div class="works-six-grid bw-v2-grid">
+      <article class="bw-v2-card" data-cat="available">
+        <a href="/works/work-200/" class="bw-v2-media" style="display:block;">
+          <picture><source srcset="/images/works/work-200.webp?v=3" type="image/webp"><img src="/images/works/work-200.jpg?v=3" alt="Скульптура из сувеля берёзы № 200" loading="lazy"></picture>
+          <span class="bw-v2-badge">В наличии · 1 экз.</span>
+        </a>
+        <h3 class="bw-v2-name">Работа №&nbsp;200</h3>
+        <p class="bw-v2-dims">Сувель берёзы · обжиг</p>
+        <p class="bw-v2-price"><span class="bc-price" data-byn="1&nbsp;800&nbsp;BYN" data-rub="≈ 51&nbsp;620&nbsp;₽">1&nbsp;800&nbsp;BYN</span></p>
+        <a href="/works/work-200/" class="bw-v2-card-btn"><span>Подробнее о работе</span><span aria-hidden="true">→</span></a>
+      </article>
+      <article class="bw-v2-card" data-cat="available">
+        <a href="/works/work-197/" class="bw-v2-media" style="display:block;">
+          <picture><source srcset="/images/works/work-197.webp?v=2" type="image/webp"><img src="/images/works/work-197.jpg?v=4" alt="Скульптура из сувеля берёзы № 197" loading="lazy"></picture>
+          <span class="bw-v2-badge">В наличии · 1 экз.</span>
+        </a>
+        <h3 class="bw-v2-name">Работа №&nbsp;197</h3>
+        <p class="bw-v2-dims">24 × 37 × 33 см · 2,6 кг</p>
+        <p class="bw-v2-price"><span class="bc-price" data-byn="1&nbsp;300&nbsp;BYN" data-rub="≈ 37&nbsp;200&nbsp;₽">1&nbsp;300&nbsp;BYN</span></p>
+        <a href="/works/work-197/" class="bw-v2-card-btn"><span>Подробнее о работе</span><span aria-hidden="true">→</span></a>
+      </article>
+      <article class="bw-v2-card" data-cat="available">
+        <a href="/works/work-192/" class="bw-v2-media" style="display:block;">
+          <picture><source srcset="/images/works/work-192.webp?v=2" type="image/webp"><img src="/images/works/work-192.jpg?v=2" alt="Скульптура из сувеля берёзы № 192" loading="lazy"></picture>
+          <span class="bw-v2-badge">В наличии · 1 экз.</span>
+        </a>
+        <h3 class="bw-v2-name">Работа №&nbsp;192</h3>
+        <p class="bw-v2-dims">19 × 52 × 37 см · 3,2 кг</p>
+        <p class="bw-v2-price"><span class="bc-price" data-byn="2&nbsp;300&nbsp;BYN" data-rub="≈ 65&nbsp;800&nbsp;₽">2&nbsp;300&nbsp;BYN</span></p>
+        <a href="/works/work-192/" class="bw-v2-card-btn"><span>Подробнее о работе</span><span aria-hidden="true">→</span></a>
+      </article>
+      <article class="bw-v2-card" data-cat="available">
+        <a href="/works/work-188/" class="bw-v2-media" style="display:block;">
+          <picture><source srcset="/images/works/work-188.webp" type="image/webp"><img src="/images/works/work-188.jpg" alt="Скульптура из сувеля берёзы № 188" loading="lazy"></picture>
+          <span class="bw-v2-badge">В наличии · 1 экз.</span>
+        </a>
+        <h3 class="bw-v2-name">Работа №&nbsp;188</h3>
+        <p class="bw-v2-dims">20 × 47 × 33 см · 2,6 кг</p>
+        <p class="bw-v2-price"><span class="bc-price" data-byn="795&nbsp;BYN" data-rub="≈ 22&nbsp;800&nbsp;₽">795&nbsp;BYN</span></p>
+        <a href="/works/work-188/" class="bw-v2-card-btn"><span>Подробнее о работе</span><span aria-hidden="true">→</span></a>
+      </article>
+      <article class="bw-v2-card bw-v2-card--sold" data-cat="archive">
+        <div class="bw-v2-media">
+          <img src="/images/works/work-247.jpg" alt="Скульптура из сувеля берёзы № 247 (в частной коллекции)" loading="lazy">
+          <span class="bw-v2-badge bw-v2-badge--sold">В частной коллекции</span>
         </div>
-
-        <div class="work-card" data-cat="available" data-size="m">
-          <a href="work-188/" class="work-card-link">
-            <div class="work-img-wrap">
-              <img src="../images/works/work-188.jpg" alt="Скульптура из сувеля берёзы № 188" loading="lazy">
-            </div>
-            <div class="lookbook-card-info">
-              <div class="lookbook-card-copy">
-                <p class="lookbook-meta"><span class="lookbook-no">№&nbsp;188</span><span class="lookbook-status lookbook-status--avail"><span class="lookbook-dot" aria-hidden="true"></span>ДОСТУПНА</span></p>
-                <p class="lookbook-price"><span class="bc-price lookbook-price-byn" data-byn="795&nbsp;BYN" data-rub="≈ 22&nbsp;800&nbsp;₽">795&nbsp;BYN</span></p>
-              </div>
-              <span class="lookbook-more">Подробнее о работе <span class="lookbook-arrow" aria-hidden="true">→</span></span>
-            </div>
-          </a>
+        <h3 class="bw-v2-name">Работа №&nbsp;247</h3>
+        <p class="bw-v2-dims">Сувель берёзы · 1/1</p>
+        <p class="bw-v2-sold-label">Продана</p>
+      </article>
+      <article class="bw-v2-card bw-v2-card--sold" data-cat="archive">
+        <div class="bw-v2-media">
+          <img src="/images/works/work-248.jpg?v=2" alt="Скульптура из сувеля берёзы № 248 (в частной коллекции)" loading="lazy">
+          <span class="bw-v2-badge bw-v2-badge--sold">В частной коллекции</span>
         </div>
-
-        <div class="work-card" data-cat="available" data-size="l">
-          <a href="work-192/" class="work-card-link">
-            <div class="work-img-wrap">
-              <img src="../images/works/work-192.jpg?v=2" alt="Скульптура из сувеля берёзы № 192" loading="lazy">
-            </div>
-            <div class="lookbook-card-info">
-              <div class="lookbook-card-copy">
-                <p class="lookbook-meta"><span class="lookbook-no">№&nbsp;192</span><span class="lookbook-status lookbook-status--avail"><span class="lookbook-dot" aria-hidden="true"></span>ДОСТУПНА</span></p>
-                <p class="lookbook-price"><span class="bc-price lookbook-price-byn" data-byn="2&nbsp;300&nbsp;BYN" data-rub="≈ 65&nbsp;800&nbsp;₽">2&nbsp;300&nbsp;BYN</span></p>
-              </div>
-              <span class="lookbook-more">Подробнее о работе <span class="lookbook-arrow" aria-hidden="true">→</span></span>
-            </div>
-          </a>
+        <h3 class="bw-v2-name">Работа №&nbsp;248</h3>
+        <p class="bw-v2-dims">Сувель берёзы · 1/1</p>
+        <p class="bw-v2-sold-label">Продана</p>
+      </article>
+      <article class="bw-v2-card bw-v2-card--sold" data-cat="archive">
+        <div class="bw-v2-media">
+          <img src="/images/works/work-253.jpg" alt="Скульптура из сувеля берёзы № 253 (в частной коллекции)" loading="lazy">
+          <span class="bw-v2-badge bw-v2-badge--sold">В частной коллекции</span>
         </div>
-
-        <div class="work-card" data-cat="archive" data-size="">
-          <div class="work-img-wrap">
-            <img src="../images/works/work-247.jpg" alt="Скульптура из сувеля берёзы № 247" loading="lazy">
-          </div>
-          <div class="lookbook-card-info lookbook-card-info--sold">
-            <p class="lookbook-meta lookbook-meta--sold"><span class="lookbook-status lookbook-status--sold"><span class="lookbook-dot" aria-hidden="true"></span>ПРОДАНА</span></p>
-          </div>
+        <h3 class="bw-v2-name">Работа №&nbsp;253</h3>
+        <p class="bw-v2-dims">Сувель берёзы · 1/1</p>
+        <p class="bw-v2-sold-label">Продана</p>
+      </article>
+      <article class="bw-v2-card bw-v2-card--sold" data-cat="archive">
+        <div class="bw-v2-media">
+          <img src="/images/works/work-254.jpg" alt="Скульптура из сувеля берёзы № 254 (в частной коллекции)" loading="lazy">
+          <span class="bw-v2-badge bw-v2-badge--sold">В частной коллекции</span>
         </div>
-
-        <div class="work-card" data-cat="archive" data-size="">
-          <div class="work-img-wrap">
-            <img src="../images/works/work-248.jpg?v=2" alt="Скульптура из сувеля берёзы № 248" loading="lazy">
-          </div>
-          <div class="lookbook-card-info lookbook-card-info--sold">
-            <p class="lookbook-meta lookbook-meta--sold"><span class="lookbook-status lookbook-status--sold"><span class="lookbook-dot" aria-hidden="true"></span>ПРОДАНА</span></p>
-          </div>
+        <h3 class="bw-v2-name">Работа №&nbsp;254</h3>
+        <p class="bw-v2-dims">Сувель берёзы · 1/1</p>
+        <p class="bw-v2-sold-label">Продана</p>
+      </article>
+      <article class="bw-v2-card bw-v2-card--sold" data-cat="archive">
+        <div class="bw-v2-media">
+          <img src="/images/works/work-255.jpg" alt="Скульптура из сувеля берёзы № 255 (в частной коллекции)" loading="lazy">
+          <span class="bw-v2-badge bw-v2-badge--sold">В частной коллекции</span>
         </div>
+        <h3 class="bw-v2-name">Работа №&nbsp;255</h3>
+        <p class="bw-v2-dims">Сувель берёзы · 1/1</p>
+        <p class="bw-v2-sold-label">Продана</p>
+      </article>
+    </div>
 
-        <div class="work-card" data-cat="archive" data-size="">
-          <div class="work-img-wrap">
-            <img src="../images/works/work-253.jpg" alt="Скульптура из сувеля берёзы № 253" loading="lazy">
-          </div>
-          <div class="lookbook-card-info lookbook-card-info--sold">
-            <p class="lookbook-meta lookbook-meta--sold"><span class="lookbook-status lookbook-status--sold"><span class="lookbook-dot" aria-hidden="true"></span>ПРОДАНА</span></p>
-          </div>
-        </div>
-
-        <div class="work-card" data-cat="archive" data-size="">
-          <div class="work-img-wrap">
-            <img src="../images/works/work-254.jpg" alt="Скульптура из сувеля берёзы № 254" loading="lazy">
-          </div>
-          <div class="lookbook-card-info lookbook-card-info--sold">
-            <p class="lookbook-meta lookbook-meta--sold"><span class="lookbook-status lookbook-status--sold"><span class="lookbook-dot" aria-hidden="true"></span>ПРОДАНА</span></p>
-          </div>
-        </div>
-
-        <div class="work-card" data-cat="archive" data-size="">
-          <div class="work-img-wrap">
-            <img src="../images/works/work-255.jpg" alt="Скульптура из сувеля берёзы № 255" loading="lazy">
-          </div>
-          <div class="lookbook-card-info lookbook-card-info--sold">
-            <p class="lookbook-meta lookbook-meta--sold"><span class="lookbook-status lookbook-status--sold"><span class="lookbook-dot" aria-hidden="true"></span>ПРОДАНА</span></p>
-          </div>
-        </div>
-
+    <section class="bw-v2-tg-banner" aria-label="Telegram-канал">
+      <div class="bw-v2-tg-left">
+        <p class="bw-v2-tg-kicker">Telegram-канал BYCRAFT</p>
+        <h2 class="bw-v2-tg-title">Если вы не нашли работу, которая откликнулась, переходите в наш Telegram-канал</h2>
       </div>
-      <div id="works-filter-empty" class="works-filter-empty" hidden>
-        <span>По выбранным условиям работ нет.</span>
-        <button type="button" id="works-filter-reset" class="works-filter-reset">Сбросить фильтры</button>
+      <div class="bw-v2-tg-right">
+        <a href="https://t.me/bycraft" target="_blank" rel="noopener" class="bw-v2-tg-btn"><span>Подписаться на новые работы</span><span aria-hidden="true">→</span></a>
       </div>
     </section>
-<section class="container works-tg-cta">
-  <div class="works-tg-cta-inner">
-    <p class="works-tg-cta-text">Если вы не нашли работу, которая откликнулась, переходите в наш Telegram-канал</p>
-    <a href="https://t.me/bycraft" target="_blank" rel="noopener" class="works-tg-cta-btn">Подписаться на новые работы</a>
   </div>
-</section>
 
 <section class="container geography-section" id="geography">
       <p class="geo-before-intro">Работы BYCRAFT уехали в 24 страны мира: их покупают для себя и дарят близким</p>
@@ -2520,6 +2388,7 @@ html body.bc-inner-nav main section.works-tg-cta a.works-tg-cta-btn:focus-visibl
 </script>
 
 <script src="/js/bc-nav.js?v=1" defer></script>
+<script src="/js/bc-currency.js?v=6"></script>
 <script id="bc-works-filter-js">
 (function () {
   function ready(fn) {
@@ -2527,53 +2396,33 @@ html body.bc-inner-nav main section.works-tg-cta a.works-tg-cta-btn:focus-visibl
     else fn();
   }
   ready(function () {
-    var grid = document.querySelector('.works-six-grid');
+    var grid = document.querySelector('.works-six-grid.bw-v2-grid');
     if (!grid) return;
-    var cards = Array.prototype.slice.call(grid.querySelectorAll('.work-card[data-cat]'));
-    var statusBtns = Array.prototype.slice.call(document.querySelectorAll('.works-filter-item[data-status]'));
-    var emptyEl = document.getElementById('works-filter-empty');
-    var resetBtn = document.getElementById('works-filter-reset');
-    var activeStatus = 'all';
+    var cards = Array.prototype.slice.call(grid.querySelectorAll('.bw-v2-card[data-cat]'));
+    var tabs = Array.prototype.slice.call(document.querySelectorAll('.bw-v2-tab[data-status]'));
 
-    function applyFilters() {
-      var visible = 0;
-      cards.forEach(function (card) {
-        var cat = card.getAttribute('data-cat') || '';
-        var show = (activeStatus === 'all') || (cat === activeStatus);
-        card.style.display = show ? '' : 'none';
-        if (show) visible++;
+    function apply(st) {
+      cards.forEach(function (c) {
+        var cat = c.getAttribute('data-cat') || '';
+        c.style.display = (st === 'all' || cat === st) ? '' : 'none';
       });
-      if (emptyEl) emptyEl.hidden = visible > 0;
     }
 
-    statusBtns.forEach(function (btn) {
-      btn.addEventListener('click', function () {
-        activeStatus = btn.getAttribute('data-status') || 'all';
-        statusBtns.forEach(function (b) {
-          var isOn = (b === btn);
-          b.classList.toggle('is-active', isOn);
-          b.setAttribute('aria-pressed', isOn ? 'true' : 'false');
+    tabs.forEach(function (t) {
+      t.addEventListener('click', function () {
+        var st = t.getAttribute('data-status') || 'all';
+        tabs.forEach(function (b) {
+          var on = b === t;
+          b.classList.toggle('is-active', on);
+          b.setAttribute('aria-pressed', on ? 'true' : 'false');
         });
-        applyFilters();
+        apply(st);
       });
     });
 
-    if (resetBtn) {
-      resetBtn.addEventListener('click', function () {
-        activeStatus = 'all';
-        statusBtns.forEach(function (b) {
-          var isOn = b.getAttribute('data-status') === 'all';
-          b.classList.toggle('is-active', isOn);
-          b.setAttribute('aria-pressed', isOn ? 'true' : 'false');
-        });
-        applyFilters();
-      });
-    }
-
-    applyFilters();
+    apply('all');
   });
 })();
 </script>
-<script src="/js/bc-currency.js?v=6"></script>
 </body>
 </html>
