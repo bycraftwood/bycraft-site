@@ -1740,6 +1740,45 @@ html body.bc-inner-nav main section.ex-v2 .ex-v2-other-status {
     gap: 28px !important;
   }
 }
+
+/* === CHRONICLE LINKS & NO-SUBTITLE MARGIN === */
+html body.bc-inner-nav main section.ex-v2 .ex-v2-title {
+  margin: 0 0 14px !important;
+}
+html body.bc-inner-nav main section.ex-v2 a.ex-v2-chron-item {
+  display: flex !important;
+  align-items: flex-start !important;
+  gap: 12px !important;
+  padding-top: 10px !important;
+  margin-top: 10px !important;
+  border-top: 1px solid #F0EDE6 !important;
+  text-decoration: none !important;
+  color: inherit !important;
+}
+html body.bc-inner-nav main section.ex-v2 a.ex-v2-chron-item:first-of-type {
+  padding-top: 0 !important;
+  margin-top: 0 !important;
+  border-top: none !important;
+}
+html body.bc-inner-nav main section.ex-v2 .ex-v2-chron-body {
+  flex: 1 1 0 !important;
+  min-width: 0 !important;
+}
+html body.bc-inner-nav main section.ex-v2 .ex-v2-chron-arrow {
+  font-family: 'Manrope', sans-serif !important;
+  font-size: 14px !important;
+  color: #625B55 !important;
+  flex-shrink: 0 !important;
+  transition: color 0.2s ease, transform 0.2s ease !important;
+}
+html body.bc-inner-nav main section.ex-v2 a.ex-v2-chron-item:hover .ex-v2-chron-name,
+html body.bc-inner-nav main section.ex-v2 a.ex-v2-chron-item:hover .ex-v2-chron-arrow {
+  color: #B6452C !important;
+}
+html body.bc-inner-nav main section.ex-v2 a.ex-v2-chron-item:hover .ex-v2-chron-arrow {
+  transform: translateX(3px) !important;
+}
+/* === /CHRONICLE LINKS & NO-SUBTITLE MARGIN === */
 </style>
 </head>
 <body class="bc-inner-nav">
@@ -1765,37 +1804,37 @@ html body.bc-inner-nav main section.ex-v2 .ex-v2-other-status {
     <a href="/works/exhibitions/" class="ex-v2-back">← Выставочные работы</a>
     <div class="ex-v2-top-actions">
       <span class="ex-v2-pill"><span class="ex-v2-pill-dot" aria-hidden="true"></span>Выставочная работа · Продана</span>
-      <button type="button" class="ex-v2-mini-btn ex-v2-share-btn" data-copy-url="https://bycraft.by/works/volk/">Поделиться</button>
-      <a href="#curatorial-passport" class="ex-v2-mini-btn">Паспорт объекта</a>
     </div>
   </div>
 
   <div class="ex-v2-hero">
     <div class="ex-v2-hero-grid">
       <div>
-        <h1 id="ex-v2-h1" class="ex-v2-title">Скульптура «Волк»<span class="ex-v2-subtitle">образ зверя в природной форме</span></h1>
-        <p class="ex-v2-lead">Образ волка возникает внутри природной формы сувеля, а не наносится на неё извне — здесь не нужно ничего угадывать. Это работа про характер: в ней нет агрессии, но есть тяжёлое спокойствие и настороженность зверя, который никого не подпускает слишком близко.</p>
+        <h1 id="ex-v2-h1" class="ex-v2-title">Скульптура «Волк»</h1>
+        <p class="ex-v2-lead">Вываривание в солевом растворе, многомесячная сушка, ручная доводка, обжиг огнём. Красителей нет: тёмный тон даёт огонь.</p>
       </div>
 
       <div class="ex-v2-chronicle">
         <div class="ex-v2-chron-head">
-          <span>Хроника провенанса</span>
+          <span>Выставочная история</span>
           <span class="ex-v2-chron-count">2 выставки</span>
         </div>
-        <div class="ex-v2-chron-item">
+        <a href="/events/tryn-trava/" class="ex-v2-chron-item">
           <span class="ex-v2-chron-year">2026</span>
-          <div>
+          <div class="ex-v2-chron-body">
             <p class="ex-v2-chron-name">9-я выставка «Трын*Трава. Современный русский стиль»</p>
             <p class="ex-v2-chron-place">Москва, Музей-усадьба Муравьёвых-Апостолов</p>
           </div>
-        </div>
-        <div class="ex-v2-chron-item">
+          <span class="ex-v2-chron-arrow" aria-hidden="true">→</span>
+        </a>
+        <a href="/events/istanbul-festival/" class="ex-v2-chron-item">
           <span class="ex-v2-chron-year">2026</span>
-          <div>
+          <div class="ex-v2-chron-body">
             <p class="ex-v2-chron-name">XXVII Международный фестиваль культуры и искусств</p>
             <p class="ex-v2-chron-place">Стамбул, Исторический караван-сарай Куршунлухан</p>
           </div>
-        </div>
+          <span class="ex-v2-chron-arrow" aria-hidden="true">→</span>
+        </a>
       </div>
     </div>
 
@@ -1851,17 +1890,16 @@ html body.bc-inner-nav main section.ex-v2 .ex-v2-other-status {
 
     <div class="ex-v2-console">
       <div class="ex-v2-box">
-        <p class="ex-v2-box-kicker">О замысле</p>
-        <p class="ex-v2-box-text">«Волк» — пример работы, в которой природный нарост берёзы сам задаёт характер пластической формы. Вываривание в солевом растворе, многомесячная сушка, ручная доводка и обжиг огнём закрепляют рельеф без использования красителей.</p>
+        <p class="ex-v2-box-kicker">О скульптуре</p>
+        <p class="ex-v2-box-text">Образ волка возникает внутри природной формы сувеля, а не наносится на неё извне — здесь не нужно ничего угадывать. Это работа про характер: в ней нет агрессии, но есть тяжёлое спокойствие и настороженность зверя, который никого не подпускает слишком близко.</p>
         <div class="ex-v2-author">
-          <span class="ex-v2-author-bc">BC</span>
           <span>Валентин Атрош · Выставочная серия 2026</span>
         </div>
       </div>
 
       <div class="ex-v2-box">
         <p class="ex-v2-box-kicker">Статус</p>
-        <p class="ex-v2-box-text" style="margin-bottom:0 !important;">Оригинал находится в частной коллекции. Выставочные работы существуют в единственном экземпляре и не повторяются на заказ.</p>
+        <p class="ex-v2-box-text" style="margin-bottom:0 !important;">Работа находится в частной коллекции.</p>
       </div>
 
       <a href="/works/?status=available" class="ex-v2-btn-primary">
@@ -1875,15 +1913,13 @@ html body.bc-inner-nav main section.ex-v2 .ex-v2-other-status {
       </a>
 
       <div class="ex-v2-quiet-row">
-        <a href="tel:+375295507250" class="ex-v2-quiet-link">Позвонить</a>
-        <span aria-hidden="true" style="color:#B9AEA1;font-size:13px;">·</span>
         <button type="button" class="ex-v2-quiet-link ex-v2-share-btn" data-copy-url="https://bycraft.by/works/volk/">Поделиться ссылкой</button>
       </div>
 
       <div class="ex-v2-guarantees">
         <div class="ex-v2-guar-item">
           <svg width="14" height="14" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M5 13l4 4L19 7"/></svg>
-          <span>Уникальная природная форма 1/1</span>
+          <span>Единственный экземпляр</span>
         </div>
         <div class="ex-v2-guar-item">
           <svg width="14" height="14" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M5 13l4 4L19 7"/></svg>
@@ -1892,45 +1928,6 @@ html body.bc-inner-nav main section.ex-v2 .ex-v2-other-status {
       </div>
     </div>
   </div>
-
-  <section id="curatorial-passport" class="ex-v2-passport">
-    <span class="ex-v2-sec-kicker">Атрибуция и данные</span>
-    <h2 class="ex-v2-sec-title">Паспорт выставочного объекта</h2>
-    <p class="ex-v2-sec-sub">Технические параметры, происхождение материала и выставочная история скульптуры «Волк».</p>
-
-    <div class="ex-v2-pass-grid">
-      <div class="ex-v2-pass-card">
-        <span class="ex-v2-pass-head">01 / Материал и авторство</span>
-        <dl class="ex-v2-pass-dl">
-          <div class="ex-v2-pass-row"><dt>Материал:</dt><dd>Берёзовый сувель</dd></div>
-          <div class="ex-v2-pass-row"><dt>Регион:</dt><dd>Беларусь</dd></div>
-          <div class="ex-v2-pass-row"><dt>Автор:</dt><dd>Валентин Атрош</dd></div>
-          <div class="ex-v2-pass-row"><dt>Год создания:</dt><dd>2026</dd></div>
-        </dl>
-      </div>
-
-      <div class="ex-v2-pass-card">
-        <span class="ex-v2-pass-head">02 / Геометрия и обработка</span>
-        <dl class="ex-v2-pass-dl">
-          <div class="ex-v2-pass-row"><dt>Размеры (В×Ш×Г):</dt><dd>19 × 45 × 36 см</dd></div>
-          <div class="ex-v2-pass-row"><dt>Обработка:</dt><dd>Вываривание, 8 этапов шлифовки</dd></div>
-          <div class="ex-v2-pass-row"><dt>Финиш:</dt><dd>Обжиг огнём</dd></div>
-          <div class="ex-v2-pass-row"><dt>Статус:</dt><dd>Продана</dd></div>
-        </dl>
-      </div>
-
-      <div class="ex-v2-pass-card">
-        <div>
-          <span class="ex-v2-pass-head">03 / Выставки</span>
-          <dl class="ex-v2-pass-dl">
-            <div class="ex-v2-pass-row"><dt>Москва (2026):</dt><dd>Трын*Трава (9-я)</dd></div>
-            <div class="ex-v2-pass-row"><dt>Стамбул (2026):</dt><dd>XXVII Фестиваль искусств</dd></div>
-          </dl>
-        </div>
-        <a href="/curators/" class="ex-v2-curators-btn"><span>Раздел для кураторов и портфолио</span><span aria-hidden="true">→</span></a>
-      </div>
-    </div>
-  </section>
 
   <section class="ex-v2-other">
     <div class="ex-v2-other-head">
@@ -1965,6 +1962,7 @@ html body.bc-inner-nav main section.ex-v2 .ex-v2-other-status {
     </div>
   </section>
 </section>
+
 
 <div id="bc-ex-lightbox" role="dialog" aria-modal="true" aria-label="Увеличенное фото">
   <button type="button" id="bc-ex-lightbox-close" aria-label="Закрыть">&times;</button>
